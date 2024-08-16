@@ -1,1 +1,14 @@
 /* You can add global styles to this file, and also import other style files */
+
+body:after {
+    background: linear-gradient(180deg in oklab, #265683 10%, #6fabbd, #ffd3d9, #fff);
+    top:0; left:0;
+    z-index:-1;
+    position:fixed;
+    content: "";
+    display: block;
+    background-attachment: fixed;
+    position: absolute;
+    height: 100%;
+    width: 100%;
+}

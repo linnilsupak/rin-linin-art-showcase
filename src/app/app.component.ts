@@ -1,10 +1,12 @@
 import { Component } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
+import { HeaderComponent } from './header/header.component';
+import { ScrollUpButtonComponent } from "./scroll-up-button/scroll-up-button.component";
 
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [RouterOutlet],
+  imports: [RouterOutlet, HeaderComponent, ScrollUpButtonComponent],
   templateUrl: './app.component.html',
   styleUrl: './app.component.scss'
 })
