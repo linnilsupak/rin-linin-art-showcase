@@ -32,7 +32,7 @@ export class StarrySkyComponent implements AfterViewInit {
   }
   @HostListener('window:resize', ['$event'])
   onResize(event?) {
-    this.starAnimationResize$.next({ w: this.window.innerHeight, h: this.window.innerWidth});
+    this.starAnimationResize$.next({ w: this.window.innerWidth, h: this.window.innerHeight});
   }
   ngAfterViewInit(): void {
     this.starAnimationResize$.pipe(
@@ -49,7 +49,7 @@ export class StarrySkyComponent implements AfterViewInit {
         this.createStarAnimation();
       }, 500);
     });
-    this.starAnimationResize$.next({ w: this.window.innerHeight, h: this.window.innerWidth});
+    this.starAnimationResize$.next({ w: this.window.innerWidth, h: this.window.innerHeight});
   }
 
   setCanvasWidthHeight(w: number, h: number) {
