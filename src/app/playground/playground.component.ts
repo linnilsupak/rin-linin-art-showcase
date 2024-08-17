@@ -1,10 +1,10 @@
 import { Component } from '@angular/core';
-import { PictureFrameComponent } from "../picture-frame/picture-frame.component";
+import { ReflectionFontComponent } from "../reflection-font/reflection-font.component";
 
 @Component({
   selector: 'app-playground',
   standalone: true,
-  imports: [PictureFrameComponent],
+  imports: [ReflectionFontComponent],
   templateUrl: './playground.component.html',
   styleUrl: './playground.component.scss'
 })

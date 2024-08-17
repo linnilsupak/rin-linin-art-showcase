@@ -1,5 +1,7 @@
 /* You can add global styles to this file, and also import other style files */
 
+@import "bootstrap-mixin";
+
 body {
     background: linear-gradient(180deg in oklab, #265683 10%, #6fabbd, #ffd3d9, #fff);
     top:0; left:0;
@@ -10,7 +12,11 @@ body {
     background-attachment: fixed;
     position: absolute;
     height: 100%;
-    width: 100%;
+    width: 103%;
+    
+    @include media-breakpoint-up(md) {
+        width: 100%;
+     }
 }
 /* Importing Bootstrap SCSS file. */
 @import 'bootstrap/scss/bootstrap';

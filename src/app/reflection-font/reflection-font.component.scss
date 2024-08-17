@@ -1,0 +1,20 @@
+
+.units {
+    width: max-content;
+    user-select: none;
+    pointer-events: none;
+    padding: 0 10px;
+  }
+  /* original design */
+  .units > * {
+    font: bolder 5rem/5rem "EB Garamond";
+    background-image: url("/assets/images/bg-color.png?w=200&q=80");
+    background-clip: text;
+    color: transparent;
+    overflow: hidden;
+  }
+  /* reflections */
+  .units > :last-child {
+    transform: rotatex(180deg) translatey(15px);
+    mask-image: linear-gradient(transparent 50%, white 90%);
+  }
