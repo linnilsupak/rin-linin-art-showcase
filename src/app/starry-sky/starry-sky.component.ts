@@ -1,6 +1,7 @@
-import { AfterViewInit, Component, ElementRef, Inject, ViewChild } from '@angular/core';
+import { AfterViewInit, Component, ElementRef, Inject, PLATFORM_ID, ViewChild } from '@angular/core';
 import { Star } from '../core/star.model';
 import { WINDOW, WINDOW_PROVIDERS } from '../core/service/window.service';
+import { isPlatformBrowser } from '@angular/common';
 
 @Component({
   selector: 'app-starry-sky',
@@ -20,10 +21,14 @@ export class StarrySkyComponent implements AfterViewInit {
   stars = [];
   fps = 50;
   numStars = 2000;
+  isBrowser = true;
 
-  constructor(@Inject(WINDOW) private window: Window) {}
+  constructor(@Inject(WINDOW) private window: Window, @Inject(PLATFORM_ID) platformId: Object) {
+    this.isBrowser = isPlatformBrowser(platformId);
+  }
 
   ngAfterViewInit(): void {
+    if (!this.isBrowser) return;
     this.screenH = this.window.innerHeight;
     this.screenW = this.window.innerWidth;
     // Fill out the canvas

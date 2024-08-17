@@ -51,7 +51,7 @@ export class Star {
         context.closePath();
         context.fillStyle = "white";
         context.shadowBlur = 5;
-        context.shadowColor = '#fff';
+        context.shadowColor = '#c2f1ff';
         context.fill();
         
         context.restore();
