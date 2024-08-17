@@ -1,7 +1,8 @@
-import { AfterViewInit, Component, ElementRef, Inject, PLATFORM_ID, ViewChild } from '@angular/core';
+import { AfterViewInit, Component, ElementRef, HostListener, Inject, PLATFORM_ID, ViewChild } from '@angular/core';
 import { Star } from '../core/star.model';
 import { WINDOW, WINDOW_PROVIDERS } from '../core/service/window.service';
 import { isPlatformBrowser } from '@angular/common';
+import { BehaviorSubject, debounceTime, interval, Subscription } from 'rxjs';
 
 @Component({
   selector: 'app-starry-sky',
@@ -20,29 +21,51 @@ export class StarrySkyComponent implements AfterViewInit {
   screenW: number;
   stars = [];
   fps = 50;
-  numStars = 2000;
+  bigNumStars = 2000;
+  miniNumStars = 1000;
+  animateInterval$ = new Subscription();
   isBrowser = true;
+  starAnimationResize$ = new BehaviorSubject<{w: number, h: number}>(undefined);
 
   constructor(@Inject(WINDOW) private window: Window, @Inject(PLATFORM_ID) platformId: Object) {
     this.isBrowser = isPlatformBrowser(platformId);
   }
-
+  @HostListener('window:resize', ['$event'])
+  onResize(event?) {
+    this.starAnimationResize$.next({ w: this.window.innerHeight, h: this.window.innerWidth});
+  }
   ngAfterViewInit(): void {
-    if (!this.isBrowser) return;
-    this.screenH = this.window.innerHeight;
-    this.screenW = this.window.innerWidth;
+    this.starAnimationResize$.pipe(
+      debounceTime(500)
+    ).subscribe(( {w,h}) => {
+      if (!this.isBrowser) return;
+      if (this.screenW && this.screenH) {
+        this.animateInterval$.unsubscribe();
+        this.animateInterval$ = new Subscription();
+        this.context.clearRect(0, 0, this.screenW, this.screenH);
+      }
+      this.setCanvasWidthHeight(w, h);
+      setTimeout(() => {
+        this.createStarAnimation();
+      }, 500);
+    });
+    this.starAnimationResize$.next({ w: this.window.innerHeight, h: this.window.innerWidth});
+  }
+
+  setCanvasWidthHeight(w: number, h: number) {
+    this.screenH = h;
+    this.screenW = w;
     // Fill out the canvas
-    this.canvas.nativeElement.setAttribute('height', this.screenH?.toString());
-    this.canvas.nativeElement.setAttribute('width', this.screenW?.toString());
+    this.canvas.nativeElement.height = this.screenH;
+    this.canvas.nativeElement.width = this.screenW;
     this.context = this.canvas.nativeElement.getContext('2d');
-    setTimeout(() => {
-      this.createStarAnimation();
-    }, 500);
   }
 
   createStarAnimation() {
+    const numStars = this.screenW <= 700 ? this.miniNumStars: this.bigNumStars;
+    this.stars = [];
     // Create all the stars
-	  for(var i = 0; i < this.numStars; i++) {
+	  for(var i = 0; i < numStars; i++) {
       var x = Math.round(Math.random() * this.screenW);
       var y = Math.round(Math.random() * this.screenH);
       var length = 1 + Math.random() * 2;
@@ -54,10 +77,12 @@ export class StarrySkyComponent implements AfterViewInit {
       // Add the the stars array
       this.stars.push(star);
     }
-	
-	  setInterval(() => {
-      this.animate();
-    }, 1000 / this.fps);
+    console.log(' this.stars',  this.stars.length)
+    this.animateInterval$.add(
+      interval(1000 / this.fps).subscribe(() => {
+        this.animate();
+      })
+    );
   }
 
 
