@@ -1,6 +1,45 @@
-.header {
+@import "bootstrap-mixin";
+
+$linin-label-level: 1000;
+$top-header-level: 999;
+
+.show-on-header {
     position: fixed;
     left: 0;
     right: 0;
-    z-index: 1000;
+}
+
+.linin-label {
+    z-index: $linin-label-level;
+    margin-left: -30px;
+    @include media-breakpoint-down(lg) {
+        max-width: 200px;
+    }
+    @include media-breakpoint-down(xl) {
+        max-width: 300px;
+    }
+}
+
+.top-header {
+    z-index: $top-header-level;
+    .inner-wallpaper {
+        // $inner-light: #ffe0e4;
+        // $inner-dark: #ffa6b2;
+        $inner-light: #265683;
+        $inner-dark: #0d2f4f;
+        position: relative;
+        background: repeating-linear-gradient(90deg,
+        $inner-dark,
+        $inner-dark 5vmin,
+        $inner-light 5vmin,
+        $inner-light 10vmin);
+        }
+    .menu-btn {
+        border-radius: 8px;
+        background-color: white;
+        padding: 10px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
 }

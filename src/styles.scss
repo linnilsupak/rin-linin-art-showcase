@@ -1,3 +1,43 @@
+
+// Custom Theming for Angular Material
+// For more information: https://material.angular.io/guide/theming
+@use '@angular/material' as mat;
+// Plus imports for other components in your app.
+
+// Include the common styles for Angular Material. We include this here so that you only
+// have to load a single css file for Angular Material in your app.
+// Be sure that you only ever include this mixin once!
+@include mat.core();
+
+// Define the theme object.
+$rin-linin-art-showcase-theme: mat.define-theme((
+  color: (
+    theme-type: light,
+    primary: mat.$azure-palette,
+    tertiary: mat.$blue-palette,
+  ),
+  density: (
+    scale: 0,
+  )
+));
+
+/* Importing Bootstrap SCSS file. */
+@import 'bootstrap/scss/bootstrap';
+@import 'variables';
+
+// Include theme styles for core and each component used in your app.
+// Alternatively, you can import and @include the theme mixins for each component
+// that you are using.
+:root {
+  @include mat.all-component-themes($rin-linin-art-showcase-theme);
+}
+
+// Comment out the line below if you want to use the pre-defined typography utility classes.
+// For more information: https://material.angular.io/guide/typography#using-typography-styles-in-your-application.
+// @include mat.typography-hierarchy($rin-linin-art-showcase-theme);
+
+// Comment out the line below if you want to use the deprecated `color` inputs.
+// @include mat.color-variants-backwards-compatibility($rin-linin-art-showcase-theme);
 /* You can add global styles to this file, and also import other style files */
 
 @import "bootstrap-mixin";
@@ -13,6 +53,27 @@ body {
     position: absolute;
     height: 100%;
     width: 100%;
+    // @include media-breakpoint-down(sm) {
+    //     width: 102%;
+    // }
 }
-/* Importing Bootstrap SCSS file. */
-@import 'bootstrap/scss/bootstrap';
+
+.border-wall-paper {
+    width: 100%;
+    background: repeating-linear-gradient(45deg,
+    var(--color-border-wallpaper),
+    var(--color-border-wallpaper) 4px,
+    var(--color-wallpaper-light) 4px,
+    var(--color-wallpaper-light) 8px);
+    min-height: 12px;
+    border: var(--color-border-wallpaper) solid 4px;
+    border-left: transparent;
+    border-right: transparent;
+}
+
+button {
+    border: inherit;
+}
+
+// html, body { height: 100%; }
+// body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
