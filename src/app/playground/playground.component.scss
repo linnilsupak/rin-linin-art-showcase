@@ -3,14 +3,30 @@
 
 .cover {
     // object-fit: none;
-    background: url('/assets/images/playground/playground-cover.jpg') no-repeat 95% 38%;
+    background: url('/assets/images/playground/playground-cover.jpg') no-repeat 95% 44%;
     background-size: cover;
     min-height: 322px;
 
     @include media-breakpoint-up(lg) {
-        min-height: 400px;
+        min-height: 250px;
      }
 }
+
+.after-reflect {
+  margin-top: -20px
+}
+
+.section-topic {
+  color: white;
+  font-weight: 700;
+  font-size: 26px;
+}
+
+.caption {
+  color: #15063f;
+  font-size: 16px;
+}
+
 .mini-frame-200 {
     width: inherit;
     max-width: 400px;
