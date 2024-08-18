@@ -70,14 +70,14 @@ export class StarrySkyComponent implements AfterViewInit {
       var y = Math.round(Math.random() * this.screenH);
       var length = 1 + Math.random() * 2;
       var opacity = Math.random();
-      
+
       // Create a new star and draw
       var star = new Star(x, y, length, opacity);
-      
+
       // Add the the stars array
       this.stars.push(star);
     }
-    console.log(' this.stars',  this.stars.length)
+    // this.window.requestAnimationFrame(this.animate);
     this.animateInterval$.add(
       interval(1000 / this.fps).subscribe(() => {
         this.animate();
