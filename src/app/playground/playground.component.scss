@@ -3,10 +3,10 @@
 
 .cover {
     // object-fit: none;
-    background: url('/assets/images/placement-3.jpg') no-repeat 95% 28%;
+    background: url('/assets/images/playground/playground-cover.jpg') no-repeat 95% 38%;
     background-size: cover;
-    min-height: 200px;
-    
+    min-height: 322px;
+
     @include media-breakpoint-up(lg) {
         min-height: 400px;
      }
