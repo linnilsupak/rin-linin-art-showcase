@@ -9,10 +9,11 @@
   /* original design */
   .units > * {
     font: bolder 4rem/4rem "EB Garamond";
-    background-image: url("/assets/images/text-bg.jpg?v=5");
+    background-image: url("/assets/images/text-bg2.jpg?v=1");
     background-clip: text;
     color: transparent;
     overflow: hidden;
+    background-color: white;
 
     @include media-breakpoint-up(lg) {
       font: bolder 5rem/5rem "EB Garamond";

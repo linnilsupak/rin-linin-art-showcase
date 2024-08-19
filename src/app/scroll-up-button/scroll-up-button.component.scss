@@ -1,7 +1,31 @@
 .fixed-button {
-    position: fixed;
-    bottom: 4px;
-    right: 4px;
-    z-index: 1000;
-    cursor: pointer;
+  position: fixed;
+  bottom: 4px;
+  right: -39px;
+  z-index: 1000;
+  cursor: pointer;
+}
+
+.up-btn {
+  position: absolute;
+  bottom: 18px;
+  left: 66px;
+  width: 52px;
+  transition: all 0.4s ease;
+}
+
+@media (any-pointer: fine) {
+  .merge-up-btn {
+    &:hover {
+      .up-btn {
+        transform: scale(1.5);
+      }
+    }
+
+    &:active {
+      .up-btn {
+        transform: scale(1);
+      }
+    }
+  }
 }

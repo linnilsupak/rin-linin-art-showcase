@@ -1,45 +1,172 @@
 @import "bootstrap-mixin";
 
+$over-header-level: 1001;
 $linin-label-level: 1000;
 $top-header-level: 999;
 
+.over-header {
+  position: fixed;
+  right: 0;
+  z-index: $over-header-level;
+  height: 100%;
+}
+
+.menu {
+  position: relative;
+  height: 100%;
+  background: rgba(255, 255, 255, 0.892);
+  padding: 40px;
+  width: 0px;
+  margin-right: -85px;
+  transition-property: all;
+  transition-duration: 0.3s;
+  transition-timing-function: ease;
+
+  &.open {
+    margin-right: 0;
+    width: 40vw;
+
+    @include media-breakpoint-down(lg) {
+      width: 80vw;
+    }
+  }
+
+  .menu-btn {
+    position: absolute;
+    right: 16px;
+    top: 12px;
+  }
+
+  a {
+    text-decoration: none !important;
+    color: #cb2676;
+
+    &:hover {
+      color: #5c1035;
+    }
+
+    .menu-item {
+      font-size: 24px;
+    }
+  }
+}
+
 .show-on-header {
-    position: fixed;
-    left: 0;
-    right: 0;
+  position: fixed;
+  left: 0;
 }
 
 .linin-label {
-    z-index: $linin-label-level;
-    margin-left: -30px;
-    @include media-breakpoint-down(lg) {
-        max-width: 200px;
+  float: left;
+  z-index: $linin-label-level;
+  width: fit-content;
+  cursor: pointer;
+
+  .linin-flag {
+    margin-top: 8px;
+    margin-left: -10px;
+    max-width: 120px;
+
+    @include media-breakpoint-down(md) {
+      margin-top: 10px;
+      max-width: 100px;
     }
-    @include media-breakpoint-down(xl) {
-        max-width: 300px;
+
+    @include media-breakpoint-up(md) {
+      margin-top: 20px;
+      max-width: 200px;
     }
+
+    @include media-breakpoint-up(lg) {
+      margin-top: 10px;
+      max-width: 300px;
+      ;
+    }
+
+    @include media-breakpoint-up(xl) {
+      margin-top: 8px;
+      max-width: 400px;
+      ;
+    }
+  }
+
+  .linin-flag-hover {
+    position: absolute;
+    opacity: 0;
+    transition-property: all;
+    transition-duration: 0.3s;
+    transition-timing-function: ease;
+
+    @include media-breakpoint-down(md) {
+      max-width: 61px;
+      left: 9px;
+      top: 32px;
+    }
+
+    @include media-breakpoint-up(md) {
+      max-width: 108px;
+      left: 39px;
+      top: 73px;
+    }
+
+    @include media-breakpoint-up(lg) {
+      left: 58px;
+      top: 84px;
+      max-width: 169px;
+    }
+
+    @include media-breakpoint-up(xl) {
+      left: 82px;
+      top: 107px;
+      max-width: 225px;
+    }
+  }
+
+  @media (any-pointer: fine) {
+    .merge-linin-flag {
+      position: relative;
+
+      &:hover {
+        .linin-flag-hover {
+          transform: scale(1.5);
+          opacity: 1;
+        }
+      }
+
+      &:active {
+        .linin-flag-hover {
+          transform: scale(1.25);
+          opacity: 1;
+        }
+      }
+    }
+  }
 }
 
 .top-header {
-    z-index: $top-header-level;
-    .inner-wallpaper {
-        // $inner-light: #ffe0e4;
-        // $inner-dark: #ffa6b2;
-        $inner-light: #265683;
-        $inner-dark: #0d2f4f;
-        position: relative;
-        background: repeating-linear-gradient(90deg,
+  right: 0;
+  z-index: $top-header-level;
+  background-color: black;
+
+  .inner-wallpaper {
+    // $inner-light: #ffe0e4;
+    // $inner-dark: #ffa6b2;
+    $inner-light: #265683;
+    $inner-dark: #0d2f4f;
+    position: relative;
+    background: repeating-linear-gradient(90deg,
         $inner-dark,
         $inner-dark 5vmin,
         $inner-light 5vmin,
         $inner-light 10vmin);
-        }
-    .menu-btn {
-        border-radius: 8px;
-        background-color: white;
-        padding: 10px;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-    }
+  }
+}
+
+.menu-btn {
+  border-radius: 8px;
+  background-color: white;
+  padding: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }

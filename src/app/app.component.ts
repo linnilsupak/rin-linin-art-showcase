@@ -12,5 +12,4 @@ import { StarrySkyComponent } from "./starry-sky/starry-sky.component";
   styleUrl: './app.component.scss'
 })
 export class AppComponent {
-  title = 'rin-linin-art-showcase';
 }

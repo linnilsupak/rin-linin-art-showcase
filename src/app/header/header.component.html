@@ -1,11 +1,33 @@
-<img class="show-on-header linin-label" src="/assets/images/linin-label.png">
+<a class="show-on-header linin-label" routerLink="/home" alt="Home page">
+  <div class="merge-linin-flag">
+    <img class="linin-flag-hover" src="/assets/images/linin-icon.png?v=2">
+    <img class="linin-flag" src="/assets/images/linin-label.png">
+  </div>
+</a>
 <div class="top-header show-on-header">
     <div class="border-wall-paper"></div>
     <div class="inner-wallpaper d-flex">
-        <button class="menu-btn ms-auto me-3">
+        <button class="menu-btn ms-auto me-3" (click)="openMenu=true">
             <mat-icon class="menu-icon">menu</mat-icon>
         </button>
         <div class="bg-wallpaper"></div>
     </div>
     <div class="border-wall-paper"></div>
+</div>
+<div class="over-header">
+  <div class="menu" [class.open]="openMenu">
+    <button class="menu-btn" (click)="openMenu=false">
+      <mat-icon class="menu-icon">close</mat-icon>
+    </button>
+    <a routerLink="/original" (click)="openMenu=false">
+      <div class="menu-item py-3">
+        Original
+      </div>
+    </a>
+    <a routerLink="/playground" (click)="openMenu=false">
+      <div class="menu-item py-3">
+        Playground
+      </div>
+    </a>
+  </div>
 </div>

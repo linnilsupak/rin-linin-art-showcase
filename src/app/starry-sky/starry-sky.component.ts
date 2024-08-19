@@ -3,6 +3,7 @@ import { Star } from '../core/star.model';
 import { WINDOW, WINDOW_PROVIDERS } from '../core/service/window.service';
 import { isPlatformBrowser } from '@angular/common';
 import { BehaviorSubject, debounceTime, interval, Subscription } from 'rxjs';
+import { mainConfig } from '../core/config/main.config';
 
 @Component({
   selector: 'app-starry-sky',
@@ -36,7 +37,7 @@ export class StarrySkyComponent implements AfterViewInit {
   }
   ngAfterViewInit(): void {
     this.starAnimationResize$.pipe(
-      debounceTime(500)
+      debounceTime(mainConfig.timeoutAfterViewInit)
     ).subscribe(( {w,h}) => {
       if (!this.isBrowser) return;
       if (this.screenW && this.screenH) {
@@ -47,7 +48,7 @@ export class StarrySkyComponent implements AfterViewInit {
       this.setCanvasWidthHeight(w, h);
       setTimeout(() => {
         this.createStarAnimation();
-      }, 500);
+      }, mainConfig.timeoutAfterViewInit);
     });
     this.starAnimationResize$.next({ w: this.window.innerWidth, h: this.window.innerHeight});
   }
