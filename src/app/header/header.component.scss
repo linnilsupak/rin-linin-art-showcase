@@ -149,8 +149,8 @@ $top-header-level: 999;
   background-color: black;
 
   .inner-wallpaper {
-    // $inner-light: #ffe0e4;
-    // $inner-dark: #ffa6b2;
+    // $inner-light: #836c26;
+    // $inner-dark: #241d01;
     $inner-light: #265683;
     $inner-dark: #0d2f4f;
     position: relative;
@@ -161,6 +161,8 @@ $top-header-level: 999;
         $inner-light 10vmin);
   }
 }
+
+// repeating-linear-gradient(90deg, #0d2f4f, #d2feff 5vmin, #f0b8ff 5vmin, #265683 10vmin)
 
 .menu-btn {
   border-radius: 8px;
