@@ -18,8 +18,9 @@
     </div>
     <div class="row mb-3">
         <div class="col-12 col-lg d-flex flex-column">
-            <div class="black-frame circle small mt-0 mt-lg-auto ms-auto me-auto me-lg-0 mb-2 mb-lg-0 mini-frame-200" >
-                <img src="/assets/images/playground/artfight2024/furry_rin_linin.png">
+            <div class="{{ galleryRoom.furryPic.frameStyle }} hover mt-0 mt-lg-auto ms-auto me-auto me-lg-0 mb-2 mb-lg-0 mini-frame-200"
+              (click)="openArtWorkLabel(galleryRoom.furryPic)">
+                <img [src]="galleryRoom.furryPic.picUrl">
             </div>
             <div class="white-frame mt-2 small ms-auto me-auto me-lg-0 mini-frame-200" >
                 <img src="/assets/images/playground/artfight2024/rioni_rin_linin.png">

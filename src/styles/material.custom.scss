@@ -1,0 +1,21 @@
+@import "bootstrap-mixin";
+.art-work-label {
+
+  &.cdk-overlay-pane.mat-mdc-dialog-panel {
+    max-width: fit-content!important;
+    max-height: fit-content!important;
+  }
+
+  .mat-mdc-dialog-container {
+    width: fit-content!important;
+    height: fit-content!important;
+  }
+
+  .mat-mdc-dialog-surface {
+    padding: 20px 10px;
+
+  @include media-breakpoint-up(md) {
+    padding: 38px;
+  }
+  }
+}
