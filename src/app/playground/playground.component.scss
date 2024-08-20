@@ -32,7 +32,7 @@
 
 .mini-frame-200 {
     width: inherit;
-    max-width: 400px;
+    max-width: 100%;
     @include media-breakpoint-up(lg) {
        width: 200px;
     }
@@ -41,7 +41,7 @@
 
 .mini-frame-300 {
     width: inherit;
-    max-width: 400px;
+    max-width: 100%;
     @include media-breakpoint-up(lg) {
        width: 300px;
     }
