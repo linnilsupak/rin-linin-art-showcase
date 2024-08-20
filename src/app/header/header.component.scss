@@ -149,20 +149,18 @@ $top-header-level: 999;
   background-color: black;
 
   .inner-wallpaper {
-    // $inner-light: #836c26;
-    // $inner-dark: #241d01;
     $inner-light: #265683;
     $inner-dark: #0d2f4f;
     position: relative;
+    $minorStrip: 5vmin;
+    $majorStrip: 10vmin;
     background: repeating-linear-gradient(90deg,
         $inner-dark,
-        $inner-dark 5vmin,
-        $inner-light 5vmin,
-        $inner-light 10vmin);
+        $inner-dark $minorStrip,
+        $inner-light $minorStrip,
+        $inner-light $majorStrip);
   }
 }
-
-// repeating-linear-gradient(90deg, #0d2f4f, #d2feff 5vmin, #f0b8ff 5vmin, #265683 10vmin)
 
 .menu-btn {
   border-radius: 8px;
@@ -171,4 +169,5 @@ $top-header-level: 999;
   display: flex;
   justify-content: center;
   align-items: center;
+  height: inherit;
 }
