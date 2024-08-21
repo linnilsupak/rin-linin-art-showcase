@@ -3,12 +3,12 @@
 
 .cover {
     // object-fit: none;
-    background: url('/assets/images/playground/playground-cover.jpg') no-repeat 95% 44%;
+    background: url('/assets/images/playground/playground-cover.jpg') no-repeat 95% 58%;
     background-size: cover;
-    min-height: 322px;
+    min-height: 230px;
 
     @include media-breakpoint-up(lg) {
-        min-height: 320px;
+        min-height: 226px;
      }
 }
 
@@ -31,8 +31,9 @@
 }
 
 .mini-frame-200 {
-    width: inherit;
+    width: fit-content;;
     max-width: 100%;
+
     @include media-breakpoint-up(lg) {
        width: 200px;
     }
@@ -40,7 +41,7 @@
 
 
 .mini-frame-300 {
-    width: inherit;
+    width: fit-content;
     max-width: 100%;
     @include media-breakpoint-up(lg) {
        width: 300px;

@@ -1,5 +1,5 @@
-import { Component, Inject } from '@angular/core';
-import { WINDOW, WINDOW_PROVIDERS } from '../core/service/window.service';
+import { Component, Input } from '@angular/core';
+import { WINDOW_PROVIDERS } from '../core/service/window.service';
 
 @Component({
   selector: 'app-scroll-up-button',
@@ -10,12 +10,13 @@ import { WINDOW, WINDOW_PROVIDERS } from '../core/service/window.service';
   styleUrl: './scroll-up-button.component.scss'
 })
 export class ScrollUpButtonComponent {
+  @Input({ required: true }) scrollableDiv: HTMLDivElement;
 
-  constructor(@Inject(WINDOW) private window: Window,) {
+  constructor() {
   }
 
   scrollToTop() {
-    this.window.scrollTo(0, 0);
+    this.scrollableDiv.scrollTo(0, 0);
   }
 
 }

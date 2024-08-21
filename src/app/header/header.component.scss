@@ -5,10 +5,11 @@ $linin-label-level: 996;
 $top-header-level: 995;
 
 .over-header {
-  position: fixed;
+  position: absolute;
   right: 0;
   z-index: $over-header-level;
   height: 100%;
+  overflow: hidden;
 }
 
 .menu {
@@ -52,12 +53,11 @@ $top-header-level: 995;
 }
 
 .show-on-header {
-  position: fixed;
+  position: absolute;
   left: 0;
 }
 
 .linin-label {
-  float: left;
   z-index: $linin-label-level;
   width: fit-content;
   cursor: pointer;
@@ -85,7 +85,8 @@ $top-header-level: 995;
 
     @include media-breakpoint-up(xl) {
       margin-top: 8px;
-      max-width: 400px;
+      // max-width: 400px;
+      max-width: 350px;
       ;
     }
   }
@@ -116,9 +117,12 @@ $top-header-level: 995;
     }
 
     @include media-breakpoint-up(xl) {
-      left: 82px;
-      top: 107px;
-      max-width: 225px;
+      // left: 82px;
+      // top: 107px;
+      // max-width: 225px;
+      left: 74px;
+      top: 98px;
+      max-width: 192px;
     }
   }
 

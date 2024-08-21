@@ -1,9 +1,23 @@
+@import "bootstrap-mixin";
+
 .fixed-button {
   position: fixed;
   bottom: 4px;
   right: -39px;
   z-index: 1000;
   cursor: pointer;
+
+  @include media-breakpoint-down(md) {
+    right: -10px;
+  }
+}
+
+.pot {
+  width: 180px;
+
+  @include media-breakpoint-down(md) {
+    width: 100px;
+  }
 }
 
 .up-btn {
@@ -12,6 +26,12 @@
   left: 66px;
   width: 52px;
   transition: all 0.4s ease;
+
+  @include media-breakpoint-down(md) {
+    left: 31px;
+    bottom: 10px;
+    width: 43px;
+  }
 }
 
 @media (any-pointer: fine) {
