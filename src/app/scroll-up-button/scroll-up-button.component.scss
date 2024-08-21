@@ -2,9 +2,9 @@
 
 .fixed-button {
   position: fixed;
-  bottom: 4px;
-  right: -39px;
-  z-index: 1000;
+  bottom: 0;
+  right: 16px;
+  z-index: 995;
   cursor: pointer;
 
   @include media-breakpoint-down(md) {
@@ -13,7 +13,7 @@
 }
 
 .pot {
-  width: 180px;
+  width: 140px;
 
   @include media-breakpoint-down(md) {
     width: 100px;
