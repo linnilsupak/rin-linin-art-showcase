@@ -47,6 +47,7 @@ export class StarrySkyComponent implements AfterViewInit {
         this.animateInterval$.unsubscribe();
         this.animateInterval$ = new Subscription();
         this.context.clearRect(0, 0, this.screenW, this.screenH);
+        this.canvasList = [];
       }
       this.setCanvasWidthHeight(w, h);
       // for (let i = 0; i < this.limitCanvas; i++) {
