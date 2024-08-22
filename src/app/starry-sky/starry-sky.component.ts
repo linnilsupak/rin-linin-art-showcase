@@ -50,12 +50,11 @@ export class StarrySkyComponent implements AfterViewInit {
         this.canvasList = [];
       }
       this.setCanvasWidthHeight(w, h);
-      // for (let i = 0; i < this.limitCanvas; i++) {
+      this.createStarAnimation();
       this.canvasList.push(this.createOffscreenCanvas());
-      // }
       setTimeout(() => {
         this.animateInterval$.add(
-          interval(7000 / this.fps).subscribe(() => {
+          interval(1000 / this.fps).subscribe(() => {
             if (this.canvasIndex > this.canvasList.length - 1) {
               this.canvasList.push(this.createOffscreenCanvas());
             }
@@ -81,7 +80,6 @@ export class StarrySkyComponent implements AfterViewInit {
     offScreenCanvas.width = this.screenW;
     offScreenCanvas.height = this.screenH;
     const contextTemp = offScreenCanvas.getContext("2d");
-    this.createStarAnimation();
     this.drawAllStar(contextTemp);
     return offScreenCanvas;
   }
