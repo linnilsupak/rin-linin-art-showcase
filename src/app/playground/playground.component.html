@@ -28,13 +28,15 @@
             </div>
         </div>
         <div class="col-12 col-lg d-flex align-items-end mt-3 mt-lg-0">
-            <div class="white-double-frame small mx-auto" >
-                <img src="/assets/images/playground/artfight2024/mobias_rin_linin.png">
+            <div class="{{ galleryRoom.mobiasPic.frameStyle }} hover mx-auto"
+            (click)="openArtWorkLabel(galleryRoom.mobiasPic)">
+              <img [src]="galleryRoom.mobiasPic.picUrl">
             </div>
         </div>
         <div class="col-12 col-lg d-flex mt-3 mt-lg-0">
-            <div class="black-frame small mt-auto me-auto ms-auto ms-lg-0  mini-frame-300">
-                <img src="/assets/images/playground/artfight2024/red_rin_linin.png">
+            <div class="{{ galleryRoom.charlottePic.frameStyle }} hover mt-auto me-auto ms-auto ms-lg-0  mini-frame-300"
+            (click)="openArtWorkLabel(galleryRoom.charlottePic)">
+            <img [src]="galleryRoom.charlottePic.picUrl">
             </div>
         </div>
     </div>
