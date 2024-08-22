@@ -1,7 +1,7 @@
 import { AfterViewInit, Component, ElementRef, HostListener, Inject, PLATFORM_ID, ViewChild } from '@angular/core';
 import { Star } from '../core/star.model';
 import { WINDOW, WINDOW_PROVIDERS } from '../core/service/window.service';
-import { isPlatformBrowser } from '@angular/common';
+import { DOCUMENT, isPlatformBrowser } from '@angular/common';
 import { BehaviorSubject, debounceTime, interval, Subscription } from 'rxjs';
 import { mainConfig } from '../core/config/main.config';
 
@@ -15,7 +15,7 @@ import { mainConfig } from '../core/config/main.config';
 })
 export class StarrySkyComponent implements AfterViewInit {
   // its important myCanvas matches the variable name in the template
-  @ViewChild('myCanvas', {static: false})
+  @ViewChild('myCanvas', { static: false })
   canvas: ElementRef<HTMLCanvasElement>;
   context: CanvasRenderingContext2D;
   screenH: number;
@@ -26,20 +26,22 @@ export class StarrySkyComponent implements AfterViewInit {
   miniNumStars = 1000;
   animateInterval$ = new Subscription();
   isBrowser = true;
-  starAnimationResize$ = new BehaviorSubject<{w: number, h: number}>(undefined);
-  readonly limitCanvas = 10;
+  starAnimationResize$ = new BehaviorSubject<{ w: number, h: number }>(undefined);
+  readonly limitCanvas = 5;
+  canvasList = [];
+  canvasIndex = 0;
 
-  constructor(@Inject(WINDOW) private window: Window, @Inject(PLATFORM_ID) platformId: Object) {
+  constructor(@Inject(WINDOW) private window: Window, @Inject(PLATFORM_ID) platformId: Object, @Inject(DOCUMENT) private document: Document,) {
     this.isBrowser = isPlatformBrowser(platformId);
   }
   @HostListener('window:resize', ['$event'])
   onResize(event?) {
-    this.starAnimationResize$.next({ w: this.window.innerWidth, h: this.window.innerHeight});
+    this.starAnimationResize$.next({ w: this.window.innerWidth, h: this.window.innerHeight });
   }
   ngAfterViewInit(): void {
     this.starAnimationResize$.pipe(
       debounceTime(mainConfig.timeoutAfterViewInit)
-    ).subscribe(( {w,h}) => {
+    ).subscribe(({ w, h }) => {
       if (!this.isBrowser) return;
       if (this.screenW && this.screenH) {
         this.animateInterval$.unsubscribe();
@@ -47,11 +49,40 @@ export class StarrySkyComponent implements AfterViewInit {
         this.context.clearRect(0, 0, this.screenW, this.screenH);
       }
       this.setCanvasWidthHeight(w, h);
+      // for (let i = 0; i < this.limitCanvas; i++) {
+      this.canvasList.push(this.createOffscreenCanvas());
+      // }
       setTimeout(() => {
-        this.createStarAnimation();
+        this.animateInterval$.add(
+          interval(7000 / this.fps).subscribe(() => {
+            if (this.canvasIndex > this.canvasList.length - 1) {
+              this.canvasList.push(this.createOffscreenCanvas());
+            }
+            this.context.clearRect(0, 0, this.screenW, this.screenH);
+            const offScreenCanvas = this.canvasList[this.canvasIndex];
+            this.copyToOnScreen(offScreenCanvas);
+            this.canvasIndex++;
+            this.canvasIndex = this.canvasIndex % this.limitCanvas;
+          })
+        );
       }, mainConfig.timeoutAfterViewInit);
     });
-    this.starAnimationResize$.next({ w: this.window.innerWidth, h: this.window.innerHeight});
+    this.starAnimationResize$.next({ w: this.window.innerWidth, h: this.window.innerHeight });
+  }
+
+  copyToOnScreen(offScreenCanvas: HTMLCanvasElement) {
+    var onScreenContext = this.canvas.nativeElement.getContext('2d');
+    onScreenContext.drawImage(offScreenCanvas, 0, 0);
+  }
+
+  createOffscreenCanvas(): HTMLCanvasElement {
+    const offScreenCanvas = this.document.createElement('canvas');
+    offScreenCanvas.width = this.screenW;
+    offScreenCanvas.height = this.screenH;
+    const contextTemp = offScreenCanvas.getContext("2d");
+    this.createStarAnimation();
+    this.drawAllStar(contextTemp);
+    return offScreenCanvas;
   }
 
   setCanvasWidthHeight(w: number, h: number) {
@@ -64,10 +95,10 @@ export class StarrySkyComponent implements AfterViewInit {
   }
 
   createStarAnimation() {
-    const numStars = this.screenW <= 700 ? this.miniNumStars: this.bigNumStars;
+    const numStars = this.screenW <= 700 ? this.miniNumStars : this.bigNumStars;
     this.stars = [];
     // Create all the stars
-	  for(var i = 0; i < numStars; i++) {
+    for (var i = 0; i < numStars; i++) {
       var x = Math.round(Math.random() * this.screenW);
       var y = Math.round(Math.random() * this.screenH);
       var length = 1 + Math.random() * 2;
@@ -79,19 +110,13 @@ export class StarrySkyComponent implements AfterViewInit {
       // Add the the stars array
       this.stars.push(star);
     }
-    // this.window.requestAnimationFrame(this.animate);
-    this.animateInterval$.add(
-      interval(1000 / this.fps).subscribe(() => {
-        this.animate();
-      })
-    );
   }
 
 
-  animate() {
-    this.context.clearRect(0, 0, this.screenW, this.screenH);
+  drawAllStar(context: CanvasRenderingContext2D) {
+    context.clearRect(0, 0, this.screenW, this.screenH);
     this.stars.forEach((star) => {
-      star.draw(this.context, this.screenH, this.screenW);
+      star.draw(context, this.screenH, this.screenW);
     });
   }
 
