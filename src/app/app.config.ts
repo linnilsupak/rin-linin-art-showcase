@@ -2,10 +2,10 @@ import { ApplicationConfig, importProvidersFrom } from '@angular/core';
 import { InMemoryScrollingFeature, InMemoryScrollingOptions, provideRouter, withInMemoryScrolling } from '@angular/router';
 
 import { routes } from './app.routes';
-import { provideClientHydration } from '@angular/platform-browser';
+import { provideClientHydration, withI18nSupport } from '@angular/platform-browser';
 import { provideAnimationsAsync } from '@angular/platform-browser/animations/async';
 import { TranslateLoader, TranslateModule } from '@ngx-translate/core';
-import { HttpClient } from '@angular/common/http';
+import { HttpClient, provideHttpClient } from '@angular/common/http';
 import { HttpLoaderFactory } from './core/http-loader';
 
 const scrollConfig: InMemoryScrollingOptions = {
@@ -17,6 +17,8 @@ const inMemoryScrollingFeature: InMemoryScrollingFeature =
 
 export const appConfig: ApplicationConfig = {
   providers: [provideRouter(routes, inMemoryScrollingFeature),
+    provideHttpClient(),
+    provideClientHydration(withI18nSupport()),
     importProvidersFrom(
       TranslateModule.forRoot({
         defaultLanguage: 'th',
@@ -27,5 +29,5 @@ export const appConfig: ApplicationConfig = {
         },
       })
     ),
-    provideClientHydration(), provideAnimationsAsync()]
+    provideClientHydration(withI18nSupport()), provideAnimationsAsync()]
 }

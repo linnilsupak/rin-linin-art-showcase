@@ -28,7 +28,7 @@ export class StarrySkyComponent implements AfterViewInit {
   isBrowser = true;
   starAnimationResize$ = new BehaviorSubject<{ w: number, h: number }>(undefined);
   readonly limitCanvas = 1000;
-  canvasList = [];
+  cacheCanvasList = [];
   canvasIndex = 0;
 
   constructor(@Inject(WINDOW) private window: Window, @Inject(PLATFORM_ID) platformId: Object, @Inject(DOCUMENT) private document: Document,) {
@@ -48,19 +48,19 @@ export class StarrySkyComponent implements AfterViewInit {
         this.animateInterval$ = new Subscription();
         this.context.clearRect(0, 0, this.screenW, this.screenH);
         this.canvasIndex = 0;
-        this.canvasList = [];
+        this.cacheCanvasList = [];
       }
       this.setCanvasWidthHeight(w, h);
       setTimeout(() => {
         this.createStarAnimation();
-        this.canvasList.push(this.createOffscreenCanvas());
+        this.cacheCanvasList.push(this.createOffscreenCanvas());
         this.animateInterval$.add(
           interval(1000 / this.fps).subscribe(() => {
-            if (this.canvasIndex > this.canvasList.length - 1) {
-              this.canvasList.push(this.createOffscreenCanvas());
+            if (this.canvasIndex > this.cacheCanvasList.length - 1) {
+              this.cacheCanvasList.push(this.createOffscreenCanvas());
             }
             this.context.clearRect(0, 0, this.screenW, this.screenH);
-            const offScreenCanvas = this.canvasList[this.canvasIndex];
+            const offScreenCanvas = this.cacheCanvasList[this.canvasIndex];
             this.copyToOnScreen(offScreenCanvas);
             this.canvasIndex++;
             this.canvasIndex = this.canvasIndex % this.limitCanvas;
