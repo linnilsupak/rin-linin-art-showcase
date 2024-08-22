@@ -50,9 +50,9 @@ export class StarrySkyComponent implements AfterViewInit {
         this.canvasList = [];
       }
       this.setCanvasWidthHeight(w, h);
-      this.createStarAnimation();
-      this.canvasList.push(this.createOffscreenCanvas());
       setTimeout(() => {
+        this.createStarAnimation();
+        this.canvasList.push(this.createOffscreenCanvas());
         this.animateInterval$.add(
           interval(1000 / this.fps).subscribe(() => {
             if (this.canvasIndex > this.canvasList.length - 1) {
