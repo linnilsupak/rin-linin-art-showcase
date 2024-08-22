@@ -6,15 +6,15 @@
         <app-reflection-font [text]="'Playground'" [fontClass]="'mx-auto'" ></app-reflection-font>
     </div>
     <div class="caption mb-5 after-reflect">
-      นี่คือภาพมีลิขสิทธิ์<br/>
-      ห้ามทำซ้ำ ดัดแปลง ฯลฯ ไม่ว่าในกรณีใด ๆ<br />
-      Please don't re-post
+      {{'GLOBAL.WARNING' | translate}}<br/>
+      {{'GLOBAL.DONT_LIST' | translate}}<br/>
+      {{'GLOBAL.DONT_LIST_SUB' | translate}}
     </div>
     <div class="section-topic mb-2">
-      Art Fight 2024
+      {{'ART_FIGHT_2024.TITLE' | translate}}
     </div>
     <div class="section-content mb-4">
-      ปีแรกที่รินได้ลองเล่น Artfight และได้ทดลองวาดตัวละครหลากหลายรูปแบบค่ะ
+      {{'ART_FIGHT_2024.DESCRIPTION' | translate}}
     </div>
     <div class="row mb-3">
         <div class="col-12 col-lg d-flex flex-column">
@@ -22,8 +22,9 @@
               (click)="openArtWorkLabel(galleryRoom.furryPic)">
                 <img [src]="galleryRoom.furryPic.picUrl">
             </div>
-            <div class="white-frame mt-2 small ms-auto me-auto me-lg-0 mini-frame-200" >
-                <img src="/assets/images/playground/artfight2024/rioni_rin_linin.png">
+            <div class="{{ galleryRoom.rioniPic.frameStyle }} hover mt-2 ms-auto me-auto me-lg-0 mini-frame-200"
+            (click)="openArtWorkLabel(galleryRoom.rioniPic)">
+                <img [src]="galleryRoom.rioniPic.picUrl">
             </div>
         </div>
         <div class="col-12 col-lg d-flex align-items-end mt-3 mt-lg-0">

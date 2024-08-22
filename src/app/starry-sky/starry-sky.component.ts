@@ -27,6 +27,7 @@ export class StarrySkyComponent implements AfterViewInit {
   animateInterval$ = new Subscription();
   isBrowser = true;
   starAnimationResize$ = new BehaviorSubject<{w: number, h: number}>(undefined);
+  readonly limitCanvas = 10;
 
   constructor(@Inject(WINDOW) private window: Window, @Inject(PLATFORM_ID) platformId: Object) {
     this.isBrowser = isPlatformBrowser(platformId);

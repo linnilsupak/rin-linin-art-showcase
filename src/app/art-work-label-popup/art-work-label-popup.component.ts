@@ -17,10 +17,10 @@ export class ArtWorkLabelPopupComponent {
   readonly data = inject<any>(MAT_DIALOG_DATA);
   readonly picUrl = model(this.data.picUrl);
   readonly frameStyle = model(this.data.frameStyle);
-  readonly title = model(this.data.title);
-  readonly title2 = model(this.data.title2);
-  readonly subTitle = model(this.data.subTitle);
-  readonly description = model(this.data.description);
+  readonly title = model(this.data.content.title);
+  readonly title2 = model(this.data.content.title2);
+  readonly subTitle = model(this.data.content.subTitle);
+  readonly description = model(this.data.content.description);
 
   closePopup() {
     this.dialogRef.close();
