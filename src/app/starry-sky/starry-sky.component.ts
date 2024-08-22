@@ -27,7 +27,7 @@ export class StarrySkyComponent implements AfterViewInit {
   animateInterval$ = new Subscription();
   isBrowser = true;
   starAnimationResize$ = new BehaviorSubject<{ w: number, h: number }>(undefined);
-  readonly limitCanvas = 5;
+  readonly limitCanvas = 1000;
   canvasList = [];
   canvasIndex = 0;
 
@@ -47,6 +47,7 @@ export class StarrySkyComponent implements AfterViewInit {
         this.animateInterval$.unsubscribe();
         this.animateInterval$ = new Subscription();
         this.context.clearRect(0, 0, this.screenW, this.screenH);
+        this.canvasIndex = 0;
         this.canvasList = [];
       }
       this.setCanvasWidthHeight(w, h);
