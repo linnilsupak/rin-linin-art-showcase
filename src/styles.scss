@@ -24,6 +24,7 @@ $rin-linin-art-showcase-theme: mat.define-theme((
 /* Importing Bootstrap SCSS file. */
 @import 'bootstrap/scss/bootstrap';
 @import 'variables';
+@import 'utilities';
 @import 'material.custom';
 
 // Include theme styles for core and each component used in your app.

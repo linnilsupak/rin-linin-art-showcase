@@ -1,0 +1,14 @@
+@import "picture-frame";
+@import "bootstrap-mixin";
+
+
+.cover {
+    // object-fit: none;
+    background: url('/assets/images/playground/playground-cover.jpg') no-repeat 95% 58%;
+    background-size: cover;
+    min-height: 230px;
+
+    @include media-breakpoint-up(lg) {
+        min-height: 226px;
+     }
+}
