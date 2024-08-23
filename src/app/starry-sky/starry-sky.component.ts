@@ -27,7 +27,7 @@ export class StarrySkyComponent implements AfterViewInit {
   animateInterval$ = new Subscription();
   isBrowser = true;
   starAnimationResize$ = new BehaviorSubject<{ w: number, h: number }>(undefined);
-  readonly limitCanvas = 1000;
+  readonly limitCanvas = 5000;
   cacheCanvasList = [];
   canvasIndex = 0;
   reqAnimationId;
@@ -46,8 +46,6 @@ export class StarrySkyComponent implements AfterViewInit {
     ).subscribe(({ w, h }) => {
       if (!this.isBrowser) return;
       if (this.screenW && this.screenH) {
-        // this.animateInterval$.unsubscribe();
-        // this.animateInterval$ = new Subscription();
         this.canvasIndex = 0;
         this.cacheCanvasList = [];
       }
@@ -55,28 +53,31 @@ export class StarrySkyComponent implements AfterViewInit {
       setTimeout(() => {
         this.createStarAnimation();
         this.cacheCanvasList.push(this.createOffscreenCanvas());
-        // this.animateInterval$.add(
-        //   interval(1000 / this.fps).subscribe(() => {
-        //     if (this.canvasIndex > this.cacheCanvasList.length - 1) {
-        //       this.cacheCanvasList.push(this.createOffscreenCanvas());
-        //     }
-        //     this.context.clearRect(0, 0, this.screenW, this.screenH);
-        //     const offScreenCanvas = this.cacheCanvasList[this.canvasIndex];
-        //     this.copyToOnScreen(offScreenCanvas);
-        //     this.canvasIndex++;
-        //     this.canvasIndex = this.canvasIndex % this.limitCanvas;
-        //   })
-        // );
+        const fpsInterval = 1000 / this.fps;
+        let then = Date.now();
         const smoothAnimation = () => {
-          if (this.canvasIndex > this.cacheCanvasList.length - 1) {
-            this.cacheCanvasList.push(this.createOffscreenCanvas());
-          }
-          this.context.clearRect(0, 0, this.screenW, this.screenH);
-          const offScreenCanvas = this.cacheCanvasList[this.canvasIndex];
-          this.copyToOnScreen(offScreenCanvas);
-          this.canvasIndex++;
-          this.canvasIndex = this.canvasIndex % this.limitCanvas;
           this.reqAnimationId = requestAnimationFrame(smoothAnimation);
+          // calc elapsed time since last loop
+          const now = Date.now();
+          const elapsed = now - then;
+
+          // if enough time has elapsed, draw the next frame
+          if (elapsed > fpsInterval) {
+
+            // Get ready for next frame by setting then=now, but also adjust for your
+            // specified fpsInterval not being a multiple of RAF's interval (16.7ms)
+            then = now - (elapsed % fpsInterval);
+
+            // Put your drawing code here
+            if (this.canvasIndex > this.cacheCanvasList.length - 1) {
+              this.cacheCanvasList.push(this.createOffscreenCanvas());
+            }
+            this.context.clearRect(0, 0, this.screenW, this.screenH);
+            const offScreenCanvas = this.cacheCanvasList[this.canvasIndex];
+            this.copyToOnScreen(offScreenCanvas);
+            this.canvasIndex++;
+            this.canvasIndex = this.canvasIndex % this.limitCanvas;
+          }
         }
         this.reqAnimationId = requestAnimationFrame(smoothAnimation);
       }, mainConfig.timeoutAfterViewInit);
