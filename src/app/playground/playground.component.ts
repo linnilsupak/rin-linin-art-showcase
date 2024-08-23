@@ -4,7 +4,6 @@ import { MatDialog } from '@angular/material/dialog';
 import { ArtWorkLabelPopupComponent } from '../art-work-label-popup/art-work-label-popup.component';
 import { ArtworkLabel } from '../core/models/artwork-label.model';
 import { TranslateModule } from '@ngx-translate/core';
-import { title } from 'process';
 import { GalleryRoom } from '../core/models/gallery-room.model';
 
 @Component({
@@ -67,12 +66,172 @@ export class PlaygroundComponent {
         description: 'ภาพที่รินลองลงสีแบบเปรอะเปื้อน สไตล์ฝันๆลงบนกระดาษสีน้ำแผ่นเรียบ'
       }
     },
-    new: {
-      picUrl: '',
-      frameStyle: '',
+    herianPic: {
+      picUrl: '/assets/images/playground/artfight2024/lossen_watercolor_rin_linin.png',
+      frameStyle: 'white-frame',
       content: {
-        title: '',
-        title2: '',
+        title: 'Herian วาดโดย Rin Linin',
+        title2: 'ตัวละครของ ecobotanist',
+        subTitle: 'ภาพสีน้ำ',
+        description: 'ภาพนี้ก็ลองใช้การลงสีแบบเปรอะๆเปื้อนๆ สไตล์ okayuuri ที่เน้นลายเส้นและความโปร่งใสของสีน้ำค่ะ'
+      }
+    },
+    idkPic: {
+      picUrl: '/assets/images/playground/artfight2024/rock_rin_linin.png',
+      frameStyle: 'black-frame circle',
+      content: {
+        title: 'IDK วาดโดย Rin Linin',
+        title2: 'Blastoffspaceboy',
+        subTitle: 'ภาพลายเส้นปากกา',
+        description: 'ภาพนี้วาดโดยลากปากกาแบบไม่ยกเลยค่ะ แต่ก็มีแอบเอาปากกามาเติมนิดๆหน่อยๆทีหลังนะ'
+      }
+    },
+    monthDragonPic: {
+      picUrl: '/assets/images/playground/artfight2024/month_rin_linin.png',
+      frameStyle: 'white-frame',
+      content: {
+        title: 'Rosy Maple Moth Dragon วาดโดย Rin Linin',
+        title2: 'ตัวละครของ amesketches',
+        subTitle: 'ภาพเส้นดินสอ',
+        description: 'ลองตัวอะไรที่ไม่ใช่คน หรือมีความน่ารักเลยดูค่ะ วาดด้วยเส้นดินสอจะได้ดูลึกลับน่ากลัว'
+      }
+    },
+    junePic: {
+      picUrl: '/assets/images/playground/artfight2024/june_rin_linin.png',
+      frameStyle: 'white-double-frame small',
+      content: {
+        title: 'June Valeria วาดโดย Rin Linin',
+        title2: 'ตัวละครของ MintKyo',
+        subTitle: 'ภาพสีน้ำ',
+        description: 'ลองตั้งใจลงสีบนกระดาษสีน้ำแผ่นเรียบดูค่ะ แต่เหมือนจะพลาดนิดหน่อยตรงทะเลดาวนะ'
+      }
+    },
+    miffyPic: {
+      picUrl: '/assets/images/playground/artfight2024/rabbit_rin_linin.png',
+      frameStyle: 'black-frame small',
+      content: {
+        title: 'Miffy วาดโดย Rin Linin',
+        title2: 'ตัวละครของ Etheirys',
+        subTitle: 'ภาพสีน้ำ',
+        description: 'พยายามจะลงสีแบบลงทีละส่วน สุดท้ายลองผสมสีตุ๋นๆแล้วมันก็ออกมาแบบนี้แหละ'
+      }
+    },
+    peejohnPic: {
+      picUrl: '/assets/images/playground/artfight2024/bird_rin_linin.png',
+      frameStyle: 'black-frame',
+      content: {
+        title: 'Peejohn วาดโดย Rin Linin',
+        title2: 'ตัวละครของ LilaThAplePeela',
+        subTitle: 'ภาพสีน้ำ',
+        description: ''
+      }
+    },
+    ponyPic: {
+      picUrl: '/assets/images/playground/artfight2024/pony_rin_linin.gif',
+      frameStyle: 'black-frame',
+      content: {
+        title: 'Grimm วาดโดย Rin Linin',
+        title2: 'ตัวละครของ Melo_cherrii',
+        subTitle: 'Clip studio paint animation',
+        description: ''
+      }
+    },
+    nebulaPic: {
+      picUrl: '/assets/images/playground/artfight2024/rabbit_yellow_rin_linin.png',
+      frameStyle: 'white-frame',
+      content: {
+        title: 'Nebula วาดโดย Rin Linin',
+        title2: 'ตัวละครของ Mirzel',
+        subTitle: 'CG',
+        description: ''
+      }
+    },
+    elfPic: {
+      picUrl: '/assets/images/playground/artfight2024/fly_rin_linin.png',
+      frameStyle: 'black-frame',
+      content: {
+        title: 'Jacaranda วาดโดย Rin Linin',
+        title2: 'ตัวละครของ Kayleona',
+        subTitle: '',
+        description: ''
+      }
+    },
+    alexandraPic: {
+      picUrl: '/assets/images/playground/artfight2024/alexandra_rin_linin.png',
+      frameStyle: 'black-frame circle',
+      content: {
+        title: 'Alexandra วาดโดย Rin Linin',
+        title2: 'ตัวละครของ prypec',
+        subTitle: '',
+        description: ''
+      }
+    },
+    haliPic: {
+      picUrl: '/assets/images/playground/artfight2024/umbera_rin_linin.png',
+      frameStyle: 'white-frame',
+      content: {
+        title: 'Hali วาดโดย Rin Linin',
+        title2: 'ตัวละครของ	socsie',
+        subTitle: '',
+        description: ''
+      }
+    },
+    peepPic: {
+      picUrl: '/assets/images/playground/artfight2024/dog_rin_linin.png',
+      frameStyle: 'white-double-frame small',
+      content: {
+        title: 'Peep วาดโดย Rin Linin',
+        title2: 'ตัวละครของ Peachiepeeps',
+        subTitle: '',
+        description: ''
+      }
+    },
+    rinaPic: {
+      picUrl: '/assets/images/playground/artfight2024/chibi_rin_linin.png',
+      frameStyle: 'black-frame small',
+      content: {
+        title: 'Rina วาดโดย Rin Linin',
+        title2: 'ตัวละครของ	JazzyFina',
+        subTitle: '',
+        description: ''
+      }
+    },
+    devilPic: {
+      picUrl: '/assets/images/playground/artfight2024/devil_rin_linin.png',
+      frameStyle: 'black-frame',
+      content: {
+        title: 'Deamon วาดโดย Rin Linin',
+        title2: 'ตัวละครของ Duckiepu',
+        subTitle: '',
+        description: ''
+      }
+    },
+    moonlitPic: {
+      picUrl: '/assets/images/playground/artfight2024/moonlit_rin_linin.png',
+      frameStyle: 'white-frame',
+      content: {
+        title: 'Moonlit วาดโดย Rin Linin',
+        title2: 'ตัวละครของ OverloadWork',
+        subTitle: '',
+        description: ''
+      }
+    },
+    raccoonPic: {
+      picUrl: '/assets/images/playground/artfight2024/raccoon_rin_linin.png',
+      frameStyle: 'black-frame',
+      content: {
+        title: 'Fishtopher วาดโดย Rin Linin',
+        title2: 'ตัวละครของ streetcatzzz',
+        subTitle: '',
+        description: ''
+      }
+    },
+    alanPic: {
+      picUrl: '/assets/images/playground/artfight2024/alan_rin_linin.png',
+      frameStyle: 'white-frame',
+      content: {
+        title: 'Alan วาดโดย Rin Linin',
+        title2: 'ตัวละครของ Kai_draws_things',
         subTitle: '',
         description: ''
       }
