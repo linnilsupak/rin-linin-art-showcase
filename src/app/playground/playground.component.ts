@@ -64,7 +64,7 @@ export class PlaygroundComponent {
         title: 'Mirmir วาดโดย Rin Linin',
         title2: 'ตัวละครของ latteswiirl',
         subTitle: 'ภาพสีน้ำ',
-        description: 'ภาพที่รินลองลงสีแบบเปรอะเปื้อน ไสตล์ฝันๆลงบนกระดาษสีน้ำแผ่นเรียบ'
+        description: 'ภาพที่รินลองลงสีแบบเปรอะเปื้อน สไตล์ฝันๆลงบนกระดาษสีน้ำแผ่นเรียบ'
       }
     },
     new: {
