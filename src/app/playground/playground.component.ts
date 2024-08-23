@@ -57,6 +57,16 @@ export class PlaygroundComponent {
         description: 'ภาพสไตล์วิกตอเรียก็ต้องสีไม้ซิ สุดคลาสสิก'
       }
     },
+    mirmirPic: {
+      picUrl: '/assets/images/playground/artfight2024/paga_rin_linin.jpg',
+      frameStyle: 'black-frame',
+      content: {
+        title: 'Mirmir วาดโดย Rin Linin',
+        title2: 'ตัวละครของ latteswiirl',
+        subTitle: 'ภาพสีน้ำ',
+        description: 'ภาพที่รินลองลงสีแบบเปรอะเปื้อน ไสตล์ฝันๆลงบนกระดาษสีน้ำแผ่นเรียบ'
+      }
+    },
     new: {
       picUrl: '',
       frameStyle: '',

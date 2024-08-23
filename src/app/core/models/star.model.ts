@@ -50,9 +50,11 @@ export class Star {
         context.lineTo(0, this.length);
         context.closePath();
         context.fillStyle = "white";
-        // comment to optimize performance
-        // context.shadowBlur = 5;
-        // context.shadowColor = '#c2f1ff';
+        // reduce the blur star to optimize performance
+        if (this.factor) {
+          context.shadowBlur = 5;
+          context.shadowColor = '#c2f1ff';
+        }
         context.fill();
 
         context.restore();

@@ -1,5 +1,5 @@
 import { AfterViewInit, Component, ElementRef, HostListener, Inject, PLATFORM_ID, ViewChild } from '@angular/core';
-import { Star } from '../core/star.model';
+import { Star } from '../core/models/star.model';
 import { WINDOW, WINDOW_PROVIDERS } from '../core/service/window.service';
 import { DOCUMENT, isPlatformBrowser } from '@angular/common';
 import { BehaviorSubject, debounceTime, interval, Subscription } from 'rxjs';
@@ -22,8 +22,8 @@ export class StarrySkyComponent implements AfterViewInit {
   screenW: number;
   stars = [];
   fps = 50;
-  bigNumStars = 2000;
-  miniNumStars = 1000;
+  bigNumStars = 1000;
+  miniNumStars = 500;
   animateInterval$ = new Subscription();
   isBrowser = true;
   starAnimationResize$ = new BehaviorSubject<{ w: number, h: number }>(undefined);
@@ -36,6 +36,7 @@ export class StarrySkyComponent implements AfterViewInit {
   }
   @HostListener('window:resize', ['$event'])
   onResize(event?) {
+    this.context.clearRect(0, 0, this.window.innerWidth, this.window.innerHeight);
     this.starAnimationResize$.next({ w: this.window.innerWidth, h: this.window.innerHeight });
   }
   ngAfterViewInit(): void {
@@ -46,7 +47,6 @@ export class StarrySkyComponent implements AfterViewInit {
       if (this.screenW && this.screenH) {
         this.animateInterval$.unsubscribe();
         this.animateInterval$ = new Subscription();
-        this.context.clearRect(0, 0, this.screenW, this.screenH);
         this.canvasIndex = 0;
         this.cacheCanvasList = [];
       }
