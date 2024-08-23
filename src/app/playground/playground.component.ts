@@ -53,7 +53,7 @@ export class PlaygroundComponent {
       content: {
         title: 'Charlotte วาดโดย Rin Linin',
         title2: 'ตัวละครของ ChocolateProgram',
-        subTitle: 'ภาพสีไม้',
+        subTitle: 'ภาพสีไม้ผสมสีน้ำ',
         description: 'ภาพสไตล์วิกตอเรียก็ต้องสีไม้ซิ สุดคลาสสิก'
       }
     },

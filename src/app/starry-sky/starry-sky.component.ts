@@ -30,6 +30,7 @@ export class StarrySkyComponent implements AfterViewInit {
   readonly limitCanvas = 1000;
   cacheCanvasList = [];
   canvasIndex = 0;
+  reqAnimationId;
 
   constructor(@Inject(WINDOW) private window: Window, @Inject(PLATFORM_ID) platformId: Object, @Inject(DOCUMENT) private document: Document,) {
     this.isBrowser = isPlatformBrowser(platformId);
@@ -45,8 +46,8 @@ export class StarrySkyComponent implements AfterViewInit {
     ).subscribe(({ w, h }) => {
       if (!this.isBrowser) return;
       if (this.screenW && this.screenH) {
-        this.animateInterval$.unsubscribe();
-        this.animateInterval$ = new Subscription();
+        // this.animateInterval$.unsubscribe();
+        // this.animateInterval$ = new Subscription();
         this.canvasIndex = 0;
         this.cacheCanvasList = [];
       }
@@ -54,18 +55,30 @@ export class StarrySkyComponent implements AfterViewInit {
       setTimeout(() => {
         this.createStarAnimation();
         this.cacheCanvasList.push(this.createOffscreenCanvas());
-        this.animateInterval$.add(
-          interval(1000 / this.fps).subscribe(() => {
-            if (this.canvasIndex > this.cacheCanvasList.length - 1) {
-              this.cacheCanvasList.push(this.createOffscreenCanvas());
-            }
-            this.context.clearRect(0, 0, this.screenW, this.screenH);
-            const offScreenCanvas = this.cacheCanvasList[this.canvasIndex];
-            this.copyToOnScreen(offScreenCanvas);
-            this.canvasIndex++;
-            this.canvasIndex = this.canvasIndex % this.limitCanvas;
-          })
-        );
+        // this.animateInterval$.add(
+        //   interval(1000 / this.fps).subscribe(() => {
+        //     if (this.canvasIndex > this.cacheCanvasList.length - 1) {
+        //       this.cacheCanvasList.push(this.createOffscreenCanvas());
+        //     }
+        //     this.context.clearRect(0, 0, this.screenW, this.screenH);
+        //     const offScreenCanvas = this.cacheCanvasList[this.canvasIndex];
+        //     this.copyToOnScreen(offScreenCanvas);
+        //     this.canvasIndex++;
+        //     this.canvasIndex = this.canvasIndex % this.limitCanvas;
+        //   })
+        // );
+        const smoothAnimation = () => {
+          if (this.canvasIndex > this.cacheCanvasList.length - 1) {
+            this.cacheCanvasList.push(this.createOffscreenCanvas());
+          }
+          this.context.clearRect(0, 0, this.screenW, this.screenH);
+          const offScreenCanvas = this.cacheCanvasList[this.canvasIndex];
+          this.copyToOnScreen(offScreenCanvas);
+          this.canvasIndex++;
+          this.canvasIndex = this.canvasIndex % this.limitCanvas;
+          this.reqAnimationId = requestAnimationFrame(smoothAnimation);
+        }
+        this.reqAnimationId = requestAnimationFrame(smoothAnimation);
       }, mainConfig.timeoutAfterViewInit);
     });
     this.starAnimationResize$.next({ w: this.window.innerWidth, h: this.window.innerHeight });
