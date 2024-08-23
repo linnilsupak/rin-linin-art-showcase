@@ -27,9 +27,9 @@ export class StarrySkyComponent implements AfterViewInit {
   animateInterval$ = new Subscription();
   isBrowser = true;
   starAnimationResize$ = new BehaviorSubject<{ w: number, h: number }>(undefined);
-  readonly limitCanvas = 3000;
-  cacheCanvasList = [];
-  canvasIndex = 0;
+  // readonly limitCanvas = 2000;
+  // cacheCanvasList = [];
+  // canvasIndex = 0;
   reqAnimationId;
 
   constructor(@Inject(WINDOW) private window: Window, @Inject(PLATFORM_ID) platformId: Object, @Inject(DOCUMENT) private document: Document,) {
@@ -46,13 +46,14 @@ export class StarrySkyComponent implements AfterViewInit {
     ).subscribe(({ w, h }) => {
       if (!this.isBrowser) return;
       if (this.screenW && this.screenH) {
-        this.canvasIndex = 0;
-        this.cacheCanvasList = [];
+        // this.canvasIndex = 0;
+        // this.cacheCanvasList = [];
+        this.reqAnimationId = null;
       }
       this.setCanvasWidthHeight(w, h);
       setTimeout(() => {
         this.createStarAnimation();
-        this.cacheCanvasList.push(this.createOffscreenCanvas());
+        // this.cacheCanvasList.push(this.createOffscreenCanvas());
         const fpsInterval = 1000 / this.fps;
         let then = Date.now();
         const smoothAnimation = () => {
@@ -69,14 +70,15 @@ export class StarrySkyComponent implements AfterViewInit {
             then = now - (elapsed % fpsInterval);
 
             // Put your drawing code here
-            if (this.canvasIndex > this.cacheCanvasList.length - 1) {
-              this.cacheCanvasList.push(this.createOffscreenCanvas());
-            }
+            // if (this.canvasIndex > this.cacheCanvasList.length - 1) {
+            //   this.cacheCanvasList.push(this.createOffscreenCanvas());
+            // }
             this.context.clearRect(0, 0, this.screenW, this.screenH);
-            const offScreenCanvas = this.cacheCanvasList[this.canvasIndex];
+            // const offScreenCanvas = this.cacheCanvasList[this.canvasIndex];
+            const offScreenCanvas = this.createOffscreenCanvas();
             this.copyToOnScreen(offScreenCanvas);
-            this.canvasIndex++;
-            this.canvasIndex = this.canvasIndex % this.limitCanvas;
+            // this.canvasIndex++;
+            // this.canvasIndex = this.canvasIndex % this.limitCanvas;
           }
         }
         this.reqAnimationId = requestAnimationFrame(smoothAnimation);
