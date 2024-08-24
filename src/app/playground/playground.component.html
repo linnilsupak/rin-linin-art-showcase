@@ -18,12 +18,12 @@
   </div>
   <div class="row mb-3">
     <div class="col-12 col-lg d-flex flex-column">
-      <a class="{{ galleryRoom.furryPic.frameStyle }} slide-in hover mt-0 mt-lg-auto ms-auto me-auto me-lg-0 mb-2 mb-lg-0 mini-frame-200"
+      <a class="{{ galleryRoom.furryPic.frameStyle }} hover mt-0 mt-lg-auto ms-auto me-auto me-lg-0 mb-2 mb-lg-0 mini-frame-200"
         (click)="openArtWorkLabel(galleryRoom.furryPic)" title="{{ galleryRoom.furryPic.content.title }}">
         <img [src]="galleryRoom.furryPic.picUrl | imagePreview" >
       </a>
-      <div class="{{ galleryRoom.rioniPic.frameStyle }} slide-in hover mt-2 ms-auto me-auto me-lg-0 mini-frame-200"
-        (click)="openArtWorkLabel(galleryRoom.rioniPic)"  title="{{ galleryRoom.rioniPic.content.title }} ">
+      <div class="{{ galleryRoom.rioniPic.frameStyle }} hover mt-2 ms-auto me-auto me-lg-0 mini-frame-200"
+      (click)="openArtWorkLabel(galleryRoom.rioniPic)"  title="{{ galleryRoom.rioniPic.content.title }} ">
         <img [src]="galleryRoom.rioniPic.picUrl | imagePreview">
       </div>
     </div>
