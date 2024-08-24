@@ -2,7 +2,7 @@
   <div class="row">
     <div class="col-12 col-md mb-2 mb-md-0">
       <div class="{{ frameStyle() }}">
-        <img src="{{ picUrl() }}" class="show-real-width">
+        <img src="{{ picUrl() }}" srcset="{{ picUrl() | imageSrcset}}" class="show-real-width">
       </div>
     </div>
     <div class="col-12 col-md d-flex">

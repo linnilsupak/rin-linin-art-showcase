@@ -1,0 +1,9 @@
+
+.slide-in {
+    transform: translateY(100%);
+    animation: slide-in 0.5s forwards;
+}
+
+@keyframes slide-in {
+    100% { transform: translateY(0%); }
+}

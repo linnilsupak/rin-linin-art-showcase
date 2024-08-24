@@ -5,11 +5,13 @@ import { ArtWorkLabelPopupComponent } from '../art-work-label-popup/art-work-lab
 import { ArtworkLabel } from '../core/models/artwork-label.model';
 import { TranslateModule } from '@ngx-translate/core';
 import { GalleryRoom } from '../core/models/gallery-room.model';
+import { ImageSrcsetPipe } from "../core/image-srcset.pipe";
+import { ImagePreviewPipe } from "../core/image-preview.pipe";
 
 @Component({
   selector: 'app-playground',
   standalone: true,
-  imports: [ReflectionFontComponent, TranslateModule],
+  imports: [ReflectionFontComponent, TranslateModule, ImageSrcsetPipe, ImagePreviewPipe],
   templateUrl: './playground.component.html',
   styleUrl: './playground.component.scss'
 })
@@ -17,7 +19,7 @@ export class PlaygroundComponent {
   matDialog = inject(MatDialog);
   galleryRoom: GalleryRoom = {
     furryPic: {
-      picUrl: '/assets/images/playground/artfight2024/furry_rin_linin.png',
+      picUrl: '/assets/images/playground/artfight2024/sanchos_rin_linin.png',
       frameStyle: 'black-frame circle small',
       content: {
         title: 'Sanchos วาดโดย Rin Linin',
@@ -27,7 +29,7 @@ export class PlaygroundComponent {
       }
     },
     rioniPic: {
-      picUrl: '/assets/images/playground/artfight2024/rioni_rin_linin.png',
+      picUrl: '/assets/images/playground/artfight2024/remi_rin_linin.png',
       frameStyle: 'white-frame small',
       content: {
         title: 'Remi วาดโดย Rin Linin',
@@ -47,7 +49,7 @@ export class PlaygroundComponent {
       }
     },
     charlottePic: {
-      picUrl: '/assets/images/playground/artfight2024/red_rin_linin.png',
+      picUrl: '/assets/images/playground/artfight2024/charlotte_rin_linin.png',
       frameStyle: 'black-frame small',
       content: {
         title: 'Charlotte วาดโดย Rin Linin',
@@ -57,7 +59,7 @@ export class PlaygroundComponent {
       }
     },
     mirmirPic: {
-      picUrl: '/assets/images/playground/artfight2024/paga_rin_linin.jpg',
+      picUrl: '/assets/images/playground/artfight2024/mirmir_rin_linin.jpg',
       frameStyle: 'black-frame',
       content: {
         title: 'Mirmir วาดโดย Rin Linin',
@@ -67,7 +69,7 @@ export class PlaygroundComponent {
       }
     },
     herianPic: {
-      picUrl: '/assets/images/playground/artfight2024/lossen_watercolor_rin_linin.png',
+      picUrl: '/assets/images/playground/artfight2024/herian_rin_linin.png',
       frameStyle: 'white-frame',
       content: {
         title: 'Herian วาดโดย Rin Linin',
@@ -77,7 +79,7 @@ export class PlaygroundComponent {
       }
     },
     idkPic: {
-      picUrl: '/assets/images/playground/artfight2024/rock_rin_linin.png',
+      picUrl: '/assets/images/playground/artfight2024/idk_rin_linin.png',
       frameStyle: 'black-frame circle',
       content: {
         title: 'IDK วาดโดย Rin Linin',
@@ -87,7 +89,7 @@ export class PlaygroundComponent {
       }
     },
     monthDragonPic: {
-      picUrl: '/assets/images/playground/artfight2024/month_rin_linin.png',
+      picUrl: '/assets/images/playground/artfight2024/month_rin_linin.jpg',
       frameStyle: 'white-frame',
       content: {
         title: 'Rosy Maple Moth Dragon วาดโดย Rin Linin',
@@ -107,7 +109,7 @@ export class PlaygroundComponent {
       }
     },
     miffyPic: {
-      picUrl: '/assets/images/playground/artfight2024/rabbit_rin_linin.png',
+      picUrl: '/assets/images/playground/artfight2024/miffy_rin_linin.png',
       frameStyle: 'black-frame small',
       content: {
         title: 'Miffy วาดโดย Rin Linin',
@@ -117,7 +119,7 @@ export class PlaygroundComponent {
       }
     },
     peejohnPic: {
-      picUrl: '/assets/images/playground/artfight2024/bird_rin_linin.png',
+      picUrl: '/assets/images/playground/artfight2024/peejohn_rin_linin.jpg',
       frameStyle: 'black-frame',
       content: {
         title: 'Peejohn วาดโดย Rin Linin',
@@ -137,7 +139,7 @@ export class PlaygroundComponent {
       }
     },
     nebulaPic: {
-      picUrl: '/assets/images/playground/artfight2024/rabbit_yellow_rin_linin.png',
+      picUrl: '/assets/images/playground/artfight2024/nebula_rin_linin.jpg',
       frameStyle: 'white-frame',
       content: {
         title: 'Nebula วาดโดย Rin Linin',
@@ -146,8 +148,8 @@ export class PlaygroundComponent {
         description: ''
       }
     },
-    elfPic: {
-      picUrl: '/assets/images/playground/artfight2024/fly_rin_linin.png',
+    jacarandaPic: {
+      picUrl: '/assets/images/playground/artfight2024/jacaranda_rin_linin.png',
       frameStyle: 'black-frame',
       content: {
         title: 'Jacaranda วาดโดย Rin Linin',
@@ -167,7 +169,7 @@ export class PlaygroundComponent {
       }
     },
     haliPic: {
-      picUrl: '/assets/images/playground/artfight2024/umbera_rin_linin.png',
+      picUrl: '/assets/images/playground/artfight2024/hali_rin_linin.png',
       frameStyle: 'white-frame',
       content: {
         title: 'Hali วาดโดย Rin Linin',
@@ -177,7 +179,7 @@ export class PlaygroundComponent {
       }
     },
     peepPic: {
-      picUrl: '/assets/images/playground/artfight2024/dog_rin_linin.png',
+      picUrl: '/assets/images/playground/artfight2024/peep_rin_linin.png',
       frameStyle: 'white-double-frame small',
       content: {
         title: 'Peep วาดโดย Rin Linin',
@@ -187,7 +189,7 @@ export class PlaygroundComponent {
       }
     },
     rinaPic: {
-      picUrl: '/assets/images/playground/artfight2024/chibi_rin_linin.png',
+      picUrl: '/assets/images/playground/artfight2024/rina_rin_linin.jpg',
       frameStyle: 'black-frame small',
       content: {
         title: 'Rina วาดโดย Rin Linin',
@@ -197,7 +199,7 @@ export class PlaygroundComponent {
       }
     },
     devilPic: {
-      picUrl: '/assets/images/playground/artfight2024/devil_rin_linin.png',
+      picUrl: '/assets/images/playground/artfight2024/deamon_rin_linin.png',
       frameStyle: 'black-frame',
       content: {
         title: 'Deamon วาดโดย Rin Linin',
@@ -217,7 +219,7 @@ export class PlaygroundComponent {
       }
     },
     raccoonPic: {
-      picUrl: '/assets/images/playground/artfight2024/raccoon_rin_linin.png',
+      picUrl: '/assets/images/playground/artfight2024/raccoon_rin_linin.jpg',
       frameStyle: 'black-frame',
       content: {
         title: 'Fishtopher วาดโดย Rin Linin',

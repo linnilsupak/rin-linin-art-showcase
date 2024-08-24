@@ -4,11 +4,12 @@ import {
   MatDialogRef
 } from '@angular/material/dialog';
 import { MatIconModule } from '@angular/material/icon';
+import { ImageSrcsetPipe } from "../core/image-srcset.pipe";
 
 @Component({
   selector: 'app-art-work-label-popup',
   standalone: true,
-  imports: [MatIconModule],
+  imports: [MatIconModule, ImageSrcsetPipe],
   templateUrl: './art-work-label-popup.component.html',
   styleUrl: './art-work-label-popup.component.scss'
 })
