@@ -18,24 +18,26 @@
   </div>
   <div class="row mb-3">
     <div class="col-12 col-lg d-flex flex-column">
-      <a class="{{ galleryRoom.furryPic.frameStyle }} hover mt-0 mt-lg-auto ms-auto me-auto me-lg-0 mb-2 mb-lg-0 mini-frame-200"
+      <a class="{{ galleryRoom.furryPic.frameStyle }} original-slide-in slide-in hover mt-0 mt-lg-auto ms-auto me-auto me-lg-0 mb-2 mb-lg-0 mini-frame-200"
         (click)="openArtWorkLabel(galleryRoom.furryPic)" title="{{ galleryRoom.furryPic.content.title }}">
         <img [src]="galleryRoom.furryPic.picUrl | imagePreview" >
       </a>
-      <div class="{{ galleryRoom.rioniPic.frameStyle }} hover mt-2 ms-auto me-auto me-lg-0 mini-frame-200"
-      (click)="openArtWorkLabel(galleryRoom.rioniPic)"  title="{{ galleryRoom.rioniPic.content.title }} ">
+      <div class="{{ galleryRoom.rioniPic.frameStyle }} original-slide-in hover mt-2 ms-auto me-auto me-lg-0 mini-frame-200"
+      (click)="openArtWorkLabel(galleryRoom.rioniPic)"  title="{{ galleryRoom.rioniPic.content.title }} "
+      [appAddClassInViewport]="'slide-in'">
         <img [src]="galleryRoom.rioniPic.picUrl | imagePreview">
       </div>
     </div>
     <div class="col-12 col-lg d-flex align-items-end mt-3 mt-lg-0">
-      <div class="{{ galleryRoom.mobiasPic.frameStyle }} hover mx-auto"
+      <div class="{{ galleryRoom.mobiasPic.frameStyle }} hover mx-auto original-slide-in slide-in"
         (click)="openArtWorkLabel(galleryRoom.mobiasPic)" title="{{ galleryRoom.mobiasPic.content.title }} ">
         <img [src]="galleryRoom.mobiasPic.picUrl | imagePreview">
       </div>
     </div>
     <div class="col-12 col-lg d-flex mt-3 mt-lg-0">
-      <div class="{{ galleryRoom.charlottePic.frameStyle }} hover mt-auto me-auto ms-auto ms-lg-0  mini-frame-300"
-        (click)="openArtWorkLabel(galleryRoom.charlottePic)" title="{{ galleryRoom.charlottePic.content.title }} ">
+      <div class="{{ galleryRoom.charlottePic.frameStyle }} original-slide-in hover mt-auto me-auto ms-auto ms-lg-0  mini-frame-300"
+        (click)="openArtWorkLabel(galleryRoom.charlottePic)" title="{{ galleryRoom.charlottePic.content.title }} "
+        [appAddClassInViewport]="'slide-in'">
         <img [src]="galleryRoom.charlottePic.picUrl | imagePreview">
       </div>
     </div>
@@ -48,8 +50,9 @@
       </div>
     </div>
     <div class="col-12 col-lg-4 d-flex">
-      <div class="{{ galleryRoom.herianPic.frameStyle }} hover mini-frame-300 me-auto ms-auto ms-lg-0 d-flex"
-      (click)="openArtWorkLabel(galleryRoom.herianPic)" title="{{ galleryRoom.herianPic.content.title }} ">
+      <div class="{{ galleryRoom.herianPic.frameStyle }} hover original-slide-in mini-frame-300 me-auto ms-auto ms-lg-0 d-flex"
+      (click)="openArtWorkLabel(galleryRoom.herianPic)" title="{{ galleryRoom.herianPic.content.title }} "
+      [appAddClassInViewport]="'slide-in'">
       <img [src]="galleryRoom.herianPic.picUrl | imagePreview"  class="my-auto">
       </div>
     </div>

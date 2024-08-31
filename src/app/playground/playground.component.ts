@@ -5,13 +5,14 @@ import { ArtWorkLabelPopupComponent } from '../art-work-label-popup/art-work-lab
 import { ArtworkLabel } from '../core/models/artwork-label.model';
 import { TranslateModule } from '@ngx-translate/core';
 import { GalleryRoom } from '../core/models/gallery-room.model';
-import { ImageSrcsetPipe } from "../core/image-srcset.pipe";
-import { ImagePreviewPipe } from "../core/image-preview.pipe";
+import { ImageSrcsetPipe } from "../core/pipe/image-srcset.pipe";
+import { ImagePreviewPipe } from "../core/pipe/image-preview.pipe";
+import { AddClassInViewportDirective } from '../core/add-class-in-viewport.directive';
 
 @Component({
   selector: 'app-playground',
   standalone: true,
-  imports: [ReflectionFontComponent, TranslateModule, ImageSrcsetPipe, ImagePreviewPipe],
+  imports: [ReflectionFontComponent, TranslateModule, ImageSrcsetPipe, ImagePreviewPipe, AddClassInViewportDirective],
   templateUrl: './playground.component.html',
   styleUrl: './playground.component.scss'
 })
