@@ -1,0 +1,5 @@
+@for (item of splitText; track item) {
+    <span [class.roll-in]="runAnimation" class="original-roll-in" [style.left.px]="calWidth.offsetLeft"
+    [style]="item.style">{{item.alphabet}}</span>
+    <span class="invisible" #calWidth>{{item.alphabet}}</span>
+}

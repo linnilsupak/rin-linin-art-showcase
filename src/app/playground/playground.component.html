@@ -24,35 +24,35 @@
       </a>
       <div class="{{ galleryRoom.rioniPic.frameStyle }} original-slide-in hover mt-2 ms-auto me-auto me-lg-0 mini-frame-200"
       (click)="openArtWorkLabel(galleryRoom.rioniPic)"  title="{{ galleryRoom.rioniPic.content.title }} "
-      [appAddClassInViewport]="'slide-in'">
+      [appAddClassOnScrollPosition]="'slide-in'">
         <img [src]="galleryRoom.rioniPic.picUrl | imagePreview">
       </div>
     </div>
     <div class="col-12 col-lg d-flex align-items-end mt-3 mt-lg-0">
       <div class="{{ galleryRoom.mobiasPic.frameStyle }} hover mx-auto original-slide-in slide-in"
-        (click)="openArtWorkLabel(galleryRoom.mobiasPic)" title="{{ galleryRoom.mobiasPic.content.title }} ">
+        (click)="openArtWorkLabel(galleryRoom.mobiasPic)" title="{{ galleryRoom.mobiasPic.content.title }}">
         <img [src]="galleryRoom.mobiasPic.picUrl | imagePreview">
       </div>
     </div>
     <div class="col-12 col-lg d-flex mt-3 mt-lg-0">
-      <div class="{{ galleryRoom.charlottePic.frameStyle }} original-slide-in hover mt-auto me-auto ms-auto ms-lg-0  mini-frame-300"
-        (click)="openArtWorkLabel(galleryRoom.charlottePic)" title="{{ galleryRoom.charlottePic.content.title }} "
-        [appAddClassInViewport]="'slide-in'">
+      <div class="{{ galleryRoom.charlottePic.frameStyle }} original-slide-in slide-in hover mt-auto me-auto ms-auto ms-lg-0  mini-frame-300"
+        (click)="openArtWorkLabel(galleryRoom.charlottePic)" title="{{ galleryRoom.charlottePic.content.title }}">
         <img [src]="galleryRoom.charlottePic.picUrl | imagePreview">
       </div>
     </div>
   </div>
   <div class="row mb-3">
     <div class="col-12 col-lg-8 d-flex">
-      <div class="{{ galleryRoom.mirmirPic.frameStyle }} hover ms-auto me-auto me-lg-0 mb-3 mb-lg-0"
-        [style.width]="'500px'" (click)="openArtWorkLabel(galleryRoom.mirmirPic)" title="{{ galleryRoom.mirmirPic.content.title }} ">
+      <div class="{{ galleryRoom.mirmirPic.frameStyle }} hover original-slide-in ms-auto me-auto me-lg-0 mb-3 mb-lg-0"
+        [style.width]="'500px'" (click)="openArtWorkLabel(galleryRoom.mirmirPic)" title="{{ galleryRoom.mirmirPic.content.title }} "
+        [appAddClassOnScrollPosition]="'slide-in'">
         <img [src]="galleryRoom.mirmirPic.picUrl | imagePreview">
       </div>
     </div>
     <div class="col-12 col-lg-4 d-flex">
       <div class="{{ galleryRoom.herianPic.frameStyle }} hover original-slide-in mini-frame-300 me-auto ms-auto ms-lg-0 d-flex"
-      (click)="openArtWorkLabel(galleryRoom.herianPic)" title="{{ galleryRoom.herianPic.content.title }} "
-      [appAddClassInViewport]="'slide-in'">
+      (click)="openArtWorkLabel(galleryRoom.herianPic)" title="{{ galleryRoom.herianPic.content.title }}"
+      [appAddClassOnScrollPosition]="'slide-in'">
       <img [src]="galleryRoom.herianPic.picUrl | imagePreview"  class="my-auto">
       </div>
     </div>
@@ -61,24 +61,28 @@
 
   <div class="row mb-3">
     <div class="col-12 col-lg d-flex flex-column">
-      <div class="{{ galleryRoom.idkPic.frameStyle}} hover mt-0 mt-lg-auto ms-auto me-auto me-lg-0 mb-2 mb-lg-0 mini-frame-200 small"
-      (click)="openArtWorkLabel(galleryRoom.idkPic)" title="{{ galleryRoom.idkPic.content.title }} ">
+      <div class="{{ galleryRoom.idkPic.frameStyle}} hover original-slide-in mt-0 mt-lg-auto ms-auto me-auto me-lg-0 mb-2 mb-lg-0 mini-frame-200 small"
+      (click)="openArtWorkLabel(galleryRoom.idkPic)" title="{{ galleryRoom.idkPic.content.title }}"
+      [appAddClassOnScrollPosition]="'slide-in'">
         <img [src]="galleryRoom.idkPic.picUrl | imagePreview">
       </div>
-      <div class="{{ galleryRoom.monthDragonPic.frameStyle}} hover mt-2 ms-auto me-auto me-lg-0 mini-frame-200 small"
-      (click)="openArtWorkLabel(galleryRoom.monthDragonPic)" title="{{ galleryRoom.monthDragonPic.content.title }} ">
+      <div class="{{ galleryRoom.monthDragonPic.frameStyle}} hover original-slide-in mt-2 ms-auto me-auto me-lg-0 mini-frame-200 small"
+      (click)="openArtWorkLabel(galleryRoom.monthDragonPic)" title="{{ galleryRoom.monthDragonPic.content.title }}"
+      [appAddClassOnScrollPosition]="'slide-in'">
         <img src="{{galleryRoom.monthDragonPic.picUrl | imagePreview}}">
       </div>
     </div>
-    <div class="col-12 col-lg d-flex align-items-end mt-3 mt-lg-0"
-    (click)="openArtWorkLabel(galleryRoom.junePic)" title="{{ galleryRoom.junePic.content.title }} ">
-      <div class="{{ galleryRoom.junePic.frameStyle }} hover mx-auto">
+    <div class="col-12 col-lg d-flex align-items-end mt-3 mt-lg-0">
+      <div class="{{ galleryRoom.junePic.frameStyle }} hover original-slide-in mx-auto"
+      (click)="openArtWorkLabel(galleryRoom.junePic)" title="{{ galleryRoom.junePic.content.title }}"
+      [appAddClassOnScrollPosition]="'slide-in'">
         <img src="{{ galleryRoom.junePic.picUrl  | imagePreview}}">
       </div>
     </div>
     <div class="col-12 col-lg d-flex mt-3 mt-lg-0">
-      <div class="{{ galleryRoom.miffyPic.frameStyle }} hover mt-auto me-auto ms-auto ms-lg-0  mini-frame-300"
-      (click)="openArtWorkLabel(galleryRoom.miffyPic)" title="{{ galleryRoom.miffyPic.content.title }} ">
+      <div class="{{ galleryRoom.miffyPic.frameStyle }} hover original-slide-in mt-auto me-auto ms-auto ms-lg-0  mini-frame-300"
+      (click)="openArtWorkLabel(galleryRoom.miffyPic)" title="{{ galleryRoom.miffyPic.content.title }}"
+      [appAddClassOnScrollPosition]="'slide-in'">
         <img src="{{ galleryRoom.miffyPic.picUrl  | imagePreview}}">
       </div>
     </div>
@@ -87,18 +91,21 @@
     <div class="col-md-12 col-lg-8 d-flex">
       <div class="ms-auto">
         <div class="row">
-          <div class="{{ galleryRoom.peejohnPic.frameStyle }} hover col-12 col-lg mb-3"
-          (click)="openArtWorkLabel(galleryRoom.peejohnPic)" title="{{ galleryRoom.peejohnPic.content.title }} ">
+          <div class="{{ galleryRoom.peejohnPic.frameStyle }} hover original-slide-in col-12 col-lg mb-3"
+          (click)="openArtWorkLabel(galleryRoom.peejohnPic)" title="{{ galleryRoom.peejohnPic.content.title }}"
+          [appAddClassOnScrollPosition]="'slide-in'">
             <img src="{{ galleryRoom.peejohnPic.picUrl | imagePreview}}">
           </div>
-          <div class="{{ galleryRoom.ponyPic.frameStyle }} hover col-12 col-lg ms-0 ms-lg-3 mb-3"
-          (click)="openArtWorkLabel(galleryRoom.ponyPic)" title="{{ galleryRoom.ponyPic.content.title }} ">
+          <div class="{{ galleryRoom.ponyPic.frameStyle }} hover original-slide-in col-12 col-lg ms-0 ms-lg-3 mb-3"
+          (click)="openArtWorkLabel(galleryRoom.ponyPic)" title="{{ galleryRoom.ponyPic.content.title }}"
+          [appAddClassOnScrollPosition]="'slide-in'">
             <img src="{{ galleryRoom.ponyPic.picUrl}}">
           </div>
         </div>
         <div class="row">
-          <div class="{{ galleryRoom.nebulaPic.frameStyle }} hover mx-auto mb-3 mb-lg-0  mini-frame-300"
-          (click)="openArtWorkLabel(galleryRoom.nebulaPic)" title="{{ galleryRoom.nebulaPic.content.title }} ">
+          <div class="{{ galleryRoom.nebulaPic.frameStyle }} hover original-slide-in mx-auto mb-3 mb-lg-0  mini-frame-300"
+          (click)="openArtWorkLabel(galleryRoom.nebulaPic)" title="{{ galleryRoom.nebulaPic.content.title }}"
+          [appAddClassOnScrollPosition]="'slide-in'">
             <img src="{{ galleryRoom.nebulaPic.picUrl | imagePreview}}">
           </div>
         </div>
@@ -106,8 +113,9 @@
     </div>
     <div class="col-md-12 col-lg-4 d-flex">
       <div class="col">
-        <div class="{{ galleryRoom.jacarandaPic.frameStyle }} hover"
-        (click)="openArtWorkLabel(galleryRoom.jacarandaPic)" title="{{ galleryRoom.jacarandaPic.content.title }} ">
+        <div class="{{ galleryRoom.jacarandaPic.frameStyle }} hover original-slide-in"
+        (click)="openArtWorkLabel(galleryRoom.jacarandaPic)" title="{{ galleryRoom.jacarandaPic.content.title }}"
+        [appAddClassOnScrollPosition]="'slide-in'">
           <img src="{{ galleryRoom.jacarandaPic.picUrl | imagePreview}}">
         </div>
       </div>
@@ -118,24 +126,28 @@
 
   <div class="row mb-3">
     <div class="col-12 col-lg d-flex flex-column">
-      <div class="{{ galleryRoom.alexandraPic.frameStyle }} hover mt-0 mt-lg-auto ms-auto me-auto me-lg-0 mb-2 mb-lg-0 mini-frame-200"
-      (click)="openArtWorkLabel(galleryRoom.alexandraPic)" title="{{ galleryRoom.alexandraPic.content.title }} ">
+      <div class="{{ galleryRoom.alexandraPic.frameStyle }} hover original-slide-in mt-0 mt-lg-auto ms-auto me-auto me-lg-0 mb-2 mb-lg-0 mini-frame-200"
+      (click)="openArtWorkLabel(galleryRoom.alexandraPic)" title="{{ galleryRoom.alexandraPic.content.title }}"
+      [appAddClassOnScrollPosition]="'slide-in'">
         <img src="{{ galleryRoom.alexandraPic.picUrl | imagePreview}}">
       </div>
-      <div class="{{ galleryRoom.haliPic.frameStyle }} hover mt-2 ms-auto me-auto me-lg-0 mini-frame-200 small"
-      (click)="openArtWorkLabel(galleryRoom.haliPic)" title="{{ galleryRoom.haliPic.content.title }} ">
+      <div class="{{ galleryRoom.haliPic.frameStyle }} hover original-slide-in mt-2 ms-auto me-auto me-lg-0 mini-frame-200 small"
+      (click)="openArtWorkLabel(galleryRoom.haliPic)" title="{{ galleryRoom.haliPic.content.title }}"
+      [appAddClassOnScrollPosition]="'slide-in'">
         <img src="{{ galleryRoom.haliPic.picUrl | imagePreview}}">
       </div>
     </div>
     <div class="col-12 col-lg d-flex align-items-end mt-3 mt-lg-0">
-      <div class="{{ galleryRoom.peepPic.frameStyle }} hover mx-auto"
-      (click)="openArtWorkLabel(galleryRoom.peepPic)" title="{{ galleryRoom.peepPic.content.title }} ">
+      <div class="{{ galleryRoom.peepPic.frameStyle }} hover original-slide-in mx-auto"
+      (click)="openArtWorkLabel(galleryRoom.peepPic)" title="{{ galleryRoom.peepPic.content.title }}"
+      [appAddClassOnScrollPosition]="'slide-in'">
         <img src="{{ galleryRoom.peepPic.picUrl | imagePreview}}">
       </div>
     </div>
     <div class="col-12 col-lg d-flex mt-3 mt-lg-0">
-      <div class="{{ galleryRoom.rinaPic.frameStyle }} hover mt-auto me-auto ms-auto ms-lg-0  mini-frame-300"
-      (click)="openArtWorkLabel(galleryRoom.rinaPic)" title="{{ galleryRoom.rinaPic.content.title }} ">
+      <div class="{{ galleryRoom.rinaPic.frameStyle }} hover original-slide-in mt-auto me-auto ms-auto ms-lg-0  mini-frame-300"
+      (click)="openArtWorkLabel(galleryRoom.rinaPic)" title="{{ galleryRoom.rinaPic.content.title }}"
+      [appAddClassOnScrollPosition]="'slide-in'">
         <img src="{{ galleryRoom.rinaPic.picUrl | imagePreview}}">
       </div>
     </div>
@@ -143,14 +155,16 @@
   <div class="row mb-3">
     <div class="col-3 d-none d-lg-block"></div>
     <div class="col-12 col-lg-5 d-flex">
-      <div class="{{ galleryRoom.devilPic.frameStyle }} hover ms-0 ms-lg-3 mb-3"
-      (click)="openArtWorkLabel(galleryRoom.devilPic)" title="{{ galleryRoom.devilPic.content.title }} ">
+      <div class="{{ galleryRoom.devilPic.frameStyle }} hover original-slide-in ms-0 ms-lg-3 mb-3"
+      (click)="openArtWorkLabel(galleryRoom.devilPic)" title="{{ galleryRoom.devilPic.content.title }}"
+      [appAddClassOnScrollPosition]="'slide-in'">
         <img src="{{ galleryRoom.devilPic.picUrl | imagePreview}}" class="my-auto">
       </div>
     </div>
     <div class="col-12 col-lg-4 d-flex">
-      <div class="{{ galleryRoom.moonlitPic.frameStyle }} hover mini-frame-300 me-auto ms-auto ms-lg-0 d-flex"
-      (click)="openArtWorkLabel(galleryRoom.moonlitPic)" title="{{ galleryRoom.moonlitPic.content.title }} ">
+      <div class="{{ galleryRoom.moonlitPic.frameStyle }} hover original-slide-in mini-frame-300 me-auto ms-auto ms-lg-0 d-flex"
+      (click)="openArtWorkLabel(galleryRoom.moonlitPic)" title="{{ galleryRoom.moonlitPic.content.title }}"
+      [appAddClassOnScrollPosition]="'slide-in'">
         <img src="{{ galleryRoom.moonlitPic.picUrl | imagePreview}}" class="my-auto">
       </div>
     </div>
@@ -158,14 +172,16 @@
   <div class="row mb-3">
     <div class="col-2 d-none d-lg-block"></div>
     <div class="col-12 col-lg-5 d-flex">
-      <div class="{{ galleryRoom.raccoonPic.frameStyle }} hover mb-3 mini-frame-300 d-flex ms-auto me-auto me-lg-0 small"
-      (click)="openArtWorkLabel(galleryRoom.raccoonPic)" title="{{ galleryRoom.raccoonPic.content.title }} ">
+      <div class="{{ galleryRoom.raccoonPic.frameStyle }} hover original-slide-in mb-3 mini-frame-300 d-flex ms-auto me-auto me-lg-0 small"
+      (click)="openArtWorkLabel(galleryRoom.raccoonPic)" title="{{ galleryRoom.raccoonPic.content.title }}"
+      [appAddClassOnScrollPosition]="'slide-in'">
         <img src="{{ galleryRoom.raccoonPic.picUrl | imagePreview}}" class="my-auto">
       </div>
     </div>
     <div class="col-12 col-lg-5">
-      <div class="{{ galleryRoom.alanPic.frameStyle }} hover mini-frame-300 me-auto ms-auto ms-lg-0 d-flex small"
-      (click)="openArtWorkLabel(galleryRoom.alanPic)" title="{{ galleryRoom.alanPic.content.title }} ">
+      <div class="{{ galleryRoom.alanPic.frameStyle }} hover original-slide-in mini-frame-300 me-auto ms-auto ms-lg-0 d-flex small"
+      (click)="openArtWorkLabel(galleryRoom.alanPic)" title="{{ galleryRoom.alanPic.content.title }}"
+      [appAddClassOnScrollPosition]="'slide-in'">
         <img src="{{ galleryRoom.alanPic.picUrl | imagePreview}}" class="my-auto">
       </div>
     </div>

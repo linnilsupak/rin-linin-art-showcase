@@ -8,11 +8,12 @@ import { GalleryRoom } from '../core/models/gallery-room.model';
 import { ImageSrcsetPipe } from "../core/pipe/image-srcset.pipe";
 import { ImagePreviewPipe } from "../core/pipe/image-preview.pipe";
 import { AddClassInViewportDirective } from '../core/add-class-in-viewport.directive';
+import { AddClassOnScrollPositionDirective } from '../core/add-class-on-scroll-position.directive';
 
 @Component({
   selector: 'app-playground',
   standalone: true,
-  imports: [ReflectionFontComponent, TranslateModule, ImageSrcsetPipe, ImagePreviewPipe, AddClassInViewportDirective],
+  imports: [ReflectionFontComponent, TranslateModule, ImageSrcsetPipe, ImagePreviewPipe, AddClassInViewportDirective, AddClassOnScrollPositionDirective],
   templateUrl: './playground.component.html',
   styleUrl: './playground.component.scss'
 })

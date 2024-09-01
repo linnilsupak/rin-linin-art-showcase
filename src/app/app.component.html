@@ -1,6 +1,6 @@
 <app-header></app-header>
 <div class="header"></div>
-<div class="content" #content>
+<div class="content" #content appSetMainScrollPosition>
     <app-scroll-up-button [scrollableDiv]="content"></app-scroll-up-button>
     <router-outlet></router-outlet>
 </div>

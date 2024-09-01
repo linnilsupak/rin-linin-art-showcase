@@ -21,12 +21,12 @@
     </button>
     <a routerLink="/original" (click)="openMenu=false">
       <div class="menu-item py-3">
-        Original
+        <app-text-rollin-entrance [text]="'Original'" [runAnimation]="openMenu"></app-text-rollin-entrance>
       </div>
     </a>
     <a routerLink="/playground" (click)="openMenu=false">
       <div class="menu-item py-3">
-        Playground
+        <app-text-rollin-entrance [text]="'Playground'" [runAnimation]="openMenu"></app-text-rollin-entrance>
       </div>
     </a>
   </div>
