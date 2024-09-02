@@ -43,9 +43,8 @@
   </div>
   <div class="row mb-3">
     <div class="col-12 col-lg-8 d-flex">
-      <div class="{{ galleryRoom.mirmirPic.frameStyle }} hover original-slide-in ms-auto me-auto me-lg-0 mb-3 mb-lg-0"
-        [style.width]="'500px'" (click)="openArtWorkLabel(galleryRoom.mirmirPic)" title="{{ galleryRoom.mirmirPic.content.title }} "
-        [appAddClassOnScrollPosition]="'slide-in'">
+      <div class="{{ galleryRoom.mirmirPic.frameStyle }} hover ms-auto me-auto me-lg-0 mb-3 mb-lg-0"
+        [style.width]="'500px'" (click)="openArtWorkLabel(galleryRoom.mirmirPic)" title="{{ galleryRoom.mirmirPic.content.title }} ">
         <img [src]="galleryRoom.mirmirPic.picUrl | imagePreview">
       </div>
     </div>

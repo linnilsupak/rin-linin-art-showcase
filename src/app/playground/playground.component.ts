@@ -31,7 +31,7 @@ export class PlaygroundComponent {
       }
     },
     rioniPic: {
-      picUrl: '/assets/images/playground/artfight2024/remi_rin_linin.png',
+      picUrl: '/assets/images/playground/artfight2024/remi_rin_linin.png?v=1',
       frameStyle: 'white-frame small',
       content: {
         title: 'Remi วาดโดย Rin Linin',
