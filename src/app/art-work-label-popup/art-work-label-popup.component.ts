@@ -22,6 +22,7 @@ export class ArtWorkLabelPopupComponent {
   readonly title2 = model(this.data.content.title2);
   readonly subTitle = model(this.data.content.subTitle);
   readonly description = model(this.data.content.description);
+  readonly isRecTemplate = model(this.data.isRecTemplate);
 
   closePopup() {
     this.dialogRef.close();

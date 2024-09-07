@@ -1,11 +1,11 @@
 <div class="container-fluid">
   <div class="row">
-    <div class="col-12 col-md mb-2 mb-md-0">
+    <div class="col-12 mb-2 mb-md-0" [class.col-md]="!isRecTemplate()" [class.col-md-8]="isRecTemplate()">
       <div class="{{ frameStyle() }}">
         <img src="{{ picUrl() }}" srcset="{{ picUrl() | imageSrcset}}" class="show-real-width">
       </div>
     </div>
-    <div class="col-12 col-md d-flex">
+    <div class="col-12 d-flex" [class.col-md]="!isRecTemplate()" [class.col-md-4]="isRecTemplate()">
       <div class="art-tag d-flex flex-column my-auto p-2 align-items-center align-items-md-start">
         <b class="title">{{ title() }}</b>
         <i class="title-2">{{ title2() }}</i>

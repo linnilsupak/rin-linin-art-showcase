@@ -148,7 +148,8 @@ export class PlaygroundComponent {
         title2: 'ตัวละครของ Mirzel',
         subTitle: 'CG',
         description: ''
-      }
+      },
+      isRecTemplate: true
     },
     jacarandaPic: {
       picUrl: '/assets/images/playground/artfight2024/jacaranda_rin_linin.png',
@@ -178,7 +179,8 @@ export class PlaygroundComponent {
         title2: 'ตัวละครของ	socsie',
         subTitle: '',
         description: ''
-      }
+      },
+      isRecTemplate: true
     },
     peepPic: {
       picUrl: '/assets/images/playground/artfight2024/peep_rin_linin.png',
@@ -218,7 +220,8 @@ export class PlaygroundComponent {
         title2: 'ตัวละครของ OverloadWork',
         subTitle: '',
         description: ''
-      }
+      },
+      isRecTemplate: true
     },
     raccoonPic: {
       picUrl: '/assets/images/playground/artfight2024/raccoon_rin_linin.jpg',
@@ -238,16 +241,17 @@ export class PlaygroundComponent {
         title2: 'ตัวละครของ Kai_draws_things',
         subTitle: '',
         description: ''
-      }
+      },
+      isRecTemplate: true
     }
   }
 
-  openArtWorkLabel({ picUrl, frameStyle, content}: ArtworkLabel) {
+  openArtWorkLabel({ picUrl, frameStyle, content, isRecTemplate}: ArtworkLabel) {
     this.matDialog.open(ArtWorkLabelPopupComponent, {
       panelClass: 'art-work-label',
       autoFocus: false,
       data: {
-        picUrl, frameStyle, content
+        picUrl, frameStyle, content, isRecTemplate
       }
     });
   }

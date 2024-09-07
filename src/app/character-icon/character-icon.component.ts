@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
 
 @Component({
   selector: 'app-character-icon',
@@ -8,5 +8,9 @@ import { Component } from '@angular/core';
   styleUrl: './character-icon.component.scss'
 })
 export class CharacterIconComponent {
+  @Input() link: string;
+  @Input() img: string;
+  @Input() hoverDescription: string;
+  @Input() label: string;
 
 }
