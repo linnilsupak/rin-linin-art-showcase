@@ -8,19 +8,15 @@
     transition: all 1.5s;
 }
 
-p {
-    color: #F1F2F5;
-}
-
 .sgvitem {
     transition: 0.3s ease;
-    border: 1px solid rgba(229, 31, 25, 0);
     width: 100%;
     position: relative;
     overflow: hidden;
     z-index: 1;
     p {
         position: absolute;
+        color: #F1F2F5;
         top: 0;
         width: 100%;
         height: 100%;
@@ -53,18 +49,13 @@ p {
     }
 }
 
-a:hover {
-    .sgvitem h3 {
-        background: rgba(178, 0, 0, 0.8);
+a:hover .sgvitem{
+    h3 {
         background: rgba(51, 102, 204, 0.8);
         letter-spacing: 0.1em;
     }
 
-    .sgvitem p {
-        transform: rotate(-45deg);
-        opacity: 1;
-    }
-    .sgvitem p {
+    p {
         transform: rotate(-45deg);
         opacity: 1;
     }
