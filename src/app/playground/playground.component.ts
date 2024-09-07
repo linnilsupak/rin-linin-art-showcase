@@ -9,11 +9,12 @@ import { ImageSrcsetPipe } from "../core/pipe/image-srcset.pipe";
 import { ImagePreviewPipe } from "../core/pipe/image-preview.pipe";
 import { AddClassInViewportDirective } from '../core/add-class-in-viewport.directive';
 import { AddClassOnScrollPositionDirective } from '../core/add-class-on-scroll-position.directive';
+import { ScrollIntoViewWhenReachDirective } from '../core/scroll-into-view-when-reach.directive';
 
 @Component({
   selector: 'app-playground',
   standalone: true,
-  imports: [ReflectionFontComponent, TranslateModule, ImageSrcsetPipe, ImagePreviewPipe, AddClassInViewportDirective, AddClassOnScrollPositionDirective],
+  imports: [ReflectionFontComponent, TranslateModule, ImageSrcsetPipe, ImagePreviewPipe, AddClassInViewportDirective, AddClassOnScrollPositionDirective, ScrollIntoViewWhenReachDirective],
   templateUrl: './playground.component.html',
   styleUrl: './playground.component.scss'
 })
