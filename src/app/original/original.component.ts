@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 import { TranslateModule } from '@ngx-translate/core';
-import { ReflectionFontComponent } from '../reflection-font/reflection-font.component';
-import { CharacterIconComponent } from "../character-icon/character-icon.component";
+import { ReflectionFontComponent } from '../shared/reflection-font/reflection-font.component';
+import { CharacterIconComponent } from "../shared/character-icon/character-icon.component";
 
 @Component({
   selector: 'app-original',

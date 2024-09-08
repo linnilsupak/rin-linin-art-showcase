@@ -31,7 +31,6 @@ export class ScrollIntoViewWhenReachDirective implements OnDestroy {
       combineLatest([this.scrollPositionService.scrollPosition$, this.scrollPositionService.windowHeight$])
       .subscribe(([position, wHeight]) => {
         if (!this.isMobile && !this.reached && ((this.el.nativeElement.offsetTop + (this.el.nativeElement.offsetHeight/2) - wHeight) < position)) {
-          console.log('reach', this.isMobile)
           this.reached = true;
           this.el.nativeElement.scrollIntoView({ behavior: "auto", block: "end", inline: "nearest" })
         }  else if(position === 0) {

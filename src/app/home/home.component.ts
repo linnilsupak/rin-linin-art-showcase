@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { TranslateModule } from '@ngx-translate/core';
-import { ReflectionFontComponent } from '../reflection-font/reflection-font.component';
+import { ReflectionFontComponent } from '../shared/reflection-font/reflection-font.component';
 
 @Component({
   selector: 'app-home',

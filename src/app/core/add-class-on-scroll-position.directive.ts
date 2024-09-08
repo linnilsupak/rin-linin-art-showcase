@@ -10,7 +10,7 @@ import { combineLatest, Subscription } from 'rxjs';
 export class AddClassOnScrollPositionDirective implements OnDestroy {
   @Input() appAddClassOnScrollPosition: string;
   @Input() addClassDelay = 0;
-
+  private added =false;
   private isBrowser = false;
   private subscription = new Subscription();
   constructor(@Inject(PLATFORM_ID) platformId: Object,
@@ -21,11 +21,14 @@ export class AddClassOnScrollPositionDirective implements OnDestroy {
     this.subscription.add(
       combineLatest([this.scrollPositionService.scrollPosition$, this.scrollPositionService.windowHeight$])
       .subscribe(([position, wHeight]) => {
-        if ((this.el.nativeElement.offsetTop + (this.el.nativeElement.offsetHeight/2) - wHeight) < position) {
+        if (!this.added && this.el.nativeElement.offsetTop && this.el.nativeElement.offsetHeight
+          && ((this.el.nativeElement.offsetTop + (this.el.nativeElement.offsetHeight/2) - wHeight) < position)) {
+          this.added = true;
           setTimeout(() => {
             this.el.nativeElement.classList.add(this.appAddClassOnScrollPosition);
           }, this.addClassDelay);
         } else if(position === 0) {
+          this.added = false;
           this.el.nativeElement.classList.remove(this.appAddClassOnScrollPosition);
         }
       })

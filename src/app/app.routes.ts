@@ -1,6 +1,4 @@
 import { Routes } from '@angular/router';
-import { PlaygroundComponent } from './playground/playground.component';
-import { OriginalComponent } from './original/original.component';
 import { HomeComponent } from './home/home.component';
 
 export const routes: Routes = [
@@ -12,12 +10,12 @@ export const routes: Routes = [
   {
     path: 'playground',
     title: 'Playground: Rin Linin',
-    component: PlaygroundComponent
+    loadComponent: () => import('./playground/playground.component').then(c => c.PlaygroundComponent)
   },
   {
     path: 'original',
     title: 'Original: Rin Linin',
-    component: OriginalComponent
+    loadComponent: () => import('./original/original.component').then(c => c.OriginalComponent)
   },
   {
     path: 'home',

@@ -1,5 +1,5 @@
 import { Component, inject } from '@angular/core';
-import { ReflectionFontComponent } from "../reflection-font/reflection-font.component";
+import { ReflectionFontComponent } from "../shared/reflection-font/reflection-font.component";
 import { MatDialog } from '@angular/material/dialog';
 import { ArtWorkLabelPopupComponent } from '../art-work-label-popup/art-work-label-popup.component';
 import { ArtworkLabel } from '../core/models/artwork-label.model';

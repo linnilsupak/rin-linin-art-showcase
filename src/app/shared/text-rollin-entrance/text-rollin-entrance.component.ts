@@ -13,13 +13,13 @@ interface rotateText {
   styleUrl: './text-rollin-entrance.component.scss'
 })
 export class TextRollinEntranceComponent {
-  @Input() 
+  @Input()
   set text(val) {
     this._text = val;
     this.splitText = val.split("").map((alpha, index) => {
       return {
         alphabet: alpha,
-        style: `animation-delay: ${ 0.1 + (index/10)}s`
+        style: `animation-delay: ${ (index/10)}s`
       }
     });
   }
