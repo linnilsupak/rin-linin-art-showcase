@@ -13,7 +13,7 @@ export class SetMainScrollPositionDirective implements OnDestroy {
 
   private scrollEvent$: Subscription;
   private isBrowser = false;
-  
+
   @HostListener('window:resize', ['$event'])
   onResize(event?) {
     if (!this.isBrowser) return;
@@ -26,7 +26,7 @@ export class SetMainScrollPositionDirective implements OnDestroy {
     this.isBrowser = isPlatformBrowser(platformId);
     if (!this.isBrowser) return;
     this.scrollPositionService.setWindowHeight(window.innerHeight);
-    this.scrollEvent$ = fromEvent(this.el.nativeElement, 
+    this.scrollEvent$ = fromEvent(this.el.nativeElement,
     'scroll').subscribe((e: any) => {
       this.scrollPositionService.setPosition(e.target.scrollTop);
     });
