@@ -26,7 +26,6 @@ export class ScrollUpButtonComponent implements AfterViewInit {
     setTimeout(() => {
       this.loading = false;
     }, 0);
-    console.log('this.scrollWidth', this.scrollWidth)
   }
 
   scrollToTop() {
