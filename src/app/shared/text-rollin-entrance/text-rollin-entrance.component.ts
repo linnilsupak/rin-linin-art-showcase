@@ -19,7 +19,7 @@ export class TextRollinEntranceComponent {
     this.splitText = val.split("").map((alpha, index) => {
       return {
         alphabet: alpha,
-        style: `animation-delay: ${ (index/10)}s`
+        style: `animation-delay: ${ (index/20)}s`
       }
     });
   }
