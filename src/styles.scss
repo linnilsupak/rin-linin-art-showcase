@@ -23,7 +23,6 @@ $rin-linin-art-showcase-theme: mat.define-theme((
 
 /* Importing Bootstrap SCSS file. */
 @import 'bootstrap/scss/bootstrap';
-@import 'variables';
 @import 'utilities';
 @import 'material.custom';
 
@@ -33,6 +32,11 @@ $rin-linin-art-showcase-theme: mat.define-theme((
 :root {
   @include mat.all-component-themes($rin-linin-art-showcase-theme);
 }
+:root {
+  --color-border-wallpaper: #614622;
+  --color-wallpaper-light: #c0bb55;
+}
+
 
 // Comment out the line below if you want to use the pre-defined typography utility classes.
 // For more information: https://material.angular.io/guide/typography#using-typography-styles-in-your-application.

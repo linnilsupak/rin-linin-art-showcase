@@ -1,0 +1,15 @@
+@use 'variables' as var;
+
+.character-frame {
+border-radius: 16px;
+max-width: 400px;
+}
+
+.description-frame {
+  max-width: 500px;
+  max-width: 500px;
+  padding: 16px;
+  background: #ffffff30;
+  border-radius: 16px;
+  color: var.$dark-sky;
+}

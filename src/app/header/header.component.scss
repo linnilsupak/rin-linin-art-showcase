@@ -72,22 +72,22 @@ $top-header-level: 995;
       max-width: 100px;
     }
 
-    @include media-breakpoint-up(md) {
-      margin-top: 20px;
-      max-width: 200px;
-    }
+    // @include media-breakpoint-up(md) {
+    //   margin-top: 20px;
+    //   max-width: 200px;
+    // }
 
-    @include media-breakpoint-up(lg) {
+    // @include media-breakpoint-up(lg) {
+    //   margin-top: 10px;
+    //   max-width: 300px;
+    //   ;
+    // }
+
+    @include media-breakpoint-up(xxl) {
       margin-top: 10px;
       max-width: 300px;
-      ;
-    }
-
-    @include media-breakpoint-up(xl) {
-      margin-top: 8px;
-      // max-width: 400px;
-      max-width: 350px;
-      ;
+      // margin-top: 8px;
+      // max-width: 350px;
     }
   }
 
@@ -104,25 +104,25 @@ $top-header-level: 995;
       top: 32px;
     }
 
-    @include media-breakpoint-up(md) {
-      max-width: 108px;
-      left: 39px;
-      top: 73px;
-    }
+    // @include media-breakpoint-up(md) {
+    //   max-width: 108px;
+    //   left: 39px;
+    //   top: 73px;
+    // }
 
-    @include media-breakpoint-up(lg) {
+    // @include media-breakpoint-up(lg) {
+    //   left: 58px;
+    //   top: 84px;
+    //   max-width: 169px;
+    // }
+
+    @include media-breakpoint-up(xxl) {
       left: 58px;
       top: 84px;
       max-width: 169px;
-    }
-
-    @include media-breakpoint-up(xl) {
-      // left: 82px;
-      // top: 107px;
-      // max-width: 225px;
-      left: 74px;
-      top: 98px;
-      max-width: 192px;
+      // left: 74px;
+      // top: 98px;
+      // max-width: 192px;
     }
   }
 

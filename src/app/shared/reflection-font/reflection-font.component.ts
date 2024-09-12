@@ -10,6 +10,5 @@ import { Component, Input } from '@angular/core';
 export class ReflectionFontComponent {
   @Input() text: string;
   @Input() fontClass: string;
-  @Input() fontSize = '4rem';
 
 }

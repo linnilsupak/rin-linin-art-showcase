@@ -1,5 +1,5 @@
+@use "character-frame" as char;
 @import "bootstrap-mixin";
-@import"picture-frame";
 
 
 .cover {
@@ -11,4 +11,8 @@
     @include media-breakpoint-up(lg) {
         min-height: 226px;
      }
+}
+
+.content-frame {
+  max-width: 1200px;
 }

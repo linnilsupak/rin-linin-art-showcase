@@ -23,6 +23,7 @@ export class ScrollUpButtonComponent implements AfterViewInit {
   ngAfterViewInit(): void {
     if (this.isServer) return;
     if (this.scrollableDiv) this.scrollWidth = this.scrollableDiv.offsetWidth - this.scrollableDiv.scrollWidth;
+    if (this.scrollWidth < 0 ) this.scrollWidth = 0;
     setTimeout(() => {
       this.loading = false;
     }, 0);

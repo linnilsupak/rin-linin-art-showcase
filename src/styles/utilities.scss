@@ -1,19 +1,19 @@
+@use 'variables' as var;
 .after-reflect {
     margin-top: -20px
 }
 
 .section-topic {
-    color: white;
     font-weight: 700;
     font-size: 26px;
 }
 
-.section-content {
+.section-color {
     color: white;
 }
 
 .caption {
-    color: #15063f;
+    color: var.$dark-sky;
     font-size: 16px;
   }
 

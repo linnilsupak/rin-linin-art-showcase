@@ -8,15 +8,26 @@
   }
   /* original design */
   .units > * {
-    font: bolder 4rem/4rem "EB Garamond";
-    background-image: url("/assets/images/text-bg2.jpg?v=1");
+    font: bolder 2rem/3rem "EB Garamond";
+    background-image: url("/assets/images/text-bg.jpg?v=2");
     background-clip: text;
     color: transparent;
     overflow: hidden;
     background-color: white;
 
+    @include media-breakpoint-up(md) {
+      font: bolder 4rem/4rem "EB Garamond";
+    }
     @include media-breakpoint-up(lg) {
       font: bolder 5rem/5rem "EB Garamond";
+    }
+  }
+  .units.sub-title > * {
+    background-image: url("/assets/images/text-bg-sub-title.jpg?v=3");
+    font: bolder 2rem/2rem "EB Garamond";
+
+    @include media-breakpoint-up(md) {
+      font: bolder 3rem/3rem "EB Garamond";
     }
   }
   /* reflections */
