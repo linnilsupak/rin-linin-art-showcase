@@ -9,6 +9,8 @@ export class ScrollPositionService {
   scrollPosition$ = this.scrollPosition.asObservable();
   private windowHeight = new BehaviorSubject<number>(0);
   windowHeight$ = this.windowHeight.asObservable();
+  private elementScrollPosition = new BehaviorSubject<number>(0);
+  elementScrollPosition$ = this.elementScrollPosition.asObservable();
   constructor() { }
 
   setPosition(scrollY: number) {
@@ -19,4 +21,13 @@ export class ScrollPositionService {
     this.windowHeight.next(h);
   }
 
+  setScrollToElementById(id: string, minusScroll = 0): boolean {
+    const element = document.getElementById(id);
+    if (element) {
+      const y = element.getBoundingClientRect().top + this.windowHeight.value - minusScroll;
+      this.elementScrollPosition.next(y);
+      return true;
+    }
+    return false;
+  }
 }

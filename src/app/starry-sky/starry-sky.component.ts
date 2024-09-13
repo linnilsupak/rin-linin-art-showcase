@@ -42,7 +42,7 @@ export class StarrySkyComponent implements AfterViewInit {
   }
   ngAfterViewInit(): void {
     this.starAnimationResize$.pipe(
-      debounceTime(mainConfig.timeoutAfterViewInit)
+      debounceTime(mainConfig.timeoutAfterInit)
     ).subscribe(({ w, h }) => {
       if (!this.isBrowser) return;
       if (this.screenW && this.screenH) {
@@ -82,7 +82,7 @@ export class StarrySkyComponent implements AfterViewInit {
           }
         }
         this.reqAnimationId = requestAnimationFrame(smoothAnimation);
-      }, mainConfig.timeoutAfterViewInit);
+      }, mainConfig.timeoutAfterInit);
     });
     this.starAnimationResize$.next({ w: this.window.innerWidth, h: this.window.innerHeight });
   }

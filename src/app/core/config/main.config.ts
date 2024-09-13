@@ -1,3 +1,3 @@
 export const mainConfig = {
-  timeoutAfterViewInit: 500
+  timeoutAfterInit: 500,
 }

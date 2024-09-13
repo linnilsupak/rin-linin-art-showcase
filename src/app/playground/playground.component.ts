@@ -158,7 +158,7 @@ export class PlaygroundComponent {
       content: {
         title: 'Jacaranda วาดโดย Rin Linin',
         title2: 'ตัวละครของ Kayleona',
-        subTitle: '',
+        subTitle: 'ภาพสีน้ำ',
         description: ''
       }
     },
@@ -168,7 +168,7 @@ export class PlaygroundComponent {
       content: {
         title: 'Alexandra วาดโดย Rin Linin',
         title2: 'ตัวละครของ prypec',
-        subTitle: '',
+        subTitle: 'ภาพสีน้ำ abstract',
         description: ''
       }
     },
@@ -178,7 +178,7 @@ export class PlaygroundComponent {
       content: {
         title: 'Hali วาดโดย Rin Linin',
         title2: 'ตัวละครของ	socsie',
-        subTitle: '',
+        subTitle: 'ภาพสีน้ำ',
         description: ''
       },
       isRecTemplate: true
@@ -189,9 +189,10 @@ export class PlaygroundComponent {
       content: {
         title: 'Peep วาดโดย Rin Linin',
         title2: 'ตัวละครของ Peachiepeeps',
-        subTitle: '',
+        subTitle: 'ภาพสีน้ำ',
         description: ''
-      }
+      },
+      isRecTemplate: true
     },
     rinaPic: {
       picUrl: '/assets/images/playground/artfight2024/rina_rin_linin.jpg',
@@ -199,7 +200,7 @@ export class PlaygroundComponent {
       content: {
         title: 'Rina วาดโดย Rin Linin',
         title2: 'ตัวละครของ	JazzyFina',
-        subTitle: '',
+        subTitle: 'ภาพสีน้ำ',
         description: ''
       }
     },
@@ -209,7 +210,7 @@ export class PlaygroundComponent {
       content: {
         title: 'Deamon วาดโดย Rin Linin',
         title2: 'ตัวละครของ Duckiepu',
-        subTitle: '',
+        subTitle: 'ภาพสีน้ำ',
         description: ''
       }
     },
@@ -219,7 +220,7 @@ export class PlaygroundComponent {
       content: {
         title: 'Moonlit วาดโดย Rin Linin',
         title2: 'ตัวละครของ OverloadWork',
-        subTitle: '',
+        subTitle: 'CG',
         description: ''
       },
       isRecTemplate: true
@@ -230,7 +231,7 @@ export class PlaygroundComponent {
       content: {
         title: 'Fishtopher วาดโดย Rin Linin',
         title2: 'ตัวละครของ streetcatzzz',
-        subTitle: '',
+        subTitle: 'ภาพสีน้ำ',
         description: ''
       }
     },
@@ -240,7 +241,7 @@ export class PlaygroundComponent {
       content: {
         title: 'Alan วาดโดย Rin Linin',
         title2: 'ตัวละครของ Kai_draws_things',
-        subTitle: '',
+        subTitle: 'CG',
         description: ''
       },
       isRecTemplate: true
