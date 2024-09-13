@@ -97,12 +97,15 @@ $top-header-level: 995;
     transition-property: all;
     transition-duration: 0.3s;
     transition-timing-function: ease;
+    max-width: 61px;
+    left: 9px;
+    top: 32px;
 
-    @include media-breakpoint-down(md) {
-      max-width: 61px;
-      left: 9px;
-      top: 32px;
-    }
+    // @include media-breakpoint-down(md) {
+    //   max-width: 61px;
+    //   left: 9px;
+    //   top: 32px;
+    // }
 
     // @include media-breakpoint-up(md) {
     //   max-width: 108px;
