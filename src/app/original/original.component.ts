@@ -2,7 +2,6 @@ import { AfterViewInit, Component, inject, OnInit } from '@angular/core';
 import { TranslateModule } from '@ngx-translate/core';
 import { ReflectionFontComponent } from '../shared/reflection-font/reflection-font.component';
 import { CharacterIconComponent } from "../shared/character-icon/character-icon.component";
-import { mainConfig } from '../core/config/main.config';
 import { ActivatedRoute } from '@angular/router';
 import { ScrollPositionService } from '../core/service/scroll-position.service';
 
@@ -22,19 +21,17 @@ export class OriginalComponent implements AfterViewInit, OnInit {
   }
 
   ngAfterViewInit() {
-    setTimeout(() => {
-      this.route.fragment
-        .subscribe(fragment => {
-          this.fragment = fragment;
-          try {
-            if (this.fragment) {
-              if (this.scrollPositionService.setScrollToElementById(this.fragment)) {
-                this.fragment = undefined;
-              }
+    this.route.fragment
+      .subscribe(fragment => {
+        this.fragment = fragment;
+        try {
+          if (this.fragment) {
+            if (this.scrollPositionService.setScrollToElementById(this.fragment)) {
+              this.fragment = undefined;
             }
-          } catch (e) {
           }
-        });
-    }, mainConfig.timeoutAfterInit);
+        } catch (e) {
+        }
+      });
   }
 }

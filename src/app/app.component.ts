@@ -8,6 +8,7 @@ import { WINDOW_PROVIDERS } from './core/service/window.service';
 import { combineLatest, filter } from 'rxjs';
 import { isPlatformServer } from '@angular/common';
 import { ScrollPositionService } from './core/service/scroll-position.service';
+import { mainConfig } from './core/config/main.config';
 
 @Component({
   selector: 'app-root',
@@ -36,9 +37,11 @@ export class AppComponent implements AfterViewInit {
 
   ngAfterViewInit(): void {
     if (this.isServer) return;
-    this.scrollPositionService.elementScrollPosition$.subscribe((y) => {
-      (this.scrollableDiv.nativeElement as HTMLDivElement).scrollTo({ top: y, behavior: 'smooth' });
-    });
+    setTimeout(() => {
+      this.scrollPositionService.elementScrollPosition$.subscribe((y) => {
+        (this.scrollableDiv.nativeElement as HTMLDivElement).scrollTo({ top: y, behavior: 'smooth' });
+      });
+    }, mainConfig.timeoutAfterInit);
   }
 
 }
