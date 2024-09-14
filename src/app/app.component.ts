@@ -1,14 +1,14 @@
+import { isPlatformServer } from '@angular/common';
 import { AfterViewInit, Component, ElementRef, Inject, PLATFORM_ID, ViewChild } from '@angular/core';
 import { NavigationEnd, Router, RouterOutlet } from '@angular/router';
+import { filter, pairwise, startWith, switchMap, tap } from 'rxjs';
+import { mainConfig } from './core/config/main.config';
+import { ScrollPositionService } from './core/service/scroll-position.service';
+import { WINDOW_PROVIDERS } from './core/service/window.service';
+import { SetMainScrollPositionDirective } from './core/set-main-scroll-position.directive';
 import { HeaderComponent } from './header/header.component';
 import { ScrollUpButtonComponent } from "./scroll-up-button/scroll-up-button.component";
 import { StarrySkyComponent } from "./starry-sky/starry-sky.component";
-import { SetMainScrollPositionDirective } from './core/set-main-scroll-position.directive';
-import { WINDOW_PROVIDERS } from './core/service/window.service';
-import { combineLatest, filter } from 'rxjs';
-import { isPlatformServer } from '@angular/common';
-import { ScrollPositionService } from './core/service/scroll-position.service';
-import { mainConfig } from './core/config/main.config';
 
 @Component({
   selector: 'app-root',
@@ -20,26 +20,42 @@ import { mainConfig } from './core/config/main.config';
 })
 export class AppComponent implements AfterViewInit {
   @ViewChild('content') scrollableDiv: ElementRef;
+  
   isServer = false;
   constructor(private router: Router, @Inject(PLATFORM_ID) platformId: Object,
-  private scrollPositionService: ScrollPositionService) {
+    private scrollPositionService: ScrollPositionService) {
     this.isServer = isPlatformServer(platformId);
     if (this.isServer) return;
-    combineLatest([
-      this.router.events.pipe(filter(event => event instanceof NavigationEnd)),
-      this.scrollPositionService.elementScrollPosition$
-    ]).subscribe(([n, elementScrollPosition]) => {
-      if (!elementScrollPosition) {
+    this.router.events.pipe(
+      filter(event => event instanceof NavigationEnd),
+      tap(() => this.scrollPositionService.setLoading(true)),
+      startWith(null), // emitting first empty value to fill-in the buffer
+      pairwise(),
+      filter(([previousValue, currentValue]) => {
+        const resetScrollZero = previousValue?.url?.split('#')[0] !== currentValue?.url?.split('#')[0];
+        if (resetScrollZero) this.scrollPositionService.setLoading(false);
+        return resetScrollZero;
+      }),
+      switchMap(() => {
         (this.scrollableDiv.nativeElement as HTMLDivElement).scrollTo(0, 0);
-      }
+        return this.scrollPositionService.scrollPosition$.pipe(
+          filter(p => p === 0)
+        );
+      })
+    ).subscribe(() => {
+      this.scrollPositionService.setLoading(false);
     });
   }
 
   ngAfterViewInit(): void {
     if (this.isServer) return;
     setTimeout(() => {
-      this.scrollPositionService.elementScrollPosition$.subscribe((y) => {
-        (this.scrollableDiv.nativeElement as HTMLDivElement).scrollTo({ top: y, behavior: 'smooth' });
+      this.scrollPositionService.elementScrollPosition$.subscribe(({ value, option }) => {
+        if (!option?.eventEmit) return;
+        console.log('value', value);
+        (this.scrollableDiv.nativeElement as HTMLDivElement).scrollTo({ top: value, behavior: 'smooth' });
+        this.scrollPositionService.resetScrollToElementById();
+        this.scrollPositionService.setLoading(false);
       });
     }, mainConfig.timeoutAfterInit);
   }

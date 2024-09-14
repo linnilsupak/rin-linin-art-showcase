@@ -1,7 +1,6 @@
-import { Directive, ElementRef, Inject, OnDestroy, PLATFORM_ID } from '@angular/core';
+import { Directive, ElementRef, Inject, Input, OnDestroy, PLATFORM_ID } from '@angular/core';
 import { ScrollPositionService } from './service/scroll-position.service';
-import { isPlatformBrowser } from '@angular/common';
-import { combineLatest, Subscription } from 'rxjs';
+import { combineLatest, filter, Subscription } from 'rxjs';
 import { BreakpointObserver, Breakpoints } from '@angular/cdk/layout';
 
 @Directive({
@@ -9,7 +8,7 @@ import { BreakpointObserver, Breakpoints } from '@angular/cdk/layout';
   standalone: true
 })
 export class ScrollIntoViewWhenReachDirective implements OnDestroy {
-  private isBrowser = false;
+  @Input('appScrollIntoViewWhenReach') enable = true;
   private reached = false;
   private isMobile = false;
   private subscription = new Subscription();
@@ -17,7 +16,6 @@ export class ScrollIntoViewWhenReachDirective implements OnDestroy {
   private scrollPositionService: ScrollPositionService,
   private breakpointObserver: BreakpointObserver,
   private el: ElementRef) {
-    this.isBrowser = isPlatformBrowser(platformId);
     breakpointObserver.observe([
       Breakpoints.XSmall,
     ]).subscribe(result => {
@@ -28,8 +26,13 @@ export class ScrollIntoViewWhenReachDirective implements OnDestroy {
       }
     });
     this.subscription.add(
-      combineLatest([this.scrollPositionService.scrollPosition$, this.scrollPositionService.windowHeight$])
-      .subscribe(([position, wHeight]) => {
+      combineLatest([this.scrollPositionService.scrollPosition$, this.scrollPositionService.windowHeight$, this.scrollPositionService.loadingPage$])
+      .pipe(
+        filter(([position, wHeight, loading]) => {
+          return !loading && this.enable;
+        })
+      )
+      .subscribe(([position, wHeight, loading]) => {
         if (!this.isMobile && !this.reached && ((this.el.nativeElement.offsetTop + (this.el.nativeElement.offsetHeight/2) - wHeight) < position)) {
           this.reached = true;
           this.el.nativeElement.scrollIntoView({ behavior: "auto", block: "end", inline: "nearest" })

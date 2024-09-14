@@ -4,6 +4,7 @@ import { ReflectionFontComponent } from '../shared/reflection-font/reflection-fo
 import { CharacterIconComponent } from "../shared/character-icon/character-icon.component";
 import { ActivatedRoute } from '@angular/router';
 import { ScrollPositionService } from '../core/service/scroll-position.service';
+import { mainConfig } from '../core/config/main.config';
 
 @Component({
   selector: 'app-original',
@@ -21,17 +22,19 @@ export class OriginalComponent implements AfterViewInit, OnInit {
   }
 
   ngAfterViewInit() {
-    this.route.fragment
-      .subscribe(fragment => {
-        this.fragment = fragment;
-        try {
-          if (this.fragment) {
-            if (this.scrollPositionService.setScrollToElementById(this.fragment)) {
-              this.fragment = undefined;
+    setTimeout(() => {
+      this.route.fragment
+        .subscribe(fragment => {
+          this.fragment = fragment;
+          try {
+            if (this.fragment) {
+              if (this.scrollPositionService.setScrollToElementById(this.fragment)) {
+                this.fragment = undefined;
+              }
             }
+          } catch (e) {
           }
-        } catch (e) {
-        }
-      });
+        });
+    }, mainConfig.timeoutAfterInit);
   }
 }

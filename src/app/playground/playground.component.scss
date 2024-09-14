@@ -1,6 +1,4 @@
-@use "slide-animation";
 @import "bootstrap-mixin";
-@import"picture-frame";
 
 
 .cover {
@@ -12,23 +10,4 @@
     @include media-breakpoint-up(lg) {
         min-height: 226px;
      }
-}
-
-
-.mini-frame-200 {
-    width: fit-content;;
-    max-width: 100%;
-
-    @include media-breakpoint-up(lg) {
-       width: 200px;
-    }
-}
-
-
-.mini-frame-300 {
-    width: fit-content;
-    max-width: 100%;
-    @include media-breakpoint-up(lg) {
-       width: 300px;
-    }
 }
