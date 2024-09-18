@@ -42,7 +42,7 @@ export class AppComponent implements AfterViewInit {
           filter(p => p === 0)
         );
       })
-    ).subscribe(() => {
+    ).subscribe((p) => {
       this.scrollPositionService.setLoading(false);
     });
   }

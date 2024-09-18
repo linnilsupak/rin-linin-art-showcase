@@ -35,8 +35,8 @@ export class ScrollPositionService {
     this.loadingPage.next(val);
   }
 
-  setPosition(scrollY: number) {
-    this.scrollPosition.next(scrollY);
+  setPosition(scrollTop: number) {
+    this.scrollPosition.next(scrollTop);
   }
 
   setWindowHeight(h: number) {
@@ -51,7 +51,7 @@ export class ScrollPositionService {
     const element = document.getElementById(id);
     if (element) {
       const yOffset = - mainConfig.preserveHeight;
-      const y = (element.getBoundingClientRect().top) - this.scrollPosition.value - yOffset - minusScroll;
+      const y = (element.getBoundingClientRect().top + this.scrollPosition.value + yOffset) - minusScroll;
       this.elementScrollPosition.next({value: y, option});
       return y;
     }
