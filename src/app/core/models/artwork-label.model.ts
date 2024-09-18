@@ -6,5 +6,9 @@ export interface ArtworkLabel {
     title2?: string, subTitle: string,
     description: string
   },
-  isRecTemplate?:boolean
+  isRecTemplate?:boolean,
+  previewPic: {
+    width?: string,
+    height?: string
+  }
 }

@@ -10,6 +10,10 @@ export const playgroundGalleryConfig: GalleryRooms = {
               title2: 'ตัวละครของ Mercanaryscrapcore',
               subTitle: 'ภาพสีน้ำ',
               description: 'ภาพ Ferry ที่รินลองวาดครั้งแรก'
+            },
+            previewPic: {
+              width: '120px',
+              height: '182px'
             }
           },
           {
@@ -20,6 +24,10 @@ export const playgroundGalleryConfig: GalleryRooms = {
               title2: 'ตัวละครของ Rioni',
               subTitle: 'ภาพสีน้ำ',
               description: 'ลองใช้เทคนิคฉีดเสปรย์น้ำเปล่าลงบนภาพสีน้ำที่ยังไม่แห้งดูค่ะ'
+            },
+            previewPic: {
+              width: '120px',
+              height: '182px'
             }
           },
           {
@@ -30,6 +38,10 @@ export const playgroundGalleryConfig: GalleryRooms = {
               title2: 'ตัวละครของ Gyyuks',
               subTitle: 'ภาพสีน้ำ',
               description: 'ลองเอียงกระดาษขณะที่สียังไม่แห้งให้เป็นทางน้ำไหล ซึ่งเป็นเทคนิคที่ใช้ได้เฉพาะกระดาษแผ่นเรียบเท่านั้น'
+            },
+            previewPic: {
+              width: '250px',
+              height: '363px'
             }
           },
           {
@@ -40,6 +52,10 @@ export const playgroundGalleryConfig: GalleryRooms = {
               title2: 'ตัวละครของ ChocolateProgram',
               subTitle: 'ภาพสีไม้ผสมสีน้ำ',
               description: 'ภาพสไตล์วิกตอเรียก็ต้องสีไม้ซิ สุดคลาสสิก'
+            },
+            previewPic: {
+              width: '220px',
+              height: '324px'
             }
           },
           {
@@ -50,6 +66,10 @@ export const playgroundGalleryConfig: GalleryRooms = {
               title2: 'ตัวละครของ latteswiirl',
               subTitle: 'ภาพสีน้ำ',
               description: 'ภาพที่รินลองลงสีแบบเปรอะเปื้อน สไตล์ฝันๆลงบนกระดาษสีน้ำแผ่นเรียบ'
+            },
+            previewPic: {
+              width: '380px',
+              height: '276px'
             }
           },
           {
@@ -60,6 +80,10 @@ export const playgroundGalleryConfig: GalleryRooms = {
               title2: 'ตัวละครของ ecobotanist',
               subTitle: 'ภาพสีน้ำ',
               description: 'ภาพนี้ก็ลองใช้การลงสีแบบเปรอะๆเปื้อนๆ สไตล์ okayuuri ที่เน้นลายเส้นและความโปร่งใสของสีน้ำค่ะ'
+            },
+            previewPic: {
+              width: '180px',
+              height: '249px'
             }
           }
         ],
@@ -72,6 +96,10 @@ export const playgroundGalleryConfig: GalleryRooms = {
               title2: 'Blastoffspaceboy',
               subTitle: 'ภาพลายเส้นปากกา',
               description: 'ภาพนี้วาดโดยลากปากกาแบบไม่ยกเลยค่ะ แต่ก็มีแอบเอาปากกามาเติมนิดๆหน่อยๆทีหลังนะ'
+            },
+            previewPic: {
+              width: '76px',
+              height: '117px'
             }
           },
           {
@@ -82,6 +110,10 @@ export const playgroundGalleryConfig: GalleryRooms = {
               title2: 'ตัวละครของ amesketches',
               subTitle: 'ภาพเส้นดินสอ',
               description: 'ลองตัวอะไรที่ไม่ใช่คน หรือมีความน่ารักเลยดูค่ะ วาดด้วยเส้นดินสอจะได้ดูลึกลับน่ากลัว'
+            },
+            previewPic: {
+              width: '76px',
+              height: '77px'
             }
           },
           {
@@ -92,6 +124,10 @@ export const playgroundGalleryConfig: GalleryRooms = {
               title2: 'ตัวละครของ MintKyo',
               subTitle: 'ภาพสีน้ำ',
               description: 'ลองตั้งใจลงสีบนกระดาษสีน้ำแผ่นเรียบดูค่ะ แต่เหมือนจะพลาดนิดหน่อยตรงทะเลดาวนะ'
+            },
+            previewPic: {
+              width: '250px',
+              height: '363px'
             }
           },
           {
@@ -102,6 +138,10 @@ export const playgroundGalleryConfig: GalleryRooms = {
               title2: 'ตัวละครของ Etheirys',
               subTitle: 'ภาพสีน้ำ',
               description: 'พยายามจะลงสีแบบลงทีละส่วน สุดท้ายลองผสมสีตุ๋นๆแล้วมันก็ออกมาแบบนี้แหละ'
+            },
+            previewPic: {
+              width: '220px',
+              height: '324px'
             }
           },
           {
@@ -112,6 +152,10 @@ export const playgroundGalleryConfig: GalleryRooms = {
               title2: 'ตัวละครของ LilaThAplePeela',
               subTitle: 'ภาพสีน้ำ',
               description: ''
+            },
+            previewPic: {
+              width: '312px',
+              height: '213px'
             }
           },
           {
@@ -122,6 +166,10 @@ export const playgroundGalleryConfig: GalleryRooms = {
               title2: 'ตัวละครของ Melo_cherrii',
               subTitle: 'Clip studio paint animation',
               description: ''
+            },
+            previewPic: {
+              width: '308px',
+              height: '247px'
             }
           },
           {
@@ -133,7 +181,11 @@ export const playgroundGalleryConfig: GalleryRooms = {
               subTitle: 'CG',
               description: ''
             },
-            isRecTemplate: true
+            isRecTemplate: true,
+            previewPic: {
+              width: '180px',
+              height: '152px'
+            }
           },
           {
             picUrl: '/assets/images/playground/artfight2024/jacaranda_rin_linin.png',
@@ -143,6 +195,10 @@ export const playgroundGalleryConfig: GalleryRooms = {
               title2: 'ตัวละครของ Kayleona',
               subTitle: 'ภาพสีน้ำ',
               description: ''
+            },
+            previewPic: {
+              width: '180px',
+              height: '258px'
             }
           }
         ],
@@ -155,6 +211,10 @@ export const playgroundGalleryConfig: GalleryRooms = {
               title2: 'ตัวละครของ prypec',
               subTitle: 'ภาพสีน้ำ abstract',
               description: ''
+            },
+            previewPic: {
+              width: '76px',
+              height: '116px'
             }
           },
         {
@@ -166,7 +226,11 @@ export const playgroundGalleryConfig: GalleryRooms = {
               subTitle: 'ภาพสีน้ำ',
               description: ''
             },
-            isRecTemplate: true
+            isRecTemplate: true,
+            previewPic: {
+              width: '120px',
+              height: '182px'
+            }
           },
         {
             picUrl: '/assets/images/playground/artfight2024/peep_rin_linin.png',
@@ -177,7 +241,11 @@ export const playgroundGalleryConfig: GalleryRooms = {
               subTitle: 'ภาพสีน้ำ',
               description: ''
             },
-            isRecTemplate: true
+            isRecTemplate: true,
+            previewPic: {
+              width: '252px',
+              height: '375px'
+            }
           },
           {
             picUrl: '/assets/images/playground/artfight2024/rina_rin_linin.jpg',
@@ -187,6 +255,10 @@ export const playgroundGalleryConfig: GalleryRooms = {
               title2: 'ตัวละครของ	JazzyFina',
               subTitle: 'ภาพสีน้ำ',
               description: ''
+            },
+            previewPic: {
+              width: '216px',
+              height: '255px'
             }
           },
           {
@@ -197,6 +269,10 @@ export const playgroundGalleryConfig: GalleryRooms = {
               title2: 'ตัวละครของ Duckiepu',
               subTitle: 'ภาพสีน้ำ',
               description: ''
+            },
+            previewPic: {
+              width: '386px',
+              height: '283px'
             }
           },
           {
@@ -208,7 +284,11 @@ export const playgroundGalleryConfig: GalleryRooms = {
               subTitle: 'CG',
               description: ''
             },
-            isRecTemplate: true
+            isRecTemplate: true,
+            previewPic: {
+              width: '176px',
+              height: '223px'
+            }
           },
            {
             picUrl: '/assets/images/playground/artfight2024/raccoon_rin_linin.jpg',
@@ -218,6 +298,10 @@ export const playgroundGalleryConfig: GalleryRooms = {
               title2: 'ตัวละครของ streetcatzzz',
               subTitle: 'ภาพสีน้ำ',
               description: ''
+            },
+            previewPic: {
+              width: '216px',
+              height: '205px'
             }
           },
           {
@@ -229,7 +313,11 @@ export const playgroundGalleryConfig: GalleryRooms = {
               subTitle: 'CG',
               description: ''
             },
-            isRecTemplate: true
+            isRecTemplate: true,
+            previewPic: {
+              width: '216px',
+              height: '210px'
+            }
           }
         ],
   }
