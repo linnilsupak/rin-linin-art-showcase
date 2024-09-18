@@ -1,5 +1,6 @@
 import { Injectable } from '@angular/core';
 import { BehaviorSubject } from 'rxjs';
+import { mainConfig } from '../config/main.config';
 
 export class ScrollEvent {
   value: number;
@@ -46,13 +47,14 @@ export class ScrollPositionService {
     this.elementScrollPosition.next({value: 0, option: {eventEmit: false}});
   }
 
-  setScrollToElementById(id: string, minusScroll = 0, option = { eventEmit: true}): boolean {
+  setScrollToElementById(id: string, minusScroll = 0, option = { eventEmit: true}): number {
     const element = document.getElementById(id);
     if (element) {
-      const y = element.getBoundingClientRect().top - (this.windowHeight.value/5) - minusScroll;
+      const yOffset = - mainConfig.preserveHeight;
+      const y = (element.getBoundingClientRect().top) - this.scrollPosition.value - yOffset - minusScroll;
       this.elementScrollPosition.next({value: y, option});
-      return true;
+      return y;
     }
-    return false;
+    return -1;
   }
 }

@@ -16,7 +16,7 @@
   <div class="d-flex align-items-center justify-content-center flex-column flex-md-row">
     <app-character-icon link="/original" fragment="linin" img="/assets/images/original/rin_linin_ori.jpg"
     hoverDescription="Protagonist" label="Linin"></app-character-icon>
-    <app-character-icon link="/original" img="/assets/images/original/the_collector_ori_rin_linin.jpg"
+    <app-character-icon link="/original" fragment="collector" img="/assets/images/original/the_collector_ori_rin_linin.jpg"
     hoverDescription="Main cast" label="The collector"></app-character-icon>
     <app-character-icon link="/original" img="/assets/images/original/the_witch_ori_rin_linin.jpg"
     hoverDescription="Main cast" label="The witch"></app-character-icon>
@@ -48,4 +48,19 @@
     </div>
   </div>
   <div class="blank-space">&nbsp;</div>
+  <div class="row" id="collector">
+    <div class="col-12 col-lg-5 d-flex">
+      <img src="/assets/images/original/the_collector_ori_rin_linin_preview.jpeg" class="w-100 character-frame my-auto ms-auto">
+    </div>
+    <div class="col-12 col-lg-7 d-flex">
+      <div class="description-frame p-md-5">
+        <div class="section-topic mb-2">
+          {{'ORIGINAL.COLLECTOR.TITLE' | translate}}
+        </div>
+        <div class="section-content mb-4">
+          {{'ORIGINAL.COLLECTOR.DESCRIPTION' | translate}}
+        </div>
+      </div>
+    </div>
+  </div>
 </div>

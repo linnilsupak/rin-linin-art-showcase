@@ -1,10 +1,11 @@
-import { AfterViewInit, Component, inject, OnInit } from '@angular/core';
+import { AfterViewInit, Component, inject } from '@angular/core';
+import { ActivatedRoute, Router } from '@angular/router';
 import { TranslateModule } from '@ngx-translate/core';
-import { ReflectionFontComponent } from '../shared/reflection-font/reflection-font.component';
-import { CharacterIconComponent } from "../shared/character-icon/character-icon.component";
-import { ActivatedRoute } from '@angular/router';
-import { ScrollPositionService } from '../core/service/scroll-position.service';
+import { combineLatest, map, of, Subscription, switchMap, tap } from 'rxjs';
 import { mainConfig } from '../core/config/main.config';
+import { ScrollPositionService } from '../core/service/scroll-position.service';
+import { CharacterIconComponent } from "../shared/character-icon/character-icon.component";
+import { ReflectionFontComponent } from '../shared/reflection-font/reflection-font.component';
 
 @Component({
   selector: 'app-original',
@@ -13,28 +14,43 @@ import { mainConfig } from '../core/config/main.config';
   templateUrl: './original.component.html',
   styleUrl: './original.component.scss',
 })
-export class OriginalComponent implements AfterViewInit, OnInit {
+export class OriginalComponent implements AfterViewInit {
   private route = inject(ActivatedRoute);
+  private router = inject(Router);
   private scrollPositionService = inject(ScrollPositionService);
+  private subscription = new Subscription();
   fragment;
 
-  ngOnInit(): void {
-  }
-
   ngAfterViewInit() {
+    let scrollCount = 0;
     setTimeout(() => {
-      this.route.fragment
-        .subscribe(fragment => {
-          this.fragment = fragment;
-          try {
-            if (this.fragment) {
-              if (this.scrollPositionService.setScrollToElementById(this.fragment)) {
-                this.fragment = undefined;
+      this.subscription.add(
+        this.route.fragment.pipe(
+          map(fragment => {
+            this.fragment = fragment;
+            try {
+              if (this.fragment) {
+                scrollCount = 0;
+                return this.scrollPositionService.setScrollToElementById(this.fragment);
               }
+            } catch (e) {
             }
-          } catch (e) {
+            return -1;
+          }),
+          switchMap((val) => combineLatest([of(val), this.scrollPositionService.scrollPosition$]))
+        )
+        .subscribe(([elementScrollPosition, position]) => {
+          if (position >= Math.round(elementScrollPosition)) scrollCount++;
+          if (position < elementScrollPosition) {
+            if (scrollCount > 1) {
+              setTimeout(() => {
+                this.fragment = undefined;
+                this.router.navigateByUrl(this.router.url.split('#')[0]);
+              }, mainConfig.timeoutAfterInit);
+            }
           }
-        });
+        })
+      );
     }, mainConfig.timeoutAfterInit);
   }
 }

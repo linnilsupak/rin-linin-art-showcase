@@ -52,7 +52,6 @@ export class AppComponent implements AfterViewInit {
     setTimeout(() => {
       this.scrollPositionService.elementScrollPosition$.subscribe(({ value, option }) => {
         if (!option?.eventEmit) return;
-        console.log('value', value);
         (this.scrollableDiv.nativeElement as HTMLDivElement).scrollTo({ top: value, behavior: 'smooth' });
         this.scrollPositionService.resetScrollToElementById();
         this.scrollPositionService.setLoading(false);
