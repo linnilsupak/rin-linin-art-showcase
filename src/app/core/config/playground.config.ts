@@ -228,8 +228,8 @@ export const playgroundGalleryConfig: GalleryRooms = {
             },
             isRecTemplate: true,
             previewPic: {
-              width: '120px',
-              height: '182px'
+              width: '76px',
+              height: '117px'
             }
           },
         {
