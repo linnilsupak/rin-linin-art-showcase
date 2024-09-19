@@ -1,4 +1,4 @@
-import { AfterViewInit, Component, Inject,  } from '@angular/core';
+import { AfterViewInit, Component, Inject, Input,  } from '@angular/core';
 import {MatIconModule} from '@angular/material/icon';
 import { RouterLink } from '@angular/router';
 import { TextRollinEntranceComponent } from "../shared/text-rollin-entrance/text-rollin-entrance.component";
@@ -12,6 +12,7 @@ import { TextRollinEntranceComponent } from "../shared/text-rollin-entrance/text
   styleUrl: './header.component.scss'
 })
 export class HeaderComponent implements AfterViewInit {
+  @Input() topOfThePage: boolean;
   openMenu = false;
 
 

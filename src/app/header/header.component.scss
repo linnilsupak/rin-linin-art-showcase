@@ -66,15 +66,25 @@ $top-header-level: 995;
     margin-top: 8px;
     margin-left: -10px;
     max-width: 120px;
+    transition-property: all;
+    transition-duration: 0.3s;
+    transition-timing-function: ease;
 
     @include media-breakpoint-down(md) {
       margin-top: 10px;
       max-width: 100px;
     }
+  }
 
-    @include media-breakpoint-up(xxl) {
-      margin-top: 10px;
-      max-width: 300px;
+  .merge-linin-flag {
+
+    &.on-top-scroll {
+      .linin-flag {
+        @include media-breakpoint-up(md) {
+          margin-top: 10px;
+          max-width: 300px;
+        }
+      }
     }
   }
 

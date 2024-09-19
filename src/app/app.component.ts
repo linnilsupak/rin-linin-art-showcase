@@ -20,7 +20,8 @@ import { StarrySkyComponent } from "./starry-sky/starry-sky.component";
 })
 export class AppComponent implements AfterViewInit {
   @ViewChild('content') scrollableDiv: ElementRef;
-  
+
+  topOfThePage = true;
   isServer = false;
   constructor(private router: Router, @Inject(PLATFORM_ID) platformId: Object,
     private scrollPositionService: ScrollPositionService) {
@@ -45,6 +46,9 @@ export class AppComponent implements AfterViewInit {
     ).subscribe((p) => {
       this.scrollPositionService.setLoading(false);
     });
+    this.scrollPositionService.scrollPosition$.subscribe(scrollTop => {
+      this.topOfThePage = (scrollTop === 0);
+    })
   }
 
   ngAfterViewInit(): void {
