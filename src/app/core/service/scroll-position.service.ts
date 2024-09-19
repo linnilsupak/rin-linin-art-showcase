@@ -25,6 +25,8 @@ export class ScrollPositionService {
   loadingPage$ = this.loadingPage.asObservable();
   private scrollPosition = new BehaviorSubject<number>(0);
   scrollPosition$ = this.scrollPosition.asObservable();
+  private scrollHeight = new BehaviorSubject<number>(0);
+  scrollHeight$ = this.scrollHeight.asObservable();
   private windowHeight = new BehaviorSubject<number>(0);
   windowHeight$ = this.windowHeight.asObservable();
   private elementScrollPosition = new BehaviorSubject<ScrollEvent>(new ScrollEvent(0));
@@ -33,6 +35,10 @@ export class ScrollPositionService {
 
   setLoading(val: boolean) {
     this.loadingPage.next(val);
+  }
+
+  setScrollHeight(val: number) {
+    this.scrollHeight.next(val);
   }
 
   setPosition(scrollTop: number) {

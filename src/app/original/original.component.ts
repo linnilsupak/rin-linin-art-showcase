@@ -1,7 +1,7 @@
 import { AfterViewInit, Component, inject } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
 import { TranslateModule } from '@ngx-translate/core';
-import { combineLatest, map, of, Subscription, switchMap, tap } from 'rxjs';
+import { combineLatest, map, of, Subscription, switchMap } from 'rxjs';
 import { mainConfig } from '../core/config/main.config';
 import { ScrollPositionService } from '../core/service/scroll-position.service';
 import { CharacterIconComponent } from "../shared/character-icon/character-icon.component";
@@ -37,15 +37,22 @@ export class OriginalComponent implements AfterViewInit {
             }
             return -1;
           }),
-          switchMap((val) => combineLatest([of(val), this.scrollPositionService.scrollPosition$]))
+          switchMap((val) => combineLatest([of(val), this.scrollPositionService.scrollPosition$, this.scrollPositionService.scrollHeight$]))
         )
-        .subscribe(([elementScrollPosition, position]) => {
-          if (position >= Math.round(elementScrollPosition)) scrollCount++;
+        .subscribe(([elementScrollPosition, position, scrollHeight]) => {
+          if (this.fragment) {
+            if (position >= Math.round(elementScrollPosition) || (position === scrollHeight)) {
+              scrollCount++;
+            } else if (position < Math.round(elementScrollPosition) && scrollCount === 1) {
+              scrollCount++;
+            }
+          }
           if (position < elementScrollPosition) {
-            if (scrollCount > 1) {
+            if (scrollCount >= 2) {
               setTimeout(() => {
                 this.fragment = undefined;
                 this.router.navigateByUrl(this.router.url.split('#')[0]);
+                scrollCount = 0;
               }, mainConfig.timeoutAfterInit);
             }
           }

@@ -34,7 +34,10 @@ export class AppComponent implements AfterViewInit {
       pairwise(),
       filter(([previousValue, currentValue]) => {
         const resetScrollZero = previousValue?.url?.split('#')[0] !== currentValue?.url?.split('#')[0];
-        if (resetScrollZero) this.scrollPositionService.setLoading(false);
+        if (resetScrollZero) {
+          this.scrollPositionService.setLoading(false);
+          this.scrollPositionService.setScrollHeight(Math.abs(this.scrollableDiv.nativeElement.scrollHeight - this.scrollableDiv.nativeElement.clientHeight));
+        }
         return resetScrollZero;
       }),
       switchMap(() => {
