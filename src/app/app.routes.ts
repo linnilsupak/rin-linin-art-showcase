@@ -18,6 +18,11 @@ export const routes: Routes = [
     loadComponent: () => import('./original/original.component').then(c => c.OriginalComponent)
   },
   {
+    path: 'character-info/:characterName',
+    title: 'Character info',
+    loadComponent: () => import('./character-info/character-info.component').then(c => c.CharacterInfoComponent)
+  },
+  {
     path: 'home',
     title: 'Home: Rin Linin',
     component: HomeComponent

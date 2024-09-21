@@ -1,7 +1,7 @@
 <div class="cover">
 </div>
 <!-- <div class="border-wall-paper"></div> -->
-<div class="container-fluid container-md mt-5 content-frame">
+<div class="container-fluid container-md mt-5">
   <div>
     <app-reflection-font [text]="'Original Characters'" [fontClass]="'mx-auto'"></app-reflection-font>
   </div>
@@ -37,7 +37,7 @@
   <div class="blank-space">&nbsp;</div>
   @for (item of characterInfo;track item.name; let index=$index) {
     <span id="{{item.name}}"></span>
-    <app-character-frame [imageUrl]="item.imageUrl"
+    <app-character-frame [imageUrl]="item.imageUrl" [characterName]="item.name"
     [title]="item.title" [description]="item.description" [arrangement]="(index % 2) ? 'left': 'right'"></app-character-frame>
     <div class="blank-space">&nbsp;</div>
   }
