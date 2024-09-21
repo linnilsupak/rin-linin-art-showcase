@@ -2,15 +2,17 @@ import { AfterViewInit, Component, inject } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
 import { TranslateModule } from '@ngx-translate/core';
 import { combineLatest, map, of, Subscription, switchMap } from 'rxjs';
+import { characterInfo } from '../core/config/character-info.config';
 import { mainConfig } from '../core/config/main.config';
 import { ScrollPositionService } from '../core/service/scroll-position.service';
+import { CharacterFrameComponent } from "../shared/character-frame/character-frame.component";
 import { CharacterIconComponent } from "../shared/character-icon/character-icon.component";
 import { ReflectionFontComponent } from '../shared/reflection-font/reflection-font.component';
 
 @Component({
   selector: 'app-original',
   standalone: true,
-  imports: [TranslateModule, ReflectionFontComponent, CharacterIconComponent],
+  imports: [TranslateModule, ReflectionFontComponent, CharacterIconComponent, CharacterFrameComponent],
   templateUrl: './original.component.html',
   styleUrl: './original.component.scss',
 })
@@ -19,6 +21,9 @@ export class OriginalComponent implements AfterViewInit {
   private router = inject(Router);
   private scrollPositionService = inject(ScrollPositionService);
   private subscription = new Subscription();
+  characterInfo = Object.keys(characterInfo).map(key => { 
+    return {name: key, ...characterInfo[key]};
+   }) ;
   fragment;
 
   ngAfterViewInit() {

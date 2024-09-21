@@ -1,0 +1,19 @@
+:host {
+    display: inline-block;
+    background-color: rgba(255, 255, 255, 0.689);
+    border-radius: 16px;
+    font-size: medium;
+    font-weight: 700;
+    padding: 8px 16px;
+    cursor: pointer;
+    transition: all 0.2s ease;
+
+
+    &:hover {
+        transform: translate3d(0.08em, 0.08em, 0.01em);
+        background-color: rgba(255, 255, 255, 1);
+    }
+    &:active {
+        transform: translate3d(0.18em, 0.2em, 0.01em);
+    }
+}
