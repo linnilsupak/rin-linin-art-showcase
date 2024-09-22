@@ -3,7 +3,9 @@
 
 .cover {
     // object-fit: none;
-    background: url('/assets/images/original/original-cover.jpg') no-repeat 95% 9%;
+    background-image: url('/assets/images/original/original-cover.jpg');
+    background-position: 95% 9%;
+    background-repeat: no-repeat;
     background-size: cover;
     min-height: 230px;
 

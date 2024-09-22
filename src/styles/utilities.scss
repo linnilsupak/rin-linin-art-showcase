@@ -1,38 +1,30 @@
 @use 'variables' as var;
+
 .after-reflect {
-    margin-top: -20px
+  margin-top: -20px
 }
 
 .section-topic {
-    font-weight: 700;
-    font-size: 26px;
+  font-family: "CokieCrisp";
+  font-weight: 700;
+  font-size: 26px;
 }
 
 .section-color {
-    color: white;
+  color: white;
 }
 
 .caption {
-    color: var.$dark-sky;
-    font-size: 16px;
-  }
+  color: var.$dark-sky;
+  font-size: 16px;
+}
 
 .blank-space {
-    height: 150px;
+  height: 150px;
 }
 
 .width-fit-content {
-    width: fit-content;
+  width: fit-content;
 }
 
 
-.bg-sub-title {
-    border-radius: 8px;
-    background: linear-gradient(#ffffff, #e89eae99, transparent);
-    width: fit-content;
-}
-
-
-.content-frame {
-    max-width: 1200px;
-  }

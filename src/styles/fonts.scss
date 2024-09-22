@@ -1,0 +1,46 @@
+@font-face {
+  font-family: "CokieCrisp";
+  src: url(/assets/fonts/CookieCrisp.ttf);
+  font-weight: 500 700;
+  unicode-range: U+000-5FF; /* Latin glyphs */
+}
+@font-face {
+  font-family: "CokieCrisp";
+  src: url(/assets/fonts/SOV_yamaka.ttf);
+  font-weight: 500 700;
+  size-adjust: 140%;
+  unicode-range: U+0E00-E7F; /* Thai glyphs */
+}
+
+
+@font-face {
+  font-family: "Sarabun";
+  src: url(/assets/fonts/THSarabunNewBold.ttf);
+  font-weight: 500 700;
+  size-adjust: 140%;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Sarabun";
+  src: url(/assets/fonts/THSarabunNewBoldItalic.ttf);
+  font-weight: 500 700;
+  size-adjust: 140%;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: "Sarabun";
+  src: url(/assets/fonts/THSarabunNew.ttf);
+  font-weight: 100 400;
+  size-adjust: 140%;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Sarabun";
+  src: url(/assets/fonts/THSarabunNewItalic.ttf);
+  font-weight: 100 400;
+  size-adjust: 140%;
+  font-style: italic;
+}

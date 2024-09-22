@@ -8,7 +8,9 @@
     <div class="border-wall-paper"></div>
     <div class="inner-wallpaper d-flex">
         <button class="menu-btn ms-auto me-3" (click)="openMenu=true">
-            <mat-icon class="menu-icon">menu</mat-icon>
+            <span class="material-symbols-rounded">
+              menu
+              </span>
         </button>
         <div class="bg-wallpaper"></div>
     </div>
@@ -17,7 +19,9 @@
 <div class="over-header">
   <div class="menu" [class.open]="openMenu">
     <button class="menu-btn" (click)="openMenu=false">
-      <mat-icon class="menu-icon">close</mat-icon>
+      <span class="material-symbols-rounded">
+        close
+        </span>
     </button>
     <a routerLink="/original" (click)="openMenu=false">
       <div class="menu-item py-3">

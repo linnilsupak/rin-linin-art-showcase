@@ -1,7 +1,7 @@
 <app-header [topOfThePage]="topOfThePage"></app-header>
 <div class="header"></div>
 <div class="content" #content appSetMainScrollPosition>
-    <app-scroll-up-button [scrollableDiv]="content"></app-scroll-up-button>
+    <app-scroll-up-button [scrollableDiv]="content" [scrollWidth]="scrollWidth"></app-scroll-up-button>
     <router-outlet></router-outlet>
 </div>
 <app-starry-sky></app-starry-sky>

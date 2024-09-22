@@ -1,6 +1,6 @@
-import { AfterViewInit, Component, Inject, Input, PLATFORM_ID } from '@angular/core';
+import { CommonModule } from '@angular/common';
+import { AfterViewInit, Component, Input } from '@angular/core';
 import { WINDOW_PROVIDERS } from '../core/service/window.service';
-import { CommonModule, isPlatformServer } from '@angular/common';
 
 @Component({
   selector: 'app-scroll-up-button',
@@ -12,21 +12,12 @@ import { CommonModule, isPlatformServer } from '@angular/common';
 })
 export class ScrollUpButtonComponent implements AfterViewInit {
   @Input({ required: true }) scrollableDiv: HTMLDivElement;
-  isServer: boolean;
-  scrollWidth = 0;
-  loading = true;
+  @Input() scrollWidth = 0;
 
-  constructor(@Inject(PLATFORM_ID) platformId: Object) {
-    this.isServer = isPlatformServer(platformId);
+  constructor() {
   }
 
   ngAfterViewInit(): void {
-    if (this.isServer) return;
-    if (this.scrollableDiv) this.scrollWidth = this.scrollableDiv.offsetWidth - this.scrollableDiv.scrollWidth;
-    if (this.scrollWidth < 0 ) this.scrollWidth = 0;
-    setTimeout(() => {
-      this.loading = false;
-    }, 0);
   }
 
   scrollToTop() {

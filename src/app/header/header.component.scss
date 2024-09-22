@@ -1,13 +1,10 @@
+@use 'variables' as var;
 @import "bootstrap-mixin";
-
-$over-header-level: 997;
-$linin-label-level: 996;
-$top-header-level: 995;
 
 .over-header {
   position: absolute;
   right: 0;
-  z-index: $over-header-level;
+  z-index: var.$over-header-level;
   height: 100%;
   overflow: hidden;
 }
@@ -15,7 +12,7 @@ $top-header-level: 995;
 .menu {
   position: relative;
   height: 100%;
-  background: rgba(255, 255, 255, 0.892);
+  background: var.$bg-menu;
   padding: 40px;
   width: 0px;
   margin-right: -85px;
@@ -40,10 +37,10 @@ $top-header-level: 995;
 
   a {
     text-decoration: none !important;
-    color: #cb2676;
+    color: var.$light-violet;
 
     &:hover {
-      color: #5c1035;
+      color: var.$violet;
     }
 
     .menu-item {
@@ -58,7 +55,7 @@ $top-header-level: 995;
 }
 
 .linin-label {
-  z-index: $linin-label-level;
+  z-index: var.$linin-label-level;
   width: fit-content;
   cursor: pointer;
 
@@ -123,12 +120,12 @@ $top-header-level: 995;
 
 .top-header {
   right: 0;
-  z-index: $top-header-level;
-  background-color: black;
+  z-index: var.$top-header-level;
+  background-color: var.$black;
 
   .inner-wallpaper {
-    $inner-light: #265683;
-    $inner-dark: #0d2f4f;
+    $inner-light: var.$dark-blue;
+    $inner-dark: var.$darker-blue;
     position: relative;
     $minorStrip: 5vmin;
     $majorStrip: 10vmin;
@@ -142,7 +139,7 @@ $top-header-level: 995;
 
 .menu-btn {
   border-radius: 8px;
-  background-color: white;
+  background-color: var.$white;
   padding: 10px;
   display: flex;
   justify-content: center;

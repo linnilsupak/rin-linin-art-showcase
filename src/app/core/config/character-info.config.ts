@@ -2,7 +2,10 @@ export const characterInfo = {
     linin: {
         imageUrl: '/assets/images/original/rin_linin_ori_preview.jpeg',
         title: 'ORIGINAL.RIN_LININ.TITLE',
-        description: 'ORIGINAL.RIN_LININ.DESCRIPTION'
+        description: 'ORIGINAL.RIN_LININ.DESCRIPTION',
+        moreInfo: {
+
+        }
     },
     collector: {
         imageUrl: '/assets/images/original/the_collector_ori_rin_linin_preview.jpeg',

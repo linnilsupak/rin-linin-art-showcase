@@ -1,10 +1,12 @@
-<div class="container-fluid container-md mt-5">
-    <div class="sub-title text-start content-frame">
-        <a routerLink="/original" fragment="{{characterName}}">
-            < Back
+<div class="container-fluid container-md mt-3">
+    <div class="sub-title text-start top-content-frame d-flex">
+        <a routerLink="/original" fragment="{{characterName}}" class="d-flex align-items-center me-auto">
+          <span class="material-symbols-rounded">
+            arrow_back_ios
+            </span> Back
         </a>
     </div>
     <div>
-        <app-reflection-font [text]="'Original Characters'" [fontClass]="'mx-auto'"></app-reflection-font>
+        <app-reflection-font [text]="characterData?.title | translate" [fontClass]="'mx-auto sub-title'"></app-reflection-font>
     </div>
 </div>

@@ -1,37 +1,54 @@
 @import "bootstrap-mixin";
 
 .units {
-    width: max-content;
-    user-select: none;
-    pointer-events: none;
-    padding: 0 10px;
-  }
-  /* original design */
-  .units > * {
-    font: bolder 2rem/3rem "EB Garamond";
-    background-image: url("/assets/images/text-bg.jpg?v=2");
-    background-clip: text;
-    color: transparent;
-    overflow: hidden;
-    background-color: white;
+  width: max-content;
+  user-select: none;
+  pointer-events: none;
+  padding: 0 10px;
+}
 
-    @include media-breakpoint-up(md) {
-      font: bolder 4rem/4rem "EB Garamond";
-    }
-    @include media-breakpoint-up(lg) {
-      font: bolder 5rem/5rem "EB Garamond";
-    }
-  }
-  .units.sub-title > * {
-    background-image: url("/assets/images/text-bg-sub-title.jpg?v=3");
-    font: bolder 2rem/2rem "EB Garamond";
+/* original design */
+.units>* {
+  font-family: "CokieCrisp";
+  font-weight: bolder;
+  font-size: 2rem;
+  line-height: 3rem;
+  background-image: url("/assets/images/bg-text-pink.png?v=0"),
+  url("/assets/images/text-bg-blue.png?v=8");
+  background-position: left top, left bottom;
+  background-repeat: repeat-x, repeat-x;
+  background-size: auto 52vh, auto 48vh;
+  background-attachment: fixed;
+  background-clip: text;
+  color: transparent;
+  overflow: hidden;
+  background-color: white;
 
-    @include media-breakpoint-up(md) {
-      font: bolder 3rem/3rem "EB Garamond";
-    }
+  @include media-breakpoint-up(md) {
+    font-size: 4rem;
+    line-height: 5rem;
   }
-  /* reflections */
-  .units > :last-child {
-    transform: rotatex(180deg) translatey(2px);
-    mask-image: linear-gradient(transparent 50%, white 90%);
+
+  @include media-breakpoint-up(lg) {
+    font-size: 5rem;
+    line-height: 6rem;
   }
+}
+
+.units.sub-title>* {
+  font-size: 2rem;
+  line-height: 3rem;
+
+  @include media-breakpoint-up(md) {
+    font-size: 3rem;
+    line-height: 4rem;
+  }
+}
+
+/* reflections */
+.units> :last-child {
+  transform: rotatex(180deg) translatey(2px);
+  mask-image: linear-gradient(transparent 50%, white 90%);
+  // background-position: left bottom, left top;
+  // background-size: auto 48vh, auto 52vh;
+}

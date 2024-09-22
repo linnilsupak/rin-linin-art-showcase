@@ -23,6 +23,7 @@ export class AppComponent implements AfterViewInit {
 
   topOfThePage = true;
   isServer = false;
+  scrollWidth = 0;
   constructor(private router: Router, @Inject(PLATFORM_ID) platformId: Object,
     private scrollPositionService: ScrollPositionService) {
     this.isServer = isPlatformServer(platformId);
@@ -37,6 +38,8 @@ export class AppComponent implements AfterViewInit {
         if (resetScrollZero) {
           this.scrollPositionService.setLoading(false);
           this.scrollPositionService.setScrollHeight(Math.abs(this.scrollableDiv.nativeElement.scrollHeight - this.scrollableDiv.nativeElement.clientHeight));
+          if (this.scrollableDiv) this.scrollWidth = this.scrollableDiv.nativeElement.offsetWidth - this.scrollableDiv.nativeElement.scrollWidth;
+          if (this.scrollWidth < 0 ) this.scrollWidth = 0;
         }
         return resetScrollZero;
       }),

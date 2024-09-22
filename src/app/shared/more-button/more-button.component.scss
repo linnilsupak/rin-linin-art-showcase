@@ -8,6 +8,12 @@
     cursor: pointer;
     transition: all 0.2s ease;
 
+    .font-style {
+      font-family: "CokieCrisp";
+      background-image: url("/assets/images/text-bg-sub-title.jpg?v=3");
+      background-clip: text;
+      color: transparent;
+    }
 
     &:hover {
         transform: translate3d(0.08em, 0.08em, 0.01em);
