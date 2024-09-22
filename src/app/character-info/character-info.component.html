@@ -1,6 +1,6 @@
-<div class="container-fluid container-md mt-3">
-    <div class="sub-title text-start top-content-frame d-flex">
-        <a routerLink="/original" fragment="{{characterName}}" class="d-flex align-items-center me-auto">
+<div class="container-fluid container-md mt-4">
+    <div class="sub-title top-content-frame d-flex">
+        <a routerLink="/original" fragment="{{characterName}}" class="d-flex align-items-center ms-auto ms-md-4 me-auto">
           <span class="material-symbols-rounded">
             arrow_back_ios
             </span> Back
@@ -8,5 +8,22 @@
     </div>
     <div>
         <app-reflection-font [text]="characterData?.title | translate" [fontClass]="'mx-auto sub-title'"></app-reflection-font>
+    </div>
+    <div class="row">
+      <div class="col-12 col-md-2 d-flex flex-column mb-3 mb-md-0">
+        <div class="black-frame circle small ms-auto me-suto me-md-2">
+          <img [src]="characterData.imageUrl">
+        </div>
+      </div>
+      <div class="col-12 col-md-10 text-start">
+        <div class="description-frame px-5">
+          <div class="section-topic mb-2 mb-md-4">
+            {{ characterData?.title | translate}}
+          </div>
+          <div class="section-content mb-4">
+            {{characterData?.description | translate}}
+          </div>
+        </div>
+      </div>
     </div>
 </div>

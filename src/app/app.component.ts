@@ -1,6 +1,6 @@
 import { isPlatformServer } from '@angular/common';
-import { AfterViewInit, Component, ElementRef, Inject, PLATFORM_ID, ViewChild } from '@angular/core';
-import { NavigationEnd, Router, RouterOutlet } from '@angular/router';
+import { AfterViewInit, Component, ElementRef, inject, Inject, PLATFORM_ID, ViewChild } from '@angular/core';
+import { ActivatedRoute, NavigationEnd, Router, RouterOutlet } from '@angular/router';
 import { filter, pairwise, startWith, switchMap, tap } from 'rxjs';
 import { mainConfig } from './core/config/main.config';
 import { ScrollPositionService } from './core/service/scroll-position.service';
@@ -20,8 +20,9 @@ import { StarrySkyComponent } from "./starry-sky/starry-sky.component";
 })
 export class AppComponent implements AfterViewInit {
   @ViewChild('content') scrollableDiv: ElementRef;
+  private activatedRoute = inject(ActivatedRoute);
 
-  topOfThePage = true;
+  minimizeFlag = true;
   isServer = false;
   scrollWidth = 0;
   constructor(private router: Router, @Inject(PLATFORM_ID) platformId: Object,
@@ -40,21 +41,34 @@ export class AppComponent implements AfterViewInit {
           this.scrollPositionService.setScrollHeight(Math.abs(this.scrollableDiv.nativeElement.scrollHeight - this.scrollableDiv.nativeElement.clientHeight));
           if (this.scrollableDiv) this.scrollWidth = this.scrollableDiv.nativeElement.offsetWidth - this.scrollableDiv.nativeElement.scrollWidth;
           if (this.scrollWidth < 0 ) this.scrollWidth = 0;
+          this.resetFlagPosition();
         }
         return resetScrollZero;
       }),
       switchMap(() => {
         (this.scrollableDiv.nativeElement as HTMLDivElement).scrollTo(0, 0);
         return this.scrollPositionService.scrollPosition$.pipe(
-          filter(p => p === 0)
+          filter(p => p === 0),
         );
       })
     ).subscribe((p) => {
       this.scrollPositionService.setLoading(false);
     });
     this.scrollPositionService.scrollPosition$.subscribe(scrollTop => {
-      this.topOfThePage = (scrollTop === 0);
-    })
+      if (this.activatedRoute.snapshot.firstChild?.data?.minimizeFlag) {
+        this.minimizeFlag = false;
+      } else{
+        this.minimizeFlag = (scrollTop === 0);
+      }
+    });
+  }
+
+  resetFlagPosition() {
+    if (this.activatedRoute.snapshot.firstChild?.data?.minimizeFlag) {
+      this.minimizeFlag = false;
+    } else {
+      this.minimizeFlag = true;
+    }
   }
 
   ngAfterViewInit(): void {

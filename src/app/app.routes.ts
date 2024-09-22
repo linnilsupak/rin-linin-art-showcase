@@ -21,6 +21,9 @@ export const routes: Routes = [
   {
     path: 'character-info/:characterName',
     title: 'Character info',
+    data: {
+      minimizeFlag: true
+    },
     loadComponent: () => import('./character-info/character-info.component').then(c => c.CharacterInfoComponent)
   },
   {

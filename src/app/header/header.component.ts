@@ -12,7 +12,7 @@ import { TextRollinEntranceComponent } from "../shared/text-rollin-entrance/text
   styleUrl: './header.component.scss'
 })
 export class HeaderComponent implements AfterViewInit {
-  @Input() topOfThePage: boolean;
+  @Input() minimizeFlag: boolean;
   openMenu = false;
 
 

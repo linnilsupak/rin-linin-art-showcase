@@ -24,10 +24,9 @@ export class CharacterInfoComponent implements OnInit {
     this.route.paramMap.subscribe(params => {
       this.characterName = params.get('characterName');
       let notFound = true;
-      console.log('characterName', params.get('characterName'))
       if (this.characterName) {
         const character = characterInfo[this.characterName];
-        if (character?.moreInfo) {
+        if (character) {
           this.characterData = character;
           this.titleService.setTitle(this.translateService.instant(character.title) + ': ' + this.translateService.instant('TITLE.CHARACTER_INFO'));
           notFound = false;

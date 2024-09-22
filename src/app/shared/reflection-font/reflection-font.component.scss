@@ -16,7 +16,7 @@
   background-image: url("/assets/images/bg-text-pink.png?v=0"),
   url("/assets/images/text-bg-blue.png?v=8");
   background-position: left top, left bottom;
-  background-repeat: repeat-x, repeat-x;
+  background-repeat: repeat-x, repeat;
   background-size: auto 52vh, auto 48vh;
   background-attachment: fixed;
   background-clip: text;
@@ -34,6 +34,14 @@
     line-height: 6rem;
   }
 }
+
+// .units.blue>* {
+//   background-image: url("/assets/images/text-bg-blue.png?v=8");
+//   background-position: auto;
+//   background-repeat: repeat;
+//   background-size: auto;
+//   background-attachment:scroll;
+// }
 
 .units.sub-title>* {
   font-size: 2rem;
