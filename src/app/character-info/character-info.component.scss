@@ -29,3 +29,25 @@
 .description-frame {
   height: 100%;
 }
+
+.row-width-1000 {
+  max-width: 1000px;
+}
+
+
+.mini-frame-300 {
+  width: fit-content;
+  max-width: 100%;
+  @include media-breakpoint-up(lg) {
+     width: 300px;
+  }
+}
+
+
+.mini-frame-500 {
+  width: fit-content;
+  max-width: 100%;
+  @include media-breakpoint-up(lg) {
+     width: 500px;
+  }
+}
