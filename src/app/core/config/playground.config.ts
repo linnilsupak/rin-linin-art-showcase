@@ -68,8 +68,8 @@ export const playgroundGalleryConfig: GalleryRooms = {
               description: 'ภาพที่รินลองลงสีแบบเปรอะเปื้อน สไตล์ฝันๆลงบนกระดาษสีน้ำแผ่นเรียบ'
             },
             previewPic: {
-              width: '380px',
-              height: '276px'
+              width: '266px',
+              height: '192px'
             }
           },
           {
@@ -271,8 +271,8 @@ export const playgroundGalleryConfig: GalleryRooms = {
               description: ''
             },
             previewPic: {
-              width: '386px',
-              height: '283px'
+              width: '266px',
+              height: '195px'
             }
           },
           {
