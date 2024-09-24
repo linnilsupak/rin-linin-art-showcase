@@ -19,12 +19,11 @@ export const routes: Routes = [
     loadComponent: () => import('./original/original.component').then(c => c.OriginalComponent)
   },
   {
-    path: 'character-info/:characterName',
-    title: 'Character info',
+    path: 'character-info',
     data: {
       minimizeFlag: true
     },
-    loadComponent: () => import('./character-info/character-info.component').then(c => c.CharacterInfoComponent)
+    loadChildren: () => import('./character-info/character-info.routes').then(c => c.characterInfoRoutes)
   },
   {
     path: 'home',

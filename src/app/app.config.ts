@@ -1,22 +1,18 @@
 import { ApplicationConfig, importProvidersFrom } from '@angular/core';
-import { InMemoryScrollingFeature, InMemoryScrollingOptions, provideRouter, withInMemoryScrolling } from '@angular/router';
+import { PreloadAllModules, provideRouter, withDebugTracing, withPreloading } from '@angular/router';
 
-import { routes } from './app.routes';
+import { HttpClient, provideHttpClient, withFetch } from '@angular/common/http';
 import { provideClientHydration, withI18nSupport } from '@angular/platform-browser';
 import { provideAnimationsAsync } from '@angular/platform-browser/animations/async';
 import { TranslateLoader, TranslateModule } from '@ngx-translate/core';
-import { HttpClient, provideHttpClient, withFetch } from '@angular/common/http';
+import { routes } from './app.routes';
 import { HttpLoaderFactory } from './core/http-loader';
 
-const scrollConfig: InMemoryScrollingOptions = {
-  scrollPositionRestoration: 'top',
-  anchorScrolling: 'enabled',
-};
-const inMemoryScrollingFeature: InMemoryScrollingFeature =
-  withInMemoryScrolling(scrollConfig);
-
 export const appConfig: ApplicationConfig = {
-  providers: [provideRouter(routes, inMemoryScrollingFeature),
+  providers: [provideRouter(routes,
+    withPreloading(PreloadAllModules),
+    // withDebugTracing(),
+  ),
     provideHttpClient(withFetch()),
     provideClientHydration(withI18nSupport()),
     importProvidersFrom(
