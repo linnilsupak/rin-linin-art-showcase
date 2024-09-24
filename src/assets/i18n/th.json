@@ -39,6 +39,13 @@
       "DESCRIPTION": "She is a cat burger doll. Her legs are too short to walk on her own."
     }
   },
+  "NOT_FOUND": {
+    "404": "404",
+    "NOT_FOUND": "Not found",
+    "CONTENT": "This is not the web page you're looking for.",
+    "GO_HOME": "Come back home",
+    "PIC_TEXT": "No where place"
+  },
   "CHARACTER_INFO": {
     "MY_ART": "My Art",
     "FAN_ART": "Fan Ar/ Art Trade"

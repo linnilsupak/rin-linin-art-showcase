@@ -1,3 +1,29 @@
-<div class="center-content">
-  <p>page-not-found works!</p>
+<div class="row">
+  <div class="col-12 col-md-6 d-flex pt-5">
+    <div class="description-frame mx-2 mt-auto py-3 d-flex flex-column">
+      <div class="title mt-2">
+        {{'NOT_FOUND.404' | translate}}
+      </div>
+      <div class="sub-title mb-4">
+        {{'NOT_FOUND.NOT_FOUND' | translate}}
+      </div>
+      <div class="content mb-4">
+        {{'NOT_FOUND.CONTENT' | translate}}
+      </div>
+      <div class="mt-auto mb-2">
+        <app-more-button routerLink="/home">
+          {{'NOT_FOUND.GO_HOME' | translate}}
+        </app-more-button>
+      </div>
+    </div>
+  </div>
+  <div class="col-12 col-md-6">
+    <div class="d-flex flex-column">
+      <app-reflection-font [text]="'NOT_FOUND.PIC_TEXT' | translate" fontClass="sub-title mx-auto"></app-reflection-font>
+      <div class="text-center nowhere-pic">
+        <img src="/assets/images/404-not-found.png?v=4" srcset="{{ '/assets/images/404-not-found.png?v=4' | imageSrcset}}" alt="not found">
+      </div>
+    </div>
+  </div>
 </div>
+
