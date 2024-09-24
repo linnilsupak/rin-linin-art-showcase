@@ -32,6 +32,9 @@ export const routes: Routes = [
   },
   {
     path: 'not-found',
+    data: {
+      minimizeFlag: true
+    },
     component: PageNotFoundComponent
   },
   {

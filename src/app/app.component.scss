@@ -1,13 +1,13 @@
+@use "variables" as var;
 @import "bootstrap-mixin";
 
-$header-height: 68px;
 
 .header {
-  height: $header-height;
+  height: var.$header-height;
 }
 
 .content {
-  height: calc(100vh - ($header-height));
+  height: calc(100vh - #{var.$header-height});
   overflow-y: auto;
   min-width: 100%;
   max-width: 100%;

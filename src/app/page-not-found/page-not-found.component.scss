@@ -1,0 +1,9 @@
+@use "variables" as var;
+
+:host {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: calc(100% - #{var.$header-height});
+  width: 100%;
+}
