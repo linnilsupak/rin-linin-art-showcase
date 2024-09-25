@@ -1,6 +1,5 @@
 <div class="cover">
 </div>
-<!-- <div class="border-wall-paper"></div> -->
 <div class="container-fluid container-md mt-5">
   <div>
     <app-reflection-font [text]="'Original Characters'" [fontClass]="'mx-auto'"></app-reflection-font>
@@ -12,29 +11,38 @@
   </div>
   <div class="mt-3">
     <div class="mx-auto width-fit-content">
-      <app-reflection-font [text]="'Linin Story'" [fontClass]="'sub-title'"></app-reflection-font>
+      <app-reflection-font [text]="'ORIGINAL.MY_PERSONA' | translate" [fontClass]="'sub-title'"></app-reflection-font>
+    </div>
+  </div>
+  <div class="d-flex align-items-center justify-content-center flex-column flex-md-row mb-5 my-persona">
+    <app-character-icon link="/character-info/rin-linin" img="/assets/images/original/rin_linin_persona_preview.png?v=2"
+      hoverDescription="My persona" label="Rin Linin"></app-character-icon>
+  </div>
+  <div class="mt-5">
+    <div class="mx-auto width-fit-content" id="lininStory">
+      <app-reflection-font [text]="'ORIGINAL.LININ_STORY' | translate" [fontClass]="'sub-title'"></app-reflection-font>
     </div>
   </div>
   <div class="section-content section-color mt-1 mb-5">
     {{'ORIGINAL.DESCRIPTION' | translate}}
   </div>
   <div class="d-flex align-items-center justify-content-center flex-column flex-md-row">
-    <app-character-icon link="/original" fragment="linin" img="/assets/images/original/rin_linin_ori.jpg"
+    <app-character-icon link="/character-info/linin" img="/assets/images/original/rin_linin_ori.jpg"
       hoverDescription="Protagonist" label="Linin"></app-character-icon>
-    <app-character-icon link="/original" fragment="collector"
+    <app-character-icon link="/character-info/collector"
       img="/assets/images/original/the_collector_ori_rin_linin.jpg" hoverDescription="Main cast"
       label="The collector"></app-character-icon>
-    <app-character-icon link="/original" fragment="witch" img="/assets/images/original/the_witch_ori_rin_linin.jpg"
+    <app-character-icon link="/character-info/witch" img="/assets/images/original/the_witch_ori_rin_linin.jpg"
       hoverDescription="Main cast" label="The witch"></app-character-icon>
   </div>
   <div class="d-flex align-items-center justify-content-center flex-column flex-md-row">
-    <app-character-icon link="/original" fragment="francois" img="/assets/images/original/francois_ori_rin_linin.jpg"
+    <app-character-icon link="/character-info/francois" img="/assets/images/original/francois_ori_rin_linin.jpg"
       hoverDescription="Dolka cast" label="Francois"></app-character-icon>
-    <app-character-icon link="/original" fragment="elysia" img="/assets/images/original/elysia_ori_rin_linin.jpg"
+    <app-character-icon link="/character-info/elysia" img="/assets/images/original/elysia_ori_rin_linin.jpg"
       hoverDescription="Dolka cast" label="Elysia"></app-character-icon>
   </div>
   <div class="d-flex align-items-center justify-content-center flex-column flex-md-row">
-    <app-character-icon link="/original" fragment="mimi" img="/assets/images/original/mimi_ori_rin_linin.png"
+    <app-character-icon link="/character-info/mimi" img="/assets/images/original/mimi_ori_rin_linin.png"
       hoverDescription="Dolka cast" label="Mimi"></app-character-icon>
   </div>
   <div class="blank-space">&nbsp;</div>

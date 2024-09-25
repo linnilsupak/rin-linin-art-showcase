@@ -21,7 +21,7 @@ export class OriginalComponent implements AfterViewInit {
   private router = inject(Router);
   private scrollPositionService = inject(ScrollPositionService);
   private subscription = new Subscription();
-  characterInfo = Object.keys(characterInfo).map(key => { 
+  characterInfo = Object.keys(characterInfo).map(key => {
     return {name: key, ...characterInfo[key]};
    }) ;
   fragment;

@@ -55,6 +55,7 @@ export class ScrollPositionService {
 
   setScrollToElementById(id: string, minusScroll = 0, option = { eventEmit: true}): number {
     const element = document.getElementById(id);
+    console.log('element', element)
     if (element) {
       const yOffset = - mainConfig.preserveHeight;
       const y = (element.getBoundingClientRect().top + this.scrollPosition.value + yOffset) - minusScroll;
