@@ -1,0 +1,16 @@
+@import "bootstrap-mixin";
+@import"picture-frame";
+
+
+.row-width-1000 {
+  max-width: 1000px;
+}
+
+
+.mini-frame-300 {
+  width: fit-content;
+  max-width: 100%;
+  @include media-breakpoint-up(lg) {
+     width: 300px;
+  }
+}
