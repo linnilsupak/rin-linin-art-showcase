@@ -6,6 +6,7 @@ import { WitchInfoComponent } from './witch-info/witch-info.component';
 import { FrancoisInfoComponent } from './francois-info/francois-info.component';
 import { ElysiaInfoComponent } from './elysia-info/elysia-info.component';
 import { MimiInfoComponent } from './mimi-info/mimi-info.component';
+import { RinLininInfoComponent } from './rin-linin-info/rin-linin-info.component';
 
 export const characterInfoRoutes: Routes = [
   {
@@ -41,6 +42,11 @@ export const characterInfoRoutes: Routes = [
         path: 'mimi',
         title: 'Mimi: Character info',
         component: MimiInfoComponent
+      },
+      {
+        path: 'rin-linin',
+        title: 'Rin Linin: Character info',
+        component: RinLininInfoComponent
       }
     ]
   }
