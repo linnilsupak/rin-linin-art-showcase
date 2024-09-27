@@ -25,7 +25,7 @@ export const characterInfo = {
         description: 'ORIGINAL.ELYSIA.DESCRIPTION'
     },
     mimi: {
-        imageUrl: '/assets/images/original/mimi_ori_rin_linin.png',
+        imageUrl: '/assets/images/original/mimi_ori_rin_linin.gif',
         title: 'ORIGINAL.MIMI.TITLE',
         description: 'ORIGINAL.MIMI.DESCRIPTION'
     },
