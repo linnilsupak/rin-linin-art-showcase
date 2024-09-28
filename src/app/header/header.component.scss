@@ -172,11 +172,11 @@
   overflow: hidden;
   transition: all .6s ease-out;
   &.open {
-    height: 220px;
+    height: 254px;
   }
   li {
     cursor: pointer;
-    font-size: 18px;
+    font-size: 20px;
     color: var.$light-violet;
 
     &:hover {
