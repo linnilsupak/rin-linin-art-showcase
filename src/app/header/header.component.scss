@@ -39,12 +39,23 @@
     text-decoration: none !important;
     color: var.$light-violet;
 
-    &:hover {
+    &.active {
       color: var.$violet;
+      font-weight: 500;
+      
+      .menu-item::before {
+        content: '✧ ';
+      }
+    }
+
+    &:hover {
+      color: var.$blue;
     }
 
     .menu-item {
       font-size: 24px;
+      display: flex;
+      align-items: center;
     }
   }
 }
@@ -145,4 +156,42 @@
   justify-content: center;
   align-items: center;
   height: fit-content;
+}
+
+.collaspe-icon {
+  transform: translateY(6px);
+  cursor: pointer;
+  transition: all .2s ease;
+  &.expand {
+    transform: rotate(180deg) translateY(-6px);
+  }
+}
+
+.sub-menu {
+  height: 0px;
+  overflow: hidden;
+  transition: all .6s ease-out;
+  &.open {
+    height: 220px;
+  }
+  li {
+    cursor: pointer;
+    font-size: 18px;
+    color: var.$light-violet;
+
+    &:hover {
+      color: var.$blue;
+    }
+    &.active {
+      color: var.$violet;
+      font-weight: 500;
+      &::marker {
+        content: '✧ ';
+      }
+    }
+  }
+  li::marker {
+    content: '- ';
+    font-size: 1.2em;
+  }
 }

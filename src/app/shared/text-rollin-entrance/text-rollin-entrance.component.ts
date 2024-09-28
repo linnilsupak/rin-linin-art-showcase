@@ -1,4 +1,6 @@
-import { Component, Input } from '@angular/core';
+import { AfterViewInit, Component, ContentChild, ElementRef, inject, Input, Renderer2, TemplateRef, ViewChild } from '@angular/core';
+import { mainConfig } from '../../core/config/main.config';
+import { CommonModule } from '@angular/common';
 
 interface rotateText {
   alphabet: string;
@@ -8,11 +10,13 @@ interface rotateText {
 @Component({
   selector: 'app-text-rollin-entrance',
   standalone: true,
-  imports: [],
+  imports: [CommonModule],
   templateUrl: './text-rollin-entrance.component.html',
   styleUrl: './text-rollin-entrance.component.scss'
 })
-export class TextRollinEntranceComponent {
+export class TextRollinEntranceComponent implements AfterViewInit {
+  @ViewChild('lastItem') lastItem: ElementRef
+  @ViewChild('lastContent') lastContent: ElementRef;
   @Input()
   set text(val) {
     this._text = val;
@@ -27,6 +31,16 @@ export class TextRollinEntranceComponent {
     return this._text;
   }
   @Input() runAnimation = true;
+  @Input() lastItemPosition = 200;
+  private render = inject(Renderer2);
   splitText: rotateText[];
   _text: string;
+
+  ngAfterViewInit(): void {
+    setTimeout(() => {
+      if (this.lastContent) {
+        this.render.setStyle(this.lastContent.nativeElement, 'animation-delay', `${ (this.splitText.length/20)}s`)
+      }
+    }, mainConfig.timeoutAfterInit);
+  }
 }

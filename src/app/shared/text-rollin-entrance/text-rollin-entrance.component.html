@@ -3,3 +3,6 @@
     [style]="item.style">{{item.alphabet}}</span>
     <span class="invisible" #calWidth>{{item.alphabet}}</span>
 }
+<span #lastContent [class.roll-in]="runAnimation" class="original-roll-in" [style.left.px]="lastItemPosition">
+    <ng-content #lastItem></ng-content>
+</span>

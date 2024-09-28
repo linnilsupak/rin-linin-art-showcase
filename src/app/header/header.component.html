@@ -5,33 +5,51 @@
   </div>
 </a>
 <div class="top-header show-on-header">
-    <div class="border-wall-paper"></div>
-    <div class="inner-wallpaper d-flex">
-        <button class="menu-btn ms-auto me-3" (click)="openMenu=true">
-            <span class="material-symbols-rounded">
-              menu
-              </span>
-        </button>
-        <div class="bg-wallpaper"></div>
-    </div>
-    <div class="border-wall-paper"></div>
+  <div class="border-wall-paper"></div>
+  <div class="inner-wallpaper d-flex">
+    <button class="menu-btn ms-auto me-3" (click)="openMenu=true">
+      <span class="material-symbols-rounded">
+        menu
+      </span>
+    </button>
+    <div class="bg-wallpaper"></div>
+  </div>
+  <div class="border-wall-paper"></div>
 </div>
 <div class="over-header">
   <div class="menu" [class.open]="openMenu">
     <button class="menu-btn" (click)="openMenu=false">
       <span class="material-symbols-rounded">
         close
-        </span>
+      </span>
     </button>
-    <a routerLink="/original" (click)="openMenu=false">
-      <div class="menu-item py-3">
-        <app-text-rollin-entrance [text]="'Original Characters'" [runAnimation]="openMenu"></app-text-rollin-entrance>
+    <div>&nbsp;</div>
+    <a routerLink="/original" (click)="openMenu=false" routerLinkActive="active">
+      <div class="menu-item">
+        <app-text-rollin-entrance [text]="'Original Characters'" [runAnimation]="openMenu" [lastItemPosition]="202">
+          <i class="material-symbols-rounded ms-1 collaspe-icon" [class.expand]="characterInfoActive"
+          (click)="$event.preventDefault();$event.stopPropagation();toggleCharacterInfo();">
+          stat_1
+        </i>
+        </app-text-rollin-entrance>
       </div>
     </a>
-    <a routerLink="/playground" (click)="openMenu=false">
-      <div class="menu-item py-3">
+    <div class="sub-menu" [class.open]="characterInfoActive">
+      <ul>
+        @for (item of characterInfoList; track item.name) {
+        <li [routerLink]="'/character-info/' + item.name" routerLinkActive="active"
+          (isActiveChange)="checkIfCharacterInfoActive($event)">
+          {{ item.title | translate}}
+        </li>
+        }
+      </ul>
+    </div>
+    <div>&nbsp;</div>
+    <a routerLink="/playground" (click)="openMenu=false" routerLinkActive="active">
+      <div class="menu-item">
         <app-text-rollin-entrance [text]="'Playground'" [runAnimation]="openMenu"></app-text-rollin-entrance>
       </div>
     </a>
+    <div>&nbsp;</div>
   </div>
 </div>

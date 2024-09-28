@@ -1,9 +1,10 @@
 import { Component, inject, OnInit } from '@angular/core';
 import { ReflectionFontComponent } from "../shared/reflection-font/reflection-font.component";
-import { ActivatedRoute, Router, RouterLink, RouterOutlet } from '@angular/router';
+import { ActivatedRoute, NavigationEnd, Router, RouterLink, RouterOutlet } from '@angular/router';
 import { characterInfo } from '../core/config/character-info.config';
 import { TranslateModule, TranslateService } from '@ngx-translate/core';
 import { Title } from '@angular/platform-browser';
+import { combineLatest, filter, startWith } from 'rxjs';
 
 @Component({
   selector: 'app-character-info',
@@ -21,22 +22,29 @@ export class CharacterInfoComponent implements OnInit {
   characterData;
 
   ngOnInit(): void {
-    this.route.url.subscribe(() => {
-      let notFound = true;
-      if (this.route.snapshot.firstChild.url.length > 0) {
-        this.characterName = this.route.snapshot.firstChild.url[0].path;
-        if (this.characterName) {
-          const character = characterInfo[this.characterName];
-          if (character) {
-            this.characterData = character;
-            this.titleService.setTitle(this.translateService.instant(character.title) + ': ' + this.translateService.instant('TITLE.CHARACTER_INFO'));
-            notFound = false;
-          }
+    this.findCharacter();
+    this.router.events.pipe(
+      filter(event => event instanceof NavigationEnd))
+      .subscribe(() => {
+        this.findCharacter();
+      })
+  }
+
+  findCharacter() {
+    let notFound = true;
+    if (this.route.snapshot.firstChild.url.length > 0) {
+      this.characterName = this.route.snapshot.firstChild.url[0].path;
+      if (this.characterName) {
+        const character = characterInfo[this.characterName];
+        if (character) {
+          this.characterData = character;
+          this.titleService.setTitle(this.translateService.instant(character.title) + ': ' + this.translateService.instant('TITLE.CHARACTER_INFO'));
+          notFound = false;
         }
       }
-      if (notFound) {
-        this.router.navigateByUrl('/not-found');
-      }
-    })
+    }
+    if (notFound) {
+      this.router.navigateByUrl('/not-found');
+    }
   }
 }
