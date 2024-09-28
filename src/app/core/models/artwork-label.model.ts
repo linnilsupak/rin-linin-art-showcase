@@ -3,11 +3,12 @@ export interface ArtworkLabel {
   frameStyle: string,
   content: {
     title: string,
-    title2?: string, subTitle: string,
+    title2?: string,
+    subTitle: string,
     description: string
   },
   isRecTemplate?:boolean,
-  previewPic: {
+  previewPic?: {
     width?: string,
     height?: string
   }
