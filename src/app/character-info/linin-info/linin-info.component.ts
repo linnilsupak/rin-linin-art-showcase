@@ -2,11 +2,12 @@ import { Component, inject } from '@angular/core';
 import { TranslateModule } from '@ngx-translate/core';
 import { MatDialog } from '@angular/material/dialog';
 import { openArtWorkLabel } from '../../core/utilities/open-art-work-label.util';
+import { ImageSrcsetPipe } from "../../core/pipe/image-srcset.pipe";
 
 @Component({
   selector: 'app-linin-info',
   standalone: true,
-  imports: [TranslateModule],
+  imports: [TranslateModule, ImageSrcsetPipe],
   templateUrl: './linin-info.component.html',
   styleUrl: './linin-info.component.scss'
 })
@@ -16,7 +17,7 @@ export class LininInfoComponent {
   openLininLittleNeko() {
     const nekoArtLabel = {
       picUrl: '/assets/images/original/linin/linin_on_swing.png',
-      frameStyle: 'white-double-frame',
+      frameStyle: 'white-double-frame small',
       content: {
         title: 'Linin: design & color by Rin Linin',
         title2: 'line art by IamAlittleNeko',

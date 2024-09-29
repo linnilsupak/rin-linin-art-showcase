@@ -3,14 +3,13 @@
 
   &.cdk-overlay-pane.mat-mdc-dialog-panel {
     max-width: fit-content!important;
-    min-height: 75vh!important;
+    min-height: 50vh!important;
     height: fit-content!important;
     max-height: 100vh!important;
   }
 
   .mat-mdc-dialog-container {
     width: fit-content!important;
-    min-height: 75vh!important;
     height: fit-content!important;
   }
 

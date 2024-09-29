@@ -2,20 +2,50 @@ import { Component, inject } from '@angular/core';
 import { TranslateModule } from '@ngx-translate/core';
 import { openArtWorkLabel } from '../../core/utilities/open-art-work-label.util';
 import { MatDialog } from '@angular/material/dialog';
+import { ImageSrcsetPipe } from "../../core/pipe/image-srcset.pipe";
 
 @Component({
   selector: 'app-collector-info',
   standalone: true,
-  imports: [TranslateModule],
+  imports: [TranslateModule, ImageSrcsetPipe],
   templateUrl: './collector-info.component.html',
   styleUrl: './collector-info.component.scss'
 })
 export class CollectorInfoComponent {
   private matDialog = inject(MatDialog);
 
+  openCollectorDesign() {
+    const artLabel = {
+      picUrl: '/assets/images/original/collector/the_collector_design_ori_rin_linin.png?v=1',
+      frameStyle: 'black-frame',
+      content: {
+        title: 'The collector',
+        title2: 'Original design by Rin Linin',
+        subTitle: 'pencil',
+        description: ''
+      }
+    }
+    openArtWorkLabel(this.matDialog, artLabel)
+  }
+
+  openCollectorColorPic() {
+    const artLabel = {
+      picUrl: '/assets/images/original/collector/collector_gallery_ori_rin_linin.png?v=1',
+      frameStyle: 'white-frame',
+      content: {
+        title: 'The collector',
+        title2: 'Original design by Rin Linin',
+        subTitle: 'watercolor',
+        description: ''
+      },
+      isRecTemplate: true
+    }
+    openArtWorkLabel(this.matDialog, artLabel)
+  }
+
   openCollectorChocoladka() {
     const artLabel = {
-      picUrl: '/assets/images/original/collector/the_collector_cookie_chocoladka.jpeg',
+      picUrl: '/assets/images/original/collector/the_collector_cookie_chocoladka.png',
       frameStyle: 'black-frame',
       content: {
         title: 'The collector: draw by Cookie Chocoladka',
@@ -26,7 +56,7 @@ export class CollectorInfoComponent {
     }
     openArtWorkLabel(this.matDialog, artLabel)
   }
-  
+
   openCollectorOverLoadwork() {
     const artLabel = {
       picUrl: '/assets/images/original/collector/the_collector_overloadwork.png',
@@ -44,7 +74,7 @@ export class CollectorInfoComponent {
 
   openCollectorOverLoadwork2() {
     const artLabel = {
-      picUrl: '/assets/images/original/collector/the_collector_overloadwork2.png',
+      picUrl: '/assets/images/original/collector/the_collector_overloadwork2.png?v=1',
       frameStyle: 'white-frame',
       content: {
         title: 'The collector: draw by OverloadWork',

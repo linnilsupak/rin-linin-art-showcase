@@ -6,7 +6,19 @@
   {{'GLOBAL.DONT_LIST' | translate}}<br />
   {{'GLOBAL.DONT_LIST_SUB' | translate}}
 </div>
-<div class="blank-space">&nbsp;</div>
-<div class="section-topic section-color mb-5">
-  {{'CHARACTER_INFO.FAN_ART' | translate}}
+<div class="row">
+  <div class="col-12 col-md-8 mb-3 d-flex">
+    <div class="black-frame m-auto hover" (click)="openFrancoisDesign()">
+      <img src="/assets/images/original/francois/Francois_design_rin_linin.png" srcset="{{ '/assets/images/original/francois/Francois_design_rin_linin.png' | imageSrcset}}"/>
+    </div>
+  </div>
+  <div class="col-12 col-md-4 mb-3 d-flex" (click)="openFrancoisColorPic()">
+    <div class="white-double-frame small m-auto hover">
+      <img src="/assets/images/original/francois/Francois_color_ori_rin_linin.png" srcset="{{ '/assets/images/original/francois/Francois_color_ori_rin_linin.png' | imageSrcset}}"/>
+    </div>
+  </div>
 </div>
+<div class="blank-space">&nbsp;</div>
+<!-- <div class="section-topic section-color mb-5">
+  {{'CHARACTER_INFO.FAN_ART' | translate}}
+</div> -->

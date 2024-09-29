@@ -39,7 +39,11 @@ export class AppComponent implements AfterViewInit {
         if (resetScrollZero) {
           this.scrollPositionService.setLoading(false);
           this.scrollPositionService.setScrollHeight(Math.abs(this.scrollableDiv.nativeElement.scrollHeight - this.scrollableDiv.nativeElement.clientHeight));
-          if (this.scrollableDiv) this.scrollWidth = this.scrollableDiv.nativeElement.offsetWidth - this.scrollableDiv.nativeElement.scrollWidth;
+          if (this.scrollableDiv) {
+            setTimeout(() => {
+              this.scrollWidth = this.scrollableDiv.nativeElement.offsetWidth - this.scrollableDiv.nativeElement.scrollWidth;
+            }, mainConfig.timeoutAfterInit);
+          }
           if (this.scrollWidth < 0 ) this.scrollWidth = 0;
           this.resetFlagPosition();
         }
