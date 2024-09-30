@@ -37,7 +37,7 @@
     <div class="sub-menu" [class.open]="characterInfoActive">
       <ul>
         @for (item of characterInfoList; track item.name) {
-        <li [routerLink]="'/character-info/' + item.name" routerLinkActive="active"
+        <li [routerLink]="'/character-info/' + item.name" routerLinkActive="active" (click)="openMenu=false"
           (isActiveChange)="checkIfCharacterInfoActive($event)">
           {{ item.title | translate}}
         </li>

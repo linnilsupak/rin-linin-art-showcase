@@ -16,7 +16,7 @@ export class MimiInfoComponent {
 
   openMimiColorPic() {
     const artLabel = {
-      picUrl: '/assets/images/original/mimi/mimi_ori_rin_linin.png',
+      picUrl: '/assets/images/original/mimi/mimi_ori_rin_linin.png?v=1',
       frameStyle: 'black-frame',
       content: {
         title: 'Mimi',
@@ -72,7 +72,7 @@ export class MimiInfoComponent {
 
   openMimiStreetcatzzz() {
     const artLabel = {
-      picUrl: '/assets/images/original/mimi/mimi_streetcatzzz.png',
+      picUrl: '/assets/images/original/mimi/mimi_streetcatzzz.png?v=1',
       frameStyle: 'black-frame',
       content: {
         title: 'Mimi: draw by Streetcatzzz',
