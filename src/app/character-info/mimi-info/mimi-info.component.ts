@@ -35,7 +35,7 @@ export class MimiInfoComponent {
       content: {
         title: 'Mimi: draw by Peachiepeeps',
         title2: 'Original design by Rin Linin',
-        subTitle: 'CG',
+        subTitle: 'CG Animation',
         description: 'An attack I got from ArtFight 2024, I really like this animation!! It\'s so cute!!'
       }
     }

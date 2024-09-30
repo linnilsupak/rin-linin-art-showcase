@@ -42,7 +42,7 @@
     &.active {
       color: var.$violet;
       font-weight: 500;
-      
+
       .menu-item::before {
         content: '✧ ';
       }
@@ -172,7 +172,7 @@
   overflow: hidden;
   transition: all .6s ease-out;
   &.open {
-    height: 254px;
+    height: 264px;
   }
   li {
     cursor: pointer;

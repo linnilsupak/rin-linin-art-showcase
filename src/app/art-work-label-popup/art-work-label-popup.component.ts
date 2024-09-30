@@ -1,4 +1,4 @@
-import { Component, inject, model } from '@angular/core';
+import { Component, inject, model, OnInit } from '@angular/core';
 import {
   MAT_DIALOG_DATA,
   MatDialogRef
@@ -13,7 +13,7 @@ import { ImageSrcsetPipe } from "../core/pipe/image-srcset.pipe";
   templateUrl: './art-work-label-popup.component.html',
   styleUrl: './art-work-label-popup.component.scss'
 })
-export class ArtWorkLabelPopupComponent {
+export class ArtWorkLabelPopupComponent implements OnInit{
   readonly dialogRef = inject(MatDialogRef<ArtWorkLabelPopupComponent>);
   readonly data = inject<any>(MAT_DIALOG_DATA);
   readonly picUrl = model(this.data.picUrl);
@@ -23,6 +23,13 @@ export class ArtWorkLabelPopupComponent {
   readonly subTitle = model(this.data.content.subTitle);
   readonly description = model(this.data.content.description);
   readonly isRecTemplate = model(this.data.isRecTemplate);
+  noImageSrc = false;
+
+  ngOnInit(): void {
+    if (this.picUrl.toString().includes('.gif')) {
+      this.noImageSrc = true;
+    }
+  }
 
   closePopup() {
     this.dialogRef.close();
