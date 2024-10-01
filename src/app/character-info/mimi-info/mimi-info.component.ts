@@ -16,7 +16,7 @@ export class MimiInfoComponent {
 
   openMimiColorPic() {
     const artLabel = {
-      picUrl: '/assets/images/original/mimi/mimi_ori_rin_linin.png?v=1',
+      picUrl: '/assets/images/original/mimi/mimi_ori_rin_linin.png?v=10',
       frameStyle: 'black-frame',
       content: {
         title: 'Mimi',
