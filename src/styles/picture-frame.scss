@@ -6,14 +6,90 @@
   }
 }
 
+.mini-frame-200 {
+  width: fit-content;
+  max-width: 100%;
+
+  @include media-breakpoint-up(lg) {
+    width: 200px;
+  }
+}
+
+.mini-frame-300 {
+  width: fit-content;
+  max-width: 100%;
+
+  @include media-breakpoint-up(lg) {
+    width: 300px;
+  }
+}
+
+.mini-frame-500 {
+  width: fit-content;
+  max-width: 100%;
+
+  @include media-breakpoint-up(lg) {
+    width: 500px;
+  }
+}
+
+.mini-frame-200 {
+  font-size: 1.5rem !important;
+}
+
+.mini-frame-300 {
+  font-size: 2rem !important;
+}
+
+@mixin pic-default {
+  cursor: pointer;
+  position: relative;
+  container-name: hoverContainer;
+  transition: all 0.2s ease;
+  font-size: 3rem;
+}
+
+@mixin pic-hover {
+  transform: scale(1.05) !important;
+  filter: brightness(75%);
+}
+
+@mixin pic-hover-content {
+  content: 'Click me';
+  position: absolute;
+  color: white;
+  font-weight: 700;
+  z-index: 10;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-family: "CokieCrisp";
+  box-shadow: none;
+}
+
+.pic-hover:hover {
+  @include pic-default;
+  @include pic-hover;
+
+  &:before {
+    @include pic-hover-content;
+  }
+}
+
 .white-double-frame.hover,
 .black-frame.hover,
-.white-frame.hover, .hover {
-  cursor: pointer;
-  transition: all 0.2s ease;
+.white-frame.hover,
+.hover {
+  @include pic-default;
 
   &:hover {
-    transform: scale(0.95)!important;
+    img {
+      @include pic-hover;
+    }
+
+    &:before {
+      @include pic-hover-content;
+    }
   }
 }
 

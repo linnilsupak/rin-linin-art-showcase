@@ -49,7 +49,7 @@ export class MimiInfoComponent {
       content: {
         title: 'Mimi: draw by Ecobotanist',
         title2: 'Original design by Rin Linin',
-        subTitle: 'CG',
+        subTitle: 'Marker',
         description: 'An attack I got from ArtFight 2024, It just like in my design but with marker style.'
       }
     }

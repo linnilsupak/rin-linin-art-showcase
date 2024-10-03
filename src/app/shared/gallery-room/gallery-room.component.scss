@@ -1,22 +1,3 @@
 @use "slide-animation";
 @import "bootstrap-mixin";
 @import"picture-frame";
-
-.mini-frame-200 {
-    width: fit-content;;
-    max-width: 100%;
-
-    @include media-breakpoint-up(lg) {
-       width: 200px;
-    }
-}
-
-
-.mini-frame-300 {
-    width: fit-content;
-    max-width: 100%;
-    @include media-breakpoint-up(lg) {
-       width: 300px;
-    }
-}
-
