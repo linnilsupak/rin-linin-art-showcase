@@ -4,6 +4,7 @@ import { TranslateModule } from '@ngx-translate/core';
 import { GalleryRoomComponent } from "../../shared/gallery-room/gallery-room.component";
 import { ArtworkLabel } from '../../core/models/artwork-label.model';
 import { ImageSrcsetPipe } from "../../core/pipe/image-srcset.pipe";
+import { openArtWorkLabel } from '../../core/utilities/open-art-work-label.util';
 
 @Component({
   selector: 'app-rin-linin-info',
@@ -141,6 +142,49 @@ export class RinLininInfoComponent {
         height: 'inherit'
       }
     },
-  ]
+  ];
+
+
+  openRinLininChocolateProgram() {
+    const artLabel = {
+      picUrl: '/assets/images/original/rin-linin/rin_linin_chocolateProgram.png',
+      frameStyle: 'black-frame small circle',
+      content: {
+        title: 'Rin Linin: draw by Chocolate Program',
+        title2: 'Original design by Rin Linin',
+        subTitle: 'CG',
+        description: 'An attack I got from ArtFight 2024, I really like how rin linin appear with Thai traditional dress and chocolate program art style. It\'s go well with Rin Linin.'
+      }
+    };
+    openArtWorkLabel(this.matDialog, artLabel);
+  }
+
+  openRinLininPrypec() {
+    const artLabel = {
+      picUrl: '/assets/images/original/rin-linin/rin_linin_prypec.png',
+      frameStyle: 'black-frame',
+      content: {
+        title: 'Rin Linin: draw by Prypec',
+        title2: 'Original design by Rin Linin',
+        subTitle: 'CG',
+        description: 'An attack I got from ArtFight 2024, I really like how Prypec Art Style. Rin Linin with her default dress by her is so wonderful.'
+      }
+    };
+    openArtWorkLabel(this.matDialog, artLabel);
+  }
+
+  openRinLininChocoladka() {
+    const artLabel = {
+      picUrl: '/assets/images/original/rin-linin/rin_linin_cookie_chocoladka.png',
+      frameStyle: 'black-frame',
+      content: {
+        title: 'Rin Linin: Art trade by Cookie Chocoladka',
+        title2: 'color by Rin Linin, draw by Cookie Chocoladka',
+        subTitle: 'Color Pencil',
+        description: 'An Art trad I did with Cookie, I really like her picture and she look friendly so I just ask her to play and art trade with me. This picture is the result of that, I really like it.^^'
+      }
+    };
+    openArtWorkLabel(this.matDialog, artLabel);
+  }
 
 }
