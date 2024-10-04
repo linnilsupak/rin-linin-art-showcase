@@ -1,6 +1,13 @@
 @import "bootstrap-mixin";
 @import"picture-frame";
 
+
+.mini-frame-200, .mini-frame-300, .mini-frame-500 {
+  @include media-breakpoint-up(lg) {
+    width: inherit!important;
+  }
+}
+
 .close-btn {
   position: absolute;
   right: 9px;
