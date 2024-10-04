@@ -53,6 +53,7 @@ export class RinLininInfoComponent {
         subTitle: 'ภาพสีน้ำ',
         description: 'ลองแนวปกนิยายดู'
       },
+      isRecTemplate: true,
       previewPic: {
         width: 'inherit',
         height: 'inherit'
@@ -95,6 +96,7 @@ export class RinLininInfoComponent {
         subTitle: 'ภาพสีน้ำ',
         description: 'ไปเที่ยว Team Lab ที่ญี่ปุ่นมา ก็เลยอยากวาดฉากแบบนี้'
       },
+      isRecTemplate: true,
       previewPic: {
         width: 'inherit',
         height: 'inherit'
