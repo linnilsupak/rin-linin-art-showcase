@@ -50,7 +50,6 @@
 }
 
 @mixin pic-hover {
-  transform: scale(1.05) !important;
   filter: brightness(75%);
 }
 
