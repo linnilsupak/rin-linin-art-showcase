@@ -37,7 +37,8 @@ export class WitchInfoComponent {
         title2: 'Original design by Rin Linin',
         subTitle: 'pencil',
         description: ''
-      }
+      },
+      isRecTemplate: true
     }
     openArtWorkLabel(this.matDialog, artLabel)
   }
