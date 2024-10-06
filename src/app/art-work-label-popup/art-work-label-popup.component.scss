@@ -8,6 +8,13 @@
   }
 }
 
+.container-height {
+  height: 96vh;
+  @include media-breakpoint-up(lg) {
+    height: inherit;
+  }
+}
+
 .close-btn {
   position: absolute;
   right: 9px;

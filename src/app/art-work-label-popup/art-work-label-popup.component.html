@@ -1,5 +1,5 @@
-<div class="container-fluid mt-3">
-  <div class="row">
+<div class="container-fluid mt-3 d-flex d-md-block container-height">
+  <div class="row my-auto my-md-0">
     <div class="col-12 mb-2 mb-md-0 d-flex" [class.col-md]="!isRecTemplate()" [class.col-md-8]="isRecTemplate()">
       <div class="{{ frameStyle() }} mx-auto">
         <img src="{{ picUrl() }}" srcset="{{ noImageSrc ? '' : (picUrl() | imageSrcset)}}" class="show-real-width">

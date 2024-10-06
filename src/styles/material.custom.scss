@@ -3,9 +3,11 @@
 
   &.cdk-overlay-pane.mat-mdc-dialog-panel {
     max-width: fit-content!important;
-    min-height: 50vh!important;
+    min-height: 100vh;
     height: fit-content!important;
-    max-height: 100vh!important;
+    @include media-breakpoint-up(md) {
+      min-height: 50vh!important;
+    }
   }
 
   .mat-mdc-dialog-container {
