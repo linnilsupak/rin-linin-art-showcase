@@ -183,7 +183,7 @@ export class RinLininInfoComponent {
         title: 'Rin Linin: Art trade by Cookie Chocoladka',
         title2: 'color by Rin Linin, draw by Cookie Chocoladka',
         subTitle: 'Color Pencil',
-        description: 'An Art trad I did with Cookie, I really like her picture and she look friendly so I just ask her to play and art trade with me. This picture is the result of that, I really like it.^^'
+        description: 'An Art trade I did with Cookie, I really like her picture and she look friendly so I just ask her to play and art trade with me. This picture is the result of that, I really like it.^^'
       }
     };
     openArtWorkLabel(this.matDialog, artLabel);
