@@ -6,6 +6,9 @@
   user-select: none;
   pointer-events: none;
   padding: 0 10px;
+  :first-child {
+    background-size: auto 60%, auto 40%; // there is a bug on browser and transform item bg will not change
+  }
 }
 
 /* original design */
@@ -18,7 +21,7 @@
   url("/assets/images/text-bg-blue.png?v=8");
   background-position: left top, left bottom;
   background-repeat: repeat-x, repeat;
-  background-size: auto 54vh, auto 46vh;
+  // background-size: auto 60%, auto 40%;
   background-attachment: fixed;
   background-clip: text;
   color: transparent;
