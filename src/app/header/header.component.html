@@ -45,6 +45,12 @@
       </ul>
     </div>
     <div>&nbsp;</div>
+    <a routerLink="/tarots" (click)="openMenu=false" routerLinkActive="active">
+      <div class="menu-item">
+        <app-text-rollin-entrance [text]="'Tarots'" [runAnimation]="openMenu"></app-text-rollin-entrance>
+      </div>
+    </a>
+    <div>&nbsp;</div>
     <a routerLink="/playground" (click)="openMenu=false" routerLinkActive="active">
       <div class="menu-item">
         <app-text-rollin-entrance [text]="'Playground'" [runAnimation]="openMenu"></app-text-rollin-entrance>

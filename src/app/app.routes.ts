@@ -2,6 +2,7 @@ import { Routes } from '@angular/router';
 import { HomeComponent } from './home/home.component';
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
 import { ContactUsComponent } from './contact-us/contact-us.component';
+import { TarotsComponent } from './tarots/tarots.component';
 
 export const routes: Routes = [
   {
@@ -30,6 +31,11 @@ export const routes: Routes = [
     path: 'home',
     title: 'Home: Rin Linin',
     component: HomeComponent
+  },
+  {
+    path: 'tarots',
+    title: 'Tarost: Rin Linin',
+    component: TarotsComponent
   },
   {
     path: 'contact-me',

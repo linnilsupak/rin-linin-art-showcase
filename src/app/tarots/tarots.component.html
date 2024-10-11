@@ -1,0 +1,83 @@
+<div class="cover">
+</div>
+<!-- <div class="border-wall-paper"></div> -->
+<div class="container-fluid container-md mt-5">
+    <div>
+        <app-reflection-font [text]="'Tarot card meaning'" [fontClass]="'mx-auto'"></app-reflection-font>
+    </div>
+    <div class="caption mb-5 after-reflect">
+        {{'GLOBAL.WARNING' | translate}}<br />
+        {{'GLOBAL.DONT_LIST' | translate}}<br />
+        {{'GLOBAL.DONT_LIST_SUB' | translate}}
+    </div>
+    <div>
+        <div class="mx-auto width-fit-content">
+            <app-reflection-font [text]="'TAROT.MAJOR' | translate" [fontClass]="'sub-title'"></app-reflection-font>
+        </div>
+    </div>
+    <div class="row justify-content-center align-items-start">
+        @for (card of tarotConfig.major; track card.name) {
+        <div class="my-3 col-4 col-lg-2 d-flex flex-column justify-content-center">
+            <img src="{{ card.imageUrl || '/assets/images/tarot/coming_soon_card.webp'}}" alt="{{card.name}}" class="card mb-3 mx-auto"/>
+            <h5 class="card-title">{{ card.name }}</h5>
+        </div>
+        }
+    </div>
+    <div class="blank-space">&nbsp;</div>
+    <div>
+        <div class="mx-auto width-fit-content">
+            <app-reflection-font [text]="'TAROT.WANDS' | translate" [fontClass]="'sub-title'"></app-reflection-font>
+        </div>
+    </div>
+    <div class="row justify-content-center align-items-start">
+        @for (card of tarotConfig.wands; track card.name) {
+        <div class="my-3 col-4 col-lg-2 d-flex flex-column justify-content-center">
+            <img src="{{ card.imageUrl || '/assets/images/tarot/coming_soon_card.webp'}}" alt="{{card.name}}" class="card mb-3 mx-auto"/>
+            <h5 class="card-title">{{ card.name }}</h5>
+        </div>
+        }
+    </div>
+    <div class="blank-space">&nbsp;</div>
+    <div>
+        <div class="mx-auto width-fit-content">
+            <app-reflection-font [text]="'TAROT.CUPS' | translate" [fontClass]="'sub-title'"></app-reflection-font>
+        </div>
+    </div>
+    <div class="row justify-content-center align-items-start">
+        @for (card of tarotConfig.cups; track card.name) {
+        <div class="my-3 col-4 col-lg-2 d-flex flex-column justify-content-center">
+            <img src="{{ card.imageUrl || '/assets/images/tarot/coming_soon_card.webp'}}" alt="{{card.name}}" class="card mb-3 mx-auto"/>
+            <h5 class="card-title">{{ card.name }}</h5>
+        </div>
+        }
+    </div>
+    <div class="blank-space">&nbsp;</div>
+    <div>
+        <div class="mx-auto width-fit-content">
+            <app-reflection-font [text]="'TAROT.SWORDS' | translate" [fontClass]="'sub-title'"></app-reflection-font>
+        </div>
+    </div>
+    <div class="row justify-content-center align-items-start">
+        @for (card of tarotConfig.swords; track card.name) {
+        <div class="my-3 col-4 col-lg-2 d-flex flex-column justify-content-center">
+            <img src="{{ card.imageUrl || '/assets/images/tarot/coming_soon_card.webp'}}" alt="{{card.name}}" class="card mb-3 mx-auto"/>
+            <h5 class="card-title">{{ card.name }}</h5>
+        </div>
+        }
+    </div>
+    <div class="blank-space">&nbsp;</div>
+    <div>
+        <div class="mx-auto width-fit-content">
+            <app-reflection-font [text]="'TAROT.COINS' | translate" [fontClass]="'sub-title'"></app-reflection-font>
+        </div>
+    </div>
+    <div class="row justify-content-center align-items-start">
+        @for (card of tarotConfig.coins; track card.name) {
+        <div class="my-3 col-4 col-lg-2 d-flex flex-column justify-content-center">
+            <img src="{{ card.imageUrl || '/assets/images/tarot/coming_soon_card.webp'}}" alt="{{card.name}}" class="card mb-3 mx-auto"/>
+            <h5 class="card-title">{{ card.name }}</h5>
+        </div>
+        }
+    </div>
+    <div class="blank-space">&nbsp;</div>
+</div>

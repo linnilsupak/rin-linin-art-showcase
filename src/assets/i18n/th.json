@@ -1,7 +1,7 @@
 {
   "GLOBAL": {
     "WARNING": "นี่คือภาพมีลิขสิทธิ์",
-    "DONT_LIST": "ห้ามทำซ้ำ ดัดแปลง ฯลฯ ไม่ว่าในกรณีใด ๆ",
+    "DONT_LIST": "ห้ามทำซ้ำ ดัดแปลง ซื้อ ขาย ฯลฯ ไม่ว่าในกรณีใด ๆ",
     "DONT_LIST_SUB":"Please don't alter, trace, or re-post",
     "MORE": "More Art"
   },
@@ -55,5 +55,12 @@
   "CHARACTER_INFO": {
     "MY_ART": "My Art",
     "FAN_ART": "Fan Art/ Art Trade"
+  },
+  "TAROT": {
+    "MAJOR": "Major Arcana",
+    "WANDS": "The Wands",
+    "CUPS": "The Cups",
+    "SWORDS": "The Swords",
+    "COINS": "The Coins"
   }
 }
