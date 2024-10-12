@@ -3,5 +3,8 @@
 <div class="content" #content appSetMainScrollPosition>
     <app-scroll-up-button [scrollableDiv]="content" [scrollWidth]="scrollWidth"></app-scroll-up-button>
     <router-outlet></router-outlet>
+    <footer class="footer text-center">
+        {{ 'FOOTER.TEXT' | translate}}
+    </footer>
 </div>
 <app-starry-sky></app-starry-sky>

@@ -13,7 +13,6 @@
   max-width: 100%;
   margin-left: auto;
   margin-right: auto;
-  padding-bottom: 40px;
   text-align: center;
   position: absolute;
   left: 0;
@@ -24,4 +23,10 @@
   @include media-breakpoint-down(md) {
     overflow-x: hidden;
   }
+}
+
+.footer {
+  margin-top: 40px;
+  background-color: #00000078;
+  color: var.$white;
 }

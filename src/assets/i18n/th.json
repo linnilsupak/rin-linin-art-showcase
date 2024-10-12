@@ -77,5 +77,8 @@
     "WELCOME": "Welcome to my humble online home.^^",
     "CONTACT_ME": "Contact me",
     "PERSONA_ART": "My persona art"
+  },
+  "FOOTER": {
+    "TEXT": "Copyright © Rin Linin. All Rights Reserved."
   }
 }
