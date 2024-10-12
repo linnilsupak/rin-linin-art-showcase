@@ -36,19 +36,19 @@
     <app-character-icon link="/character-info/mimi" img="/assets/images/original/mimi_ori_rin_linin.gif?v=1"
       hoverDescription="Dolka cast" label="Mimi"></app-character-icon>
   </div>
-  <div class="mt-2">
-    <div class="mx-auto width-fit-content">
-      <app-reflection-font [text]="'✧✧✧✧✧✧✧✧✧✧✧✧✧✧✧✧'" [fontClass]="'sub-title'"></app-reflection-font>
-    </div>
-  </div>
-  <div class="d-flex align-items-center justify-content-center flex-column flex-md-row mb-5 my-persona">
-    <app-character-icon link="/character-info/rin-linin" img="/assets/images/original/rin_linin_persona_preview.png?v=5"
-      hoverDescription="My persona" label="Rin Linin"></app-character-icon>
-  </div>
+  <div class="blank-space">&nbsp;</div>
   @for (item of characterInfo;track item.name; let index=$index) {
-    <span id="{{item.name}}"></span>
-    <app-character-frame [imageUrl]="item.imageUrl" [characterName]="item.name"
-    [title]="item.title" [description]="item.description" [arrangement]="(index % 2) ? 'left': 'right'"></app-character-frame>
-    <div class="blank-space">&nbsp;</div>
+    @if (!item.name.includes('blank')) {
+      <span id="{{item.name}}"></span>
+      <app-character-frame [imageUrl]="item.imageUrl" [characterName]="item.name"
+      [title]="item.title" [description]="item.description" [arrangement]="item.arrangement || ((index % 2) ? 'left': 'right')"></app-character-frame>
+      <div class="blank-space">&nbsp;</div>
+    } @else {
+      <div class="mt-2">
+        <div class="mx-auto width-fit-content">
+          <app-reflection-font [text]="'✧✧✧✧✧✧✧✧✧✧✧✧✧✧✧✧'" [fontClass]="'sub-title'"></app-reflection-font>
+        </div>
+      </div>
+    }
   }
 </div>

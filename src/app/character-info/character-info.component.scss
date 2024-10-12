@@ -1,32 +1,9 @@
 @use 'variables' as var;
 @use 'character-frame' as char;
 @import "bootstrap-mixin";
-.top-content-frame {
-  text-decoration: none;
-  color: var.$white;
-  font-weight: 700;
-  font-size: 1.2rem;
-  transition: all 1s ease;
-  padding-left: 40px;
-
-  .material-symbols-rounded  {
-    font-size: 1rem;
-    margin-bottom: 2px;
-  }
-
-  a {
-    text-decoration: none;
-    color: var.$white;
-
-    &:hover {
-      color: var.$sky-blue;
-    }
-  }
-}
 
 .description-frame {
   height: 100%;
-
 }
 
 

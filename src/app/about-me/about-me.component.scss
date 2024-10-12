@@ -1,0 +1,23 @@
+@use "character-frame" as char;
+@import "bootstrap-mixin";
+@import "picture-frame";
+
+.description-frame {
+    max-width: 800px;
+    height: 100%;
+    width: 600px;
+  }
+.section-content {
+    max-width: 500px;
+}
+
+.sub-topic {
+    font-size: 18px;
+  }
+
+.social-media {
+  cursor: pointer;
+  &:hover {
+    filter: brightness(80%);
+  }
+}

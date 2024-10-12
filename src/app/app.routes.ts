@@ -3,6 +3,7 @@ import { HomeComponent } from './home/home.component';
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
 import { ContactUsComponent } from './contact-us/contact-us.component';
 import { TarotsComponent } from './tarots/tarots.component';
+import { AboutMeComponent } from './about-me/about-me.component';
 
 export const routes: Routes = [
   {
@@ -38,7 +39,13 @@ export const routes: Routes = [
     component: TarotsComponent
   },
   {
+    path: 'about-me',
+    title: 'About me: Rin Linin',
+    component: AboutMeComponent
+  },
+  {
     path: 'contact-me',
+    title: 'Contact me: Rin Linin',
     component: ContactUsComponent
   },
   {

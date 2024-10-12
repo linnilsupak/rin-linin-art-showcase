@@ -1,4 +1,4 @@
-<a class="show-on-header linin-label" routerLink="/home" alt="Home page">
+<a class="show-on-header linin-label" routerLink="/home" alt="Home page" (click)="openMenu=false">
   <div class="merge-linin-flag" [class.on-top-scroll]="minimizeFlag">
     <img class="linin-flag-hover" src="/assets/images/linin-icon.png?v=2">
     <img class="linin-flag" src="/assets/images/linin-label.png">
@@ -37,10 +37,12 @@
     <div class="sub-menu" [class.open]="characterInfoActive">
       <ul>
         @for (item of characterInfoList; track item.name) {
-        <li [routerLink]="'/character-info/' + item.name" routerLinkActive="active" (click)="openMenu=false"
-          (isActiveChange)="checkIfCharacterInfoActive($event)">
-          {{ item.title | translate}}
-        </li>
+          @if (!item.name.includes('blank')) {
+            <li [routerLink]="'/character-info/' + item.name" routerLinkActive="active" (click)="openMenu=false"
+            (isActiveChange)="checkIfCharacterInfoActive($event)">
+            {{ item.title | translate}}
+          </li>
+          }
         }
       </ul>
     </div>
@@ -57,9 +59,15 @@
       </div>
     </a>
     <div>&nbsp;</div>
-    <a routerLink="/contact-me" (click)="openMenu=false" routerLinkActive="active">
+    <!-- <a routerLink="/contact-me" (click)="openMenu=false" routerLinkActive="active">
       <div class="menu-item">
         <app-text-rollin-entrance [text]="'Contact Me'" [runAnimation]="openMenu"></app-text-rollin-entrance>
+      </div>
+    </a>
+    <div>&nbsp;</div> -->
+    <a routerLink="/about-me" (click)="openMenu=false" routerLinkActive="active">
+      <div class="menu-item">
+        <app-text-rollin-entrance [text]="'About Me'" [runAnimation]="openMenu"></app-text-rollin-entrance>
       </div>
     </a>
     <div>&nbsp;</div>

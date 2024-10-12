@@ -1,0 +1,54 @@
+<div class="container-fluid container-md mt-5">
+  <div>
+    <app-reflection-font [text]="'About me'" [fontClass]="'sub-title mx-auto'"></app-reflection-font>
+  </div>
+  <div class="d-flex mb-4 after-reflection-font">
+    <div class="black-frame circle small mini-frame-200 mx-auto">
+      <img src="/assets/images/original/rin_linin_persona.jpg">
+    </div>
+  </div>
+  <div class="section-color sub-topic mb-3">
+    <i>"{{'ABOUT_ME.CACHE_PHASE' | translate}}"</i>
+  </div>
+  <div class="d-flex mb-5">
+    <div class="description-frame mx-auto p-4">
+      <div class="section-topic mb-2 mb-md-4">
+        {{ "ABOUT_ME.TITLE" | translate}}
+      </div>
+      <div class="section-content mb-5 mx-auto">
+        <span [innerHTML]="'ABOUT_ME.DESC' | translate"></span><br/><br/>
+        <span [innerHTML]="'ABOUT_ME.DESC2' | translate"></span><br/><br/>
+        <span [innerHTML]="'ABOUT_ME.DESC3' | translate"></span><br/><br/>
+        <span [innerHTML]="'ABOUT_ME.WELCOME' | translate"></span><br/><br/>
+      </div>
+      <div class="d-flex justify-content-between">
+        <a routerLink="/character-info/rin-linin" [queryParams]="{ backUrl: '/about-me'}">
+          <app-more-button>
+            {{ 'ABOUT_ME.PERSONA_ART' | translate}}
+          </app-more-button>
+        </a>
+        <a routerLink="/contact-me">
+          <app-more-button>
+            {{ 'ABOUT_ME.CONTACT_ME' | translate}}
+          </app-more-button>
+        </a>
+      </div>
+    </div>
+  </div>
+  <div class="d-flex justify-content-center mb-5">
+    <a href="https://www.youtube.com/@rinlinin" class="social-media" target="_blank" rel="noopener">
+      <img src="/assets/images/icons/youtube.svg" alt="youtube" title="youtube" class="me-2"/>
+    </a>
+    <a href="https://www.deviantart.com/rin-linin" class="social-media" target="_blank" rel="noopener">
+      <img src="/assets/images/icons/deviantart.svg" alt="deviantart" title="deviantart" class="me-2"/>
+    </a>
+    <a href="https://github.com/linnilsupak" class="social-media" target="_blank" rel="noopener">
+      <img src="/assets/images/icons/github.png" srcset="{{ '/assets/images/icons/github.png' | imageSrcset}}" alt="github title=github"/>
+    </a>
+  </div>
+  <div class="caption mb-5">
+    {{'GLOBAL.WARNING' | translate}}<br />
+    {{'GLOBAL.DONT_LIST' | translate}}<br />
+    {{'GLOBAL.DONT_LIST_SUB' | translate}}
+  </div>
+</div>

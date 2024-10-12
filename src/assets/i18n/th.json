@@ -22,7 +22,7 @@
     },
     "RIN_LININ": {
       "TITLE": "ริน ลินิน (Rin Linin)",
-      "DESCRIPTION": "This is my persona to use in my youtube video, I still don't have character background for her yet. I only have curtain concept for her about her being an artist and magical girl(?). If I can think of something, I will update this content again."
+      "DESCRIPTION": "This is my persona to use in my youtube video, I still don't have character background for her yet. I only have certain concept for her about her being an artist and magical girl(?). If I can think of something, I will update this content again."
     },
     "COLLECTOR": {
       "TITLE": "นักสะสม (The collector)",
@@ -58,9 +58,24 @@
   },
   "TAROT": {
     "MAJOR": "Major Arcana",
+    "MAJOR_DESC": "The Major Arcana Tarot cards reveal messages about the big picture of your life and its long-term direction.",
     "WANDS": "The Wands",
+    "WANDS_DESC": "The Wands cards are about action, initiative, and invention. They help to guide how you move through your life, advising when to move and when to hold back.",
     "CUPS": "The Cups",
+    "CUPS_DESC": "The Cups cards represent your emotions, intuition, and relationships. They can guide you in love and help you understand and process your highest and lowest feelings.",
     "SWORDS": "The Swords",
-    "COINS": "The Coins"
+    "SWORDS_DESC": "The Swords cards are all about challenges. They can tell you when conflict and heartache are looming and help you harness the strength of your own mind.",
+    "COINS": "The Coins",
+    "COINS_DESC": "The Pentacles cards are associated with your work, finances, and domestic life. They can answer questions about your personal goals and your money, family, and health."
+  },
+  "ABOUT_ME": {
+    "TITLE": "ริน ลินิน (Rin Linin)",
+    "CACHE_PHASE": "I like sweet and tea.",
+    "DESC": "Hi~ I am a programmer.<br/> When Exteen and Hi5 is a hit, I love to play with the website to make it more beatiful.",
+    "DESC2": "Nowadays people probably don't even know what is <b>Exteen</b> or <b>Hi5</b> is.<br/>They are the social media before Facebook, Instagram, X came.<br/>What special about them are the site can be micro decorate and show to others. You don't need to use the default theme lke the current Social media.",
+    "DESC3": "I just happen to like painting too. When my arts were full in the box, I just happen to want to hang them but my place isn't suit for hanging that many pictures. So I create this website to hang all my arts.",
+    "WELCOME": "Welcome to my humble online home.^^",
+    "CONTACT_ME": "Contact me",
+    "PERSONA_ART": "My persona art"
   }
 }

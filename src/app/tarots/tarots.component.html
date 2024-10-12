@@ -15,6 +15,9 @@
             <app-reflection-font [text]="'TAROT.MAJOR' | translate" [fontClass]="'sub-title'"></app-reflection-font>
         </div>
     </div>
+    <div class="section-color mb-5 after-reflect">
+        {{'TAROT.MAJOR_DESC' | translate}}
+    </div>
     <div class="row justify-content-center align-items-start">
         @for (card of tarotConfig.major; track card.name) {
         <div class="my-3 col-4 col-lg-2 d-flex flex-column justify-content-center">
@@ -28,6 +31,9 @@
         <div class="mx-auto width-fit-content">
             <app-reflection-font [text]="'TAROT.WANDS' | translate" [fontClass]="'sub-title'"></app-reflection-font>
         </div>
+    </div>
+    <div class="section-color mb-5 after-reflect">
+        {{'TAROT.WANDS_DESC' | translate}}
     </div>
     <div class="row justify-content-center align-items-start">
         @for (card of tarotConfig.wands; track card.name) {
@@ -43,6 +49,9 @@
             <app-reflection-font [text]="'TAROT.CUPS' | translate" [fontClass]="'sub-title'"></app-reflection-font>
         </div>
     </div>
+    <div class="section-color mb-5 after-reflect">
+        {{'TAROT.CUPS_DESC' | translate}}
+    </div>
     <div class="row justify-content-center align-items-start">
         @for (card of tarotConfig.cups; track card.name) {
         <div class="my-3 col-4 col-lg-2 d-flex flex-column justify-content-center">
@@ -57,6 +66,9 @@
             <app-reflection-font [text]="'TAROT.SWORDS' | translate" [fontClass]="'sub-title'"></app-reflection-font>
         </div>
     </div>
+    <div class="section-color mb-5 after-reflect">
+        {{'TAROT.SWORDS_DESC' | translate}}
+    </div>
     <div class="row justify-content-center align-items-start">
         @for (card of tarotConfig.swords; track card.name) {
         <div class="my-3 col-4 col-lg-2 d-flex flex-column justify-content-center">
@@ -70,6 +82,9 @@
         <div class="mx-auto width-fit-content">
             <app-reflection-font [text]="'TAROT.COINS' | translate" [fontClass]="'sub-title'"></app-reflection-font>
         </div>
+    </div>
+    <div class="section-color mb-5 after-reflect">
+        {{'TAROT.COINS_DESC' | translate}}
     </div>
     <div class="row justify-content-center align-items-start">
         @for (card of tarotConfig.coins; track card.name) {

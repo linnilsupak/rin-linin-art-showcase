@@ -29,9 +29,11 @@ export const characterInfo = {
         title: 'ORIGINAL.MIMI.TITLE',
         description: 'ORIGINAL.MIMI.DESCRIPTION'
     },
+    blank: {},
     "rin-linin": {
       imageUrl: '/assets/images/original/rin_linin_persona.jpg',
       title: 'ORIGINAL.RIN_LININ.TITLE',
       description: 'ORIGINAL.RIN_LININ.DESCRIPTION',
+      arrangement: 'right'
   },
 }

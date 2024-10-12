@@ -164,7 +164,7 @@ export const tarotConfig = {
         },
         {
           "name": "Page of Cups",
-          "imageUrl": "",
+          "imageUrl": "/assets/images/tarot/cups/page_of_cups.webp",
           "meaning": "ความสนุก ชอบเข้าสังคม ได้พบเจอกับคนมากหน้าหลายตา หรืออาจได้รับข่าวสารบางอย่าง"
         },
         {

@@ -16,8 +16,9 @@ import { combineLatest, filter, startWith } from 'rxjs';
 export class CharacterInfoComponent implements OnInit {
   private route = inject(ActivatedRoute);
   private router = inject(Router);
-  private titleService = inject(Title)
-  private translateService = inject(TranslateService)
+  private titleService = inject(Title);
+  private translateService = inject(TranslateService);
+  backUrl = '';
   characterName: string
   characterData;
 
@@ -32,6 +33,7 @@ export class CharacterInfoComponent implements OnInit {
 
   findCharacter() {
     let notFound = true;
+    this.backUrl = this.route.snapshot.queryParamMap.get('backUrl') || '/original';
     if (this.route.snapshot.firstChild.url.length > 0) {
       this.characterName = this.route.snapshot.firstChild.url[0].path;
       if (this.characterName) {
