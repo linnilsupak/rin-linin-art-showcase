@@ -345,7 +345,7 @@ export const tarotConfig = {
         },
         {
           "name": "Four of Wands",
-          "imageUrl": "/assets/images/tarot/wands/4_of_wands.webp?v=1",
+          "imageUrl": "/assets/images/tarot/wands/4_of_wands.webp",
           "meaning": "การเฉลิมฉลอง การแต่งงาน หรือความสุขสมหวัง"
         },
         {

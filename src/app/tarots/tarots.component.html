@@ -21,7 +21,7 @@
     <div class="row justify-content-center align-items-start">
         @for (card of tarotConfig.major; track card.name) {
         <div class="my-3 col-4 col-lg-2 d-flex flex-column justify-content-center">
-            <img src="{{ card.imageUrl || '/assets/images/tarot/coming_soon_card.webp'}}" alt="{{card.name}}" class="card mb-3 mx-auto"/>
+            <img src="{{ card.imageUrl || '/assets/images/tarot/coming_soon_card.webp?v=1'}}" alt="{{card.name}}" class="card mb-3 mx-auto"/>
             <h5 class="card-title">{{ card.name }}</h5>
         </div>
         }

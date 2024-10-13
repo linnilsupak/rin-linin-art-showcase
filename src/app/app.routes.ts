@@ -35,7 +35,7 @@ export const routes: Routes = [
   },
   {
     path: 'tarots',
-    title: 'Tarost: Rin Linin',
+    title: 'Tarots: Rin Linin',
     component: TarotsComponent
   },
   {
