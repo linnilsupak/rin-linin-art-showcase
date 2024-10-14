@@ -16,7 +16,7 @@ import { ScrollIntoViewWhenReachDirective } from '../../core/scroll-into-view-wh
   styleUrl: './gallery-room.component.scss'
 })
 export class GalleryRoomComponent {
-  @Input() 
+  @Input()
   set galleryRoom(val: ArtworkLabel[]) {
     this._galleryRoom = val;
   }
@@ -29,12 +29,14 @@ export class GalleryRoomComponent {
   matDialog = inject(MatDialog);
   _galleryRoom: ArtworkLabel[];
 
-  openArtWorkLabel({ picUrl, frameStyle, content, isRecTemplate}: ArtworkLabel) {
+  openArtWorkLabel({ picUrl, frameStyle, content, isRecTemplate, previewPic}: ArtworkLabel) {
     this.matDialog.open(ArtWorkLabelPopupComponent, {
       panelClass: 'art-work-label',
       autoFocus: false,
       data: {
-        picUrl, frameStyle, content, isRecTemplate
+        picUrl, frameStyle, content, isRecTemplate,
+        minWidth: previewPic.width,
+        minHeight: previewPic.height
       }
     });
   }

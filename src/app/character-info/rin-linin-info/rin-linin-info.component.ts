@@ -161,10 +161,24 @@ export class RinLininInfoComponent {
     openArtWorkLabel(this.matDialog, artLabel);
   }
 
+  openRinLininMeri() {
+    const artLabel = {
+      picUrl: '/assets/images/original/rin-linin/fan_art_from_meri_kun.webp',
+      frameStyle: 'black-frame',
+      content: {
+        title: 'Rin Linin: draw by Merikun',
+        title2: 'Original design by Rin Linin',
+        subTitle: 'CG',
+        description: 'A fanart I got from my youtube channel, Owww my first fanart of my character. I just youtube once but it is so hard to post per schedule, but It not like I didn\'t get anything. At least, someone like my content and make fanart for me.^^'
+      }
+    };
+    openArtWorkLabel(this.matDialog, artLabel);
+  }
+
   openRinLininPrypec() {
     const artLabel = {
       picUrl: '/assets/images/original/rin-linin/rin_linin_prypec.png',
-      frameStyle: 'black-frame',
+      frameStyle: 'white-frame',
       content: {
         title: 'Rin Linin: draw by Prypec',
         title2: 'Original design by Rin Linin',
@@ -178,7 +192,7 @@ export class RinLininInfoComponent {
   openRinLininChocoladka() {
     const artLabel = {
       picUrl: '/assets/images/original/rin-linin/rin_linin_cookie_chocoladka.png',
-      frameStyle: 'black-frame',
+      frameStyle: 'white-frame',
       content: {
         title: 'Rin Linin: Art trade by Cookie Chocoladka',
         title2: 'color by Rin Linin, draw by Cookie Chocoladka',

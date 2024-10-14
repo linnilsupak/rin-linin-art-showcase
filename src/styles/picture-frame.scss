@@ -8,6 +8,7 @@
 
 .mini-frame-200 {
   width: fit-content;
+  // min-width: 200px;
   max-width: 100%;
 
   @include media-breakpoint-up(lg) {
@@ -17,6 +18,7 @@
 
 .mini-frame-300 {
   width: fit-content;
+  // min-width: 300px;
   max-width: 100%;
 
   @include media-breakpoint-up(lg) {
@@ -26,6 +28,7 @@
 
 .mini-frame-500 {
   width: fit-content;
+  // min-width: 500px;
   max-width: 100%;
 
   @include media-breakpoint-up(lg) {

@@ -23,6 +23,8 @@ export class ArtWorkLabelPopupComponent implements OnInit{
   readonly subTitle = model(this.data.content.subTitle);
   readonly description = model(this.data.content.description);
   readonly isRecTemplate = model(this.data.isRecTemplate);
+  readonly minWidth = model(this.data.minWidth);
+  readonly minHeight = model(this.data.minWidth);
   noImageSrc = false;
 
   ngOnInit(): void {

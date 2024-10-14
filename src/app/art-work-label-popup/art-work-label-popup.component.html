@@ -2,7 +2,9 @@
   <div class="row my-auto my-md-0">
     <div class="col-12 mb-2 mb-md-0 d-flex" [class.col-md]="!isRecTemplate()" [class.col-md-8]="isRecTemplate()">
       <div class="{{ frameStyle() }} mx-auto">
-        <img src="{{ picUrl() }}" srcset="{{ noImageSrc ? '' : (picUrl() | imageSrcset)}}" class="show-real-width">
+        <img src="{{ picUrl() }}" srcset="{{ noImageSrc ? '' : (picUrl() | imageSrcset)}}"
+        [style.min-width]="minWidth()" [style.min-height]="minHeight()"
+        class="show-real-width">
       </div>
     </div>
     <div class="col-12 d-flex" [class.col-md]="!isRecTemplate()" [class.col-md-4]="isRecTemplate()">
