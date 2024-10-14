@@ -2,6 +2,11 @@
 @import "bootstrap-mixin";
 @import "picture-frame";
 
+.me-pic {
+  min-width: 200px;
+  min-width: 180px;
+}
+
 .description-frame {
     max-width: 800px;
     height: 100%;
