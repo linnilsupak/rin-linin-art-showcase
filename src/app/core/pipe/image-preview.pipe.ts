@@ -7,7 +7,8 @@ import { Pipe, PipeTransform } from '@angular/core';
 export class ImagePreviewPipe implements PipeTransform {
 
 
-  transform(value: string): any {
+  transform(value: string, disabled = false): any {
+    if (disabled) return value;
     const fragments = value.split('.');
     if (fragments.length < 2) return value;
     const lastFragment = fragments[fragments.length - 1];

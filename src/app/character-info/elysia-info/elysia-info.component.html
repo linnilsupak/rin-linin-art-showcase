@@ -6,30 +6,10 @@
   {{'GLOBAL.DONT_LIST' | translate}}<br />
   {{'GLOBAL.DONT_LIST_SUB' | translate}}
 </div>
-<div class="row d-flex">
-  <div class="col-12">
-    <div class="black-frame small mini-frame-500 hover" (click)="openElysiaColor()">
-      <img src="/assets/images/original/elysia/elysia_ori_rin_linin.png" srcset="{{ '/assets/images/original/elysia/elysia_ori_rin_linin.png' | imageSrcset}}"/>
-    </div>
-  </div>
-</div>
+<app-gallery-room [galleryRoom]="elysiaMyArt"></app-gallery-room>
 <div class="blank-space">&nbsp;</div>
 <div class="section-topic section-color mb-5">
   {{'CHARACTER_INFO.FAN_ART' | translate}}
 </div>
+<app-gallery-room [galleryRoom]="elysiaFanart"></app-gallery-room>
 
-<div class="row">
-  <div class="col-12 col-md-4 mb-3 d-flex flex-column">
-    <div class="black-frame circle small mini-frame-300 ms-auto me-auto me-md-0 mb-3 hover" (click)="openElysiaKai2()">
-      <img src="/assets/images/original/elysia/elysia_kai_draws_things2.png" srcset="{{ '/assets/images/original/elysia/elysia_kai_draws_things2.png' | imageSrcset}}"/>
-    </div>
-    <div class="white-frame small mini-frame-300 ms-auto me-auto me-md-0 hover" (click)="openElysiaKai1()">
-      <img src="/assets/images/original/elysia/elysia_Kai_draws_things.png" srcset="{{ '/assets/images/original/elysia/elysia_Kai_draws_things.png' | imageSrcset}}"/>
-    </div>
-  </div>
-  <div class="col-12 col-md-8 mb-3 d-flex">
-    <div class="black-frame me-auto ms-auto ms-md-0 hover" (click)="openElysiaJazzy()">
-      <img src="/assets/images/original/elysia/elysia_jazzyFina.png" srcset="{{ '/assets/images/original/elysia/elysia_jazzyFina.png' | imageSrcset}}"/>
-    </div>
-  </div>
-</div>

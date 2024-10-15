@@ -1,3 +1,37 @@
+@if (galleryRoom?.length === 1) {
+  <div class="row d-flex">
+    <div class="col-12">
+      <a class="{{galleryRoom[0].frameStyle}} small mini-frame-500 hover"
+      (click)="openArtWorkLabel(galleryRoom[0])" title="{{ galleryRoom[0].content.title }}">
+        <img [src]="galleryRoom[0].picUrl | imagePreview:galleryRoom[0]?.previewPic?.disabled" [style.min-width]="galleryRoom[0]?.previewPic?.width"
+        [style.min-height]="galleryRoom[0].previewPic.height" alt="{{ galleryRoom[0].content.title }}"/>
+      </a>
+    </div>
+  </div>
+}
+@if (galleryRoom?.length === 3) {
+  <div class="row">
+    <div class="col-12 col-md-4 mb-3 d-flex flex-column">
+      <a class="{{galleryRoom[0].frameStyle}} small mini-frame-300 mt-auto ms-auto me-auto me-md-0 mb-3 hover"
+      (click)="openArtWorkLabel(galleryRoom[0])" title="{{ galleryRoom[0].content.title }}">
+        <img [src]="galleryRoom[0].picUrl | imagePreview:galleryRoom[0]?.previewPic?.disabled" [style.min-width]="galleryRoom[0]?.previewPic?.width"
+        [style.min-height]="galleryRoom[0].previewPic.height" alt="{{ galleryRoom[0].content.title }}"/>
+      </a>
+      <div class="{{galleryRoom[1].frameStyle}} small mini-frame-300 mb-auto ms-auto me-auto me-md-0 hover"
+      (click)="openArtWorkLabel(galleryRoom[1])" title="{{ galleryRoom[1].content.title }}">
+        <img [src]="galleryRoom[1].picUrl | imagePreview:galleryRoom[1]?.previewPic?.disabled" [style.min-width]="galleryRoom[1]?.previewPic?.width"
+        [style.min-height]="galleryRoom[1].previewPic.height" alt="{{ galleryRoom[1].content.title }}"/>
+      </div>
+    </div>
+    <div class="col-12 col-md-8 mb-3 d-flex">
+      <div class="{{galleryRoom[2].frameStyle}} me-auto ms-auto ms-md-0 hover"
+      (click)="openArtWorkLabel(galleryRoom[2])" title="{{ galleryRoom[2].content.title }}">
+        <img [src]="galleryRoom[2].picUrl | imagePreview:galleryRoom[2]?.previewPic?.disabled" [style.min-width]="galleryRoom[2]?.previewPic?.width"
+        [style.min-height]="galleryRoom[2].previewPic.height" alt="{{ galleryRoom[2].content.title }}"/>
+      </div>
+    </div>
+  </div>
+}
 @if (galleryRoom?.length >= 4) {
 <div class="row mb-3" [appScrollIntoViewWhenReach]="enableAutoScrollFirstRow">
   <div class="col-12 col-lg d-flex flex-column">

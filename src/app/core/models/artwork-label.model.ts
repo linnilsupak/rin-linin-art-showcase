@@ -10,6 +10,7 @@ export interface ArtworkLabel {
   isRecTemplate?:boolean,
   previewPic?: {
     width?: string,
-    height?: string
+    height?: string,
+    disabled?: boolean
   }
 }
