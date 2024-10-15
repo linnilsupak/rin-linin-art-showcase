@@ -1,3 +1,4 @@
+@use "variables" as var;
 @import "bootstrap-mixin";
 :host {
   display: block;
@@ -15,14 +16,14 @@
   :first-child:hover {
     .image-card {
       cursor: pointer;
-      filter: brightness(0.4) drop-shadow(5px 5px 5px #0c2e4f);
+      filter: brightness(0.4) drop-shadow(5px 5px 5px #{var.$image-card-shadow});
 
       @include media-breakpoint-down(md) {
         filter: brightness(0.4);
       }
     }
     .title,.title-bottom {
-      color: #fff;
+      color: var.$white;
       letter-spacing: .1em;
     }
     .title-bottom-div {
@@ -32,7 +33,7 @@
 }
 
 .link-reflection {
-  background: linear-gradient(180deg, transparent 1px, black 4%, rgba(17,0,36,1) 0%, transparent 55%, transparent 100%);
+  background: linear-gradient(180deg, transparent 1px, #{var.$black} 4%, rgba(17,0,36,1) 0%, transparent 55%, transparent 100%);
 }
 
 .title {
@@ -44,7 +45,7 @@
   left: 50%;
   transform: translate(-50%, 0);
   z-index: 2;
-  color: #544228;
+  color: var.$image-card-font;
   transition: all .1s ease-in;
   letter-spacing: 0em;
 }
@@ -57,13 +58,13 @@
   z-index: 2;
   font-size: 0.8em;
   font-weight: 500;
-  color: #544228;
+  color: var.$image-card-font;
   transition: all .1s ease-in;
   letter-spacing: 0em;
 }
 
 .title-bottom-div {
-  background-color: black;
+  background-color: var.$black;
   position: absolute;
   width: 0%;
   transition: all .1s ease-in;
@@ -75,7 +76,7 @@
   width: 100%;
   max-width: 320px;
   transition: all .1s ease-in;
-  filter: brightness(1) drop-shadow(5px 5px 5px #0c2e4f);
+  filter: brightness(1) drop-shadow(5px 5px 5px #{var.$image-card-shadow});
 
   @include media-breakpoint-down(md) {
     filter: brightness(1);
@@ -84,7 +85,7 @@
 
 .reflection {
   transform: rotatex(180deg) translatey(-14px);
-  mask-image: linear-gradient(transparent 20%, #0c2e4f 90%);
+  mask-image: linear-gradient(transparent 20%, #{var.$image-card-shadow} 90%);
   overflow: hidden;
   height: 12em;
   width: 100%;

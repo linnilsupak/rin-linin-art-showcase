@@ -1,4 +1,5 @@
 
+@use "variables" as var;
 @import "bootstrap-mixin";
 @import "picture-frame";
 
@@ -8,8 +9,8 @@
 }
 
 .topic-div {
-  width: 596px;
-  max-width: 800px;
+  width: 100%;
+  max-width: var.$about-me-width;
 }
 
 .bth-width {
@@ -21,13 +22,13 @@
 }
 
 .main-link {
-  color: white;
+  color: var.$white;
   font-weight: 400;
   text-decoration: none;
   transition: all .1s ease-in;
   letter-spacing: 0em;
   &:hover {
-    color: blue;
+    color: var.$black;
     font-weight: 700;
     letter-spacing: 0.1em;
   }

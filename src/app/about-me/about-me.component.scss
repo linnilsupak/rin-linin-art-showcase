@@ -1,9 +1,9 @@
 @use "character-frame" as char;
+@use "variables" as var;
 .description-frame {
-    max-width: 800px;
+    max-width: var.$about-me-width;
     height: 100%;
-    width: 600px;
   }
 .section-content {
-    max-width: 500px;
+    max-width: var.$about-me-width;
 }
