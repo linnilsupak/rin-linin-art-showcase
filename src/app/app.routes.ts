@@ -8,8 +8,13 @@ import { AboutMeComponent } from './about-me/about-me.component';
 export const routes: Routes = [
   {
     path: '',
+    title: 'Home: Rin Linin',
+    component: HomeComponent
+  },
+  {
+    path: 'home',
     pathMatch: 'full',
-    redirectTo: '/home'
+    redirectTo: '/'
   },
   {
     path: 'playground',
@@ -27,11 +32,6 @@ export const routes: Routes = [
       minimizeFlag: true
     },
     loadChildren: () => import('./character-info/character-info.routes').then(c => c.characterInfoRoutes)
-  },
-  {
-    path: 'home',
-    title: 'Home: Rin Linin',
-    component: HomeComponent
   },
   {
     path: 'tarots',
