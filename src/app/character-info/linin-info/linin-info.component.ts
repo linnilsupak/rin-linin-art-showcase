@@ -3,16 +3,34 @@ import { TranslateModule } from '@ngx-translate/core';
 import { MatDialog } from '@angular/material/dialog';
 import { openArtWorkLabel } from '../../core/utilities/open-art-work-label.util';
 import { ImageSrcsetPipe } from "../../core/pipe/image-srcset.pipe";
+import { GalleryRoomComponent } from "../../shared/gallery-room/gallery-room.component";
 
 @Component({
   selector: 'app-linin-info',
   standalone: true,
-  imports: [TranslateModule, ImageSrcsetPipe],
+  imports: [TranslateModule, ImageSrcsetPipe, GalleryRoomComponent],
   templateUrl: './linin-info.component.html',
   styleUrl: './linin-info.component.scss'
 })
 export class LininInfoComponent {
   private matDialog = inject(MatDialog);
+  lininFanart = [
+    {
+      picUrl: '/assets/images/original/linin/linin_on_swing.png',
+      frameStyle: 'white-double-frame small',
+      content: {
+        title: 'Linin: design & color by Rin Linin',
+        title2: 'line art by IamAlittleNeko',
+        subTitle: 'Watercolor',
+        description: 'An art trade game I did with some friend. When I am bore I always ask someone looking friendly on the internet to play an art trade game with me.'
+      },
+      previewPic: {
+        width: '285px',
+        height: '417px',
+        disabled: true
+      }
+    }
+  ]
 
   openLininLittleNeko() {
     const nekoArtLabel = {

@@ -42,10 +42,4 @@
 <div class="section-topic section-color mb-5">
   {{'CHARACTER_INFO.FAN_ART' | translate}}
 </div>
-<div class="row d-flex">
-  <div class="col-12">
-    <div class="white-double-frame small mini-frame-500 hover" (click)="openLininLittleNeko()">
-      <img src="/assets/images/original/linin/linin_on_swing.png" srcset="{{ '/assets/images/original/linin/linin_on_swing.png' | imageSrcset}}"/>
-    </div>
-  </div>
-</div>
+<app-gallery-room [galleryRoom]="lininFanart"></app-gallery-room>

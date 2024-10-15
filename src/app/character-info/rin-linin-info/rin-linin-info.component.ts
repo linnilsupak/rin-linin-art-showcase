@@ -1,10 +1,8 @@
-import { Component, inject } from '@angular/core';
-import { MatDialog } from '@angular/material/dialog';
+import { Component } from '@angular/core';
 import { TranslateModule } from '@ngx-translate/core';
 import { GalleryRoomComponent } from "../../shared/gallery-room/gallery-room.component";
 import { ArtworkLabel } from '../../core/models/artwork-label.model';
 import { ImageSrcsetPipe } from "../../core/pipe/image-srcset.pipe";
-import { openArtWorkLabel } from '../../core/utilities/open-art-work-label.util';
 
 @Component({
   selector: 'app-rin-linin-info',
@@ -14,7 +12,6 @@ import { openArtWorkLabel } from '../../core/utilities/open-art-work-label.util'
   styleUrl: './rin-linin-info.component.scss'
 })
 export class RinLininInfoComponent {
-  private matDialog = inject(MatDialog);
   rinLininRoom: ArtworkLabel[] = [
     {
       picUrl: '/assets/images/original/rin-linin/rin_linin_face_jubu.jpeg?v=1',
@@ -145,10 +142,8 @@ export class RinLininInfoComponent {
       }
     },
   ];
-
-
-  openRinLininChocolateProgram() {
-    const artLabel = {
+  rinLininFanart1 =[
+    {
       picUrl: '/assets/images/original/rin-linin/rin_linin_chocolateProgram.png',
       frameStyle: 'black-frame small circle',
       content: {
@@ -156,13 +151,13 @@ export class RinLininInfoComponent {
         title2: 'Original design by Rin Linin',
         subTitle: 'CG',
         description: 'An attack I got from ArtFight 2024, I really like how rin linin appear with Thai traditional dress and chocolate program art style. It\'s go well with Rin Linin.'
+      },
+      previewPic: {
+        width: '220px',
+        height: '247px',
+        disabled: true
       }
-    };
-    openArtWorkLabel(this.matDialog, artLabel);
-  }
-
-  openRinLininMeri() {
-    const artLabel = {
+    },{
       picUrl: '/assets/images/original/rin-linin/fan_art_from_meri_kun.webp',
       frameStyle: 'black-frame',
       content: {
@@ -170,13 +165,13 @@ export class RinLininInfoComponent {
         title2: 'Original design by Rin Linin',
         subTitle: 'CG',
         description: 'A fanart I got from my youtube channel, Owww my first fanart of my character. I just youtube once but it is so hard to post per schedule, but It not like I didn\'t get anything. At least, someone like my content and make fanart for me.^^'
+      },
+      previewPic: {
+        width: '206px',
+        height: '197px',
+        disabled: true
       }
-    };
-    openArtWorkLabel(this.matDialog, artLabel);
-  }
-
-  openRinLininPrypec() {
-    const artLabel = {
+    },{
       picUrl: '/assets/images/original/rin-linin/rin_linin_prypec.png',
       frameStyle: 'white-frame',
       content: {
@@ -184,23 +179,31 @@ export class RinLininInfoComponent {
         title2: 'Original design by Rin Linin',
         subTitle: 'CG',
         description: 'An attack I got from ArtFight 2024, I really like how Prypec Art Style. Rin Linin with her default dress by her is so wonderful.'
+      },
+      previewPic: {
+        width: '207px',
+        height: '261px',
+        disabled: true
       }
-    };
-    openArtWorkLabel(this.matDialog, artLabel);
-  }
+    }
 
-  openRinLininChocoladka() {
-    const artLabel = {
-      picUrl: '/assets/images/original/rin-linin/rin_linin_cookie_chocoladka.png',
-      frameStyle: 'white-frame',
-      content: {
-        title: 'Rin Linin: Art trade by Cookie Chocoladka',
-        title2: 'color by Rin Linin, draw by Cookie Chocoladka',
-        subTitle: 'Color Pencil',
-        description: 'An Art trade I did with Cookie, I really like her picture and she look friendly so I just ask her to play and art trade with me. This picture is the result of that, I really like it.^^'
-      }
-    };
-    openArtWorkLabel(this.matDialog, artLabel);
+  ];
+  rinLininFanart2 = [
+    {
+    picUrl: '/assets/images/original/rin-linin/rin_linin_cookie_chocoladka.png',
+    frameStyle: 'white-frame',
+    content: {
+      title: 'Rin Linin: Art trade by Cookie Chocoladka',
+      title2: 'color by Rin Linin, draw by Cookie Chocoladka',
+      subTitle: 'Color Pencil',
+      description: 'An Art trade I did with Cookie, I really like her picture and she look friendly so I just ask her to play and art trade with me. This picture is the result of that, I really like it.^^'
+    },
+    previewPic: {
+      width: '285px',
+      height: '383px',
+      disabled: true
+    }
   }
+  ];
 
 }

@@ -6,13 +6,7 @@
   {{'GLOBAL.DONT_LIST' | translate}}<br />
   {{'GLOBAL.DONT_LIST_SUB' | translate}}
 </div>
-<div class="row d-flex">
-  <div class="col-12">
-    <div class="black-frame small mini-frame-500 hover" (click)="openMimiColorPic()">
-      <img src="/assets/images/original/mimi/mimi_ori_rin_linin.png" srcset="{{ '/assets/images/original/mimi/mimi_ori_rin_linin.png' | imageSrcset}}"/>
-    </div>
-  </div>
-</div>
+<app-gallery-room [galleryRoom]="mimiMyart"></app-gallery-room>
 <div class="blank-space">&nbsp;</div>
 <div class="section-topic section-color">
   {{'CHARACTER_INFO.FAN_ART' | translate}}
@@ -20,18 +14,4 @@
 <div class="d-flex mb-3">
   <img class="mx-auto pic-hover minus-top" src="/assets/images/original/mimi/mimi_peachiepeeps.gif"  (click)="openMimiPeechiepeeps()"/>
 </div>
-<div class="row">
-  <div class="col-12 col-md-5 d-flex flex-column">
-    <div class="black-frame circle small ms-auto me-auto me-md-0 mini-frame-300 hover mb-3" (click)="openMimiEcobotanist()">
-      <img src="/assets/images/original/mimi/mimi_ecobotanist.png" srcset="{{ '/assets/images/original/mimi/mimi_ecobotanist.png' | imageSrcset}}"/>
-    </div>
-    <div class="white-frame small ms-auto me-auto me-md-0 mini-frame-300 hover mb-3 my-md-auto" (click)="openMimiKayleona()">
-        <img src="/assets/images/original/mimi/mimi_kayleona.gif" />
-    </div>
-  </div>
-  <div class="col-12 col-md-7 d-flex">
-    <div class="black-frame small hover mb-3 mb-md-auto mt-auto" (click)="openMimiStreetcatzzz()">
-      <img src="/assets/images/original/mimi/mimi_streetcatzzz.png" srcset="{{ '/assets/images/original/mimi/mimi_streetcatzzz.png' | imageSrcset}}"/>
-    </div>
-  </div>
-</div>
+<app-gallery-room [galleryRoom]="mimiFanart"></app-gallery-room>
