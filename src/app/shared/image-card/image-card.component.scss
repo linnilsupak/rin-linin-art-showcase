@@ -72,6 +72,8 @@
 .image-card {
   width: 100%;
   max-width: 320px;
+  min-height: 215px;
+  min-width: 101px;
   transition: all .1s ease-in;
   filter: brightness(1) drop-shadow(5px 5px 5px #0c2e4f);
 

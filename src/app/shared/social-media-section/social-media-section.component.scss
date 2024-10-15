@@ -1,0 +1,7 @@
+
+.social-media {
+  cursor: pointer;
+  &:hover {
+    filter: brightness(80%);
+  }
+}
