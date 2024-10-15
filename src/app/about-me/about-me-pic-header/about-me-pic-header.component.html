@@ -27,7 +27,7 @@
 </div>
 <ng-template #centerSection let-class="class">
   @if (isHome) {
-    <a routerLink="/about-me" class="main-link">
+    <a routerLink="/about-me" class="main-link {{class}}">
       Click to see my profile
     </a>
   } @else {
