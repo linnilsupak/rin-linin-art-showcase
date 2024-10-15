@@ -1,0 +1,18 @@
+<div class="link-card d-flex">
+  <a class="position-relative mx-auto" [href]="link">
+    <div class="title">
+      {{ title}}
+    </div>
+    <div class="title-bottom">
+      {{ miniTitle|| title}}
+    </div>
+    <div class="title-bottom-div">&nbsp;</div>
+    <ng-container *ngTemplateOutlet="imageCard">
+    </ng-container>
+  </a>
+</div>
+<ng-container *ngTemplateOutlet="imageCard;context: {class: 'reflection'}">
+</ng-container>
+<ng-template #imageCard let-class="class">
+  <img src="{{imageUrl}}" alt="{{ title }}" title="{{title}}" class="image-card {{class}}"/>
+</ng-template>

@@ -1,0 +1,79 @@
+@import "bootstrap-mixin";
+:host {
+  display: block;
+
+  @include media-breakpoint-down(sm) {
+    font-size: 6px;
+  }
+}
+
+.link-card {
+  position: relative;
+  :first-child:hover {
+    .image-card {
+      cursor: pointer;
+      filter: brightness(0.4) drop-shadow(5px 5px 5px #0c2e4f);
+    }
+    .title,.title-bottom {
+      color: #fff;
+      letter-spacing: .1em;
+    }
+    .title-bottom-div {
+      width: 100%;
+    }
+  }
+}
+
+.title {
+  font-family: "CokieCrisp";
+  font-weight: bolder;
+  font-size: 2.1em;
+  position: absolute;
+  top: 17.3%;
+  left: 50%;
+  transform: translate(-50%, 0);
+  z-index: 2;
+  color: #544228;
+  transition: all .1s ease-in;
+  letter-spacing: 0em;
+}
+
+.title-bottom {
+  position: absolute;
+  bottom: 0.7em;
+  left: 50%;
+  transform: translate(-50%, 0);
+  z-index: 2;
+  font-size: 0.8em;
+  font-weight: 500;
+  color: #544228;
+  transition: all .1s ease-in;
+  letter-spacing: 0em;
+}
+
+.title-bottom-div {
+  background-color: black;
+  position: absolute;
+  width: 0%;
+  transition: all .1s ease-in;
+  z-index: 1;
+  bottom: 0.5em;
+}
+
+.image-card {
+  width: 100%;
+  max-width: 320px;
+  transition: all .1s ease-in;
+  filter: brightness(1) drop-shadow(5px 5px 5px #0c2e4f);
+}
+
+.reflection {
+  transform: rotatex(180deg) translatey(-14px);
+  mask-image: linear-gradient(transparent 20%, #0c2e4f 90%);
+  overflow: hidden;
+  height: 12em;
+  width: 100%;
+  object-fit: cover;
+  object-position: 0 100%;
+  filter: sepia(100%) hue-rotate(190deg) saturate(500%) blur(2px) brightness(0.5);
+}
