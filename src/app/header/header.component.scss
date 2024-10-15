@@ -186,15 +186,15 @@
     &:hover {
       color: var.$blue;
     }
-    &.active {
-      color: var.$violet;
-      font-weight: 500;
-      &::marker {
-        content: '✧ ';
-      }
+  }
+  .active {
+    color: var.$violet;
+    font-weight: 500;
+    &::marker {
+      content: '✧ ';
     }
   }
-  li::marker {
+  ::marker {
     content: '- ';
     font-size: 1.2em;
   }
