@@ -26,5 +26,11 @@
   </div>
 </div>
 <ng-template #centerSection let-class="class">
-  <i class="section-color sub-topic {{class}}">"{{'ABOUT_ME.CACHE_PHASE' | translate}}"</i>
+  @if (isHome) {
+    <a routerLink="/about-me" class="main-link">
+      Click to see my profile
+    </a>
+  } @else {
+    <i class="section-color sub-topic {{class}}">"{{'ABOUT_ME.CACHE_PHASE' | translate}}"</i>
+  }
 </ng-template>
