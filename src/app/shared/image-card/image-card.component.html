@@ -11,8 +11,10 @@
     </ng-container>
   </a>
 </div>
-<ng-container *ngTemplateOutlet="imageCard;context: {class: 'reflection'}">
-</ng-container>
+<div class="link-reflection">
+  <ng-container *ngTemplateOutlet="imageCard;context: {class: 'reflection'}">
+  </ng-container>
+</div>
 <ng-template #imageCard let-class="class">
   <img src="{{imageUrl}}" alt="{{ title }}" title="{{title}}" class="image-card {{class}}"/>
 </ng-template>
