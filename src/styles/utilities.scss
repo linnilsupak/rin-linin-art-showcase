@@ -1,5 +1,6 @@
 @use 'variables' as var;
 
+
 .top-content-frame {
   text-decoration: none;
   color: var.$white;
@@ -7,6 +8,10 @@
   font-size: 1.2rem;
   transition: all 1s ease;
   padding-left: 40px;
+
+  @include media-breakpoint-down(md) {
+    padding-left: 0px;
+  }
 
   .material-symbols-rounded  {
     font-size: 1rem;

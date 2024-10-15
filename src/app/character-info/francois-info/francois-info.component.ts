@@ -1,21 +1,17 @@
-import { Component, inject } from '@angular/core';
+import { Component } from '@angular/core';
 import { TranslateModule } from '@ngx-translate/core';
-import { ImageSrcsetPipe } from "../../core/pipe/image-srcset.pipe";
-import { MatDialog } from '@angular/material/dialog';
-import { openArtWorkLabel } from '../../core/utilities/open-art-work-label.util';
+import { GalleryRoomComponent } from "../../shared/gallery-room/gallery-room.component";
 
 @Component({
   selector: 'app-francois-info',
   standalone: true,
-  imports: [TranslateModule, ImageSrcsetPipe],
+  imports: [TranslateModule, GalleryRoomComponent],
   templateUrl: './francois-info.component.html',
   styleUrl: './francois-info.component.scss'
 })
 export class FrancoisInfoComponent {
-  private matDialog = inject(MatDialog);
-
-  openFrancoisDesign() {
-    const artLabel = {
+  francoisMyArt = [
+    {
       picUrl: '/assets/images/original/francois/Francois_design_rin_linin.png',
       frameStyle: 'black-frame',
       content: {
@@ -23,13 +19,14 @@ export class FrancoisInfoComponent {
         title2: 'Original design by Rin Linin',
         subTitle: 'pencil',
         description: ''
+      },
+      previewPic: {
+        width: '230px',
+        height: '164px',
+        disabled: true
       }
-    }
-    openArtWorkLabel(this.matDialog, artLabel);
-  }
-
-  openFrancoisColorPic() {
-    const artLabel = {
+    },
+    {
       picUrl: '/assets/images/original/francois/Francois_color_ori_rin_linin.png',
       frameStyle: 'black-frame',
       content: {
@@ -37,8 +34,12 @@ export class FrancoisInfoComponent {
         title2: 'Original design by Rin Linin',
         subTitle: 'color pencil',
         description: ''
+      },
+      previewPic: {
+        width: '230px',
+        height: '360px',
+        disabled: true
       }
     }
-    openArtWorkLabel(this.matDialog, artLabel);
-  }
+  ];
 }

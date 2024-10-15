@@ -23,7 +23,7 @@ export class GalleryRoomComponent {
   get galleryRoom(): ArtworkLabel[] {
     return this._galleryRoom;
   }
-  @Input() pattern: 'wide' | '3-rows';
+  @Input() pattern: 'wide' | '3-rows' | 'center';
   @Input() enableAutoScrollFirstRow = false;
 
   matDialog = inject(MatDialog);

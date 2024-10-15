@@ -1,12 +1,11 @@
 import { Component } from '@angular/core';
 import { TranslateModule } from '@ngx-translate/core';
-import { ImageSrcsetPipe } from "../../core/pipe/image-srcset.pipe";
 import { GalleryRoomComponent } from "../../shared/gallery-room/gallery-room.component";
 
 @Component({
   selector: 'app-elysia-info',
   standalone: true,
-  imports: [TranslateModule, ImageSrcsetPipe, GalleryRoomComponent],
+  imports: [TranslateModule, GalleryRoomComponent],
   templateUrl: './elysia-info.component.html',
   styleUrl: './elysia-info.component.scss'
 })

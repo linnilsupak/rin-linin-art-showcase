@@ -1,21 +1,17 @@
-import { Component, inject } from '@angular/core';
+import { Component } from '@angular/core';
 import { TranslateModule } from '@ngx-translate/core';
-import { openArtWorkLabel } from '../../core/utilities/open-art-work-label.util';
-import { MatDialog } from '@angular/material/dialog';
-import { ImageSrcsetPipe } from "../../core/pipe/image-srcset.pipe";
+import { GalleryRoomComponent } from "../../shared/gallery-room/gallery-room.component";
 
 @Component({
   selector: 'app-collector-info',
   standalone: true,
-  imports: [TranslateModule, ImageSrcsetPipe],
+  imports: [TranslateModule, GalleryRoomComponent],
   templateUrl: './collector-info.component.html',
   styleUrl: './collector-info.component.scss'
 })
 export class CollectorInfoComponent {
-  private matDialog = inject(MatDialog);
-
-  openCollectorDesign() {
-    const artLabel = {
+  collectorMyart = [
+    {
       picUrl: '/assets/images/original/collector/the_collector_design_ori_rin_linin.png?v=1',
       frameStyle: 'black-frame',
       content: {
@@ -23,13 +19,14 @@ export class CollectorInfoComponent {
         title2: 'Original design by Rin Linin',
         subTitle: 'pencil',
         description: ''
+      },
+      previewPic: {
+        width: '230px',
+        height: '164px',
+        disabled: true
       }
-    }
-    openArtWorkLabel(this.matDialog, artLabel)
-  }
-
-  openCollectorColorPic() {
-    const artLabel = {
+    },
+    {
       picUrl: '/assets/images/original/collector/collector_gallery_ori_rin_linin.png?v=1',
       frameStyle: 'white-frame',
       content: {
@@ -38,52 +35,59 @@ export class CollectorInfoComponent {
         subTitle: 'watercolor',
         description: ''
       },
-      isRecTemplate: true
-    }
-    openArtWorkLabel(this.matDialog, artLabel)
-  }
-
-  openCollectorChocoladka() {
-    const artLabel = {
-      picUrl: '/assets/images/original/collector/the_collector_cookie_chocoladka.png',
-      frameStyle: 'black-frame',
-      content: {
-        title: 'The collector: draw by Cookie Chocoladka',
-        title2: 'character design by Rin Linin',
-        subTitle: 'pencil',
-        description: 'A lucky ruffle I win from Cookie Chocoladka which she open on instagram. Oh my! I have never been this lucky before! Yay!'
+      isRecTemplate: true,
+      previewPic: {
+        width: '230px',
+        height: '318px',
+        disabled: true
       }
     }
-    openArtWorkLabel(this.matDialog, artLabel)
-  }
-
-  openCollectorOverLoadwork() {
-    const artLabel = {
-      picUrl: '/assets/images/original/collector/the_collector_overloadwork.png',
-      frameStyle: 'black-frame m-auto',
-      content: {
-        title: 'The collector: draw by OverloadWork',
-        title2: 'character design by Rin Linin',
-        subTitle: 'CG',
-        description: 'An attack I got from Artfight 2024. This is only a thumbnail but I like it very much.'
-      },
-      isRecTemplate: true
+  ];
+  collectorFanart = [{
+    picUrl: '/assets/images/original/collector/the_collector_overloadwork.png',
+    frameStyle: 'black-frame circle m-auto',
+    content: {
+      title: 'The collector: draw by OverloadWork',
+      title2: 'character design by Rin Linin',
+      subTitle: 'CG',
+      description: 'An attack I got from Artfight 2024. This is only a thumbnail but I like it very much.'
+    },
+    isRecTemplate: true,
+    previewPic: {
+      width: '204px',
+      height: '204px',
+      disabled: true
     }
-    openArtWorkLabel(this.matDialog, artLabel)
-  }
-
-  openCollectorOverLoadwork2() {
-    const artLabel = {
-      picUrl: '/assets/images/original/collector/the_collector_overloadwork2.png?v=1',
-      frameStyle: 'white-frame',
-      content: {
-        title: 'The collector: draw by OverloadWork',
-        title2: 'character design by Rin Linin',
-        subTitle: 'CG',
-        description: 'An attack I got from Artfight 2024, look at how cute he is!!'
-      },
-      isRecTemplate: true
+  }, {
+    picUrl: '/assets/images/original/collector/the_collector_overloadwork2.png?v=1',
+    frameStyle: 'white-frame circle',
+    content: {
+      title: 'The collector: draw by OverloadWork',
+      title2: 'character design by Rin Linin',
+      subTitle: 'CG',
+      description: 'An attack I got from Artfight 2024, look at how cute he is!!'
+    },
+    isRecTemplate: true,
+    previewPic: {
+      width: '270px',
+      height: '380px',
+      disabled: true
     }
-    openArtWorkLabel(this.matDialog, artLabel)
-  }
+  },
+  {
+    picUrl: '/assets/images/original/collector/the_collector_cookie_chocoladka.png',
+    frameStyle: 'black-frame my-auto',
+    content: {
+      title: 'The collector: draw by Cookie Chocoladka',
+      title2: 'character design by Rin Linin',
+      subTitle: 'pencil',
+      description: 'A lucky ruffle I win from Cookie Chocoladka which she open on instagram. Oh my! I have never been this lucky before! Yay!'
+    },
+    previewPic: {
+      width: '230px',
+      height: '217px',
+      disabled: true
+    }
+  },
+  ];
 }
