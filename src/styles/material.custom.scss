@@ -2,11 +2,12 @@
 .art-work-label {
 
   &.cdk-overlay-pane.mat-mdc-dialog-panel {
-    max-width: fit-content!important;
-    min-height: 100vh;
+    max-width: 100%;
+    min-height: 98%;
     height: fit-content!important;
     @include media-breakpoint-up(md) {
       min-height: 50vh!important;
+      max-width: fit-content!important;
     }
   }
 
