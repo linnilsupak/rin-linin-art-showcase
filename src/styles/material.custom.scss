@@ -1,20 +1,15 @@
 @import "bootstrap-mixin";
 .art-work-label {
 
-  &.cdk-overlay-pane.mat-mdc-dialog-panel {
+  &.cdk-overlay-pane.mat-mdc-dialog-panel, .mat-mdc-dialog-container {
     max-width: 100%;
     min-height: 98%;
-    height: 98%!important;
+    height: 100%!important;
     @include media-breakpoint-up(md) {
       min-height: 50vh!important;
       height: fit-content!important;
       max-width: fit-content!important;
     }
-  }
-
-  .mat-mdc-dialog-container {
-    width: fit-content!important;
-    height: fit-content!important;
   }
 
   .mat-mdc-dialog-surface {
