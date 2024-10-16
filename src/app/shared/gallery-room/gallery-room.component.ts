@@ -1,4 +1,4 @@
-import { Component, inject, Input } from '@angular/core';
+import { Component, inject, Input, OnDestroy } from '@angular/core';
 import { MatDialog } from '@angular/material/dialog';
 import { ArtWorkLabelPopupComponent } from '../../art-work-label-popup/art-work-label-popup.component';
 import { AddClassInViewportDirective } from '../../core/add-class-in-viewport.directive';
@@ -7,6 +7,8 @@ import { ArtworkLabel } from '../../core/models/artwork-label.model';
 import { ImagePreviewPipe } from "../../core/pipe/image-preview.pipe";
 import { ImageSrcsetPipe } from '../../core/pipe/image-srcset.pipe';
 import { ScrollIntoViewWhenReachDirective } from '../../core/scroll-into-view-when-reach.directive';
+import { LoadingService } from '../../loading.service';
+import { Subscription } from 'rxjs';
 
 @Component({
   selector: 'app-gallery-room',
@@ -15,7 +17,7 @@ import { ScrollIntoViewWhenReachDirective } from '../../core/scroll-into-view-wh
   templateUrl: './gallery-room.component.html',
   styleUrl: './gallery-room.component.scss'
 })
-export class GalleryRoomComponent {
+export class GalleryRoomComponent implements OnDestroy {
   @Input()
   set galleryRoom(val: ArtworkLabel[]) {
     this._galleryRoom = val;
@@ -26,11 +28,18 @@ export class GalleryRoomComponent {
   @Input() pattern: 'wide' | '3-rows' | 'center';
   @Input() enableAutoScrollFirstRow = false;
 
+  private loadingService = inject(LoadingService);
+  private subscription = new Subscription();
   matDialog = inject(MatDialog);
   _galleryRoom: ArtworkLabel[];
 
+  ngOnDestroy(): void {
+    this.subscription.unsubscribe();
+  }
+
   openArtWorkLabel({ picUrl, frameStyle, content, isRecTemplate, previewPic}: ArtworkLabel) {
-    this.matDialog.open(ArtWorkLabelPopupComponent, {
+    this.loadingService.setLoading(true);
+    const dialogRef = this.matDialog.open(ArtWorkLabelPopupComponent, {
       panelClass: 'art-work-label',
       autoFocus: false,
       data: {
@@ -39,5 +48,10 @@ export class GalleryRoomComponent {
         minHeight: previewPic.height
       }
     });
+    this.subscription.add(
+      dialogRef.afterOpened().subscribe(() => {
+        this.loadingService.setLoading(false);
+      })
+    )
   }
 }

@@ -10,11 +10,12 @@ import { HeaderComponent } from './header/header.component';
 import { ScrollUpButtonComponent } from "./scroll-up-button/scroll-up-button.component";
 import { StarrySkyComponent } from "./starry-sky/starry-sky.component";
 import { TranslateModule } from '@ngx-translate/core';
+import { LoadingComponent } from "./shared/loading/loading.component";
 
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [RouterOutlet, HeaderComponent, ScrollUpButtonComponent, TranslateModule, StarrySkyComponent, SetMainScrollPositionDirective],
+  imports: [RouterOutlet, HeaderComponent, ScrollUpButtonComponent, TranslateModule, StarrySkyComponent, SetMainScrollPositionDirective, LoadingComponent],
   providers: [WINDOW_PROVIDERS],
   templateUrl: './app.component.html',
   styleUrl: './app.component.scss'
