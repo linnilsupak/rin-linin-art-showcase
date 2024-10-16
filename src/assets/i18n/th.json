@@ -80,5 +80,9 @@
   },
   "FOOTER": {
     "TEXT": "Copyright © Rin Linin. All Rights Reserved."
+  },
+  "HOME": {
+    "WELCOME": "Welcome",
+    "SHOW_CASE": "Show case"
   }
 }

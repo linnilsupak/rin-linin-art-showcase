@@ -6,9 +6,6 @@
   user-select: none;
   pointer-events: none;
   padding: 0 10px;
-  :first-child {
-    background-size: auto 60%, auto 40%; // there is a bug on browser and transform item bg will not change
-  }
 }
 
 /* original design */
@@ -17,7 +14,7 @@
   font-weight: bolder;
   font-size: 2rem;
   line-height: 3rem;
-  background-image: url("/assets/images/bg-text-pink.png?v=0");
+  background-image: url("/assets/images/bg-text-pink.png");
   background-position: left top, left bottom;
   background-repeat: repeat;
   background-attachment: fixed;

@@ -3,7 +3,7 @@
 <!-- <div class="border-wall-paper"></div> -->
 <div class="container-fluid container-md mt-3">
   <div>
-    <app-reflection-font [text]="'Welcome'" [fontClass]="'sub-title mx-auto'"></app-reflection-font>
+    <app-reflection-font [text]="'HOME.WELCOME' | translate" [fontClass]="'sub-title mx-auto'"></app-reflection-font>
   </div>
   <div class="caption mb-5 after-reflect">
     {{'GLOBAL.WARNING' | translate}}<br />
@@ -25,7 +25,10 @@
     </div>
   </div>
   <div class="mt-4">
-    <app-reflection-font [text]="'Show case'" [fontClass]="'sub-title mx-auto'"></app-reflection-font>
+    <app-reflection-font [text]="'HOME.SHOW_CASE' | translate" [fontClass]="'sub-title mx-auto'"></app-reflection-font>
+  </div>
+  <div class="section-content section-color mt-1 mb-5">
+    {{'HOME.SHOW_CASE' | translate}}
   </div>
   <div class="d-flex align-items-center justify-content-center flex-column flex-md-row">
     <app-character-icon link="/tarots" img="/assets/images/home/eight-of-cup_preview.webp"
