@@ -14,5 +14,6 @@ export class ImageCardComponent {
   @Input() title: string;
   @Input() miniTitle: string;
   @Input() link: string;
+  @Input() minHeight = 'inherit';
 
 }

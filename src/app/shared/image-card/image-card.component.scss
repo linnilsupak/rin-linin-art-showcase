@@ -11,8 +11,6 @@
 .link-card {
   position: relative;
   background: linear-gradient(0deg, rgba(17,0,36,1) 0%, transparent 25%, transparent 100%);
-  min-height: 215px;
-  min-width: 101px;
   :first-child:hover {
     .image-card {
       cursor: pointer;
