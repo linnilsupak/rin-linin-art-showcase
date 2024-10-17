@@ -1,0 +1,56 @@
+@use "variables" as var;
+
+@keyframes changeStar {
+  from {
+   transform: scale(1);
+  }
+
+  to {
+    transform: scale(0.5);
+  }
+}
+
+
+.star-loading > * {
+  font-family: "CokieCrisp";
+  font-weight: bolder;
+  font-size: 2rem;
+  line-height: 3rem;
+  background-image: url("/assets/images/bg-text-pink.png");
+  background-position: left top, left bottom;
+  background-repeat: repeat;
+  background-attachment: fixed;
+  background-clip: text;
+  color: transparent;
+  overflow: hidden;
+  background-color: var.$white;
+  position: absolute;
+  top: 0;
+
+  animation-duration: 0.2s;
+  animation-name: changeStar;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+  position: absolute;
+}
+
+.star-loading {
+  position: relative;
+  min-width: 8rem;
+  :nth-child(2) {
+    left: 2rem;
+    animation-delay: 0.2s;
+  }
+  :nth-child(2) {
+    left: 2rem;
+    animation-delay: 0.2s;
+  }
+  :nth-child(3) {
+    left: 4rem;
+    animation-delay: 0.4s;
+  }
+  :nth-child(4) {
+    left: 6rem;
+    animation-delay: 0.6s;
+  }
+}

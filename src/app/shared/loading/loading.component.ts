@@ -1,10 +1,11 @@
 import { Component, inject, OnInit } from '@angular/core';
 import { LoadingService } from '../../loading.service';
+import { MiniSpinningComponent } from "../mini-spinning/mini-spinning.component";
 
 @Component({
   selector: 'app-loading',
   standalone: true,
-  imports: [],
+  imports: [MiniSpinningComponent],
   templateUrl: './loading.component.html',
   styleUrl: './loading.component.scss'
 })

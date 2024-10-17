@@ -70,4 +70,11 @@
   width: fit-content;
 }
 
+.mat-mdc-text-field-wrapper {
+  background-color: var.$white;
+  border-radius: var.$input-border-radius!important;
+}
 
+.cursor {
+  cursor: pointer;
+}

@@ -1,88 +1,150 @@
 <div class="cover">
 </div>
-<!-- <div class="border-wall-paper"></div> -->
 <div class="container-fluid container-md mt-5">
-    <div>
-        <app-reflection-font [text]="'Tarot card meaning'" [fontClass]="'mx-auto'"></app-reflection-font>
-    </div>
-    <div class="caption mb-5 after-reflect">
-        {{'GLOBAL.WARNING' | translate}}<br />
-        {{'GLOBAL.DONT_LIST' | translate}}<br />
-        {{'GLOBAL.DONT_LIST_SUB' | translate}}
-    </div>
+  <div>
+    <app-reflection-font [text]="'Tarot card meaning'" [fontClass]="'mx-auto'"></app-reflection-font>
+  </div>
+  <div class="caption mb-5 after-reflect">
+    {{'GLOBAL.WARNING' | translate}}<br />
+    {{'GLOBAL.DONT_LIST' | translate}}<br />
+    {{'GLOBAL.DONT_LIST_SUB' | translate}}
+  </div>
+  <div class="d-flex">
+    <form [formGroup]="filterForm" class="mx-0 mx-sm-auto d-flex big-search flex-column flex-sm-row">
+      <mat-form-field class="me-2 select d-none d-md-block">
+        <mat-label>Category</mat-label>
+        <mat-select formControlName="category">
+          @for (item of category; track item) {
+          <mat-option [value]="item.value">{{item.label}}</mat-option>
+          }
+        </mat-select>
+      </mat-form-field>
+      <mat-form-field class="big-search">
+        <mat-label>search</mat-label>
+        <input type="text" placeholder="Pick one" aria-label="Number" matInput formControlName="search"
+          [matAutocomplete]="auto">
+          @if (filterForm.controls.search.value) {
+            <mat-icon matSuffix class="material-symbols-rounded me-2 cursor" (click)="clearSearch()">close</mat-icon>
+          }
+      </mat-form-field>
+      <mat-autocomplete #auto="matAutocomplete" [displayWith]="displayFn" (optionSelected)="selectCard($event.option.value)">
+        @if (tarotCategory.MAJOR_ARCANA === filterForm.controls.category.value || !filterForm.controls.category.value) {
+          @for (option of majorArcana; track option) {
+            <mat-option [value]="option">{{option.name}}</mat-option>
+            }
+        }
+        @if (tarotCategory.WANDS === filterForm.controls.category.value || !filterForm.controls.category.value) {
+          @for (option of wands; track option) {
+            <mat-option [value]="option">{{option.name}}</mat-option>
+            }
+        }
+        @if (tarotCategory.CUPS === filterForm.controls.category.value || !filterForm.controls.category.value) {
+          @for (option of cups; track option) {
+            <mat-option [value]="option">{{option.name}}</mat-option>
+            }
+        }
+        @if (tarotCategory.SWORDS === filterForm.controls.category.value || !filterForm.controls.category.value) {
+          @for (option of swords; track option) {
+            <mat-option [value]="option">{{option.name}}</mat-option>
+            }
+        }
+        @if (tarotCategory.COINS === filterForm.controls.category.value || !filterForm.controls.category.value) {
+          @for (option of coins; track option) {
+            <mat-option [value]="option">{{option.name}}</mat-option>
+            }
+        }
+      </mat-autocomplete>
+    </form>
+  </div>
+
+  @if ((tarotCategory.MAJOR_ARCANA === filterForm.controls.category.value || !filterForm.controls.category.value) && tarots.major) {
     <div class="section-topic section-color mb-2">
       {{'TAROT.MAJOR' | translate}}
     </div>
     <div class="section-color mb-4">
-        {{'TAROT.MAJOR_DESC' | translate}}
+      {{'TAROT.MAJOR_DESC' | translate}}
     </div>
     <div class="row justify-content-center align-items-start">
-        @for (card of tarotConfig.major; track card.name) {
-        <div class="my-3 col-4 col-lg-2 d-flex flex-column justify-content-center">
-            <img src="{{ card.imageUrl || '/assets/images/tarot/coming_soon_card.webp?v=1'}}" alt="{{card.name}}" class="card mb-3 mx-auto"/>
-            <h5 class="card-title">{{ card.name }}</h5>
-        </div>
-        }
+      @for (card of tarots.major; track card.name) {
+      <div class="my-3 col-4 col-lg-2 d-flex flex-column justify-content-center">
+        <img src="{{ card.imageUrl || '/assets/images/tarot/coming_soon_card.webp?v=1'}}" alt="{{card.name}}"
+          class="card mb-3 mx-auto" />
+        <h5 class="card-title">{{ card.name }}</h5>
+      </div>
+      }
     </div>
     <div class="blank-space">&nbsp;</div>
+  }
+  @if ((tarotCategory.WANDS === filterForm.controls.category.value || !filterForm.controls.category.value) && tarots.wands) {
     <div class="section-topic section-color mb-2">
       {{'TAROT.WANDS' | translate}}
     </div>
     <div class="section-color mb-4">
-        {{'TAROT.WANDS_DESC' | translate}}
+      {{'TAROT.WANDS_DESC' | translate}}
     </div>
     <div class="row justify-content-center align-items-start">
-        @for (card of tarotConfig.wands; track card.name) {
-        <div class="my-3 col-4 col-lg-2 d-flex flex-column justify-content-center">
-            <img src="{{ card.imageUrl || '/assets/images/tarot/coming_soon_card.webp'}}" alt="{{card.name}}" class="card mb-3 mx-auto"/>
-            <h5 class="card-title">{{ card.name }}</h5>
-        </div>
-        }
+      @for (card of tarots.wands; track card.name) {
+      <div class="my-3 col-4 col-lg-2 d-flex flex-column justify-content-center">
+        <img src="{{ card.imageUrl || '/assets/images/tarot/coming_soon_card.webp'}}" alt="{{card.name}}"
+          class="card mb-3 mx-auto" />
+        <h5 class="card-title">{{ card.name }}</h5>
+      </div>
+      }
     </div>
     <div class="blank-space">&nbsp;</div>
+  }
+  @if ((tarotCategory.CUPS === filterForm.controls.category.value || !filterForm.controls.category.value) && tarots.cups) {
     <div class="section-topic section-color mb-2">
       {{'TAROT.CUPS' | translate}}
     </div>
     <div class="section-color mb-4">
-        {{'TAROT.CUPS_DESC' | translate}}
+      {{'TAROT.CUPS_DESC' | translate}}
     </div>
     <div class="row justify-content-center align-items-start">
-        @for (card of tarotConfig.cups; track card.name) {
-        <div class="my-3 col-4 col-lg-2 d-flex flex-column justify-content-center">
-            <img src="{{ card.imageUrl || '/assets/images/tarot/coming_soon_card.webp'}}" alt="{{card.name}}" class="card mb-3 mx-auto"/>
-            <h5 class="card-title">{{ card.name }}</h5>
-        </div>
-        }
+      @for (card of tarots.cups; track card.name) {
+      <div class="my-3 col-4 col-lg-2 d-flex flex-column justify-content-center">
+        <img src="{{ card.imageUrl || '/assets/images/tarot/coming_soon_card.webp'}}" alt="{{card.name}}"
+          class="card mb-3 mx-auto" />
+        <h5 class="card-title">{{ card.name }}</h5>
+      </div>
+      }
     </div>
     <div class="blank-space">&nbsp;</div>
+  }
+  @if ((tarotCategory.SWORDS === filterForm.controls.category.value || !filterForm.controls.category.value) && tarots.swords) {
     <div class="section-topic section-color mb-2">
       {{'TAROT.SWORDS' | translate}}
     </div>
     <div class="section-color mb-4">
-        {{'TAROT.SWORDS_DESC' | translate}}
+      {{'TAROT.SWORDS_DESC' | translate}}
     </div>
     <div class="row justify-content-center align-items-start">
-        @for (card of tarotConfig.swords; track card.name) {
-        <div class="my-3 col-4 col-lg-2 d-flex flex-column justify-content-center">
-            <img src="{{ card.imageUrl || '/assets/images/tarot/coming_soon_card.webp'}}" alt="{{card.name}}" class="card mb-3 mx-auto"/>
-            <h5 class="card-title">{{ card.name }}</h5>
-        </div>
-        }
+      @for (card of tarots.swords; track card.name) {
+      <div class="my-3 col-4 col-lg-2 d-flex flex-column justify-content-center">
+        <img src="{{ card.imageUrl || '/assets/images/tarot/coming_soon_card.webp'}}" alt="{{card.name}}"
+          class="card mb-3 mx-auto" />
+        <h5 class="card-title">{{ card.name }}</h5>
+      </div>
+      }
     </div>
     <div class="blank-space">&nbsp;</div>
+  }
+  @if ((tarotCategory.COINS === filterForm.controls.category.value || !filterForm.controls.category.value) && tarots.coins) {
     <div class="section-topic section-color mb-2">
       {{'TAROT.COINS' | translate}}
     </div>
     <div class="section-color mb-4">
-        {{'TAROT.COINS_DESC' | translate}}
+      {{'TAROT.COINS_DESC' | translate}}
     </div>
     <div class="row justify-content-center align-items-start">
-        @for (card of tarotConfig.coins; track card.name) {
-        <div class="my-3 col-4 col-lg-2 d-flex flex-column justify-content-center">
-            <img src="{{ card.imageUrl || '/assets/images/tarot/coming_soon_card.webp'}}" alt="{{card.name}}" class="card mb-3 mx-auto"/>
-            <h5 class="card-title">{{ card.name }}</h5>
-        </div>
-        }
+      @for (card of tarots.coins; track card.name) {
+      <div class="my-3 col-4 col-lg-2 d-flex flex-column justify-content-center">
+        <img src="{{ card.imageUrl || '/assets/images/tarot/coming_soon_card.webp'}}" alt="{{card.name}}"
+          class="card mb-3 mx-auto" />
+        <h5 class="card-title">{{ card.name }}</h5>
+      </div>
+      }
     </div>
     <div class="blank-space">&nbsp;</div>
+  }
 </div>
