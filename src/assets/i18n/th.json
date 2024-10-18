@@ -1,8 +1,8 @@
 {
   "GLOBAL": {
     "WARNING": "นี่คือภาพมีลิขสิทธิ์",
-    "DONT_LIST": "ห้ามทำซ้ำ ดัดแปลง ซื้อ ขาย ฯลฯ ไม่ว่าในกรณีใด ๆ",
-    "DONT_LIST_SUB":"Please don't alter, trace, or re-post",
+    "DONT_LIST": "ห้ามทำซ้ำ ดัดแปลง ขาย เทรน AI ฯลฯ ไม่ว่าในกรณีใด ๆ",
+    "DONT_LIST_SUB":"Please don't alter, trace, train AI, or re-post",
     "MORE": "More Art"
   },
   "TITLE": {

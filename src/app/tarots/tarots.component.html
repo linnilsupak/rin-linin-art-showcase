@@ -4,12 +4,12 @@
   <div>
     <app-reflection-font [text]="'Tarot card meaning'" [fontClass]="'mx-auto'"></app-reflection-font>
   </div>
-  <div class="caption mb-5 after-reflect">
+  <div class="caption mb-2 after-reflect">
     {{'GLOBAL.WARNING' | translate}}<br />
     {{'GLOBAL.DONT_LIST' | translate}}<br />
     {{'GLOBAL.DONT_LIST_SUB' | translate}}
   </div>
-  <div class="d-flex">
+  <div class="d-flex mb-4">
     <form [formGroup]="filterForm" class="mx-0 mx-sm-auto d-flex big-search flex-column flex-sm-row">
       <mat-form-field class="me-2 select d-none d-md-block">
         <mat-label>Category</mat-label>
@@ -23,7 +23,7 @@
         <mat-label>search</mat-label>
         <input type="text" placeholder="Pick one" aria-label="Number" matInput formControlName="search"
           [matAutocomplete]="auto">
-          @if (filterForm.controls.search.value) {
+          @if (showClose) {
             <mat-icon matSuffix class="material-symbols-rounded me-2 cursor" (click)="clearSearch()">close</mat-icon>
           }
       </mat-form-field>
@@ -54,6 +54,7 @@
             }
         }
       </mat-autocomplete>
+      <a mat-flat-button type="button" class="ms-0 ms-md-5 big-button" routerLink="/contact-me" [queryParams]="{ prefill: preOrder, backUrl: '/tarots' }">Pre-Order This Tarot Deck</a>
     </form>
   </div>
 

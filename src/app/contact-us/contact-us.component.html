@@ -1,9 +1,14 @@
 <div class="sub-title top-content-frame d-flex mx-auto mt-3">
-    <a routerLink="/about-me" class="d-flex align-items-center ms-auto ms-md-4 me-auto">
-      <span class="material-symbols-rounded">
-        arrow_back_ios
-      </span> Back
-    </a>
+  <a routerLink="{{ backUrl}}" class="d-flex align-items-center ms-auto ms-md-4 me-auto">
+    <span class="material-symbols-rounded">
+      arrow_back_ios
+    </span> Back
+  </a>
+</div>
+@if (loading) {
+  <div class="d-flex justify-content-center align-items-center loading-div">
+    <app-mini-spinning></app-mini-spinning>
   </div>
-<iframe src="https://docs.google.com/forms/d/e/1FAIpQLSeBRCEJaE1ryzuUW1B7bTZf8ZUiY_o4kvFJfU94xTzI1kxGQg/viewform?embedded=true"
-width="100%" height="1280" frameborder="0" marginheight="0" marginwidth="0">กำลังโหลด…</iframe>
+}
+<iframe [src]="contactMeLink | safe:'resourceUrl'" width="100%" height="1280" frameborder="0" marginheight="0"
+  marginwidth="0" (load)="iframeLoaded()">กำลังโหลด…</iframe>

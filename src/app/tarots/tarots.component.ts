@@ -3,6 +3,7 @@ import { TranslateModule } from '@ngx-translate/core';
 import { ReflectionFontComponent } from '../shared/reflection-font/reflection-font.component';
 import { tarotConfig } from '../core/config/tarot.config';
 import {FormControl, FormGroup, ReactiveFormsModule} from '@angular/forms';
+import { MatButtonModule} from '@angular/material/button';
 import {MatInputModule} from '@angular/material/input';
 import {MatSelectModule} from '@angular/material/select';
 import {MatFormFieldModule} from '@angular/material/form-field';
@@ -13,17 +14,19 @@ import { debounceTime } from 'rxjs';
 import { mainConfig } from '../core/config/main.config';
 import { TarotConfig } from '../core/models/tarot-config.model';
 import { CardInfo } from '../core/models/card-info.model';
+import { RouterLink } from '@angular/router';
 
 @Component({
   selector: 'app-tarots',
   standalone: true,
-  imports: [TranslateModule, ReflectionFontComponent,
+  imports: [TranslateModule, ReflectionFontComponent, MatButtonModule, RouterLink,
     MatFormFieldModule, MatSelectModule, MatInputModule,ReactiveFormsModule, MatAutocompleteModule],
   templateUrl: './tarots.component.html',
   styleUrl: './tarots.component.scss'
 })
 export class TarotsComponent implements OnInit {
   readonly tarotConfig = cloneDeep(tarotConfig);
+  preOrder = '?usp=pp_url&entry.946658341=%22Rin+Linin%22+Tarot:+Pre+order+(When+finished.)';
   tarots = this.tarotConfig;
   tarotOptions: TarotConfig = cloneDeep(tarotConfig);
   majorArcana = this.tarotOptions.major;
@@ -31,6 +34,7 @@ export class TarotsComponent implements OnInit {
   wands = this.tarotOptions.wands;
   swords = this.tarotOptions.swords;
   coins = this.tarotOptions.coins;
+  showClose = false;
   filterForm = new FormGroup({
     category: new FormControl(''),
     search: new FormControl('')
@@ -67,8 +71,8 @@ export class TarotsComponent implements OnInit {
   }
 
   clearSearch() {
-    this.tarots = this.tarotConfig;
     this.filterForm.controls.search.setValue('');
+    this.selectCard(undefined);
   }
 
   selectCard(card: CardInfo) {
@@ -100,7 +104,9 @@ export class TarotsComponent implements OnInit {
         }
       });
       this.tarots = result;
+      this.showClose = true;
     } else {
+      this.showClose = false;
       this.tarots = this.tarotConfig;
     }
   }

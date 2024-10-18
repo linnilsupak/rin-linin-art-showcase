@@ -29,10 +29,14 @@
     min-width: 99px;
     min-height: 165px;
     width: 100%;
-    max-width: 142px;
+    // max-width: 142px;
+    border-radius: 0.5rem;
     background: transparent;
     border-radius: 10px;
     border: 1px solid #{var.$black};
+    @include media-breakpoint-up(lg) {
+      border-radius: 0.9rem;
+    }
 }
 
 .select {
@@ -48,4 +52,8 @@
     width: inherit;
     min-width: 300px;
   }
+}
+
+.big-button {
+  --mdc-filled-button-container-height: 58px;
 }
