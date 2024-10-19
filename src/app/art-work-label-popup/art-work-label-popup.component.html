@@ -2,9 +2,14 @@
   <div class="row my-auto my-md-0">
     <div class="col-12 mb-2 mb-md-0 d-flex" [class.col-md]="!isRecTemplate()" [class.col-md-8]="isRecTemplate()">
       <div class="{{ frameStyle() }} mx-auto">
+        @if (imageLoaded) {
+          <div class="d-flex justify-content-center align-items-center" [style.min-width]="minWidth()" [style.min-height]="minHeight()">
+            <app-mini-spinning [color]="'dark'"></app-mini-spinning>
+          </div>
+        }
         <img src="{{ picUrl() }}" srcset="{{ noImageSrc ? '' : (picUrl() | imageSrcset)}}"
         [style.min-width]="minWidth()" [style.min-height]="minHeight()"
-        class="show-real-width">
+        class="show-real-width" (load)="imageFinishLoad()" [class.d-none]="imageLoaded">
       </div>
     </div>
     <div class="col-12 d-flex" [class.col-md]="!isRecTemplate()" [class.col-md-4]="isRecTemplate()">

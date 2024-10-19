@@ -69,8 +69,8 @@ export class CollectorInfoComponent {
     },
     isRecTemplate: true,
     previewPic: {
-      width: '270px',
-      height: '380px',
+      width: '220px',
+      height: '308px',
       disabled: true
     }
   },

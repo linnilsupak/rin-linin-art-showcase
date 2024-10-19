@@ -5,11 +5,12 @@ import {
 } from '@angular/material/dialog';
 import { MatIconModule } from '@angular/material/icon';
 import { ImageSrcsetPipe } from "../core/pipe/image-srcset.pipe";
+import { MiniSpinningComponent } from "../shared/mini-spinning/mini-spinning.component";
 
 @Component({
   selector: 'app-art-work-label-popup',
   standalone: true,
-  imports: [MatIconModule, ImageSrcsetPipe],
+  imports: [MatIconModule, ImageSrcsetPipe, MiniSpinningComponent],
   templateUrl: './art-work-label-popup.component.html',
   styleUrl: './art-work-label-popup.component.scss'
 })
@@ -26,6 +27,7 @@ export class ArtWorkLabelPopupComponent implements OnInit{
   readonly minWidth = model(this.data.minWidth);
   readonly minHeight = model(this.data.minHeight);
   noImageSrc = false;
+  imageLoaded = true;
 
   ngOnInit(): void {
     if (this.picUrl.toString().includes('.gif')) {
@@ -35,6 +37,10 @@ export class ArtWorkLabelPopupComponent implements OnInit{
 
   closePopup() {
     this.dialogRef.close();
+  }
+
+  imageFinishLoad() {
+    this.imageLoaded = false;
   }
 
 }
