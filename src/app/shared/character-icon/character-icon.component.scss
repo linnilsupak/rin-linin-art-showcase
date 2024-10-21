@@ -60,3 +60,13 @@ a:hover .sgvitem{
         opacity: 1;
     }
 }
+
+.loading {
+  padding-top: 44%;
+  vertical-align: middle;
+  margin: auto;
+  position: absolute;
+  z-index: 50;
+  left: 50%;
+  transform: translate(-50%, 0);
+}

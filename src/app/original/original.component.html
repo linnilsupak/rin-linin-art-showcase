@@ -36,17 +36,18 @@
   </div>
   <div class="blank-space">&nbsp;</div>
   @for (item of characterInfo;track item.name; let index=$index) {
-    @if (!item.name.includes('blank')) {
       <span id="{{item.name}}"></span>
       <app-character-frame [imageUrl]="item.imageUrl" [characterName]="item.name"
       [title]="item.title" [description]="item.description" [arrangement]="item.arrangement || ((index % 2) ? 'left': 'right')"></app-character-frame>
       <div class="blank-space">&nbsp;</div>
-    } @else {
-      <div class="mt-2">
-        <div class="mx-auto width-fit-content">
-          <app-reflection-font [text]="'✧✧✧✧✧✧✧✧✧✧✧✧✧✧✧✧'" [fontClass]="'sub-title'"></app-reflection-font>
-        </div>
-      </div>
-    }
   }
 </div>
+<div class="mt-2">
+  <div class="mx-auto width-fit-content">
+    <app-reflection-font [text]="'✧✧✧✧✧✧✧✧✧✧✧✧✧✧✧✧'" [fontClass]="'sub-title'"></app-reflection-font>
+  </div>
+</div>
+<span id="{{personaInfo.name}}"></span>
+<app-character-frame [imageUrl]="personaInfo.imageUrl" [characterName]="personaInfo.name"
+[title]="personaInfo.title" [description]="personaInfo.description" [arrangement]="'right'"></app-character-frame>
+<div class="blank-space">&nbsp;</div>

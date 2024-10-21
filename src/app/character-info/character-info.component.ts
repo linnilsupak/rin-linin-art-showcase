@@ -5,6 +5,7 @@ import { characterInfo } from '../core/config/character-info.config';
 import { TranslateModule, TranslateService } from '@ngx-translate/core';
 import { Title } from '@angular/platform-browser';
 import { combineLatest, filter, startWith } from 'rxjs';
+import { personaInfo } from '../core/config/persona-info.config';
 
 @Component({
   selector: 'app-character-info',
@@ -37,11 +38,17 @@ export class CharacterInfoComponent implements OnInit {
     if (this.route.snapshot.firstChild.url.length > 0) {
       this.characterName = this.route.snapshot.firstChild.url[0].path;
       if (this.characterName) {
-        const character = characterInfo[this.characterName];
-        if (character) {
-          this.characterData = character;
-          this.titleService.setTitle(this.translateService.instant(character.title) + ': ' + this.translateService.instant('TITLE.CHARACTER_INFO'));
+        if (this.characterName === personaInfo.name) {
+          this.characterData = personaInfo;
+          this.titleService.setTitle(this.translateService.instant(personaInfo.title) + ': ' + this.translateService.instant('TITLE.CHARACTER_INFO'));
           notFound = false;
+        } else {
+          const character = characterInfo[this.characterName];
+          if (character) {
+            this.characterData = character;
+            this.titleService.setTitle(this.translateService.instant(character.title) + ': ' + this.translateService.instant('TITLE.CHARACTER_INFO'));
+            notFound = false;
+          }
         }
       }
     }

@@ -1,9 +1,42 @@
 @use "variables" as var;
 
+$baseSec: 0.3;
+
+@mixin eachStarStyle($spaceChar) {
+  :nth-child(1) {
+    left: 0;
+    animation-delay: #{-$baseSec}s;
+  }
+  :nth-child(2) {
+    left: #{$spaceChar}rem;
+    animation-delay: #{$baseSec * 0}s;
+  }
+  :nth-child(3) {
+    left: #{$spaceChar * 2}rem;
+    animation-delay: #{$baseSec * 1}s;
+  }
+  :nth-child(4) {
+    left: #{$spaceChar * 3}rem;
+    animation-delay: #{$baseSec * 2}s;
+  }
+}
+
 :host {
   display: block;
   width: 12rem;
   height: 3rem;
+
+  &.mini {
+    width: 8rem;
+    height: 3rem;
+    .star-loading {
+      @include eachStarStyle(2);
+    }
+    .star-loading > * {
+      font-size: 2rem;
+      line-height: 3rem;
+    }
+  }
 }
 
 @keyframes changeStar {
@@ -26,13 +59,11 @@
   }
 }
 
-$baseSec: 0.3;
+
 
 .star-loading > * {
   font-family: "CokieCrisp";
   font-weight: bolder;
-  font-size: 3rem;
-  line-height: 4rem;
   background-image: url("/assets/images/bg-text-pink.png");
   background-color: var.$white;
   background-position: left top, left bottom;
@@ -56,21 +87,6 @@ $baseSec: 0.3;
 
 .star-loading {
   position: relative;
-  min-width: 12rem;
-  :nth-child(1) {
-    left: 0;
-    animation-delay: #{-$baseSec}s;
-  }
-  :nth-child(2) {
-    left: 3rem;
-    animation-delay: #{$baseSec * 0}s;
-  }
-  :nth-child(3) {
-    left: 6rem;
-    animation-delay: #{$baseSec * 1}s;
-  }
-  :nth-child(4) {
-    left: 9rem;
-    animation-delay: #{$baseSec * 2}s;
-  }
+  @include eachStarStyle(3);
 }
+

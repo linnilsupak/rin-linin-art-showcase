@@ -8,6 +8,7 @@ import { ScrollPositionService } from '../core/service/scroll-position.service';
 import { CharacterFrameComponent } from "../shared/character-frame/character-frame.component";
 import { CharacterIconComponent } from "../shared/character-icon/character-icon.component";
 import { ReflectionFontComponent } from '../shared/reflection-font/reflection-font.component';
+import { personaInfo } from '../core/config/persona-info.config';
 
 @Component({
   selector: 'app-original',
@@ -21,6 +22,7 @@ export class OriginalComponent implements AfterViewInit {
   private router = inject(Router);
   private scrollPositionService = inject(ScrollPositionService);
   private subscription = new Subscription();
+  personaInfo = personaInfo;
   characterInfo = Object.keys(characterInfo).map(key => {
     return {name: key, ...characterInfo[key]};
    }) ;
