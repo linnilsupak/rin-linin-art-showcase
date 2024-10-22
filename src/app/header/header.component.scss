@@ -172,7 +172,7 @@
   overflow: hidden;
   transition: all .6s ease-out;
   &.open {
-    height: 264px;
+    height: 222px;
 
     @include media-breakpoint-down(lg) {
       height: 280px;
