@@ -17,8 +17,17 @@ export const routes: Routes = [
     redirectTo: '/'
   },
   {
+    path: 'playground-room',
+    data: {
+        minimizeFlag: true
+    },
+    loadChildren: () => import('./playground-room/playground.routes').then(c => c.playgroundRoomRoutes)
+  },
+  {
     path: 'playground',
-    title: 'Playground: Rin Linin',
+    data: {
+        minimizeFlag: true
+    },
     loadComponent: () => import('./playground/playground.component').then(c => c.PlaygroundComponent)
   },
   {

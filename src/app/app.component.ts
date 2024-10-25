@@ -61,7 +61,7 @@ export class AppComponent implements AfterViewInit {
       this.scrollPositionService.setLoading(false);
     });
     this.scrollPositionService.scrollPosition$.subscribe(scrollTop => {
-      if (this.activatedRoute.snapshot.firstChild?.data?.minimizeFlag) {
+      if (this.getMinimizeFlag()) {
         this.minimizeFlag = false;
       } else{
         this.minimizeFlag = (scrollTop === 0);
@@ -69,8 +69,12 @@ export class AppComponent implements AfterViewInit {
     });
   }
 
+  getMinimizeFlag() {
+    return this.activatedRoute.snapshot.firstChild?.data?.minimizeFlag;
+  }
+
   resetFlagPosition() {
-    if (this.activatedRoute.snapshot.firstChild?.data?.minimizeFlag) {
+    if (this.getMinimizeFlag()) {
       this.minimizeFlag = false;
     } else {
       this.minimizeFlag = true;
