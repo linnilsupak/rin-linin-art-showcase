@@ -1,0 +1,18 @@
+<div class="container-fluid container-md mt-4">
+  <div class="sub-title top-content-frame d-flex">
+    <a [routerLink]="backUrl" fragment="lininStory" class="d-flex align-items-center ms-auto ms-md-4 me-auto">
+      <span class="material-symbols-rounded">
+        arrow_back_ios
+      </span> Back
+    </a>
+  </div>
+  <div>
+    <app-reflection-font [text]="characterData?.title | translate"
+      [fontClass]="'mx-auto sub-title'"></app-reflection-font>
+  </div>
+  <div class="row mb-5">
+
+  </div>
+  <router-outlet></router-outlet>
+  <div class="blank-space">&nbsp;</div>
+</div>

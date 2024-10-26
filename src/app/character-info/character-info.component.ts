@@ -4,7 +4,7 @@ import { ActivatedRoute, NavigationEnd, Router, RouterLink, RouterOutlet } from 
 import { characterInfo } from '../core/config/character-info.config';
 import { TranslateModule, TranslateService } from '@ngx-translate/core';
 import { Title } from '@angular/platform-browser';
-import { combineLatest, filter, startWith } from 'rxjs';
+import { filter } from 'rxjs';
 import { personaInfo } from '../core/config/persona-info.config';
 
 @Component({

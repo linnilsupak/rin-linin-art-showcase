@@ -34,6 +34,20 @@ export const routes: Routes = [
     loadChildren: () => import('./character-info/character-info.routes').then(c => c.characterInfoRoutes)
   },
   {
+    path: 'commission',
+    data: {
+      minimizeFlag: true
+    },
+    loadChildren: () => import('./commission/commission.component').then(c => c.CommissionComponent)
+  },
+  {
+    path: 'term-of-service',
+    data: {
+      minimizeFlag: true
+    },
+    loadChildren: () => import('./term-of-service/term-of-service.component').then(c => c.TermOfServiceComponent)
+  },
+  {
     path: 'tarots',
     title: 'Tarots: Rin Linin',
     component: TarotsComponent
