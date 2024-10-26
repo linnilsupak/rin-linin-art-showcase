@@ -8,6 +8,19 @@
   "TITLE": {
     "CHARACTER_INFO": "Character Info"
   },
+  "PLAYGROUND":{
+    "TITLE": "Playground",
+    "ARTFIGHT_TOPIC": "ArtFight",
+    "ARTFIGHT": "ArtFight 2024",
+    "JAPAN_TRIP": "Japan trip 2023",
+    "GENSHIN": "Genshin fan art",
+    "VOCALOID": "Vocaloid fan art",
+    "FANART": "Random fan art",
+    "ART_TRAD": "Art Trade",
+    "ETC_TOPIC": "Other Art",
+    "ETC": "etc",
+    "SHOW_CASE":"Show case"
+  },
   "ART_FIGHT_2024": {
     "TITLE": "Art Fight 2024",
     "DESCRIPTION": "ปีแรกที่รินได้ลองเล่น Artfight และได้ทดลองวาดตัวละครหลากหลายรูปแบบค่ะ",

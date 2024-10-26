@@ -1,9 +1,55 @@
 <div class="cover">
 </div>
-<!-- <div class="border-wall-paper"></div> -->
 <div class="container-fluid container-md mt-5">
   <div>
-    <app-reflection-font [text]="'Playground'" [fontClass]="'mx-auto'"></app-reflection-font>
+    <app-reflection-font [text]="'PLAYGROUND.TITLE' | translate" [fontClass]="'mx-auto'"></app-reflection-font>
   </div>
-  
+  <div class="row justify-content-center align-items-stretch">
+    <div class="col-4">
+      <app-image-card [imageUrl]="'/assets/images/home/home-playground-border.webp'" [minHeight]="'36em'"
+      [link]="'/playground'" [title]="'PLAYGROUND.ARTFIGHT_TOPIC' | translate" [miniTitle]="'PLAYGROUND.ARTFIGHT' | translate"/>
+    </div>
+    <div class="col-4 playground-menu d-none d-md-flex">
+      <div class="m-auto d-flex flex-column">
+        <app-playground-menu class="mb-3" [label]="'PLAYGROUND.JAPAN_TRIP'"></app-playground-menu>
+        <app-playground-menu class="mb-3" [label]="'PLAYGROUND.GENSHIN'"></app-playground-menu>
+        <app-playground-menu class="mb-3" [label]="'PLAYGROUND.VOCALOID'"></app-playground-menu>
+        <app-playground-menu class="mb-3" [label]="'PLAYGROUND.FANART'"></app-playground-menu>
+        <app-playground-menu class="mb-3" [label]="'PLAYGROUND.ART_TRAD'"></app-playground-menu>
+        <app-playground-menu class="mb-3" [label]="'PLAYGROUND.ETC'"></app-playground-menu>
+      </div>
+    </div>
+    <div class="col-4">
+      <app-image-card [imageUrl]="'/assets/images/home/home-original-border.webp'" [minHeight]="'36em'"
+      [link]="'/original'" [title]="'PLAYGROUND.ETC_TOPIC' | translate" [miniTitle]="'PLAYGROUND.ETC' | translate"/>
+    </div>
+    <div class="col-12 d-flex playground-menu d-md-none">
+      <div class="m-auto d-flex flex-column">
+        <app-playground-menu class="mb-3" [label]="'PLAYGROUND.JAPAN_TRIP'"></app-playground-menu>
+        <app-playground-menu class="mb-3" [label]="'PLAYGROUND.GENSHIN'"></app-playground-menu>
+        <app-playground-menu class="mb-3" [label]="'PLAYGROUND.VOCALOID'"></app-playground-menu>
+        <app-playground-menu class="mb-3" [label]="'PLAYGROUND.FANART'"></app-playground-menu>
+        <app-playground-menu class="mb-3" [label]="'PLAYGROUND.ART_TRAD'"></app-playground-menu>
+        <app-playground-menu class="mb-3" [label]="'PLAYGROUND.ETC'"></app-playground-menu>
+      </div>
+    </div>
+  </div>
+  <div class="mt-4">
+    <app-reflection-font [text]="'PLAYGROUND.SHOW_CASE' | translate" [fontClass]="'sub-title mx-auto'"></app-reflection-font>
+  </div>
+  <div class="d-flex align-items-center justify-content-center flex-column flex-md-row">
+    <app-character-icon link="/tarots" img="/assets/images/home/eight-of-cup_preview.webp"
+      hoverDescription="Tarot" label="Eight of cups"></app-character-icon>
+    <app-character-icon link="/tarots" img="/assets/images/home/ace-of-cup_preview.webp"
+      hoverDescription="Tarot" label="Ace of cups"></app-character-icon>
+    <app-character-icon link="/character-info/elysia" img="/assets/images/original/elysia_ori_rin_linin.webp"
+      hoverDescription="Original" label="Elysia"></app-character-icon>
+  </div>
+  <div class="d-flex align-items-center justify-content-center flex-column flex-md-row">
+    <app-character-icon link="/character-info/francois" img="/assets/images/original/francois_ori_rin_linin.webp"
+      hoverDescription="Original" label="Francois"></app-character-icon>
+    <app-character-icon link="/playground" img="/assets/images/home/mobias_rin_linin_preview.webp"
+      hoverDescription="Playground" label="Mobias"></app-character-icon>
+  </div>
+  <div class="blank-space">&nbsp;</div>
 </div>
