@@ -6,11 +6,12 @@ import { ReflectionFontComponent } from "../shared/reflection-font/reflection-fo
 import { ImageCardComponent } from "../shared/image-card/image-card.component";
 import { CharacterIconComponent } from "../shared/character-icon/character-icon.component";
 import { PlaygroundMenuComponent } from "./playground-menu/playground-menu.component";
+import { RouterLink } from '@angular/router';
 
 @Component({
   selector: 'app-playground',
   standalone: true,
-  imports: [ReflectionFontComponent, TranslateModule, GalleryRoomComponent, ImageCardComponent, CharacterIconComponent, PlaygroundMenuComponent],
+  imports: [ReflectionFontComponent, TranslateModule, GalleryRoomComponent, ImageCardComponent, CharacterIconComponent, PlaygroundMenuComponent, RouterLink ],
   templateUrl: './playground.component.html',
   styleUrl: './playground.component.scss'
 })

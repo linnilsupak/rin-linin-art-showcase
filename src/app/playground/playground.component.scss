@@ -1,5 +1,5 @@
 @import "bootstrap-mixin";
-
+$item-width: 260px;
 
 .cover {
     // object-fit: none;
@@ -9,9 +9,25 @@
 
     @include media-breakpoint-up(lg) {
         min-height: 226px;
-     }
+    }
 }
 
 .playground-menu {
     padding-bottom: 14.7%;
+}
+
+.description {
+    max-width: $item-width;
+    margin-top: -16px;
+    margin-bottom: 8px;
+    @include media-breakpoint-up(md) {
+        margin-top: -36px;
+        margin-bottom: 0;
+    }
+}
+
+.after-reflection {
+    @include media-breakpoint-up(md) {
+        margin-top: -66px;
+    }
 }
