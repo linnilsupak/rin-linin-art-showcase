@@ -14,6 +14,7 @@
     "ARTFIGHT_TOPIC": "ArtFight",
     "ARTFIGHT": "ArtFight 2024",
     "JAPAN_TRIP": "Japan trip 2023",
+    "SWEET": "Sweet Art",
     "GENSHIN": "Genshin fan art",
     "VOCALOID": "Vocaloid fan art",
     "FANART": "Random fan art",
@@ -27,6 +28,10 @@
     "DESCRIPTION": "ปีแรกที่รินได้ลองเล่น Artfight และได้ทดลองวาดตัวละครหลากหลายรูปแบบค่ะ",
     "VIDEO1": "Art Fight Video 2024 #1",
     "VIDEO1_DESC": "วีดีโอที่อธิบายว่า ArtFight คืออะไร และทำไมรินถึงมาเล่นนะคะ"
+  },
+  "JAPAN_TRIP": {
+  "TITLE": "Japan Trip 2023",
+  "DESCRIPTION": "ไปเที่ยวญี่ปุ่นมา แล้วทิศทัศน์มันสวยเหลือเกิน"
   },
   "ORIGINAL": {
     "DESCRIPTION": "If following the row of ants, can get you somewhere. It shouldn’t be another world, right? But somehow that exactly what happen to her. Now she must find her way home. If she did  continue to transport herself to another world, one day the next world must be earth!",

@@ -1,0 +1,9 @@
+<div class="d-flex justify-content-between align-items-center">
+  <a *ngIf="previousItem" [routerLink]="previousItem.link">
+    <app-playground-menu [label]="previousItem.label"></app-playground-menu>
+  </a>
+
+  <a *ngIf="nextItem" [routerLink]="nextItem.link">
+    <app-playground-menu [label]="nextItem.label"></app-playground-menu>
+  </a>
+</div>

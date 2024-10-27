@@ -14,11 +14,13 @@
     </div>
     <div class="col-4 playground-menu d-none d-md-flex">
       <div class="m-auto d-flex flex-column">
-        <app-playground-menu class="mb-3" [label]="'PLAYGROUND.JAPAN_TRIP'"></app-playground-menu>
-        <app-playground-menu class="mb-3" [label]="'PLAYGROUND.GENSHIN'"></app-playground-menu>
-        <app-playground-menu class="mb-3" [label]="'PLAYGROUND.VOCALOID'"></app-playground-menu>
-        <app-playground-menu class="mb-3" [label]="'PLAYGROUND.FANART'"></app-playground-menu>
-        <app-playground-menu class="mb-3" [label]="'PLAYGROUND.ART_TRAD'"></app-playground-menu>
+        @for(room of playgroundMenuConfig; track room;let first=$first, last=$last) {
+          @if (!first && !last) {
+            <a [routerLink]="room.link">
+              <app-playground-menu class="mb-3" [label]="room.label"></app-playground-menu>
+            </a>
+          }
+        }
       </div>
     </div>
     <div class="col-4">
@@ -27,12 +29,13 @@
     </div>
     <div class="col-12 d-flex playground-menu d-md-none">
       <div class="m-auto d-flex flex-column">
-        <app-playground-menu class="mb-3" [label]="'PLAYGROUND.JAPAN_TRIP'"></app-playground-menu>
-        <app-playground-menu class="mb-3" [label]="'PLAYGROUND.GENSHIN'"></app-playground-menu>
-        <app-playground-menu class="mb-3" [label]="'PLAYGROUND.VOCALOID'"></app-playground-menu>
-        <app-playground-menu class="mb-3" [label]="'PLAYGROUND.FANART'"></app-playground-menu>
-        <app-playground-menu class="mb-3" [label]="'PLAYGROUND.ART_TRAD'"></app-playground-menu>
-        <app-playground-menu class="mb-3" [label]="'PLAYGROUND.ETC'" routerLink="/playground-room/etc"></app-playground-menu>
+        @for(room of playgroundMenuConfig; track room;let first=$first, last=$last) {
+          @if (!first && !last) {
+            <a [routerLink]="room.link">
+              <app-playground-menu class="mb-3" [label]="room.label"></app-playground-menu>
+            </a>
+          }
+        }
       </div>
     </div>
   </div>

@@ -1,12 +1,12 @@
 import { Component } from '@angular/core';
 import { TranslateModule } from '@ngx-translate/core';
-import { artFight2024GalleryConfig } from '../core/config/playground/artfight-2024.config';
 import { GalleryRoomComponent } from "../shared/gallery-room/gallery-room.component";
 import { ReflectionFontComponent } from "../shared/reflection-font/reflection-font.component";
 import { ImageCardComponent } from "../shared/image-card/image-card.component";
 import { CharacterIconComponent } from "../shared/character-icon/character-icon.component";
 import { PlaygroundMenuComponent } from "./playground-menu/playground-menu.component";
 import { RouterLink } from '@angular/router';
+import { playgroundMenuConfig } from '../core/config/playground/playground-menu.config';
 
 @Component({
   selector: 'app-playground',
@@ -16,6 +16,7 @@ import { RouterLink } from '@angular/router';
   styleUrl: './playground.component.scss'
 })
 export class PlaygroundComponent {
-  readonly galleryRoomConfig = artFight2024GalleryConfig;
+  readonly playgroundMenuConfig = playgroundMenuConfig;
+
 
 }

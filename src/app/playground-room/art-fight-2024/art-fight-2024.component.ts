@@ -4,11 +4,12 @@ import { GalleryRoomComponent } from '../../shared/gallery-room/gallery-room.com
 import { TranslateModule } from '@ngx-translate/core';
 import { ReflectionFontComponent } from '../../shared/reflection-font/reflection-font.component';
 import { RouterLink } from '@angular/router';
+import { PlaygroundBottomMenuComponent } from "../playground-bottom-menu/playground-bottom-menu.component";
 
 @Component({
   selector: 'app-art-fight-2024',
   standalone: true,
-  imports: [ReflectionFontComponent, TranslateModule, GalleryRoomComponent, RouterLink],
+  imports: [ReflectionFontComponent, TranslateModule, GalleryRoomComponent, RouterLink, PlaygroundBottomMenuComponent],
   templateUrl: './art-fight-2024.component.html',
   styleUrl: './art-fight-2024.component.scss'
 })
