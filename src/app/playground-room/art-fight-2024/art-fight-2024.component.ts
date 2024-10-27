@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { playgroundGalleryConfig } from '../../core/config/playground.config';
+import { artFight2024GalleryConfig } from '../../core/config/playground/artfight-2024.config';
 import { GalleryRoomComponent } from '../../shared/gallery-room/gallery-room.component';
 import { TranslateModule } from '@ngx-translate/core';
 import { ReflectionFontComponent } from '../../shared/reflection-font/reflection-font.component';
@@ -13,6 +13,6 @@ import { RouterLink } from '@angular/router';
   styleUrl: './art-fight-2024.component.scss'
 })
 export class ArtFight2024Component {
-  readonly galleryRoomConfig = playgroundGalleryConfig;
+  readonly galleryRoomConfig = artFight2024GalleryConfig;
 
 }

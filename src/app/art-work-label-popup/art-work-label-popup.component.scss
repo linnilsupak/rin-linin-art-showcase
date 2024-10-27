@@ -4,7 +4,7 @@
 
 .mini-frame-200, .mini-frame-300, .mini-frame-500 {
   @include media-breakpoint-up(lg) {
-    width: inherit!important;
+    width: auto!important;
   }
 }
 

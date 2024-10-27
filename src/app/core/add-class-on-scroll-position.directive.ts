@@ -27,7 +27,7 @@ export class AddClassOnScrollPositionDirective implements OnDestroy {
           setTimeout(() => {
             this.el.nativeElement.classList.add(this.appAddClassOnScrollPosition);
           }, this.addClassDelay);
-        } else if(position === 0) {
+        } else if(position === 0 && this.el.nativeElement.classList) {
           this.added = false;
           this.el.nativeElement.classList.remove(this.appAddClassOnScrollPosition);
         }

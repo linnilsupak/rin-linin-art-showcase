@@ -9,11 +9,12 @@ import { ImageSrcsetPipe } from '../../core/pipe/image-srcset.pipe';
 import { ScrollIntoViewWhenReachDirective } from '../../core/scroll-into-view-when-reach.directive';
 import { LoadingService } from '../../loading.service';
 import { Subscription } from 'rxjs';
+import { CommonModule } from '@angular/common';
 
 @Component({
   selector: 'app-gallery-room',
   standalone: true,
-  imports: [ImagePreviewPipe, ImageSrcsetPipe, ImagePreviewPipe, AddClassInViewportDirective, AddClassOnScrollPositionDirective, ScrollIntoViewWhenReachDirective],
+  imports: [ImagePreviewPipe, ImageSrcsetPipe, ImagePreviewPipe, AddClassInViewportDirective, AddClassOnScrollPositionDirective, ScrollIntoViewWhenReachDirective, CommonModule],
   templateUrl: './gallery-room.component.html',
   styleUrl: './gallery-room.component.scss'
 })
@@ -25,7 +26,7 @@ export class GalleryRoomComponent implements OnDestroy {
   get galleryRoom(): ArtworkLabel[] {
     return this._galleryRoom;
   }
-  @Input() pattern: 'wide' | '3-rows' | 'center';
+  @Input() pattern: 'wide' | '3-rows' | 'center' | 'equal';
   @Input() enableAutoScrollFirstRow = false;
 
   private loadingService = inject(LoadingService);

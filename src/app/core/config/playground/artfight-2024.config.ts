@@ -1,6 +1,6 @@
-import { GalleryRooms } from "../models/gallery-room.model";
+import { GalleryRooms } from "../../models/gallery-room.model";
 
-export const playgroundGalleryConfig: GalleryRooms = {
+export const artFight2024GalleryConfig: GalleryRooms = {
     room1: [
         {
             picUrl: '/assets/images/playground/artfight2024/sanchos_rin_linin.png',
@@ -40,8 +40,8 @@ export const playgroundGalleryConfig: GalleryRooms = {
               description: 'ลองเอียงกระดาษขณะที่สียังไม่แห้งให้เป็นทางน้ำไหล ซึ่งเป็นเทคนิคที่ใช้ได้เฉพาะกระดาษแผ่นเรียบเท่านั้น'
             },
             previewPic: {
-              width: '250px',
-              height: '363px'
+              width: '207px',
+              height: '300px'
             }
           },
           {
@@ -292,7 +292,7 @@ export const playgroundGalleryConfig: GalleryRooms = {
           },
            {
             picUrl: '/assets/images/playground/artfight2024/raccoon_rin_linin.jpg',
-            frameStyle: 'black-frame',
+            frameStyle: 'black-frame mini-frame-300',
             content: {
               title: 'Fishtopher วาดโดย Rin Linin',
               title2: 'ตัวละครของ streetcatzzz',
@@ -306,7 +306,7 @@ export const playgroundGalleryConfig: GalleryRooms = {
           },
           {
             picUrl: '/assets/images/playground/artfight2024/alan_rin_linin.png',
-            frameStyle: 'white-frame',
+            frameStyle: 'white-frame mini-frame-300',
             content: {
               title: 'Alan วาดโดย Rin Linin',
               title2: 'ตัวละครของ Kai_draws_things',
