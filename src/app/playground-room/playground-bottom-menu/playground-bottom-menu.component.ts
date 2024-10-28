@@ -24,7 +24,7 @@ export class PlaygroundBottomMenuComponent {
       this.previousItem = this.playgroundMenuConfig[previousIndex];
     }
     if (nextIndex >= this.playgroundMenuConfig.length) {
-      this.previousItem = this.back;
+      this.nextItem = this.back;
     } else {
       this.nextItem = this.playgroundMenuConfig[nextIndex];
     }
