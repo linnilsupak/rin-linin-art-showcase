@@ -2,13 +2,13 @@
   "GLOBAL": {
     "WARNING": "นี่คือภาพมีลิขสิทธิ์",
     "DONT_LIST": "ห้ามทำซ้ำ ดัดแปลง ขาย เทรน AI ฯลฯ ไม่ว่าในกรณีใด ๆ",
-    "DONT_LIST_SUB":"Please don't alter, trace, train AI, or re-post",
+    "DONT_LIST_SUB": "Please don't alter, trace, train AI, or re-post",
     "MORE": "More Art"
   },
   "TITLE": {
     "CHARACTER_INFO": "Character Info"
   },
-  "PLAYGROUND":{
+  "PLAYGROUND": {
     "TITLE": "Playground",
     "DESCRIPTION": "รวมผลงานที่รินวาดหัวข้อต่างๆ",
     "ARTFIGHT_TOPIC": "ArtFight",
@@ -16,12 +16,12 @@
     "JAPAN_TRIP": "Japan trip 2023",
     "SWEET": "Sweet Art",
     "GENSHIN": "Genshin fan art",
-    "VOCALOID": "Vocaloid fan art",
+    "VTUBER": "Vtuber fan art",
     "FANART": "Random fan art",
     "ART_TRAD": "Art Trade",
     "ETC_TOPIC": "Other Art",
     "ETC": "etc",
-    "SHOW_CASE":"Show case"
+    "SHOW_CASE": "Show case"
   },
   "ART_FIGHT_2024": {
     "TITLE": "Art Fight 2024",
@@ -30,8 +30,25 @@
     "VIDEO1_DESC": "วีดีโอที่อธิบายว่า ArtFight คืออะไร และทำไมรินถึงมาเล่นนะคะ"
   },
   "JAPAN_TRIP": {
-  "TITLE": "Japan Trip 2023",
-  "DESCRIPTION": "ไปเที่ยวญี่ปุ่นมา แล้วทิศทัศน์มันสวยเหลือเกิน"
+    "DESCRIPTION": "ไปเที่ยวญี่ปุ่นมา แล้วทิศทัศน์มันสวยเหลือเกิน"
+  },
+  "SWEET": {
+    "DESCRIPTION": "Craving Sweet, Craving Arts"
+  },
+  "GENSHIN": {
+    "DESCRIPTION": "My Genshin addiction can not be cured, I draw character I didn't get from gatcha."
+  },
+  "VTUBER": {
+    "DESCRIPTION": "I like listen to vTuber song."
+  },
+  "FANART": {
+    "DESCRIPTION": "Just random fan art I can't find category to put into."
+  },
+  "ART_TRAD": {
+    "DESCRIPTION": "Some time I want to connect to other artist by invite them to play Art Trade game with me."
+  },
+  "ETC": {
+    "DESCRIPTION": "Other art I can't find category to put them."
   },
   "ORIGINAL": {
     "DESCRIPTION": "If following the row of ants, can get you somewhere. It shouldn’t be another world, right? But somehow that exactly what happen to her. Now she must find her way home. If she did  continue to transport herself to another world, one day the next world must be earth!",

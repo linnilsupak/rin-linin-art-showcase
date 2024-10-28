@@ -16,7 +16,7 @@ export const playgroundMenuConfig = [
     link: '/playground-room/genshin-fan-art'
   },
   {
-    label: 'PLAYGROUND.VOCALOID',
+    label: 'PLAYGROUND.VTUBER',
     link: '/playground-room/vocaloid-fan-art'
   },
   {
