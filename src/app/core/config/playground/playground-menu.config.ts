@@ -8,10 +8,6 @@ export const playgroundMenuConfig = [
     link: '/playground-room/japan-trip-2023'
   },
   {
-    label: 'PLAYGROUND.SWEET',
-    link: '/playground-room/sweet-art'
-  },
-  {
     label: 'PLAYGROUND.GENSHIN',
     link: '/playground-room/genshin-fan-art'
   },
@@ -22,6 +18,10 @@ export const playgroundMenuConfig = [
   {
     label: 'PLAYGROUND.FANART',
     link: '/playground-room/fan-art'
+  },
+  {
+    label: 'PLAYGROUND.SWEET',
+    link: '/playground-room/sweet-art'
   },
   {
     label: 'PLAYGROUND.ART_TRAD',
