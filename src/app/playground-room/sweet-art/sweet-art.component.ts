@@ -18,10 +18,10 @@ export class SweetArtComponent {
       picUrl: '/assets/images/playground/sweet-art/strwberry-rin-linin.webp',
       frameStyle: 'white-frame',
       content: {
-        title: 'Rin Linin: Flower room',
+        title: 'Strawberry as cute girl',
         title2: 'Design and draw by Rin Linin',
         subTitle: 'watercolor',
-        description: 'I visit Team Lab at Japan and the flower room kind of made me want to draw this picture.'
+        description: 'I just want to draw dessert as cute girl and go to after you to get inspiration. And here one of the elements in the menu "Chocolate Lava" the strawberry! on that plate. It\'s delicious~'
       },
       previewPic: {
         width: 'inherit',
@@ -35,10 +35,10 @@ export class SweetArtComponent {
       picUrl: '/assets/images/playground/sweet-art/chocolate-lava-rin-linin.webp',
       frameStyle: 'white-frame',
       content: {
-        title: 'Rin Linin: Flower room',
+        title: 'Chocolate Lava as cute girl',
         title2: 'Design and draw by Rin Linin',
         subTitle: 'watercolor',
-        description: 'I visit Team Lab at Japan and the flower room kind of made me want to draw this picture.'
+        description: 'One of the elements in the menu "Chocolate Lava", Choco-chan!'
       },
       isRecTemplate: true,
       previewPic: {
@@ -51,10 +51,10 @@ export class SweetArtComponent {
       picUrl: '/assets/images/playground/sweet-art/ice-cream-rin-linin.webp',
       frameStyle: 'white-frame',
       content: {
-        title: 'Rin Linin: Flower room',
+        title: 'Ice-cream as cute girl',
         title2: 'Design and draw by Rin Linin',
         subTitle: 'watercolor',
-        description: 'I visit Team Lab at Japan and the flower room kind of made me want to draw this picture.'
+        description: 'One of the elements in the menu "Chocolate Lava", Ice-cream~'
       },
       previewPic: {
         width: 'inherit',
@@ -68,10 +68,10 @@ export class SweetArtComponent {
       picUrl: '/assets/images/playground/sweet-art/green-tea-bubble-rin-linin.webp',
       frameStyle: 'white-frame',
       content: {
-        title: 'Rin Linin: Flower room',
+        title: 'Green tea with bubble as cute girl',
         title2: 'Design and draw by Rin Linin',
-        subTitle: 'watercolor',
-        description: 'I visit Team Lab at Japan and the flower room kind of made me want to draw this picture.'
+        subTitle: 'color pencil',
+        description: 'After dessert, you must go to sweet tea and I choose green team top with bubble!'
       },
       previewPic: {
         width: 'inherit',
