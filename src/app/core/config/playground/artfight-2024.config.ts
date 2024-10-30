@@ -248,8 +248,8 @@ export const artFight2024GalleryConfig: GalleryRooms = {
       }
     },
     {
-      picUrl: '/assets/images/playground/artfight2024/rina_rin_linin.jpg',
-      frameStyle: 'black-frame small',
+      picUrl: '/assets/images/playground/artfight2024/rina_rin_linin.jpg?v=1',
+      frameStyle: 'black-frame small mini-frame-400',
       content: {
         title: 'Rina วาดโดย Rin Linin',
         title2: 'ตัวละครของ	JazzyFina',
@@ -277,7 +277,7 @@ export const artFight2024GalleryConfig: GalleryRooms = {
     },
     {
       picUrl: '/assets/images/playground/artfight2024/moonlit_rin_linin.png',
-      frameStyle: 'white-frame',
+      frameStyle: 'white-frame mini-frame-400',
       content: {
         title: 'Moonlit วาดโดย Rin Linin',
         title2: 'ตัวละครของ OverloadWork',

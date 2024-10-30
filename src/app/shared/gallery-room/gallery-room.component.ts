@@ -26,7 +26,7 @@ export class GalleryRoomComponent implements OnDestroy {
   get galleryRoom(): ArtworkLabel[] {
     return this._galleryRoom;
   }
-  @Input() pattern: 'wide' | '3-rows' | 'center' | 'equal' | 'center-wide';
+  @Input() pattern: 'wide' | '3-rows' | 'center' | 'equal';
   @Input() enableAutoScrollFirstRow = false;
   @Input() enableSlidIn = false;
 

@@ -65,7 +65,8 @@
   }
   @if (galleryRoom?.length >= 4) {
   <div class="row mb-3" [appScrollIntoViewWhenReach]="enableAutoScrollFirstRow">
-    <div class="col-12 d-flex flex-column" [class.col-lg-3]="pattern !== '3-rows'"[class.col-lg-4]="pattern === '3-rows'">
+    <div class="col-12 col-xl-2 d-flex flex-column"
+    [ngClass]="{'col-lg-3': pattern !== '3-rows', 'col-lg-2': pattern === '3-rows'}">
       <a class="{{ galleryRoom[0].frameStyle }} original-slide-in slide-in hover mt-0 mt-lg-auto ms-auto me-auto me-lg-0 mb-2 mb-lg-0 mini-frame-200"
         (click)="openArtWorkLabel(galleryRoom[0])" title="{{ galleryRoom[0].content.title }}">
         <img [src]="galleryRoom[0].picUrl | imagePreview:galleryRoom[0]?.previewPic?.disabled" [style.min-width]="galleryRoom[0]?.previewPic?.width"
@@ -77,7 +78,7 @@
           [style.min-height]="galleryRoom[1]?.previewPic?.height" alt="{{ galleryRoom[1].content.title }}">
       </div>
     </div>
-    <div class="col-12 col-lg-4 d-flex align-items-end mt-3 mt-lg-0" [class.col-xl-5]="pattern === 'center-wide'">
+    <div class="col-12 col-lg-4 col-xl-5 d-flex align-items-end mt-3 mt-lg-0">
       <div class="{{ galleryRoom[2].frameStyle }} hover mx-auto original-slide-in slide-in"
         (click)="openArtWorkLabel(galleryRoom[2])" title="{{ galleryRoom[2].content.title }}">
         <img [src]="galleryRoom[2].picUrl | imagePreview:galleryRoom[2]?.previewPic?.disabled" [style.min-width]="galleryRoom[2]?.previewPic?.width"
@@ -86,7 +87,7 @@
     </div>
     <div class="col-12 col-lg-4 d-flex mt-3 mt-lg-0">
       <div
-        class="{{ galleryRoom[3].frameStyle }} original-slide-in slide-in hover mt-auto me-auto ms-auto ms-lg-0  mini-frame-300"
+        class="{{ galleryRoom[3].frameStyle }} original-slide-in slide-in hover mt-auto me-auto ms-auto ms-lg-0  mini-frame-400"
         (click)="openArtWorkLabel(galleryRoom[3])" title="{{ galleryRoom[3].content.title }}">
         <img [src]="galleryRoom[3].picUrl | imagePreview:galleryRoom[3]?.previewPic?.disabled" [style.min-width]="galleryRoom[3]?.previewPic?.width"
           [style.min-height]="galleryRoom[3]?.previewPic?.height"alt="{{ galleryRoom[3].content.title }}">
