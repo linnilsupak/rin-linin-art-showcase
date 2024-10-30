@@ -1,9 +1,9 @@
 @if(pattern === 'equal') {
-  <div class="row">
-    @for(room of galleryRoom; track room;let first=$first, last=$last) {
+  <div class="row" [appScrollIntoViewWhenReach]="enableAutoScrollFirstRow">
+    @for(room of galleryRoom; track room;let first=$first, last=$last, index=$index) {
       <div class="col-12 mb-3 d-flex col-md">
-        <a class="{{room.frameStyle}} hover"  [ngClass]="{'m-auto': !last && !first, 'ms-auto me-auto': first || last, 'me-md-0': first, 'ms-md-0': last}"
-        (click)="openArtWorkLabel(room)" title="{{ room.content.title }}">
+        <a class="{{room.frameStyle}} hover"  [ngClass]="{'m-auto': !last && !first, 'ms-auto me-auto': first || last, 'me-md-0': first, 'ms-md-0': last, 'original-slide-in': enableSlidIn}"
+        (click)="openArtWorkLabel(room)" title="{{ room.content.title }}" [appAddClassOnScrollPosition]="enableSlidIn ? 'slide-in': ''" [addClassDelay]="index * 200">
           <img [src]="room.picUrl | imagePreview:room?.previewPic?.disabled" [style.min-width]="room?.previewPic?.width"
           [style.min-height]="room.previewPic.height" alt="{{ room.content.title }}"/>
         </a>
@@ -77,7 +77,7 @@
           [style.min-height]="galleryRoom[1]?.previewPic?.height" alt="{{ galleryRoom[1].content.title }}">
       </div>
     </div>
-    <div class="col-12 col-lg-4 d-flex align-items-end mt-3 mt-lg-0">
+    <div class="col-12 col-lg-4 d-flex align-items-end mt-3 mt-lg-0" [class.col-xl-5]="pattern === 'center-wide'">
       <div class="{{ galleryRoom[2].frameStyle }} hover mx-auto original-slide-in slide-in"
         (click)="openArtWorkLabel(galleryRoom[2])" title="{{ galleryRoom[2].content.title }}">
         <img [src]="galleryRoom[2].picUrl | imagePreview:galleryRoom[2]?.previewPic?.disabled" [style.min-width]="galleryRoom[2]?.previewPic?.width"
@@ -97,10 +97,10 @@
   @if (galleryRoom?.length === 6) {
   <div class="row mb-3" [appScrollIntoViewWhenReach]="enableAutoScrollFirstRow">
     <div class="col-12 col-lg-8 d-flex">
-      <div class="{{ galleryRoom[4].frameStyle }} hover original-slide-in ms-auto me-auto me-lg-0 mb-3 mb-lg-0"
+      <div class="{{ galleryRoom[4].frameStyle }} hover ms-auto me-auto me-lg-0 mb-3 mb-lg-0" [class.original-slide-in]="enableSlidIn"
         (click)="openArtWorkLabel(galleryRoom[4])" title="{{ galleryRoom[4].content.title }} "
-        [appAddClassOnScrollPosition]="'slide-in'">
-        <img [src]="galleryRoom[4].picUrl | imagePreview" [style.min-width]="galleryRoom[4].previewPic.width"
+        [appAddClassOnScrollPosition]="enableSlidIn? 'slide-in': ''">
+        <img [src]="galleryRoom[4].picUrl | imagePreview:galleryRoom[4]?.previewPic?.disabled" [style.min-width]="galleryRoom[4].previewPic.width"
           [style.min-height]="galleryRoom[4].previewPic.height" alt="{{ galleryRoom[4].content.title }}">
       </div>
     </div>
@@ -108,7 +108,7 @@
       <div class="{{ galleryRoom[5].frameStyle }} hover original-slide-in mini-frame-300 me-auto ms-auto ms-lg-0 d-flex"
         (click)="openArtWorkLabel(galleryRoom[5])" title="{{ galleryRoom[5].content.title }}"
         [appAddClassOnScrollPosition]="'slide-in'" [addClassDelay]="200">
-        <img [src]="galleryRoom[5].picUrl | imagePreview" class="my-auto" alt="{{ galleryRoom[5].content.title }}"
+        <img [src]="galleryRoom[5].picUrl | imagePreview:galleryRoom[5]?.previewPic?.disabled" class="my-auto" alt="{{ galleryRoom[5].content.title }}"
           [style.min-width]="galleryRoom[5].previewPic.width" [style.min-height]="galleryRoom[5].previewPic.height">
       </div>
     </div>

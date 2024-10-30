@@ -4,6 +4,8 @@ import { PageNotFoundComponent } from './page-not-found/page-not-found.component
 import { ContactUsComponent } from './contact-us/contact-us.component';
 import { TarotsComponent } from './tarots/tarots.component';
 import { AboutMeComponent } from './about-me/about-me.component';
+import { importProvidersFrom } from '@angular/core';
+import { TranslateModule } from '@ngx-translate/core';
 
 export const routes: Routes = [
   {
@@ -21,6 +23,11 @@ export const routes: Routes = [
     data: {
         minimizeFlag: true
     },
+    providers: [
+      importProvidersFrom([
+        TranslateModule.forChild()
+      ])
+    ],
     loadChildren: () => import('./playground-room/playground.routes').then(c => c.playgroundRoomRoutes)
   },
   {

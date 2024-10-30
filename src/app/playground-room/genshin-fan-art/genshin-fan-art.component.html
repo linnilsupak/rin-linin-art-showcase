@@ -1,4 +1,4 @@
-<div class="container-fluid container-md mt-5">
+<div class="container-fluid container-lg mt-5">
   <div class="sub-title top-content-frame d-flex">
       <a [routerLink]="'/playground'" class="d-flex align-items-center ms-auto ms-md-4 me-auto">
         <span class="material-symbols-rounded">
@@ -12,7 +12,13 @@
   <div class="section-content section-color mb-4">
       {{'GENSHIN.DESCRIPTION' | translate}}
   </div>
-  <!-- <app-gallery-room [galleryRoom]="japanTrip" [pattern]="'center'"></app-gallery-room> -->
+  <app-gallery-room [galleryRoom]="genshin1" [pattern]="'center-wide'"></app-gallery-room>
+  <div class="blank-space">&nbsp;</div>
+  <app-gallery-room [galleryRoom]="genshin2" [pattern]="'equal'"></app-gallery-room>
+  <app-gallery-room [galleryRoom]="genshin3" [pattern]="'equal'" [enableSlidIn]="true"></app-gallery-room>
+  <app-gallery-room [galleryRoom]="genshin4" [pattern]="'equal'" [enableSlidIn]="true"></app-gallery-room>
+  <div class="blank-space">&nbsp;</div>
+  <app-gallery-room [galleryRoom]="genshin5" [pattern]="'center-wide'" [enableSlidIn]="true"></app-gallery-room>
   <div class="blank-space">&nbsp;</div>
   <app-playground-bottom-menu [currentLabel]="'PLAYGROUND.GENSHIN'"></app-playground-bottom-menu>
   <div class="mb-3">&nbsp;</div>
