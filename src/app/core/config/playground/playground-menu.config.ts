@@ -13,6 +13,10 @@ export const playgroundMenuConfig = [
   },
   {
     label: 'PLAYGROUND.VTUBER',
+    link: '/playground-room/vtuber-fan-art'
+  },
+  {
+    label: 'PLAYGROUND.VOCALOID',
     link: '/playground-room/vocaloid-fan-art'
   },
   {

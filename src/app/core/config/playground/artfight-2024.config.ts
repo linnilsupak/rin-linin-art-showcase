@@ -4,7 +4,7 @@ export const artFight2024GalleryConfig: GalleryRooms = {
   room1: [
     {
       picUrl: '/assets/images/playground/artfight2024/sanchos_rin_linin.png',
-      frameStyle: 'black-frame circle small',
+      frameStyle: 'black-frame small circle',
       content: {
         title: 'Sanchos วาดโดย Rin Linin',
         title2: 'ตัวละครของ Mercanaryscrapcore',
@@ -18,7 +18,7 @@ export const artFight2024GalleryConfig: GalleryRooms = {
     },
     {
       picUrl: '/assets/images/playground/artfight2024/remi_rin_linin.png?v=1',
-      frameStyle: 'white-frame small',
+      frameStyle: 'white-frame small mini-frame-300',
       content: {
         title: 'Remi วาดโดย Rin Linin',
         title2: 'ตัวละครของ Rioni',
@@ -85,7 +85,22 @@ export const artFight2024GalleryConfig: GalleryRooms = {
         width: '180px',
         height: '249px'
       }
-    }
+    },
+    {
+      picUrl: '/assets/images/playground/artfight2024/nebula_rin_linin.jpg',
+      frameStyle: 'white-frame',
+      content: {
+        title: 'Nebula วาดโดย Rin Linin',
+        title2: 'ตัวละครของ Mirzel',
+        subTitle: 'CG',
+        description: ''
+      },
+      isRecTemplate: true,
+      previewPic: {
+        width: '180px',
+        height: '152px'
+      }
+    },
   ],
   room2: [
     {
@@ -173,18 +188,17 @@ export const artFight2024GalleryConfig: GalleryRooms = {
       }
     },
     {
-      picUrl: '/assets/images/playground/artfight2024/nebula_rin_linin.jpg',
-      frameStyle: 'white-frame',
+      picUrl: '/assets/images/playground/artfight2024/raccoon_rin_linin.jpg',
+      frameStyle: 'black-frame mini-frame-400',
       content: {
-        title: 'Nebula วาดโดย Rin Linin',
-        title2: 'ตัวละครของ Mirzel',
-        subTitle: 'CG',
+        title: 'Fishtopher วาดโดย Rin Linin',
+        title2: 'ตัวละครของ streetcatzzz',
+        subTitle: 'ภาพสีน้ำ',
         description: ''
       },
-      isRecTemplate: true,
       previewPic: {
-        width: '180px',
-        height: '152px'
+        width: '216px',
+        height: '205px'
       }
     },
     {
@@ -200,7 +214,7 @@ export const artFight2024GalleryConfig: GalleryRooms = {
         width: '180px',
         height: '258px'
       }
-    }
+    },
   ],
   room3: [
     {
@@ -291,22 +305,8 @@ export const artFight2024GalleryConfig: GalleryRooms = {
       }
     },
     {
-      picUrl: '/assets/images/playground/artfight2024/raccoon_rin_linin.jpg',
-      frameStyle: 'black-frame mini-frame-300',
-      content: {
-        title: 'Fishtopher วาดโดย Rin Linin',
-        title2: 'ตัวละครของ streetcatzzz',
-        subTitle: 'ภาพสีน้ำ',
-        description: ''
-      },
-      previewPic: {
-        width: '216px',
-        height: '205px'
-      }
-    },
-    {
       picUrl: '/assets/images/playground/artfight2024/alan_rin_linin.png',
-      frameStyle: 'white-frame mini-frame-300',
+      frameStyle: 'white-frame',
       content: {
         title: 'Alan วาดโดย Rin Linin',
         title2: 'ตัวละครของ Kai_draws_things',

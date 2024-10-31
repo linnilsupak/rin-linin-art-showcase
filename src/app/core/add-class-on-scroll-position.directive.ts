@@ -17,7 +17,7 @@ export class AddClassOnScrollPositionDirective implements OnDestroy {
   private scrollPositionService: ScrollPositionService,
   private el: ElementRef) {
     this.isBrowser = isPlatformBrowser(platformId);
-    if (!this.isBrowser) return;
+    if (!this.isBrowser && !this.appAddClassOnScrollPosition) return;
     this.subscription.add(
       combineLatest([this.scrollPositionService.scrollPosition$, this.scrollPositionService.windowHeight$])
       .subscribe(([position, wHeight]) => {

@@ -16,6 +16,7 @@
     "JAPAN_TRIP": "Japan trip 2023",
     "SWEET": "Sweet Art",
     "GENSHIN": "Genshin fan art",
+    "VOCALOID": "Vocaloid fan art",
     "VTUBER": "Vtuber fan art",
     "FANART": "Random fan art",
     "ART_TRAD": "Art Trade",
@@ -40,6 +41,9 @@
   },
   "VTUBER": {
     "DESCRIPTION": "I like listen to vTuber song."
+  },
+  "VOCALOID": {
+    "DESCRIPTION": "I like listen to vocaloid song and I like Miku."
   },
   "FANART": {
     "DESCRIPTION": "Just random fan art I can't find category to put into."
