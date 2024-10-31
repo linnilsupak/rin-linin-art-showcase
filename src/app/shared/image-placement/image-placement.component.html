@@ -3,5 +3,5 @@
     <app-mini-spinning [color]="'dark'"></app-mini-spinning>
   </div>
 }
-<img [src]="srcLink" (load)="imageFinishLoad()"
+<img [src]="srcLink" (load)="imageFinishLoad()" (error)="imageFinishLoad()"
 alt="{{ alt }}"  [class.d-none]="imageLoaded" class="{{class}}">
