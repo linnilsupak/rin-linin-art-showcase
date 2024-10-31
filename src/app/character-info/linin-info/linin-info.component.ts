@@ -84,7 +84,7 @@ export class LininInfoComponent {
   lininOri3 =[
     {
       picUrl: '/assets/images/original/linin/linin_look_at_art.png',
-      frameStyle: 'black-frame',
+      frameStyle: 'black-frame mini-frame-500',
       content: {
         title: 'Linin: Drawing',
         title2: 'Original design by Rin Linin',

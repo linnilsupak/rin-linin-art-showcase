@@ -13,5 +13,54 @@ import { PlaygroundBottomMenuComponent } from '../playground-bottom-menu/playgro
   styleUrl: './vtuber-fan-art.component.scss'
 })
 export class VtuberFanArtComponent {
+  vtuber1 = [
+    {
+      picUrl: '/assets/images/playground/vtuber/dacopo_vtuber_rin_linin.webp',
+      frameStyle: 'white-frame small',
+      content: {
+        title: 'Rin Linin: Flower room',
+        title2: 'Design and draw by Rin Linin',
+        subTitle: 'watercolor',
+        description: 'I visit Team Lab at Japan and the flower room kind of made me want to draw this picture.'
+      },
+      previewPic: {
+        width: 'inherit',
+        height: 'inherit',
+        disabled: true
+      }
+    },
+    {
+      picUrl: '/assets/images/playground/vtuber/baabel_vtuber_rin_linin.webp',
+      frameStyle: 'white-frame small',
+      content: {
+        title: 'Rin Linin: Flower room',
+        title2: 'Design and draw by Rin Linin',
+        subTitle: 'watercolor',
+        description: 'I visit Team Lab at Japan and the flower room kind of made me want to draw this picture.'
+      },
+      previewPic: {
+        width: 'inherit',
+        height: 'inherit',
+        disabled: true
+      }
+    },
+  ];
+  vtuber2 = [
+    {
+      picUrl: '/assets/images/playground/vtuber/melody_vtuber_rin_linin.webp',
+      frameStyle: 'white-frame small',
+      content: {
+        title: 'Rin Linin: Flower room',
+        title2: 'Design and draw by Rin Linin',
+        subTitle: 'watercolor',
+        description: 'I visit Team Lab at Japan and the flower room kind of made me want to draw this picture.'
+      },
+      previewPic: {
+        width: 'inherit',
+        height: 'inherit',
+        disabled: true
+      }
+    },
+  ]
 
 }

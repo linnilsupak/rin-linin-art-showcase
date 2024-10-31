@@ -10,11 +10,13 @@ import { ScrollIntoViewWhenReachDirective } from '../../core/scroll-into-view-wh
 import { LoadingService } from '../../loading.service';
 import { Subscription } from 'rxjs';
 import { CommonModule } from '@angular/common';
+import { MiniSpinningComponent } from "../mini-spinning/mini-spinning.component";
+import { ImagePlacementComponent } from "../image-placement/image-placement.component";
 
 @Component({
   selector: 'app-gallery-room',
   standalone: true,
-  imports: [ImagePreviewPipe, ImageSrcsetPipe, ImagePreviewPipe, AddClassInViewportDirective, AddClassOnScrollPositionDirective, ScrollIntoViewWhenReachDirective, CommonModule],
+  imports: [ImagePreviewPipe, ImageSrcsetPipe, ImagePreviewPipe, AddClassInViewportDirective, AddClassOnScrollPositionDirective, ScrollIntoViewWhenReachDirective, CommonModule, MiniSpinningComponent, ImagePlacementComponent],
   templateUrl: './gallery-room.component.html',
   styleUrl: './gallery-room.component.scss'
 })

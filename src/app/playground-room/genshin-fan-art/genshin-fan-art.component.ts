@@ -421,7 +421,7 @@ export class GenshinFanArtComponent {
   genshin8 = [
     {
       picUrl: '/assets/images/playground/genshin/fishcl_genshin_rin_linin.webp',
-      frameStyle: 'black-frame circle small mini-frame-200',
+      frameStyle: 'black-frame circle small mini-frame-300',
       content: {
         title: 'Rin Linin: Flower room',
         title2: 'Design and draw by Rin Linin',
