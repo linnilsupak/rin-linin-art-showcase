@@ -235,7 +235,7 @@ export class GenshinFanArtComponent {
   genshin5 = [
     {
       picUrl: '/assets/images/playground/genshin/wriothesley_genshin_rin_linin.webp',
-      frameStyle: 'black-frame small circle',
+      frameStyle: 'black-frame small circle mini-frame-200',
       content: {
         title: 'Rin Linin: Flower room',
         title2: 'Design and draw by Rin Linin',
@@ -250,7 +250,7 @@ export class GenshinFanArtComponent {
     },
     {
       picUrl: '/assets/images/playground/genshin/chongyun_genshin_rin_linin.webp',
-      frameStyle: 'white-frame small',
+      frameStyle: 'white-frame small mini-frame-200',
       content: {
         title: 'Rin Linin: Flower room',
         title2: 'Design and draw by Rin Linin',
@@ -323,5 +323,271 @@ export class GenshinFanArtComponent {
         disabled: true
       }
     },
+  ];
+  genshin6 = [
+    {
+      picUrl: '/assets/images/playground/genshin/ganyu_chinese_genshin_rin_linin.webp',
+      frameStyle: 'black-frame small mini-frame-300 mt-auto',
+      content: {
+        title: 'Rin Linin: Flower room',
+        title2: 'Design and draw by Rin Linin',
+        subTitle: 'watercolor',
+        description: 'I visit Team Lab at Japan and the flower room kind of made me want to draw this picture.'
+      },
+      previewPic: {
+        width: 'inherit',
+        height: 'inherit',
+        disabled: true
+      }
+    },
+    {
+      picUrl: '/assets/images/playground/genshin/keqing_meow_genshin_rin_linin.webp',
+      frameStyle: 'black-frame small mini-frame-300 mt-auto',
+      content: {
+        title: 'Rin Linin: Flower room',
+        title2: 'Design and draw by Rin Linin',
+        subTitle: 'watercolor',
+        description: 'I visit Team Lab at Japan and the flower room kind of made me want to draw this picture.'
+      },
+      previewPic: {
+        width: 'inherit',
+        height: 'inherit',
+        disabled: true
+      }
+    },
+    {
+      picUrl: '/assets/images/playground/genshin/hutao_playful_genshin_rin_linin.webp',
+      frameStyle: 'black-frame small mini-frame-300 mt-auto',
+      content: {
+        title: 'Rin Linin: Flower room',
+        title2: 'Design and draw by Rin Linin',
+        subTitle: 'watercolor',
+        description: 'I visit Team Lab at Japan and the flower room kind of made me want to draw this picture.'
+      },
+      previewPic: {
+        width: 'inherit',
+        height: 'inherit',
+        disabled: true
+      }
+    },
+    {
+      picUrl: '/assets/images/playground/genshin/klee_hbd_genshin_rin_linin.webp',
+      frameStyle: 'black-frame small mini-frame-300 mt-auto',
+      content: {
+        title: 'Rin Linin: Flower room',
+        title2: 'Design and draw by Rin Linin',
+        subTitle: 'watercolor',
+        description: 'I visit Team Lab at Japan and the flower room kind of made me want to draw this picture.'
+      },
+      previewPic: {
+        width: 'inherit',
+        height: 'inherit',
+        disabled: true
+      }
+    },
+  ];
+  genshin7 = [
+    {
+      picUrl: '/assets/images/playground/genshin/ei_icecream_genshin_rin_linin.webp',
+      frameStyle: 'white-frame small mini-frame-500 mt-auto',
+      content: {
+        title: 'Rin Linin: Flower room',
+        title2: 'Design and draw by Rin Linin',
+        subTitle: 'watercolor',
+        description: 'I visit Team Lab at Japan and the flower room kind of made me want to draw this picture.'
+      },
+      previewPic: {
+        width: 'inherit',
+        height: 'inherit',
+        disabled: true
+      }
+    },
+    {
+      picUrl: '/assets/images/playground/genshin/yae_genshin_rin_linin.webp',
+      frameStyle: 'white-frame small mini-frame-500 mt-auto',
+      content: {
+        title: 'Rin Linin: Flower room',
+        title2: 'Design and draw by Rin Linin',
+        subTitle: 'watercolor',
+        description: 'I visit Team Lab at Japan and the flower room kind of made me want to draw this picture.'
+      },
+      previewPic: {
+        width: 'inherit',
+        height: 'inherit',
+        disabled: true
+      }
+    },
+  ];
+  genshin8 = [
+    {
+      picUrl: '/assets/images/playground/genshin/fishcl_genshin_rin_linin.webp',
+      frameStyle: 'black-frame circle small mini-frame-200',
+      content: {
+        title: 'Rin Linin: Flower room',
+        title2: 'Design and draw by Rin Linin',
+        subTitle: 'watercolor',
+        description: 'I visit Team Lab at Japan and the flower room kind of made me want to draw this picture.'
+      },
+      previewPic: {
+        width: 'inherit',
+        height: 'inherit',
+        disabled: true
+      }
+    },
+    {
+      picUrl: '/assets/images/playground/genshin/ningguang_genshin_rin_linin.webp',
+      frameStyle: 'white-frame small',
+      content: {
+        title: 'Rin Linin: Flower room',
+        title2: 'Design and draw by Rin Linin',
+        subTitle: 'watercolor',
+        description: 'I visit Team Lab at Japan and the flower room kind of made me want to draw this picture.'
+      },
+      previewPic: {
+        width: 'inherit',
+        height: 'inherit',
+        disabled: true
+      }
+    },
+    {
+      picUrl: '/assets/images/playground/genshin/furina_genshin_rin_linin.webp',
+      frameStyle: 'black-frame small',
+      content: {
+        title: 'Rin Linin: Flower room',
+        title2: 'Design and draw by Rin Linin',
+        subTitle: 'watercolor',
+        description: 'I visit Team Lab at Japan and the flower room kind of made me want to draw this picture.'
+      },
+      previewPic: {
+        width: 'inherit',
+        height: 'inherit',
+        disabled: true
+      }
+    },
+    {
+      picUrl: '/assets/images/playground/genshin/alhaitham_doc_genshin_rin_linin.webp',
+      frameStyle: 'black-frame small',
+      content: {
+        title: 'Rin Linin: Flower room',
+        title2: 'Design and draw by Rin Linin',
+        subTitle: 'watercolor',
+        description: 'I visit Team Lab at Japan and the flower room kind of made me want to draw this picture.'
+      },
+      previewPic: {
+        width: 'inherit',
+        height: 'inherit',
+        disabled: true
+      }
+    },
+    {
+      picUrl: '/assets/images/playground/genshin/yoimiya_genshin_rin_linin.webp',
+      frameStyle: 'black-frame mini-frame-500 small',
+      content: {
+        title: 'Rin Linin: Flower room',
+        title2: 'Design and draw by Rin Linin',
+        subTitle: 'watercolor',
+        description: 'I visit Team Lab at Japan and the flower room kind of made me want to draw this picture.'
+      },
+      previewPic: {
+        width: 'inherit',
+        height: 'inherit',
+        disabled: true
+      }
+    },
+    {
+      picUrl: '/assets/images/playground/genshin/nahida_genshin_rin_linin.webp',
+      frameStyle: 'black-frame mini-frame-500 small',
+      content: {
+        title: 'Rin Linin: Flower room',
+        title2: 'Design and draw by Rin Linin',
+        subTitle: 'watercolor',
+        description: 'I visit Team Lab at Japan and the flower room kind of made me want to draw this picture.'
+      },
+      previewPic: {
+        width: 'inherit',
+        height: 'inherit',
+        disabled: true
+      }
+    },
+  ];
+  genshin9 = [
+    {
+      picUrl: '/assets/images/playground/genshin/lisa_genshin_rin_linin.webp',
+      frameStyle: 'black-frame mini-frame-400 small',
+      content: {
+        title: 'Rin Linin: Flower room',
+        title2: 'Design and draw by Rin Linin',
+        subTitle: 'watercolor',
+        description: 'I visit Team Lab at Japan and the flower room kind of made me want to draw this picture.'
+      },
+      previewPic: {
+        width: 'inherit',
+        height: 'inherit',
+        disabled: true
+      }
+    },
+    {
+      picUrl: '/assets/images/playground/genshin/magic_ayato_genshin_rin_linin.webp',
+      frameStyle: 'black-frame mini-frame-400 small',
+      content: {
+        title: 'Rin Linin: Flower room',
+        title2: 'Design and draw by Rin Linin',
+        subTitle: 'watercolor',
+        description: 'I visit Team Lab at Japan and the flower room kind of made me want to draw this picture.'
+      },
+      previewPic: {
+        width: 'inherit',
+        height: 'inherit',
+        disabled: true
+      }
+    },
+    {
+      picUrl: '/assets/images/playground/genshin/xingque_genshin_rin_linin.webp',
+      frameStyle: 'black-frame mini-frame-400 small',
+      content: {
+        title: 'Rin Linin: Flower room',
+        title2: 'Design and draw by Rin Linin',
+        subTitle: 'watercolor',
+        description: 'I visit Team Lab at Japan and the flower room kind of made me want to draw this picture.'
+      },
+      previewPic: {
+        width: 'inherit',
+        height: 'inherit',
+        disabled: true
+      }
+    },
+  ];
+  genshin10 = [
+    {
+      picUrl: '/assets/images/playground/genshin/babara_genshin_rin_linin.webp',
+      frameStyle: 'white-frame mini-frame-500 small',
+      content: {
+        title: 'Rin Linin: Flower room',
+        title2: 'Design and draw by Rin Linin',
+        subTitle: 'watercolor',
+        description: 'I visit Team Lab at Japan and the flower room kind of made me want to draw this picture.'
+      },
+      previewPic: {
+        width: 'inherit',
+        height: 'inherit',
+        disabled: true
+      }
+    },
+    {
+      picUrl: '/assets/images/playground/genshin/alhaitham_concert_genshin_rin_linin.webp',
+      frameStyle: 'white-frame mini-frame-500 small',
+      content: {
+        title: 'Rin Linin: Flower room',
+        title2: 'Design and draw by Rin Linin',
+        subTitle: 'watercolor',
+        description: 'I visit Team Lab at Japan and the flower room kind of made me want to draw this picture.'
+      },
+      previewPic: {
+        width: 'inherit',
+        height: 'inherit',
+        disabled: true
+      }
+    },
+
   ];
 }
