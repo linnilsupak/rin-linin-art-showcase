@@ -25,11 +25,11 @@ export class AddClassOnScrollPositionDirective implements OnDestroy {
           && ((this.el.nativeElement.offsetTop + (this.el.nativeElement.offsetHeight/2) - wHeight) < position)) {
           this.added = true;
           setTimeout(() => {
-            this.el.nativeElement.classList.add(this.appAddClassOnScrollPosition);
+            if (this.appAddClassOnScrollPosition) this.el.nativeElement.classList.add(this.appAddClassOnScrollPosition);
           }, this.addClassDelay);
         } else if(position === 0 && this.el.nativeElement.classList) {
           this.added = false;
-          this.el.nativeElement.classList.remove(this.appAddClassOnScrollPosition);
+          if (this.appAddClassOnScrollPosition) this.el.nativeElement.classList.remove(this.appAddClassOnScrollPosition);
         }
       })
     );
