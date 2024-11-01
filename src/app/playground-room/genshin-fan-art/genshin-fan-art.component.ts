@@ -294,6 +294,21 @@ export class GenshinFanArtComponent {
       }
     },
     {
+      picUrl: '/assets/images/playground/genshin/nilou_genshin_rin_linin.webp',
+      frameStyle: 'white-frame mini-frame-500',
+      content: {
+        title: 'Rin Linin: Flower room',
+        title2: 'Design and draw by Rin Linin',
+        subTitle: 'watercolor',
+        description: 'I visit Team Lab at Japan and the flower room kind of made me want to draw this picture.'
+      },
+      previewPic: {
+        width: 'inherit',
+        height: 'inherit',
+        disabled: true
+      }
+    },
+    {
       picUrl: '/assets/images/playground/genshin/collei_genshin_rin_linin.webp',
       frameStyle: 'white-frame mini-frame-500',
       content: {
@@ -421,7 +436,7 @@ export class GenshinFanArtComponent {
   genshin8 = [
     {
       picUrl: '/assets/images/playground/genshin/fishcl_genshin_rin_linin.webp',
-      frameStyle: 'black-frame circle small mini-frame-300',
+      frameStyle: 'black-frame circle small mini-frame-200',
       content: {
         title: 'Rin Linin: Flower room',
         title2: 'Design and draw by Rin Linin',
@@ -435,8 +450,8 @@ export class GenshinFanArtComponent {
       }
     },
     {
-      picUrl: '/assets/images/playground/genshin/ningguang_genshin_rin_linin.webp',
-      frameStyle: 'white-frame small',
+      picUrl: '/assets/images/playground/genshin/magic_ayato_genshin_rin_linin.webp',
+      frameStyle: 'black-frame mini-frame-400 small',
       content: {
         title: 'Rin Linin: Flower room',
         title2: 'Design and draw by Rin Linin',
@@ -467,6 +482,21 @@ export class GenshinFanArtComponent {
     {
       picUrl: '/assets/images/playground/genshin/alhaitham_doc_genshin_rin_linin.webp',
       frameStyle: 'black-frame small',
+      content: {
+        title: 'Rin Linin: Flower room',
+        title2: 'Design and draw by Rin Linin',
+        subTitle: 'watercolor',
+        description: 'I visit Team Lab at Japan and the flower room kind of made me want to draw this picture.'
+      },
+      previewPic: {
+        width: 'inherit',
+        height: 'inherit',
+        disabled: true
+      }
+    },
+    {
+      picUrl: '/assets/images/playground/genshin/ningguang_genshin_rin_linin.webp',
+      frameStyle: 'white-frame small',
       content: {
         title: 'Rin Linin: Flower room',
         title2: 'Design and draw by Rin Linin',
@@ -527,7 +557,7 @@ export class GenshinFanArtComponent {
       }
     },
     {
-      picUrl: '/assets/images/playground/genshin/magic_ayato_genshin_rin_linin.webp',
+      picUrl: '/assets/images/playground/genshin/ayaka_genshin_rin_linin.webp',
       frameStyle: 'black-frame mini-frame-400 small',
       content: {
         title: 'Rin Linin: Flower room',

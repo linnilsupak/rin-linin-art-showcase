@@ -49,7 +49,9 @@
     "DESCRIPTION": "Just random fan art I can't find category to put into."
   },
   "ART_TRAD": {
-    "DESCRIPTION": "Some time I want to connect to other artist by invite them to play Art Trade game with me."
+    "DESCRIPTION": "Some time I want to connect to other artist by invite them to play Art Trade game with me.",
+    "SKETCH": "Sketch by partner",
+    "COLOR": "Color by me"
   },
   "ETC": {
     "DESCRIPTION": "Other art I can't find category to put them."

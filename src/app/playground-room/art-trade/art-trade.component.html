@@ -12,7 +12,28 @@
   <div class="section-content section-color mb-4">
       {{'ART_TRAD.DESCRIPTION' | translate}}
   </div>
-  <!-- <app-gallery-room [galleryRoom]="japanTrip" [pattern]="'center'"></app-gallery-room> -->
+  <div class="d-flex">
+    <div class="section-sub-topic section-color mb-2 row mx-md-auto w-100 w-md-auto">
+      <div class="col-12 col-md-6 text-center">
+        <span>{{'ART_TRAD.SKETCH' | translate}}</span>
+      </div>
+      <div class="col-12 col-md-6 text-center d-none d-md-block">
+        <span>{{'ART_TRAD.COLOR' | translate}}</span>
+      </div>
+    </div>
+  </div>
+  <app-gallery-room [galleryRoom]="artTrade1" [pattern]="'equal'"></app-gallery-room>
+  <div class="d-flex">
+    <div class="section-sub-topic section-color mb-2 row mx-md-auto w-100 w-md-auto">
+      <div class="col-12 col-md-6 text-center">
+        <span>{{'ART_TRAD.SKETCH' | translate}}</span>
+      </div>
+      <div class="col-12 col-md-6 text-center d-none d-md-block">
+        <span>{{'ART_TRAD.COLOR' | translate}}</span>
+      </div>
+    </div>
+  </div>
+  <app-gallery-room [galleryRoom]="artTrade2" [pattern]="'equal'" [enableSlidIn]="true"></app-gallery-room>
   <div class="blank-space">&nbsp;</div>
   <app-playground-bottom-menu [currentLabel]="'PLAYGROUND.ART_TRAD'"></app-playground-bottom-menu>
   <div class="mb-3">&nbsp;</div>

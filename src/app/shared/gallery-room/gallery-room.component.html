@@ -132,7 +132,7 @@
   @if (galleryRoom?.length === 7) {
     <div class="row mb-3">
       <div class="col-12 col-lg-4 d-flex">
-        <div class="{{ galleryRoom[4].frameStyle }} hover original-slide-in mb-auto ms-auto me-auto me-lg-0"
+        <div class="{{ galleryRoom[4].frameStyle }} hover original-slide-in mb-auto ms-auto me-auto me-lg-0 mb-auto"
           (click)="openArtWorkLabel(galleryRoom[4])" title="{{ galleryRoom[4].content.title }}"
           [appAddClassOnScrollPosition]="'slide-in'">
           <app-image-placement [srcLink]="galleryRoom[4].picUrl | imagePreview:galleryRoom[4]?.previewPic?.disabled"
@@ -141,9 +141,9 @@
         </div>
       </div>
       <div class="col-12 col-lg-4 d-flex">
-        <div class="{{ galleryRoom[5].frameStyle }} hover original-slide-in mx-auto width-fit-content"
+        <div class="{{ galleryRoom[5].frameStyle }} hover original-slide-in mx-auto width-fit-content mb-auto"
           (click)="openArtWorkLabel(galleryRoom[5])" title="{{ galleryRoom[5].content.title }}"
-          [appAddClassOnScrollPosition]="'slide-in'">
+          [appAddClassOnScrollPosition]="'slide-in'"[addClassDelay]="200">
           <app-image-placement [srcLink]="galleryRoom[5].picUrl | imagePreview:galleryRoom[5]?.previewPic?.disabled"
           [width]="galleryRoom[5].previewPic.width" [height]="galleryRoom[5].previewPic.height"
           [alt]="galleryRoom[5].content.title"></app-image-placement>
@@ -151,7 +151,7 @@
       </div>
       <div class="col-12 col-lg-4 d-flex">
         <div class="{{ galleryRoom[6].frameStyle }} hover original-slide-in ms-auto me-auto ms-lg-0 mb-auto" (click)="openArtWorkLabel(galleryRoom[6])"
-          title="{{ galleryRoom[6].content.title }}" [appAddClassOnScrollPosition]="'slide-in'">
+          title="{{ galleryRoom[6].content.title }}" [appAddClassOnScrollPosition]="'slide-in'" [addClassDelay]="400">
           <app-image-placement [srcLink]="galleryRoom[6].picUrl | imagePreview:galleryRoom[6]?.previewPic?.disabled"
           [width]="galleryRoom[6].previewPic.width" [height]="galleryRoom[6].previewPic.height"
           [alt]="galleryRoom[6].content.title"></app-image-placement>
