@@ -20,14 +20,14 @@ $item-width: 260px;
     max-width: $item-width;
     margin-top: -16px;
     margin-bottom: 8px;
-    @include media-breakpoint-up(md) {
+    @include media-breakpoint-up(lg) {
         margin-top: -36px;
         margin-bottom: 0;
     }
 }
 
 .after-reflection {
-    @include media-breakpoint-up(md) {
+    @include media-breakpoint-up(lg) {
         margin-top: -66px;
     }
 }

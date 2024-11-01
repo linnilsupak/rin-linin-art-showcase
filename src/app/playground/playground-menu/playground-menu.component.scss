@@ -43,7 +43,7 @@ $point-height: 8px;
     &:hover {
         .outer-center {
             background-color: var.$black;
-            
+
             &::before {
                 left: $outer-active-border;
                 border-color: transparent #{var.$black} transparent transparent;
