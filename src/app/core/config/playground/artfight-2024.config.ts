@@ -161,7 +161,7 @@ export const artFight2024GalleryConfig: GalleryRooms = {
     },
     {
       picUrl: '/assets/images/playground/artfight2024/peejohn_rin_linin.jpg',
-      frameStyle: 'black-frame',
+      frameStyle: 'black-frame mb-auto',
       content: {
         title: 'Peejohn วาดโดย Rin Linin',
         title2: 'ตัวละครของ LilaThAplePeela',
@@ -203,7 +203,7 @@ export const artFight2024GalleryConfig: GalleryRooms = {
     },
     {
       picUrl: '/assets/images/playground/artfight2024/jacaranda_rin_linin.png',
-      frameStyle: 'black-frame',
+      frameStyle: 'black-frame mb-auto mx-auto',
       content: {
         title: 'Jacaranda วาดโดย Rin Linin',
         title2: 'ตัวละครของ Kayleona',
