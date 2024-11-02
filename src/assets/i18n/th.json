@@ -46,7 +46,11 @@
     "DESCRIPTION": "I like listen to vocaloid song and I like Miku."
   },
   "FANART": {
-    "DESCRIPTION": "Just random fan art I can't find category to put into."
+    "DESCRIPTION": "Just random fan art I can't find category to put into.",
+    "HOYOVERSE": "Hoyoverse Fanart",
+    "HOYOVERSE_DESC": "Once upon a time, I am hoyoverse creator. LoL~ And these are my art during that time.",
+    "SPY_FAMILY": "SPY X FAMILY Fanart",
+    "SPY_FAMILY_DESC": "I really Spy X Family anime, and I draw it during 1st and 2nd season."
   },
   "ART_TRAD": {
     "DESCRIPTION": "Some time I want to connect to other artist by invite them to play Art Collab game with me.",

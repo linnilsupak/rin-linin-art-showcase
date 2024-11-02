@@ -21,7 +21,7 @@ export class EtcComponent {
         title: 'Remake my old watercolor art',
         title2: 'by Rin Linin',
         subTitle: 'watercolor',
-        description: '',
+        description: 'I just discover my old art when I draw when I was a high school. And I redraw them into this peice.',
       },
       previewPic: {
         width: 'inherit',
@@ -33,10 +33,10 @@ export class EtcComponent {
       picUrl: '/assets/images/playground/etc/uzbekistan_rin_linin.webp',
       frameStyle: 'black-frame',
       content: {
-        title: '',
+        title: 'Uzbekistan Girl',
         title2: 'by Rin Linin',
         subTitle: 'watercolor',
-        description: '',
+        description: 'I want to try drawing random country challenge. And the result of country random is Uzbekistan, I have never heard of them before but I did my research before drawing this picture!',
       },
       previewPic: {
         width: 'inherit',
@@ -48,10 +48,10 @@ export class EtcComponent {
       picUrl: '/assets/images/playground/etc/novel_cover_knight_rin_linin.webp',
       frameStyle: 'black-frame',
       content: {
-        title: '',
+        title: 'Novel cover request: Female Knight',
         title2: 'by Rin Linin',
         subTitle: 'watercolor',
-        description: '',
+        description: 'One time, I want to try drawing Novel cover, so I open a request on Dek-D and I draw this cover for the novelist!',
       },
       previewPic: {
         width: 'inherit',
@@ -65,10 +65,10 @@ export class EtcComponent {
       picUrl: '/assets/images/playground/etc/tobias_rin_linin.webp',
       frameStyle: 'black-frame circle small',
       content: {
-        title: '',
+        title: 'Tobias\'s eye',
         title2: 'by Rin Linin',
         subTitle: 'watercolor',
-        description: '',
+        description: 'My old design of My OC',
       },
       previewPic: {
         width: 'inherit',
@@ -80,11 +80,12 @@ export class EtcComponent {
       picUrl: '/assets/images/playground/etc/fiona_first_draft_rin_linin.webp',
       frameStyle: 'white-frame circle small',
       content: {
-        title: '',
+        title: 'Fiona\'s eye',
         title2: 'by Rin Linin',
         subTitle: 'watercolor',
-        description: '',
+        description: 'My old design of My OC',
       },
+      isRecTemplate: true,
       previewPic: {
         width: 'inherit',
         height: 'inherit',
@@ -95,10 +96,10 @@ export class EtcComponent {
       picUrl: '/assets/images/playground/etc/happy_bun_pizza_rin_linin.webp',
       frameStyle: 'black-frame',
       content: {
-        title: '',
+        title: 'Happy bun DTIYS',
         title2: 'by Rin Linin',
         subTitle: 'watercolor',
-        description: '',
+        description: 'I see DTIYS from Happy bun, I did\'t known what DTIYS at athat time and it look fun so I participace. P.S.DTIYS is Do this in your style',
       },
       previewPic: {
         width: 'inherit',
@@ -110,10 +111,10 @@ export class EtcComponent {
       picUrl: '/assets/images/playground/etc/preist_jrpg_rin_linin.webp',
       frameStyle: 'black-frame',
       content: {
-        title: '',
+        title: 'Preist JRPG',
         title2: 'by Rin Linin',
         subTitle: 'watercolor',
-        description: '',
+        description: 'I just randomly draw some JRPG job role.',
       },
       previewPic: {
         width: 'inherit',
@@ -125,11 +126,12 @@ export class EtcComponent {
       picUrl: '/assets/images/playground/etc/2023_gift_rin_linin.webp',
       frameStyle: 'white-frame mini-frame-500',
       content: {
-        title: '',
+        title: 'My gift',
         title2: 'by Rin Linin',
         subTitle: 'watercolor',
-        description: '',
+        description: 'This drawing is a gift to someone who like pokemon.',
       },
+      isRecTemplate: true,
       previewPic: {
         width: 'inherit',
         height: 'inherit',
@@ -140,10 +142,10 @@ export class EtcComponent {
       picUrl: '/assets/images/playground/etc/rabbit_year_rin_linin.webp',
       frameStyle: 'black-frame mb-auto circle small',
       content: {
-        title: '',
+        title: 'Rabbit year',
         title2: 'by Rin Linin',
         subTitle: 'watercolor',
-        description: '',
+        description: 'On a rabbit new year, I draw this picture.',
       },
       previewPic: {
         width: 'inherit',
@@ -157,7 +159,7 @@ export class EtcComponent {
       picUrl: '/assets/images/playground/etc/infp_rin_linin.webp',
       frameStyle: 'black-frame',
       content: {
-        title: '',
+        title: 'Persona of INFP',
         title2: 'by Rin Linin',
         subTitle: 'watercolor',
         description: '',
@@ -172,10 +174,10 @@ export class EtcComponent {
       picUrl: '/assets/images/playground/etc/chinese_novel_rin_linin.webp',
       frameStyle: 'black-frame',
       content: {
-        title: '',
+        title: 'Chinese novel cover request',
         title2: 'by Rin Linin',
         subTitle: 'watercolor',
-        description: '',
+        description: 'I just want to try drawing novel cover and open request on Dek-D. This is one of my results.',
       },
       previewPic: {
         width: 'inherit',
@@ -187,10 +189,10 @@ export class EtcComponent {
       picUrl: '/assets/images/playground/etc/secret_garden_rin_linin.webp',
       frameStyle: 'black-frame',
       content: {
-        title: '',
+        title: 'Marry in Secret Garden',
         title2: 'by Rin Linin',
         subTitle: 'watercolor',
-        description: '',
+        description: 'For a past-time book sudject, I like this book the mose and I revisit those memory by drawing Marry the protagonist of that book.',
       },
       previewPic: {
         width: 'inherit',

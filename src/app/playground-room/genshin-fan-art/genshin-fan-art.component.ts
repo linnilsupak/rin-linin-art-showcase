@@ -84,7 +84,7 @@ export class GenshinFanArtComponent {
       content: {
         title: 'Lyney & Lynette',
         title2: 'Draw by Rin Linin',
-        subTitle: 'watercolor',
+        subTitle: 'color pencil',
         description: '',
       },
       isRecTemplate: true,
@@ -285,7 +285,7 @@ export class GenshinFanArtComponent {
       content: {
         title: 'Neuvillette',
         title2: 'Draw by Rin Linin',
-        subTitle: 'watercolor',
+        subTitle: 'color pencil',
         description: '',
       },
       isRecTemplate: true,
@@ -499,7 +499,7 @@ export class GenshinFanArtComponent {
       content: {
         title: 'Furina',
         title2: 'Draw by Rin Linin',
-        subTitle: 'watercolor',
+        subTitle: 'color pencil',
         description: '',
       },
       previewPic: {

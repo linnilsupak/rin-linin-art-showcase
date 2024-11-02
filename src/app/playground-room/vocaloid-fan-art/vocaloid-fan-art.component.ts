@@ -18,10 +18,10 @@ export class VocaloidFanArtComponent {
       picUrl: '/assets/images/playground/vocaloid/sakura_miku_rin_linin.webp',
       frameStyle: 'white-frame small',
       content: {
-        title: '',
-        title2: 'Design and draw by Rin Linin',
+        title: 'Sakura Miku',
+        title2: 'Draw by Rin Linin',
         subTitle: 'watercolor',
-        description: '',
+        description: 'I like miku various dress design so I draw many of them. Sakura Miku is one of them.',
       },
       previewPic: {
         width: 'inherit',
@@ -33,10 +33,10 @@ export class VocaloidFanArtComponent {
       picUrl: '/assets/images/playground/vocaloid/snow_miku_rin_linin.webp',
       frameStyle: 'white-frame small',
       content: {
-        title: '',
-        title2: 'Design and draw by Rin Linin',
+        title: 'Snow miku',
+        title2: 'Draw by Rin Linin',
         subTitle: 'watercolor',
-        description: '',
+        description: 'I like snow miku design. It feel like it\'s snow on a new year!',
       },
       previewPic: {
         width: 'inherit',
@@ -48,10 +48,10 @@ export class VocaloidFanArtComponent {
       picUrl: '/assets/images/playground/vocaloid/bridal_miku_rin_linin.webp',
       frameStyle: 'white-frame small',
       content: {
-        title: '',
-        title2: 'Design and draw by Rin Linin',
+        title: 'Bridal Miku',
+        title2: 'Draw by Rin Linin',
         subTitle: 'watercolor',
-        description: '',
+        description: 'Ha ha this is my version of Miku design. I just feel like to draw Miku in bridal dress.',
       },
       previewPic: {
         width: 'inherit',

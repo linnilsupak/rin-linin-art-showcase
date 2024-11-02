@@ -18,10 +18,10 @@ export class VtuberFanArtComponent {
       picUrl: '/assets/images/playground/vtuber/dacopo_vtuber_rin_linin.webp',
       frameStyle: 'white-frame small',
       content: {
-        title: '',
-        title2: 'Design and draw by Rin Linin',
+        title: 'Dacapo: Orion',
+        title2: 'Draw by Rin Linin',
         subTitle: 'watercolor',
-        description: 'I visit Team Lab at Japan and the flower room kind of made me want to draw this picture.'
+        description: 'I just stumble apon Orion MV and I find their design is so cool and Dacapo in the MV look so shota so I kind of draw him.'
       },
       previewPic: {
         width: 'inherit',
@@ -33,10 +33,10 @@ export class VtuberFanArtComponent {
       picUrl: '/assets/images/playground/vtuber/baabel_vtuber_rin_linin.webp',
       frameStyle: 'white-frame small',
       content: {
-        title: '',
+        title: 'Baabel: orion',
         title2: 'Design and draw by Rin Linin',
         subTitle: 'watercolor',
-        description: 'I visit Team Lab at Japan and the flower room kind of made me want to draw this picture.'
+        description: 'When I watch Dacapo debut, he didn\'t look that shota though but Baabel look more shota than him so I kind of draw him next. Ha ha'
       },
       previewPic: {
         width: 'inherit',
@@ -50,11 +50,12 @@ export class VtuberFanArtComponent {
       picUrl: '/assets/images/playground/vtuber/melody_vtuber_rin_linin.webp',
       frameStyle: 'white-frame small',
       content: {
-        title: '',
+        title: 'Mycara Melony',
         title2: 'Design and draw by Rin Linin',
         subTitle: 'watercolor',
-        description: 'I visit Team Lab at Japan and the flower room kind of made me want to draw this picture.'
+        description: 'I like her singing voice ha ha and I really like the sound of her piano.'
       },
+      isRecTemplate: true,
       previewPic: {
         width: 'inherit',
         height: 'inherit',
