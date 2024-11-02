@@ -30,6 +30,7 @@ export const routes: Routes = [
     data: {
         minimizeFlag: true
     },
+    title: 'Playground menu: Rin Linin',
     loadComponent: () => import('./playground/playground.component').then(c => c.PlaygroundComponent)
   },
   {
