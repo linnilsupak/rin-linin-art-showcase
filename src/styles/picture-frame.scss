@@ -1,7 +1,7 @@
 .circle {
   border-radius: 50%;
 
-  img {
+  * {
     border-radius: 50%;
   }
 }
@@ -24,6 +24,14 @@
   }
 }
 
+.mini-frame-400 {
+  width: fit-content;
+  max-width: 100%;
+
+  @include media-breakpoint-up(lg) {
+    width: 400px;
+  }
+}
 .mini-frame-500 {
   width: fit-content;
   max-width: 100%;
@@ -148,7 +156,6 @@
 
 
 .black-frame {
-  display: inline-block;
   padding: 40px;
   border-width: 20px;
   border-style: solid;

@@ -1,0 +1,7 @@
+@if (imageLoaded) {
+  <div class="d-flex justify-content-center align-items-center" [style.width]="width" [style.height]="height">
+    <app-mini-spinning [color]="'dark'"></app-mini-spinning>
+  </div>
+}
+<img [src]="srcLink" (load)="imageFinishLoad()" (error)="imageFinishLoad()"
+alt="{{ alt }}"  [class.d-none]="imageLoaded" class="{{class}}">

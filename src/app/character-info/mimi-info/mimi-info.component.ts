@@ -15,7 +15,7 @@ export class MimiInfoComponent {
   private matDialog = inject(MatDialog);
   mimiMyart = [{
     picUrl: '/assets/images/original/mimi/mimi_ori_rin_linin.png?v=10',
-    frameStyle: 'black-frame',
+    frameStyle: 'black-frame mini-frame-500',
     content: {
       title: 'Mimi',
       title2: 'Original design by Rin Linin',

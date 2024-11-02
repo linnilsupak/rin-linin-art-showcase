@@ -17,7 +17,7 @@ export class AddClassOnScrollPositionDirective implements OnDestroy {
   private scrollPositionService: ScrollPositionService,
   private el: ElementRef) {
     this.isBrowser = isPlatformBrowser(platformId);
-    if (!this.isBrowser) return;
+    if (!this.isBrowser && !this.appAddClassOnScrollPosition) return;
     this.subscription.add(
       combineLatest([this.scrollPositionService.scrollPosition$, this.scrollPositionService.windowHeight$])
       .subscribe(([position, wHeight]) => {
@@ -25,11 +25,11 @@ export class AddClassOnScrollPositionDirective implements OnDestroy {
           && ((this.el.nativeElement.offsetTop + (this.el.nativeElement.offsetHeight/2) - wHeight) < position)) {
           this.added = true;
           setTimeout(() => {
-            this.el.nativeElement.classList.add(this.appAddClassOnScrollPosition);
+            if (this.appAddClassOnScrollPosition) this.el.nativeElement.classList.add(this.appAddClassOnScrollPosition);
           }, this.addClassDelay);
-        } else if(position === 0) {
+        } else if(position === 0 && this.el.nativeElement.classList) {
           this.added = false;
-          this.el.nativeElement.classList.remove(this.appAddClassOnScrollPosition);
+          if (this.appAddClassOnScrollPosition) this.el.nativeElement.classList.remove(this.appAddClassOnScrollPosition);
         }
       })
     );

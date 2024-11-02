@@ -61,6 +61,7 @@ $rin-linin-art-showcase-theme: mat.define-theme((
 
 @import "bootstrap-mixin";
 @import "styles/fonts";
+@import "picture-frame";
 
 body {
     background: linear-gradient(180deg in oklab, #{var.$blue-bg}, #{var.$pink-bg});

@@ -1,7 +1,7 @@
-<div class="container-fluid mt-3 d-flex d-md-block container-height">
-  <div class="row my-auto my-md-0">
+<div class="container-fluid mt-3 d-flex container-height">
+  <div class="row my-auto my-md-0 row-content">
     <div class="col-12 mb-2 mb-md-0 d-flex" [class.col-md]="!isRecTemplate()" [class.col-md-8]="isRecTemplate()">
-      <div class="{{ frameStyle() }} mx-auto">
+      <div class="{{ frameStyle() }} m-auto">
         @if (imageLoaded) {
           <div class="d-flex justify-content-center align-items-center" [style.min-width]="minWidth()" [style.min-height]="minHeight()">
             <app-mini-spinning [color]="'dark'"></app-mini-spinning>

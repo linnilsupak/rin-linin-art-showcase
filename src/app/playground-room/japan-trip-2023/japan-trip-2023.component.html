@@ -1,0 +1,19 @@
+<div class="container-fluid container-lg mt-5">
+  <div class="sub-title top-content-frame d-flex">
+      <a [routerLink]="'/playground'" class="d-flex align-items-center ms-auto ms-md-4 me-auto">
+        <span class="material-symbols-rounded">
+          arrow_back_ios
+        </span> Back
+      </a>
+    </div>
+  <div>
+      <app-reflection-font [text]="'PLAYGROUND.JAPAN_TRIP' | translate" [fontClass]="'mx-auto sub-title'"></app-reflection-font>
+  </div>
+  <div class="section-content section-color mb-4">
+      {{'JAPAN_TRIP.DESCRIPTION' | translate}}
+  </div>
+  <app-gallery-room [galleryRoom]="japanTrip" [pattern]="'center'"></app-gallery-room>
+  <div class="blank-space">&nbsp;</div>
+  <app-playground-bottom-menu [currentLabel]="'PLAYGROUND.JAPAN_TRIP'"></app-playground-bottom-menu>
+  <div class="mb-3">&nbsp;</div>
+</div>

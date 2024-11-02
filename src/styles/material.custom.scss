@@ -7,8 +7,9 @@
     height: 100%!important;
     @include media-breakpoint-up(md) {
       min-height: 50vh!important;
-      height: fit-content!important;
-      max-width: fit-content!important;
+      // height: fit-content!important;
+      width: fit-content!important;
+      max-width: 80vw;
     }
   }
 
@@ -16,7 +17,7 @@
     padding: 20px 10px;
 
   @include media-breakpoint-up(md) {
-    padding: 38px;
+    padding: 30px;
   }
   }
 }
