@@ -8,51 +8,63 @@ import { FanArtComponent } from './fan-art/fan-art.component';
 import { ArtTradeComponent } from './art-trade/art-trade.component';
 import { EtcComponent } from './etc/etc.component';
 import { VtuberFanArtComponent } from './vtuber-fan-art/vtuber-fan-art.component';
+import { importProvidersFrom } from "@angular/core";
+import { TranslateModule } from "@ngx-translate/core";
 
 export const playgroundRoomRoutes: Routes = [
-    {
+  {
+    path: '',
+    providers: [
+      importProvidersFrom([
+        TranslateModule.forChild()
+      ])
+    ],
+    children: [
+      {
         path: 'art-fight-2024',
         title: 'ArtFight 2024: Rin Linin',
         component: ArtFight2024Component
-    },
-    {
+      },
+      {
         path: 'japan-trip-2023',
         title: 'Japan Trip 2023: Rin Linin',
         component: JapanTrip2023Component
-    },
-    {
-      path: 'sweet-art',
-      title: 'Sweet Art: Rin Linin',
-      component: SweetArtComponent
-    },
-    {
-      path: 'genshin-fan-art',
-      title: 'Genshin Fan Art: Rin Linin',
-      component: GenshinFanArtComponent
-    },
-    {
-      path: 'vocaloid-fan-art',
-      title: 'Vocaloid Fan Art: Rin Linin',
-      component: VocaloidFanArtComponent
-    },
-    {
-      path: 'vtuber-fan-art',
-      title: 'Vtuber Fan Art: Rin Linin',
-      component: VtuberFanArtComponent
-    },
-    {
-      path: 'fan-art',
-      title: 'Fan Art: Rin Linin',
-      component: FanArtComponent
-    },
-    {
-      path: 'art-collab',
-      title: 'Art Collaboration: Rin Linin',
-      component: ArtTradeComponent
-    },
-    {
-      path: 'etc',
-      title: 'Etc: Rin Linin',
-      component: EtcComponent
-    }
+      },
+      {
+        path: 'sweet-art',
+        title: 'Sweet Art: Rin Linin',
+        component: SweetArtComponent
+      },
+      {
+        path: 'genshin-fan-art',
+        title: 'Genshin Fan Art: Rin Linin',
+        component: GenshinFanArtComponent
+      },
+      {
+        path: 'vocaloid-fan-art',
+        title: 'Vocaloid Fan Art: Rin Linin',
+        component: VocaloidFanArtComponent
+      },
+      {
+        path: 'vtuber-fan-art',
+        title: 'Vtuber Fan Art: Rin Linin',
+        component: VtuberFanArtComponent
+      },
+      {
+        path: 'fan-art',
+        title: 'Fan Art: Rin Linin',
+        component: FanArtComponent
+      },
+      {
+        path: 'art-collab',
+        title: 'Art Collaboration: Rin Linin',
+        component: ArtTradeComponent
+      },
+      {
+        path: 'etc',
+        title: 'Etc: Rin Linin',
+        component: EtcComponent
+      }
+    ]
+  }
 ];

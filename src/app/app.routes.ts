@@ -23,11 +23,6 @@ export const routes: Routes = [
     data: {
         minimizeFlag: true
     },
-    providers: [
-      importProvidersFrom([
-        TranslateModule.forChild()
-      ])
-    ],
     loadChildren: () => import('./playground-room/playground.routes').then(c => c.playgroundRoomRoutes)
   },
   {

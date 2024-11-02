@@ -68,6 +68,7 @@ export class FanArtComponent {
         subTitle: 'watercolor',
         description: '',
       },
+      isRecTemplate: true,
       previewPic: {
         width: 'inherit',
         height: 'inherit',
@@ -76,13 +77,14 @@ export class FanArtComponent {
     },
     {
       picUrl: '/assets/images/playground/other-fanart/hikari_pilpup_rin_linin.webp',
-      frameStyle: 'black-frame small',
+      frameStyle: 'black-frame small mini-frame-300',
       content: {
         title: 'Pokemon: Hikari & pilpup',
         title2: 'Draw by Rin Linin',
         subTitle: 'watercolor',
         description: '',
       },
+      isRecTemplate: true,
       previewPic: {
         width: 'inherit',
         height: 'inherit',
@@ -114,6 +116,7 @@ export class FanArtComponent {
         subTitle: 'watercolor',
         description: '',
       },
+      isRecTemplate: true,
       previewPic: {
         width: 'inherit',
         height: 'inherit',
@@ -207,6 +210,7 @@ export class FanArtComponent {
         subTitle: 'watercolor',
         description: '',
       },
+      isRecTemplate: true,
       previewPic: {
         width: 'inherit',
         height: 'inherit',
@@ -269,6 +273,7 @@ export class FanArtComponent {
         subTitle: 'watercolor',
         description: '',
       },
+      isRecTemplate: true,
       previewPic: {
         width: 'inherit',
         height: 'inherit',
@@ -349,6 +354,7 @@ export class FanArtComponent {
         subTitle: 'watercolor',
         description: '',
       },
+      isRecTemplate: true,
       previewPic: {
         width: 'inherit',
         height: 'inherit',
@@ -382,6 +388,7 @@ export class FanArtComponent {
         subTitle: 'watercolor',
         description: '',
       },
+      isRecTemplate: true,
       previewPic: {
         width: 'inherit',
         height: 'inherit',
