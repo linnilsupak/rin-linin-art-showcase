@@ -23,6 +23,7 @@ export class SweetArtComponent {
         subTitle: 'watercolor',
         description: 'I just want to draw dessert as cute girl and go to after you to get inspiration. And here one of the elements in the menu "Chocolate Lava" the strawberry! on that plate. It\'s delicious~'
       },
+      isRecTemplate: true,
       previewPic: {
         width: 'inherit',
         height: 'inherit',
@@ -56,6 +57,7 @@ export class SweetArtComponent {
         subTitle: 'watercolor',
         description: 'One of the elements in the menu "Chocolate Lava", Ice-cream~'
       },
+      isRecTemplate: true,
       previewPic: {
         width: 'inherit',
         height: 'inherit',
@@ -73,6 +75,7 @@ export class SweetArtComponent {
         subTitle: 'color pencil',
         description: 'After dessert, you must go to sweet tea and I choose green team top with bubble!'
       },
+      isRecTemplate: true,
       previewPic: {
         width: 'inherit',
         height: 'inherit',

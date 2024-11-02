@@ -29,7 +29,7 @@ export const playgroundMenuConfig = [
   },
   {
     label: 'PLAYGROUND.ART_TRAD',
-    link: '/playground-room/art-trade'
+    link: '/playground-room/art-collab'
   },
   {
     label: 'PLAYGROUND.ETC',

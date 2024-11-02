@@ -18,10 +18,10 @@ export class VocaloidFanArtComponent {
       picUrl: '/assets/images/playground/vocaloid/sakura_miku_rin_linin.webp',
       frameStyle: 'white-frame small',
       content: {
-        title: 'Rin Linin: Flower room',
+        title: '',
         title2: 'Design and draw by Rin Linin',
         subTitle: 'watercolor',
-        description: 'I visit Team Lab at Japan and the flower room kind of made me want to draw this picture.'
+        description: '',
       },
       previewPic: {
         width: 'inherit',
@@ -33,10 +33,10 @@ export class VocaloidFanArtComponent {
       picUrl: '/assets/images/playground/vocaloid/snow_miku_rin_linin.webp',
       frameStyle: 'white-frame small',
       content: {
-        title: 'Rin Linin: Flower room',
+        title: '',
         title2: 'Design and draw by Rin Linin',
         subTitle: 'watercolor',
-        description: 'I visit Team Lab at Japan and the flower room kind of made me want to draw this picture.'
+        description: '',
       },
       previewPic: {
         width: 'inherit',
@@ -48,10 +48,10 @@ export class VocaloidFanArtComponent {
       picUrl: '/assets/images/playground/vocaloid/bridal_miku_rin_linin.webp',
       frameStyle: 'white-frame small',
       content: {
-        title: 'Rin Linin: Flower room',
+        title: '',
         title2: 'Design and draw by Rin Linin',
         subTitle: 'watercolor',
-        description: 'I visit Team Lab at Japan and the flower room kind of made me want to draw this picture.'
+        description: '',
       },
       previewPic: {
         width: 'inherit',

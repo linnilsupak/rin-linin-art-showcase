@@ -18,7 +18,7 @@ export class VtuberFanArtComponent {
       picUrl: '/assets/images/playground/vtuber/dacopo_vtuber_rin_linin.webp',
       frameStyle: 'white-frame small',
       content: {
-        title: 'Rin Linin: Flower room',
+        title: '',
         title2: 'Design and draw by Rin Linin',
         subTitle: 'watercolor',
         description: 'I visit Team Lab at Japan and the flower room kind of made me want to draw this picture.'
@@ -33,7 +33,7 @@ export class VtuberFanArtComponent {
       picUrl: '/assets/images/playground/vtuber/baabel_vtuber_rin_linin.webp',
       frameStyle: 'white-frame small',
       content: {
-        title: 'Rin Linin: Flower room',
+        title: '',
         title2: 'Design and draw by Rin Linin',
         subTitle: 'watercolor',
         description: 'I visit Team Lab at Japan and the flower room kind of made me want to draw this picture.'
@@ -50,7 +50,7 @@ export class VtuberFanArtComponent {
       picUrl: '/assets/images/playground/vtuber/melody_vtuber_rin_linin.webp',
       frameStyle: 'white-frame small',
       content: {
-        title: 'Rin Linin: Flower room',
+        title: '',
         title2: 'Design and draw by Rin Linin',
         subTitle: 'watercolor',
         description: 'I visit Team Lab at Japan and the flower room kind of made me want to draw this picture.'

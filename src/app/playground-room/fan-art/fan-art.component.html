@@ -12,7 +12,15 @@
   <div class="section-content section-color mb-4">
       {{'FANART.DESCRIPTION' | translate}}
   </div>
-  <!-- <app-gallery-room [galleryRoom]="japanTrip" [pattern]="'center'"></app-gallery-room> -->
+  <app-gallery-room [galleryRoom]="fanart1" [enableSlidIn]="true"></app-gallery-room>
+  <div class="blank-space">&nbsp;</div>
+  <app-gallery-room [galleryRoom]="fanart2"  [enableSlidIn]="true"></app-gallery-room>
+  <div class="blank-space">&nbsp;</div>
+  <app-gallery-room [galleryRoom]="fanart3" [pattern]="'equal'" [enableSlidIn]="true"></app-gallery-room>
+  <app-gallery-room [galleryRoom]="fanart4" [pattern]="'equal'" [enableSlidIn]="true"></app-gallery-room>
+  <div class="blank-space">&nbsp;</div>
+  <app-gallery-room [galleryRoom]="fanart5" [enableSlidIn]="true"></app-gallery-room>
+  <app-gallery-room [galleryRoom]="fanart6" [enableSlidIn]="true"></app-gallery-room>
   <div class="blank-space">&nbsp;</div>
   <app-playground-bottom-menu [currentLabel]="'PLAYGROUND.FANART'"></app-playground-bottom-menu>
   <div class="mb-3">&nbsp;</div>

@@ -46,8 +46,8 @@ export const playgroundRoomRoutes: Routes = [
       component: FanArtComponent
     },
     {
-      path: 'art-trade',
-      title: 'Art Trade: Rin Linin',
+      path: 'art-collab',
+      title: 'Art Collaboration: Rin Linin',
       component: ArtTradeComponent
     },
     {
