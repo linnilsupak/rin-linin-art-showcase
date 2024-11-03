@@ -1,4 +1,13 @@
+@use '@angular/material' as mat;
+@use 'variables' as var;
 @import "bootstrap-mixin";
+
+.mini-form {
+  @include mat.form-field-density(-3);
+  @include mat.button-density(-3);
+  @include mat.icon-density(-3);
+  @include mat.icon-button-density(-3);
+}
 
 .select {
     width: 100%;
@@ -6,7 +15,7 @@
       width: inherit;
     }
   }
-  
+
   .big-search {
     width: 100%;
     @include media-breakpoint-up(md) {
@@ -14,8 +23,11 @@
       min-width: 300px;
     }
   }
-  
+
   .big-button {
     --mdc-filled-button-container-height: 58px;
   }
-  
+
+  .mini-button {
+    --mdc-filled-button-container-height: 44px;
+  }

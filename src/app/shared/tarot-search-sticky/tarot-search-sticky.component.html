@@ -1,4 +1,5 @@
 <div class="float-search">
-  <app-tarot-search [formValue]="tarotFormData" (onSelectCard)="selectCard($event)" (searchVal)="selectedCard=$event"
+  <app-tarot-search [view]="'sticky'"
+  [formValue]="tarotFormData" (onSelectCard)="selectCard($event)" (searchVal)="selectedCard=$event"
   (onselectCategory)="selectCategory($event)"></app-tarot-search>
 </div>

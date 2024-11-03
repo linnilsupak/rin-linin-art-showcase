@@ -15,21 +15,23 @@ import { tarotCategory } from '../../core/enum/tarot-category.enum';
 import { CardInfo } from '../../core/models/card-info.model';
 import { TarotConfig } from '../../core/models/tarot-config.model';
 import { TarotFormData } from '../../core/models/tarot-form-data.model';
+import { CommonModule } from '@angular/common';
 
 @Component({
   selector: 'app-tarot-search',
   standalone: true,
-  imports: [TranslateModule, MatButtonModule, RouterLink,
+  imports: [TranslateModule, MatButtonModule, RouterLink, CommonModule,
     MatFormFieldModule, MatSelectModule, MatInputModule,ReactiveFormsModule, MatAutocompleteModule],
   templateUrl: './tarot-search.component.html',
   styleUrl: './tarot-search.component.scss'
 })
 export class TarotSearchComponent implements OnInit, OnDestroy {
   readonly tarotCards: TarotConfig = cloneDeep(tarotConfig);
-  @Input() 
+  @Input()
   set formValue(val: TarotFormData) {
     this.filterForm.setValue(val, {emitEvent: false});
   }
+  @Input() view: 'tarot' | 'sticky' = 'tarot';
   @Output() onSelectCard = new EventEmitter<TarotConfig>();
   @Output() onselectCategory = new EventEmitter<tarotCategory | ''>();
   @Output() searchVal = new EventEmitter<CardInfo>();
