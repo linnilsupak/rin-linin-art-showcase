@@ -29,7 +29,12 @@ export class TarotSearchComponent implements OnInit, OnDestroy {
   readonly tarotCards: TarotConfig = cloneDeep(tarotConfig);
   @Input()
   set formValue(val: TarotFormData) {
-    this.filterForm.setValue(val, {emitEvent: false});
+    if (val.category && val.search) {
+      this.filterForm.setValue(val, {emitEvent: false});
+    } else {
+      this.filterForm.controls.category.setValue(val.category, {emitEvent: false});
+      this.filterForm.controls.search.setValue(val.search, {emitEvent: false});
+    }
   }
   @Input() view: 'tarot' | 'sticky' = 'tarot';
   @Output() onSelectCard = new EventEmitter<TarotConfig>();
