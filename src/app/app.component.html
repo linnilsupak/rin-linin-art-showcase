@@ -1,7 +1,7 @@
 <app-header [minimizeFlag]="minimizeFlag"></app-header>
 <div class="header"></div>
 <div class="content" #content appSetMainScrollPosition>
-    <app-scroll-up-button [scrollableDiv]="content" [scrollWidth]="scrollWidth"></app-scroll-up-button>
+    <app-scroll-up-button [hideButton]="!showScrollUp" [scrollableDiv]="content" [scrollWidth]="scrollWidth"></app-scroll-up-button>
     <router-outlet></router-outlet>
     <footer class="footer text-center">
         {{ 'FOOTER.TEXT' | translate}}
@@ -9,3 +9,4 @@
 </div>
 <app-starry-sky></app-starry-sky>
 <app-loading></app-loading>
+<app-tarot-search-sticky></app-tarot-search-sticky>

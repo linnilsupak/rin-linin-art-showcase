@@ -1,0 +1,14 @@
+@use "variables" as var;
+
+.float-search {
+    background-color: var.$white;
+    border-radius: 36px;
+    padding: 10px 20px;
+    position: fixed;
+    bottom: 4px;
+    left: 50%;
+    transform: translate(-50%, 0);
+    min-width: 300px;
+    z-index: var.$sticky-level;
+    height: 77px;
+}

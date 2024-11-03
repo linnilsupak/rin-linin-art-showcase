@@ -9,7 +9,8 @@
     {{'GLOBAL.DONT_LIST' | translate}}<br />
     {{'GLOBAL.DONT_LIST_SUB' | translate}}
   </div>
-  <app-tarot-search (onSelectCard)="selectCard($event)" (onselectCategory)="selectCategory($event)"></app-tarot-search>
+  <app-tarot-search [formValue]="tarotFormData" (searchVal)="selectedCard=$event"
+  (onSelectCard)="selectCard($event)" (onselectCategory)="selectCategory($event)"></app-tarot-search>
 
   @if ((tarotCategory.MAJOR_ARCANA === selectedCategory || !selectedCategory) && tarots.major) {
     <div class="section-topic section-color mb-2">

@@ -1,12 +1,5 @@
 import { Component, EventEmitter, Input, OnDestroy, OnInit, Output } from '@angular/core';
-import { tarotConfig } from '../../core/config/tarot.config';
-import cloneDeep from 'lodash-es/cloneDeep';
-import { TarotConfig } from '../../core/models/tarot-config.model';
-import { FormGroup, FormControl, ReactiveFormsModule } from '@angular/forms';
-import { debounceTime, Subscription } from 'rxjs';
-import { mainConfig } from '../../core/config/main.config';
-import { tarotCategory } from '../../core/enum/tarot-category.enum';
-import { CardInfo } from '../../core/models/card-info.model';
+import { FormControl, FormGroup, ReactiveFormsModule } from '@angular/forms';
 import { MatAutocompleteModule } from '@angular/material/autocomplete';
 import { MatButtonModule } from '@angular/material/button';
 import { MatFormFieldModule } from '@angular/material/form-field';
@@ -14,6 +7,14 @@ import { MatInputModule } from '@angular/material/input';
 import { MatSelectModule } from '@angular/material/select';
 import { RouterLink } from '@angular/router';
 import { TranslateModule } from '@ngx-translate/core';
+import cloneDeep from 'lodash-es/cloneDeep';
+import { debounceTime, Subscription } from 'rxjs';
+import { mainConfig } from '../../core/config/main.config';
+import { tarotConfig } from '../../core/config/tarot.config';
+import { tarotCategory } from '../../core/enum/tarot-category.enum';
+import { CardInfo } from '../../core/models/card-info.model';
+import { TarotConfig } from '../../core/models/tarot-config.model';
+import { TarotFormData } from '../../core/models/tarot-form-data.model';
 
 @Component({
   selector: 'app-tarot-search',
@@ -25,8 +26,13 @@ import { TranslateModule } from '@ngx-translate/core';
 })
 export class TarotSearchComponent implements OnInit, OnDestroy {
   readonly tarotCards: TarotConfig = cloneDeep(tarotConfig);
-  @Output() onSelectCard = new EventEmitter();
-  @Output() onselectCategory = new EventEmitter();
+  @Input() 
+  set formValue(val: TarotFormData) {
+    this.filterForm.setValue(val, {emitEvent: false});
+  }
+  @Output() onSelectCard = new EventEmitter<TarotConfig>();
+  @Output() onselectCategory = new EventEmitter<tarotCategory | ''>();
+  @Output() searchVal = new EventEmitter<CardInfo>();
   preOrder = '?usp=pp_url&entry.946658341=%22Rin+Linin%22+Tarot:+Pre+order+(When+finished.)';
   tarotOptions: TarotConfig = cloneDeep(this.tarotCards);
   majorArcana = this.tarotOptions.major;
@@ -36,8 +42,8 @@ export class TarotSearchComponent implements OnInit, OnDestroy {
   coins = this.tarotOptions.coins;
   showClose = false;
   filterForm = new FormGroup({
-    category: new FormControl(''),
-    search: new FormControl('')
+    category: new FormControl<tarotCategory | ''>(''),
+    search: new FormControl<CardInfo | string>('')
   });
   tarotCategory = tarotCategory;
   category = [
@@ -72,7 +78,6 @@ export class TarotSearchComponent implements OnInit, OnDestroy {
         this.onselectCategory.emit(val);
       })
     );
-    
   }
 
   ngOnDestroy(): void {
@@ -89,6 +94,7 @@ export class TarotSearchComponent implements OnInit, OnDestroy {
   }
 
   selectCard(card: CardInfo) {
+    this.searchVal.emit(card);
     if (card) {
       let suitName;
       switch(card.category) {
@@ -124,7 +130,7 @@ export class TarotSearchComponent implements OnInit, OnDestroy {
     }
   }
 
-  private filterOption(val: string, category: tarotCategory, suiteName: string) {
+  private filterOption(val: string | CardInfo, category: tarotCategory, suiteName: string) {
     if ((this.filterForm.controls.category.value === category.toString() || !this.filterForm.controls.category.value) && typeof val === 'string') {
       const suitName = category.substring(0, category.length - 1).replace('_', ' ').toLowerCase();
       return this.tarotOptions[suiteName].filter(item => {
