@@ -1,0 +1,52 @@
+<div class="d-flex mb-4">
+    <form [formGroup]="filterForm" class="mx-0 mx-sm-auto d-flex big-search flex-column flex-sm-row">
+      <mat-form-field class="me-2 select d-none d-md-block">
+        <mat-label>Category</mat-label>
+        <mat-select formControlName="category">
+          @for (item of category; track item) {
+          <mat-option [value]="item.value">{{item.label}}</mat-option>
+          }
+        </mat-select>
+      </mat-form-field>
+      <mat-form-field class="big-search">
+        <mat-label>search</mat-label>
+        <input type="text" placeholder="Pick one" aria-label="Number" matInput formControlName="search"
+          [matAutocomplete]="auto">
+          @if (showClose) {
+            <mat-icon matSuffix class="material-symbols-rounded me-2 cursor" (click)="clearSearch()">close</mat-icon>
+          }
+      </mat-form-field>
+      <mat-autocomplete #auto="matAutocomplete" [displayWith]="displayFn" (optionSelected)="selectCard($event.option.value)">
+        @if (tarotCategory.MAJOR_ARCANA === filterForm.controls.category.value || !filterForm.controls.category.value) {
+          @for (option of majorArcana; track option) {
+            <mat-option [value]="option">{{option.name}}</mat-option>
+            }
+        }
+        @if (tarotCategory.WANDS === filterForm.controls.category.value || !filterForm.controls.category.value) {
+          @for (option of wands; track option) {
+            <mat-option [value]="option">{{option.name}}</mat-option>
+            }
+        }
+        @if (tarotCategory.CUPS === filterForm.controls.category.value || !filterForm.controls.category.value) {
+          @for (option of cups; track option) {
+            <mat-option [value]="option">{{option.name}}</mat-option>
+            }
+        }
+        @if (tarotCategory.SWORDS === filterForm.controls.category.value || !filterForm.controls.category.value) {
+          @for (option of swords; track option) {
+            <mat-option [value]="option">{{option.name}}</mat-option>
+            }
+        }
+        @if (tarotCategory.COINS === filterForm.controls.category.value || !filterForm.controls.category.value) {
+          @for (option of coins; track option) {
+            <mat-option [value]="option">{{option.name}}</mat-option>
+            }
+        }
+      </mat-autocomplete>
+      <a mat-flat-button type="button" class="ms-0 ms-md-5 big-button" routerLink="/contact-me" [queryParams]="{ prefill: preOrder, backUrl: '/tarots' }">
+        <div class="d-flex">
+          <span class="material-symbols-rounded me-2">shopping_cart</span>Pre-Order This Tarot Deck
+        </div>
+      </a>
+    </form>
+  </div>
