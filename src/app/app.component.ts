@@ -1,6 +1,7 @@
 import { isPlatformServer } from '@angular/common';
 import { AfterViewInit, Component, ElementRef, inject, Inject, PLATFORM_ID, ViewChild } from '@angular/core';
 import { ActivatedRoute, NavigationEnd, Router, RouterOutlet } from '@angular/router';
+import { TranslateModule } from '@ngx-translate/core';
 import { filter, pairwise, startWith, switchMap, tap } from 'rxjs';
 import { mainConfig } from './core/config/main.config';
 import { ScrollPositionService } from './core/service/scroll-position.service';
@@ -8,14 +9,14 @@ import { WINDOW_PROVIDERS } from './core/service/window.service';
 import { SetMainScrollPositionDirective } from './core/set-main-scroll-position.directive';
 import { HeaderComponent } from './header/header.component';
 import { ScrollUpButtonComponent } from "./scroll-up-button/scroll-up-button.component";
-import { StarrySkyComponent } from "./starry-sky/starry-sky.component";
-import { TranslateModule } from '@ngx-translate/core';
 import { LoadingComponent } from "./shared/loading/loading.component";
+import { StarrySkyComponent } from "./starry-sky/starry-sky.component";
+import { TarotSearchStickyComponent } from "./shared/tarot-search-sticky/tarot-search-sticky.component";
 
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [RouterOutlet, HeaderComponent, ScrollUpButtonComponent, TranslateModule, StarrySkyComponent, SetMainScrollPositionDirective, LoadingComponent],
+  imports: [RouterOutlet, HeaderComponent, ScrollUpButtonComponent, TranslateModule, StarrySkyComponent, SetMainScrollPositionDirective, LoadingComponent, TarotSearchStickyComponent],
   providers: [WINDOW_PROVIDERS],
   templateUrl: './app.component.html',
   styleUrl: './app.component.scss'
@@ -27,6 +28,8 @@ export class AppComponent implements AfterViewInit {
   minimizeFlag = true;
   isServer = false;
   scrollWidth = 0;
+  showScrollUp = false;
+  showSearchTarot = false;
   constructor(private router: Router, @Inject(PLATFORM_ID) platformId: Object,
     private scrollPositionService: ScrollPositionService) {
     this.isServer = isPlatformServer(platformId);
@@ -40,8 +43,8 @@ export class AppComponent implements AfterViewInit {
         const resetScrollZero = previousValue?.url?.split('#')[0] !== currentValue?.url?.split('#')[0];
         if (resetScrollZero) {
           this.scrollPositionService.setLoading(false);
-          this.scrollPositionService.setScrollHeight(Math.abs(this.scrollableDiv.nativeElement.scrollHeight - this.scrollableDiv.nativeElement.clientHeight));
           if (this.scrollableDiv) {
+            this.scrollPositionService.setScrollHeight(Math.abs(this.scrollableDiv.nativeElement.scrollHeight - this.scrollableDiv.nativeElement.clientHeight));
             setTimeout(() => {
               this.scrollWidth = this.scrollableDiv.nativeElement.offsetWidth - this.scrollableDiv.nativeElement.scrollWidth;
             }, mainConfig.timeoutAfterInit);
@@ -52,7 +55,7 @@ export class AppComponent implements AfterViewInit {
         return resetScrollZero;
       }),
       switchMap(() => {
-        (this.scrollableDiv.nativeElement as HTMLDivElement).scrollTo(0, 0);
+        if (this.scrollableDiv) (this.scrollableDiv.nativeElement as HTMLDivElement).scrollTo(0, 0);
         return this.scrollPositionService.scrollPosition$.pipe(
           filter(p => p === 0),
         );
@@ -60,13 +63,24 @@ export class AppComponent implements AfterViewInit {
     ).subscribe((p) => {
       this.scrollPositionService.setLoading(false);
     });
-    this.scrollPositionService.scrollPosition$.subscribe(scrollTop => {
+    this.scrollPositionService.scrollPosition$.subscribe(scrollPosition => {
+      if (scrollPosition >= mainConfig.scrollPositionShowSearch) {
+        this.showScrollUp = true;
+        if (this.getShowTarotSearch()) this.showSearchTarot = true;
+      } else {
+        this.showScrollUp = false;
+        this.showSearchTarot = false;
+      }
       if (this.getMinimizeFlag()) {
         this.minimizeFlag = false;
       } else{
-        this.minimizeFlag = (scrollTop === 0);
+        this.minimizeFlag = (scrollPosition === 0);
       }
     });
+  }
+
+  getShowTarotSearch() {
+    return this.activatedRoute.snapshot.firstChild?.data?.showTarotSearch;
   }
 
   getMinimizeFlag() {

@@ -82,3 +82,10 @@
 .cursor {
   cursor: pointer;
 }
+
+// REMOVE EMPTY VALIDATION AREA
+.mat-form-field-no-validation {
+  .mat-mdc-form-field-subscript-wrapper {
+    display: none !important;
+  }
+}
