@@ -5,7 +5,6 @@
     border-radius: 36px;
     padding: 10px 20px;
     position: fixed;
-    bottom: 10px;
     left: 50%;
     transform: translate(-50%, 0);
     min-width: 300px;
@@ -14,4 +13,13 @@
     box-shadow: 0 2px 5px rgba(0, 0, 0, .6), 0 5px 2px rgba(0, 0, 0, .1), 0 10px 20px rgba(0, 0, 0, .8);
     --mdc-filled-button-container-shape: 36px;
     --mdc-outlined-text-field-container-shape: 36px;
+    transition: .5s all ease-out;
+}
+
+.hide {
+  bottom: -64px;
+}
+
+.show {
+  bottom: 10px;
 }

@@ -1,4 +1,4 @@
-import { Component, inject, OnDestroy, OnInit } from '@angular/core';
+import { Component, inject, Input, OnDestroy, OnInit } from '@angular/core';
 import { TarotSearchComponent } from '../tarot-search/tarot-search.component';
 import { TarotStoreService } from '../../core/service/tarot-store.service';
 import { tarotCategory } from '../../core/enum/tarot-category.enum';
@@ -15,6 +15,7 @@ import { TarotFormData } from '../../core/models/tarot-form-data.model';
   styleUrl: './tarot-search-sticky.component.scss'
 })
 export class TarotSearchStickyComponent implements OnInit, OnDestroy {
+  @Input() hide = false;
   tarotStoreService = inject(TarotStoreService);
   selectedCategory: tarotCategory | '';
   selectedCard: CardInfo;

@@ -35,6 +35,7 @@ export class TarotSearchComponent implements OnInit, OnDestroy {
       this.filterForm.controls.category.setValue(val.category, {emitEvent: false});
       this.filterForm.controls.search.setValue(val.search, {emitEvent: false});
     }
+    this.showClose = !!val.search;
   }
   @Input() view: 'tarot' | 'sticky' = 'tarot';
   @Output() onSelectCard = new EventEmitter<TarotConfig>();

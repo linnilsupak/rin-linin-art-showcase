@@ -6,9 +6,13 @@
   bottom: 0;
   z-index: var.$sticky-level;
   cursor: pointer;
+  transition: .5s all ease-out;
 
   @include media-breakpoint-down(md) {
     right: -10px;
+  }
+  &.hide {
+    bottom: -100px;
   }
 }
 

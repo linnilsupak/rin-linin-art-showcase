@@ -29,6 +29,7 @@ export class AppComponent implements AfterViewInit {
   isServer = false;
   scrollWidth = 0;
   showScrollUp = false;
+  showSearchTarot = false;
   constructor(private router: Router, @Inject(PLATFORM_ID) platformId: Object,
     private scrollPositionService: ScrollPositionService) {
     this.isServer = isPlatformServer(platformId);
@@ -65,8 +66,10 @@ export class AppComponent implements AfterViewInit {
     this.scrollPositionService.scrollPosition$.subscribe(scrollPosition => {
       if (scrollPosition >= mainConfig.scrollPositionShowSearch) {
         this.showScrollUp = true;
+        if (this.getShowTarotSearch()) this.showSearchTarot = true;
       } else {
         this.showScrollUp = false;
+        this.showSearchTarot = false;
       }
       if (this.getMinimizeFlag()) {
         this.minimizeFlag = false;
@@ -74,6 +77,10 @@ export class AppComponent implements AfterViewInit {
         this.minimizeFlag = (scrollPosition === 0);
       }
     });
+  }
+
+  getShowTarotSearch() {
+    return this.activatedRoute.snapshot.firstChild?.data?.showTarotSearch;
   }
 
   getMinimizeFlag() {

@@ -48,6 +48,9 @@ export const routes: Routes = [
   {
     path: 'tarots',
     title: 'Tarots: Rin Linin',
+    data: {
+      showTarotSearch: true
+    },
     component: TarotsComponent
   },
   {
