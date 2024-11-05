@@ -30,6 +30,7 @@ export const routes: Routes = [
     data: {
         minimizeFlag: true
     },
+    title: 'Playground menu: Rin Linin',
     loadComponent: () => import('./playground/playground.component').then(c => c.PlaygroundComponent)
   },
   {
@@ -47,6 +48,9 @@ export const routes: Routes = [
   {
     path: 'tarots',
     title: 'Tarots: Rin Linin',
+    data: {
+      showTarotSearch: true
+    },
     component: TarotsComponent
   },
   {
