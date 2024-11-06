@@ -1,4 +1,4 @@
-import { Component, EventEmitter, Input, OnDestroy, OnInit, Output } from '@angular/core';
+import { Component, ElementRef, EventEmitter, Input, OnDestroy, OnInit, Output, ViewChild } from '@angular/core';
 import { FormControl, FormGroup, ReactiveFormsModule } from '@angular/forms';
 import { MatAutocompleteModule } from '@angular/material/autocomplete';
 import { MatButtonModule } from '@angular/material/button';
@@ -26,6 +26,7 @@ import { CommonModule } from '@angular/common';
   styleUrl: './tarot-search.component.scss'
 })
 export class TarotSearchComponent implements OnInit, OnDestroy {
+  @ViewChild('searchInput') searchInput: ElementRef;
   readonly tarotCards: TarotConfig = cloneDeep(tarotConfig);
   @Input()
   set formValue(val: TarotFormData) {
@@ -38,6 +39,10 @@ export class TarotSearchComponent implements OnInit, OnDestroy {
     this.showClose = !!val.search;
   }
   @Input() view: 'tarot' | 'sticky' = 'tarot';
+  @Input()
+  set looseFocus(val: boolean) {
+    this.searchInput?.nativeElement.blur();
+  }
   @Output() onSelectCard = new EventEmitter<TarotConfig>();
   @Output() onselectCategory = new EventEmitter<tarotCategory | ''>();
   @Output() searchVal = new EventEmitter<CardInfo>();

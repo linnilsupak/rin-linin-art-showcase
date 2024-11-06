@@ -21,6 +21,7 @@ export class TarotSearchStickyComponent implements OnInit, OnDestroy {
   selectedCard: CardInfo;
   subscription = new Subscription();
   tarotFormData: TarotFormData;
+  _hide = false;
 
   ngOnInit(): void {
     this.subscription.add(
