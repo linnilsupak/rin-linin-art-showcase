@@ -19,7 +19,7 @@ export class CharacterIconComponent implements OnInit {
   imageLoading = true;
 
   ngOnInit(): void {
-    if (this.imageIcon.nativeElement.complete) {
+    if (this.imageIcon?.nativeElement.complete) {
       this.imageLoading = false;
     }
   }
