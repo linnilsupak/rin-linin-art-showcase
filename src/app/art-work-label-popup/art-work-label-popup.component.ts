@@ -32,7 +32,6 @@ export class ArtWorkLabelPopupComponent implements OnInit, AfterViewInit {
   imageLoading = true;
 
   ngOnInit(): void {
-    console.log('this.picUrl', this.picUrl())
     if (this.picUrl().toString().includes('.gif') || this.picUrl().toString().includes('.webp')) {
       this.noImageSrc = true;
     }
