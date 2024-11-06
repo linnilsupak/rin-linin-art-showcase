@@ -1,4 +1,4 @@
-import { Component, inject, model, OnInit } from '@angular/core';
+import { Component, ElementRef, inject, model, OnInit, ViewChild } from '@angular/core';
 import {
   MAT_DIALOG_DATA,
   MatDialogRef
@@ -26,12 +26,16 @@ export class ArtWorkLabelPopupComponent implements OnInit{
   readonly isRecTemplate = model(this.data.isRecTemplate);
   readonly minWidth = model(this.data.minWidth);
   readonly minHeight = model(this.data.minHeight);
+  @ViewChild('imageShow') imageShow: ElementRef;
   noImageSrc = false;
-  imageLoaded = true;
+  imageLoading = true;
 
   ngOnInit(): void {
     if (this.picUrl.toString().includes('.gif') || this.picUrl.toString().includes('.webp')) {
       this.noImageSrc = true;
+    }
+    if (this.imageShow?.nativeElement.complete) {
+      this.imageLoading = false;
     }
   }
 
@@ -40,7 +44,7 @@ export class ArtWorkLabelPopupComponent implements OnInit{
   }
 
   imageFinishLoad() {
-    this.imageLoaded = false;
+    this.imageLoading = false;
   }
 
 }
