@@ -34,6 +34,8 @@ export class ArtWorkLabelPopupComponent implements OnInit{
     if (this.picUrl.toString().includes('.gif') || this.picUrl.toString().includes('.webp')) {
       this.noImageSrc = true;
     }
+    console.log('this.imageShow?.nativeElement', this.imageShow?.nativeElement)
+    console.log('this.imageShow?.nativeElement.complete', this.imageShow?.nativeElement.complete)
     if (this.imageShow?.nativeElement.complete) {
       this.imageLoading = false;
     }
