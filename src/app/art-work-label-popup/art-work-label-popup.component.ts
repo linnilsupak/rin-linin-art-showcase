@@ -32,6 +32,7 @@ export class ArtWorkLabelPopupComponent implements OnInit, AfterViewInit {
   imageLoading = true;
 
   ngOnInit(): void {
+    console.log('this.picUrl', this.picUrl)
     if (this.picUrl.toString().includes('.gif') || this.picUrl.toString().includes('.webp')) {
       this.noImageSrc = true;
     }
@@ -39,8 +40,6 @@ export class ArtWorkLabelPopupComponent implements OnInit, AfterViewInit {
 
   ngAfterViewInit(): void {
     setTimeout(() => {
-      console.log('this.imageShow?.nativeElement', this.imageShow?.nativeElement)
-      console.log('this.imageShow?.nativeElement.complete', this.imageShow?.nativeElement.complete)
       if (this.imageShow?.nativeElement.complete) {
         this.imageLoading = false;
       }

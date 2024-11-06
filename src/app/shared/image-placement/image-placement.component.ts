@@ -1,6 +1,7 @@
-import { Component, ElementRef, Input, OnInit, ViewChild } from '@angular/core';
+import { AfterViewInit, Component, ElementRef, Input, ViewChild } from '@angular/core';
 import { MiniSpinningComponent } from "../mini-spinning/mini-spinning.component";
 import { ImagePreviewPipe } from "../../core/pipe/image-preview.pipe";
+import { mainConfig } from '../../core/config/main.config';
 
 @Component({
   selector: 'app-image-placement',
@@ -9,7 +10,7 @@ import { ImagePreviewPipe } from "../../core/pipe/image-preview.pipe";
   templateUrl: './image-placement.component.html',
   styleUrl: './image-placement.component.scss'
 })
-export class ImagePlacementComponent implements OnInit {
+export class ImagePlacementComponent implements AfterViewInit {
 @Input() width: string;
 @Input() height: string;
 @Input() srcLink: string;
@@ -18,10 +19,13 @@ export class ImagePlacementComponent implements OnInit {
 @ViewChild('imageShow') imageShow: ElementRef;
 imageLoading = true;
 
-ngOnInit(): void {
-  if (this.imageShow?.nativeElement.complete) {
-    this.imageLoading = false;
-  }
+
+ngAfterViewInit(): void {
+  setTimeout(() => {
+    if (this.imageShow?.nativeElement.complete) {
+      this.imageLoading = false;
+    }
+  }, mainConfig.timeoutAfterInit);
 }
 
 imageFinishLoad() {
