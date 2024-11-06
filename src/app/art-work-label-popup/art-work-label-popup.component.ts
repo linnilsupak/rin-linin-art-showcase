@@ -1,4 +1,4 @@
-import { Component, ElementRef, inject, model, OnInit, ViewChild } from '@angular/core';
+import { AfterViewInit, Component, ElementRef, inject, model, OnInit, ViewChild } from '@angular/core';
 import {
   MAT_DIALOG_DATA,
   MatDialogRef
@@ -6,6 +6,7 @@ import {
 import { MatIconModule } from '@angular/material/icon';
 import { ImageSrcsetPipe } from "../core/pipe/image-srcset.pipe";
 import { MiniSpinningComponent } from "../shared/mini-spinning/mini-spinning.component";
+import { mainConfig } from '../core/config/main.config';
 
 @Component({
   selector: 'app-art-work-label-popup',
@@ -14,7 +15,7 @@ import { MiniSpinningComponent } from "../shared/mini-spinning/mini-spinning.com
   templateUrl: './art-work-label-popup.component.html',
   styleUrl: './art-work-label-popup.component.scss'
 })
-export class ArtWorkLabelPopupComponent implements OnInit{
+export class ArtWorkLabelPopupComponent implements OnInit, AfterViewInit {
   readonly dialogRef = inject(MatDialogRef<ArtWorkLabelPopupComponent>);
   readonly data = inject<any>(MAT_DIALOG_DATA);
   readonly picUrl = model(this.data.picUrl);
@@ -34,11 +35,16 @@ export class ArtWorkLabelPopupComponent implements OnInit{
     if (this.picUrl.toString().includes('.gif') || this.picUrl.toString().includes('.webp')) {
       this.noImageSrc = true;
     }
-    console.log('this.imageShow?.nativeElement', this.imageShow?.nativeElement)
-    console.log('this.imageShow?.nativeElement.complete', this.imageShow?.nativeElement.complete)
-    if (this.imageShow?.nativeElement.complete) {
-      this.imageLoading = false;
-    }
+  }
+
+  ngAfterViewInit(): void {
+    setTimeout(() => {
+      console.log('this.imageShow?.nativeElement', this.imageShow?.nativeElement)
+      console.log('this.imageShow?.nativeElement.complete', this.imageShow?.nativeElement.complete)
+      if (this.imageShow?.nativeElement.complete) {
+        this.imageLoading = false;
+      }
+    }, mainConfig.timeoutAfterInit);
   }
 
   closePopup() {
