@@ -1,6 +1,6 @@
 <div class="cover">
 </div>
-<div class="container-fluid container-md mt-5">
+<div class="container-fluid container-lg mt-5">
   <div>
     <app-reflection-font [text]="'Original Characters'" [fontClass]="'mx-auto'"></app-reflection-font>
   </div>
@@ -41,13 +41,14 @@
       [title]="item.title" [description]="item.description" [arrangement]="item.arrangement || ((index % 2) ? 'left': 'right')"></app-character-frame>
       <div class="blank-space">&nbsp;</div>
   }
-</div>
-<div class="mt-2">
-  <div class="mx-auto width-fit-content">
-    <app-reflection-font [text]="'✧✧✧✧✧✧✧✧✧✧✧✧✧✧✧✧'" [fontClass]="'sub-title'"></app-reflection-font>
+  <div class="mt-2">
+    <div class="mx-auto width-fit-content">
+      <app-reflection-font [text]="'✧✧✧✧✧✧✧✧✧✧✧✧✧✧✧✧'" [fontClass]="'sub-title'"></app-reflection-font>
+    </div>
   </div>
+  <span id="{{personaInfo.name}}"></span>
+  <app-character-frame [imageUrl]="personaInfo.imageUrl" [characterName]="personaInfo.name"
+  [title]="personaInfo.title" [description]="personaInfo.description" [arrangement]="'right'"></app-character-frame>
+  <div class="blank-space">&nbsp;</div>
 </div>
-<span id="{{personaInfo.name}}"></span>
-<app-character-frame [imageUrl]="personaInfo.imageUrl" [characterName]="personaInfo.name"
-[title]="personaInfo.title" [description]="personaInfo.description" [arrangement]="'right'"></app-character-frame>
-<div class="blank-space">&nbsp;</div>
+

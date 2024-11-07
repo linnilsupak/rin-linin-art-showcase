@@ -7,37 +7,9 @@
   {{'GLOBAL.DONT_LIST' | translate}}<br />
   {{'GLOBAL.DONT_LIST_SUB' | translate}}
 </div>
-<div class="row row-width-1000 mx-auto">
-  <div class="col-12 col-md-6 mb-3">
-    <div class="white-frame">
-      <img src="/assets/images/original/linin/linin_look_at_ant.png" srcset="{{'/assets/images/original/linin/linin_look_at_ant.png' | imageSrcset}}"/>
-    </div>
-  </div>
-  <div class="col-12 col-md-6 mb-3">
-    <div class="white-frame">
-      <img src="/assets/images/original/linin/linin_icecream.png" srcset="{{ '/assets/images/original/linin/linin_icecream.png' | imageSrcset}}"/>
-    </div>
-  </div>
-</div>
-<div class="row">
-  <div class="col-12 col-md-8 mb-3">
-    <div class="white-double-frame small">
-      <img src="/assets/images/original/linin/linin_dress.png"/>
-    </div>
-  </div>
-  <div class="col-12 col-md-4 mb-3 d-flex">
-    <div class="black-frame m-auto">
-      <img src="/assets/images/original/linin/linin_maid.png"/>
-    </div>
-  </div>
-</div>
-<div class="row">
-  <div class="col-12 d-flex mb-3">
-    <div class="black-frame mx-auto mini-frame-500">
-      <img src="/assets/images/original/linin/linin_look_at_art.png" srcset="{{ '/assets/images/original/linin/linin_look_at_art.png' | imageSrcset}}"/>
-    </div>
-  </div>
-</div>
+<app-gallery-room [galleryRoom]="lininOri1" pattern="equal"></app-gallery-room>
+<app-gallery-room [galleryRoom]="lininOri2"></app-gallery-room>
+<app-gallery-room [galleryRoom]="lininOri3"></app-gallery-room>
 <div class="blank-space">&nbsp;</div>
 <div class="section-sub-topic section-color mb-5">
   {{'CHARACTER_INFO.FAN_ART' | translate}}

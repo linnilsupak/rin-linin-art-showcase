@@ -1,27 +1,62 @@
 <div class="cover">
 </div>
-<!-- <div class="border-wall-paper"></div> -->
-<div class="container-fluid container-md mt-5">
+<div class="container-fluid container-lg mt-2 mt-md-5">
   <div>
-    <app-reflection-font [text]="'Playground'" [fontClass]="'mx-auto'"></app-reflection-font>
+    <app-reflection-font [text]="'PLAYGROUND.TITLE' | translate" [fontClass]="'mx-auto'"></app-reflection-font>
   </div>
-  <div class="caption mb-5 after-reflect">
-    {{'GLOBAL.WARNING' | translate}}<br />
-    {{'GLOBAL.DONT_LIST' | translate}}<br />
-    {{'GLOBAL.DONT_LIST_SUB' | translate}}
+  <div class="section-content section-color mx-auto description">
+    {{'PLAYGROUND.DESCRIPTION' | translate}}
   </div>
-  <div class="section-sub-topic section-color mb-2">
-    {{'ART_FIGHT_2024.TITLE' | translate}}
+  <div class="row justify-content-center align-items-stretch after-reflection">
+    <div class="col-4">
+      <app-image-card [imageUrl]="'/assets/images/playground/playground-artfight-card.webp?v=1'" [minHeight]="'36em'"
+      [link]="'/playground-room/art-fight-2024'" [title]="'PLAYGROUND.ARTFIGHT_TOPIC' | translate" [miniTitle]="'PLAYGROUND.ARTFIGHT' | translate"/>
+    </div>
+    <div class="col-4 playground-menu d-none d-lg-flex">
+      <div class="m-auto d-flex flex-column">
+        @for(room of playgroundMenuConfig; track room;let first=$first, last=$last) {
+          @if (!first && !last) {
+            <a [routerLink]="room.link">
+              <app-playground-menu class="mb-3" [label]="room.label"></app-playground-menu>
+            </a>
+          }
+        }
+      </div>
+    </div>
+    <div class="col-4">
+      <app-image-card [imageUrl]="'/assets/images/playground/playground-etc-card.webp'" [minHeight]="'36em'"
+      [link]="'/playground-room/etc'" [title]="'PLAYGROUND.ETC_TOPIC' | translate" [miniTitle]="'PLAYGROUND.ETC' | translate"/>
+    </div>
+    <div class="col-12 d-flex playground-menu d-lg-none">
+      <div class="m-auto d-flex flex-column">
+        @for(room of playgroundMenuConfig; track room;let first=$first, last=$last) {
+          @if (!first && !last) {
+            <a [routerLink]="room.link">
+              <app-playground-menu class="mb-3" [label]="room.label"></app-playground-menu>
+            </a>
+          }
+        }
+      </div>
+    </div>
   </div>
-  <div class="section-content section-color mb-4">
-    {{'ART_FIGHT_2024.DESCRIPTION' | translate}}
+</div>
+<div class="dark-section p-4 mt-4">
+  <div>
+    <app-reflection-font [text]="'PLAYGROUND.SHOW_CASE' | translate" [fontClass]="'sub-title mx-auto'"></app-reflection-font>
   </div>
-  <app-gallery-room [galleryRoom]="galleryRoomConfig.room1"></app-gallery-room>
-  <div class="blank-space">&nbsp;</div>
-
-  <app-gallery-room [galleryRoom]="galleryRoomConfig.room2" [enableAutoScrollFirstRow]="false" [pattern]="'wide'"></app-gallery-room>
-  <div class="blank-space">&nbsp;</div>
-
-  <app-gallery-room [galleryRoom]="galleryRoomConfig.room3" [enableAutoScrollFirstRow]="true" [pattern]="'3-rows'"></app-gallery-room>
-  <div class="blank-space">&nbsp;</div>
+  <div class="d-flex align-items-center justify-content-center flex-column flex-md-row">
+    <app-character-icon link="/playground-room/vocaloid" img="/assets/images/playground/snow_miku_rin_linin_preview.webp"
+      hoverDescription="Vocaloid" label="Miku"></app-character-icon>
+    <app-character-icon link="/playground-room/sweet-art" img="/assets/images/playground/strwberry_rin_linin_preview.webp"
+      hoverDescription="Sweet Art" label="Strawberry"></app-character-icon>
+    <app-character-icon link="/playground-room/genshin-fan-art" img="/assets/images/playground/lyney_lynette_genshin_rin_linin_preview.webp"
+      hoverDescription="Genshin Fanart" label="Lyney Lynette"></app-character-icon>
+  </div>
+  <div class="d-flex align-items-center justify-content-center flex-column flex-md-row">
+    <app-character-icon link="/playground-room/art-collab" img="/assets/images/playground/rin_linin_color_by_rin_linin_preview.webp"
+      hoverDescription="Collab" label="Rin Linin"></app-character-icon>
+    <app-character-icon link="/playground-room/vtuber-fan-art" img="/assets/images/playground/dacopo_vtuber_rin_linin_preview.webp"
+      hoverDescription="Vtuber" label="Dacapo"></app-character-icon>
+  </div>
+  <div class="mb-3">&nbsp;</div>
 </div>

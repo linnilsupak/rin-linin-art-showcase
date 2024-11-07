@@ -1,13 +1,18 @@
+@use "variables" as var;
 @import "bootstrap-mixin";
 
 .fixed-button {
   position: fixed;
   bottom: 0;
-  z-index: 995;
+  z-index: var.$sticky-level;
   cursor: pointer;
+  transition: .5s all ease-out;
 
   @include media-breakpoint-down(md) {
     right: -10px;
+  }
+  &.hide {
+    bottom: -100px;
   }
 }
 
@@ -29,6 +34,7 @@
 
 @media (any-pointer: fine) {
   .merge-up-btn {
+    animation-delay: 2s;
     &:hover {
       .up-btn {
         transform: scale(1.5);

@@ -7,11 +7,18 @@ import { FrancoisInfoComponent } from './francois-info/francois-info.component';
 import { ElysiaInfoComponent } from './elysia-info/elysia-info.component';
 import { MimiInfoComponent } from './mimi-info/mimi-info.component';
 import { RinLininInfoComponent } from './rin-linin-info/rin-linin-info.component';
+import { importProvidersFrom } from '@angular/core';
+import { TranslateModule } from '@ngx-translate/core';
 
 export const characterInfoRoutes: Routes = [
   {
     path: '',
     component: CharacterInfoComponent,
+    providers: [
+      importProvidersFrom([
+        TranslateModule.forChild()
+      ])
+    ],
     children: [
       {
         path: 'linin',

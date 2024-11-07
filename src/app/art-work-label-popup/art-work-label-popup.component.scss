@@ -1,18 +1,23 @@
 @import "bootstrap-mixin";
-@import"picture-frame";
 
-
-.mini-frame-200, .mini-frame-300, .mini-frame-500 {
+.mini-frame-200, .mini-frame-300, .mini-frame-400, .mini-frame-500 {
   @include media-breakpoint-up(lg) {
-    width: inherit!important;
+    width: auto!important;
   }
 }
 
-.container-height {
+:host {
+  display: flex;
+}
+
+.container-dimension {
   height: 100%;
   max-width: 98%;
   @include media-breakpoint-up(lg) {
     height: inherit;
+    .row-content {
+      height: calc(100vh - 78px);
+    }
   }
 }
 
@@ -49,6 +54,9 @@
   }
   @include media-breakpoint-down(md) {
     transform: scale(0.9);
+  }
+  @include media-breakpoint-up(md) {
+    max-width: 25vw;
   }
 
 }

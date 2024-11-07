@@ -1,9 +1,9 @@
+import { DOCUMENT, isPlatformBrowser } from '@angular/common';
 import { AfterViewInit, Component, ElementRef, HostListener, Inject, PLATFORM_ID, ViewChild } from '@angular/core';
+import { BehaviorSubject, debounceTime, Subscription } from 'rxjs';
+import { mainConfig } from '../core/config/main.config';
 import { Star } from '../core/models/star.model';
 import { WINDOW, WINDOW_PROVIDERS } from '../core/service/window.service';
-import { DOCUMENT, isPlatformBrowser } from '@angular/common';
-import { BehaviorSubject, debounceTime, interval, Subscription } from 'rxjs';
-import { mainConfig } from '../core/config/main.config';
 
 @Component({
   selector: 'app-starry-sky',
@@ -37,12 +37,14 @@ export class StarrySkyComponent implements AfterViewInit {
     this.context.clearRect(0, 0, this.window.innerWidth, this.window.innerHeight);
     this.starAnimationResize$.next({ w: this.window.innerWidth, h: this.window.innerHeight });
   }
+
   ngAfterViewInit(): void {
     this.starAnimationResize$.pipe(
       debounceTime(mainConfig.timeoutAfterInit)
     ).subscribe(({ w, h }) => {
       if (!this.isBrowser) return;
       if (this.screenW && this.screenH) {
+        cancelAnimationFrame(this.reqAnimationId);
         this.reqAnimationId = null;
       }
       this.setCanvasWidthHeight(w, h);
@@ -51,6 +53,7 @@ export class StarrySkyComponent implements AfterViewInit {
         const fpsInterval = 1000 / this.fps;
         let then = Date.now();
         const smoothAnimation = () => {
+          if (this.reqAnimationId) cancelAnimationFrame(this.reqAnimationId);
           this.reqAnimationId = requestAnimationFrame(smoothAnimation);
           // calc elapsed time since last loop
           const now = Date.now();
@@ -70,6 +73,7 @@ export class StarrySkyComponent implements AfterViewInit {
             this.copyToOnScreen(offScreenCanvas);
           }
         }
+        if (this.reqAnimationId) cancelAnimationFrame(this.reqAnimationId);
         this.reqAnimationId = requestAnimationFrame(smoothAnimation);
       }, mainConfig.timeoutAfterInit);
     });

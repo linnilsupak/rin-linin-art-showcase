@@ -1,6 +1,5 @@
 @use "variables" as var;
 @import "bootstrap-mixin";
-@import "picture-frame";
 
 
 .cover {
@@ -37,23 +36,4 @@
     @include media-breakpoint-up(lg) {
       border-radius: 0.9rem;
     }
-}
-
-.select {
-  width: 100%;
-  @include media-breakpoint-up(md) {
-    width: inherit;
-  }
-}
-
-.big-search {
-  width: 100%;
-  @include media-breakpoint-up(md) {
-    width: inherit;
-    min-width: 300px;
-  }
-}
-
-.big-button {
-  --mdc-filled-button-container-height: 58px;
 }

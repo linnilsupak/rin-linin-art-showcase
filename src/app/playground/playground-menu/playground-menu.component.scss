@@ -1,0 +1,144 @@
+@use "variables" as var;
+
+$item-width: 260px;
+$triangle-width: 22px;
+$height-inner: 46px;
+$dark-background: var.$image-card-shadow;
+
+$strip-bg: var.$menu-yellow-strip;
+$outer-border: -16px;
+$outer-active-border: -18px;
+
+$point-height: 8px;
+
+:host {
+    display: block;
+    position: relative;
+    width: calc($item-width + ($triangle-width *2));
+    height: #{$height-inner};
+    cursor: pointer;
+
+    &::before,
+    &::after {
+        content: '';
+        position: absolute;
+        top: 0;
+        width: 0px;
+        border-style: solid;
+        height: #{$height-inner};
+    }
+
+    &::before {
+        border-width: calc($height-inner / 2) #{$triangle-width} calc($height-inner / 2) 0;
+        left: 0;
+        border-color: transparent #{$strip-bg} transparent transparent;
+    }
+
+    &::after {
+        border-width: calc($height-inner / 2) 0 calc($height-inner / 2) #{$triangle-width};
+        right: 0;
+        border-color: transparent transparent transparent #{$strip-bg};
+    }
+
+    &:hover {
+        .outer-center {
+            background-color: var.$black;
+
+            &::before {
+                left: $outer-active-border;
+                border-color: transparent #{var.$black} transparent transparent;
+            }
+
+            &::after {
+                right: $outer-active-border;
+                border-color: transparent transparent transparent #{var.$black};
+            }
+        }
+
+        .inner-strip {
+            letter-spacing: 2px;
+
+            &::before,
+            &::after {
+                transform: rotate(315deg) scale(1.5);
+            }
+        }
+    }
+}
+
+.outer-center {
+    position: absolute;
+    left: #{$triangle-width};
+    top: 0;
+    height: #{$height-inner};
+    width: #{$item-width};
+    background-color: $dark-background;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 2;
+
+    &::before,
+    &::after {
+        content: '';
+        position: absolute;
+        top: 0;
+        width: 0px;
+        border-style: solid;
+        height: #{$height-inner};
+        z-index: 2;
+        transition: all .2s ease;
+    }
+
+    &::before {
+        border-width: calc($height-inner / 2) #{$triangle-width} calc($height-inner / 2) 0;
+        left: $outer-border;
+        border-color: transparent #{$dark-background} transparent transparent;
+    }
+
+    &::after {
+        border-width: calc($height-inner / 2) 0 calc($height-inner / 2) #{$triangle-width};
+        right: $outer-border;
+        border-color: transparent transparent transparent #{$dark-background};
+    }
+}
+
+.inner-strip {
+    position: absolute;
+    left: 0;
+    top: 0;
+    z-index: 3;
+    height: #{$height-inner};
+    width: #{$item-width};
+    color: var.$white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: 700;
+    font-size: 20px;
+    transition: all .2s ease;
+    letter-spacing: 0;
+
+    &::before,
+    &::after {
+        content: '';
+        position: absolute;
+        top: calc(50% - ($point-height / 2));
+        border-style: solid;
+        height: #{$point-height};
+        width: #{$point-height};
+        color: $strip-bg;
+        z-index: 3;
+        transition: all .2s ease;
+        background-color: #{$strip-bg};
+        transform: rotate(45deg);
+    }
+
+    &::before {
+        left: calc((0px - $point-height) / 2);
+    }
+
+    &::after {
+        right: calc((0px - $point-height) / 2);
+    }
+}

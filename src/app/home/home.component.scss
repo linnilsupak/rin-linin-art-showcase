@@ -1,5 +1,4 @@
 @import "bootstrap-mixin";
-@import"picture-frame";
 
 
 .cover {
@@ -10,9 +9,6 @@
     @include media-breakpoint-up(lg) {
         min-height: 226px;
      }
-}
-.about-me {
-  background: linear-gradient(0deg, rgba(17,0,36,1) 0%, transparent 25%, rgba(17,0,36,1) 100%);
 }
 .about-me-line {
   width: 100%;

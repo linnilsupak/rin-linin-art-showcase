@@ -1,11 +1,11 @@
 import { Component, inject, OnInit } from '@angular/core';
-import { ReflectionFontComponent } from "../shared/reflection-font/reflection-font.component";
-import { ActivatedRoute, NavigationEnd, Router, RouterLink, RouterOutlet } from '@angular/router';
-import { characterInfo } from '../core/config/character-info.config';
-import { TranslateModule, TranslateService } from '@ngx-translate/core';
 import { Title } from '@angular/platform-browser';
+import { ActivatedRoute, NavigationEnd, Router, RouterLink, RouterOutlet } from '@angular/router';
+import { TranslateModule, TranslateService } from '@ngx-translate/core';
 import { filter } from 'rxjs';
+import { characterInfo } from '../core/config/character-info.config';
 import { personaInfo } from '../core/config/persona-info.config';
+import { ReflectionFontComponent } from "../shared/reflection-font/reflection-font.component";
 
 @Component({
   selector: 'app-character-info',

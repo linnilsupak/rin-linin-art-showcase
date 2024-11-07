@@ -4,6 +4,8 @@ import { PageNotFoundComponent } from './page-not-found/page-not-found.component
 import { ContactUsComponent } from './contact-us/contact-us.component';
 import { TarotsComponent } from './tarots/tarots.component';
 import { AboutMeComponent } from './about-me/about-me.component';
+import { importProvidersFrom } from '@angular/core';
+import { TranslateModule } from '@ngx-translate/core';
 
 export const routes: Routes = [
   {
@@ -17,8 +19,18 @@ export const routes: Routes = [
     redirectTo: '/'
   },
   {
+    path: 'playground-room',
+    data: {
+        minimizeFlag: true
+    },
+    loadChildren: () => import('./playground-room/playground.routes').then(c => c.playgroundRoomRoutes)
+  },
+  {
     path: 'playground',
-    title: 'Playground: Rin Linin',
+    data: {
+        minimizeFlag: true
+    },
+    title: 'Playground menu: Rin Linin',
     loadComponent: () => import('./playground/playground.component').then(c => c.PlaygroundComponent)
   },
   {
@@ -50,6 +62,9 @@ export const routes: Routes = [
   {
     path: 'tarots',
     title: 'Tarots: Rin Linin',
+    data: {
+      showTarotSearch: true
+    },
     component: TarotsComponent
   },
   {

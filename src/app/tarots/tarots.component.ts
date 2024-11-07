@@ -1,125 +1,67 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, inject, OnDestroy, OnInit } from '@angular/core';
+import { ActivatedRoute, RouterLink } from '@angular/router';
 import { TranslateModule } from '@ngx-translate/core';
-import { ReflectionFontComponent } from '../shared/reflection-font/reflection-font.component';
-import { tarotConfig } from '../core/config/tarot.config';
-import {FormControl, FormGroup, ReactiveFormsModule} from '@angular/forms';
-import { MatButtonModule} from '@angular/material/button';
-import {MatInputModule} from '@angular/material/input';
-import {MatSelectModule} from '@angular/material/select';
-import {MatFormFieldModule} from '@angular/material/form-field';
-import { tarotCategory } from '../core/enum/tarot-category.enum';
-import {MatAutocompleteModule} from '@angular/material/autocomplete';
 import cloneDeep from 'lodash-es/cloneDeep';
-import { debounceTime } from 'rxjs';
-import { mainConfig } from '../core/config/main.config';
+import { tarotConfig } from '../core/config/tarot.config';
+import { tarotCategory } from '../core/enum/tarot-category.enum';
 import { TarotConfig } from '../core/models/tarot-config.model';
+import { ReflectionFontComponent } from '../shared/reflection-font/reflection-font.component';
+import { TarotSearchComponent } from "../shared/tarot-search/tarot-search.component";
+import { TarotStoreService } from '../core/service/tarot-store.service';
+import { Subscription } from 'rxjs';
+import { TarotFormData } from '../core/models/tarot-form-data.model';
 import { CardInfo } from '../core/models/card-info.model';
-import { RouterLink } from '@angular/router';
 
 @Component({
   selector: 'app-tarots',
   standalone: true,
-  imports: [TranslateModule, ReflectionFontComponent, MatButtonModule, RouterLink,
-    MatFormFieldModule, MatSelectModule, MatInputModule,ReactiveFormsModule, MatAutocompleteModule],
+  imports: [TranslateModule, ReflectionFontComponent, RouterLink, TarotSearchComponent],
   templateUrl: './tarots.component.html',
   styleUrl: './tarots.component.scss'
 })
-export class TarotsComponent implements OnInit {
+export class TarotsComponent implements OnInit, OnDestroy {
   readonly tarotConfig = cloneDeep(tarotConfig);
   preOrder = '?usp=pp_url&entry.946658341=%22Rin+Linin%22+Tarot:+Pre+order+(When+finished.)';
-  tarots = this.tarotConfig;
+  tarots: TarotConfig = this.tarotConfig;
   tarotOptions: TarotConfig = cloneDeep(tarotConfig);
   majorArcana = this.tarotOptions.major;
   cups = this.tarotOptions.cups;
   wands = this.tarotOptions.wands;
   swords = this.tarotOptions.swords;
   coins = this.tarotOptions.coins;
-  showClose = false;
-  filterForm = new FormGroup({
-    category: new FormControl(''),
-    search: new FormControl('')
-  });
   tarotCategory = tarotCategory;
-  category = [
-    {value: '', label: 'All'},
-    {value: tarotCategory.MAJOR_ARCANA, label: 'Major Arcana'},
-    {value: tarotCategory.WANDS, label: 'Wands'},
-    {value: tarotCategory.CUPS, label: 'Cups'},
-    {value: tarotCategory.SWORDS, label: 'Sword'},
-    {value: tarotCategory.COINS, label: 'Coins'},
-  ];
+  selectedCategory: tarotCategory | '';
+  tarotStoreService = inject(TarotStoreService);
+  subscription = new Subscription();
+  route = inject(ActivatedRoute);
+  tarotFormData: TarotFormData;
+  selectedCard: CardInfo;
+
   ngOnInit(): void {
-    this.filterForm.controls.search.valueChanges.pipe(debounceTime(mainConfig.debounceTime)).subscribe((val) => {
-      if (val) {
-        this.majorArcana = this.filterOption(val, tarotCategory.MAJOR_ARCANA, 'major');
-        this.cups = this.filterOption(val, tarotCategory.CUPS, 'cups');
-        this.wands = this.filterOption(val, tarotCategory.WANDS, 'wands');
-        this.swords = this.filterOption(val, tarotCategory.SWORDS, 'swords');
-        this.coins = this.filterOption(val, tarotCategory.COINS, 'coins');
-      } else {
-        this.majorArcana = this.tarotOptions.major;
-        this.cups = this.tarotOptions.cups;
-        this.wands = this.tarotOptions.wands;
-        this.swords = this.tarotOptions.swords;
-        this.coins = this.tarotOptions.coins;
-      }
-    })
+    this.subscription.add(
+      this.tarotStoreService.searchResult$.subscribe((result) => {
+        this.tarots = result;
+      })
+    );
+    this.subscription.add(
+      this.tarotStoreService.searchValOnSticky$.subscribe(val => {
+        this.tarotFormData = val;
+      })
+    );
+  }
+  
+  ngOnDestroy(): void {
+    this.subscription.unsubscribe();
   }
 
-  displayFn(card: CardInfo): string {
-    return card && card.name ? card.name : '';
+  selectCard(resultCard: TarotConfig) {
+    this.tarots = resultCard;
+    this.tarotStoreService.setSearchValOnTarotPage({category: this.selectedCategory, search: this.selectedCard});
   }
 
-  clearSearch() {
-    this.filterForm.controls.search.setValue('');
-    this.selectCard(undefined);
+  selectCategory(category: tarotCategory | '') {
+    this.selectedCategory = category;
+    this.tarotStoreService.setSearchValOnTarotPage({category: this.selectedCategory, search: this.selectedCard});
   }
 
-  selectCard(card: CardInfo) {
-    if (card) {
-      let suitName;
-      switch(card.category) {
-        case tarotCategory.MAJOR_ARCANA:
-          suitName = 'major';
-          break;
-        case tarotCategory.COINS:
-          suitName = 'coins';
-          break;
-        case tarotCategory.CUPS:
-          suitName = 'cups';
-          break;
-        case tarotCategory.SWORDS:
-          suitName = 'swords';
-          break;
-        case tarotCategory.WANDS:
-          suitName = 'wands';
-          break;
-      }
-      const result = cloneDeep(this.tarotConfig);
-      Object.keys(this.tarots).forEach(key => {
-        if (key===suitName) {
-          result[key] = result[suitName].filter(item => item.name === card.name);
-        } else {
-          result[key] = undefined;
-        }
-      });
-      this.tarots = result;
-      this.showClose = true;
-    } else {
-      this.showClose = false;
-      this.tarots = this.tarotConfig;
-    }
-  }
-
-  private filterOption(val: string, category: tarotCategory, suiteName: string) {
-    if ((this.filterForm.controls.category.value === category.toString() || !this.filterForm.controls.category.value) && typeof val === 'string') {
-      const suitName = category.substring(0, category.length - 1).replace('_', ' ').toLowerCase();
-      return this.tarotOptions[suiteName].filter(item => {
-        const subString = typeof val === 'string' ? cloneDeep(val).replace(item.number.toString(), '').toLowerCase(): '';
-        return item.name.toLowerCase().includes(val.toLowerCase()) || (val.includes(item.number.toString()) && (subString.includes(suitName) || !subString));
-      });
-    } else {
-      return [];
-    }
-  }
 }
