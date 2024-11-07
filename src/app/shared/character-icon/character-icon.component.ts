@@ -37,6 +37,7 @@ export class CharacterIconComponent implements AfterViewInit, OnDestroy {
       //   }})
       // );
       console.log('this.imageIcon?.nativeElement', this.imageIcon?.nativeElement);
+      console.log('this.imageIcon?.nativeElement.complete', this.imageIcon?.nativeElement.complete);
       if (this.imageIcon?.nativeElement.complete) {
         this.imageLoading = false;
         // this.completeLoad.next(true);
