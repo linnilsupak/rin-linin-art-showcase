@@ -36,7 +36,9 @@ export class CharacterIconComponent implements AfterViewInit, OnDestroy {
       //       }
       //   }})
       // );
-      console.log('this.imageIcon?.nativeElement', this.imageIcon?.nativeElement);
+      console.log('this.imageIcon?.nativeElement.complete', this.imageIcon?.nativeElement?.complete);
+      console.log('this.imageIcon?.nativeElement.completeLoad', this.imageIcon?.nativeElement?.completeLoad);
+      console.log('this.imageIcon?.nativeElement.naturalWidth', this.imageIcon?.nativeElement.naturalWidth);
       console.log('this.imageIcon?.nativeElement.width', this.imageIcon?.nativeElement.width);
       if (this.imageIcon?.nativeElement.complete) {
         this.imageLoading = false;
