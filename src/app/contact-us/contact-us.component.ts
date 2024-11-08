@@ -3,6 +3,7 @@ import { ActivatedRoute, RouterLink } from '@angular/router';
 import { environment } from '../../environments/environment';
 import { SafePipe } from '../shared/safe.pipe';
 import { MiniSpinningComponent } from "../shared/mini-spinning/mini-spinning.component";
+import { mainConfig } from '../core/config/main.config';
 
 @Component({
   selector: 'app-contact-us',
@@ -27,7 +28,9 @@ export class ContactUsComponent implements OnInit {
   }
 
   iframeLoaded() {
-    this.loading = false;
+    setTimeout(() => {
+      this.loading = false;
+    }, mainConfig.timeoutAfterFrameLoad);
   }
 
 }
