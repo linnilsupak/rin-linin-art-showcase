@@ -14,9 +14,9 @@
   </div>
 } @else {
   @if (galleryRoom?.length === 1) {
-    <div class="row d-flex">
-      <div class="col-12">
-        <a class="{{galleryRoom[0].frameStyle}} small hover"
+    <div class="row">
+      <div class="col-12 d-flex">
+        <a class="{{galleryRoom[0].frameStyle}} small hover d-block m-auto"
         (click)="openArtWorkLabel(galleryRoom[0])" title="{{ galleryRoom[0].content.title }}">
           <app-image-placement [srcLink]="galleryRoom[0].picUrl | imagePreview:galleryRoom[0]?.previewPic?.disabled"
           [width]="galleryRoom[0].previewPic.width" [height]="galleryRoom[0].previewPic.height"
