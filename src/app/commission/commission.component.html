@@ -1,18 +1,128 @@
+<div class="cover">
+</div>
 <div class="container-fluid container-md mt-4">
-  <div class="sub-title top-content-frame d-flex">
-    <a [routerLink]="backUrl" fragment="lininStory" class="d-flex align-items-center ms-auto ms-md-4 me-auto">
-      <span class="material-symbols-rounded">
-        arrow_back_ios
-      </span> Back
-    </a>
-  </div>
   <div>
-    <app-reflection-font [text]="characterData?.title | translate"
-      [fontClass]="'mx-auto sub-title'"></app-reflection-font>
+    <app-reflection-font [text]="'COMMISSION.TITLE' | translate"
+      [fontClass]="'mx-auto'"></app-reflection-font>
+  </div>
+  <div class="section-content section-color after-reflect mb-3">
+    {{'COMMISSION.DESCRIPTION' | translate}}
+  </div>
+  <div class="row mb-5 d-none d-md-flex">
+    <div class="col-12 col-md-4 mb-3 mb-md-0 d-flex flex-column justify-content-between">
+      <div class="description-frame w-100 mb-3">
+        <div class="face-example mb-3"></div>
+        <div class="section-sub-topic mb-1">
+          {{ 'COMMISSION.FACE.TITLE' | translate}}
+        </div>
+        <div class="price">{{ 'COMMISSION.FACE.PRICE' | translate}}</div>
+        <div class="section-content mb-3 mx-auto">
+          <span [innerHTML]="'COMMISSION.FACE.CHARACTER' | translate"></span><br/>
+          <span [innerHTML]="'COMMISSION.FACE.BG' | translate"></span>
+        </div>
+      </div>
+      <div class="description-frame w-100">
+        <div class="half-example mb-3"></div>
+        <div class="section-sub-topic mb-1">
+          {{ 'COMMISSION.HALF.TITLE' | translate}}
+        </div>
+        <div class="price">{{ 'COMMISSION.HALF.PRICE' | translate}}</div>
+        <div class="section-content mb-3 mx-auto">
+          <span [innerHTML]="'COMMISSION.HALF.CHARACTER' | translate"></span><br/>
+          <span [innerHTML]="'COMMISSION.HALF.BG' | translate"></span>
+        </div>
+      </div>
+    </div>
+    <div class="col-12 col-md-4 mb-3 mb-md-0">
+      <div class="description-frame w-100 h-100">
+        <div class="full-example mb-3"></div>
+        <div class="section-sub-topic mb-1">
+          {{ 'COMMISSION.FULL.TITLE' | translate}}
+        </div>
+        <div class="price">{{ 'COMMISSION.FULL.PRICE' | translate}}</div>
+        <div class="section-content mb-3 mx-auto">
+          <span [innerHTML]="'COMMISSION.FULL.CHARACTER' | translate"></span><br/>
+          <span [innerHTML]="'COMMISSION.FULL.BG' | translate"></span>
+        </div>
+      </div>
+    </div>
+    <div class="col-12 col-md-4 mb-3 mb-md-0">
+      <div class="description-frame w-100 h-100">
+        <div class="bg-detail-example mb-3"></div>
+        <div class="section-sub-topic mb-1">
+          {{ 'COMMISSION.DETAIL.TITLE' | translate}}<span class="d-inline d-md-none d-lg-inline">{{ 'COMMISSION.DETAIL.TITLE2' | translate}}</span>
+        </div>
+        <div class="price">{{ 'COMMISSION.DETAIL.PRICE' | translate}}</div>
+        <div class="section-content mb-3 mx-auto">
+          <span [innerHTML]="'COMMISSION.DETAIL.CHARACTER' | translate"></span><br/>
+          <span [innerHTML]="'COMMISSION.DETAIL.BG' | translate"></span>
+        </div>
+      </div>
+    </div>
   </div>
   <div class="row mb-5">
-
+    <div class="col-12 col-md-4 mb-3 mb-md-0">
+      <div class="description-frame w-100 h-100 text-start p-4 mb-3">
+        <div class="section-sub-topic mb-1">
+          {{ 'COMMISSION.CAN_DO.TITLE' | translate}}
+        </div>
+        <div class="section-content mb-3 mx-auto">
+          <ul>
+            <li>{{ 'COMMISSION.CAN_DO.ITEM_1' | translate}}</li>
+            <li>{{ 'COMMISSION.CAN_DO.ITEM_2' | translate}}</li>
+            <li>{{ 'COMMISSION.CAN_DO.ITEM_3' | translate}}</li>
+            <li>{{ 'COMMISSION.CAN_DO.ITEM_4' | translate}}</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="col-12 col-md-4 mb-3 mb-md-0">
+      <div class="description-frame w-100 h-100 text-start p-4">
+        <div class="section-sub-topic mb-1">
+          {{ 'COMMISSION.DONT_DO.TITLE' | translate}}
+        </div>
+        <div class="section-content mb-3 mx-auto">
+          <ul>
+            <li>{{ 'COMMISSION.DONT_DO.ITEM_1' | translate}}</li>
+            <li>{{ 'COMMISSION.DONT_DO.ITEM_2' | translate}}</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="col-12 col-md-4 mb-3 mb-md-0">
+      <div class="description-frame w-100 h-100 text-start p-4">
+        <div class="section-sub-topic mb-1">
+          {{ 'COMMISSION.PAYMENT.TITLE' | translate}}
+        </div>
+        <div class="section-content mb-3 mx-auto">
+          <ul>
+            <li>{{ 'COMMISSION.PAYMENT.ITEM_1' | translate}}</li>
+            <li>{{ 'COMMISSION.PAYMENT.ITEM_2' | translate}}</li>
+            <li>{{ 'COMMISSION.PAYMENT.ITEM_3' | translate}}</li>
+          </ul>
+        </div>
+      </div>
+    </div>
   </div>
-  <router-outlet></router-outlet>
+  <div>
+    <app-reflection-font [text]="'COMMISSION.EXAMPLE' | translate"
+      [fontClass]="'mx-auto sub-title'"></app-reflection-font>
+  </div>
+  <div class="tab-list">
+    <div class="tab-item">
+      {{ 'COMMISSION.FACE.TITLE' | translate}}
+    </div>
+    <div class="tab-item">
+      {{ 'COMMISSION.HALF.TITLE' | translate}}
+    </div>
+    <div class="tab-item">
+      {{ 'COMMISSION.FULL.TITLE' | translate}}
+    </div>
+    <div class="tab-item">
+      {{ 'COMMISSION.DETAIL.TITLE' | translate}}
+    </div>
+  </div>
+  <div class="tab-body">
+  </div>
   <div class="blank-space">&nbsp;</div>
 </div>

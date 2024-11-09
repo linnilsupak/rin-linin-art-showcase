@@ -6,6 +6,7 @@ import { TarotsComponent } from './tarots/tarots.component';
 import { AboutMeComponent } from './about-me/about-me.component';
 import { importProvidersFrom } from '@angular/core';
 import { TranslateModule } from '@ngx-translate/core';
+import { CommissionComponent } from './commission/commission.component';
 
 export const routes: Routes = [
   {
@@ -47,10 +48,8 @@ export const routes: Routes = [
   },
   {
     path: 'commission',
-    data: {
-      minimizeFlag: true
-    },
-    loadChildren: () => import('./commission/commission.component').then(c => c.CommissionComponent)
+    title: 'Commission: Rin Linin',
+    component: CommissionComponent
   },
   {
     path: 'term-of-service',

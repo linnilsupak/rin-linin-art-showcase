@@ -135,5 +135,53 @@
   "HOME": {
     "WELCOME": "Welcome",
     "SHOW_CASE": "Show case"
+  },
+  "COMMISSION": {
+    "TITLE": "Commission",
+    "DESCRIPTION": "Prices & Example",
+    "FACE": {
+      "TITLE": "Only Face",
+      "PRICE": "$30",
+      "CHARACTER": "Only 1 Character",
+      "BG": "Only simple background can be choose"
+    },
+    "HALF": {
+      "TITLE": "Half body",
+      "PRICE": "$60",
+      "CHARACTER": "Only 1 Character",
+      "BG": "Free background,<br/>If no background, discount -$10"
+    },
+    "FULL": {
+      "TITLE": "Full body",
+      "PRICE": "$120",
+      "CHARACTER": "Free 1-2 Characters",
+      "BG": "Free background,<br/>If no background, discount -$20"
+    },
+    "DETAIL": {
+      "TITLE": "Detail",
+      "TITLE2": " background",
+      "PRICE": "$240",
+      "CHARACTER": "Free 1-3 Characters",
+      "BG": "Free detail background<br/>+20$ per 1 additional Character"
+    },
+    "CAN_DO": {
+      "TITLE": "What I can do",
+      "ITEM_1": "Human",
+      "ITEM_2": "Furry",
+      "ITEM_3": "Pokemon",
+      "ITEM_4": "etc, you can ask me first"
+    },
+    "DONT_DO": {
+      "TITLE": "What I don't do",
+      "ITEM_1": "NSFW 18+",
+      "ITEM_2": "Detail Mecha"
+    },
+    "PAYMENT": {
+      "TITLE": "Payment method",
+      "ITEM_1": "Paypal",
+      "ITEM_2": "Payoneer",
+      "ITEM_3": "(Thai only) promtpay"
+    },
+    "EXAMPLE": "Example"
   }
 }
