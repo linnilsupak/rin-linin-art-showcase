@@ -104,25 +104,31 @@
       </div>
     </div>
   </div>
-  <div>
-    <app-reflection-font [text]="'COMMISSION.EXAMPLE' | translate"
-      [fontClass]="'mx-auto sub-title'"></app-reflection-font>
+  <div class="section-topic section-color mb-4">
+    {{ 'COMMISSION.EXAMPLE' | translate}}
   </div>
-  <div class="tab-list">
-    <div class="tab-item">
-      {{ 'COMMISSION.FACE.TITLE' | translate}}
-    </div>
-    <div class="tab-item">
-      {{ 'COMMISSION.HALF.TITLE' | translate}}
-    </div>
-    <div class="tab-item">
-      {{ 'COMMISSION.FULL.TITLE' | translate}}
-    </div>
-    <div class="tab-item">
-      {{ 'COMMISSION.DETAIL.TITLE' | translate}}
-    </div>
+</div>
+<div class="tab-list">
+  <div class="tab-item active">
+    {{ 'COMMISSION.FACE.TITLE' | translate}}
   </div>
-  <div class="tab-body">
+  <div class="tab-item">
+    {{ 'COMMISSION.HALF.TITLE' | translate}}
   </div>
-  <div class="blank-space">&nbsp;</div>
+  <div class="tab-item">
+    {{ 'COMMISSION.FULL.TITLE' | translate}}
+  </div>
+  <div class="tab-item">
+    {{ 'COMMISSION.DETAIL.TITLE' | translate}}
+    {{ 'COMMISSION.DETAIL.TITLE2' | translate}}
+  </div>
+</div>
+<div class="tab-body">
+  <br/>
+  <br/>
+  <br/>
+  <br/>
+  <br/>
+  <br/>
+  <br/>
 </div>
