@@ -3,10 +3,11 @@
   "version": "0.0.0",
   "scripts": {
     "ng": "ng",
-    "start": "ng serve --port 4400",
-    "build": "ng build",
+    "start": "npm run env && ng serve --port 4400",
+    "build": "npm run env && ng build",
     "watch": "ng build --watch --configuration development",
     "test": "ng test",
+    "env": "node -p \"'export const npm_package_version = ' + JSON.stringify(require('./package.json').version) + ';'\" > src/environments/.env.ts",
     "serve:ssr:rin-linin-art-showcase": "node dist/rin-linin-art-showcase/server/server.mjs"
   },
   "private": true,
