@@ -1,0 +1,23 @@
+<div class="w-100 mb-5 d-none d-md-flex" #parentItem>
+  <div class="mb-md-0 d-flex flex-column justify-content-between animate-frame"
+  [style.width.px]="leftWidth" [style.margin-right.px]="padding">
+    <div class="top-right-frame" [style.margin-bottom.px]="padding" [class.overflow-hidden]="topRightOverflowHidden"
+    [style.height.px]="topRightHeight" (mouseenter)="topRightActive()" (mouseleave)="topRightInactive()">
+      <ng-content select=".top-right-frame"></ng-content>
+    </div>
+    <div class="bottom-right-frame" [style.height.px]="bottomRightHeight" [class.overflow-hidden]="bottomRightOverflowHidden"
+    (mouseenter)="bottomRightActive()" (mouseleave)="bottomRightInactive()">
+      <ng-content select=".bottom-right-frame"></ng-content>
+    </div>
+  </div>
+  <div class="mb-3 mb-md-0 animate-frame" [style.width.px]="centerWidth" [style.margin-right.px]="padding">
+    <div class="center-frame" [style.height.px]="fullHeight"  (mouseenter)="centerActive()" (mouseleave)="centerInactive()">
+      <ng-content select=".center-frame"></ng-content>
+    </div>
+  </div>
+  <div class="col-12 col-md-4 mb-3 mb-md-0 animate-frame" [style.width.px]="rightWidth">
+    <div class="left-frame" [style.height.px]="fullHeight" (mouseenter)="rightActive()" (mouseleave)="rightInactive()">
+      <ng-content select=".left-frame"></ng-content>
+    </div>
+  </div>
+</div>

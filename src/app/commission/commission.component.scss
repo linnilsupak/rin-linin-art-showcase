@@ -1,5 +1,6 @@
 @use "character-frame" as char;
 @use "variables" as var;
+@use "tab-style" as tab;
 @import "bootstrap-mixin";
 
 .cover {
@@ -23,7 +24,7 @@
   background-position: 100% 65%;
   background-repeat: no-repeat;
   background-size: cover;
-  height: 232px;
+  // height: 232px;
   border-radius: 16px;
 }
 
@@ -32,7 +33,7 @@
   background-position: 96% 42%;
   background-repeat: no-repeat;
   background-size: cover;
-  height: 236px;
+  // height: 236px;
   border-radius: 16px;
 }
 
@@ -41,7 +42,7 @@
   background-position: 46% 100%;
   background-repeat: no-repeat;
   background-size: cover;
-  height: 680px;
+  // height: 680px;
   border-radius: 16px;
 }
 
@@ -50,7 +51,7 @@
   background-position: 46% 100%;
   background-repeat: no-repeat;
   background-size: cover;
-  height: 680px;
+  // height: 680px;
   border-radius: 16px;
 }
 
@@ -62,34 +63,3 @@
   font-size: 20px;
 }
 
-// tab style
-.tab-list {
-  display: flex;
-  align-items: stretch;
-  overflow-x: auto;
-  white-space: pre;
-
-  @include media-breakpoint-up(md) {
-    justify-content: center;
-  }
-}
-
-$inactive-tab: #11002494;
-.tab-item {
-  margin-right: 10px;
-  border-radius: 16px 16px 0 0;
-  color: var.$white;
-  padding: 8px 20px;
-  font-size: 1.1rem;
-  background-color: $inactive-tab;
-  cursor: pointer;
-
-  &.active {
-    background-color: var.$dark-tab;
-    font-weight: 700;
-  }
-}
-
-.tab-body {
-  background: linear-gradient(0deg, rgba(17, 0, 36, 0.41) 0%, #{var.$dark-tab} 100%);
-}

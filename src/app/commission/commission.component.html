@@ -8,9 +8,9 @@
   <div class="section-content section-color after-reflect mb-3">
     {{'COMMISSION.DESCRIPTION' | translate}}
   </div>
-  <div class="row mb-5 d-none d-md-flex">
+  <!-- <div class="row mb-5 d-none d-md-flex">
     <div class="col-12 col-md-4 mb-3 mb-md-0 d-flex flex-column justify-content-between">
-      <div class="description-frame w-100 mb-3">
+      <div class="description-frame w-100 mb-3 top-right-frame">
         <div class="face-example mb-3"></div>
         <div class="section-sub-topic mb-1">
           {{ 'COMMISSION.FACE.TITLE' | translate}}
@@ -59,7 +59,53 @@
         </div>
       </div>
     </div>
-  </div>
+  </div> -->
+  <app-frame-item-animation>
+    <div class="description-frame w-100 top-right-frame d-flex flex-column h-100">
+      <div class="face-example flex-grow-1 mb-3"></div>
+      <div class="section-sub-topic mb-1">
+        {{ 'COMMISSION.FACE.TITLE' | translate}}
+      </div>
+      <div class="price">{{ 'COMMISSION.FACE.PRICE' | translate}}</div>
+      <div class="section-content mb-3 mx-auto">
+        <span [innerHTML]="'COMMISSION.FACE.CHARACTER' | translate"></span><br/>
+        <span [innerHTML]="'COMMISSION.FACE.BG' | translate"></span>
+      </div>
+    </div>
+    <div class="description-frame w-100 bottom-right-frame d-flex flex-column h-100">
+      <div class="half-example flex-grow-1 mb-3"></div>
+      <div class="section-sub-topic mb-1">
+        {{ 'COMMISSION.HALF.TITLE' | translate}}
+      </div>
+      <div class="price">{{ 'COMMISSION.HALF.PRICE' | translate}}</div>
+      <div class="section-content mb-3 mx-auto">
+        <span [innerHTML]="'COMMISSION.HALF.CHARACTER' | translate"></span><br/>
+        <span [innerHTML]="'COMMISSION.HALF.BG' | translate"></span>
+      </div>
+    </div>
+    <div class="description-frame w-100 h-100 center-frame d-flex flex-column h-100">
+      <div class="full-example flex-grow-1 mb-3"></div>
+      <div class="section-sub-topic mb-1">
+        {{ 'COMMISSION.FULL.TITLE' | translate}}
+      </div>
+      <div class="price">{{ 'COMMISSION.FULL.PRICE' | translate}}</div>
+      <div class="section-content mb-3 mx-auto">
+        <span [innerHTML]="'COMMISSION.FULL.CHARACTER' | translate"></span><br/>
+        <span [innerHTML]="'COMMISSION.FULL.BG' | translate"></span>
+      </div>
+    </div>
+    <div class="description-frame w-100 h-100 left-frame d-flex flex-column h-100">
+      <div class="bg-detail-example flex-grow-1 mb-3"></div>
+      <div class="section-sub-topic mb-1">
+        {{ 'COMMISSION.DETAIL.TITLE' | translate}}<span class="d-inline d-md-none d-lg-inline">{{ 'COMMISSION.DETAIL.TITLE2' | translate}}</span>
+      </div>
+      <div class="price">{{ 'COMMISSION.DETAIL.PRICE' | translate}}</div>
+      <div class="section-content mb-3 mx-auto">
+        <span [innerHTML]="'COMMISSION.DETAIL.CHARACTER' | translate"></span><br/>
+        <span [innerHTML]="'COMMISSION.DETAIL.BG' | translate"></span>
+      </div>
+    </div>
+  </app-frame-item-animation>
   <div class="row mb-5">
     <div class="col-12 col-md-4 mb-3 mb-md-0">
       <div class="description-frame w-100 h-100 text-start p-4 mb-3">

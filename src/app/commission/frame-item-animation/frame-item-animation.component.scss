@@ -1,0 +1,10 @@
+
+/* commission item animation */
+.animate-frame, .top-right-frame, .bottom-right-frame, .center-frame, .left-frame {
+  transition: all .6s ease-out;
+}
+
+.overflow-hidden {
+  overflow: hidden;
+  filter: brightness(50%);
+}
