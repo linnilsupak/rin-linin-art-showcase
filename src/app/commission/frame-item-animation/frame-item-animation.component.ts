@@ -27,6 +27,13 @@ export class FrameItemAnimationComponent implements AfterViewInit {
       this.rightActive(true);
     }
   }
+  @Input()
+  set isExample(val: boolean) {
+    this._isExample = val;
+  }
+  get isExample() {
+    return this._isExample;
+  }
   @ViewChild('parentItem') parentItem: ElementRef<HTMLElement>;
   activeItem: commissionTab;
   fullHeight = 900;
@@ -41,6 +48,7 @@ export class FrameItemAnimationComponent implements AfterViewInit {
   leftWidth: number;
   bottomRightHeight = 438;
   commissionTab = commissionTab;
+  private _isExample = false;
   @HostListener('window:resize')
   public detectResize(): void {
     this.fullWidth = this.parentItem.nativeElement.offsetWidth;

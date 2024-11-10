@@ -1,4 +1,4 @@
-<div class="w-100 mb-5 d-none d-md-flex" #parentItem>
+<div class="w-100 mb-5 d-flex" #parentItem [class.example]="isExample">
   <div class="mb-md-0 d-flex flex-column justify-content-between animate-frame"
   [style.width.px]="leftWidth" [style.margin-right.px]="padding">
     <div class="top-right-frame description-frame" (click)="topRightActive(true)"
