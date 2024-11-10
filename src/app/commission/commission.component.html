@@ -2,12 +2,89 @@
 </div>
 <div class="container-fluid container-md mt-4">
   <div>
-    <app-reflection-font [text]="'COMMISSION.TITLE' | translate"
-      [fontClass]="'mx-auto'"></app-reflection-font>
+    <app-reflection-font [text]="'COMMISSION.TITLE' | translate" [fontClass]="'mx-auto'"></app-reflection-font>
   </div>
   <div class="section-content section-color after-reflect mb-3">
     {{'COMMISSION.DESCRIPTION' | translate}}
   </div>
+</div>
+<div class="d-block d-md-none">
+  <div class="tab-list white">
+    <div class="tab-item" [class.active]="activeTab === commissionTab.FACE || activeTab === undefined"
+      (click)="activeTab = commissionTab.FACE">
+      {{ 'COMMISSION.FACE.TITLE' | translate}}
+    </div>
+    <div class="tab-item" [class.active]="activeTab === commissionTab.HALF" (click)="activeTab = commissionTab.HALF">
+      {{ 'COMMISSION.HALF.TITLE' | translate}}
+    </div>
+    <div class="tab-item" [class.active]="activeTab === commissionTab.FULL" (click)="activeTab = commissionTab.FULL">
+      {{ 'COMMISSION.FULL.TITLE' | translate}}
+    </div>
+    <div class="tab-item" [class.active]="activeTab === commissionTab.DETAIL"
+      (click)="activeTab = commissionTab.DETAIL">
+      {{ 'COMMISSION.DETAIL.TITLE' | translate}}
+      {{ 'COMMISSION.DETAIL.TITLE2' | translate}}
+    </div>
+  </div>
+  <div class="tab-body white pt-3 pb-5 px-4">
+    <div class="previous-arrow" (click)="clickPrevious()" [class.d-none]="activeTab === commissionTab.FACE || activeTab === undefined">
+      <span class="material-symbols-rounded mt-5">
+        arrow_back_ios
+        </span>
+    </div>
+    <div class="next-arrow" (click)="clickNext()" [class.d-none]="activeTab === commissionTab.DETAIL">
+      <span class="material-symbols-rounded mt-5">
+        arrow_forward_ios
+        </span>
+    </div>
+    <div [class.d-none]="activeTab !== commissionTab.FACE && activeTab !== undefined">
+      <div class="section-sub-topic mb-1">
+        {{ 'COMMISSION.FACE.TITLE' | translate}}
+      </div>
+      <div class="price">{{ 'COMMISSION.FACE.PRICE' | translate}}</div>
+      <div class="section-content mb-3 mx-auto">
+        <span [innerHTML]="'COMMISSION.FACE.CHARACTER' | translate"></span><br />
+        <span [innerHTML]="'COMMISSION.FACE.BG' | translate"></span>
+      </div>
+      <img src="/assets/images/commission/face_commission_example.webp" class="w-100 preview-img">
+    </div>
+    <div [class.d-none]="activeTab !== commissionTab.HALF">
+      <div class="section-sub-topic mb-1">
+        {{ 'COMMISSION.HALF.TITLE' | translate}}
+      </div>
+      <div class="price">{{ 'COMMISSION.HALF.PRICE' | translate}}</div>
+      <div class="section-content mb-3 mx-auto">
+        <span [innerHTML]="'COMMISSION.HALF.CHARACTER' | translate"></span><br />
+        <span [innerHTML]="'COMMISSION.HALF.BG' | translate"></span>
+      </div>
+      <img src="/assets/images/commission/half_commission_example.webp" class="w-100 preview-img">
+    </div>
+    <div [class.d-none]="activeTab !== commissionTab.FULL">
+      <div class="section-sub-topic mb-1">
+        {{ 'COMMISSION.FULL.TITLE' | translate}}
+      </div>
+      <div class="price">{{ 'COMMISSION.FULL.PRICE' | translate}}</div>
+      <div class="section-content mb-3 mx-auto">
+        <span [innerHTML]="'COMMISSION.FULL.CHARACTER' | translate"></span><br />
+        <span [innerHTML]="'COMMISSION.FULL.BG' | translate"></span>
+      </div>
+      <img src="/assets/images/commission/full_commission_example.webp" class="w-100 preview-img">
+    </div>
+    <div [class.d-none]="activeTab !== commissionTab.DETAIL">
+      <div class="section-sub-topic mb-1">
+        {{ 'COMMISSION.DETAIL.TITLE' | translate}}<span class="d-inline d-md-none d-lg-inline">{{
+          'COMMISSION.DETAIL.TITLE2' | translate}}</span>
+      </div>
+      <div class="price">{{ 'COMMISSION.DETAIL.PRICE' | translate}}</div>
+      <div class="section-content mb-3 mx-auto">
+        <span [innerHTML]="'COMMISSION.DETAIL.CHARACTER' | translate"></span><br />
+        <span [innerHTML]="'COMMISSION.DETAIL.BG' | translate"></span>
+      </div>
+      <img src="/assets/images/commission/detail_bg_commission_example.webp" class="w-100 preview-img">
+    </div>
+  </div>
+</div>
+<div class="container-fluid container-md mt-4 mt-md-0">
   <app-frame-item-animation [activeVal]="activeTab" (activeTab)="activeTab = $event;">
     <div class="w-100 top-right-frame d-flex flex-column h-100">
       <div class="face-example flex-grow-1 mb-3"></div>
@@ -16,7 +93,7 @@
       </div>
       <div class="price">{{ 'COMMISSION.FACE.PRICE' | translate}}</div>
       <div class="section-content mb-3 mx-auto">
-        <span [innerHTML]="'COMMISSION.FACE.CHARACTER' | translate"></span><br/>
+        <span [innerHTML]="'COMMISSION.FACE.CHARACTER' | translate"></span><br />
         <span [innerHTML]="'COMMISSION.FACE.BG' | translate"></span>
       </div>
     </div>
@@ -27,7 +104,7 @@
       </div>
       <div class="price">{{ 'COMMISSION.HALF.PRICE' | translate}}</div>
       <div class="section-content mb-3 mx-auto">
-        <span [innerHTML]="'COMMISSION.HALF.CHARACTER' | translate"></span><br/>
+        <span [innerHTML]="'COMMISSION.HALF.CHARACTER' | translate"></span><br />
         <span [innerHTML]="'COMMISSION.HALF.BG' | translate"></span>
       </div>
     </div>
@@ -38,18 +115,19 @@
       </div>
       <div class="price">{{ 'COMMISSION.FULL.PRICE' | translate}}</div>
       <div class="section-content mb-3 mx-auto">
-        <span [innerHTML]="'COMMISSION.FULL.CHARACTER' | translate"></span><br/>
+        <span [innerHTML]="'COMMISSION.FULL.CHARACTER' | translate"></span><br />
         <span [innerHTML]="'COMMISSION.FULL.BG' | translate"></span>
       </div>
     </div>
     <div class="w-100 h-100 left-frame d-flex flex-column h-100">
       <div class="bg-detail-example flex-grow-1 mb-3"></div>
       <div class="section-sub-topic mb-1">
-        {{ 'COMMISSION.DETAIL.TITLE' | translate}}<span class="d-inline d-md-none d-lg-inline">{{ 'COMMISSION.DETAIL.TITLE2' | translate}}</span>
+        {{ 'COMMISSION.DETAIL.TITLE' | translate}}<span class="d-inline d-md-none d-lg-inline">{{
+          'COMMISSION.DETAIL.TITLE2' | translate}}</span>
       </div>
       <div class="price">{{ 'COMMISSION.DETAIL.PRICE' | translate}}</div>
       <div class="section-content mb-3 mx-auto">
-        <span [innerHTML]="'COMMISSION.DETAIL.CHARACTER' | translate"></span><br/>
+        <span [innerHTML]="'COMMISSION.DETAIL.CHARACTER' | translate"></span><br />
         <span [innerHTML]="'COMMISSION.DETAIL.BG' | translate"></span>
       </div>
     </div>
@@ -103,7 +181,8 @@
   </div>
 </div>
 <div class="tab-list">
-  <div class="tab-item" [class.active]="activeTab === commissionTab.FACE || activeTab === undefined" (click)="activeTab = commissionTab.FACE">
+  <div class="tab-item" [class.active]="activeTab === commissionTab.FACE || activeTab === undefined"
+    (click)="activeTab = commissionTab.FACE">
     {{ 'COMMISSION.FACE.TITLE' | translate}}
   </div>
   <div class="tab-item" [class.active]="activeTab === commissionTab.HALF" (click)="activeTab = commissionTab.HALF">
@@ -118,11 +197,16 @@
   </div>
 </div>
 <div class="tab-body">
-  <br/>
-  <br/>
-  <br/>
-  <br/>
-  <br/>
-  <br/>
-  <br/>
+  <div [class.d-none]="activeTab !== commissionTab.FACE && activeTab !== undefined">
+    Face
+  </div>
+  <div [class.d-none]="activeTab !== commissionTab.HALF">
+    Half
+  </div>
+  <div [class.d-none]="activeTab !== commissionTab.FULL">
+    Full
+  </div>
+  <div [class.d-none]="activeTab !== commissionTab.DETAIL">
+    Detail
+  </div>
 </div>

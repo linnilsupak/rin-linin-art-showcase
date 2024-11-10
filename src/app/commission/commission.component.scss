@@ -24,7 +24,6 @@
   background-position: 100% 65%;
   background-repeat: no-repeat;
   background-size: cover;
-  // height: 232px;
   border-radius: 16px;
 }
 
@@ -33,7 +32,6 @@
   background-position: 96% 42%;
   background-repeat: no-repeat;
   background-size: cover;
-  // height: 236px;
   border-radius: 16px;
 }
 
@@ -42,7 +40,6 @@
   background-position: 46% 100%;
   background-repeat: no-repeat;
   background-size: cover;
-  // height: 680px;
   border-radius: 16px;
 }
 
@@ -51,7 +48,6 @@
   background-position: 46% 100%;
   background-repeat: no-repeat;
   background-size: cover;
-  // height: 680px;
   border-radius: 16px;
 }
 
@@ -61,5 +57,9 @@
   border-radius: 16px;
   padding: 0px 6px;
   font-size: 20px;
+  margin-bottom: 6px;
 }
 
+.preview-img {
+  max-width: 400px;
+}

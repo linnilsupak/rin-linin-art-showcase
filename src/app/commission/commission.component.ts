@@ -14,4 +14,27 @@ import { commissionTab } from '../core/enum/commission-tab.enum';
 export class CommissionComponent {
   activeTab: commissionTab;
   commissionTab = commissionTab;
+  tabOrderList = [commissionTab.FACE, commissionTab.HALF, commissionTab.FULL, commissionTab.DETAIL];
+
+  clickNext() {
+    let currentIndex = this.tabOrderList.indexOf(this.activeTab);
+    let nextIndex = 0;
+    if (currentIndex === -1) {
+      currentIndex = 0;
+    }
+    nextIndex = currentIndex + 1;
+    this.activeTab = this.tabOrderList[nextIndex];
+  }
+
+  clickPrevious() {
+    let currentIndex = this.tabOrderList.indexOf(this.activeTab);
+    let nextIndex = 0;
+    if (currentIndex <= 0) {
+      currentIndex = 1;
+    }
+    nextIndex = currentIndex - 1;
+    this.activeTab = this.tabOrderList[nextIndex];
+
+  }
+
 }
