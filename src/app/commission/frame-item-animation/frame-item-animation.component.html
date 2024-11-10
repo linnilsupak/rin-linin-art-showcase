@@ -1,22 +1,25 @@
 <div class="w-100 mb-5 d-none d-md-flex" #parentItem>
   <div class="mb-md-0 d-flex flex-column justify-content-between animate-frame"
   [style.width.px]="leftWidth" [style.margin-right.px]="padding">
-    <div class="top-right-frame" [style.margin-bottom.px]="padding" [class.overflow-hidden]="topRightOverflowHidden"
+    <div class="top-right-frame description-frame" (click)="topRightActive(true)"
+    [style.margin-bottom.px]="padding" [class.overflow-hidden]="activeItem !== commissionTab.FACE && activeItem !== undefined"
     [style.height.px]="topRightHeight" (mouseenter)="topRightActive()" (mouseleave)="topRightInactive()">
       <ng-content select=".top-right-frame"></ng-content>
     </div>
-    <div class="bottom-right-frame" [style.height.px]="bottomRightHeight" [class.overflow-hidden]="bottomRightOverflowHidden"
-    (mouseenter)="bottomRightActive()" (mouseleave)="bottomRightInactive()">
+    <div class="bottom-right-frame description-frame" [style.height.px]="bottomRightHeight" [class.overflow-hidden]="activeItem !== commissionTab.HALF && activeItem !== undefined"
+    (mouseenter)="bottomRightActive()" (mouseleave)="bottomRightInactive()"  (click)="bottomRightActive(true)">
       <ng-content select=".bottom-right-frame"></ng-content>
     </div>
   </div>
   <div class="mb-3 mb-md-0 animate-frame" [style.width.px]="centerWidth" [style.margin-right.px]="padding">
-    <div class="center-frame" [style.height.px]="fullHeight"  (mouseenter)="centerActive()" (mouseleave)="centerInactive()">
+    <div class="center-frame description-frame" [style.height.px]="fullHeight"  [class.overflow-hidden]="activeItem !== commissionTab.FULL && activeItem !== undefined"
+     (mouseenter)="centerActive()" (mouseleave)="centerInactive()" (click)="centerActive(true)">
       <ng-content select=".center-frame"></ng-content>
     </div>
   </div>
   <div class="col-12 col-md-4 mb-3 mb-md-0 animate-frame" [style.width.px]="rightWidth">
-    <div class="left-frame" [style.height.px]="fullHeight" (mouseenter)="rightActive()" (mouseleave)="rightInactive()">
+    <div class="left-frame description-frame" [style.height.px]="fullHeight"  [class.overflow-hidden]="activeItem !== commissionTab.DETAIL && activeItem !== undefined"
+    (mouseenter)="rightActive()" (mouseleave)="rightInactive()" (click)="rightActive(true)">
       <ng-content select=".left-frame"></ng-content>
     </div>
   </div>

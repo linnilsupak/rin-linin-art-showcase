@@ -2,6 +2,7 @@ import { Component } from '@angular/core';
 import { TranslateModule } from '@ngx-translate/core';
 import { ReflectionFontComponent } from "../shared/reflection-font/reflection-font.component";
 import { FrameItemAnimationComponent } from "./frame-item-animation/frame-item-animation.component";
+import { commissionTab } from '../core/enum/commission-tab.enum';
 
 @Component({
   selector: 'app-commission',
@@ -11,7 +12,6 @@ import { FrameItemAnimationComponent } from "./frame-item-animation/frame-item-a
   styleUrl: './commission.component.scss'
 })
 export class CommissionComponent {
-backUrl: any;
-characterData: any;
-
+  activeTab: commissionTab;
+  commissionTab = commissionTab;
 }

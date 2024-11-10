@@ -1,7 +1,9 @@
+@use "character-frame" as char;
 
 /* commission item animation */
 .animate-frame, .top-right-frame, .bottom-right-frame, .center-frame, .left-frame {
   transition: all .6s ease-out;
+  cursor: pointer;
 }
 
 .overflow-hidden {

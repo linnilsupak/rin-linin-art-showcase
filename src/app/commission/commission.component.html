@@ -8,60 +8,8 @@
   <div class="section-content section-color after-reflect mb-3">
     {{'COMMISSION.DESCRIPTION' | translate}}
   </div>
-  <!-- <div class="row mb-5 d-none d-md-flex">
-    <div class="col-12 col-md-4 mb-3 mb-md-0 d-flex flex-column justify-content-between">
-      <div class="description-frame w-100 mb-3 top-right-frame">
-        <div class="face-example mb-3"></div>
-        <div class="section-sub-topic mb-1">
-          {{ 'COMMISSION.FACE.TITLE' | translate}}
-        </div>
-        <div class="price">{{ 'COMMISSION.FACE.PRICE' | translate}}</div>
-        <div class="section-content mb-3 mx-auto">
-          <span [innerHTML]="'COMMISSION.FACE.CHARACTER' | translate"></span><br/>
-          <span [innerHTML]="'COMMISSION.FACE.BG' | translate"></span>
-        </div>
-      </div>
-      <div class="description-frame w-100">
-        <div class="half-example mb-3"></div>
-        <div class="section-sub-topic mb-1">
-          {{ 'COMMISSION.HALF.TITLE' | translate}}
-        </div>
-        <div class="price">{{ 'COMMISSION.HALF.PRICE' | translate}}</div>
-        <div class="section-content mb-3 mx-auto">
-          <span [innerHTML]="'COMMISSION.HALF.CHARACTER' | translate"></span><br/>
-          <span [innerHTML]="'COMMISSION.HALF.BG' | translate"></span>
-        </div>
-      </div>
-    </div>
-    <div class="col-12 col-md-4 mb-3 mb-md-0">
-      <div class="description-frame w-100 h-100">
-        <div class="full-example mb-3"></div>
-        <div class="section-sub-topic mb-1">
-          {{ 'COMMISSION.FULL.TITLE' | translate}}
-        </div>
-        <div class="price">{{ 'COMMISSION.FULL.PRICE' | translate}}</div>
-        <div class="section-content mb-3 mx-auto">
-          <span [innerHTML]="'COMMISSION.FULL.CHARACTER' | translate"></span><br/>
-          <span [innerHTML]="'COMMISSION.FULL.BG' | translate"></span>
-        </div>
-      </div>
-    </div>
-    <div class="col-12 col-md-4 mb-3 mb-md-0">
-      <div class="description-frame w-100 h-100">
-        <div class="bg-detail-example mb-3"></div>
-        <div class="section-sub-topic mb-1">
-          {{ 'COMMISSION.DETAIL.TITLE' | translate}}<span class="d-inline d-md-none d-lg-inline">{{ 'COMMISSION.DETAIL.TITLE2' | translate}}</span>
-        </div>
-        <div class="price">{{ 'COMMISSION.DETAIL.PRICE' | translate}}</div>
-        <div class="section-content mb-3 mx-auto">
-          <span [innerHTML]="'COMMISSION.DETAIL.CHARACTER' | translate"></span><br/>
-          <span [innerHTML]="'COMMISSION.DETAIL.BG' | translate"></span>
-        </div>
-      </div>
-    </div>
-  </div> -->
-  <app-frame-item-animation>
-    <div class="description-frame w-100 top-right-frame d-flex flex-column h-100">
+  <app-frame-item-animation [activeVal]="activeTab" (activeTab)="activeTab = $event;">
+    <div class="w-100 top-right-frame d-flex flex-column h-100">
       <div class="face-example flex-grow-1 mb-3"></div>
       <div class="section-sub-topic mb-1">
         {{ 'COMMISSION.FACE.TITLE' | translate}}
@@ -72,7 +20,7 @@
         <span [innerHTML]="'COMMISSION.FACE.BG' | translate"></span>
       </div>
     </div>
-    <div class="description-frame w-100 bottom-right-frame d-flex flex-column h-100">
+    <div class="w-100 bottom-right-frame d-flex flex-column h-100">
       <div class="half-example flex-grow-1 mb-3"></div>
       <div class="section-sub-topic mb-1">
         {{ 'COMMISSION.HALF.TITLE' | translate}}
@@ -83,7 +31,7 @@
         <span [innerHTML]="'COMMISSION.HALF.BG' | translate"></span>
       </div>
     </div>
-    <div class="description-frame w-100 h-100 center-frame d-flex flex-column h-100">
+    <div class="w-100 h-100 center-frame d-flex flex-column h-100">
       <div class="full-example flex-grow-1 mb-3"></div>
       <div class="section-sub-topic mb-1">
         {{ 'COMMISSION.FULL.TITLE' | translate}}
@@ -94,7 +42,7 @@
         <span [innerHTML]="'COMMISSION.FULL.BG' | translate"></span>
       </div>
     </div>
-    <div class="description-frame w-100 h-100 left-frame d-flex flex-column h-100">
+    <div class="w-100 h-100 left-frame d-flex flex-column h-100">
       <div class="bg-detail-example flex-grow-1 mb-3"></div>
       <div class="section-sub-topic mb-1">
         {{ 'COMMISSION.DETAIL.TITLE' | translate}}<span class="d-inline d-md-none d-lg-inline">{{ 'COMMISSION.DETAIL.TITLE2' | translate}}</span>
@@ -155,16 +103,16 @@
   </div>
 </div>
 <div class="tab-list">
-  <div class="tab-item active">
+  <div class="tab-item" [class.active]="activeTab === commissionTab.FACE || activeTab === undefined" (click)="activeTab = commissionTab.FACE">
     {{ 'COMMISSION.FACE.TITLE' | translate}}
   </div>
-  <div class="tab-item">
+  <div class="tab-item" [class.active]="activeTab === commissionTab.HALF" (click)="activeTab = commissionTab.HALF">
     {{ 'COMMISSION.HALF.TITLE' | translate}}
   </div>
-  <div class="tab-item">
+  <div class="tab-item" [class.active]="activeTab === commissionTab.FULL" (click)="activeTab = commissionTab.FULL">
     {{ 'COMMISSION.FULL.TITLE' | translate}}
   </div>
-  <div class="tab-item">
+  <div class="tab-item" [class.active]="activeTab === commissionTab.DETAIL" (click)="activeTab = commissionTab.DETAIL">
     {{ 'COMMISSION.DETAIL.TITLE' | translate}}
     {{ 'COMMISSION.DETAIL.TITLE2' | translate}}
   </div>

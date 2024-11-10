@@ -3,5 +3,6 @@ export const mainConfig = {
   timeoutAfterInit: 500,
   debounceTime: 500,
   preserveHeight: 116,
-  scrollPositionShowSearch: 575
+  scrollPositionShowSearch: 575,
+  assignClass: 620
 }
