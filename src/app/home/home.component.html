@@ -42,7 +42,42 @@
       hoverDescription="Playground" label="Mobias"></app-character-icon>
   </div>
 </div>
-<div class="p-4 dark-section mt-5">
+<div class="dark-white-section p-4 mt-5">
+  <div class="container-fluid container-lg">
+    <div class="row">
+      <div class="col-12">
+        <app-reflection-font [text]="'HOME.COMMISSION' | translate" [fontClass]="'mx-auto sub-title'"></app-reflection-font>
+      </div>
+    </div>
+    <div class="row after-reflect">
+      <div class="col-12 col-md-6">
+        <img src="/assets/images/home/commission_example.png" srcset="{{ '/assets/images/home/commission_example.png' | imageSrcset }}"
+        class="w-100"/>
+      </div>
+      <div class="col-12 col-md-6 text-center">
+        <div class="description-frame p-4 mt-3">
+          <div class="section-sub-topic mb-1">
+            Want an art to go with your project?
+          </div>
+          <div class="mt-2">
+            You want your character draw in a cool way?<br/>
+            A gift to someone?<br/>
+            A book cover for your novel?
+          </div>
+          <div class="section-sub-topic my-3">
+            You come at a right place!
+          </div>
+          <div class="mt-5 d-flex">
+            <a [routerLink]="'/commission'" class="mx-auto">
+              <app-playground-menu [label]="'See more detail'"></app-playground-menu>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="p-4 dark-section">
   <app-about-me-pic-header [isHome]="true"></app-about-me-pic-header>
   <div class="d-flex">
     <hr class="about-me-line mx-auto mt-0"/>

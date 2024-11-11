@@ -1,7 +1,8 @@
 @use "character-frame" as char;
+@use "commission-frame" as commission;
 
 /* commission item animation */
-.animate-frame, .top-right-frame, .bottom-right-frame, .center-frame, .left-frame {
+.animate-frame {
   transition: all .6s ease-out;
   cursor: pointer;
 }
@@ -11,6 +12,6 @@
   filter: brightness(50%);
 }
 
-.example {
-  transform: scale(0.3);
+.face-example, .half-example, .full-example, .detail-example {
+  max-height: 574px;
 }

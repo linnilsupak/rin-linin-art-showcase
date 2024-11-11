@@ -134,7 +134,8 @@
   },
   "HOME": {
     "WELCOME": "Welcome",
-    "SHOW_CASE": "Show case"
+    "SHOW_CASE": "Show case",
+    "COMMISSION": "Commission me"
   },
   "COMMISSION": {
     "TITLE": "Commission Info",

@@ -1,4 +1,5 @@
 @use "character-frame" as char;
+@use "commission-frame" as commission;
 @use "variables" as var;
 @use "tab-style" as tab;
 @import "bootstrap-mixin";
@@ -17,47 +18,6 @@
 
 .example-image {
   border-radius: 16px;
-}
-
-.face-example {
-  background-image: url('/assets/images/commission/face_commission_example.webp');
-  background-position: 100% 65%;
-  background-repeat: no-repeat;
-  background-size: cover;
-  border-radius: 16px;
-}
-
-.half-example {
-  background-image: url('/assets/images/commission/half_commission_example.webp');
-  background-position: 96% 42%;
-  background-repeat: no-repeat;
-  background-size: cover;
-  border-radius: 16px;
-}
-
-.full-example {
-  background-image: url('/assets/images/commission/full_commission_example.webp');
-  background-position: 46% 100%;
-  background-repeat: no-repeat;
-  background-size: cover;
-  border-radius: 16px;
-}
-
-.bg-detail-example {
-  background-image: url('/assets/images/commission/detail_bg_commission_example.webp');
-  background-position: 46% 100%;
-  background-repeat: no-repeat;
-  background-size: cover;
-  border-radius: 16px;
-}
-
-.price {
-  font-family: "Sarabun";
-  border: 1px solid;
-  border-radius: 16px;
-  padding: 0px 6px;
-  font-size: 20px;
-  margin-bottom: 6px;
 }
 
 .preview-img {
