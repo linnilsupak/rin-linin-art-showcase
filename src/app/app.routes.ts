@@ -7,6 +7,7 @@ import { AboutMeComponent } from './about-me/about-me.component';
 import { importProvidersFrom } from '@angular/core';
 import { TranslateModule } from '@ngx-translate/core';
 import { CommissionComponent } from './commission/commission.component';
+import { TermOfServiceComponent } from './term-of-service/term-of-service.component';
 
 export const routes: Routes = [
   {
@@ -45,6 +46,11 @@ export const routes: Routes = [
       minimizeFlag: true
     },
     loadChildren: () => import('./character-info/character-info.routes').then(c => c.characterInfoRoutes)
+  },
+  {
+    path: 'tos',
+    title: 'Term of service: Rin Linin',
+    component: TermOfServiceComponent
   },
   {
     path: 'commission',

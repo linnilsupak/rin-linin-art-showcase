@@ -3,11 +3,14 @@ import { TranslateModule } from '@ngx-translate/core';
 import { ReflectionFontComponent } from "../shared/reflection-font/reflection-font.component";
 import { FrameItemAnimationComponent } from "./frame-item-animation/frame-item-animation.component";
 import { commissionTab } from '../core/enum/commission-tab.enum';
+import { MoreButtonComponent } from "../shared/more-button/more-button.component";
+import { RouterLink } from '@angular/router';
 
 @Component({
   selector: 'app-commission',
   standalone: true,
-  imports: [ReflectionFontComponent, TranslateModule, FrameItemAnimationComponent],
+  imports: [ReflectionFontComponent, TranslateModule, RouterLink,
+    FrameItemAnimationComponent, MoreButtonComponent],
   templateUrl: './commission.component.html',
   styleUrl: './commission.component.scss'
 })
