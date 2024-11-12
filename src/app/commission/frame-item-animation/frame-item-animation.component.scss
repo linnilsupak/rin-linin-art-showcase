@@ -17,8 +17,23 @@
   max-height: 574px;
 }
 
+@mixin bright-select {
+  background-color: var.$bright-blue;
+  color: var.$image-card-shadow;;
+}
+
 .description-frame.not-active:hover {
   background: #5353533f;
+  &:not(.overflow-hidden) {
+    .select-btn {
+      @include bright-select;
+    }
+  }
+  &.overflow-hidden {
+    .select-btn:hover {
+      @include bright-select;
+    }
+  }
 }
 
 .select-btn {
@@ -33,6 +48,7 @@
   transition: all .2s ease-out;
 
   &:hover {
-    filter: saturate(150%) brightness(150%);
+    letter-spacing: .1em;
+    background-color: var.$dark-sky;
   }
 }
