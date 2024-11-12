@@ -14,9 +14,9 @@
         <span [innerHTML]="'COMMISSION.' + item.name + '.CHARACTER' | translate"></span><br />
         <span [innerHTML]="'COMMISSION.' + item.name + '.BG' | translate"></span>
       </div>
-      <div class="select-btn">
-        Select
-      </div>
+      <a class="select-btn" [routerLink]="['/commission-form']" >
+        {{ 'COMMISSION.SELECT' | translate}}
+      </a>
     </div>
   </div>
   }

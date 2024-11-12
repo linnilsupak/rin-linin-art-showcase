@@ -8,6 +8,7 @@ import { importProvidersFrom } from '@angular/core';
 import { TranslateModule } from '@ngx-translate/core';
 import { CommissionComponent } from './commission/commission.component';
 import { TermOfServiceComponent } from './term-of-service/term-of-service.component';
+import { CommissionFormComponent } from './commission-form/commission-form.component';
 
 export const routes: Routes = [
   {
@@ -51,6 +52,11 @@ export const routes: Routes = [
     path: 'tos',
     title: 'Term of service: Rin Linin',
     component: TermOfServiceComponent
+  },
+  {
+    path: 'commission-form',
+    title: 'Commission form: Rin Linin',
+    component: CommissionFormComponent
   },
   {
     path: 'commission',

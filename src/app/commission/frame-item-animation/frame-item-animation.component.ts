@@ -2,11 +2,12 @@ import { AfterViewInit, Component, ElementRef, EventEmitter, HostListener, Input
 import { mainConfig } from '../../core/config/main.config';
 import { commissionTab } from '../../core/enum/commission-tab.enum';
 import { TranslateModule } from '@ngx-translate/core';
+import { RouterLink } from '@angular/router';
 
 @Component({
   selector: 'app-frame-item-animation',
   standalone: true,
-  imports: [TranslateModule],
+  imports: [TranslateModule, RouterLink],
   templateUrl: './frame-item-animation.component.html',
   styleUrl: './frame-item-animation.component.scss'
 })

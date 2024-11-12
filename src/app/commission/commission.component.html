@@ -134,11 +134,11 @@
   </div>
   <div class="row mb-5">
     <div class="col-12 col-md-6 mb-3 mb-md-0">
-      <div class="description-frame w-100 h-100 text-start p-4 mb-3">
+      <div class="description-frame w-100 h-100 text-start p-4 mb-3  d-flex flex-column">
         <div class="section-sub-topic mb-1">
           {{ 'COMMISSION.METHOD.TITLE' | translate}}
         </div>
-        <div class="section-content mb-3 mx-auto">
+        <div class="section-content mb-1 mx-auto">
           <ul>
             <li>{{ 'COMMISSION.METHOD.ITEM_1' | translate}}</li>
             <li>{{ 'COMMISSION.METHOD.ITEM_2' | translate}}</li>
@@ -146,28 +146,37 @@
             <li>{{ 'COMMISSION.METHOD.ITEM_4' | translate}}</li>
           </ul>
         </div>
+        <div class="d-flex mt-auto">
+          <a routerLink="/commission-form" class="ms-auto">
+            <app-more-button>
+              {{ 'COMMISSION.CONTINUE' | translate}}
+            </app-more-button>
+          </a>
+        </div>
       </div>
     </div>
     <div class="col-12 col-md-6 mb-3 mb-md-0">
-      <div class="description-frame w-100 h-100 text-start p-4">
+      <div class="description-frame w-100 h-100 text-start p-4 d-flex flex-column">
         <div class="section-sub-topic mb-1">
           {{ 'TOS.TITLE' | translate}}
         </div>
-        <div class="section-content mb-3 mx-auto">
+        <div class="section-content mb-1 mx-auto">
           <ul>
             <li>{{ 'TOS.GENERAL_RULE.ITEM_1' | translate}}</li>
             <li>{{ 'TOS.GENERAL_RULE.ITEM_2' | translate}}</li>
             <li>{{ 'TOS.GENERAL_RULE.ITEM_3' | translate}}</li>
             <li>{{ 'TOS.GENERAL_RULE.ITEM_4' | translate}}</li>
+            <li>{{ 'TOS.GENERAL_RULE.ITEM_5' | translate}}</li>
+            <li>{{ 'TOS.GENERAL_RULE.ITEM_6' | translate}}</li>
             <li>...</li>
           </ul>
-          <div class="d-flex mt-5">
-            <a routerLink="/tos" class="ms-auto">
-              <app-more-button>
-                {{ 'TOS.MORE' | translate}}
-              </app-more-button>
-            </a>
-          </div>
+        </div>
+        <div class="d-flex mt-auto">
+          <a routerLink="/tos" class="ms-auto">
+            <app-more-button>
+              {{ 'TOS.MORE' | translate}}
+            </app-more-button>
+          </a>
         </div>
       </div>
     </div>

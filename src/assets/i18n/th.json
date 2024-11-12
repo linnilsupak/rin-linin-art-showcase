@@ -140,6 +140,8 @@
   "COMMISSION": {
     "TITLE": "Commission Info",
     "DESCRIPTION": "Prices & Example",
+    "SELECT": "Select",
+    "CONTINUE": "Continue",
     "FACE": {
       "TITLE": "Only Face",
       "PRICE": "$30",

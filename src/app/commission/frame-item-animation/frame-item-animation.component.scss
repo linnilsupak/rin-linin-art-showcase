@@ -37,6 +37,8 @@
 }
 
 .select-btn {
+  display: block;
+  text-decoration: none;
   background-color: var.$image-card-shadow;
   color: var.$white;
   font-weight: 700;
