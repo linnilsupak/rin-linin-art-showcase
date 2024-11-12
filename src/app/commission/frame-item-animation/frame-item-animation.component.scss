@@ -1,4 +1,5 @@
 @use "character-frame" as char;
+@use "variables" as var;
 @use "commission-frame" as commission;
 
 /* commission item animation */
@@ -16,6 +17,17 @@
   max-height: 574px;
 }
 
-.description-frame:hover {
-  background: #7d7d7d3f;
+.description-frame.not-active:hover {
+  background: #5353533f;
+}
+
+.select-btn {
+  background-color: var.$image-card-shadow;
+  color: var.$white;
+  font-weight: 700;
+  margin: auto -16px -24px -16px;
+  border-bottom-left-radius: 16px;
+  padding-top: 10px;;
+  padding-bottom: 10px;;
+  border-bottom-right-radius: 16px;
 }

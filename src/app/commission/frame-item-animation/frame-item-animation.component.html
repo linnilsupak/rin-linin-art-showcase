@@ -2,7 +2,8 @@
   @if (!loading) {
   @for (item of tabList; track item;let index=$index) {
   <div class="mb-3 mb-md-0 animate-frame" [style.width.px]="item.width" [style.margin-right.px]="padding">
-    <div class="animate-frame description-frame d-flex flex-column" [style.height.px]="fullHeight" [class.overflow-hidden]="activeItem !== item.name && activeItem !== undefined"
+    <div class="animate-frame description-frame d-flex flex-column" [class.not-active]="activeItem !== item.name"
+    [style.height.px]="fullHeight" [class.overflow-hidden]="activeItem !== item.name && activeItem !== undefined"
       (mouseenter)="itemActive(index, item.name)" (mouseleave)="itemInactive(item.name)" (click)="itemActive(index, item.name, true)">
       <div class="flex-grow-1 mb-3 {{ item.class}}"></div>
       <div class="section-sub-topic mb-1">
@@ -13,32 +14,11 @@
         <span [innerHTML]="'COMMISSION.' + item.name + '.CHARACTER' | translate"></span><br />
         <span [innerHTML]="'COMMISSION.' + item.name + '.BG' | translate"></span>
       </div>
+      <div class="select-btn">
+        Select
+      </div>
     </div>
   </div>
   }
   }
-  <!-- <div class="mb-md-0 d-flex flex-column justify-content-between animate-frame"
-  [style.width.px]="leftWidth" [style.margin-right.px]="padding">
-    <div class="top-right-frame description-frame" (click)="topRightActive(true)"
-    [style.margin-bottom.px]="padding" [class.overflow-hidden]="activeItem !== commissionTab.FACE && activeItem !== undefined"
-    [style.height.px]="topRightHeight" (mouseenter)="topRightActive()" (mouseleave)="topRightInactive()">
-      <ng-content select=".top-right-frame"></ng-content>
-    </div>
-    <div class="bottom-right-frame description-frame" [style.height.px]="bottomRightHeight" [class.overflow-hidden]="activeItem !== commissionTab.HALF && activeItem !== undefined"
-    (mouseenter)="bottomRightActive()" (mouseleave)="bottomRightInactive()"  (click)="bottomRightActive(true)">
-      <ng-content select=".bottom-right-frame"></ng-content>
-    </div>
-  </div> -->
-  <!-- <div class="mb-3 mb-md-0 animate-frame" [style.width.px]="centerWidth" [style.margin-right.px]="padding">
-    <div class="center-frame description-frame" [style.height.px]="fullHeight"  [class.overflow-hidden]="activeItem !== commissionTab.FULL && activeItem !== undefined"
-     (mouseenter)="centerActive()" (mouseleave)="centerInactive()" (click)="centerActive(true)">
-      <ng-content select=".center-frame"></ng-content>
-    </div>
-  </div> -->
-  <!-- <div class="col-12 col-md-4 mb-3 mb-md-0 animate-frame" [style.width.px]="rightWidth">
-    <div class="left-frame description-frame" [style.height.px]="fullHeight"  [class.overflow-hidden]="activeItem !== commissionTab.DETAIL && activeItem !== undefined"
-    (mouseenter)="rightActive()" (mouseleave)="rightInactive()" (click)="rightActive(true)">
-      <ng-content select=".left-frame"></ng-content>
-    </div>
-  </div> -->
 </div>
