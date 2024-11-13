@@ -26,7 +26,7 @@
       {{ 'COMMISSION.DETAIL.TITLE2' | translate}}
     </div>
   </div>
-  <div class="tab-body white pt-3 pb-5 px-4">
+  <div class="tab-body white pt-3 pb-3 px-4">
     <div class="previous-arrow" (click)="clickPrevious()" [class.d-none]="activeTab === commissionTab.FACE || activeTab === undefined">
       <span class="material-symbols-rounded mt-5">
         arrow_back_ios
@@ -47,6 +47,9 @@
         <span [innerHTML]="'COMMISSION.FACE.BG' | translate"></span>
       </div>
       <img src="/assets/images/commission/face_commission_example.webp" class="w-100 preview-img">
+      <a class="select-btn my-3" [routerLink]="['/commission-form']" >
+        {{ 'COMMISSION.SELECT' | translate}}
+      </a>
     </div>
     <div [class.d-none]="activeTab !== commissionTab.HALF">
       <div class="section-sub-topic mb-1">
@@ -58,6 +61,9 @@
         <span [innerHTML]="'COMMISSION.HALF.BG' | translate"></span>
       </div>
       <img src="/assets/images/commission/half_commission_example.webp" class="w-100 preview-img">
+      <a class="select-btn my-3" [routerLink]="['/commission-form']" >
+        {{ 'COMMISSION.SELECT' | translate}}
+      </a>
     </div>
     <div [class.d-none]="activeTab !== commissionTab.FULL">
       <div class="section-sub-topic mb-1">
@@ -69,6 +75,9 @@
         <span [innerHTML]="'COMMISSION.FULL.BG' | translate"></span>
       </div>
       <img src="/assets/images/commission/full_commission_example.webp" class="w-100 preview-img">
+      <a class="select-btn my-3" [routerLink]="['/commission-form']" >
+        {{ 'COMMISSION.SELECT' | translate}}
+      </a>
     </div>
     <div [class.d-none]="activeTab !== commissionTab.DETAIL">
       <div class="section-sub-topic mb-1">
@@ -81,6 +90,9 @@
         <span [innerHTML]="'COMMISSION.DETAIL.BG' | translate"></span>
       </div>
       <img src="/assets/images/commission/detail_bg_commission_example.webp" class="w-100 preview-img">
+      <a class="select-btn my-3" [routerLink]="['/commission-form']" >
+        {{ 'COMMISSION.SELECT' | translate}}
+      </a>
     </div>
   </div>
 </div>
@@ -206,7 +218,14 @@
 </div>
 <div class="tab-body">
   <div [class.d-none]="activeTab !== commissionTab.FACE && activeTab !== undefined">
-    Face
+    <div class="container-fluid container-lg">
+      <div class="section-topic section-color mt-4">
+        {{ 'COMMISSION.PORTRAIT' | translate}}
+      </div>
+      <app-gallery-room [galleryRoom]="facePortrait1" [pattern]="'equal'"></app-gallery-room>
+      <app-gallery-room [galleryRoom]="facePortrait2" [pattern]="'equal'"></app-gallery-room>
+      <div class="blank-space">&nbsp;</div>
+    </div>
   </div>
   <div [class.d-none]="activeTab !== commissionTab.HALF">
     Half

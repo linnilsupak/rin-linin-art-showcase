@@ -5,12 +5,14 @@ import { FrameItemAnimationComponent } from "./frame-item-animation/frame-item-a
 import { commissionTab } from '../core/enum/commission-tab.enum';
 import { MoreButtonComponent } from "../shared/more-button/more-button.component";
 import { RouterLink } from '@angular/router';
+import { commissionExampleConfig } from '../core/config/commission-example.config';
+import { GalleryRoomComponent } from "../shared/gallery-room/gallery-room.component";
 
 @Component({
   selector: 'app-commission',
   standalone: true,
   imports: [ReflectionFontComponent, TranslateModule, RouterLink,
-    FrameItemAnimationComponent, MoreButtonComponent],
+    FrameItemAnimationComponent, MoreButtonComponent, GalleryRoomComponent],
   templateUrl: './commission.component.html',
   styleUrl: './commission.component.scss'
 })
@@ -18,6 +20,8 @@ export class CommissionComponent {
   activeTab: commissionTab;
   commissionTab = commissionTab;
   tabOrderList = [commissionTab.FACE, commissionTab.HALF, commissionTab.FULL, commissionTab.DETAIL];
+  facePortrait1 = commissionExampleConfig.facePortrait1;
+  facePortrait2 = commissionExampleConfig.facePortrait2;
 
   clickNext() {
     let currentIndex = this.tabOrderList.indexOf(this.activeTab);

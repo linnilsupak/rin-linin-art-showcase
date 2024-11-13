@@ -142,6 +142,7 @@
     "DESCRIPTION": "Prices & Example",
     "SELECT": "Select",
     "CONTINUE": "Continue",
+    "PORTRAIT": "Portrait Example",
     "FACE": {
       "TITLE": "Only Face",
       "PRICE": "$30",

@@ -36,21 +36,3 @@
   }
 }
 
-.select-btn {
-  display: block;
-  text-decoration: none;
-  background-color: var.$image-card-shadow;
-  color: var.$white;
-  font-weight: 700;
-  margin: auto -16px -24px -16px;
-  border-bottom-left-radius: 16px;
-  padding-top: 10px;;
-  padding-bottom: 10px;;
-  border-bottom-right-radius: 16px;
-  transition: all .2s ease-out;
-
-  &:hover {
-    letter-spacing: .1em;
-    background-color: var.$dark-sky;
-  }
-}
