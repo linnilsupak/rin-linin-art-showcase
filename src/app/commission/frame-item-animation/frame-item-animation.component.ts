@@ -68,7 +68,6 @@ export class FrameItemAnimationComponent implements AfterViewInit {
   }
 
   itemActive(index: number, tab: commissionTab, isClick = false) {
-    console.log('tab', isClick, tab)
     if (isClick && this.activeItem === tab) { // toggle
       this.setActiveTab(undefined);
       isClick = false;
