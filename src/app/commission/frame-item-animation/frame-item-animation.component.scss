@@ -1,0 +1,38 @@
+@use "character-frame" as char;
+@use "variables" as var;
+@use "commission-frame" as commission;
+
+/* commission item animation */
+.animate-frame {
+  transition: all .6s ease-out;
+  cursor: pointer;
+}
+
+.overflow-hidden {
+  overflow: hidden;
+  filter: brightness(50%);
+}
+
+.face-example, .half-example, .full-example, .detail-example {
+  max-height: 530px;
+}
+
+@mixin bright-select {
+  background-color: var.$bright-blue;
+  color: var.$image-card-shadow;;
+}
+
+.description-frame.not-active:hover {
+  background: #5353533f;
+  &:not(.overflow-hidden) {
+    .select-btn {
+      @include bright-select;
+    }
+  }
+  &.overflow-hidden {
+    .select-btn:hover {
+      @include bright-select;
+    }
+  }
+}
+

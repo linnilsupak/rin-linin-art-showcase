@@ -1,0 +1,84 @@
+@use "character-frame" as char;
+@use "variables" as var;
+@import "bootstrap-mixin";
+
+$inactive-tab: #11002494;
+$inactive-tab-white: #ffffff94;
+.tab-list, .tab-body  {
+  --tab-item-inactive-color: #{$inactive-tab};
+  --tab-item-active-color: #{var.$dark-tab};
+  --tab-item-font-color: #{var.$white};
+
+  &.white {
+  --tab-item-inactive-color: #{$inactive-tab-white};
+  --tab-item-active-color: #{var.$white};
+  --tab-item-font-color: #{var.$dark-tab};
+  }
+}
+
+
+// tab style
+.tab-list {
+  display: flex;
+  align-items: stretch;
+  overflow-x: auto;
+  white-space: pre;
+
+  @include media-breakpoint-up(sm) {
+    justify-content: center;
+  }
+}
+
+.tab-item {
+  margin-left: 10px;
+  border-radius: 16px 16px 0 0;
+  color: var(--tab-item-font-color);
+  padding: 8px 20px;
+  font-size: 1.1rem;
+  background-color: var(--tab-item-inactive-color);
+  cursor: pointer;
+
+  &.active {
+    background-color: var(--tab-item-active-color);
+    font-weight: 700;
+  }
+}
+
+@mixin arrow {
+  position: absolute;
+  top: 0;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: var.$white;
+  cursor: pointer;
+}
+
+.tab-body {
+  background: linear-gradient(0deg, rgba(17, 0, 36, 0.41) 0%, var(--tab-item-active-color) 100%);
+  position: relative;
+  .previous-arrow {
+    @include arrow;
+    left: 0;
+    padding-left: 6px;
+    padding-right: 6px;
+    background: linear-gradient(90deg, #110024a6 0%, transparent 100%);
+
+    @include media-breakpoint-up(sm) {
+      padding-left: 16px;
+      padding-right: 16px;
+    }
+  }
+
+  .next-arrow {
+    @include arrow;
+    right: 0;
+    padding-left: 6px;
+    background: linear-gradient(90deg, transparent 0%, #110024a6 100%);
+    @include media-breakpoint-up(sm) {
+      padding-left: 16px;
+      padding-right: 16px;
+    }
+  }
+}

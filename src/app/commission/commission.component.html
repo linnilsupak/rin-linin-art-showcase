@@ -1,0 +1,247 @@
+<div class="cover">
+</div>
+<div class="container-fluid container-md mt-4">
+  <div>
+    <app-reflection-font [text]="'COMMISSION.TITLE' | translate" [fontClass]="'mx-auto'"></app-reflection-font>
+  </div>
+  <div class="section-content section-color after-reflect mb-3">
+    {{'COMMISSION.DESCRIPTION' | translate}}
+  </div>
+</div>
+<div class="d-block d-md-none">
+  <div class="tab-list white">
+    <div class="tab-item" [class.active]="activeTab === commissionTab.FACE || activeTab === undefined"
+      (click)="activeTab = commissionTab.FACE">
+      {{ 'COMMISSION.FACE.TITLE' | translate}}
+    </div>
+    <div class="tab-item" [class.active]="activeTab === commissionTab.HALF" (click)="activeTab = commissionTab.HALF">
+      {{ 'COMMISSION.HALF.TITLE' | translate}}
+    </div>
+    <div class="tab-item" [class.active]="activeTab === commissionTab.FULL" (click)="activeTab = commissionTab.FULL">
+      {{ 'COMMISSION.FULL.TITLE' | translate}}
+    </div>
+    <div class="tab-item" [class.active]="activeTab === commissionTab.DETAIL"
+      (click)="activeTab = commissionTab.DETAIL">
+      {{ 'COMMISSION.DETAIL.TITLE' | translate}}
+      {{ 'COMMISSION.DETAIL.TITLE2' | translate}}
+    </div>
+  </div>
+  <div class="tab-body white pt-3 pb-3 px-4">
+    <div class="previous-arrow" (click)="clickPrevious()" [class.d-none]="activeTab === commissionTab.FACE || activeTab === undefined">
+      <span class="material-symbols-rounded mt-5">
+        arrow_back_ios
+        </span>
+    </div>
+    <div class="next-arrow" (click)="clickNext()" [class.d-none]="activeTab === commissionTab.DETAIL">
+      <span class="material-symbols-rounded mt-5">
+        arrow_forward_ios
+        </span>
+    </div>
+    <div [class.d-none]="activeTab !== commissionTab.FACE && activeTab !== undefined">
+      <div class="section-sub-topic mb-1">
+        {{ 'COMMISSION.FACE.TITLE' | translate}}
+      </div>
+      <div class="price">{{ 'COMMISSION.FACE.PRICE' | translate}}</div>
+      <div class="section-content mb-3 mx-auto">
+        <span [innerHTML]="'COMMISSION.FACE.CHARACTER' | translate"></span><br />
+        <span [innerHTML]="'COMMISSION.FACE.BG' | translate"></span>
+      </div>
+      <img src="/assets/images/commission/face_commission_example.webp" class="w-100 preview-img">
+      <a class="select-btn my-3" [routerLink]="['/commission-form']" >
+        {{ 'COMMISSION.SELECT' | translate}}
+      </a>
+    </div>
+    <div [class.d-none]="activeTab !== commissionTab.HALF">
+      <div class="section-sub-topic mb-1">
+        {{ 'COMMISSION.HALF.TITLE' | translate}}
+      </div>
+      <div class="price">{{ 'COMMISSION.HALF.PRICE' | translate}}</div>
+      <div class="section-content mb-3 mx-auto">
+        <span [innerHTML]="'COMMISSION.HALF.CHARACTER' | translate"></span><br />
+        <span [innerHTML]="'COMMISSION.HALF.BG' | translate"></span>
+      </div>
+      <img src="/assets/images/commission/half_commission_example.webp" class="w-100 preview-img">
+      <a class="select-btn my-3" [routerLink]="['/commission-form']" >
+        {{ 'COMMISSION.SELECT' | translate}}
+      </a>
+    </div>
+    <div [class.d-none]="activeTab !== commissionTab.FULL">
+      <div class="section-sub-topic mb-1">
+        {{ 'COMMISSION.FULL.TITLE' | translate}}
+      </div>
+      <div class="price">{{ 'COMMISSION.FULL.PRICE' | translate}}</div>
+      <div class="section-content mb-3 mx-auto">
+        <span [innerHTML]="'COMMISSION.FULL.CHARACTER' | translate"></span><br />
+        <span [innerHTML]="'COMMISSION.FULL.BG' | translate"></span>
+      </div>
+      <img src="/assets/images/commission/full_commission_example.webp" class="w-100 preview-img">
+      <a class="select-btn my-3" [routerLink]="['/commission-form']" >
+        {{ 'COMMISSION.SELECT' | translate}}
+      </a>
+    </div>
+    <div [class.d-none]="activeTab !== commissionTab.DETAIL">
+      <div class="section-sub-topic mb-1">
+        {{ 'COMMISSION.DETAIL.TITLE' | translate}}<span class="d-inline d-md-none d-lg-inline">{{
+          'COMMISSION.DETAIL.TITLE2' | translate}}</span>
+      </div>
+      <div class="price">{{ 'COMMISSION.DETAIL.PRICE' | translate}}</div>
+      <div class="section-content mb-3 mx-auto">
+        <span [innerHTML]="'COMMISSION.DETAIL.CHARACTER' | translate"></span><br />
+        <span [innerHTML]="'COMMISSION.DETAIL.BG' | translate"></span>
+      </div>
+      <img src="/assets/images/commission/detail_bg_commission_example.webp" class="w-100 preview-img">
+      <a class="select-btn my-3" [routerLink]="['/commission-form']" >
+        {{ 'COMMISSION.SELECT' | translate}}
+      </a>
+    </div>
+  </div>
+</div>
+<div class="container-fluid container-md mt-4 mt-md-0">
+  <app-frame-item-animation class="d-none d-md-block" [activeVal]="activeTab" (activeTab)="activeTab = $event;">
+  </app-frame-item-animation>
+  <div class="row mb-5">
+    <div class="col-12 col-md-4 mb-3 mb-md-0">
+      <div class="description-frame w-100 h-100 text-start p-4 mb-3">
+        <div class="section-sub-topic mb-1">
+          {{ 'COMMISSION.CAN_DO.TITLE' | translate}}
+        </div>
+        <div class="section-content mb-3 mx-auto">
+          <ul>
+            <li>{{ 'COMMISSION.CAN_DO.ITEM_1' | translate}}</li>
+            <li>{{ 'COMMISSION.CAN_DO.ITEM_2' | translate}}</li>
+            <li>{{ 'COMMISSION.CAN_DO.ITEM_3' | translate}}</li>
+            <li>{{ 'COMMISSION.CAN_DO.ITEM_4' | translate}}</li>
+            <li>{{ 'COMMISSION.CAN_DO.ITEM_5' | translate}}</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="col-12 col-md-4 mb-3 mb-md-0">
+      <div class="description-frame w-100 h-100 text-start p-4">
+        <div class="section-sub-topic mb-1">
+          {{ 'COMMISSION.DONT_DO.TITLE' | translate}}
+        </div>
+        <div class="section-content mb-3 mx-auto">
+          <ul>
+            <li>{{ 'COMMISSION.DONT_DO.ITEM_1' | translate}}</li>
+            <li>{{ 'COMMISSION.DONT_DO.ITEM_2' | translate}}</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="col-12 col-md-4 mb-3 mb-md-0">
+      <div class="description-frame w-100 h-100 text-start p-4">
+        <div class="section-sub-topic mb-1">
+          {{ 'COMMISSION.PAYMENT.TITLE' | translate}}
+        </div>
+        <div class="section-content mb-3 mx-auto">
+          <ul>
+            <li>{{ 'COMMISSION.PAYMENT.ITEM_1' | translate}}</li>
+            <li>{{ 'COMMISSION.PAYMENT.ITEM_2' | translate}}</li>
+            <li>{{ 'COMMISSION.PAYMENT.ITEM_3' | translate}}</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="row mb-5">
+    <div class="col-12 col-md-6 mb-3 mb-md-0">
+      <div class="description-frame w-100 h-100 text-start p-4 mb-3  d-flex flex-column">
+        <div class="section-sub-topic mb-1">
+          {{ 'COMMISSION.METHOD.TITLE' | translate}}
+        </div>
+        <div class="section-content mb-1 mx-auto">
+          <ul>
+            <li>{{ 'COMMISSION.METHOD.ITEM_1' | translate}}</li>
+            <li>{{ 'COMMISSION.METHOD.ITEM_2' | translate}}</li>
+            <li>{{ 'COMMISSION.METHOD.ITEM_3' | translate}}</li>
+            <li>{{ 'COMMISSION.METHOD.ITEM_4' | translate}}</li>
+          </ul>
+        </div>
+        <div class="d-flex mt-auto">
+          <a routerLink="/commission-form" class="ms-auto">
+            <app-more-button>
+              {{ 'COMMISSION.CONTINUE' | translate}}
+              <span class="material-symbols-rounded">
+                chevron_right
+                </span>
+            </app-more-button>
+          </a>
+        </div>
+      </div>
+    </div>
+    <div class="col-12 col-md-6 mb-3 mb-md-0">
+      <div class="description-frame w-100 h-100 text-start p-4 d-flex flex-column">
+        <div class="section-sub-topic mb-1">
+          {{ 'TOS.TITLE' | translate}}
+        </div>
+        <div class="section-content mb-1 mx-auto">
+          <ul>
+            <li>{{ 'TOS.GENERAL_RULE.ITEM_1' | translate}}</li>
+            <li>{{ 'TOS.GENERAL_RULE.ITEM_2' | translate}}</li>
+            <li>{{ 'TOS.GENERAL_RULE.ITEM_3' | translate}}</li>
+            <li>{{ 'TOS.GENERAL_RULE.ITEM_4' | translate}}</li>
+            <li>{{ 'TOS.GENERAL_RULE.ITEM_5' | translate}}</li>
+            <li>{{ 'TOS.GENERAL_RULE.ITEM_6' | translate}}</li>
+            <li>...</li>
+          </ul>
+        </div>
+        <div class="d-flex mt-auto">
+          <a routerLink="/tos" class="ms-auto">
+            <app-more-button>
+              {{ 'TOS.MORE' | translate}}
+            </app-more-button>
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="section-topic section-color mb-4">
+    {{ 'COMMISSION.EXAMPLE' | translate}}
+  </div>
+</div>
+<div class="tab-list">
+  <div class="tab-item" [class.active]="activeTab === commissionTab.FACE || activeTab === undefined"
+    (click)="activeTab = commissionTab.FACE">
+    {{ 'COMMISSION.FACE.TITLE' | translate}}
+  </div>
+  <div class="tab-item" [class.active]="activeTab === commissionTab.HALF" (click)="activeTab = commissionTab.HALF">
+    {{ 'COMMISSION.HALF.TITLE' | translate}}
+  </div>
+  <div class="tab-item" [class.active]="activeTab === commissionTab.FULL" (click)="activeTab = commissionTab.FULL">
+    {{ 'COMMISSION.FULL.TITLE' | translate}}
+  </div>
+  <div class="tab-item" [class.active]="activeTab === commissionTab.DETAIL" (click)="activeTab = commissionTab.DETAIL">
+    {{ 'COMMISSION.DETAIL.TITLE' | translate}}
+    {{ 'COMMISSION.DETAIL.TITLE2' | translate}}
+  </div>
+</div>
+<div class="tab-body">
+  <div [class.d-none]="activeTab !== commissionTab.FACE && activeTab !== undefined">
+    <div class="container-fluid container-lg">
+      <div class="section-sub-topic section-color pt-5 mb-3">
+        {{ 'COMMISSION.PORTRAIT' | translate}}
+      </div>
+      <app-gallery-room [galleryRoom]="facePortrait1" [pattern]="'equal'"></app-gallery-room>
+      <app-gallery-room [galleryRoom]="facePortrait2" [pattern]="'equal'"></app-gallery-room>
+      <app-gallery-room [galleryRoom]="facePortrait3" [pattern]="'equal'"></app-gallery-room>
+      <app-gallery-room [galleryRoom]="facePortrait4" [pattern]="'equal'"></app-gallery-room>
+      <div class="blank-space">&nbsp;</div>
+      <div class="section-sub-topic section-color mb-3">
+        {{ 'COMMISSION.AVATAR' | translate}}
+      </div>
+      <div class="section-sub-topic section-color pt-5 mb-3">
+        {{ 'COMMISSION.WIDESCREEN' | translate}}
+      </div>
+    </div>
+  </div>
+  <div [class.d-none]="activeTab !== commissionTab.HALF">
+    Half
+  </div>
+  <div [class.d-none]="activeTab !== commissionTab.FULL">
+    Full
+  </div>
+  <div [class.d-none]="activeTab !== commissionTab.DETAIL">
+    Detail
+  </div>
+</div>

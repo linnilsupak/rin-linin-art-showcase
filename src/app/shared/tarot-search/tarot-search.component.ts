@@ -41,7 +41,7 @@ export class TarotSearchComponent implements OnInit, OnDestroy {
   @Input() view: 'tarot' | 'sticky' = 'tarot';
   @Input()
   set looseFocus(val: boolean) {
-    this.searchInput?.nativeElement.blur();
+    if(this.searchInput) this.searchInput?.nativeElement?.blur();
   }
   @Output() onSelectCard = new EventEmitter<TarotConfig>();
   @Output() onselectCategory = new EventEmitter<tarotCategory | ''>();

@@ -1,0 +1,34 @@
+@use "character-frame" as char;
+@use "commission-frame" as commission;
+@use "variables" as var;
+@use "tab-style" as tab;
+@import "bootstrap-mixin";
+
+.cover {
+    background-image: url('/assets/images/commission/commission_cover.webp');
+    background-position: 95% 36%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    min-height: 230px;
+
+    @include media-breakpoint-up(lg) {
+        min-height: 226px;
+     }
+}
+
+.example-image {
+  border-radius: 16px;
+}
+
+.preview-img {
+  max-width: 400px;
+}
+
+
+.select-btn {
+  margin: auto;
+  border-radius: 16px;
+  background-color: var.$white;
+  color: var.$image-card-shadow;
+  font-size: 1.2rem;
+}

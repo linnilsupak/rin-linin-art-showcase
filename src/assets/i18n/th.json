@@ -134,6 +134,100 @@
   },
   "HOME": {
     "WELCOME": "Welcome",
-    "SHOW_CASE": "Show case"
+    "SHOW_CASE": "Show case",
+    "COMMISSION": "Commission me"
+  },
+  "COMMISSION": {
+    "TITLE": "Commission Info",
+    "DESCRIPTION": "Prices & Example",
+    "SELECT": "Select",
+    "CONTINUE": "Continue",
+    "PORTRAIT": "Portrait Example",
+    "AVATAR": "Avatar Example",
+    "WIDESCREEN": "Widescreen Example",
+    "FACE": {
+      "TITLE": "Only Face",
+      "PRICE": "$30",
+      "CHARACTER": "Only 1 Character",
+      "BG": "Only simple background can be choose",
+      "DURATION": "Delivery time: 10 days"
+    },
+    "HALF": {
+      "TITLE": "Half body",
+      "PRICE": "$60",
+      "CHARACTER": "Only 1 Character",
+      "BG": "Free background,<br/>If no background, discount -$10",
+      "DURATION": "Delivery time: 14 days"
+    },
+    "FULL": {
+      "TITLE": "Full body",
+      "PRICE": "$120",
+      "CHARACTER": "Free 1-2 Characters",
+      "BG": "Free background,<br/>If no background, discount -$20",
+      "DURATION": "Delivery time: 21 days"
+    },
+    "DETAIL": {
+      "TITLE": "Detail",
+      "TITLE2": " background",
+      "PRICE": "$240",
+      "CHARACTER": "Free 1-3 Characters",
+      "BG": "Free detail background<br/>+20$ per 1 additional Character",
+      "DURATION": "Delivery time: 28 days"
+    },
+    "CAN_DO": {
+      "TITLE": "What I can do",
+      "ITEM_1": "Human",
+      "ITEM_2": "Furry",
+      "ITEM_3": "Pokemon",
+      "ITEM_4": "Watercolor/CG/color pencil/Mixed media",
+      "ITEM_5": "etc, you can ask me first"
+    },
+    "DONT_DO": {
+      "TITLE": "What I don't do",
+      "ITEM_1": "NSFW 18+",
+      "ITEM_2": "Detail Mecha"
+    },
+    "PAYMENT": {
+      "TITLE": "Payment method",
+      "ITEM_1": "Paypal",
+      "ITEM_2": "Fiverr",
+      "ITEM_3": "(Thai only) promtpay"
+    },
+    "EXAMPLE": "Example",
+    "METHOD": {
+      "TITLE": "How it work",
+      "DESC": "As I hold the motto of communication is key. I will contact you as the following step.",
+      "ITEM_1": "We briefing about the detail and I accept.",
+      "ITEM_2": "You pay the full price via paypal receipt or Fiverr",
+      "ITEM_3": "I draw the lineart for you in pencil and will send that to confirm with you for the posture of your characters, their vibe, their hairstyle and composition. You must told me if you have any uncomfortable about my choice in this step. If you confirm it, I will continue to the next step. (P.S. I will not edit anything about the posture, hairstyle or composition anymore after this step.)",
+      "ITEM_4": "I show the color picture to let you confirm that you're comfortable with my choice. If you want me to fix any color, tell me in this step. If everything alright, I will continue with the work."
+    }
+  },
+  "TOS": {
+    "TITLE": "Terms of service",
+    "MORE": "More Detail",
+    "GENERAL_RULE": {
+      "TITLE": "General rule",
+      "ITEM_1": "I reserve the right to decline a commission if it's something I'm not capable of doing.",
+      "ITEM_2": "When the product is done, you will receive high definition photo of original artwork (computer file) without watermark.",
+      "ITEM_3": "Commissioner are only purchasing the digital file, not the printed art or the original watercolor paper.",
+      "ITEM_4": "Reposting your commissioned art is allowed. Please always give credit to me.",
+      "ITEM_5": "Do not use my artwork in commercial material unless discussed before hand.",
+      "ITEM_6": "I have full rights and ownership to the commission artworks, please refrain from claiming the commission artwork is yours. If you want a private commission, please let me know beforehand.",
+      "ITEM_7": "It will take from 1 week to a month from the latest commission to finish yours, so please be patient.",
+      "ITEM_8": "No refunds on finished commission.",
+      "ITEM_9": "No refunds once I've started, unless otherwise stated by me that I cannot finish.",
+      "ITEM_10": "Changing characters is allowed if I haven't started on your commission. Please ask first before changing",
+      "ITEM_11": "Revisions, minor changes are okay for sketch state. But after the coloring, no change is allow.",
+      "ITEM_12": "Please feel free to ask for updates/wips.",
+      "ITEM_13": "Do not edit, trace or draw on top of my drawing.",
+      "ITEM_14": "Both personal and commercial works made by me are NOT allowed to use in NFT",
+      "ITEM_15": "For private commison, there will be additional fee x2 (Private commission mean you don't allow me to post the picture, speedpaint video or show the finish picture with your name as client anywhere forever.)"
+    },
+    "COMMERCIAL_RIGHT": {
+      "TITLE": "Commercial right",
+      "ITEM_1": "Please inform me first of your project (game, book cover, music cover, etc...)",
+      "ITEM_2": "I still retain the right to post the image on my portfolio online but it will be an inferior quality image than what you will get."
+    }
   }
 }

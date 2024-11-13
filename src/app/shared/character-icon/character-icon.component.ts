@@ -16,6 +16,7 @@ export class CharacterIconComponent implements AfterViewInit {
   @Input() hoverDescription: string;
   @Input() label: string;
   @Input() fragment: string;
+  @Input() disableSvg = false;
   @ViewChild('imageIcon') imageIcon: ElementRef;
   imageLoading = true;
 
