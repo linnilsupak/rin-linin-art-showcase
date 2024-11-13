@@ -143,30 +143,36 @@
     "SELECT": "Select",
     "CONTINUE": "Continue",
     "PORTRAIT": "Portrait Example",
+    "AVATAR": "Avatar Example",
+    "WIDESCREEN": "Widescreen Example",
     "FACE": {
       "TITLE": "Only Face",
       "PRICE": "$30",
       "CHARACTER": "Only 1 Character",
-      "BG": "Only simple background can be choose"
+      "BG": "Only simple background can be choose",
+      "DURATION": "Delivery time: 10 days"
     },
     "HALF": {
       "TITLE": "Half body",
       "PRICE": "$60",
       "CHARACTER": "Only 1 Character",
-      "BG": "Free background,<br/>If no background, discount -$10"
+      "BG": "Free background,<br/>If no background, discount -$10",
+      "DURATION": "Delivery time: 14 days"
     },
     "FULL": {
       "TITLE": "Full body",
       "PRICE": "$120",
       "CHARACTER": "Free 1-2 Characters",
-      "BG": "Free background,<br/>If no background, discount -$20"
+      "BG": "Free background,<br/>If no background, discount -$20",
+      "DURATION": "Delivery time: 21 days"
     },
     "DETAIL": {
       "TITLE": "Detail",
       "TITLE2": " background",
       "PRICE": "$240",
       "CHARACTER": "Free 1-3 Characters",
-      "BG": "Free detail background<br/>+20$ per 1 additional Character"
+      "BG": "Free detail background<br/>+20$ per 1 additional Character",
+      "DURATION": "Delivery time: 28 days"
     },
     "CAN_DO": {
       "TITLE": "What I can do",

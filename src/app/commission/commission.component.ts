@@ -22,6 +22,8 @@ export class CommissionComponent {
   tabOrderList = [commissionTab.FACE, commissionTab.HALF, commissionTab.FULL, commissionTab.DETAIL];
   facePortrait1 = commissionExampleConfig.facePortrait1;
   facePortrait2 = commissionExampleConfig.facePortrait2;
+  facePortrait3 = commissionExampleConfig.facePortrait3;
+  facePortrait4 = commissionExampleConfig.facePortrait4;
 
   clickNext() {
     let currentIndex = this.tabOrderList.indexOf(this.activeTab);

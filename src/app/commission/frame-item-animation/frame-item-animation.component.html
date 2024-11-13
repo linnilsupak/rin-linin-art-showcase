@@ -12,7 +12,8 @@
       <div class="price">{{ 'COMMISSION.' + item.name + '.PRICE' | translate}}</div>
       <div class="section-content mb-3 mx-auto">
         <span [innerHTML]="'COMMISSION.' + item.name + '.CHARACTER' | translate"></span><br />
-        <span [innerHTML]="'COMMISSION.' + item.name + '.BG' | translate"></span>
+        <span [innerHTML]="'COMMISSION.' + item.name + '.BG' | translate"></span><br />
+        <span [innerHTML]="'COMMISSION.' + item.name + '.DURATION' | translate"></span>
       </div>
       <a class="select-btn" [routerLink]="['/commission-form']" >
         {{ 'COMMISSION.SELECT' | translate}}

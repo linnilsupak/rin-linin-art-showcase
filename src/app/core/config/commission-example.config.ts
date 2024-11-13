@@ -3,7 +3,7 @@ import { GalleryRooms } from '../models/gallery-room.model';
 export const commissionExampleConfig: GalleryRooms = {
   facePortrait1: [
     {
-      picUrl: '/assets/images/playground/other-fanart/hikari_pilpup_rin_linin.webp',
+      picUrl: '/assets/images/commission/face/hikari_pilpup_portrait.webp',
       frameStyle: 'black-frame small',
       content: {
         title: 'Pokemon: Hikari & pilpup',
@@ -19,7 +19,7 @@ export const commissionExampleConfig: GalleryRooms = {
       }
     },
     {
-      picUrl: '/assets/images/playground/artfight2024/remi_rin_linin.png?v=1',
+      picUrl: '/assets/images/commission/face/rioni_portrait.webp',
       frameStyle: 'white-frame small',
       content: {
         title: 'Remi วาดโดย Rin Linin',
@@ -29,11 +29,12 @@ export const commissionExampleConfig: GalleryRooms = {
       },
       previewPic: {
         width: '120px',
-        height: '182px'
+        height: '182px',
+        disabled: true
       }
     },
     {
-      picUrl: '/assets/images/playground/artfight2024/sanchos_rin_linin.png',
+      picUrl: '/assets/images/commission/face/sanchos_portrait.webp',
       frameStyle: 'black-frame small',
       content: {
         title: 'Sanchos วาดโดย Rin Linin',
@@ -43,14 +44,32 @@ export const commissionExampleConfig: GalleryRooms = {
       },
       previewPic: {
         width: '120px',
-        height: '182px'
+        height: '182px',
+        disabled: true
+      }
+    },
+  ],
+  facePortrait2: [
+    {
+      picUrl: '/assets/images/commission/face/gepard_portrait.webp',
+      frameStyle: 'white-frame small mini-frame-300',
+      content: {
+        title: 'Gepard from Honkai Star rail',
+        title2: 'Draw by Rin Linin',
+        subTitle: 'watercolor',
+        description: '',
+      },
+      previewPic: {
+        width: 'inherit',
+        height: 'inherit',
+        disabled: true
       }
     },
     {
-      picUrl: '/assets/images/playground/genshin/ayaka_genshin_rin_linin.webp',
-      frameStyle: 'black-frame small',
+      picUrl: '/assets/images/commission/face/yor_portrait.webp',
+      frameStyle: 'black-frame small mini-frame-300',
       content: {
-        title: 'Ayaka',
+        title: 'Yor from Spy X Family',
         title2: 'Draw by Rin Linin',
         subTitle: 'watercolor',
         description: '',
@@ -63,9 +82,9 @@ export const commissionExampleConfig: GalleryRooms = {
       }
     },
   ],
-  facePortrait2: [
+  facePortrait3: [
     {
-      picUrl: '/assets/images/playground/genshin/xingque_genshin_rin_linin.webp',
+      picUrl: '/assets/images/commission/face/xingque_portrait.webp',
       frameStyle: 'black-frame small',
       content: {
         title: 'Xingque',
@@ -81,7 +100,7 @@ export const commissionExampleConfig: GalleryRooms = {
       }
     },
     {
-      picUrl: '/assets/images/playground/genshin/chongyun_genshin_rin_linin.webp',
+      picUrl: '/assets/images/commission/face/chongyun_portrait.webp',
       frameStyle: 'white-frame small',
       content: {
         title: 'Chongyun',
@@ -97,7 +116,7 @@ export const commissionExampleConfig: GalleryRooms = {
       }
     },
     {
-      picUrl: '/assets/images/playground/etc/rabbit_year_rin_linin.webp',
+      picUrl: '/assets/images/commission/face/rabbit_year_portrait.webp',
       frameStyle: 'black-frame mb-auto small',
       content: {
         title: 'Rabbit year',
@@ -111,5 +130,77 @@ export const commissionExampleConfig: GalleryRooms = {
         disabled: true
       }
     },
-  ]
+    {
+      picUrl: '/assets/images/commission/face/kokomi_portrait.webp',
+      frameStyle: 'black-frame',
+      content: {
+        title: 'Kokomi',
+        title2: 'Draw by Rin Linin',
+        subTitle: 'watercolor',
+        description: '',
+      },
+      isRecTemplate: true,
+      previewPic: {
+        width: 'inherit',
+        height: 'inherit',
+        disabled: true
+      }
+    },
+  ],
+  facePortrait4: [
+    {
+      picUrl: '/assets/images/commission/face/herta_portrait.webp',
+      frameStyle: 'white-frame small',
+      content: {
+        title: 'Herta from Honkai Star rail',
+        title2: 'Draw by Rin Linin',
+        subTitle: 'watercolor',
+        description: '',
+      },
+      isRecTemplate: true,
+      previewPic: {
+        width: 'inherit',
+        height: 'inherit',
+        disabled: true
+      }
+    },
+    {
+      picUrl: '/assets/images/commission/face/ganyu_portrait.webp',
+      frameStyle: 'black-frame small',
+      content: {
+        title: 'Ganyu',
+        title2: 'Draw by Rin Linin',
+        subTitle: 'watercolor',
+        description: '',
+      },
+      isRecTemplate: true,
+      previewPic: {
+        width: 'inherit',
+        height: 'inherit',
+        disabled: true
+      }
+    },
+    {
+      picUrl: '/assets/images/commission/face/ayaka_portrait.webp',
+      frameStyle: 'black-frame small',
+      content: {
+        title: 'Ayaka',
+        title2: 'Draw by Rin Linin',
+        subTitle: 'watercolor',
+        description: '',
+      },
+      isRecTemplate: true,
+      previewPic: {
+        width: 'inherit',
+        height: 'inherit',
+        disabled: true
+      }
+    },
+  ],
+  faceAvartar1: [],
+  faceWidescreen1: [],
+  faceWidescreen2: [],
+  faceWidescreen3: [],
+  faceWidescreen4: [],
+  faceWidescreen5: [],
 }

@@ -219,12 +219,20 @@
 <div class="tab-body">
   <div [class.d-none]="activeTab !== commissionTab.FACE && activeTab !== undefined">
     <div class="container-fluid container-lg">
-      <div class="section-topic section-color mt-4">
+      <div class="section-sub-topic section-color pt-5 mb-3">
         {{ 'COMMISSION.PORTRAIT' | translate}}
       </div>
       <app-gallery-room [galleryRoom]="facePortrait1" [pattern]="'equal'"></app-gallery-room>
       <app-gallery-room [galleryRoom]="facePortrait2" [pattern]="'equal'"></app-gallery-room>
+      <app-gallery-room [galleryRoom]="facePortrait3" [pattern]="'equal'"></app-gallery-room>
+      <app-gallery-room [galleryRoom]="facePortrait4" [pattern]="'equal'"></app-gallery-room>
       <div class="blank-space">&nbsp;</div>
+      <div class="section-sub-topic section-color mb-3">
+        {{ 'COMMISSION.AVATAR' | translate}}
+      </div>
+      <div class="section-sub-topic section-color pt-5 mb-3">
+        {{ 'COMMISSION.WIDESCREEN' | translate}}
+      </div>
     </div>
   </div>
   <div [class.d-none]="activeTab !== commissionTab.HALF">
