@@ -44,10 +44,10 @@ export class FrameItemAnimationComponent implements AfterViewInit {
   tabOrderList = [commissionTab.FACE, commissionTab.HALF, commissionTab.FULL, commissionTab.DETAIL];
   tabList;
   activeWidth = {
-    'FACE': 450,
-    'HALF': 450,
-    'FULL': 504,
-    'DETAIL': 480
+    'FACE': 404,
+    'HALF': 430,
+    'FULL': 450,
+    'DETAIL': 440
   };
 
   ngAfterViewInit(): void {
