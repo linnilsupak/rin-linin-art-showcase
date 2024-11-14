@@ -58,7 +58,7 @@ export class OriginalComponent implements AfterViewInit {
             if (scrollCount >= 2) {
               setTimeout(() => {
                 this.fragment = undefined;
-                this.router.navigateByUrl(this.router.url.split('#')[0]);
+                this.router.navigateByUrl(this.router?.url.split('#')[0]);
                 scrollCount = 0;
               }, mainConfig.timeoutAfterInit);
             }
