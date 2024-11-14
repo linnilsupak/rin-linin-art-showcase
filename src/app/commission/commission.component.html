@@ -222,16 +222,33 @@
       <div class="section-sub-topic section-color pt-5 mb-3">
         {{ 'COMMISSION.PORTRAIT' | translate}}
       </div>
-      <app-gallery-room [galleryRoom]="facePortrait1" [pattern]="'equal'"></app-gallery-room>
+      <div class="limit-width mx-auto">
+        <app-gallery-room [galleryRoom]="facePortrait1" [pattern]="'equal'"></app-gallery-room>
+      </div>
       <app-gallery-room [galleryRoom]="facePortrait2" [pattern]="'equal'"></app-gallery-room>
       <app-gallery-room [galleryRoom]="facePortrait3" [pattern]="'equal'"></app-gallery-room>
-      <app-gallery-room [galleryRoom]="facePortrait4" [pattern]="'equal'"></app-gallery-room>
+      <div class="limit-width mx-auto">
+        <app-gallery-room [galleryRoom]="facePortrait4" [pattern]="'equal'"></app-gallery-room>
+      </div>
       <div class="blank-space">&nbsp;</div>
       <div class="section-sub-topic section-color mb-3">
         {{ 'COMMISSION.AVATAR' | translate}}
       </div>
+      <app-gallery-room [galleryRoom]="faceAvatar1" [pattern]="'equal'"></app-gallery-room>
+      <div class="blank-space">&nbsp;</div>
       <div class="section-sub-topic section-color pt-5 mb-3">
         {{ 'COMMISSION.WIDESCREEN' | translate}}
+      </div>
+      <div class="limit-width mx-auto">
+        <app-gallery-room [galleryRoom]="faceWidescreen1" [pattern]="'equal'"></app-gallery-room>
+      </div>
+      <app-gallery-room [galleryRoom]="faceWidescreen2" [pattern]="'equal'"></app-gallery-room>
+      <div class="limit-width mx-auto">
+        <app-gallery-room [galleryRoom]="faceWidescreen3" [pattern]="'equal'"></app-gallery-room>
+      </div>
+      <app-gallery-room [galleryRoom]="faceWidescreen4" [pattern]="'equal'"></app-gallery-room>
+      <div class="limit-width mx-auto">
+      <app-gallery-room [galleryRoom]="faceWidescreen5" [pattern]="'equal'"></app-gallery-room>
       </div>
     </div>
   </div>
