@@ -37,7 +37,7 @@
   <div class="blank-space">&nbsp;</div>
   @for (item of characterInfo;track item.name; let index=$index) {
       <span id="{{item.name}}"></span>
-      <app-character-frame [imageUrl]="item.imageUrl" [characterName]="item.name"
+      <app-character-frame [imageUrl]="item?.imageUrl" [characterName]="item.name"
       [title]="item.title" [description]="item.description" [arrangement]="item.arrangement || ((index % 2) ? 'left': 'right')"></app-character-frame>
       <div class="blank-space">&nbsp;</div>
   }
@@ -47,7 +47,7 @@
     </div>
   </div>
   <span id="{{personaInfo.name}}"></span>
-  <app-character-frame [imageUrl]="personaInfo.imageUrl" [characterName]="personaInfo.name"
+  <app-character-frame [imageUrl]="personaInfo?.imageUrl" [characterName]="personaInfo.name"
   [title]="personaInfo.title" [description]="personaInfo.description" [arrangement]="'right'"></app-character-frame>
   <div class="blank-space">&nbsp;</div>
 </div>

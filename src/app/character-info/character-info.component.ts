@@ -35,7 +35,7 @@ export class CharacterInfoComponent implements OnInit {
   findCharacter() {
     let notFound = true;
     this.backUrl = this.route.snapshot.queryParamMap.get('backUrl') || '/original';
-    if (this.route.snapshot.firstChild.url.length > 0) {
+    if (this.route.snapshot.firstChild?.url && this.route.snapshot.firstChild?.url.length > 0) {
       this.characterName = this.route.snapshot.firstChild.url[0].path;
       if (this.characterName) {
         if (this.characterName === personaInfo.name) {
