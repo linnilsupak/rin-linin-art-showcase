@@ -68,7 +68,7 @@ export const routes: Routes = [
     data: {
       minimizeFlag: true
     },
-    loadChildren: () => import('./term-of-service/term-of-service.component').then(c => c.TermOfServiceComponent)
+    loadComponent: () => import('./term-of-service/term-of-service.component').then(c => c.TermOfServiceComponent)
   },
   {
     path: 'tarots',
