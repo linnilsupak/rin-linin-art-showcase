@@ -370,7 +370,7 @@ export const commissionExampleConfig: GalleryRooms = {
     },
     {
       picUrl: '/assets/images/commission/face/layla_widescreen.webp',
-      frameStyle: 'black-frame small',
+      frameStyle: 'white-frame small',
       content: {
         title: 'Layla from Genshin',
         title2: 'Draw by Rin Linin',
@@ -404,7 +404,7 @@ export const commissionExampleConfig: GalleryRooms = {
     },
     {
       picUrl: '/assets/images/commission/face/ei_widescreen.webp',
-      frameStyle: 'black-frame small',
+      frameStyle: 'white-frame small',
       content: {
         title: 'Ei from Genshin',
         title2: 'Draw by Rin Linin',
@@ -470,7 +470,7 @@ export const commissionExampleConfig: GalleryRooms = {
     },
     {
       picUrl: '/assets/images/commission/face/miyabi_widescreen.webp',
-      frameStyle: 'black-frame small',
+      frameStyle: 'white-frame small',
       content: {
         title: 'Miyabi from ZZZ',
         title2: 'Draw by Rin Linin',
@@ -488,7 +488,7 @@ export const commissionExampleConfig: GalleryRooms = {
   faceWidescreen6: [
     {
       picUrl: '/assets/images/commission/face/wednesday_widescreen.webp',
-      frameStyle: 'black-frame small',
+      frameStyle: 'white-frame small',
       content: {
         title: 'Wednesday',
         title2: 'Draw by Rin Linin',
