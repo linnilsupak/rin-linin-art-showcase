@@ -7,12 +7,14 @@ import { MoreButtonComponent } from "../shared/more-button/more-button.component
 import { RouterLink } from '@angular/router';
 import { commissionExampleConfig } from '../core/config/commission-example.config';
 import { GalleryRoomComponent } from "../shared/gallery-room/gallery-room.component";
+import { PlaygroundMenuComponent } from "../playground/playground-menu/playground-menu.component";
+import { ImageSrcsetPipe } from "../core/pipe/image-srcset.pipe";
 
 @Component({
   selector: 'app-commission',
   standalone: true,
   imports: [ReflectionFontComponent, TranslateModule, RouterLink,
-    FrameItemAnimationComponent, MoreButtonComponent, GalleryRoomComponent],
+    FrameItemAnimationComponent, MoreButtonComponent, GalleryRoomComponent, PlaygroundMenuComponent, ImageSrcsetPipe],
   templateUrl: './commission.component.html',
   styleUrl: './commission.component.scss'
 })
