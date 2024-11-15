@@ -114,10 +114,7 @@ export const commissionExampleConfig: GalleryRooms = {
         height: 'inherit',
         disabled: true
       }
-    },
-  ],
-  facePortrait3: [
-    {
+    },{
       picUrl: '/assets/images/commission/face/xingque_portrait.webp',
       frameStyle: 'black-frame small mini-frame-300',
       content: {
@@ -150,23 +147,7 @@ export const commissionExampleConfig: GalleryRooms = {
       }
     },
   ],
-  facePortrait4: [
-    {
-      picUrl: '/assets/images/commission/face/herta_portrait.webp',
-      frameStyle: 'white-frame small',
-      content: {
-        title: 'Herta from Honkai Star rail',
-        title2: 'Draw by Rin Linin',
-        subTitle: 'watercolor',
-        description: '',
-      },
-      isRecTemplate: true,
-      previewPic: {
-        width: 'inherit',
-        height: 'inherit',
-        disabled: true
-      }
-    },
+  facePortrait3: [
     {
       picUrl: '/assets/images/commission/face/ganyu_portrait.webp',
       frameStyle: 'black-frame small',

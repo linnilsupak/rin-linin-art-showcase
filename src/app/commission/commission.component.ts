@@ -25,7 +25,6 @@ export class CommissionComponent {
   facePortrait1 = commissionExampleConfig.facePortrait1;
   facePortrait2 = commissionExampleConfig.facePortrait2;
   facePortrait3 = commissionExampleConfig.facePortrait3;
-  facePortrait4 = commissionExampleConfig.facePortrait4;
   faceAvatar1 = commissionExampleConfig.faceAvatar1;
   faceWidescreen1 = commissionExampleConfig.faceWidescreen1;
   faceWidescreen2 = commissionExampleConfig.faceWidescreen2;
