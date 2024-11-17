@@ -331,8 +331,6 @@ export const commissionExampleConfig: GalleryRooms = {
         disabled: true
       }
     },
-  ],
-  faceWidescreen3: [
     {
       picUrl: '/assets/images/commission/face/tighnari_widescreen.webp',
       frameStyle: 'black-frame small',
@@ -365,8 +363,6 @@ export const commissionExampleConfig: GalleryRooms = {
         disabled: true
       }
     },
-  ],
-  faceWidescreen4: [
     {
       picUrl: '/assets/images/commission/face/keqing_widescreen.webp',
       frameStyle: 'black-frame small',
@@ -383,6 +379,8 @@ export const commissionExampleConfig: GalleryRooms = {
         disabled: true
       }
     },
+  ],
+  faceWidescreen3: [
     {
       picUrl: '/assets/images/commission/face/ei_widescreen.webp',
       frameStyle: 'white-frame small',
@@ -416,7 +414,7 @@ export const commissionExampleConfig: GalleryRooms = {
       }
     },
   ],
-  faceWidescreen5: [
+  faceWidescreen4: [
     {
       picUrl: '/assets/images/commission/face/rin_widescreen.webp',
       frameStyle: 'black-frame small',
@@ -466,7 +464,7 @@ export const commissionExampleConfig: GalleryRooms = {
       }
     },
   ],
-  faceWidescreen6: [
+  faceWidescreen5: [
     {
       picUrl: '/assets/images/commission/face/wednesday_widescreen.webp',
       frameStyle: 'white-frame small',
