@@ -22,6 +22,7 @@ export class ContactUsComponent implements OnInit {
     this.route.queryParamMap.subscribe((query) => {
       this.backUrl = query.get('backUrl') || '/about-me';
       if (query.get('prefill')) {
+        this.loading = true;
         this.contactMeLink += query.get('prefill');
       }
     });
