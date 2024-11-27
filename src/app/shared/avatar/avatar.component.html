@@ -1,0 +1,12 @@
+<div class="avatar"  [matTooltip]="tooltipLabel" matTooltipPosition="below" [style.background-color]="defaultColor"
+[style.width.px]="width" [style.height.px]="width"
+  [class.clickable]="expandable">
+  <img *ngIf="url" [src]="url" alt="avatar"/>
+  <!-- <img *ngIf="!url && !defaultAlphabet" [src]="defaultImage" alt="avatar"/> -->
+  <div *ngIf="!url && defaultAlphabet" class="d-flex justify-content-center align-items-center" [style.width.px]="width" [style.height.px]="width"
+   [style.background-color]="defaultColor"
+    [style.background-size]="width + 'px ' + width + 'px'">
+    <span [style.font-size.px]="width * 0.6" [style.color]="alphabetColor">{{ defaultAlphabet }}</span>
+  </div>
+</div>
+<!-- [style.background-image]="'url(' + defaultImage + ')'" -->

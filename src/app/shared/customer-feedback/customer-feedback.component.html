@@ -1,0 +1,35 @@
+
+<div class="description-frame row mx-1 mx-md-auto">
+  <div class="col-12 col-md-6">
+    <img src="/assets/images/commission/face/arkean_widescreen.webp" class="w-100"/>
+  </div>
+  <div class="col-12 col-md-6 mt-3 mt-md-0">
+    <div class="d-flex">
+      <app-avatar [defaultColor]="customerFeedback.avatarColor" [defaultAlphabet]="customerFeedback.avatarAlphabet" [width]="40" class="me-3 mb-auto mt-2"></app-avatar>
+      <div>
+        <div>
+          <a class="section-sub-topic" [href]="customerFeedback.refLink"
+            target="_blank">
+            Arkean</a>
+          <a class="time"  [href]="customerFeedback.refLink" target="_blank">
+            Aug 26, 2023
+          </a>
+        </div>
+        <div class="text-start source">
+          from <a class="time"  [href]="customerFeedback.refLink" target="_blank">{{ customerFeedback.source}}</a>
+        </div>
+      </div>
+    </div>
+    <div class="d-flex flex-column customer-bubble mt-3">
+      <div class="bubble">
+        <div class="speech-bubble">
+          "{{ customerFeedback.feedback }}"
+        </div>
+      </div>
+      <div class="mt-auto rin-bubble mb-4">
+        <hr class="mx-4" />
+        <span [innerHTML]="customerFeedback.description"></span>
+      </div>
+    </div>
+  </div>
+</div>

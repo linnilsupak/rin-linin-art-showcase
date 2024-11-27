@@ -1,20 +1,18 @@
 import { Component } from '@angular/core';
+import { RouterLink } from '@angular/router';
 import { TranslateModule } from '@ngx-translate/core';
-import { ReflectionFontComponent } from "../shared/reflection-font/reflection-font.component";
-import { FrameItemAnimationComponent } from "./frame-item-animation/frame-item-animation.component";
+import { commissionExampleConfig } from '../core/config/commission-example.config';
 import { commissionTab } from '../core/enum/commission-tab.enum';
 import { MoreButtonComponent } from "../shared/more-button/more-button.component";
-import { RouterLink } from '@angular/router';
-import { commissionExampleConfig } from '../core/config/commission-example.config';
-import { GalleryRoomComponent } from "../shared/gallery-room/gallery-room.component";
-import { PlaygroundMenuComponent } from "../playground/playground-menu/playground-menu.component";
-import { ImageSrcsetPipe } from "../core/pipe/image-srcset.pipe";
+import { ReflectionFontComponent } from "../shared/reflection-font/reflection-font.component";
+import { FaceCommissionExampleComponent } from "./face-commission-example/face-commission-example.component";
+import { FrameItemAnimationComponent } from "./frame-item-animation/frame-item-animation.component";
 
 @Component({
   selector: 'app-commission',
   standalone: true,
   imports: [ReflectionFontComponent, TranslateModule, RouterLink,
-    FrameItemAnimationComponent, MoreButtonComponent, GalleryRoomComponent, PlaygroundMenuComponent, ImageSrcsetPipe],
+    FrameItemAnimationComponent, MoreButtonComponent, FaceCommissionExampleComponent],
   templateUrl: './commission.component.html',
   styleUrl: './commission.component.scss'
 })

@@ -1,0 +1,50 @@
+@use "character-frame" as char;
+@use "variables" as var;
+@import "bootstrap-mixin";
+
+
+.bubble {
+  position: relative;
+  &::before {
+    width: 0;
+    height: 0;
+    border-left: 8px solid transparent;
+    border-right: 8px solid transparent;
+    border-bottom: 16px solid #{var.$white};
+    content: '';
+    position:absolute;
+    left: 16px;
+    top: 0;
+  }
+
+  .speech-bubble {
+    margin-top: 12px;
+    font-size: 1.3rem;
+    background: var.$white;
+    border-radius: 16px;
+    padding:16px;
+  }
+}
+
+a.section-sub-topic {
+  color: var.$dark-sky;
+}
+
+.source {
+  margin-top: -10px;
+  @include media-breakpoint-down(md) {
+
+  }
+}
+
+.time {
+  color: var.$dark-green-blue;
+}
+
+
+.customer-bubble {
+  height: calc(100% - 58px);
+  @include media-breakpoint-up(md) {
+    margin-left: 56px;
+  }
+}

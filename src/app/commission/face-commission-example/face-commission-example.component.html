@@ -1,0 +1,130 @@
+<div class="container-fluid container-lg">
+  <div class="section-sub-topic section-color pt-5 mb-5">
+    {{ 'COMMISSION.CUSTOMER' | translate}}
+  </div>
+  <app-customer-feedback [customerFeedback]="customerFeedback"></app-customer-feedback>
+  <div class="section-sub-topic section-color pt-5 mb-5 mt-4">
+    {{ 'COMMISSION.PORTRAIT' | translate}}
+  </div>
+  <div class="limit-width mx-auto">
+    <app-gallery-room [galleryRoom]="facePortrait1" [pattern]="'equal'"></app-gallery-room>
+  </div>
+  <app-gallery-room [galleryRoom]="facePortrait2" [pattern]="'equal'"></app-gallery-room>
+  <div class="limit-width-small mx-auto">
+    <app-gallery-room [galleryRoom]="facePortrait3" [pattern]="'equal'"></app-gallery-room>
+  </div>
+</div>
+<div class="hightlight-action  px-1 px-md-4 py-4 my-5">
+  <div class="container-fluid container-lg">
+    <div class="row after-reflect">
+      <div class="col-12 col-md-6">
+        <img src="/assets/images/commission/face/portrait_face_commission_exp.png" srcset="{{ '/assets/images/commission/face/portrait_face_commission_exp.png' | imageSrcset }}"
+        class="w-100 mt-3"/>
+      </div>
+      <div class="col-12 col-md-6 text-center d-flex">
+        <div class="description-frame p-4 mt-3 my-md-auto">
+          <div class="section-sub-topic mb-1">
+            Want an art to introduce your character?
+          </div>
+          <div class="mt-2">
+            A simple wallpaper to your phone<br/>
+            A gift to someone<br/>
+            simple illustration to your book
+          </div>
+          <div class="section-sub-topic my-3">
+            You come at a right place!
+          </div>
+          <div class="my-5 d-flex">
+            <a [routerLink]="'/commission-form'" class="mx-auto">
+              <app-playground-menu [label]="'Continue'"></app-playground-menu>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="pt-5">&nbsp;</div>
+<div class="container-fluid container-lg">
+  <div class="section-sub-topic section-color pt-5 mb-5">
+    {{ 'COMMISSION.WIDESCREEN' | translate}}
+  </div>
+  <div class="limit-width mx-auto">
+    <app-gallery-room [galleryRoom]="faceWidescreen1" [pattern]="'equal'"></app-gallery-room>
+  </div>
+  <app-gallery-room [galleryRoom]="faceWidescreen2" [pattern]="'equal'"></app-gallery-room>
+  <div class="limit-width-small mx-auto">
+    <app-gallery-room [galleryRoom]="faceWidescreen3" [pattern]="'equal'"></app-gallery-room>
+  </div>
+  <div class="limit-width mx-auto">
+    <app-gallery-room [galleryRoom]="faceWidescreen4" [pattern]="'equal'"></app-gallery-room>
+  </div>
+  <app-gallery-room [galleryRoom]="faceWidescreen5" [pattern]="'equal'"></app-gallery-room>
+</div>
+<div class="hightlight-action  px-1 px-md-4 py-4 my-5">
+  <div class="container-fluid container-lg">
+    <div class="row after-reflect">
+      <div class="col-12 col-md-7">
+        <img src="/assets/images/commission/face/widescreen_face_commission_exp.png" srcset="{{ '/assets/images/commission/face/widescreen_face_commission_exp.png' | imageSrcset }}"
+        class="w-100 mt-3"/>
+      </div>
+      <div class="col-12 col-md-5 text-center d-flex">
+        <div class="description-frame p-4 mt-3 my-md-auto">
+          <div class="section-sub-topic mb-1">
+            Want an illustration for your novel?
+          </div>
+          <div class="mt-2">
+            A simple scene of your novel<br/>
+            a cover art for you page<br/>
+            simple introduction to your character
+          </div>
+          <div class="section-sub-topic my-3">
+            You come at a right place!
+          </div>
+          <div class="my-5 d-flex">
+            <a [routerLink]="'/commission-form'" class="mx-auto">
+              <app-playground-menu [label]="'Continue'"></app-playground-menu>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="pt-5">&nbsp;</div>
+<div class="container-fluid container-lg">
+  <div class="section-sub-topic section-color mb-5 pt-5">
+    {{ 'COMMISSION.AVATAR' | translate}}
+  </div>
+  <app-gallery-room [galleryRoom]="faceAvatar1" [pattern]="'equal'"></app-gallery-room>
+</div>
+<div class="hightlight-action  px-1 px-md-4 py-4 mt-5">
+  <div class="container-fluid container-lg">
+    <div class="row after-reflect">
+      <div class="col-12 col-md-7">
+        <img src="/assets/images/commission/face/avatar_face_commission_exp.png" srcset="{{ '/assets/images/commission/face/avatar_face_commission_exp.png' | imageSrcset }}"
+        class="w-100 mt-3"/>
+      </div>
+      <div class="col-12 col-md-5 text-center d-flex">
+        <div class="description-frame p-4 mt-3 my-md-auto">
+          <div class="section-sub-topic mb-1">
+            Want an avatar for your persona?
+          </div>
+          <div class="mt-2">
+            A simple picture of your character<br/>
+            An icon for your persona<br/>
+            simple introduction to your character
+          </div>
+          <div class="section-sub-topic my-3">
+            You come at a right place!
+          </div>
+          <div class="my-5 d-flex">
+            <a [routerLink]="'/commission-form'" class="mx-auto">
+              <app-playground-menu [label]="'Continue'"></app-playground-menu>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

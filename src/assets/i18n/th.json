@@ -121,7 +121,7 @@
   },
   "ABOUT_ME": {
     "TITLE": "ริน ลินิน (Rin Linin)",
-    "CACHE_PHASE": "I like dessert and tea.",
+    "CACHE_PHASE": "I am a programmer who can draw.",
     "DESC": "Hi~ I am a programmer.<br/> When Exteen and Hi5 is a hit, I love to play with the website to make it more beatiful.",
     "DESC2": "Nowadays people probably don't even know what is <b>Exteen</b> or <b>Hi5</b> is.<br/>They are the social media before Facebook, Instagram, X came.<br/>What special about them are the site can be micro decorate and show to others. You don't need to use the default theme like the current Social media.",
     "DESC3": "I just happen to like painting too. When my arts were full in the box, I just happen to want to hang them but my place isn't suit for hanging that many pictures. So I create this website to hang all my arts.",
@@ -142,6 +142,7 @@
     "DESCRIPTION": "Prices & Example",
     "SELECT": "Select",
     "CONTINUE": "Continue",
+    "CUSTOMER": "Real Customer Review",
     "PORTRAIT": "Portrait Example",
     "AVATAR": "Avatar Example",
     "WIDESCREEN": "Widescreen Example",

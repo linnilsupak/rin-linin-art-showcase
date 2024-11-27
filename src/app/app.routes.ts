@@ -30,9 +30,6 @@ export const routes: Routes = [
   },
   {
     path: 'playground',
-    data: {
-        minimizeFlag: true
-    },
     title: 'Playground menu: Rin Linin',
     loadComponent: () => import('./playground/playground.component').then(c => c.PlaygroundComponent)
   },

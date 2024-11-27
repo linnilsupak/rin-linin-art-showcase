@@ -68,22 +68,6 @@ export const commissionExampleConfig: GalleryRooms = {
       }
     },
     {
-      picUrl: '/assets/images/commission/face/yor_portrait.webp',
-      frameStyle: 'black-frame small',
-      content: {
-        title: 'Yor from Spy X Family',
-        title2: 'Draw by Rin Linin',
-        subTitle: 'watercolor',
-        description: '',
-      },
-      isRecTemplate: true,
-      previewPic: {
-        width: 'inherit',
-        height: 'inherit',
-        disabled: true
-      }
-    },
-    {
       picUrl: '/assets/images/commission/face/rabbit_year_portrait.webp',
       frameStyle: 'black-frame mb-auto small',
       content: {
@@ -91,22 +75,6 @@ export const commissionExampleConfig: GalleryRooms = {
         title2: 'by Rin Linin',
         subTitle: 'watercolor',
         description: 'On a rabbit new year, I draw this picture.',
-      },
-      isRecTemplate: true,
-      previewPic: {
-        width: 'inherit',
-        height: 'inherit',
-        disabled: true
-      }
-    },
-    {
-      picUrl: '/assets/images/commission/face/kokomi_portrait.webp',
-      frameStyle: 'black-frame',
-      content: {
-        title: 'Kokomi',
-        title2: 'Draw by Rin Linin',
-        subTitle: 'watercolor',
-        description: '',
       },
       isRecTemplate: true,
       previewPic: {
@@ -149,10 +117,10 @@ export const commissionExampleConfig: GalleryRooms = {
   ],
   facePortrait3: [
     {
-      picUrl: '/assets/images/commission/face/ganyu_portrait.webp',
-      frameStyle: 'black-frame small',
+      picUrl: '/assets/images/commission/face/kokomi_portrait.webp',
+      frameStyle: 'black-frame',
       content: {
-        title: 'Ganyu',
+        title: 'Kokomi',
         title2: 'Draw by Rin Linin',
         subTitle: 'watercolor',
         description: '',
