@@ -32,13 +32,15 @@ a.section-sub-topic {
 
 .source {
   margin-top: -10px;
-  @include media-breakpoint-down(md) {
-
+  .source-name {
+    color: var.$dark-green-blue;
+    font-weight: 500;
   }
 }
 
 .time {
   color: var.$dark-green-blue;
+  font-style: italic;
 }
 
 

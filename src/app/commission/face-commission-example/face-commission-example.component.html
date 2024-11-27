@@ -9,9 +9,9 @@
   <div class="limit-width mx-auto">
     <app-gallery-room [galleryRoom]="facePortrait1" [pattern]="'equal'"></app-gallery-room>
   </div>
-  <app-gallery-room [galleryRoom]="facePortrait2" [pattern]="'equal'"></app-gallery-room>
+  <app-gallery-room [galleryRoom]="facePortrait2" [pattern]="'equal'" class="d-none d-md-block"></app-gallery-room>
   <div class="limit-width-small mx-auto">
-    <app-gallery-room [galleryRoom]="facePortrait3" [pattern]="'equal'"></app-gallery-room>
+    <app-gallery-room [galleryRoom]="facePortrait3" [pattern]="'equal'" class="d-none d-md-block"></app-gallery-room>
   </div>
 </div>
 <div class="hightlight-action  px-1 px-md-4 py-4 my-5">
@@ -22,7 +22,7 @@
         class="w-100 mt-3"/>
       </div>
       <div class="col-12 col-md-6 text-center d-flex">
-        <div class="description-frame p-4 mt-3 my-md-auto">
+        <div class="description-frame p-4 mt-3 my-md-auto w-100">
           <div class="section-sub-topic mb-1">
             Want an art to introduce your character?
           </div>
@@ -35,7 +35,7 @@
             You come at a right place!
           </div>
           <div class="my-5 d-flex">
-            <a [routerLink]="'/commission-form'" class="mx-auto">
+            <a [routerLink]="'/commission-form'" [queryParams]="{ prefill: '?usp=pp_url&entry.16310926=Portrait'}" class="mx-auto">
               <app-playground-menu [label]="'Continue'"></app-playground-menu>
             </a>
           </div>
@@ -56,10 +56,10 @@
   <div class="limit-width-small mx-auto">
     <app-gallery-room [galleryRoom]="faceWidescreen3" [pattern]="'equal'"></app-gallery-room>
   </div>
-  <div class="limit-width mx-auto">
-    <app-gallery-room [galleryRoom]="faceWidescreen4" [pattern]="'equal'"></app-gallery-room>
+  <div class="limit-width mx-auto d-none d-md-block">
+    <app-gallery-room [galleryRoom]="faceWidescreen4" [pattern]="'equal'" class="d-none d-md-block"></app-gallery-room>
   </div>
-  <app-gallery-room [galleryRoom]="faceWidescreen5" [pattern]="'equal'"></app-gallery-room>
+  <app-gallery-room [galleryRoom]="faceWidescreen5" [pattern]="'equal'" class="d-none d-md-block"></app-gallery-room>
 </div>
 <div class="hightlight-action  px-1 px-md-4 py-4 my-5">
   <div class="container-fluid container-lg">
@@ -69,7 +69,7 @@
         class="w-100 mt-3"/>
       </div>
       <div class="col-12 col-md-5 text-center d-flex">
-        <div class="description-frame p-4 mt-3 my-md-auto">
+        <div class="description-frame p-4 mt-3 my-md-auto w-100">
           <div class="section-sub-topic mb-1">
             Want an illustration for your novel?
           </div>
@@ -82,7 +82,7 @@
             You come at a right place!
           </div>
           <div class="my-5 d-flex">
-            <a [routerLink]="'/commission-form'" class="mx-auto">
+            <a [routerLink]="'/commission-form'" [queryParams]="{ prefill: '?usp=pp_url&entry.16310926=Widescreen'}" class="mx-auto">
               <app-playground-menu [label]="'Continue'"></app-playground-menu>
             </a>
           </div>
@@ -106,7 +106,7 @@
         class="w-100 mt-3"/>
       </div>
       <div class="col-12 col-md-5 text-center d-flex">
-        <div class="description-frame p-4 mt-3 my-md-auto">
+        <div class="description-frame p-4 mt-3 my-md-auto w-100">
           <div class="section-sub-topic mb-1">
             Want an avatar for your persona?
           </div>
@@ -119,7 +119,7 @@
             You come at a right place!
           </div>
           <div class="my-5 d-flex">
-            <a [routerLink]="'/commission-form'" class="mx-auto">
+            <a [routerLink]="'/commission-form'" [queryParams]="{ prefill: '?usp=pp_url&entry.16310926=Avatar'}" class="mx-auto">
               <app-playground-menu [label]="'Continue'"></app-playground-menu>
             </a>
           </div>
