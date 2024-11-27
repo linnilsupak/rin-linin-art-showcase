@@ -27,6 +27,9 @@ export class CommissionFormComponent implements OnInit {
 
   ngOnInit(): void {
     this.route.queryParamMap.subscribe((query) => {
+      if (query.get('type')) {
+        this.contactMeLink = (this.typeCommission[query.get('type')] || this.typeCommission.face) + this.embedLink;
+      }
       this.backUrl = query.get('backUrl') || '/commission';
       if (query.get('prefill')) {
         this.contactMeLink += query.get('prefill');

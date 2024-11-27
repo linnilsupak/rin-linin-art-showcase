@@ -1,14 +1,12 @@
 import { Routes } from '@angular/router';
+import { AboutMeComponent } from './about-me/about-me.component';
+import { CommissionFormComponent } from './commission-form/commission-form.component';
+import { CommissionComponent } from './commission/commission.component';
+import { ContactUsComponent } from './contact-us/contact-us.component';
 import { HomeComponent } from './home/home.component';
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
-import { ContactUsComponent } from './contact-us/contact-us.component';
 import { TarotsComponent } from './tarots/tarots.component';
-import { AboutMeComponent } from './about-me/about-me.component';
-import { importProvidersFrom } from '@angular/core';
-import { TranslateModule } from '@ngx-translate/core';
-import { CommissionComponent } from './commission/commission.component';
 import { TermOfServiceComponent } from './term-of-service/term-of-service.component';
-import { CommissionFormComponent } from './commission-form/commission-form.component';
 
 export const routes: Routes = [
   {

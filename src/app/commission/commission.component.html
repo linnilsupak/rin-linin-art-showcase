@@ -47,7 +47,7 @@
         <span [innerHTML]="'COMMISSION.FACE.BG' | translate"></span>
       </div>
       <img src="/assets/images/commission/face_commission_example.webp" class="w-100 preview-img">
-      <a class="select-btn my-3" [routerLink]="['/commission-form']" >
+      <a class="select-btn my-3" [routerLink]="['/commission-form']" [queryParams]="{ type: 'face'}">
         {{ 'COMMISSION.SELECT' | translate}}
       </a>
     </div>
@@ -61,7 +61,7 @@
         <span [innerHTML]="'COMMISSION.HALF.BG' | translate"></span>
       </div>
       <img src="/assets/images/commission/half_commission_example.webp" class="w-100 preview-img">
-      <a class="select-btn my-3" [routerLink]="['/commission-form']" >
+      <a class="select-btn my-3" [routerLink]="['/commission-form']" [queryParams]="{ type: 'half'}">
         {{ 'COMMISSION.SELECT' | translate}}
       </a>
     </div>
@@ -75,7 +75,7 @@
         <span [innerHTML]="'COMMISSION.FULL.BG' | translate"></span>
       </div>
       <img src="/assets/images/commission/full_commission_example.webp" class="w-100 preview-img">
-      <a class="select-btn my-3" [routerLink]="['/commission-form']" >
+      <a class="select-btn my-3" [routerLink]="['/commission-form']" [queryParams]="{ type: 'full'}">
         {{ 'COMMISSION.SELECT' | translate}}
       </a>
     </div>
@@ -90,7 +90,7 @@
         <span [innerHTML]="'COMMISSION.DETAIL.BG' | translate"></span>
       </div>
       <img src="/assets/images/commission/detail_bg_commission_example.webp" class="w-100 preview-img">
-      <a class="select-btn my-3" [routerLink]="['/commission-form']" >
+      <a class="select-btn my-3" [routerLink]="['/commission-form']" [queryParams]="{ type: 'detail'}">
         {{ 'COMMISSION.SELECT' | translate}}
       </a>
     </div>

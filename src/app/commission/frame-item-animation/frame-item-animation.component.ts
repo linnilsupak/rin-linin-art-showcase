@@ -3,11 +3,12 @@ import { mainConfig } from '../../core/config/main.config';
 import { commissionTab } from '../../core/enum/commission-tab.enum';
 import { TranslateModule } from '@ngx-translate/core';
 import { RouterLink } from '@angular/router';
+import { CommonModule } from '@angular/common';
 
 @Component({
   selector: 'app-frame-item-animation',
   standalone: true,
-  imports: [TranslateModule, RouterLink],
+  imports: [TranslateModule, RouterLink, CommonModule],
   templateUrl: './frame-item-animation.component.html',
   styleUrl: './frame-item-animation.component.scss'
 })
