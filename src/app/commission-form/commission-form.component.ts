@@ -1,9 +1,9 @@
 import { Component, inject, OnInit } from '@angular/core';
 import { ActivatedRoute, RouterLink } from '@angular/router';
-import { environment } from '../../environments/environment';
 import { mainConfig } from '../core/config/main.config';
 import { MiniSpinningComponent } from '../shared/mini-spinning/mini-spinning.component';
 import { SafePipe } from '../shared/safe.pipe';
+import { BreakpointObserver, Breakpoints } from '@angular/cdk/layout';
 
 @Component({
   selector: 'app-commission-form',
@@ -24,7 +24,10 @@ export class CommissionFormComponent implements OnInit {
   contactMeLink = this.typeCommission.face + this.embedLink;
   backUrl = '';
   loading = true;
-
+  private responsive = inject(BreakpointObserver);
+  heightLandscape = 1580;
+  heightPortrait = 1980;
+  iframeHeight = this.heightLandscape;
   ngOnInit(): void {
     this.route.queryParamMap.subscribe((query) => {
       if (query.get('type')) {
@@ -35,6 +38,13 @@ export class CommissionFormComponent implements OnInit {
         this.contactMeLink += query.get('prefill');
       }
     });
+    this.responsive.observe([Breakpoints.HandsetPortrait, Breakpoints.HandsetLandscape]).subscribe(result => {
+      if (result.matches) {
+        this.iframeHeight = this.heightPortrait;
+      } else {
+        this.iframeHeight = this.heightLandscape;
+      }
+    })
   }
 
   iframeLoaded() {
