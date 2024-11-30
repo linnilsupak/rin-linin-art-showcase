@@ -11,7 +11,7 @@ import { CustomerFeedbackComponent } from "../../shared/customer-feedback/custom
 @Component({
   selector: 'app-face-commission-example',
   standalone: true,
-  imports: [TranslateModule, RouterLink, PlaygroundMenuComponent, GalleryRoomComponent, ImageSrcsetPipe, AvatarComponent, CustomerFeedbackComponent],
+  imports: [TranslateModule, RouterLink, PlaygroundMenuComponent, GalleryRoomComponent, ImageSrcsetPipe, CustomerFeedbackComponent],
   templateUrl: './face-commission-example.component.html',
   styleUrl: './face-commission-example.component.scss'
 })

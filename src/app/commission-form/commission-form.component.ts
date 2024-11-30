@@ -25,8 +25,8 @@ export class CommissionFormComponent implements OnInit {
   backUrl = '';
   loading = true;
   private responsive = inject(BreakpointObserver);
-  heightLandscape = 1580;
-  heightPortrait = 1980;
+  heightLandscape = 2080;
+  heightPortrait = 2780;
   iframeHeight = this.heightLandscape;
   ngOnInit(): void {
     this.route.queryParamMap.subscribe((query) => {

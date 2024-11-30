@@ -7,12 +7,15 @@ import { MoreButtonComponent } from "../shared/more-button/more-button.component
 import { ReflectionFontComponent } from "../shared/reflection-font/reflection-font.component";
 import { FaceCommissionExampleComponent } from "./face-commission-example/face-commission-example.component";
 import { FrameItemAnimationComponent } from "./frame-item-animation/frame-item-animation.component";
+import { HalfCommissionExampleComponent } from "./half-commission-example/half-commission-example.component";
+import { FullCommissionExampleComponent } from "./full-commission-example/full-commission-example.component";
+import { DetailCommissionExampleComponent } from "./detail-commission-example/detail-commission-example.component";
 
 @Component({
   selector: 'app-commission',
   standalone: true,
   imports: [ReflectionFontComponent, TranslateModule, RouterLink,
-    FrameItemAnimationComponent, MoreButtonComponent, FaceCommissionExampleComponent],
+    FrameItemAnimationComponent, MoreButtonComponent, FaceCommissionExampleComponent, HalfCommissionExampleComponent, FullCommissionExampleComponent, DetailCommissionExampleComponent],
   templateUrl: './commission.component.html',
   styleUrl: './commission.component.scss'
 })
