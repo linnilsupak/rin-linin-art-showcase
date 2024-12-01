@@ -484,6 +484,22 @@ export const commissionExampleConfig: GalleryRooms = {
   ],
   halfPortrait1: [
     {
+      picUrl: '/assets/images/commission/half/sakura_card_capture_rin_linin.webp',
+      frameStyle: 'black-frame small mini-frame-300',
+      content: {
+        title: 'Sakura Card Capture: Sakura',
+        title2: 'Draw by Rin Linin',
+        subTitle: 'watercolor',
+        description: '',
+      },
+      isRecTemplate: true,
+      previewPic: {
+        width: 'inherit',
+        height: 'inherit',
+        disabled: true
+      }
+    },
+    {
       picUrl: '/assets/images/commission/half/dacopo_portrait.webp',
       frameStyle: 'white-frame small mini-frame-300',
       content: {
@@ -506,6 +522,21 @@ export const commissionExampleConfig: GalleryRooms = {
         title2: 'Design and draw by Rin Linin',
         subTitle: 'watercolor',
         description: 'When I watch Dacapo debut, he didn\'t look that shota though but Baabel look more shota than him so I kind of draw him next. Ha ha'
+      },
+      previewPic: {
+        width: 'inherit',
+        height: 'inherit',
+        disabled: true
+      }
+    },
+    {
+      picUrl: '/assets/images/commission/half/novel_cover_knight_rin_linin.webp',
+      frameStyle: 'black-frame small mini-frame-300',
+      content: {
+        title: 'Novel cover request: Female Knight',
+        title2: 'by Rin Linin',
+        subTitle: 'watercolor',
+        description: 'One time, I want to try drawing Novel cover, so I open a request on Dek-D and I draw this cover for the novelist!',
       },
       previewPic: {
         width: 'inherit',
@@ -555,6 +586,7 @@ export const commissionExampleConfig: GalleryRooms = {
         subTitle: 'ภาพสีไม้ผสมสีน้ำ',
         description: 'ภาพสไตล์วิกตอเรียก็ต้องสีไม้ซิ สุดคลาสสิก'
       },
+      isRecTemplate: true,
       previewPic: {
         width: 'inherit',
         height: 'inherit',
@@ -586,6 +618,7 @@ export const commissionExampleConfig: GalleryRooms = {
         subTitle: 'ภาพสีน้ำ',
         description: 'อยากลองวาดชุดไทยดู เลยเอามาลองกับ persona ตัวเอง'
       },
+      isRecTemplate: true,
       previewPic: {
         width: 'inherit',
         height: 'inherit',
@@ -749,6 +782,7 @@ export const commissionExampleConfig: GalleryRooms = {
         subTitle: 'color pencil',
         description: ''
       },
+      isRecTemplate: true,
       previewPic: {
         width: 'inherit',
         height: 'inherit',
@@ -779,6 +813,7 @@ export const commissionExampleConfig: GalleryRooms = {
         subTitle: 'watercolor',
         description: ''
       },
+      isRecTemplate: true,
       previewPic: {
         width: 'inherit',
         height: 'inherit',
@@ -940,6 +975,7 @@ export const commissionExampleConfig: GalleryRooms = {
         subTitle: 'ภาพสีน้ำ',
         description: ''
       },
+      isRecTemplate: true,
       previewPic: {
         width: 'inherit',
         height: 'inherit',
@@ -955,6 +991,7 @@ export const commissionExampleConfig: GalleryRooms = {
         subTitle: 'watercolor',
         description: '',
       },
+      isRecTemplate: true,
       previewPic: {
         width: 'inherit',
         height: 'inherit',
@@ -962,4 +999,53 @@ export const commissionExampleConfig: GalleryRooms = {
       }
     },
   ],
+  detailPortrait1: [
+    {
+      picUrl: '/assets/images/commission/detail/remade_2024_rin_linin.webp',
+      frameStyle: 'black-frame',
+      content: {
+        title: 'Remake my old watercolor art',
+        title2: 'by Rin Linin',
+        subTitle: 'watercolor',
+        description: 'I just discover my old art when I draw when I was a high school. And I redraw them into this peice.',
+      },
+      previewPic: {
+        width: 'inherit',
+        height: 'inherit',
+        disabled: true
+      }
+    },
+    {
+      picUrl: '/assets/images/commission/detail/uzbekistan_rin_linin.webp',
+      frameStyle: 'black-frame',
+      content: {
+        title: 'Uzbekistan Girl',
+        title2: 'by Rin Linin',
+        subTitle: 'watercolor',
+        description: 'I want to try drawing random country challenge. And the result of country random is Uzbekistan, I have never heard of them before but I did my research before drawing this picture!',
+      },
+      previewPic: {
+        width: 'inherit',
+        height: 'inherit',
+        disabled: true
+      }
+    },
+  ],
+  detailWidescreen: [
+    {
+      picUrl: '/assets/images/commission/detail/rin_linin_star_sea.webp',
+      frameStyle: 'black-frame',
+      content: {
+        title: 'Rin Linin',
+        title2: 'วาดโดย Rin Linin',
+        subTitle: 'ภาพสีน้ำ',
+        description: 'ทดลองลงสีท้องฟ้าและทะเลแบบออโรร่านะ ทำตามวีดีโอ Youtube จ้า'
+      },
+      previewPic: {
+        width: 'inherit',
+        height: 'inherit',
+        disabled: true
+      }
+    },
+  ]
 }

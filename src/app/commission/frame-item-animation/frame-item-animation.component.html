@@ -1,3 +1,9 @@
+
+@if (loading) {
+  <div class="d-flex justify-content-center align-items-center loading-div">
+    <app-mini-spinning></app-mini-spinning>
+  </div>
+}
 <div class="w-100 mb-5 d-flex" #parentItem>
   @if (!loading) {
   @for (item of tabList; track item;let index=$index) {
@@ -15,7 +21,7 @@
         <span [innerHTML]="'COMMISSION.' + item.name + '.BG' | translate"></span><br />
         <span [innerHTML]="'COMMISSION.' + item.name + '.DURATION' | translate"></span>
       </div>
-      <a class="select-btn" [routerLink]="['/commission-form']" [queryParams]="{ type: (item.name | lowercase)}">
+      <a class="select-btn" [routerLink]="['/commission-form', item.name | lowercase]">
         {{ 'COMMISSION.SELECT' | translate}}
       </a>
     </div>

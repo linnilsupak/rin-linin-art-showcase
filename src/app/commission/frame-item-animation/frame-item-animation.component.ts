@@ -4,11 +4,12 @@ import { commissionTab } from '../../core/enum/commission-tab.enum';
 import { TranslateModule } from '@ngx-translate/core';
 import { RouterLink } from '@angular/router';
 import { CommonModule } from '@angular/common';
+import { MiniSpinningComponent } from "../../shared/mini-spinning/mini-spinning.component";
 
 @Component({
   selector: 'app-frame-item-animation',
   standalone: true,
-  imports: [TranslateModule, RouterLink, CommonModule],
+  imports: [TranslateModule, RouterLink, CommonModule, MiniSpinningComponent],
   templateUrl: './frame-item-animation.component.html',
   styleUrl: './frame-item-animation.component.scss'
 })

@@ -1,1 +1,78 @@
-<p>detail-commission-example works!</p>
+<div class="container-fluid container-lg">
+    <div class="section-sub-topic section-color pt-5 mb-5">
+      {{ 'COMMISSION.PORTRAIT' | translate}}
+    </div>
+    <div class="limit-width mx-auto">
+      <app-gallery-room [galleryRoom]="detailPortrait1" [pattern]="'equal'"></app-gallery-room>
+    </div>
+  </div>
+  <div class="hightlight-action  px-1 px-md-4 py-4 my-5">
+    <div class="container-fluid container-lg">
+      <div class="row after-reflect">
+        <div class="col-12 col-md-6">
+          <img src="/assets/images/commission/detail/detail_portrait_commission.png" srcset="{{ '/assets/images/commission/detail/detail_portrait_commission.png' | imageSrcset }}"
+          class="w-100 mt-3"/>
+        </div>
+        <div class="col-12 col-md-6 text-center d-flex">
+          <div class="description-frame p-4 mt-3 my-md-auto w-100">
+            <div class="section-sub-topic mb-1">
+                Want an epic picture on your wall?
+              </div>
+              <div class="mt-2">
+                a beautiful scenery with your character.<br/>
+                an importance scene in your nove.<br/>
+                a wonderful gift for your importance one.
+              </div>
+            <div class="section-sub-topic my-3">
+              You come at a right place!
+            </div>
+            <div class="my-5 d-flex">
+              <a [routerLink]="'/commission-form/detail'" [queryParams]="{ prefill: '?usp=pp_url&entry.16310926=Portrait'}" class="mx-auto">
+                <app-playground-menu [label]="'Continue'"></app-playground-menu>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="pt-5">&nbsp;</div>
+  <div class="container-fluid container-lg">
+    <div class="section-sub-topic section-color pt-5 mb-5">
+      {{ 'COMMISSION.WIDESCREEN' | translate}}
+    </div>
+    <div class="limit-width mx-auto">
+      <app-gallery-room [galleryRoom]="detailWidescreen"></app-gallery-room>
+    </div>
+  </div>
+  <div class="hightlight-action  px-1 px-md-4 py-4 mt-5">
+    <div class="container-fluid container-lg">
+      <div class="row after-reflect">
+        <div class="col-12 col-md-7">
+          <img src="/assets/images/commission/detail/detail_widescreen_commission.png" srcset="{{ '/assets/images/commission/detail/detail_widescreen_commission.png' | imageSrcset }}"
+          class="w-100 mt-3"/>
+        </div>
+        <div class="col-12 col-md-5 text-center d-flex">
+          <div class="description-frame p-4 mt-3 my-md-auto w-100">
+            <div class="section-sub-topic mb-1">
+              Want an epic picture on your wall?
+            </div>
+            <div class="mt-2">
+              a beautiful scenery with your character.<br/>
+              an importance scene in your nove.<br/>
+              a wonderful gift for your importance one.
+            </div>
+            <div class="section-sub-topic my-3">
+              You come at a right place!
+            </div>
+            <div class="my-5 d-flex">
+              <a [routerLink]="'/commission-form/detail'" [queryParams]="{ prefill: '?usp=pp_url&entry.16310926=Widescreen'}" class="mx-auto">
+                <app-playground-menu [label]="'Continue'"></app-playground-menu>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  

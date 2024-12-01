@@ -2,6 +2,10 @@
 @use "variables" as var;
 @use "commission-frame" as commission;
 
+.loading-div {
+  min-height: 300px;
+}
+
 /* commission item animation */
 .animate-frame {
   transition: all .6s ease-out;

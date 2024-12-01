@@ -8,96 +8,9 @@
     {{'COMMISSION.DESCRIPTION' | translate}}
   </div>
 </div>
-<div class="d-block d-md-none">
-  <div class="tab-list white">
-    <div class="tab-item" [class.active]="activeTab === commissionTab.FACE || activeTab === undefined"
-      (click)="this.changeActiveTab(commissionTab.FACE)">
-      {{ 'COMMISSION.FACE.TITLE' | translate}}
-    </div>
-    <div class="tab-item" [class.active]="activeTab === commissionTab.HALF" (click)=changeActiveTab(commissionTab.HALF)>
-      {{ 'COMMISSION.HALF.TITLE' | translate}}
-    </div>
-    <div class="tab-item" [class.active]="activeTab === commissionTab.FULL" (click)=changeActiveTab(commissionTab.FULL)>
-      {{ 'COMMISSION.FULL.TITLE' | translate}}
-    </div>
-    <div class="tab-item" [class.active]="activeTab === commissionTab.DETAIL"
-      (click)=changeActiveTab(commissionTab.DETAIL)>
-      {{ 'COMMISSION.DETAIL.TITLE' | translate}}
-      {{ 'COMMISSION.DETAIL.TITLE2' | translate}}
-    </div>
-  </div>
-  <div class="tab-body white pt-3 pb-3 px-4">
-    <div class="previous-arrow" (click)="clickPrevious()" [class.d-none]="activeTab === commissionTab.FACE || activeTab === undefined">
-      <span class="material-symbols-rounded mt-5">
-        arrow_back_ios
-        </span>
-    </div>
-    <div class="next-arrow" (click)="clickNext()" [class.d-none]="activeTab === commissionTab.DETAIL">
-      <span class="material-symbols-rounded mt-5">
-        arrow_forward_ios
-        </span>
-    </div>
-    <div [class.d-none]="activeTab !== commissionTab.FACE && activeTab !== undefined">
-      <div class="section-sub-topic mb-1">
-        {{ 'COMMISSION.FACE.TITLE' | translate}}
-      </div>
-      <div class="price">{{ 'COMMISSION.FACE.PRICE' | translate}}</div>
-      <div class="section-content mb-3 mx-auto">
-        <span [innerHTML]="'COMMISSION.FACE.CHARACTER' | translate"></span><br />
-        <span [innerHTML]="'COMMISSION.FACE.BG' | translate"></span>
-      </div>
-      <img src="/assets/images/commission/face_commission_example.webp" class="w-100 preview-img">
-      <a class="select-btn my-3" [routerLink]="['/commission-form']" [queryParams]="{ type: 'face'}">
-        {{ 'COMMISSION.SELECT' | translate}}
-      </a>
-    </div>
-    <div [class.d-none]="activeTab !== commissionTab.HALF">
-      <div class="section-sub-topic mb-1">
-        {{ 'COMMISSION.HALF.TITLE' | translate}}
-      </div>
-      <div class="price">{{ 'COMMISSION.HALF.PRICE' | translate}}</div>
-      <div class="section-content mb-3 mx-auto">
-        <span [innerHTML]="'COMMISSION.HALF.CHARACTER' | translate"></span><br />
-        <span [innerHTML]="'COMMISSION.HALF.BG' | translate"></span>
-      </div>
-      <img src="/assets/images/commission/half_commission_example.webp" class="w-100 preview-img">
-      <a class="select-btn my-3" [routerLink]="['/commission-form']" [queryParams]="{ type: 'half'}">
-        {{ 'COMMISSION.SELECT' | translate}}
-      </a>
-    </div>
-    <div [class.d-none]="activeTab !== commissionTab.FULL">
-      <div class="section-sub-topic mb-1">
-        {{ 'COMMISSION.FULL.TITLE' | translate}}
-      </div>
-      <div class="price">{{ 'COMMISSION.FULL.PRICE' | translate}}</div>
-      <div class="section-content mb-3 mx-auto">
-        <span [innerHTML]="'COMMISSION.FULL.CHARACTER' | translate"></span><br />
-        <span [innerHTML]="'COMMISSION.FULL.BG' | translate"></span>
-      </div>
-      <img src="/assets/images/commission/full_commission_example.webp" class="w-100 preview-img">
-      <a class="select-btn my-3" [routerLink]="['/commission-form']" [queryParams]="{ type: 'full'}">
-        {{ 'COMMISSION.SELECT' | translate}}
-      </a>
-    </div>
-    <div [class.d-none]="activeTab !== commissionTab.DETAIL">
-      <div class="section-sub-topic mb-1">
-        {{ 'COMMISSION.DETAIL.TITLE' | translate}}<span class="d-inline d-md-none d-lg-inline">{{
-          'COMMISSION.DETAIL.TITLE2' | translate}}</span>
-      </div>
-      <div class="price">{{ 'COMMISSION.DETAIL.PRICE' | translate}}</div>
-      <div class="section-content mb-3 mx-auto">
-        <span [innerHTML]="'COMMISSION.DETAIL.CHARACTER' | translate"></span><br />
-        <span [innerHTML]="'COMMISSION.DETAIL.BG' | translate"></span>
-      </div>
-      <img src="/assets/images/commission/detail_bg_commission_example.webp" class="w-100 preview-img">
-      <a class="select-btn my-3" [routerLink]="['/commission-form']" [queryParams]="{ type: 'detail'}">
-        {{ 'COMMISSION.SELECT' | translate}}
-      </a>
-    </div>
-  </div>
-</div>
+<app-frame-item-mobile [activeTab]="activeTab" (changeActiveTab)="changeActiveTab($event)"></app-frame-item-mobile>
 <div class="container-fluid container-md mt-4 mt-md-0">
-  <app-frame-item-animation class="d-none d-md-block" [activeVal]="activeTab" (activeTab)=changeActiveTab($event)>
+  <app-frame-item-animation class="d-none d-md-block" [activeVal]="activeTab" (activeTab)="changeActiveTab($event)">
   </app-frame-item-animation>
   <div class="row mb-5">
     <div class="col-12 col-md-4 mb-3 mb-md-0">

@@ -54,6 +54,11 @@ export const routes: Routes = [
     component: CommissionFormComponent
   },
   {
+    path: 'commission-form/:type',
+    title: 'Commission form: Rin Linin',
+    component: CommissionFormComponent
+  },
+  {
     path: 'commission',
     title: 'Commission: Rin Linin',
     component: CommissionComponent

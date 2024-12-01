@@ -11,19 +11,19 @@ import { FrameItemAnimationComponent } from "./frame-item-animation/frame-item-a
 import { FullCommissionExampleComponent } from "./full-commission-example/full-commission-example.component";
 import { HalfCommissionExampleComponent } from "./half-commission-example/half-commission-example.component";
 import { mainConfig } from '../core/config/main.config';
+import { FrameItemMobileComponent } from "./frame-item-mobile/frame-item-mobile.component";
 
 @Component({
   selector: 'app-commission',
   standalone: true,
   imports: [ReflectionFontComponent, TranslateModule, RouterLink,
-    FrameItemAnimationComponent, MoreButtonComponent, FaceCommissionExampleComponent, HalfCommissionExampleComponent, FullCommissionExampleComponent, DetailCommissionExampleComponent],
+    FrameItemAnimationComponent, MoreButtonComponent, FaceCommissionExampleComponent, HalfCommissionExampleComponent, FullCommissionExampleComponent, DetailCommissionExampleComponent, FrameItemMobileComponent],
   templateUrl: './commission.component.html',
   styleUrl: './commission.component.scss'
 })
 export class CommissionComponent implements OnDestroy, AfterViewInit {
   activeTab: commissionTab;
   commissionTab = commissionTab;
-  tabOrderList = [commissionTab.FACE, commissionTab.HALF, commissionTab.FULL, commissionTab.DETAIL];
   private router = inject(Router);
   private route = inject(ActivatedRoute);
   private subscription = new Subscription();
@@ -54,24 +54,5 @@ export class CommissionComponent implements OnDestroy, AfterViewInit {
     }
   }
 
-  clickNext() {
-    let currentIndex = this.tabOrderList.indexOf(this.activeTab);
-    let nextIndex = 0;
-    if (currentIndex === -1) {
-      currentIndex = 0;
-    }
-    nextIndex = currentIndex + 1;
-    this.changeActiveTab(this.tabOrderList[nextIndex]);
-  }
-
-  clickPrevious() {
-    let currentIndex = this.tabOrderList.indexOf(this.activeTab);
-    let nextIndex = 0;
-    if (currentIndex <= 0) {
-      currentIndex = 1;
-    }
-    nextIndex = currentIndex - 1;
-    this.changeActiveTab(this.tabOrderList[nextIndex]);
-  }
 
 }
