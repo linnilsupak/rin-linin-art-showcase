@@ -1,13 +1,28 @@
 @use 'variables' as var;
 @use 'character-frame' as char;
+@import "bootstrap-mixin";
 
-.rule-content {
+.description-frame {
     max-width: 1000px;
 }
-.section-content {
-    font-size: 1.3rem;
-    line-height: 2.3rem;
+.rule-content {
+    padding-left: 16px;
+    padding-right: 16px;
 
+    @include media-breakpoint-up(lg) {
+        padding-left: 24px;
+        padding-right: 24px;
+    }
+}
+
+.section-content {
+    font-size: 1.1rem;
+    line-height: 2.1rem;
+
+    @include media-breakpoint-up(lg) {
+        font-size: 1.3rem;
+        line-height: 2.4rem;
+    }
     ::marker {
         font-size: 0.6rem;
     }
