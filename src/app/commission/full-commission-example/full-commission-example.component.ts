@@ -31,7 +31,7 @@ export class FullCommissionExampleComponent {
     date: 'Sep 04, 2023',
     source: 'Fiverr',
     feedback: 'Rin Linin is fantastic to work with! They communicated very well each step of the way, providing a very smooth experience, taking my request and making it flourish far more than I had thought possible! 10/10, would absolutely work with Rin Linin again!',
-    description: `I draw Midnight, a protagonist from <a
+    description: `I draw Midnight, a protagonist from <a class="underline"
     href="https://www.royalroad.com/fiction/67499/the-machinist-of-the-apocalyptic-world"
     target="_blank">'The Machinist of the Apocalyptic World'</a> a novel by Arkean on royal road. She looking at her unfamiliar face in the mirror as she found herself in a game so real she can't distinguish from reality.`
   }

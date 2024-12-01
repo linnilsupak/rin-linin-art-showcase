@@ -35,7 +35,7 @@ export class FaceCommissionExampleComponent {
     date: 'Aug 26, 2023',
     source: 'Fiverr',
     feedback: 'Once again some amazing work by Rin Linin! Strong recommendation!',
-    description: `I draw Midnight, a protagonist from <a
+    description: `I draw Midnight, a protagonist from <a class="underline"
     href="https://www.royalroad.com/fiction/67499/the-machinist-of-the-apocalyptic-world"
     target="_blank">'The Machinist of the Apocalyptic World'</a> a novel by Arkean on royal road. She looking at her unfamiliar face in the mirror as she found herself in a game so real she can't distinguish from reality.`
   }
