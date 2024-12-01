@@ -11,17 +11,17 @@
 <div class="d-block d-md-none">
   <div class="tab-list white">
     <div class="tab-item" [class.active]="activeTab === commissionTab.FACE || activeTab === undefined"
-      (click)="activeTab = commissionTab.FACE">
+      (click)="this.changeActiveTab(commissionTab.FACE)">
       {{ 'COMMISSION.FACE.TITLE' | translate}}
     </div>
-    <div class="tab-item" [class.active]="activeTab === commissionTab.HALF" (click)="activeTab = commissionTab.HALF">
+    <div class="tab-item" [class.active]="activeTab === commissionTab.HALF" (click)=changeActiveTab(commissionTab.HALF)>
       {{ 'COMMISSION.HALF.TITLE' | translate}}
     </div>
-    <div class="tab-item" [class.active]="activeTab === commissionTab.FULL" (click)="activeTab = commissionTab.FULL">
+    <div class="tab-item" [class.active]="activeTab === commissionTab.FULL" (click)=changeActiveTab(commissionTab.FULL)>
       {{ 'COMMISSION.FULL.TITLE' | translate}}
     </div>
     <div class="tab-item" [class.active]="activeTab === commissionTab.DETAIL"
-      (click)="activeTab = commissionTab.DETAIL">
+      (click)=changeActiveTab(commissionTab.DETAIL)>
       {{ 'COMMISSION.DETAIL.TITLE' | translate}}
       {{ 'COMMISSION.DETAIL.TITLE2' | translate}}
     </div>
@@ -97,7 +97,7 @@
   </div>
 </div>
 <div class="container-fluid container-md mt-4 mt-md-0">
-  <app-frame-item-animation class="d-none d-md-block" [activeVal]="activeTab" (activeTab)="activeTab = $event;">
+  <app-frame-item-animation class="d-none d-md-block" [activeVal]="activeTab" (activeTab)=changeActiveTab($event)>
   </app-frame-item-animation>
   <div class="row mb-5">
     <div class="col-12 col-md-4 mb-3 mb-md-0">
@@ -202,16 +202,16 @@
 </div>
 <div class="tab-list">
   <div class="tab-item" [class.active]="activeTab === commissionTab.FACE || activeTab === undefined"
-    (click)="activeTab = commissionTab.FACE">
+    (click)=changeActiveTab(commissionTab.FACE)>
     {{ 'COMMISSION.FACE.TITLE' | translate}}
   </div>
-  <div class="tab-item" [class.active]="activeTab === commissionTab.HALF" (click)="activeTab = commissionTab.HALF">
+  <div class="tab-item" [class.active]="activeTab === commissionTab.HALF" (click)=changeActiveTab(commissionTab.HALF)>
     {{ 'COMMISSION.HALF.TITLE' | translate}}
   </div>
-  <div class="tab-item" [class.active]="activeTab === commissionTab.FULL" (click)="activeTab = commissionTab.FULL">
+  <div class="tab-item" [class.active]="activeTab === commissionTab.FULL" (click)=changeActiveTab(commissionTab.FULL)>
     {{ 'COMMISSION.FULL.TITLE' | translate}}
   </div>
-  <div class="tab-item" [class.active]="activeTab === commissionTab.DETAIL" (click)="activeTab = commissionTab.DETAIL">
+  <div class="tab-item" [class.active]="activeTab === commissionTab.DETAIL" (click)=changeActiveTab(commissionTab.DETAIL)>
     {{ 'COMMISSION.DETAIL.TITLE' | translate}}
     {{ 'COMMISSION.DETAIL.TITLE2' | translate}}
   </div>

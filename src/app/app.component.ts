@@ -40,7 +40,7 @@ export class AppComponent implements AfterViewInit {
       startWith(null), // emitting first empty value to fill-in the buffer
       pairwise(),
       filter(([previousValue, currentValue]) => {
-        const resetScrollZero = previousValue?.url?.split('#')[0] !== currentValue?.url?.split('#')[0];
+        const resetScrollZero = previousValue?.url?.split('?')[0] !== currentValue?.url?.split('?')[0];
         if (resetScrollZero) {
           this.scrollPositionService.setLoading(false);
           if (this.scrollableDiv) {
