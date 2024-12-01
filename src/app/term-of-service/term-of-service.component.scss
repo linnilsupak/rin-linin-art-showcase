@@ -1,0 +1,23 @@
+@use 'variables' as var;
+@use 'character-frame' as char;
+
+.rule-content {
+    max-width: 1000px;
+}
+.section-content {
+    font-size: 1.3rem;
+    line-height: 2.3rem;
+
+    ::marker {
+        font-size: 0.6rem;
+    }
+}
+
+.section-header {
+    padding: 16px 16px 4px 16px;
+    border-top-left-radius: 16px;
+    border-top-right-radius: 16px;
+    background-color: var.$dark-sky;
+    color: var.$white;
+    margin-bottom: 16px;
+}

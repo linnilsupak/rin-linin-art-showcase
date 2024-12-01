@@ -46,6 +46,9 @@ export const routes: Routes = [
   {
     path: 'tos',
     title: 'Term of service: Rin Linin',
+    data: {
+      minimizeFlag: true
+    },
     component: TermOfServiceComponent
   },
   {
