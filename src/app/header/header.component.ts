@@ -19,12 +19,21 @@ export class HeaderComponent implements  OnInit {
   characterInfo = characterInfo;
   openMenu = false;
   characterInfoActive = false;
+  commissionActive = false;
 
 
   ngOnInit(): void {
     Object.keys(this.characterInfo).forEach(key => {
       this.characterInfoList.push({ name: key, ...this.characterInfo[key]});
     });
+  }
+
+  toggleCommission() {
+    this.commissionActive = !this.commissionActive;
+  }
+
+  checkIfCommisiontActive(event) {
+    if (event && this.commissionActive == false) this.commissionActive = true;
   }
 
   toggleCharacterInfo() {

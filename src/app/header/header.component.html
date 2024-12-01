@@ -61,9 +61,26 @@
     <div>&nbsp;</div>
     <a routerLink="/commission" (click)="openMenu=false" routerLinkActive="active">
       <div class="menu-item">
-        <app-text-rollin-entrance [text]="'Commission'" [runAnimation]="openMenu"></app-text-rollin-entrance>
+        <app-text-rollin-entrance [text]="'Commission'" [runAnimation]="openMenu" [lastItemPosition]="140">
+          <i class="material-symbols-rounded ms-1 collaspe-icon" [class.expand]="commissionActive"
+          (click)="$event.preventDefault();$event.stopPropagation();toggleCommission();">
+          stat_1
+        </i>
+        </app-text-rollin-entrance>
       </div>
     </a>
+    <div class="sub-menu" [class.open-commission]="commissionActive">
+      <ul>
+        <li [routerLink]="'/tos'" routerLinkActive="active" (click)="openMenu=false"
+        (isActiveChange)="checkIfCommisiontActive($event)">
+          {{ 'MENU.TOS' | translate}}
+        </li>
+        <li [routerLink]="'/commission-form'" routerLinkActive="active" (click)="openMenu=false"
+        (isActiveChange)="checkIfCommisiontActive($event)">
+          {{ 'MENU.BUY' | translate}}
+        </li>
+      </ul>
+    </div>
     <div>&nbsp;</div>
     <a routerLink="/about-me" (click)="openMenu=false" routerLinkActive="active">
       <div class="menu-item">
