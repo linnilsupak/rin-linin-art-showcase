@@ -691,5 +691,275 @@ export const commissionExampleConfig: GalleryRooms = {
       }
     },
 
-  ]
+  ],
+  fullPortrait1: [
+    {
+      picUrl: '/assets/images/commission/full/chinese_novel_rin_linin.webp',
+      frameStyle: 'black-frame small mini-frame-300',
+      content: {
+        title: 'Chinese novel cover request',
+        title2: 'by Rin Linin',
+        subTitle: 'watercolor',
+        description: 'I just want to try drawing novel cover and open request on Dek-D. This is one of my results.',
+      },
+      previewPic: {
+        width: 'inherit',
+        height: 'inherit',
+        disabled: true
+      }
+    },
+    {
+      picUrl: '/assets/images/commission/full/snow_miku_rin_linin.webp',
+      frameStyle: 'white-frame small mini-frame-300',
+      content: {
+        title: 'Snow miku',
+        title2: 'Draw by Rin Linin',
+        subTitle: 'watercolor',
+        description: 'I like snow miku design. It feel like it\'s snow on a new year!',
+      },
+      previewPic: {
+        width: 'inherit',
+        height: 'inherit',
+        disabled: true
+      }
+    },
+    {
+      picUrl: '/assets/images/commission/full/bridal_miku_rin_linin.webp',
+      frameStyle: 'white-frame small mini-frame-300',
+      content: {
+        title: 'Bridal Miku',
+        title2: 'Draw by Rin Linin',
+        subTitle: 'watercolor',
+        description: 'Ha ha this is my version of Miku design. I just feel like to draw Miku in bridal dress.',
+      },
+      previewPic: {
+        width: 'inherit',
+        height: 'inherit',
+        disabled: true
+      }
+    },
+  ],
+  fullPortrait2: [
+    {
+      picUrl: '/assets/images/commission/full/francois_color_ori_rin_linin.webp',
+      frameStyle: 'black-frame mini-frame-300',
+      content: {
+        title: 'Francois',
+        title2: 'Original design by Rin Linin',
+        subTitle: 'color pencil',
+        description: ''
+      },
+      previewPic: {
+        width: 'inherit',
+        height: 'inherit',
+        disabled: true
+      }
+    },
+    {
+      picUrl: '/assets/images/commission/full/mobias_rin_linin.webp',
+      frameStyle: 'white-frame small mini-frame-300',
+      content: {
+        title: 'Mobias วาดโดย Rin Linin',
+        title2: 'ตัวละครของ Gyyuks',
+        subTitle: 'ภาพสีน้ำ',
+        description: 'ลองเอียงกระดาษขณะที่สียังไม่แห้งให้เป็นทางน้ำไหล ซึ่งเป็นเทคนิคที่ใช้ได้เฉพาะกระดาษแผ่นเรียบเท่านั้น'
+      },
+      previewPic: {
+        width: 'inherit',
+        height: 'inherit',
+        disabled: true
+      }
+    },
+    {
+      picUrl: '/assets/images/commission/full/elysia_ori_rin_linin.webp',
+      frameStyle: 'black-frame mini-frame-300',
+      content: {
+        title: 'Elysia',
+        title2: 'Original design by Rin Linin',
+        subTitle: 'watercolor',
+        description: ''
+      },
+      previewPic: {
+        width: 'inherit',
+        height: 'inherit',
+        disabled: true
+      }
+    }
+  ],
+  fullPortrait3: [
+    {
+      picUrl: '/assets/images/commission/full/my_melody_rin_linin.webp',
+      frameStyle: 'black-frame small mini-frame-200',
+      content: {
+        title: 'Sanrio My Melody',
+        title2: 'Draw by Rin Linin',
+        subTitle: 'watercolor',
+        description: '',
+      },
+      previewPic: {
+        width: 'inherit',
+        height: 'inherit',
+        disabled: true
+      }
+    },
+    {
+      picUrl: '/assets/images/commission/full/furina_genshin_rin_linin.webp',
+      frameStyle: 'black-frame small mini-frame-200',
+      content: {
+        title: 'Furina',
+        title2: 'Draw by Rin Linin',
+        subTitle: 'color pencil',
+        description: '',
+      },
+      previewPic: {
+        width: 'inherit',
+        height: 'inherit',
+        disabled: true
+      }
+    },
+    {
+      picUrl: '/assets/images/commission/full/yao_yao_genshin_rin_linin.webp',
+      frameStyle: 'black-frame small mini-frame-200',
+      content: {
+        title: 'Yao yao',
+        title2: 'Draw by Rin Linin',
+        subTitle: 'watercolor',
+        description: '',
+      },
+      isRecTemplate: true,
+      previewPic: {
+        width: 'inherit',
+        height: 'inherit',
+        disabled: true
+      }
+    },
+    {
+      picUrl: '/assets/images/commission/full/sakura_miku_rin_linin.webp',
+      frameStyle: 'white-frame small mini-frame-200',
+      content: {
+        title: 'Sakura Miku',
+        title2: 'Draw by Rin Linin',
+        subTitle: 'watercolor',
+        description: 'I like miku various dress design so I draw many of them. Sakura Miku is one of them.',
+      },
+      previewPic: {
+        width: 'inherit',
+        height: 'inherit',
+        disabled: true
+      }
+    },
+    {
+      picUrl: '/assets/images/commission/full/kokomi_sea_genshin_rin_linin.webp',
+      frameStyle: 'white-frame small mini-frame-200',
+      content: {
+        title: 'Kokomi in the sea',
+        title2: 'Draw by Rin Linin',
+        subTitle: 'watercolor',
+        description: '',
+      },
+      isRecTemplate: true,
+      previewPic: {
+        width: 'inherit',
+        height: 'inherit',
+        disabled: true
+      }
+    },
+    {
+      picUrl: '/assets/images/commission/full/mahou_shojou_klee_genshin_rin_linin.webp',
+      frameStyle: 'black-frame small mini-frame-200',
+      content: {
+        title: 'Klee in mahou shoujo dress',
+        title2: 'Draw by Rin Linin',
+        subTitle: 'watercolor',
+        description: '',
+      },
+      isRecTemplate: true,
+      previewPic: {
+        width: 'inherit',
+        height: 'inherit',
+        disabled: true
+      }
+    },
+  ],
+  fullPortrait4: [
+    {
+      picUrl: '/assets/images/commission/full/navia_genshin_rin_linin.webp',
+      frameStyle: 'white-frame small mini-frame-300',
+      content: {
+        title: 'Navia',
+        title2: 'Draw by Rin Linin',
+        subTitle: 'color pencil',
+        description: '',
+      },
+      isRecTemplate: true,
+      previewPic: {
+        width: 'inherit',
+        height: 'inherit',
+        disabled: true
+      }
+    },{
+      picUrl: '/assets/images/commission/full/lyney_lynette_genshin_rin_linin.webp',
+      frameStyle: 'white-frame small mini-frame-300',
+      content: {
+        title: 'Lyney & Lynette',
+        title2: 'Draw by Rin Linin',
+        subTitle: 'color pencil',
+        description: '',
+      },
+      isRecTemplate: true,
+      previewPic: {
+        width: 'inherit',
+        height: 'inherit',
+        disabled: true
+      }
+    },
+  ],
+  fullWidescreen1: [
+    {
+      picUrl: '/assets/images/commission/full/2023_gift_rin_linin.webp',
+      frameStyle: 'white-frame mini-frame-400',
+      content: {
+        title: 'My gift',
+        title2: 'by Rin Linin',
+        subTitle: 'watercolor',
+        description: 'This drawing is a gift to someone who like pokemon.',
+      },
+      isRecTemplate: true,
+      previewPic: {
+        width: 'inherit',
+        height: 'inherit',
+        disabled: true
+      }
+    },
+    {
+      picUrl: '/assets/images/commission/full/deamon_rin_linin.webp',
+      frameStyle: 'black-frame mini-frame-400',
+      content: {
+        title: 'Deamon วาดโดย Rin Linin',
+        title2: 'ตัวละครของ Duckiepu',
+        subTitle: 'ภาพสีน้ำ',
+        description: ''
+      },
+      previewPic: {
+        width: 'inherit',
+        height: 'inherit',
+        disabled: true
+      }
+    },
+    {
+      picUrl: '/assets/images/commission/full/corin_lycaon_zzz_rin_linin.webp',
+      frameStyle: 'black-frame small mini-frame-400',
+      content: {
+        title: 'Corin & Lycaon from ZZZ',
+        title2: 'Draw by Rin Linin',
+        subTitle: 'watercolor',
+        description: '',
+      },
+      previewPic: {
+        width: 'inherit',
+        height: 'inherit',
+        disabled: true
+      }
+    },
+  ],
 }

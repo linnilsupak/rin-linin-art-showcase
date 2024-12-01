@@ -87,7 +87,6 @@ export class FrameItemAnimationComponent implements AfterViewInit {
   itemInactive(tab: commissionTab, forceInactive = false) {
     if (this.activeItem === undefined || forceInactive) {
       let index = this.tabOrderList.findIndex((item) => item === tab);
-      console.log('index', index)
       if (index === -1) index = 0;
       if (!this.tabList) return;
       this.tabList[index].width = this.widthSection;

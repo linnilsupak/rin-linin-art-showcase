@@ -2,6 +2,9 @@
 @use "variables" as var;
 @import "bootstrap-mixin";
 
+.limit-width {
+  max-width: 300px;
+}
 
 .bubble {
   position: relative;

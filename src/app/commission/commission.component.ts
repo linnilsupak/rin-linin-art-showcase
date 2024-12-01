@@ -1,6 +1,7 @@
-import { Component, inject, OnDestroy, OnInit } from '@angular/core';
+import { AfterViewInit, Component, inject, OnDestroy } from '@angular/core';
 import { ActivatedRoute, Router, RouterLink } from '@angular/router';
 import { TranslateModule } from '@ngx-translate/core';
+import { Subscription } from 'rxjs';
 import { commissionTab } from '../core/enum/commission-tab.enum';
 import { MoreButtonComponent } from "../shared/more-button/more-button.component";
 import { ReflectionFontComponent } from "../shared/reflection-font/reflection-font.component";
@@ -9,7 +10,7 @@ import { FaceCommissionExampleComponent } from "./face-commission-example/face-c
 import { FrameItemAnimationComponent } from "./frame-item-animation/frame-item-animation.component";
 import { FullCommissionExampleComponent } from "./full-commission-example/full-commission-example.component";
 import { HalfCommissionExampleComponent } from "./half-commission-example/half-commission-example.component";
-import { Subscription } from 'rxjs';
+import { mainConfig } from '../core/config/main.config';
 
 @Component({
   selector: 'app-commission',
@@ -19,7 +20,7 @@ import { Subscription } from 'rxjs';
   templateUrl: './commission.component.html',
   styleUrl: './commission.component.scss'
 })
-export class CommissionComponent implements OnInit, OnDestroy {
+export class CommissionComponent implements OnDestroy, AfterViewInit {
   activeTab: commissionTab;
   commissionTab = commissionTab;
   tabOrderList = [commissionTab.FACE, commissionTab.HALF, commissionTab.FULL, commissionTab.DETAIL];
@@ -27,16 +28,18 @@ export class CommissionComponent implements OnInit, OnDestroy {
   private route = inject(ActivatedRoute);
   private subscription = new Subscription();
 
-  ngOnInit(): void {
-    this.subscription.add(
-      this.route.queryParamMap.subscribe(queryMap => {
-        if(queryMap.get('type')) {
-          this.activeTab = commissionTab[queryMap.get('type')];
-        } else {
-          this.activeTab = undefined;
-        }
-      })
-    );
+  ngAfterViewInit(): void {
+    setTimeout(() => {
+      this.subscription.add(
+        this.route.queryParamMap.subscribe(queryMap => {
+          if(queryMap.get('type')) {
+            this.activeTab = commissionTab[queryMap.get('type')];
+          } else {
+            this.activeTab = undefined;
+          }
+        })
+      );
+    }, mainConfig.timeoutAfterInit);
   }
 
   ngOnDestroy(): void {

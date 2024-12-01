@@ -1,9 +1,13 @@
 
 <div class="description-frame row mx-1 mx-md-auto">
-  <div class="col-12 col-md-6">
-    <img src="/assets/images/commission/face/arkean_widescreen.webp" class="w-100"/>
+  <div class="col-12 d-flex"
+  [class.col-md-6]="!customerFeedback.isPortrait"
+  [class.col-md-4]="customerFeedback.isPortrait">
+    <img [src]="customerFeedback.picUrl" [class]="customerFeedback.picClass"/>
   </div>
-  <div class="col-12 col-md-6 mt-3 mt-md-0">
+  <div class="col-12 mt-3 mt-md-0"
+  [class.col-md-6]="!customerFeedback.isPortrait"
+  [class.col-md-8]="customerFeedback.isPortrait">
     <div class="d-flex">
       <app-avatar [defaultColor]="customerFeedback.avatarColor" [defaultAlphabet]="customerFeedback.avatarAlphabet" [width]="40" class="me-3 mb-auto mt-2"></app-avatar>
       <div>
