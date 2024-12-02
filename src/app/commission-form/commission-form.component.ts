@@ -10,6 +10,7 @@ import { ReflectionFontComponent } from "../shared/reflection-font/reflection-fo
 import { TranslateModule } from '@ngx-translate/core';
 import { FrameItemMobileComponent } from "../commission/frame-item-mobile/frame-item-mobile.component";
 import { combineLatest } from 'rxjs';
+import { environment } from '../../environments/environment';
 
 @Component({
   selector: 'app-commission-form',
@@ -20,10 +21,10 @@ import { combineLatest } from 'rxjs';
 })
 export class CommissionFormComponent implements OnInit {
   typeCommission = {
-    face: 'https://docs.google.com/forms/d/e/1FAIpQLSeLwTzeol8ICdU5hzcqn1cfycP1u4dxf07Md0cF-Fpq9bRn3A',
-    half: 'https://docs.google.com/forms/d/e/1FAIpQLScYSJVkn2PvciPXHOgGvAZGj1OLx1mNXaKw9YG7UhBkaoO4FQ',
-    full: 'https://docs.google.com/forms/d/e/1FAIpQLSdPZVfl56UwMad69Wpmfq1LNoAm_qSZ7U7nrUip1G3qL5Jlkw',
-    detail: 'https://docs.google.com/forms/d/e/1FAIpQLSdCybb1Jsr_DZ8m1hZrXhwdXqLbklxyMqUr3UuKZpIyV7wtcQ'
+    face: environment.typeCommissionForm.face,
+    half: environment.typeCommissionForm.half,
+    full: environment.typeCommissionForm.full,
+    detail: environment.typeCommissionForm.detail,
   };
   private route = inject(ActivatedRoute);
   private router = inject(Router);
