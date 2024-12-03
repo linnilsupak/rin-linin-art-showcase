@@ -5,6 +5,8 @@
     "ng": "ng",
     "start": "npm run env && ng serve --port 4400",
     "build": "npm run env && ng build",
+    "build:production": "npm run env && ng build -c=production",
+    "build:preview": "npm run env && ng build -c=development",
     "watch": "ng build --watch --configuration development",
     "test": "ng test",
     "env": "node -p \"'export const npm_package_version = ' + JSON.stringify(require('./package.json').version) + ';'\" > src/environments/.env.ts",
