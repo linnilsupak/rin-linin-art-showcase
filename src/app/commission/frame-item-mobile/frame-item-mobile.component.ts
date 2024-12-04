@@ -2,11 +2,12 @@ import { Component, EventEmitter, Input, Output } from '@angular/core';
 import { RouterLink } from '@angular/router';
 import { TranslateModule } from '@ngx-translate/core';
 import { commissionTab } from '../../core/enum/commission-tab.enum';
+import { ScrollToCenterDirective } from '../../shared/scroll-to-center.directive';
 
 @Component({
   selector: 'app-frame-item-mobile',
   standalone: true,
-  imports: [TranslateModule, RouterLink],
+  imports: [TranslateModule, RouterLink, ScrollToCenterDirective],
   templateUrl: './frame-item-mobile.component.html',
   styleUrl: './frame-item-mobile.component.scss'
 })

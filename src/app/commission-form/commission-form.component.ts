@@ -41,6 +41,7 @@ export class CommissionFormComponent implements OnInit {
   ngOnInit(): void {
     combineLatest([this.route.queryParamMap, this.route.paramMap])
     .subscribe(([query, params]) => {
+      this.loading = true;
       if (params.get('type')) {
         this.activeTab = this.typeCommission[params.get('type').toLowerCase()];
         this.formLink = (this.typeCommission[params.get('type').toLowerCase()] || this.typeCommission.face) + this.embedLink;
@@ -59,11 +60,6 @@ export class CommissionFormComponent implements OnInit {
         this.iframeHeight = this.heightLandscape;
       }
     })
-  }
-
-  changeType(type: commissionTab) {
-    this.loading = true;
-    this.router.navigate(['/commission-form', type.toString()]);
   }
 
   iframeLoaded() {

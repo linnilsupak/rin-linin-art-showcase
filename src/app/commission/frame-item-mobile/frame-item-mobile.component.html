@@ -1,6 +1,6 @@
 
 <div class="d-block d-md-none">
-    <div class="tab-list white">
+    <div class="tab-list white" [appScrollToCenter]="22">
       <div class="tab-item" [class.active]="activeTab === commissionTab.FACE || activeTab === undefined"
         (click)="this.changeActiveTab.emit(commissionTab.FACE)">
         {{ 'COMMISSION.FACE.TITLE' | translate}}
