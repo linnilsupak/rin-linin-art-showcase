@@ -4,7 +4,7 @@ const { SitemapStream } = require('sitemap');
 async function run() {
   // Creates a sitemap object given the input configuration with URLs
   const sitemap = new SitemapStream({ hostname: 'https://rin-linin-art-showcase.vercel.app/' });
-  const writeStream = createWriteStream('./sitemap.xml');
+  const writeStream = createWriteStream('./dist/rin-linin-art-showcase/browser/sitemap.xml');
 
 
   await readFile('./src/app/app.routes.ts', 'utf8', (err, data) => {
