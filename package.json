@@ -5,7 +5,7 @@
     "ng": "ng",
     "start": "npm run env && ng serve --port 4400",
     "build": "npm run env && ng build",
-    "build:production": "npm run env && npm run sitemap && ng build -c=production && cp crawler_prod/* dist/rin-linin-art-showcase/browser/",
+    "build:production": "npm run env && ng build -c=production && npm run sitemap && cp crawler_prod/* dist/rin-linin-art-showcase/browser/",
     "build:preview": "npm run env && ng build -c=development && cp crawler_test/* dist/rin-linin-art-showcase/browser/",
     "watch": "ng build --watch --configuration development",
     "test": "ng test",
