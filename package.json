@@ -5,12 +5,13 @@
     "ng": "ng",
     "start": "npm run env && ng serve --port 4400",
     "build": "npm run env && ng build",
-    "build:production": "npm run env && ng build -c=production && cp crawler_prod/* dist/rin-linin-art-showcase/browser/",
+    "build:production": "npm run env && npm run sitemap && ng build -c=production && cp crawler_prod/* dist/rin-linin-art-showcase/browser/",
     "build:preview": "npm run env && ng build -c=development && cp crawler_test/* dist/rin-linin-art-showcase/browser/",
     "watch": "ng build --watch --configuration development",
     "test": "ng test",
     "env": "node -p \"'export const npm_package_version = ' + JSON.stringify(require('./package.json').version) + ';'\" > src/environments/.env.ts",
-    "serve:ssr:rin-linin-art-showcase": "node dist/rin-linin-art-showcase/server/server.mjs"
+    "serve:ssr:rin-linin-art-showcase": "node dist/rin-linin-art-showcase/server/server.mjs",
+    "sitemap": "node ./sitemaps/generate-sitemap.js"
   },
   "private": true,
   "dependencies": {
@@ -52,6 +53,7 @@
     "karma-coverage": "~2.2.0",
     "karma-jasmine": "~5.1.0",
     "karma-jasmine-html-reporter": "~2.1.0",
+    "sitemap": "^8.0.0",
     "typescript": "~5.5.4"
   }
 }
