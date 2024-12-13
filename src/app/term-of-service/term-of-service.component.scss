@@ -4,6 +4,7 @@
 
 .description-frame {
     max-width: 1000px;
+    background: rgb(215 251 255 / 50%);
 }
 .rule-content {
     padding-left: 16px;
@@ -32,6 +33,7 @@
     padding: 16px 16px 4px 16px;
     border-top-left-radius: 16px;
     border-top-right-radius: 16px;
+    background: linear-gradient(180deg, #4b3b7a, #a1d9e9);
     background-color: var.$section-header;
     color: var.$white;
     margin-bottom: 16px;
