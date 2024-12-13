@@ -45,7 +45,7 @@ export const routes: Routes = [
   },
   {
     path: 'tos',
-    title: 'Term of service: Rin Linin',
+    title: 'Terms of service: Rin Linin',
     data: {
       minimizeFlag: true
     },
