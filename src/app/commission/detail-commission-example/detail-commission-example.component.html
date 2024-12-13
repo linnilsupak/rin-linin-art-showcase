@@ -1,4 +1,5 @@
-<div class="container-fluid container-lg">
+<div class="tab-body long pb-5">
+  <div class="container-fluid container-lg">
     <div class="section-sub-topic section-color pt-5 mb-5">
       {{ 'COMMISSION.PORTRAIT' | translate}}
     </div>
@@ -6,7 +7,8 @@
       <app-gallery-room [galleryRoom]="detailPortrait1" [pattern]="'equal'"></app-gallery-room>
     </div>
   </div>
-  <div class="hightlight-action  px-1 px-md-4 py-4 my-5">
+</div>
+  <div class="hightlight-action  px-1 px-md-4 py-4">
     <div class="container-fluid container-lg">
       <div class="row after-reflect">
         <div class="col-12 col-md-6">
@@ -36,16 +38,17 @@
       </div>
     </div>
   </div>
-  
-  <div class="container-fluid container-lg">
-    <div class="section-sub-topic section-color pt-5 mb-5">
-      {{ 'COMMISSION.WIDESCREEN' | translate}}
-    </div>
-    <div class="limit-width mx-auto">
-      <app-gallery-room [galleryRoom]="detailWidescreen"></app-gallery-room>
+  <div class="tab-body long pb-5">
+    <div class="container-fluid container-lg">
+      <div class="section-sub-topic section-color pt-5 mb-5">
+        {{ 'COMMISSION.WIDESCREEN' | translate}}
+      </div>
+      <div class="limit-width mx-auto">
+        <app-gallery-room [galleryRoom]="detailWidescreen"></app-gallery-room>
+      </div>
     </div>
   </div>
-  <div class="hightlight-action  px-1 px-md-4 py-4 mt-5">
+  <div class="hightlight-action  px-1 px-md-4 py-4">
     <div class="container-fluid container-lg">
       <div class="row after-reflect">
         <div class="col-12 col-md-7">
@@ -75,4 +78,3 @@
       </div>
     </div>
   </div>
-  

@@ -58,6 +58,9 @@ $inactive-tab-white: #ffffff94;
 .tab-body {
   background: linear-gradient(0deg, rgba(17, 0, 36, 0.41) 0%, var(--tab-item-active-color) 100%);
   position: relative;
+  &.long {
+    background: linear-gradient(0deg, rgba(17, 0, 36, 0.41) 50%, #59549f42, var(--tab-item-active-color));
+  }
   .previous-arrow {
     @include arrow;
     left: 0;
@@ -81,4 +84,12 @@ $inactive-tab-white: #ffffff94;
       padding-right: 16px;
     }
   }
+}
+
+.hightlight-action {
+  background: linear-gradient(
+    180deg,
+    transparent 0%,
+    transparent 50%,
+    #ecdcff 100%);
 }

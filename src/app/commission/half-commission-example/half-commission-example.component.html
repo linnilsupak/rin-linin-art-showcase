@@ -1,16 +1,19 @@
-<div class="container-fluid container-lg">
-  <div class="section-sub-topic section-color pt-5 mb-5">
-    {{ 'COMMISSION.PORTRAIT' | translate}}
-  </div>
-  <div class="limit-width mx-auto d-none d-md-block">
-    <app-gallery-room [galleryRoom]="halfPortrait1" [pattern]="'equal'"></app-gallery-room>
-  </div>
-  <app-gallery-room [galleryRoom]="halfPortrait2" [pattern]="'equal'" class="w-100"></app-gallery-room>
-  <div class="limit-width mx-auto d-none d-md-block">
-    <app-gallery-room [galleryRoom]="halfPortrait3" [pattern]="'equal'"></app-gallery-room>
+<div class="tab-body long pb-5">
+  <div class="container-fluid container-lg">
+    <div class="section-sub-topic section-color pt-5 mb-5">
+      {{ 'COMMISSION.PORTRAIT' | translate}}
+    </div>
+    <div class="limit-width mx-auto d-none d-md-block">
+      <app-gallery-room [galleryRoom]="halfPortrait1" [pattern]="'equal'"></app-gallery-room>
+    </div>
+    <app-gallery-room [galleryRoom]="halfPortrait2" [pattern]="'equal'" class="w-100"></app-gallery-room>
+    <div class="limit-width mx-auto d-none d-md-block">
+      <app-gallery-room [galleryRoom]="halfPortrait3" [pattern]="'equal'"></app-gallery-room>
+    </div>
   </div>
 </div>
-<div class="hightlight-action  px-1 px-md-4 py-4 my-5">
+
+<div class="hightlight-action  px-1 px-md-4 py-4">
   <div class="container-fluid container-lg">
     <div class="row after-reflect">
       <div class="col-12 col-md-6">
@@ -40,16 +43,17 @@
     </div>
   </div>
 </div>
-
-<div class="container-fluid container-lg">
-  <div class="section-sub-topic section-color pt-5 mb-5">
-    {{ 'COMMISSION.WIDESCREEN' | translate}}
-  </div>
-  <div class="limit-width mx-auto">
-    <app-gallery-room [galleryRoom]="halfWidescreen1" [pattern]="'equal'"></app-gallery-room>
+<div class="tab-body long pb-5">
+  <div class="container-fluid container-lg">
+    <div class="section-sub-topic section-color pt-5 mb-5">
+      {{ 'COMMISSION.WIDESCREEN' | translate}}
+    </div>
+    <div class="limit-width mx-auto">
+      <app-gallery-room [galleryRoom]="halfWidescreen1" [pattern]="'equal'"></app-gallery-room>
+    </div>
   </div>
 </div>
-<div class="hightlight-action  px-1 px-md-4 py-4 mt-5">
+<div class="hightlight-action  px-1 px-md-4 py-4">
   <div class="container-fluid container-lg">
     <div class="row after-reflect">
       <div class="col-12 col-md-7">

@@ -1,20 +1,23 @@
-<div class="container-fluid container-lg">
-  <div class="section-sub-topic section-color pt-5 mb-5">
-    {{ 'COMMISSION.CUSTOMER' | translate}}
-  </div>
-  <app-customer-feedback [customerFeedback]="customerFeedback"></app-customer-feedback>
-  <div class="section-sub-topic section-color pt-5 mb-5 mt-4">
-    {{ 'COMMISSION.PORTRAIT' | translate}}
-  </div>
-  <div class="limit-width mx-auto">
-    <app-gallery-room [galleryRoom]="facePortrait1" [pattern]="'equal'"></app-gallery-room>
-  </div>
-  <app-gallery-room [galleryRoom]="facePortrait2" [pattern]="'equal'" class="d-none d-md-block"></app-gallery-room>
-  <div class="limit-width mx-auto">
-    <app-gallery-room [galleryRoom]="facePortrait3" [pattern]="'equal'" class="d-none d-md-block"></app-gallery-room>
+<div class="tab-body long pb-5">
+  <div class="container-fluid container-lg">
+    <div class="section-sub-topic section-color pt-5 mb-5">
+      {{ 'COMMISSION.CUSTOMER' | translate}}
+    </div>
+    <app-customer-feedback [customerFeedback]="customerFeedback"></app-customer-feedback>
+    <div class="section-sub-topic section-color pt-5 mb-5 mt-4">
+      {{ 'COMMISSION.PORTRAIT' | translate}}
+    </div>
+    <div class="limit-width mx-auto">
+      <app-gallery-room [galleryRoom]="facePortrait1" [pattern]="'equal'"></app-gallery-room>
+    </div>
+    <app-gallery-room [galleryRoom]="facePortrait2" [pattern]="'equal'" class="d-none d-md-block"></app-gallery-room>
+    <div class="limit-width mx-auto">
+      <app-gallery-room [galleryRoom]="facePortrait3" [pattern]="'equal'" class="d-none d-md-block"></app-gallery-room>
+    </div>
   </div>
 </div>
-<div class="hightlight-action  px-1 px-md-4 py-4 my-5">
+
+<div class="hightlight-action  px-1 px-md-4 py-4">
   <div class="container-fluid container-lg">
     <div class="row after-reflect">
       <div class="col-12 col-md-6">
@@ -44,24 +47,26 @@
     </div>
   </div>
 </div>
-
-<div class="container-fluid container-lg">
-  <div class="section-sub-topic section-color pt-5 mb-5">
-    {{ 'COMMISSION.WIDESCREEN' | translate}}
+<div class="tab-body long pb-5">
+  <div class="container-fluid container-lg">
+    <div class="section-sub-topic section-color pt-5 mb-5">
+      {{ 'COMMISSION.WIDESCREEN' | translate}}
+    </div>
+    <div class="limit-width mx-auto">
+      <app-gallery-room [galleryRoom]="faceWidescreen1" [pattern]="'equal'"></app-gallery-room>
+    </div>
+    <app-gallery-room [galleryRoom]="faceWidescreen2" [pattern]="'equal'"></app-gallery-room>
+    <div class="limit-width-small mx-auto">
+      <app-gallery-room [galleryRoom]="faceWidescreen3" [pattern]="'equal'"></app-gallery-room>
+    </div>
+    <div class="limit-width mx-auto d-none d-md-block">
+      <app-gallery-room [galleryRoom]="faceWidescreen4" [pattern]="'equal'" class="d-none d-md-block"></app-gallery-room>
+    </div>
+    <app-gallery-room [galleryRoom]="faceWidescreen5" [pattern]="'equal'" class="d-none d-md-block"></app-gallery-room>
   </div>
-  <div class="limit-width mx-auto">
-    <app-gallery-room [galleryRoom]="faceWidescreen1" [pattern]="'equal'"></app-gallery-room>
-  </div>
-  <app-gallery-room [galleryRoom]="faceWidescreen2" [pattern]="'equal'"></app-gallery-room>
-  <div class="limit-width-small mx-auto">
-    <app-gallery-room [galleryRoom]="faceWidescreen3" [pattern]="'equal'"></app-gallery-room>
-  </div>
-  <div class="limit-width mx-auto d-none d-md-block">
-    <app-gallery-room [galleryRoom]="faceWidescreen4" [pattern]="'equal'" class="d-none d-md-block"></app-gallery-room>
-  </div>
-  <app-gallery-room [galleryRoom]="faceWidescreen5" [pattern]="'equal'" class="d-none d-md-block"></app-gallery-room>
 </div>
-<div class="hightlight-action  px-1 px-md-4 py-4 my-5">
+
+<div class="hightlight-action  px-1 px-md-4 py-4">
   <div class="container-fluid container-lg">
     <div class="row after-reflect">
       <div class="col-12 col-md-7">
@@ -91,16 +96,17 @@
     </div>
   </div>
 </div>
-
-<div class="container-fluid container-lg">
-  <div class="section-sub-topic section-color mb-5 pt-5">
-    {{ 'COMMISSION.AVATAR' | translate}}
-  </div>
-  <app-gallery-room [galleryRoom]="faceAvatar1" [pattern]="'equal'"></app-gallery-room>
-</div>
-<div class="hightlight-action  px-1 px-md-4 py-4 mt-5">
+<div class="tab-body long pb-5">
   <div class="container-fluid container-lg">
-    <div class="row after-reflect">
+    <div class="section-sub-topic section-color mb-5 pt-5">
+      {{ 'COMMISSION.AVATAR' | translate}}
+    </div>
+    <app-gallery-room [galleryRoom]="faceAvatar1" [pattern]="'equal'"></app-gallery-room>
+  </div>
+</div>
+<div class="hightlight-action  px-1 px-md-4 py-4">
+  <div class="container-fluid container-lg">
+    <div class="row">
       <div class="col-12 col-md-7">
         <img src="/assets/images/commission/face/avatar_face_commission_exp.png" srcset="{{ '/assets/images/commission/face/avatar_face_commission_exp.png' | imageSrcset }}"
         class="w-100 mt-3"/>

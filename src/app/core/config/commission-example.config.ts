@@ -678,7 +678,7 @@ export const commissionExampleConfig: GalleryRooms = {
   halfWidescreen1: [
     {
       picUrl: '/assets/images/commission/half/hawlucha_bae_widescreen.webp',
-      frameStyle: 'white-frame small',
+      frameStyle: 'white-frame small mini-frame-400',
       content: {
         title: 'Pokemon: Bae & Hawlucha',
         title2: 'Draw by Rin Linin',
@@ -693,7 +693,7 @@ export const commissionExampleConfig: GalleryRooms = {
       }
     },{
       picUrl: '/assets/images/commission/half/strwberry_widescreen.webp',
-      frameStyle: 'white-frame',
+      frameStyle: 'white-frame  mini-frame-400',
       content: {
         title: 'Strawberry as cute girl',
         title2: 'Design and draw by Rin Linin',
@@ -709,7 +709,7 @@ export const commissionExampleConfig: GalleryRooms = {
     },
     {
       picUrl: '/assets/images/commission/half/melody_vtuber_widescreen.webp',
-      frameStyle: 'white-frame small',
+      frameStyle: 'white-frame small  mini-frame-400',
       content: {
         title: 'Mycara Melony',
         title2: 'Design and draw by Rin Linin',
