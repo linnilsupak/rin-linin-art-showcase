@@ -213,27 +213,74 @@
     "TITLE": "Terms of service",
     "MORE": "More Detail",
     "GENERAL_RULE": {
-      "TITLE": "General rule",
-      "ITEM_1": "I reserve the right to decline a commission if it's something I'm not capable of doing.",
-      "ITEM_2": "When the product is done, you will receive high definition photo of original artwork (computer file) without watermark.",
-      "ITEM_3": "Commissioner are only purchasing the digital file, not the printed art or the original watercolor paper.",
-      "ITEM_4": "Reposting your commissioned art is allowed. Please always give credit to me.",
-      "ITEM_5": "Do not use my artwork in commercial material unless discussed before hand.",
-      "ITEM_6": "I have full rights and ownership to the commission artworks, please refrain from claiming the commission artwork is yours. If you want a private commission, please let me know beforehand.",
-      "ITEM_7": "It will take from 1 week to a month from the latest commission to finish yours, so please be patient.",
-      "ITEM_8": "No refunds on finished commission.",
-      "ITEM_9": "No refunds once I've started, unless otherwise stated by me that I cannot finish.",
-      "ITEM_10": "Changing characters is allowed if I haven't started on your commission. Please ask first before changing",
-      "ITEM_11": "Revisions, minor changes are okay for sketch state. But after the coloring, no change is allow.",
-      "ITEM_12": "Please feel free to ask for updates/wips.",
-      "ITEM_13": "Do not edit, trace or draw on top of my drawing.",
-      "ITEM_14": "Both personal and commercial works made by me are NOT allowed to use in NFT",
-      "ITEM_15": "For private commison, there will be additional fee x2 (Private commission mean you don't allow me to post the picture, speedpaint video or show the finish picture with your name as client anywhere forever.)"
+      "TITLE": "General Terms",
+      "ITEM_1": "Prices are subject to change based on demand.",
+      "ITEM_2": "I have the right to reject any order for any reason.",
+      "ITEM_3": "Do not edit, trace or draw on top of my drawing.",
+      "ITEM_4": "Please feel free to ask for updates/wips.",
+      "ITEM_5": "Both personal and commercial works made by me are NOT allowed to use in NFT or train AI."
+    },
+    "PAYMENT": {
+      "TITLE": "Payment",
+      "ITEM_1": "Currency accepted is either USD or Thai Baht and can be paid through PayPal or any Thai payment service such as MobilePay or bank transfer.",
+      "ITEM_2": "Commissions can be paid either 100% upfront or split 50% upfront and 50% after sketch approval.",
+      "ITEM_3": "Don't send me any payment before I have agreed to give you a slot and requested you to send me the payment."
+    },
+    "PROCESS": {
+      "TITLE": "Process & deliver",
+      "ITEM_1": "The time it takes to finish your commission varies 1 week - 3 months depending on factors such as health, the complexity of the commissioned piece and other work.",
+      "ITEM_2": "Once the piece is finished you will receive the full-resolution image along with a web-friendly size without watermark.",
+      "ITEM_3": "Commissioner are only purchasing the digital file, not the printed art or the original watercolor/color pencil paper.",
+      "ITEM_4": "If you want the original watercolor/color pencil paper, there is an additional fee. Outside Thailand + $100, on Thailand it depend on packaging fee & sending fee."
+    },
+    "REVISION": {
+      "TITLE": "Revisions",
+      "ITEM_1": "Changing characters is allowed if I haven't started on your commission. Please ask first before changing",
+      "ITEM_2": "Revisions, minor changes are okay for sketch state. But after the coloring, no change is allow.",
+      "ITEM_3": "If you wish for me to change something in the drawing you have previously approved, I will charge you a fee to change it. The amount of the extra charge depends on the change you want me to make and is usually based on an hourly wage."
+    },
+    "COPY_RIGHT": {
+      "TITLE": "Copy right & usage",
+      "SUB_TITLE": "By commissioning me you agree to the following:",
+      "ITEM_1": {
+        "TOPIC": "I, \"Rin Linin\" (the artist):",
+        "ITEM_1": "I reserve the right to cancel and refund the order at any time for any reason.",
+        "ITEM_2": "I retain all copyrights over the commissioned artwork.",
+        "ITEM_3": "I will NOT claim the intellectual property (IP) of the commissioned artwork.",
+        "ITEM_4": "I will NOT profit further from the commissioned artwork unless you (the customer) break any of the terms.",
+        "ITEM_5": "I reserve the right to post the commissioned artwork online, in my portfolio as well as in publications such as art books.",
+        "ITEM_6": "I reserve the right to sell the original art on paper, unless otherwise you buy the original art on paer too."
+      },
+      "ITEM_2": {
+        "TOPIC": "You (the customer/commissioner):",
+        "ITEM_1": "You may upload the commissioned artwork on any website and social channels.",
+        "ITEM_2": "You may NOT make profits from the commissioned piece (reselling, redistributing, uploading to POD-services, make prints, etc.)",
+        "ITEM_3": "You may NOT alter the commissioned artwork without my (the artist's) consent.",
+        "ITEM_4": "You MAY be allowed to sell the artwork if it is a part of an Adoptable. Please discuss this with me prior to paying for the artwork.",
+        "ITEM_5": "You retain the rights to the intellectual property (IP).",
+        "ITEM_6": "You may NOT use the commissioned artwork for commercial purposes."
+      },
+      "ITEM_3": {
+        "TOPIC": "The following is considered copyright infringement:​",
+        "ITEM_1": "Reproducing/using the copyrighted artwork commercially - means making money off it in any way not excluded from these terms.",
+        "ITEM_2": "Claiming the artwork as your own",
+        "ITEM_3": "Altering the artwork without my consent"
+      },
+      "ITEM_4": "In some cases, the commercial rights to the image may be purchased."
     },
     "COMMERCIAL_RIGHT": {
       "TITLE": "Commercial right",
       "ITEM_1": "Please inform me first of your project (game, book cover, music cover, etc...)",
-      "ITEM_2": "I still retain the right to post the image on my portfolio online but it will be an inferior quality image than what you will get."
+      "ITEM_2": "The prices depend on which right you want to buy.",
+      "ITEM_3": "It will count as commercial if your project will make profits by using my art to reselling, redistributing, uploading to POD-services, make prints, etc."
+    },
+    "REFUND_POLICY": {
+      "TITLE": "Cancellation & Refund policy",
+      "ITEM_1": "No refunds on finished commission.",
+      "ITEM_2": "If for any reason I am unable to start your commission you will receive a full refund.",
+      "ITEM_3": "If you cancel your order before I started it, you can get a full refund.",
+      "ITEM_4": "If you are getting a refund, do not request a Paypal chargeback. I will transfer the money back to you myself.",
+      "ITEM_5": "If you request a Paypal chargeback at any point when you were not allowed to ask for a refund you will lose all beforementioned rights to the commissioned piece and I will have the full right to profit further from it in any way. I will decline the chargeback and supply Paypal with our conversations in which we talk about the commission as evidence that I have completed work for you. Furthermore, you will be blacklisted for commissioning me again."
     }
   }
 }

@@ -30,7 +30,105 @@
 
     </div>
     <div class="p-4">&nbsp;</div>
+    <div class="description-frame dark d-flex flex-column px-0 pt-0 mx-auto">
+        <div class="section-header">
+            <div class="rule-content mx-auto text-center">
+                <div class="section-sub-topic">
+                  ❉&nbsp;{{'TOS.PAYMENT.TITLE' | translate}}&nbsp;❉
+                </div>
+            </div>
+        </div>
+        <div class="rule-content mx-auto text-start">
+            <div class="section-content mb-3 mx-auto">
+                <ul>
+                    @for(rule of payment;track index;let index=$index) {
+                        <li [innerHTML]="'TOS.PAYMENT.ITEM_' + (index + 1) | translate"></li>
+                    }
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div class="p-4">&nbsp;</div>
     <div class="description-frame d-flex flex-column px-0 pt-0 mx-auto">
+        <div class="section-header">
+            <div class="rule-content mx-auto text-center">
+                <div class="section-sub-topic">
+                  ❉&nbsp;{{'TOS.PROCESS.TITLE' | translate}}&nbsp;❉
+                </div>
+            </div>
+        </div>
+        <div class="rule-content mx-auto text-start">
+            <div class="section-content mb-3 mx-auto">
+                <ul>
+                    @for(rule of process;track index;let index=$index) {
+                        <li [innerHTML]="'TOS.PROCESS.ITEM_' + (index + 1) | translate"></li>
+                    }
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div class="p-4">&nbsp;</div>
+    <div class="description-frame dark d-flex flex-column px-0 pt-0 mx-auto">
+        <div class="section-header">
+            <div class="rule-content mx-auto text-center">
+                <div class="section-sub-topic">
+                  ❉&nbsp;{{'TOS.REVISION.TITLE' | translate}}&nbsp;❉
+                </div>
+            </div>
+        </div>
+        <div class="rule-content mx-auto text-start">
+            <div class="section-content mb-3 mx-auto">
+                <ul>
+                    @for(rule of revision;track index;let index=$index) {
+                        <li [innerHTML]="'TOS.REVISION.ITEM_' + (index + 1) | translate"></li>
+                    }
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div class="p-4">&nbsp;</div>
+    <div class="description-frame long d-flex flex-column px-0 pt-0 mx-auto">
+        <div class="section-header">
+            <div class="rule-content mx-auto text-center">
+                <div class="section-sub-topic">
+                  ❉&nbsp;{{'TOS.COPY_RIGHT.TITLE' | translate}}&nbsp;❉
+                </div>
+            </div>
+        </div>
+        <div class="rule-content mx-auto text-start">
+            <div class="section-content mb-3 mx-auto">
+                <p>{{ 'TOS.COPY_RIGHT.SUB_TITLE' | translate}}</p>
+                <ul>
+                    <li>
+                        <b>{{ 'TOS.COPY_RIGHT.ITEM_1.TOPIC' | translate}}</b>
+                    </li>
+                    <ul>
+                        @for(rule of copyRight1;track index;let index=$index) {
+                            <li [innerHTML]="'TOS.COPY_RIGHT.ITEM_1.ITEM_' + (index + 1) | translate"></li>
+                        }
+                    </ul>
+                    <li>
+                        <b>{{ 'TOS.COPY_RIGHT.ITEM_2.TOPIC' | translate}}</b>
+                    </li>
+                    <ul>
+                        @for(rule of copyRight2;track index;let index=$index) {
+                            <li [innerHTML]="'TOS.COPY_RIGHT.ITEM_2.ITEM_' + (index + 1) | translate"></li>
+                        }
+                    </ul>
+                    <li>
+                        <b>{{ 'TOS.COPY_RIGHT.ITEM_3.TOPIC' | translate}}</b>
+                    </li>
+                    <ul>
+                        @for(rule of copyRight3;track index;let index=$index) {
+                            <li [innerHTML]="'TOS.COPY_RIGHT.ITEM_3.ITEM_' + (index + 1) | translate"></li>
+                        }
+                    </ul>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div class="p-4">&nbsp;</div>
+    <div class="description-frame dark d-flex flex-column px-0 pt-0 mx-auto">
         <div class="section-header">
             <div class="rule-content mx-auto text-center">
                 <div class="section-sub-topic">
@@ -43,6 +141,26 @@
                 <ul>
                     @for(rule of commercial;track index;let index=$index) {
                         <li [innerHTML]="'TOS.COMMERCIAL_RIGHT.ITEM_' + (index + 1) | translate"></li>
+                    }
+                </ul>
+            </div>
+        </div>
+
+    </div>
+    <div class="p-4">&nbsp;</div>
+    <div class="description-frame d-flex flex-column px-0 pt-0 mx-auto">
+        <div class="section-header">
+            <div class="rule-content mx-auto text-center">
+                <div class="section-sub-topic">
+                  ❉&nbsp;{{'TOS.REFUND_POLICY.TITLE' | translate}}&nbsp;❉
+                </div>
+            </div>
+        </div>
+        <div class="rule-content mx-auto text-start">
+            <div class="section-content mb-3 mx-auto">
+                <ul>
+                    @for(rule of refund;track index;let index=$index) {
+                        <li [innerHTML]="'TOS.REFUND_POLICY.ITEM_' + (index + 1) | translate"></li>
                     }
                 </ul>
             </div>

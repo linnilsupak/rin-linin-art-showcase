@@ -3,10 +3,23 @@
 @import "bootstrap-mixin";
 
 .description-frame {
-    max-width: 1000px;
-    background: linear-gradient(180deg, #bda7ff8a, #dcf7ff8f 50%, #ffffff70);
+    width: 100%;
     border: 2px solid var.$white;
+    background: linear-gradient(180deg, #bda7ffc9, #ffffff8f);
+    padding-top: 34px;
+    padding-bottom: 40px;
+
+    &.long {
+        background: linear-gradient(180deg, #bda7ff8a, #dcf7ff8f 50%, #ffffff70);
+    }
+    
+    &.dark {
+        background: linear-gradient(180deg, #000000b8, #5084ffb3);
+        color: var.$white;
+    }
 }
+
+
 .rule-content {
     padding-left: 16px;
     padding-right: 16px;
@@ -18,6 +31,7 @@
 }
 
 .section-content {
+    max-width: 1000px;
     font-size: 1.1rem;
     line-height: 2.1rem;
 
