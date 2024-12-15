@@ -2,6 +2,19 @@
 @use 'character-frame' as char;
 @import "bootstrap-mixin";
 
+.transparent-button {
+    border-radius: 26px;
+    border: 2px solid var.$white;
+    color: var.$white;
+    padding: 8px 16px;
+    font-weight: 500;
+    background: linear-gradient(180deg, #bda7ff8a, #ffffff31);
+
+    &.dark {
+        background: linear-gradient(180deg, #000000b8, #5084ffb3);
+    }
+}
+
 .description-frame {
     max-width: 1000px;
     width: 100%;

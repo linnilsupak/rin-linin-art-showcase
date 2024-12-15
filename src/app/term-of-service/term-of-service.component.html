@@ -10,6 +10,14 @@
       <app-reflection-font [text]="'TOS.TITLE' | translate"
         [fontClass]="'mx-auto sub-title'"></app-reflection-font>
     </div>
+    <div class="pb-4">
+        <button type="button" class="transparent-button" (click)="clickRight()">
+            {{ 'TOS.COPY_RIGHT.TITLE' | translate}}
+        </button>&nbsp;
+        <button type="button" class="transparent-button dark" (click)="clickRefund()">
+            {{ 'TOS.REFUND_POLICY.TITLE' | translate}}
+        </button>
+    </div>
     <div class="description-frame top-section d-flex flex-column px-0 pt-0 mx-auto">
         <div class="section-header">
             <div class="rule-content mx-auto text-center">
@@ -84,7 +92,7 @@
         </div>
     </div>
     <div class="p-4">&nbsp;</div>
-    <div class="description-frame top-section long d-flex flex-column px-0 pt-0 mx-auto">
+    <div id="right" class="description-frame top-section long d-flex flex-column px-0 pt-0 mx-auto">
         <div class="section-header">
             <div class="rule-content mx-auto text-center">
                 <div class="section-sub-topic">
@@ -144,7 +152,7 @@
 
     </div>
     <div class="p-4">&nbsp;</div>
-    <div class="description-frame d-flex flex-column px-0 pt-0 mx-auto">
+    <div id="refund" class="description-frame d-flex flex-column px-0 pt-0 mx-auto">
         <div class="section-header">
             <div class="rule-content mx-auto text-center">
                 <div class="section-sub-topic">
