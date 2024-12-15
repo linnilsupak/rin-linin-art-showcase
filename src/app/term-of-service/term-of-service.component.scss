@@ -3,6 +3,7 @@
 @import "bootstrap-mixin";
 
 .description-frame {
+    max-width: 1000px;
     width: 100%;
     border: 2px solid var.$white;
     background: linear-gradient(180deg, #bda7ffc9, #ffffff8f);
@@ -19,7 +20,30 @@
     }
 }
 
+.top-section {
+    border-bottom-right-radius: 0;
+    border-bottom-left-radius: 0;
+    border-bottom: 0;
+}
 
+.between-section {
+    border-radius: 0;
+    border-top: 0;
+    border-bottom: 0;
+    .section-header {
+        padding-top: 40px;
+    }
+}
+
+
+.bottom-section {
+    border-top-right-radius: 0;
+    border-top-left-radius: 0;
+    border-top: 0;
+    .section-header {
+        padding-top: 40px;
+    }
+}
 .rule-content {
     padding-left: 16px;
     padding-right: 16px;
@@ -31,7 +55,6 @@
 }
 
 .section-content {
-    max-width: 1000px;
     font-size: 1.1rem;
     line-height: 2.1rem;
 
@@ -45,7 +68,7 @@
 }
 
 .section-header {
-    padding: 16px 16px 4px 16px;
+    padding: 24px 16px 4px 16px;
     border-top-left-radius: 16px;
     border-top-right-radius: 16px;
     color: var.$white;
