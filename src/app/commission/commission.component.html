@@ -118,7 +118,7 @@
     {{ 'COMMISSION.EXAMPLE' | translate}}
   </div>
 </div>
-<div class="tab-list">
+<div class="tab-list" [appScrollToCenter]="22">
   <div class="tab-item" [class.active]="activeTab === commissionTab.FACE || activeTab === undefined"
     (click)=changeActiveTab(commissionTab.FACE)>
     {{ 'COMMISSION.FACE.TITLE' | translate}}

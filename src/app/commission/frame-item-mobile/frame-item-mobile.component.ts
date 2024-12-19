@@ -3,11 +3,12 @@ import { RouterLink } from '@angular/router';
 import { TranslateModule } from '@ngx-translate/core';
 import { commissionTab } from '../../core/enum/commission-tab.enum';
 import { ScrollToCenterDirective } from '../../shared/scroll-to-center.directive';
+import { ImagePlacementComponent } from "../../shared/image-placement/image-placement.component";
 
 @Component({
   selector: 'app-frame-item-mobile',
   standalone: true,
-  imports: [TranslateModule, RouterLink, ScrollToCenterDirective],
+  imports: [TranslateModule, RouterLink, ScrollToCenterDirective, ImagePlacementComponent],
   templateUrl: './frame-item-mobile.component.html',
   styleUrl: './frame-item-mobile.component.scss'
 })

@@ -12,11 +12,12 @@ import { FullCommissionExampleComponent } from "./full-commission-example/full-c
 import { HalfCommissionExampleComponent } from "./half-commission-example/half-commission-example.component";
 import { mainConfig } from '../core/config/main.config';
 import { FrameItemMobileComponent } from "./frame-item-mobile/frame-item-mobile.component";
+import { ScrollToCenterDirective } from '../shared/scroll-to-center.directive';
 
 @Component({
   selector: 'app-commission',
   standalone: true,
-  imports: [ReflectionFontComponent, TranslateModule, RouterLink,
+  imports: [ReflectionFontComponent, TranslateModule, RouterLink, ScrollToCenterDirective,
     FrameItemAnimationComponent, MoreButtonComponent, FaceCommissionExampleComponent, HalfCommissionExampleComponent, FullCommissionExampleComponent, DetailCommissionExampleComponent, FrameItemMobileComponent],
   templateUrl: './commission.component.html',
   styleUrl: './commission.component.scss'

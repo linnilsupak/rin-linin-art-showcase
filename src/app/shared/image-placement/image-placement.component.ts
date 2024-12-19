@@ -1,12 +1,11 @@
 import { AfterViewInit, Component, ElementRef, Input, ViewChild } from '@angular/core';
-import { MiniSpinningComponent } from "../mini-spinning/mini-spinning.component";
-import { ImagePreviewPipe } from "../../core/pipe/image-preview.pipe";
 import { mainConfig } from '../../core/config/main.config';
+import { MiniSpinningComponent } from "../mini-spinning/mini-spinning.component";
 
 @Component({
   selector: 'app-image-placement',
   standalone: true,
-  imports: [MiniSpinningComponent, ImagePreviewPipe],
+  imports: [MiniSpinningComponent],
   templateUrl: './image-placement.component.html',
   styleUrl: './image-placement.component.scss'
 })
