@@ -3,8 +3,9 @@
     <div class="section-sub-topic section-color pt-5 mb-5">
       {{ 'COMMISSION.PORTRAIT' | translate}}
     </div>
-    <div class="limit-width mx-auto">
-      <app-gallery-room [galleryRoom]="detailPortrait1" [pattern]="'equal'"></app-gallery-room>
+    <app-gallery-room [galleryRoom]="detailPortrait1"></app-gallery-room>
+    <div class="limit-width mx-auto mt-5">
+      <app-gallery-room [galleryRoom]="detailPortrait2" [pattern]="'equal'"></app-gallery-room>
     </div>
   </div>
 </div>
@@ -12,7 +13,7 @@
     <div class="container-fluid container-lg">
       <div class="row after-reflect">
         <div class="col-12 col-md-6">
-          <img src="/assets/images/commission/detail/detail_portrait_commission.png" srcset="{{ '/assets/images/commission/detail/detail_portrait_commission.png' | imageSrcset }}"
+          <img src="/assets/images/commission/detail/detail_portrait_commission.png?v=1" srcset="{{ '/assets/images/commission/detail/detail_portrait_commission.png?v=1' | imageSrcset }}"
           class="w-100 mt-3"/>
         </div>
         <div class="col-12 col-md-6 text-center d-flex">

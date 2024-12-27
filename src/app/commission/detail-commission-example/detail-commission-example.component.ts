@@ -15,5 +15,6 @@ import { GalleryRoomComponent } from '../../shared/gallery-room/gallery-room.com
 })
 export class DetailCommissionExampleComponent {
   detailPortrait1 = commissionExampleConfig.detailPortrait1;
+  detailPortrait2 = commissionExampleConfig.detailPortrait2;
   detailWidescreen = commissionExampleConfig.detailWidescreen;
 }
