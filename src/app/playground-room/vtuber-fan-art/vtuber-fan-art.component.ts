@@ -30,6 +30,21 @@ export class VtuberFanArtComponent {
       }
     },
     {
+      picUrl: '/assets/images/playground/vtuber/schneider_vtuber_rin_linin.webp',
+      frameStyle: 'white-frame small',
+      content: {
+        title: 'Schneider-Orion: Fan art',
+        title2: 'by Rin Linin',
+        subTitle: 'watercolor',
+        description: 'Since I already draw baabel and dacapo from Orion, so I also draw Schneider from the same project too. This time I draw the fanart on A3 with more detail.',
+      },
+      previewPic: {
+        width: 'inherit',
+        height: 'inherit',
+        disabled: true
+      }
+    },
+    {
       picUrl: '/assets/images/playground/vtuber/baabel_vtuber_rin_linin.webp',
       frameStyle: 'white-frame small',
       content: {
@@ -62,6 +77,5 @@ export class VtuberFanArtComponent {
         disabled: true
       }
     },
-  ]
-
+  ];
 }

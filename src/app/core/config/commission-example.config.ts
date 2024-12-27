@@ -1001,6 +1001,23 @@ export const commissionExampleConfig: GalleryRooms = {
   ],
   detailPortrait1: [
     {
+      picUrl: '/assets/images/commission/detail/schneider_rin_linin.webp',
+      frameStyle: 'white-double-frame',
+      content: {
+        title: 'Schneider-Orion: Fan art',
+        title2: 'by Rin Linin',
+        subTitle: 'watercolor',
+        description: 'Since I already draw baabel and dacapo from Orion, so I also draw Schneider from the same project too. This time I draw the fanart on A3 with more detail.',
+      },
+      previewPic: {
+        width: 'inherit',
+        height: 'inherit',
+        disabled: true
+      }
+    },
+  ],
+  detailPortrait2: [
+    {
       picUrl: '/assets/images/commission/detail/remade_2024_rin_linin.webp',
       frameStyle: 'black-frame',
       content: {
@@ -1017,7 +1034,7 @@ export const commissionExampleConfig: GalleryRooms = {
     },
     {
       picUrl: '/assets/images/commission/detail/uzbekistan_rin_linin.webp',
-      frameStyle: 'black-frame',
+      frameStyle: 'white-frame',
       content: {
         title: 'Uzbekistan Girl',
         title2: 'by Rin Linin',
