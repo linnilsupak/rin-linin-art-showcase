@@ -6,4 +6,6 @@ export interface CardInfo {
   meaning: string;
   number: number;
   category: tarotCategory;
+  upright?: any;
+  reverse?: any;
 }

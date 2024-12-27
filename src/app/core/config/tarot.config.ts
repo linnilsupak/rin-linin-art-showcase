@@ -424,7 +424,7 @@ export const tarotConfig: TarotConfig = {
         },
         {
           "name": "Ten of Swords",
-          "imageUrl": "",
+          "imageUrl": "/assets/images/tarot/swords/10_of_swords.webp",
           "meaning": "จุดจบ สิ้นสุด เรื่องเครียดและปวดหัวต่าง ๆ จะจบลงในไม่ช้า",
           number: 10,
           category: tarotCategory.SWORDS
