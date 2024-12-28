@@ -3,9 +3,17 @@ import { tarotCategory } from '../enum/tarot-category.enum';
 export interface CardInfo {
   name: string;
   imageUrl: string;
-  meaning: string;
+  description: string;
   number: number;
   category: tarotCategory;
-  upright?: any;
-  reverse?: any;
+  upright?: CardMeaning;
+  reverse?: CardMeaning;
+}
+
+export interface CardMeaning {
+  keyword: string;
+  overallMeaning: string;
+  loveMeaning: string;
+  financeMeaning: string;
+  careerMeaning: string;
 }

@@ -93,3 +93,13 @@
     display: none !important;
   }
 }
+
+
+.tarot-card {
+  border-radius: 1.2rem;
+  background: transparent;
+  border: 1px solid #{var.$black};
+  @include media-breakpoint-up(lg) {
+    border-radius: 1.3rem;
+  }
+}

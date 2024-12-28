@@ -1,0 +1,42 @@
+@use "variables" as var;
+@use 'character-frame' as char;
+@use "tab-style" as tab;
+
+.description-frame {
+  font-size: 18px;
+}
+
+.description-frame .sub-bubble {
+  font-size: 20px;
+}
+
+.target-tarot {
+  max-width: 300px;
+  display: block;
+}
+
+.sub-tarot {
+  max-width: 160px;
+  display: block;
+  font-weight: 500;
+  color: var.$white;
+
+  &:hover {
+    color: var.$dark-blue;
+  }
+}
+
+.card-description {
+  max-width: 650px;
+}
+.tarot-keyword {
+  font-size: 1.4rem;
+  &:before, &:after {
+    content: '"';
+    font-size: 3rem;
+  }
+}
+
+.reverse {
+  transform: rotate(180deg);
+}

@@ -282,5 +282,19 @@
       "ITEM_4": "If you are getting a refund, do not request a Paypal chargeback. I will transfer the money back to you myself.",
       "ITEM_5": "If you request a Paypal chargeback at any point when you were not allowed to ask for a refund you will lose all beforementioned rights to the commissioned piece and I will have the full right to profit further from it in any way. I will decline the chargeback and supply Paypal with our conversations in which we talk about the commission as evidence that I have completed work for you. Furthermore, you will be blacklisted for commissioning me again."
     }
+  },
+  "TAROT_MEANING": {
+    "PREVIOUS_CARD": "Previous Card",
+    "NEXT_CARD": "Next Card",
+    "CARD_DESC": "{{name}} Tarot Card Description",
+    "UPRIGHT": "Upright",
+    "REVERSE": "Reverse",
+    "REVERSE_KEYWORD": "Reverse {{name}} Keywords",
+    "UPRIGHT_KEYWORD": "Upright {{name}} Keywords",
+    "UPRIGHT_MEANING": "Upright meaning",
+    "REVERSE_MEANING": "Reverse meaning",
+    "LOVE": "Love meaning",
+    "FINANCE": "Finance meaning",
+    "CAREER": "Career meaning"
   }
 }
