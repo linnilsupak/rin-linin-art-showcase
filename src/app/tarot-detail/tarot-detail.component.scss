@@ -54,3 +54,15 @@
 .reverse {
   transform: rotate(180deg);
 }
+.previous-arrow {
+  position: absolute;
+  left: 0;
+  width: inherit;
+  height: 50%;
+}
+.next-arrow {
+  position: absolute;
+  right: 0;
+  width: inherit;
+  height: 50%;
+}
