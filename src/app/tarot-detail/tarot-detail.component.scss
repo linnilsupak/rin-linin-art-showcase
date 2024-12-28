@@ -1,13 +1,16 @@
 @use "variables" as var;
 @use 'character-frame' as char;
 @use "tab-style" as tab;
+@import "bootstrap-mixin";
 
 .description-frame {
   font-size: 18px;
 }
 
 .description-frame .sub-bubble {
-  font-size: 20px;
+  @include media-breakpoint-up(md) {
+    font-size: 20px;
+  }
 }
 
 .target-tarot {
@@ -29,11 +32,22 @@
 .card-description {
   max-width: 650px;
 }
+
 .tarot-keyword {
-  font-size: 1.4rem;
-  &:before, &:after {
+  font-size: 1.1rem;
+
+  &:before,
+  &:after {
     content: '"';
-    font-size: 3rem;
+    font-size: 2.2rem;
+  }
+
+  @include media-breakpoint-up(md) {
+    font-size: 1.4rem;
+    &:before,
+    &:after {
+      font-size: 3rem;
+    }
   }
 }
 
