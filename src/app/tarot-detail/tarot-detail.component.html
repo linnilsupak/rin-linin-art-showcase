@@ -59,7 +59,7 @@
   </div>
   }
 </div>
-@if (targetTarot && targetTarot.imageUrl) {
+@if (targetTarot && targetTarot.upright?.keyword) {
   <div class="tab-list ">
     <div class="tab-item" [class.active]="activeTab === cardMeaningTab.UPRIGHT || activeTab === undefined"
       (click)="changeActiveTab(cardMeaningTab.UPRIGHT)">

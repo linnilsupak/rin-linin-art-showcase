@@ -49,7 +49,16 @@ export class TarotDetailComponent implements OnInit, OnDestroy {
           this.router.navigate(['/not-found']);
         }
       })
-    )
+    );
+    this.subscription.add(
+      this.route.queryParamMap.subscribe(query => {
+        if (query.get('tab')) {
+          this.activeTab = cardMeaningTab[query.get('tab').toUpperCase()];
+        } else {
+          this.activeTab = cardMeaningTab.UPRIGHT;
+        }
+      })
+    );
   }
 
   ngOnDestroy(): void {
@@ -57,6 +66,6 @@ export class TarotDetailComponent implements OnInit, OnDestroy {
   }
 
   changeActiveTab(tab: cardMeaningTab) {
-    this.activeTab = tab;
+    this.router.navigate(['/tarot-meaning', this.targetTarot.category.toLowerCase(), this.targetTarot.number], { queryParams: { tab: tab.toLowerCase()}})
   }
 }
