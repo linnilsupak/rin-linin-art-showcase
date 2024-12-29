@@ -8,11 +8,12 @@ import { tarotConfig } from '../core/config/tarot.config';
 import { ImagePlacementComponent } from "../shared/image-placement/image-placement.component";
 import { CommonModule } from '@angular/common';
 import { cardMeaningTab } from '../core/enum/card-meaning-tab.enum';
+import { ImageSrcsetPipe } from "../core/pipe/image-srcset.pipe";
 
 @Component({
   selector: 'app-tarot-detail',
   standalone: true,
-  imports: [ReflectionFontComponent, TranslateModule, RouterLink, ImagePlacementComponent, CommonModule],
+  imports: [ReflectionFontComponent, TranslateModule, RouterLink, ImagePlacementComponent, CommonModule, ImageSrcsetPipe],
   templateUrl: './tarot-detail.component.html',
   styleUrl: './tarot-detail.component.scss'
 })
