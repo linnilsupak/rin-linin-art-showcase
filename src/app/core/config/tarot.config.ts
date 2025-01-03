@@ -473,10 +473,24 @@ export const tarotConfig: TarotConfig = {
         },
         {
           "name": "Three of Swords",
-          "imageUrl": "",
+          "imageUrl": "/assets/images/tarot/swords/3_of_swords.webp",
           "description": "ความเสียใจ ใจสลาย ต้องเจอเรื่องผิดหวัง และยังหมายถึงเจอฝนถล่มก็ได้",
           number: 3,
-          category: tarotCategory.SWORDS
+          category: tarotCategory.SWORDS,
+          upright: {
+            keyword: '',
+            overallMeaning: '',
+            loveMeaning: '',
+            financeMeaning: '',
+            careerMeaning: ''
+          },
+          reverse: {
+            keyword: '',
+            overallMeaning: '',
+            loveMeaning: '',
+            financeMeaning: '',
+            careerMeaning: ''
+          }
         },
         {
           "name": "Four of Swords",
