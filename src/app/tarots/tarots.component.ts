@@ -11,11 +11,12 @@ import { TarotStoreService } from '../core/service/tarot-store.service';
 import { Subscription } from 'rxjs';
 import { TarotFormData } from '../core/models/tarot-form-data.model';
 import { CardInfo } from '../core/models/card-info.model';
+import { CommonModule } from '@angular/common';
 
 @Component({
   selector: 'app-tarots',
   standalone: true,
-  imports: [TranslateModule, ReflectionFontComponent, RouterLink, TarotSearchComponent],
+  imports: [TranslateModule, ReflectionFontComponent, RouterLink, TarotSearchComponent, CommonModule],
   templateUrl: './tarots.component.html',
   styleUrl: './tarots.component.scss'
 })

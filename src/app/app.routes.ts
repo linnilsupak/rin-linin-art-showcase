@@ -82,6 +82,13 @@ export const routes: Routes = [
     component: TarotsComponent
   },
   {
+    path: 'tarot-meaning/:category/:number',
+    data: {
+      minimizeFlag: true
+    },
+    loadComponent: () => import('./tarot-detail/tarot-detail.component').then(c => c.TarotDetailComponent)
+  },
+  {
     path: 'about-me',
     title: 'About me: Rin Linin',
     component: AboutMeComponent

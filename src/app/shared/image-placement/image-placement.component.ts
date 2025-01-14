@@ -14,7 +14,7 @@ export class ImagePlacementComponent implements AfterViewInit {
 @Input() height: string;
 @Input() srcLink: string;
 @Input() alt: string;
-@Input() class: string;
+@Input('itemClass') class: string;
 @ViewChild('imageShow') imageShow: ElementRef;
 imageLoading = true;
 
