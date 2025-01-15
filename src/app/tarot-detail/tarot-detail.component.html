@@ -13,18 +13,22 @@
   </div>
   <div class="row mb-4 position-relative">
     <div class="previous-arrow d-flex d-md-none" [class.d-none]="!previousTarot">
-      <a class="mt-auto" [routerLink]="[ '/tarot-meaning', previousTarot.category | lowercase, previousTarot.number]">
-        <span class="material-symbols-rounded mt-5">
-          arrow_back_ios
-          </span>
-      </a>
+      @if (previousTarot) {
+        <a class="mt-auto" [routerLink]="[ '/tarot-meaning', previousTarot.category | lowercase, previousTarot.number]">
+          <span class="material-symbols-rounded mt-5">
+            arrow_back_ios
+            </span>
+        </a>
+      }
     </div>
     <div class="next-arrow d-flex d-md-none" [class.d-none]="!nextTarot">
-      <a class="mt-auto" [routerLink]="[ '/tarot-meaning', nextTarot.category | lowercase, nextTarot.number]">
-        <span class="material-symbols-rounded mt-5">
-          arrow_forward_ios
-          </span>
-      </a>
+      @if (nextTarot) {
+        <a class="mt-auto" [routerLink]="[ '/tarot-meaning', nextTarot.category | lowercase, nextTarot.number]">
+          <span class="material-symbols-rounded mt-5">
+            arrow_forward_ios
+            </span>
+        </a>
+      }
     </div>
     <div class="col-4 d-none d-md-flex">
       @if (previousTarot) {
