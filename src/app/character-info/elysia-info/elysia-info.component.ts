@@ -31,7 +31,7 @@ export class ElysiaInfoComponent {
     picUrl: '/assets/images/original/elysia/elysia_kai_draws_things2.png',
     frameStyle: 'black-frame small circle',
     content: {
-      title: 'Elysia: draw by Kai draws things',
+      title: 'Elysia: draw by <a class="underline" href="https://www.instagram.com/kai_draws_things/" target="_blank">Kai draws things</a>',
       title2: 'Original design by Rin Linin',
       subTitle: 'CG',
       description: 'This is only a thumbnail, but I really like it.'
@@ -46,7 +46,7 @@ export class ElysiaInfoComponent {
     picUrl: '/assets/images/original/elysia/elysia_Kai_draws_things.png',
     frameStyle: 'white-frame',
     content: {
-      title: 'Elysia: draw by Kai draws things',
+      title: 'Elysia: draw by <a class="underline" href="https://www.instagram.com/kai_draws_things/" target="_blank">Kai draws things</a>',
       title2: 'Original design by Rin Linin',
       subTitle: 'CG',
       description: 'I got this from Art Fight 2024, thank you for choosing to draw my Elysia!!'
@@ -61,7 +61,7 @@ export class ElysiaInfoComponent {
     picUrl: '/assets/images/original/elysia/elysia_jazzyFina.png',
     frameStyle: 'black-frame',
     content: {
-      title: 'Elysia: draw by JazzyFina',
+      title: 'Elysia: draw by <a class="underline" href="https://www.instagram.com/jazzyfinaarts/" target="_blank">JazzyFina</a>',
       title2: 'Original design by Rin Linin',
       subTitle: 'CG',
       description: 'I got this picture from Art Fight 2024, I really like Jazzy art, it\'s so cute.'

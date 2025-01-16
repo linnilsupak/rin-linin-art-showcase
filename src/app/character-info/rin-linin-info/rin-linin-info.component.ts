@@ -147,7 +147,7 @@ export class RinLininInfoComponent {
       picUrl: '/assets/images/original/rin-linin/rin_linin_chocolateProgram.png',
       frameStyle: 'black-frame small circle',
       content: {
-        title: 'Rin Linin: draw by Chocolate Program',
+        title: 'Rin Linin: draw by <a class="underline" href="https://artfight.net/~ChocolateProgram" target="_blank">Chocolate Program</a>',
         title2: 'Original design by Rin Linin',
         subTitle: 'CG',
         description: 'An attack I got from ArtFight 2024, I really like how rin linin appear with Thai traditional dress and chocolate program art style. It\'s go well with Rin Linin.'
@@ -161,7 +161,7 @@ export class RinLininInfoComponent {
       picUrl: '/assets/images/original/rin-linin/fan_art_from_meri_kun.webp',
       frameStyle: 'black-frame small',
       content: {
-        title: 'Rin Linin: draw by Merikun',
+        title: 'Rin Linin: draw by <a class="underline" href="https://www.youtube.com/@นักวาดฝึกหัดmeriคุง" target="_blank">Merikun</a>',
         title2: 'Original design by Rin Linin',
         subTitle: 'CG',
         description: 'A fanart I got from my youtube channel, Owww my first fanart of my character. I just youtube once but it is so hard to post per schedule, but It not like I didn\'t get anything. At least, someone like my content and make fanart for me.^^'
@@ -175,7 +175,7 @@ export class RinLininInfoComponent {
       picUrl: '/assets/images/original/rin-linin/rin_linin_prypec.png',
       frameStyle: 'white-frame',
       content: {
-        title: 'Rin Linin: draw by Prypec',
+        title: 'Rin Linin: draw by <a class="underline" href="https://artfight.net/~prypec" target="_blank">Prypec</a>',
         title2: 'Original design by Rin Linin',
         subTitle: 'CG',
         description: 'An attack I got from ArtFight 2024, I really like how Prypec Art Style. Rin Linin with her default dress by her is so wonderful.'
@@ -189,8 +189,8 @@ export class RinLininInfoComponent {
       picUrl: '/assets/images/original/rin-linin/rin_linin_cookie_chocoladka.png',
       frameStyle: 'white-frame',
       content: {
-        title: 'Rin Linin: Art trade by Cookie Chocoladka',
-        title2: 'color by Rin Linin, draw by Cookie Chocoladka',
+        title: 'Rin Linin: Art trade by <a class="underline" href="https://www.deviantart.com/cookie-chocoladka" target="_blank">Cookie Chocoladka</a>',
+        title2: 'color by Rin Linin, draw by <a class="underline" href="https://www.deviantart.com/cookie-chocoladka" target="_blank">Cookie Chocoladka</a>',
         subTitle: 'Color Pencil',
         description: 'An Art trade I did with Cookie, I really like her picture and she look friendly so I just ask her to play and art trade with me. This picture is the result of that, I really like it.^^'
       },

@@ -33,7 +33,7 @@ export class MimiInfoComponent {
       picUrl: '/assets/images/original/mimi/mimi_ecobotanist.png',
       frameStyle: 'black-frame circle small',
       content: {
-        title: 'Mimi: draw by Ecobotanist',
+        title: 'Mimi: draw by <a class="underline" href="https://artfight.net/~ecobotanist" target="_blank">Ecobotanist</a>',
         title2: 'Original design by Rin Linin',
         subTitle: 'Marker',
         description: 'An attack I got from ArtFight 2024, It just like in my design but with marker style.'
@@ -48,7 +48,7 @@ export class MimiInfoComponent {
       picUrl: '/assets/images/original/mimi/mimi_kayleona.gif?v=1',
       frameStyle: 'white-frame',
       content: {
-        title: 'Mimi: draw by Kayleona',
+        title: 'Mimi: draw by <a class="underline" href="https://www.instagram.com/@kayleona/" target="_blank">Kayleona</a>',
         title2: 'Original design by Rin Linin',
         subTitle: 'CG',
         description: 'An attack I got from ArtFight 2024, I really like that tail animation.'
@@ -81,7 +81,7 @@ export class MimiInfoComponent {
       picUrl: '/assets/images/original/mimi/mimi_peachiepeeps.gif',
       frameStyle: 'black-frame',
       content: {
-        title: 'Mimi: draw by Peachiepeeps',
+        title: 'Mimi: draw by <a class="underline" href="https://www.deviantart.com/peachiepeeps" target="_blank">Peachiepeeps</a>',
         title2: 'Original design by Rin Linin',
         subTitle: 'CG Animation',
         description: 'An attack I got from ArtFight 2024, I really like this animation!! It\'s so cute!!'

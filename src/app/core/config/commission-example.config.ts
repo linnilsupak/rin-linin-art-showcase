@@ -582,7 +582,7 @@ export const commissionExampleConfig: GalleryRooms = {
       frameStyle: 'black-frame small mini-frame-200',
       content: {
         title: 'Charlotte วาดโดย Rin Linin',
-        title2: 'ตัวละครของ ChocolateProgram',
+        title2: 'ตัวละครของ <a class="underline" href="https://artfight.net/~ChocolateProgram" target="_blank">ChocolateProgram</a>',
         subTitle: 'ภาพสีไม้ผสมสีน้ำ',
         description: 'ภาพสไตล์วิกตอเรียก็ต้องสีไม้ซิ สุดคลาสสิก'
       },
@@ -598,7 +598,7 @@ export const commissionExampleConfig: GalleryRooms = {
       frameStyle: 'white-frame small mini-frame-200',
       content: {
         title: 'Peep วาดโดย Rin Linin',
-        title2: 'ตัวละครของ Peachiepeeps',
+        title2: 'ตัวละครของ <a class="underline" href="https://www.deviantart.com/peachiepeeps" target="_blank">Peachiepeeps</a>',
         subTitle: 'ภาพสีน้ำ',
         description: ''
       },

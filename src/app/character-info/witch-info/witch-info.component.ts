@@ -48,7 +48,7 @@ export class WitchInfoComponent {
       picUrl: '/assets/images/original/the_witch/the_witch_Blastoffspaceboy.png?v=1',
       frameStyle: 'black-frame circle',
       content: {
-        title: 'The dimension witch by Blastoffspaceboy',
+        title: 'The dimension witch by <a class="underline" href="https://artfight.net/~Blastoffspaceboy" target="_blank">Blastoffspaceboy</a>',
         title2: 'character design by Rin Linin',
         subTitle: 'CG',
         description: 'An attack I got from Artfight 2024, she look scary on this pic but I think probably his style.'
@@ -62,7 +62,7 @@ export class WitchInfoComponent {
       picUrl: '/assets/images/original/the_witch/the_witch_mirzel.png?v=1',
       frameStyle: 'white-frame',
       content: {
-        title: 'The dimension witch by Mirzel',
+        title: 'The dimension witch by <a class="underline" href="https://www.instagram.com/mirzelcanvas" target="_blank">Mirzel</a>',
         title2: 'character design by Rin Linin',
         subTitle: 'CG',
         description: 'An attack I got from Artfight 2024, look at how cool she is!!'
@@ -77,7 +77,7 @@ export class WitchInfoComponent {
       picUrl: '/assets/images/original/the_witch/the_witch_lilaThAplePeela.png?v=1',
       frameStyle: 'white-frame',
       content: {
-        title: 'The dimension witch by lilaThAplePeela',
+        title: 'The dimension witch by <a class="underline" href="https://toyhou.se/LilaThAplePeela" target="_blank">lilaThAplePeela</a>',
         title2: 'character design by Rin Linin',
         subTitle: 'CG',
         description: 'An attack I got from Artfight 2024, look at how beautiful she is!!'

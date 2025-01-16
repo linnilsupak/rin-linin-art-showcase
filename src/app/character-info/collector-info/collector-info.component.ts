@@ -47,7 +47,7 @@ export class CollectorInfoComponent {
     picUrl: '/assets/images/original/collector/the_collector_overloadwork.png',
     frameStyle: 'black-frame circle m-auto',
     content: {
-      title: 'The collector: draw by OverloadWork',
+      title: 'The collector: draw by <a class="underline" href="https://x.com/OverloadWork" target="_blank">OverloadWork</a>',
       title2: 'character design by Rin Linin',
       subTitle: 'CG',
       description: 'An attack I got from Artfight 2024. This is only a thumbnail but I like it very much.'
@@ -62,7 +62,7 @@ export class CollectorInfoComponent {
     picUrl: '/assets/images/original/collector/the_collector_overloadwork2.png?v=1',
     frameStyle: 'white-frame circle',
     content: {
-      title: 'The collector: draw by OverloadWork',
+      title: 'The collector: draw by <a class="underline" href="https://x.com/OverloadWork" target="_blank">OverloadWork</a>',
       title2: 'character design by Rin Linin',
       subTitle: 'CG',
       description: 'An attack I got from Artfight 2024, look at how cute he is!!'
@@ -78,7 +78,7 @@ export class CollectorInfoComponent {
     picUrl: '/assets/images/original/collector/the_collector_cookie_chocoladka.png',
     frameStyle: 'black-frame my-auto',
     content: {
-      title: 'The collector: draw by Cookie Chocoladka',
+      title: 'The collector: draw by <a class="underline" href="https://www.deviantart.com/cookie-chocoladka" target="_blank">Cookie Chocoladka</a>',
       title2: 'character design by Rin Linin',
       subTitle: 'pencil',
       description: 'A lucky ruffle I win from Cookie Chocoladka which she open on instagram. Oh my! I have never been this lucky before! Yay!'

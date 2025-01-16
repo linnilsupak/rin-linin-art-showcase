@@ -104,7 +104,7 @@ export class LininInfoComponent {
       frameStyle: 'white-double-frame small',
       content: {
         title: 'Linin: design & color by Rin Linin',
-        title2: 'line art by IamAlittleNeko',
+        title2: 'line art by <a class="underline" href="https://www.deviantart.com/iamalittleneko" target="_blank">IamAlittleNeko</a>',
         subTitle: 'Watercolor',
         description: 'An art trade game I did with some friend. When I am bore I always ask someone looking friendly on the internet to play an art trade game with me.'
       },
@@ -122,7 +122,7 @@ export class LininInfoComponent {
       frameStyle: 'white-double-frame small',
       content: {
         title: 'Linin: design & color by Rin Linin',
-        title2: 'line art by IamAlittleNeko',
+        title2: 'line art by <a class="underline" href="https://www.deviantart.com/iamalittleneko" target="_blank">IamAlittleNeko</a>',
         subTitle: 'Watercolor',
         description: 'An art trade game I did with some friend. When I am bore I always ask someone looking friendly on the internet to play an art trade game with me.'
       }
