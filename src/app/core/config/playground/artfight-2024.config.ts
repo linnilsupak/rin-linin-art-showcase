@@ -7,7 +7,7 @@ export const artFight2024GalleryConfig: GalleryRooms = {
       frameStyle: 'black-frame small circle',
       content: {
         title: 'Sanchos วาดโดย Rin Linin',
-        title2: 'ตัวละครของ Mercanaryscrapcore',
+        title2: 'ตัวละครของ <a class="underline" href="https://x.com/KillersharkSal" target="_blank">Mercanaryscrapcore</a>',
         subTitle: 'ภาพสีน้ำ',
         description: 'ภาพ Ferry ที่รินลองวาดครั้งแรก'
       },
@@ -21,7 +21,7 @@ export const artFight2024GalleryConfig: GalleryRooms = {
       frameStyle: 'white-frame small mini-frame-300',
       content: {
         title: 'Remi วาดโดย Rin Linin',
-        title2: 'ตัวละครของ Rioni',
+        title2: 'ตัวละครของ <a class="underline" href="https://rioniarts.tumblr.com" target="_blank">Rioni</a>',
         subTitle: 'ภาพสีน้ำ',
         description: 'ลองใช้เทคนิคฉีดเสปรย์น้ำเปล่าลงบนภาพสีน้ำที่ยังไม่แห้งดูค่ะ'
       },
@@ -35,7 +35,7 @@ export const artFight2024GalleryConfig: GalleryRooms = {
       frameStyle: 'white-double-frame small',
       content: {
         title: 'Mobias วาดโดย Rin Linin',
-        title2: 'ตัวละครของ Gyyuks',
+        title2: 'ตัวละครของ 	<a class="underline" href="https://www.facebook.com/rhgyyuks" target="_blank">Gyyuks</a>',
         subTitle: 'ภาพสีน้ำ',
         description: 'ลองเอียงกระดาษขณะที่สียังไม่แห้งให้เป็นทางน้ำไหล ซึ่งเป็นเทคนิคที่ใช้ได้เฉพาะกระดาษแผ่นเรียบเท่านั้น'
       },
@@ -49,7 +49,7 @@ export const artFight2024GalleryConfig: GalleryRooms = {
       frameStyle: 'black-frame small',
       content: {
         title: 'Charlotte วาดโดย Rin Linin',
-        title2: 'ตัวละครของ ChocolateProgram',
+        title2: 'ตัวละครของ <a class="underline" href="https://artfight.net/~ChocolateProgram" target="_blank">ChocolateProgram</a>',
         subTitle: 'ภาพสีไม้ผสมสีน้ำ',
         description: 'ภาพสไตล์วิกตอเรียก็ต้องสีไม้ซิ สุดคลาสสิก'
       },
@@ -63,7 +63,7 @@ export const artFight2024GalleryConfig: GalleryRooms = {
       frameStyle: 'black-frame',
       content: {
         title: 'Mirmir วาดโดย Rin Linin',
-        title2: 'ตัวละครของ latteswiirl',
+        title2: 'ตัวละครของ <a class="underline" href="https://www.instagram.com/latteswiirl/" target="_blank">latteswiirl</a>',
         subTitle: 'ภาพสีน้ำ',
         description: 'ภาพที่รินลองลงสีแบบเปรอะเปื้อน สไตล์ฝันๆลงบนกระดาษสีน้ำแผ่นเรียบ'
       },
@@ -77,7 +77,7 @@ export const artFight2024GalleryConfig: GalleryRooms = {
       frameStyle: 'white-frame',
       content: {
         title: 'Herian วาดโดย Rin Linin',
-        title2: 'ตัวละครของ ecobotanist',
+        title2: 'ตัวละครของ <a class="underline" href="https://artfight.net/~ecobotanist" target="_blank">ecobotanist</a>',
         subTitle: 'ภาพสีน้ำ',
         description: 'ภาพนี้ก็ลองใช้การลงสีแบบเปรอะๆเปื้อนๆ สไตล์ okayuuri ที่เน้นลายเส้นและความโปร่งใสของสีน้ำค่ะ'
       },
@@ -91,7 +91,7 @@ export const artFight2024GalleryConfig: GalleryRooms = {
       frameStyle: 'white-frame',
       content: {
         title: 'Nebula วาดโดย Rin Linin',
-        title2: 'ตัวละครของ Mirzel',
+        title2: 'ตัวละครของ <a class="underline" href="https://www.instagram.com/mirzelcanvas" target="_blank">Mirzel</a>',
         subTitle: 'CG',
         description: ''
       },
@@ -108,7 +108,7 @@ export const artFight2024GalleryConfig: GalleryRooms = {
       frameStyle: 'black-frame circle',
       content: {
         title: 'IDK วาดโดย Rin Linin',
-        title2: 'Blastoffspaceboy',
+        title2: 'ตัวละครของคุณ <a class="underline" href="https://artfight.net/~Blastoffspaceboy" target="_blank">Blastoffspaceboy</a>',
         subTitle: 'ภาพลายเส้นปากกา',
         description: 'ภาพนี้วาดโดยลากปากกาแบบไม่ยกเลยค่ะ แต่ก็มีแอบเอาปากกามาเติมนิดๆหน่อยๆทีหลังนะ'
       },
@@ -122,7 +122,7 @@ export const artFight2024GalleryConfig: GalleryRooms = {
       frameStyle: 'white-frame',
       content: {
         title: 'Rosy Maple Moth Dragon วาดโดย Rin Linin',
-        title2: 'ตัวละครของ amesketches',
+        title2: 'ตัวละครของ <a class="underline" href="https://amelieshypilova.myportfolio.com" target="_blank">amesketches</a>',
         subTitle: 'ภาพเส้นดินสอ',
         description: 'ลองตัวอะไรที่ไม่ใช่คน หรือมีความน่ารักเลยดูค่ะ วาดด้วยเส้นดินสอจะได้ดูลึกลับน่ากลัว'
       },
@@ -136,7 +136,7 @@ export const artFight2024GalleryConfig: GalleryRooms = {
       frameStyle: 'white-double-frame small',
       content: {
         title: 'June Valeria วาดโดย Rin Linin',
-        title2: 'ตัวละครของ MintKyo',
+        title2: 'ตัวละครของ <a class="underline" href="https://x.com/MintKyo1994" target="_blank">MintKyo</a>',
         subTitle: 'ภาพสีน้ำ',
         description: 'ลองตั้งใจลงสีบนกระดาษสีน้ำแผ่นเรียบดูค่ะ แต่เหมือนจะพลาดนิดหน่อยตรงทะเลดาวนะ'
       },
@@ -150,7 +150,7 @@ export const artFight2024GalleryConfig: GalleryRooms = {
       frameStyle: 'black-frame small',
       content: {
         title: 'Miffy วาดโดย Rin Linin',
-        title2: 'ตัวละครของ Etheirys',
+        title2: 'ตัวละครของ <a class="underline" href="https://vampire-aster.neocities.org" target="_blank">Etheirys</a>',
         subTitle: 'ภาพสีน้ำ',
         description: 'พยายามจะลงสีแบบลงทีละส่วน สุดท้ายลองผสมสีตุ๋นๆแล้วมันก็ออกมาแบบนี้แหละ'
       },
@@ -164,7 +164,7 @@ export const artFight2024GalleryConfig: GalleryRooms = {
       frameStyle: 'black-frame mb-auto',
       content: {
         title: 'Peejohn วาดโดย Rin Linin',
-        title2: 'ตัวละครของ LilaThAplePeela',
+        title2: 'ตัวละครของ <a class="underline" href="https://toyhou.se/LilaThAplePeela" target="_blank">LilaThAplePeela</a>',
         subTitle: 'ภาพสีน้ำ',
         description: ''
       },
@@ -178,7 +178,7 @@ export const artFight2024GalleryConfig: GalleryRooms = {
       frameStyle: 'black-frame',
       content: {
         title: 'Grimm วาดโดย Rin Linin',
-        title2: 'ตัวละครของ Melo_cherrii',
+        title2: 'ตัวละครของ <a class="underline" href="https://www.instagram.com/melo_cherrii/" target="_blank">Melo_cherrii</a>',
         subTitle: 'Clip studio paint animation',
         description: ''
       },
@@ -192,7 +192,7 @@ export const artFight2024GalleryConfig: GalleryRooms = {
       frameStyle: 'black-frame mini-frame-400',
       content: {
         title: 'Fishtopher วาดโดย Rin Linin',
-        title2: 'ตัวละครของ streetcatzzz',
+        title2: 'ตัวละครของ <a class="underline" href="https://toyhou.se/streetcatzzz" target="_blank">streetcatzzz</a>',
         subTitle: 'ภาพสีน้ำ',
         description: ''
       },
@@ -206,7 +206,7 @@ export const artFight2024GalleryConfig: GalleryRooms = {
       frameStyle: 'black-frame mb-auto mx-auto',
       content: {
         title: 'Jacaranda วาดโดย Rin Linin',
-        title2: 'ตัวละครของ Kayleona',
+        title2: 'ตัวละครของ <a class="underline" href="https://www.instagram.com/@kayleona/" target="_blank">Kayleona</a>',
         subTitle: 'ภาพสีน้ำ',
         description: ''
       },
@@ -222,7 +222,7 @@ export const artFight2024GalleryConfig: GalleryRooms = {
       frameStyle: 'black-frame circle',
       content: {
         title: 'Alexandra วาดโดย Rin Linin',
-        title2: 'ตัวละครของ prypec',
+        title2: 'ตัวละครของ <a class="underline" href="https://artfight.net/~prypec" target="_blank">prypec</a>',
         subTitle: 'ภาพสีน้ำ abstract',
         description: ''
       },
@@ -236,7 +236,7 @@ export const artFight2024GalleryConfig: GalleryRooms = {
       frameStyle: 'white-frame',
       content: {
         title: 'Hali วาดโดย Rin Linin',
-        title2: 'ตัวละครของ	socsie',
+        title2: 'ตัวละครของ	<a class="underline" href="https://socsie.space" target="_blank">socsie</a>',
         subTitle: 'ภาพสีน้ำ',
         description: ''
       },
@@ -251,7 +251,7 @@ export const artFight2024GalleryConfig: GalleryRooms = {
       frameStyle: 'white-double-frame small',
       content: {
         title: 'Peep วาดโดย Rin Linin',
-        title2: 'ตัวละครของ Peachiepeeps',
+        title2: 'ตัวละครของ <a class="underline" href="https://www.deviantart.com/peachiepeeps" target="_blank">Peachiepeeps</a>',
         subTitle: 'ภาพสีน้ำ',
         description: ''
       },
@@ -266,7 +266,7 @@ export const artFight2024GalleryConfig: GalleryRooms = {
       frameStyle: 'black-frame small mini-frame-400',
       content: {
         title: 'Rina วาดโดย Rin Linin',
-        title2: 'ตัวละครของ	JazzyFina',
+        title2: 'ตัวละครของ	<a class="underline" href="https://www.instagram.com/jazzyfinaarts/" target="_blank">JazzyFina</a>',
         subTitle: 'ภาพสีน้ำ',
         description: ''
       },
@@ -280,7 +280,7 @@ export const artFight2024GalleryConfig: GalleryRooms = {
       frameStyle: 'black-frame',
       content: {
         title: 'Deamon วาดโดย Rin Linin',
-        title2: 'ตัวละครของ Duckiepu',
+        title2: 'ตัวละครของ <a class="underline" href="https://x.com/Duckiepu" target="_blank">Duckiepu</a>',
         subTitle: 'ภาพสีน้ำ',
         description: ''
       },
@@ -294,7 +294,7 @@ export const artFight2024GalleryConfig: GalleryRooms = {
       frameStyle: 'white-frame mini-frame-400',
       content: {
         title: 'Moonlit วาดโดย Rin Linin',
-        title2: 'ตัวละครของ OverloadWork',
+        title2: 'ตัวละครของ <a class="underline" href="https://x.com/OverloadWork" target="_blank">OverloadWork</a>',
         subTitle: 'CG',
         description: ''
       },
@@ -309,7 +309,7 @@ export const artFight2024GalleryConfig: GalleryRooms = {
       frameStyle: 'white-frame',
       content: {
         title: 'Alan วาดโดย Rin Linin',
-        title2: 'ตัวละครของ Kai_draws_things',
+        title2: 'ตัวละครของ <a class="underline" href="https://www.instagram.com/kai_draws_things/" target="_blank">Kai_draws_things</a>',
         subTitle: 'CG',
         description: ''
       },

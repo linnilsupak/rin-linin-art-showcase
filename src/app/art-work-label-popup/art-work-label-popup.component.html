@@ -14,8 +14,8 @@
     </div>
     <div class="col-12 d-flex" [class.col-md]="!isRecTemplate()" [class.col-md-4]="isRecTemplate()">
       <div class="art-tag d-flex flex-column my-auto p-2 align-items-center align-items-md-start mx-auto">
-        <b class="title">{{ title() }}</b>
-        <i class="title-2">{{ title2() }}</i>
+        <b class="title" [innerHTML]="title()"></b>
+        <i class="title-2" [innerHTML]="title2()"></i>
         <div class="mb-2 sub-title text-center text-md-start">{{ subTitle()}}</div>
         <div class="text-center text-md-start desc">{{ description()}}</div>
       </div>
