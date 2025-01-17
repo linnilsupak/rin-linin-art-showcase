@@ -63,7 +63,7 @@ export class MimiInfoComponent {
       picUrl: '/assets/images/original/mimi/mimi_streetcatzzz.png?v=1',
       frameStyle: 'black-frame my-auto',
       content: {
-        title: 'Mimi: draw by Streetcatzzz',
+        title: 'Mimi: draw by <a class="underline" href="https://artfight.net/~ChocolateProgram" target="_blank">Streetcatzzz</a>',
         title2: 'Original design by Rin Linin',
         subTitle: 'CG',
         description: 'An attack I got from ArtFight 2024, I really like that face and the background.'
