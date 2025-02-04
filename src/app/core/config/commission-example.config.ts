@@ -82,7 +82,7 @@ export const commissionExampleConfig: GalleryRooms = {
         height: 'inherit',
         disabled: true
       }
-    },{
+    }, {
       picUrl: '/assets/images/commission/face/xingque_portrait.webp',
       frameStyle: 'black-frame small mini-frame-300',
       content: {
@@ -266,104 +266,104 @@ export const commissionExampleConfig: GalleryRooms = {
     },
 
   ],
-  faceWidescreen2: [
-    {
-      picUrl: '/assets/images/commission/face/yae_widescreen.webp',
-      frameStyle: 'white-frame small',
-      content: {
-        title: 'Yae from Genshin',
-        title2: 'Draw by Rin Linin',
-        subTitle: 'watercolor',
-        description: '',
-      },
-      isRecTemplate: true,
-      previewPic: {
-        width: 'inherit',
-        height: 'inherit',
-        disabled: true
-      }
-    },
-    {
-      picUrl: '/assets/images/commission/face/rena_widescreen.webp',
-      frameStyle: 'white-frame small',
-      content: {
-        title: 'Rena from Higurashi',
-        title2: 'Draw by Rin Linin',
-        subTitle: 'watercolor',
-        description: '',
-      },
-      isRecTemplate: true,
-      previewPic: {
-        width: 'inherit',
-        height: 'inherit',
-        disabled: true
-      }
-    },
-    {
-      picUrl: '/assets/images/commission/face/sailor_moon_widescreen.webp',
-      frameStyle: 'black-frame small',
-      content: {
-        title: 'Serenity from Sailor Moon',
-        title2: 'Draw by Rin Linin',
-        subTitle: 'watercolor',
-        description: '',
-      },
-      isRecTemplate: true,
-      previewPic: {
-        width: 'inherit',
-        height: 'inherit',
-        disabled: true
-      }
-    },
-    {
-      picUrl: '/assets/images/commission/face/tighnari_widescreen.webp',
-      frameStyle: 'black-frame small',
-      content: {
-        title: 'Tighnari from Genshin',
-        title2: 'Draw by Rin Linin',
-        subTitle: 'watercolor',
-        description: '',
-      },
-      isRecTemplate: true,
-      previewPic: {
-        width: 'inherit',
-        height: 'inherit',
-        disabled: true
-      }
-    },
-    {
-      picUrl: '/assets/images/commission/face/layla_widescreen.webp',
-      frameStyle: 'white-frame small',
-      content: {
-        title: 'Layla from Genshin',
-        title2: 'Draw by Rin Linin',
-        subTitle: 'watercolor',
-        description: '',
-      },
-      isRecTemplate: true,
-      previewPic: {
-        width: 'inherit',
-        height: 'inherit',
-        disabled: true
-      }
-    },
-    {
-      picUrl: '/assets/images/commission/face/keqing_widescreen.webp',
-      frameStyle: 'black-frame small',
-      content: {
-        title: 'Keqing from Genshin',
-        title2: 'Draw by Rin Linin',
-        subTitle: 'watercolor',
-        description: '',
-      },
-      isRecTemplate: true,
-      previewPic: {
-        width: 'inherit',
-        height: 'inherit',
-        disabled: true
-      }
-    },
-  ],
+  // faceWidescreen2: [
+  //   {
+  //     picUrl: '/assets/images/commission/face/yae_widescreen.webp',
+  //     frameStyle: 'white-frame small',
+  //     content: {
+  //       title: 'Yae from Genshin',
+  //       title2: 'Draw by Rin Linin',
+  //       subTitle: 'watercolor',
+  //       description: '',
+  //     },
+  //     isRecTemplate: true,
+  //     previewPic: {
+  //       width: 'inherit',
+  //       height: 'inherit',
+  //       disabled: true
+  //     }
+  //   },
+  //   {
+  //     picUrl: '/assets/images/commission/face/rena_widescreen.webp',
+  //     frameStyle: 'white-frame small',
+  //     content: {
+  //       title: 'Rena from Higurashi',
+  //       title2: 'Draw by Rin Linin',
+  //       subTitle: 'watercolor',
+  //       description: '',
+  //     },
+  //     isRecTemplate: true,
+  //     previewPic: {
+  //       width: 'inherit',
+  //       height: 'inherit',
+  //       disabled: true
+  //     }
+  //   },
+  //   {
+  //     picUrl: '/assets/images/commission/face/sailor_moon_widescreen.webp',
+  //     frameStyle: 'black-frame small',
+  //     content: {
+  //       title: 'Serenity from Sailor Moon',
+  //       title2: 'Draw by Rin Linin',
+  //       subTitle: 'watercolor',
+  //       description: '',
+  //     },
+  //     isRecTemplate: true,
+  //     previewPic: {
+  //       width: 'inherit',
+  //       height: 'inherit',
+  //       disabled: true
+  //     }
+  //   },
+  //   {
+  //     picUrl: '/assets/images/commission/face/tighnari_widescreen.webp',
+  //     frameStyle: 'black-frame small',
+  //     content: {
+  //       title: 'Tighnari from Genshin',
+  //       title2: 'Draw by Rin Linin',
+  //       subTitle: 'watercolor',
+  //       description: '',
+  //     },
+  //     isRecTemplate: true,
+  //     previewPic: {
+  //       width: 'inherit',
+  //       height: 'inherit',
+  //       disabled: true
+  //     }
+  //   },
+  //   {
+  //     picUrl: '/assets/images/commission/face/layla_widescreen.webp',
+  //     frameStyle: 'white-frame small',
+  //     content: {
+  //       title: 'Layla from Genshin',
+  //       title2: 'Draw by Rin Linin',
+  //       subTitle: 'watercolor',
+  //       description: '',
+  //     },
+  //     isRecTemplate: true,
+  //     previewPic: {
+  //       width: 'inherit',
+  //       height: 'inherit',
+  //       disabled: true
+  //     }
+  //   },
+  //   {
+  //     picUrl: '/assets/images/commission/face/keqing_widescreen.webp',
+  //     frameStyle: 'black-frame small',
+  //     content: {
+  //       title: 'Keqing from Genshin',
+  //       title2: 'Draw by Rin Linin',
+  //       subTitle: 'watercolor',
+  //       description: '',
+  //     },
+  //     isRecTemplate: true,
+  //     previewPic: {
+  //       width: 'inherit',
+  //       height: 'inherit',
+  //       disabled: true
+  //     }
+  //   },
+  // ],
   faceWidescreen3: [
     {
       picUrl: '/assets/images/commission/face/ei_widescreen.webp',
@@ -545,57 +545,58 @@ export const commissionExampleConfig: GalleryRooms = {
       }
     },
   ],
-  halfPortrait2: [
-    {
-      picUrl: '/assets/images/commission/half/infp_portrait.webp',
-      frameStyle: 'white-frame small mini-frame-200',
-      content: {
-        title: 'Persona of INFP',
-        title2: 'by Rin Linin',
-        subTitle: 'watercolor',
-        description: '',
-      },
-      isRecTemplate: true,
-      previewPic: {
-        width: 'inherit',
-        height: 'inherit',
-        disabled: true
-      }
-    },
-    {
-      picUrl: '/assets/images/commission/half/linin_maid_portrait.webp',
-      frameStyle: 'black-frame small mini-frame-200',
-      content: {
-        title: 'Linin: maid outfit',
-        title2: 'Original design by Rin Linin',
-        subTitle: 'watercolor',
-        description: 'I want to draw a maid but don\'t have the character for this outfit so I use Linin as a model.'
-      },
-      previewPic: {
-        width: 'inherit',
-        height: 'inherit',
-        disabled: true
-      }
-    },
-    {
-      picUrl: '/assets/images/commission/half/charlotte_portrait.webp',
-      frameStyle: 'black-frame small mini-frame-200',
-      content: {
-        title: 'Charlotte วาดโดย Rin Linin',
-        title2: 'ตัวละครของ <a class="underline" href="https://artfight.net/~ChocolateProgram" target="_blank">ChocolateProgram</a>',
-        subTitle: 'ภาพสีไม้ผสมสีน้ำ',
-        description: 'ภาพสไตล์วิกตอเรียก็ต้องสีไม้ซิ สุดคลาสสิก'
-      },
-      isRecTemplate: true,
-      previewPic: {
-        width: 'inherit',
-        height: 'inherit',
-        disabled: true
-      }
-    },
+  // halfPortrait2: [
+  //   {
+  //     picUrl: '/assets/images/commission/half/infp_portrait.webp',
+  //     frameStyle: 'white-frame small mini-frame-200',
+  //     content: {
+  //       title: 'Persona of INFP',
+  //       title2: 'by Rin Linin',
+  //       subTitle: 'watercolor',
+  //       description: '',
+  //     },
+  //     isRecTemplate: true,
+  //     previewPic: {
+  //       width: 'inherit',
+  //       height: 'inherit',
+  //       disabled: true
+  //     }
+  //   },
+  //   {
+  //     picUrl: '/assets/images/commission/half/linin_maid_portrait.webp',
+  //     frameStyle: 'black-frame small mini-frame-200',
+  //     content: {
+  //       title: 'Linin: maid outfit',
+  //       title2: 'Original design by Rin Linin',
+  //       subTitle: 'watercolor',
+  //       description: 'I want to draw a maid but don\'t have the character for this outfit so I use Linin as a model.'
+  //     },
+  //     previewPic: {
+  //       width: 'inherit',
+  //       height: 'inherit',
+  //       disabled: true
+  //     }
+  //   },
+  //   {
+  //     picUrl: '/assets/images/commission/half/happy_bun_pizza_portrait.webp',
+  //     frameStyle: 'black-frame small mini-frame-200',
+  //     content: {
+  //       title: 'Happy bun DTIYS',
+  //       title2: 'by Rin Linin',
+  //       subTitle: 'watercolor',
+  //       description: 'I see DTIYS from Happy bun, I did\'t known what DTIYS at athat time and it look fun so I participace. P.S.DTIYS is Do this in your style',
+  //     },
+  //     previewPic: {
+  //       width: 'inherit',
+  //       height: 'inherit',
+  //       disabled: true
+  //     }
+  //   },
+  // ],
+  halfPortrait3: [
     {
       picUrl: '/assets/images/commission/half/picipeep_portrait.webp',
-      frameStyle: 'white-frame small mini-frame-200',
+      frameStyle: 'white-frame small',
       content: {
         title: 'Peep วาดโดย Rin Linin',
         title2: 'ตัวละครของ <a class="underline" href="https://www.deviantart.com/peachiepeeps" target="_blank">Peachiepeeps</a>',
@@ -610,8 +611,24 @@ export const commissionExampleConfig: GalleryRooms = {
       }
     },
     {
+      picUrl: '/assets/images/commission/half/charlotte_portrait.webp',
+      frameStyle: 'black-frame small',
+      content: {
+        title: 'Charlotte วาดโดย Rin Linin',
+        title2: 'ตัวละครของ <a class="underline" href="https://artfight.net/~ChocolateProgram" target="_blank">ChocolateProgram</a>',
+        subTitle: 'ภาพสีไม้ผสมสีน้ำ',
+        description: 'ภาพสไตล์วิกตอเรียก็ต้องสีไม้ซิ สุดคลาสสิก'
+      },
+      isRecTemplate: true,
+      previewPic: {
+        width: 'inherit',
+        height: 'inherit',
+        disabled: true
+      }
+    },
+    {
       picUrl: '/assets/images/commission/half/rin_linin_thai_traditional_dress_portrait.webp',
-      frameStyle: 'black-frame small mini-frame-200',
+      frameStyle: 'black-frame small',
       content: {
         title: 'Rin Linin',
         title2: 'วาดโดย Rin Linin',
@@ -625,55 +642,38 @@ export const commissionExampleConfig: GalleryRooms = {
         disabled: true
       }
     },
-    {
-      picUrl: '/assets/images/commission/half/happy_bun_pizza_portrait.webp',
-      frameStyle: 'black-frame small mini-frame-200',
-      content: {
-        title: 'Happy bun DTIYS',
-        title2: 'by Rin Linin',
-        subTitle: 'watercolor',
-        description: 'I see DTIYS from Happy bun, I did\'t known what DTIYS at athat time and it look fun so I participace. P.S.DTIYS is Do this in your style',
-      },
-      previewPic: {
-        width: 'inherit',
-        height: 'inherit',
-        disabled: true
-      }
-    },
-  ],
-  halfPortrait3: [
-    {
-      picUrl: '/assets/images/commission/half/chocolate_lava_portrait.webp',
-      frameStyle: 'white-frame small mini-frame-400',
-      content: {
-        title: 'Chocolate Lava as cute girl',
-        title2: 'Design and draw by Rin Linin',
-        subTitle: 'watercolor',
-        description: 'One of the elements in the menu "Chocolate Lava", Choco-chan!'
-      },
-      isRecTemplate: true,
-      previewPic: {
-        width: 'inherit',
-        height: 'inherit',
-        disabled: true
-      }
-    },
-    {
-      picUrl: '/assets/images/commission/half/ice_cream_portrait.webp',
-      frameStyle: 'white-frame small mini-frame-400',
-      content: {
-        title: 'Ice-cream as cute girl',
-        title2: 'Design and draw by Rin Linin',
-        subTitle: 'watercolor',
-        description: 'One of the elements in the menu "Chocolate Lava", Ice-cream~'
-      },
-      isRecTemplate: true,
-      previewPic: {
-        width: 'inherit',
-        height: 'inherit',
-        disabled: true
-      }
-    },
+    // {
+    //   picUrl: '/assets/images/commission/half/chocolate_lava_portrait.webp',
+    //   frameStyle: 'white-frame small mini-frame-400',
+    //   content: {
+    //     title: 'Chocolate Lava as cute girl',
+    //     title2: 'Design and draw by Rin Linin',
+    //     subTitle: 'watercolor',
+    //     description: 'One of the elements in the menu "Chocolate Lava", Choco-chan!'
+    //   },
+    //   isRecTemplate: true,
+    //   previewPic: {
+    //     width: 'inherit',
+    //     height: 'inherit',
+    //     disabled: true
+    //   }
+    // },
+    // {
+    //   picUrl: '/assets/images/commission/half/ice_cream_portrait.webp',
+    //   frameStyle: 'white-frame small mini-frame-400',
+    //   content: {
+    //     title: 'Ice-cream as cute girl',
+    //     title2: 'Design and draw by Rin Linin',
+    //     subTitle: 'watercolor',
+    //     description: 'One of the elements in the menu "Chocolate Lava", Ice-cream~'
+    //   },
+    //   isRecTemplate: true,
+    //   previewPic: {
+    //     width: 'inherit',
+    //     height: 'inherit',
+    //     disabled: true
+    //   }
+    // },
   ],
   halfWidescreen1: [
     {
@@ -691,7 +691,7 @@ export const commissionExampleConfig: GalleryRooms = {
         height: 'inherit',
         disabled: true
       }
-    },{
+    }, {
       picUrl: '/assets/images/commission/half/strwberry_widescreen.webp',
       frameStyle: 'white-frame  mini-frame-400',
       content: {
@@ -775,7 +775,7 @@ export const commissionExampleConfig: GalleryRooms = {
   fullPortrait2: [
     {
       picUrl: '/assets/images/commission/full/francois_color_ori_rin_linin.webp',
-      frameStyle: 'black-frame mini-frame-300',
+      frameStyle: 'black-frame mini-frame-400',
       content: {
         title: 'Francois',
         title2: 'Original design by Rin Linin',
@@ -791,7 +791,7 @@ export const commissionExampleConfig: GalleryRooms = {
     },
     {
       picUrl: '/assets/images/commission/full/mobias_rin_linin.webp',
-      frameStyle: 'white-frame small mini-frame-300',
+      frameStyle: 'white-frame small mini-frame-400',
       content: {
         title: 'Mobias วาดโดย Rin Linin',
         title2: 'ตัวละครของ Gyyuks',
@@ -806,7 +806,7 @@ export const commissionExampleConfig: GalleryRooms = {
     },
     {
       picUrl: '/assets/images/commission/full/elysia_ori_rin_linin.webp',
-      frameStyle: 'black-frame mini-frame-300',
+      frameStyle: 'black-frame mini-frame-400',
       content: {
         title: 'Elysia',
         title2: 'Original design by Rin Linin',
@@ -821,105 +821,105 @@ export const commissionExampleConfig: GalleryRooms = {
       }
     }
   ],
-  fullPortrait3: [
-    {
-      picUrl: '/assets/images/commission/full/my_melody_rin_linin.webp',
-      frameStyle: 'black-frame small mini-frame-200',
-      content: {
-        title: 'Sanrio My Melody',
-        title2: 'Draw by Rin Linin',
-        subTitle: 'watercolor',
-        description: '',
-      },
-      previewPic: {
-        width: 'inherit',
-        height: 'inherit',
-        disabled: true
-      }
-    },
-    {
-      picUrl: '/assets/images/commission/full/furina_genshin_rin_linin.webp',
-      frameStyle: 'black-frame small mini-frame-200',
-      content: {
-        title: 'Furina',
-        title2: 'Draw by Rin Linin',
-        subTitle: 'color pencil',
-        description: '',
-      },
-      previewPic: {
-        width: 'inherit',
-        height: 'inherit',
-        disabled: true
-      }
-    },
-    {
-      picUrl: '/assets/images/commission/full/yao_yao_genshin_rin_linin.webp',
-      frameStyle: 'black-frame small mini-frame-200',
-      content: {
-        title: 'Yao yao',
-        title2: 'Draw by Rin Linin',
-        subTitle: 'watercolor',
-        description: '',
-      },
-      isRecTemplate: true,
-      previewPic: {
-        width: 'inherit',
-        height: 'inherit',
-        disabled: true
-      }
-    },
-    {
-      picUrl: '/assets/images/commission/full/sakura_miku_rin_linin.webp',
-      frameStyle: 'white-frame small mini-frame-200',
-      content: {
-        title: 'Sakura Miku',
-        title2: 'Draw by Rin Linin',
-        subTitle: 'watercolor',
-        description: 'I like miku various dress design so I draw many of them. Sakura Miku is one of them.',
-      },
-      previewPic: {
-        width: 'inherit',
-        height: 'inherit',
-        disabled: true
-      }
-    },
-    {
-      picUrl: '/assets/images/commission/full/kokomi_sea_genshin_rin_linin.webp',
-      frameStyle: 'white-frame small mini-frame-200',
-      content: {
-        title: 'Kokomi in the sea',
-        title2: 'Draw by Rin Linin',
-        subTitle: 'watercolor',
-        description: '',
-      },
-      isRecTemplate: true,
-      previewPic: {
-        width: 'inherit',
-        height: 'inherit',
-        disabled: true
-      }
-    },
-    {
-      picUrl: '/assets/images/commission/full/mahou_shojou_klee_genshin_rin_linin.webp',
-      frameStyle: 'black-frame small mini-frame-200',
-      content: {
-        title: 'Klee in mahou shoujo dress',
-        title2: 'Draw by Rin Linin',
-        subTitle: 'watercolor',
-        description: '',
-      },
-      isRecTemplate: true,
-      previewPic: {
-        width: 'inherit',
-        height: 'inherit',
-        disabled: true
-      }
-    },
-  ],
+  // fullPortrait3: [
+  //   {
+  //     picUrl: '/assets/images/commission/full/my_melody_rin_linin.webp',
+  //     frameStyle: 'black-frame small mini-frame-200',
+  //     content: {
+  //       title: 'Sanrio My Melody',
+  //       title2: 'Draw by Rin Linin',
+  //       subTitle: 'watercolor',
+  //       description: '',
+  //     },
+  //     previewPic: {
+  //       width: 'inherit',
+  //       height: 'inherit',
+  //       disabled: true
+  //     }
+  //   },
+  //   {
+  //     picUrl: '/assets/images/commission/full/furina_genshin_rin_linin.webp',
+  //     frameStyle: 'black-frame small mini-frame-200',
+  //     content: {
+  //       title: 'Furina',
+  //       title2: 'Draw by Rin Linin',
+  //       subTitle: 'color pencil',
+  //       description: '',
+  //     },
+  //     previewPic: {
+  //       width: 'inherit',
+  //       height: 'inherit',
+  //       disabled: true
+  //     }
+  //   },
+  //   {
+  //     picUrl: '/assets/images/commission/full/yao_yao_genshin_rin_linin.webp',
+  //     frameStyle: 'black-frame small mini-frame-200',
+  //     content: {
+  //       title: 'Yao yao',
+  //       title2: 'Draw by Rin Linin',
+  //       subTitle: 'watercolor',
+  //       description: '',
+  //     },
+  //     isRecTemplate: true,
+  //     previewPic: {
+  //       width: 'inherit',
+  //       height: 'inherit',
+  //       disabled: true
+  //     }
+  //   },
+  //   {
+  //     picUrl: '/assets/images/commission/full/sakura_miku_rin_linin.webp',
+  //     frameStyle: 'white-frame small mini-frame-200',
+  //     content: {
+  //       title: 'Sakura Miku',
+  //       title2: 'Draw by Rin Linin',
+  //       subTitle: 'watercolor',
+  //       description: 'I like miku various dress design so I draw many of them. Sakura Miku is one of them.',
+  //     },
+  //     previewPic: {
+  //       width: 'inherit',
+  //       height: 'inherit',
+  //       disabled: true
+  //     }
+  //   },
+  //   {
+  //     picUrl: '/assets/images/commission/full/kokomi_sea_genshin_rin_linin.webp',
+  //     frameStyle: 'white-frame small mini-frame-200',
+  //     content: {
+  //       title: 'Kokomi in the sea',
+  //       title2: 'Draw by Rin Linin',
+  //       subTitle: 'watercolor',
+  //       description: '',
+  //     },
+  //     isRecTemplate: true,
+  //     previewPic: {
+  //       width: 'inherit',
+  //       height: 'inherit',
+  //       disabled: true
+  //     }
+  //   },
+  //   {
+  //     picUrl: '/assets/images/commission/full/mahou_shojou_klee_genshin_rin_linin.webp',
+  //     frameStyle: 'black-frame small mini-frame-200',
+  //     content: {
+  //       title: 'Klee in mahou shoujo dress',
+  //       title2: 'Draw by Rin Linin',
+  //       subTitle: 'watercolor',
+  //       description: '',
+  //     },
+  //     isRecTemplate: true,
+  //     previewPic: {
+  //       width: 'inherit',
+  //       height: 'inherit',
+  //       disabled: true
+  //     }
+  //   },
+  // ],
   fullPortrait4: [
     {
       picUrl: '/assets/images/commission/full/navia_genshin_rin_linin.webp',
-      frameStyle: 'white-frame small mini-frame-300',
+      frameStyle: 'white-frame small mini-frame-400',
       content: {
         title: 'Navia',
         title2: 'Draw by Rin Linin',
@@ -932,9 +932,9 @@ export const commissionExampleConfig: GalleryRooms = {
         height: 'inherit',
         disabled: true
       }
-    },{
+    }, {
       picUrl: '/assets/images/commission/full/lyney_lynette_genshin_rin_linin.webp',
-      frameStyle: 'white-frame small mini-frame-300',
+      frameStyle: 'white-frame small mini-frame-400',
       content: {
         title: 'Lyney & Lynette',
         title2: 'Draw by Rin Linin',

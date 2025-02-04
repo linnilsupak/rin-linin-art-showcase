@@ -17,7 +17,7 @@ import { CustomerFeedbackComponent } from "../../shared/customer-feedback/custom
 export class FullCommissionExampleComponent {
   fullPortrait1 = commissionExampleConfig.fullPortrait1;
   fullPortrait2 = commissionExampleConfig.fullPortrait2;
-  fullPortrait3 = commissionExampleConfig.fullPortrait3;
+  // fullPortrait3 = commissionExampleConfig.fullPortrait3;
   fullPortrait4 = commissionExampleConfig.fullPortrait4;
   fullWidescreen1 = commissionExampleConfig.fullWidescreen1;
   customerFeedback = {

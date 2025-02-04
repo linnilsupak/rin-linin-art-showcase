@@ -15,7 +15,7 @@ import { GalleryRoomComponent } from '../../shared/gallery-room/gallery-room.com
 })
 export class HalfCommissionExampleComponent {
   halfPortrait1 = commissionExampleConfig.halfPortrait1;
-  halfPortrait2 = commissionExampleConfig.halfPortrait2;
+  // halfPortrait2 = commissionExampleConfig.halfPortrait2;
   halfPortrait3 = commissionExampleConfig.halfPortrait3;
   halfWidescreen1 = commissionExampleConfig.halfWidescreen1;
 

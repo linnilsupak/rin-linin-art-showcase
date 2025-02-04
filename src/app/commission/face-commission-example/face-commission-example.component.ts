@@ -21,7 +21,7 @@ export class FaceCommissionExampleComponent {
   facePortrait3 = commissionExampleConfig.facePortrait3;
   faceAvatar1 = commissionExampleConfig.faceAvatar1;
   faceWidescreen1 = commissionExampleConfig.faceWidescreen1;
-  faceWidescreen2 = commissionExampleConfig.faceWidescreen2;
+  // faceWidescreen2 = commissionExampleConfig.faceWidescreen2;
   faceWidescreen3 = commissionExampleConfig.faceWidescreen3;
   faceWidescreen4 = commissionExampleConfig.faceWidescreen4;
   faceWidescreen5 = commissionExampleConfig.faceWidescreen5;
