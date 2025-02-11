@@ -630,18 +630,18 @@ export const tarotConfig: TarotConfig = {
         {
           "name": "Five of Wands",
           "imageUrl": "/assets/images/tarot/wands/5_of_wands.webp",
-          "description": "การแข่งขันกับคนหมู่มาก อุปสรรคเยอะมาก หรือทะเลาะเบาะแว้ง ไม่ลงรอยกัน",
+          "description": "ไพ่ 5 คฆา เป็นภาพของเด็กผู้หญิงที่มีปีกกำลังแบกสัมภาระไว้มากมาก แล้วไปวิ่งไปบนลู่วิ่งอย่างเหน็ดเหนื่อย แต่ด้วยขาสั้นๆของเธอ คงอีกนานกว่าจะถึงหมุดหมาย บางทีถ้าเธอใช้ปีกของเธอบินไปอาจจะถึงเร็วกว่านี้ก็เป็นได้",
           number: 5,
           category: tarotCategory.WANDS,
           upright: {
-            keyword: '',
+            keyword: 'คุณกำลังแข่งในสนามที่คุณไม่ถนัด, กำลังเหนื่อยเปล่ากับสิ่งที่ไม่ใช่คุณ',
             overallMeaning: '',
             loveMeaning: '',
             financeMeaning: '',
             careerMeaning: ''
           },
           reverse: {
-            keyword: '',
+            keyword: 'คุณกำลังพยายามทำในสิ่งที่คุณทำได้, คุณวิ่งไปข้างหน้าอย่างสุดความสามารถ',
             overallMeaning: '',
             loveMeaning: '',
             financeMeaning: '',
