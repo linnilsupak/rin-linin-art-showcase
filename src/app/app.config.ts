@@ -1,4 +1,4 @@
-import { ApplicationConfig, importProvidersFrom } from '@angular/core';
+import { ApplicationConfig, importProvidersFrom, isDevMode } from '@angular/core';
 import { PreloadAllModules, provideRouter, withDebugTracing, withPreloading } from '@angular/router';
 
 import { HttpClient, provideHttpClient, withFetch } from '@angular/common/http';
@@ -7,6 +7,7 @@ import { provideAnimationsAsync } from '@angular/platform-browser/animations/asy
 import { TranslateLoader, TranslateModule } from '@ngx-translate/core';
 import { routes } from './app.routes';
 import { HttpLoaderFactory } from './core/http-loader';
+import { provideServiceWorker } from '@angular/service-worker';
 
 export const appConfig: ApplicationConfig = {
   providers: [provideRouter(routes,
@@ -25,5 +26,8 @@ export const appConfig: ApplicationConfig = {
         },
       })
     ),
-    provideClientHydration(withI18nSupport()), provideAnimationsAsync()]
+    provideClientHydration(withI18nSupport()), provideAnimationsAsync(), provideServiceWorker('ngsw-worker.js', {
+            enabled: !isDevMode(),
+            registrationStrategy: 'registerWhenStable:30000'
+          })]
 }
