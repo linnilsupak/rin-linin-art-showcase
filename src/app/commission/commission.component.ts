@@ -15,12 +15,11 @@ import { FrameItemMobileComponent } from "./frame-item-mobile/frame-item-mobile.
 import { ScrollToCenterDirective } from '../shared/scroll-to-center.directive';
 
 @Component({
-  selector: 'app-commission',
-  standalone: true,
-  imports: [ReflectionFontComponent, TranslateModule, RouterLink, ScrollToCenterDirective,
-    FrameItemAnimationComponent, MoreButtonComponent, FaceCommissionExampleComponent, HalfCommissionExampleComponent, FullCommissionExampleComponent, DetailCommissionExampleComponent, FrameItemMobileComponent],
-  templateUrl: './commission.component.html',
-  styleUrl: './commission.component.scss'
+    selector: 'app-commission',
+    imports: [ReflectionFontComponent, TranslateModule, RouterLink, ScrollToCenterDirective,
+        FrameItemAnimationComponent, MoreButtonComponent, FaceCommissionExampleComponent, HalfCommissionExampleComponent, FullCommissionExampleComponent, DetailCommissionExampleComponent, FrameItemMobileComponent],
+    templateUrl: './commission.component.html',
+    styleUrl: './commission.component.scss'
 })
 export class CommissionComponent implements OnDestroy, AfterViewInit {
   activeTab: commissionTab;

@@ -6,11 +6,10 @@ import { ReflectionFontComponent } from '../../shared/reflection-font/reflection
 import { PlaygroundBottomMenuComponent } from '../playground-bottom-menu/playground-bottom-menu.component';
 
 @Component({
-  selector: 'app-etc',
-  standalone: true,
-  imports: [ReflectionFontComponent, TranslateModule, GalleryRoomComponent, RouterLink, PlaygroundBottomMenuComponent],
-  templateUrl: './etc.component.html',
-  styleUrl: './etc.component.scss'
+    selector: 'app-etc',
+    imports: [ReflectionFontComponent, TranslateModule, GalleryRoomComponent, RouterLink, PlaygroundBottomMenuComponent],
+    templateUrl: './etc.component.html',
+    styleUrl: './etc.component.scss'
 })
 export class EtcComponent {
   etc1 = [

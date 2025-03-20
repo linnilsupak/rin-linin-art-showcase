@@ -6,11 +6,10 @@ import { ReflectionFontComponent } from '../../shared/reflection-font/reflection
 import { PlaygroundBottomMenuComponent } from '../playground-bottom-menu/playground-bottom-menu.component';
 
 @Component({
-  selector: 'app-japan-trip-2023',
-  standalone: true,
-  imports: [ReflectionFontComponent, TranslateModule, GalleryRoomComponent, RouterLink, PlaygroundBottomMenuComponent],
-  templateUrl: './japan-trip-2023.component.html',
-  styleUrl: './japan-trip-2023.component.scss'
+    selector: 'app-japan-trip-2023',
+    imports: [ReflectionFontComponent, TranslateModule, GalleryRoomComponent, RouterLink, PlaygroundBottomMenuComponent],
+    templateUrl: './japan-trip-2023.component.html',
+    styleUrl: './japan-trip-2023.component.scss'
 })
 export class JapanTrip2023Component {
   japanTrip = [

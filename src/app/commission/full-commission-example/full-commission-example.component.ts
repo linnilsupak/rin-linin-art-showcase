@@ -8,11 +8,10 @@ import { commissionExampleConfig } from '../../core/config/commission-example.co
 import { CustomerFeedbackComponent } from "../../shared/customer-feedback/customer-feedback.component";
 
 @Component({
-  selector: 'app-full-commission-example',
-  standalone: true,
-  imports: [TranslateModule, RouterLink, PlaygroundMenuComponent, GalleryRoomComponent, ImageSrcsetPipe, CustomerFeedbackComponent],
-  templateUrl: './full-commission-example.component.html',
-  styleUrl: './full-commission-example.component.scss'
+    selector: 'app-full-commission-example',
+    imports: [TranslateModule, RouterLink, PlaygroundMenuComponent, GalleryRoomComponent, ImageSrcsetPipe, CustomerFeedbackComponent],
+    templateUrl: './full-commission-example.component.html',
+    styleUrl: './full-commission-example.component.scss'
 })
 export class FullCommissionExampleComponent {
   fullPortrait1 = commissionExampleConfig.fullPortrait1;

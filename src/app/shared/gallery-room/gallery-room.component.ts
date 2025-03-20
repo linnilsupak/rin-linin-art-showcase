@@ -14,11 +14,10 @@ import { MiniSpinningComponent } from "../mini-spinning/mini-spinning.component"
 import { ImagePlacementComponent } from "../image-placement/image-placement.component";
 
 @Component({
-  selector: 'app-gallery-room',
-  standalone: true,
-  imports: [ImagePreviewPipe, ImageSrcsetPipe, ImagePreviewPipe, AddClassInViewportDirective, AddClassOnScrollPositionDirective, ScrollIntoViewWhenReachDirective, CommonModule, MiniSpinningComponent, ImagePlacementComponent],
-  templateUrl: './gallery-room.component.html',
-  styleUrl: './gallery-room.component.scss'
+    selector: 'app-gallery-room',
+    imports: [ImagePreviewPipe, ImageSrcsetPipe, ImagePreviewPipe, AddClassInViewportDirective, AddClassOnScrollPositionDirective, ScrollIntoViewWhenReachDirective, CommonModule, MiniSpinningComponent, ImagePlacementComponent],
+    templateUrl: './gallery-room.component.html',
+    styleUrl: './gallery-room.component.scss'
 })
 export class GalleryRoomComponent implements OnDestroy {
   @Input()

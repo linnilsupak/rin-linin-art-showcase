@@ -6,12 +6,11 @@ import { Star } from '../core/models/star.model';
 import { WINDOW, WINDOW_PROVIDERS } from '../core/service/window.service';
 
 @Component({
-  selector: 'app-starry-sky',
-  standalone: true,
-  imports: [],
-  providers: [WINDOW_PROVIDERS],
-  templateUrl: './starry-sky.component.html',
-  styleUrl: './starry-sky.component.scss'
+    selector: 'app-starry-sky',
+    imports: [],
+    providers: [WINDOW_PROVIDERS],
+    templateUrl: './starry-sky.component.html',
+    styleUrl: './starry-sky.component.scss'
 })
 export class StarrySkyComponent implements AfterViewInit {
   // its important myCanvas matches the variable name in the template

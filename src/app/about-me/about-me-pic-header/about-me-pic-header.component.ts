@@ -6,11 +6,10 @@ import { ReflectionFontComponent } from "../../shared/reflection-font/reflection
 import { CommonModule } from '@angular/common';
 
 @Component({
-  selector: 'app-about-me-pic-header',
-  standalone: true,
-  imports: [MoreButtonComponent, RouterLink, TranslateModule, ReflectionFontComponent, CommonModule],
-  templateUrl: './about-me-pic-header.component.html',
-  styleUrl: './about-me-pic-header.component.scss'
+    selector: 'app-about-me-pic-header',
+    imports: [MoreButtonComponent, RouterLink, TranslateModule, ReflectionFontComponent, CommonModule],
+    templateUrl: './about-me-pic-header.component.html',
+    styleUrl: './about-me-pic-header.component.scss'
 })
 export class AboutMePicHeaderComponent {
   @Input() isHome = false;

@@ -6,12 +6,11 @@ import { characterInfo } from '../core/config/character-info.config';
 import { TextRollinEntranceComponent } from "../shared/text-rollin-entrance/text-rollin-entrance.component";
 
 @Component({
-  selector: 'app-header',
-  standalone: true,
-  imports: [MatIconModule, RouterLink, RouterLinkActive, TextRollinEntranceComponent, TranslateModule],
-  providers: [],
-  templateUrl: './header.component.html',
-  styleUrl: './header.component.scss'
+    selector: 'app-header',
+    imports: [MatIconModule, RouterLink, RouterLinkActive, TextRollinEntranceComponent, TranslateModule],
+    providers: [],
+    templateUrl: './header.component.html',
+    styleUrl: './header.component.scss'
 })
 export class HeaderComponent implements  OnInit {
   @Input() minimizeFlag: boolean;

@@ -6,11 +6,10 @@ import { ReflectionFontComponent } from '../../shared/reflection-font/reflection
 import { PlaygroundBottomMenuComponent } from '../playground-bottom-menu/playground-bottom-menu.component';
 
 @Component({
-  selector: 'app-art-trade',
-  standalone: true,
-  imports: [ReflectionFontComponent, TranslateModule, GalleryRoomComponent, RouterLink, PlaygroundBottomMenuComponent],
-  templateUrl: './art-trade.component.html',
-  styleUrl: './art-trade.component.scss'
+    selector: 'app-art-trade',
+    imports: [ReflectionFontComponent, TranslateModule, GalleryRoomComponent, RouterLink, PlaygroundBottomMenuComponent],
+    templateUrl: './art-trade.component.html',
+    styleUrl: './art-trade.component.scss'
 })
 export class ArtTradeComponent {
   artTrade1 = [

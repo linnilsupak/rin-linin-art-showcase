@@ -9,11 +9,10 @@ import { RouterLink } from '@angular/router';
 import { playgroundMenuConfig } from '../core/config/playground/playground-menu.config';
 
 @Component({
-  selector: 'app-playground',
-  standalone: true,
-  imports: [ReflectionFontComponent, TranslateModule, GalleryRoomComponent, ImageCardComponent, CharacterIconComponent, PlaygroundMenuComponent, RouterLink ],
-  templateUrl: './playground.component.html',
-  styleUrl: './playground.component.scss'
+    selector: 'app-playground',
+    imports: [ReflectionFontComponent, TranslateModule, GalleryRoomComponent, ImageCardComponent, CharacterIconComponent, PlaygroundMenuComponent, RouterLink],
+    templateUrl: './playground.component.html',
+    styleUrl: './playground.component.scss'
 })
 export class PlaygroundComponent {
   readonly playgroundMenuConfig = playgroundMenuConfig;

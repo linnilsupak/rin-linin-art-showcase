@@ -4,11 +4,10 @@ import { TranslateModule } from '@ngx-translate/core';
 import { RouterLink } from '@angular/router';
 
 @Component({
-  selector: 'app-character-frame',
-  standalone: true,
-  imports: [MoreButtonComponent, TranslateModule, RouterLink],
-  templateUrl: './character-frame.component.html',
-  styleUrl: './character-frame.component.scss'
+    selector: 'app-character-frame',
+    imports: [MoreButtonComponent, TranslateModule, RouterLink],
+    templateUrl: './character-frame.component.html',
+    styleUrl: './character-frame.component.scss'
 })
 export class CharacterFrameComponent {
   @Input() arrangement: 'left' | 'right' = 'left';

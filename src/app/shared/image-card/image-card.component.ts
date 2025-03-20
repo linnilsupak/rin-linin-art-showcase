@@ -3,11 +3,10 @@ import { ReflectionFontComponent } from "../reflection-font/reflection-font.comp
 import { CommonModule } from '@angular/common';
 
 @Component({
-  selector: 'app-image-card',
-  standalone: true,
-  imports: [ReflectionFontComponent, CommonModule],
-  templateUrl: './image-card.component.html',
-  styleUrl: './image-card.component.scss'
+    selector: 'app-image-card',
+    imports: [ReflectionFontComponent, CommonModule],
+    templateUrl: './image-card.component.html',
+    styleUrl: './image-card.component.scss'
 })
 export class ImageCardComponent {
   @Input() imageUrl: string;

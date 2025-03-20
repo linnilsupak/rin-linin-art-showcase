@@ -3,11 +3,10 @@ import { TranslateModule } from '@ngx-translate/core';
 import { GalleryRoomComponent } from "../../shared/gallery-room/gallery-room.component";
 
 @Component({
-  selector: 'app-witch-info',
-  standalone: true,
-  imports: [TranslateModule, GalleryRoomComponent],
-  templateUrl: './witch-info.component.html',
-  styleUrl: './witch-info.component.scss'
+    selector: 'app-witch-info',
+    imports: [TranslateModule, GalleryRoomComponent],
+    templateUrl: './witch-info.component.html',
+    styleUrl: './witch-info.component.scss'
 })
 export class WitchInfoComponent {
   witchMyart = [

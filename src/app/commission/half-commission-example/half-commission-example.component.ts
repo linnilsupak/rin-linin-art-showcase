@@ -7,11 +7,10 @@ import { PlaygroundMenuComponent } from '../../playground/playground-menu/playgr
 import { GalleryRoomComponent } from '../../shared/gallery-room/gallery-room.component';
 
 @Component({
-  selector: 'app-half-commission-example',
-  standalone: true,
-  imports: [TranslateModule, RouterLink, PlaygroundMenuComponent, GalleryRoomComponent, ImageSrcsetPipe],
-  templateUrl: './half-commission-example.component.html',
-  styleUrl: './half-commission-example.component.scss'
+    selector: 'app-half-commission-example',
+    imports: [TranslateModule, RouterLink, PlaygroundMenuComponent, GalleryRoomComponent, ImageSrcsetPipe],
+    templateUrl: './half-commission-example.component.html',
+    styleUrl: './half-commission-example.component.scss'
 })
 export class HalfCommissionExampleComponent {
   halfPortrait1 = commissionExampleConfig.halfPortrait1;

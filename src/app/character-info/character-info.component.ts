@@ -8,11 +8,10 @@ import { personaInfo } from '../core/config/persona-info.config';
 import { ReflectionFontComponent } from "../shared/reflection-font/reflection-font.component";
 
 @Component({
-  selector: 'app-character-info',
-  standalone: true,
-  imports: [ReflectionFontComponent, RouterLink, TranslateModule, RouterOutlet],
-  templateUrl: './character-info.component.html',
-  styleUrl: './character-info.component.scss'
+    selector: 'app-character-info',
+    imports: [ReflectionFontComponent, RouterLink, TranslateModule, RouterOutlet],
+    templateUrl: './character-info.component.html',
+    styleUrl: './character-info.component.scss'
 })
 export class CharacterInfoComponent implements OnInit {
   private route = inject(ActivatedRoute);

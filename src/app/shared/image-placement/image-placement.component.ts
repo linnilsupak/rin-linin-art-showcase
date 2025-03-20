@@ -3,11 +3,10 @@ import { mainConfig } from '../../core/config/main.config';
 import { MiniSpinningComponent } from "../mini-spinning/mini-spinning.component";
 
 @Component({
-  selector: 'app-image-placement',
-  standalone: true,
-  imports: [MiniSpinningComponent],
-  templateUrl: './image-placement.component.html',
-  styleUrl: './image-placement.component.scss'
+    selector: 'app-image-placement',
+    imports: [MiniSpinningComponent],
+    templateUrl: './image-placement.component.html',
+    styleUrl: './image-placement.component.scss'
 })
 export class ImagePlacementComponent implements AfterViewInit {
 @Input() width: string;

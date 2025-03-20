@@ -9,11 +9,10 @@ import { AvatarComponent } from "../../shared/avatar/avatar.component";
 import { CustomerFeedbackComponent } from "../../shared/customer-feedback/customer-feedback.component";
 
 @Component({
-  selector: 'app-face-commission-example',
-  standalone: true,
-  imports: [TranslateModule, RouterLink, PlaygroundMenuComponent, GalleryRoomComponent, ImageSrcsetPipe, CustomerFeedbackComponent],
-  templateUrl: './face-commission-example.component.html',
-  styleUrl: './face-commission-example.component.scss'
+    selector: 'app-face-commission-example',
+    imports: [TranslateModule, RouterLink, PlaygroundMenuComponent, GalleryRoomComponent, ImageSrcsetPipe, CustomerFeedbackComponent],
+    templateUrl: './face-commission-example.component.html',
+    styleUrl: './face-commission-example.component.scss'
 })
 export class FaceCommissionExampleComponent {
   facePortrait1 = commissionExampleConfig.facePortrait1;

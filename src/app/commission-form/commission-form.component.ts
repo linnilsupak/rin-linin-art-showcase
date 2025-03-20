@@ -13,11 +13,10 @@ import { combineLatest } from 'rxjs';
 import { environment } from '../../environments/environment';
 
 @Component({
-  selector: 'app-commission-form',
-  standalone: true,
-  imports: [RouterLink, TranslateModule, SafePipe, MiniSpinningComponent, FrameItemAnimationComponent, ReflectionFontComponent, FrameItemMobileComponent],
-  templateUrl: './commission-form.component.html',
-  styleUrl: './commission-form.component.scss'
+    selector: 'app-commission-form',
+    imports: [RouterLink, TranslateModule, SafePipe, MiniSpinningComponent, FrameItemAnimationComponent, ReflectionFontComponent, FrameItemMobileComponent],
+    templateUrl: './commission-form.component.html',
+    styleUrl: './commission-form.component.scss'
 })
 export class CommissionFormComponent implements OnInit {
   typeCommission = {

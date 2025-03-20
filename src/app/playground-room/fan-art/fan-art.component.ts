@@ -6,11 +6,10 @@ import { ReflectionFontComponent } from '../../shared/reflection-font/reflection
 import { PlaygroundBottomMenuComponent } from '../playground-bottom-menu/playground-bottom-menu.component';
 
 @Component({
-  selector: 'app-fan-art',
-  standalone: true,
-  imports: [ReflectionFontComponent, TranslateModule, GalleryRoomComponent, RouterLink, PlaygroundBottomMenuComponent],
-  templateUrl: './fan-art.component.html',
-  styleUrl: './fan-art.component.scss'
+    selector: 'app-fan-art',
+    imports: [ReflectionFontComponent, TranslateModule, GalleryRoomComponent, RouterLink, PlaygroundBottomMenuComponent],
+    templateUrl: './fan-art.component.html',
+    styleUrl: './fan-art.component.scss'
 })
 export class FanArtComponent {
   fanart1 = [
