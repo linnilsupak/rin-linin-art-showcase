@@ -10,7 +10,7 @@
 </div>
 <app-frame-item-mobile [activeTab]="activeTab" (changeActiveTab)="changeActiveTab($event)"></app-frame-item-mobile>
 <div class="container-fluid container-md mt-4 mt-md-0">
-  <app-frame-item-animation class="d-none d-mblock" [activeVal]="activeTab" (activeTab)="changeActiveTab($event)">
+  <app-frame-item-animation class="hidden d-mblock" [activeVal]="activeTab" (activeTab)="changeActiveTab($event)">
   </app-frame-item-animation>
   <div class="row mb-5">
     <div class="col-12 col-md-4 mb-3 mb-md-0">
@@ -59,7 +59,7 @@
   </div>
   <div class="row mb-5">
     <div class="col-12 col-md-6 mb-3 mb-md-0">
-      <div class="description-frame w-100 h-100 text-start p-4 mb-3  flex flex-column">
+      <div class="description-frame w-100 h-100 text-start p-4 mb-3  flex flex-col">
         <div class="section-sub-topic mb-1">
           {{ 'COMMISSION.METHOD.TITLE' | translate}}
         </div>
@@ -84,7 +84,7 @@
       </div>
     </div>
     <div class="col-12 col-md-6 mb-3 mb-md-0">
-      <div class="description-frame w-100 h-100 text-start p-4 flex flex-column">
+      <div class="description-frame w-100 h-100 text-start p-4 flex flex-col">
         <div class="section-sub-topic mb-1">
           {{ 'TOS.TITLE' | translate}}
         </div>
@@ -135,16 +135,16 @@
   </div>
 </div>
 <div>
-  <div [class.d-none]="activeTab !== commissionTab.FACE && activeTab !== undefined">
+  <div [class.hidden]="activeTab !== commissionTab.FACE && activeTab !== undefined">
     <app-face-commission-example></app-face-commission-example>
   </div>
-  <div [class.d-none]="activeTab !== commissionTab.HALF">
+  <div [class.hidden]="activeTab !== commissionTab.HALF">
     <app-half-commission-example></app-half-commission-example>
   </div>
-  <div [class.d-none]="activeTab !== commissionTab.FULL">
+  <div [class.hidden]="activeTab !== commissionTab.FULL">
     <app-full-commission-example></app-full-commission-example>
   </div>
-  <div [class.d-none]="activeTab !== commissionTab.DETAIL">
+  <div [class.hidden]="activeTab !== commissionTab.DETAIL">
     <app-detail-commission-example></app-detail-commission-example>
   </div>
 </div>

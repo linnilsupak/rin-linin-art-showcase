@@ -18,17 +18,17 @@
       </div>
     </div>
     <div class="tab-body white pt-3 pb-3 px-4">
-      <div class="previous-arrow" (click)="clickPrevious()" [class.d-none]="activeTab === commissionTab.FACE || activeTab === undefined">
+      <div class="previous-arrow" (click)="clickPrevious()" [class.hidden]="activeTab === commissionTab.FACE || activeTab === undefined">
         <span class="material-symbols-rounded mt-5">
           arrow_back_ios
           </span>
       </div>
-      <div class="next-arrow" (click)="clickNext()" [class.d-none]="activeTab === commissionTab.DETAIL">
+      <div class="next-arrow" (click)="clickNext()" [class.hidden]="activeTab === commissionTab.DETAIL">
         <span class="material-symbols-rounded mt-5">
           arrow_forward_ios
           </span>
       </div>
-      <div [class.d-none]="activeTab !== commissionTab.FACE && activeTab !== undefined">
+      <div [class.hidden]="activeTab !== commissionTab.FACE && activeTab !== undefined">
         <div class="section-sub-topic mb-1">
           {{ 'COMMISSION.FACE.TITLE' | translate}}
         </div>
@@ -44,7 +44,7 @@
           {{ 'COMMISSION.SELECT' | translate}}
         </a>
       </div>
-      <div [class.d-none]="activeTab !== commissionTab.HALF">
+      <div [class.hidden]="activeTab !== commissionTab.HALF">
         <div class="section-sub-topic mb-1">
           {{ 'COMMISSION.HALF.TITLE' | translate}}
         </div>
@@ -60,7 +60,7 @@
           {{ 'COMMISSION.SELECT' | translate}}
         </a>
       </div>
-      <div [class.d-none]="activeTab !== commissionTab.FULL">
+      <div [class.hidden]="activeTab !== commissionTab.FULL">
         <div class="section-sub-topic mb-1">
           {{ 'COMMISSION.FULL.TITLE' | translate}}
         </div>
@@ -76,7 +76,7 @@
           {{ 'COMMISSION.SELECT' | translate}}
         </a>
       </div>
-      <div [class.d-none]="activeTab !== commissionTab.DETAIL">
+      <div [class.hidden]="activeTab !== commissionTab.DETAIL">
         <div class="section-sub-topic mb-1">
           {{ 'COMMISSION.DETAIL.TITLE' | translate}}<span class="d-inline md:hidden d-lg-inline">{{
             'COMMISSION.DETAIL.TITLE2' | translate}}</span>

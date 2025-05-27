@@ -4,4 +4,4 @@
   </div>
 }
 <img #imageShow [src]="srcLink" (load)="imageFinishLoad()" (error)="imageFinishLoad()"
-alt="{{ alt }}"  [class.d-none]="imageLoading" class="{{class}}">
+alt="{{ alt }}"  [class.hidden]="imageLoading" class="{{class}}">

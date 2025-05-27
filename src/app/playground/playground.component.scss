@@ -25,9 +25,3 @@ $item-width: 260px;
         margin-bottom: 0;
     }
 }
-
-.after-reflection {
-    @media (width >= var.$lg) {
-        margin-top: -66px;
-    }
-}

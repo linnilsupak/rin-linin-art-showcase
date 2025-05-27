@@ -4,7 +4,7 @@
       <img src="{{imageUrl}}" class="w-100 character-frame my-auto" [class.ms-lg-auto]="arrangement === 'left'" [alt]="title">
     </div>
     <div class="col-12 flex" [class.col-lg-6]="arrangement === 'right'" [class.col-lg-5]="arrangement === 'left'">
-      <div class="description-frame p-md-5 flex flex-column"
+      <div class="description-frame p-md-5 flex flex-col"
       [class.order-lg-first]="arrangement === 'right'" [class.ms-lg-auto]="arrangement === 'right'">
         <div class="section-sub-topic mb-2 mb-md-4">
           {{ title | translate}}

@@ -47,7 +47,7 @@
   }
   @if (galleryRoom?.length === 3) {
     <div class="row">
-      <div class="col-12  mb-3 flex flex-column" [class.col-md-4]="pattern !== 'center'"  [class.col-md-5]="pattern === 'center'">
+      <div class="col-12  mb-3 flex flex-col" [class.col-md-4]="pattern !== 'center'"  [class.col-md-5]="pattern === 'center'">
         <a class="{{galleryRoom[0].frameStyle}} small mini-frame-300 mt-auto ms-auto me-auto me-md-0 mb-3 hover"
         (click)="openArtWorkLabel(galleryRoom[0])" title="{{ galleryRoom[0].content.title }}">
           <app-image-placement [srcLink]="galleryRoom[0].picUrl | imagePreview:galleryRoom[0]?.previewPic?.disabled"
@@ -73,7 +73,7 @@
   }
   @if (galleryRoom?.length >= 4) {
   <div class="row mb-3" [appScrollIntoViewWhenReach]="enableAutoScrollFirstRow">
-    <div class="col-12 col-xl-3 flex flex-column"
+    <div class="col-12 col-xl-3 flex flex-col"
     [ngClass]="{'col-lg-3': pattern !== '3-rows', 'col-lg-2': pattern === '3-rows'}">
       <a class="{{ galleryRoom[0].frameStyle }} original-slide-in slide-in hover mt-0 mt-lg-auto ms-auto me-auto me-lg-0 mb-2 mb-lg-0"
         (click)="openArtWorkLabel(galleryRoom[0])" title="{{ galleryRoom[0].content.title }}">
@@ -201,7 +201,7 @@
   }
   @if (galleryRoom?.length === 8 && pattern === '3-rows') {
   <div class="row mb-3">
-    <div class="col-1 d-none d-lg-block"></div>
+    <div class="col-1 hidden d-lg-block"></div>
     <div class="col-12 col-lg-5 flex">
       <div class="{{ galleryRoom[4].frameStyle }} hover original-slide-in me-auto ms-auto ms-lg-3 mb-3"
         (click)="openArtWorkLabel(galleryRoom[4])" title="{{ galleryRoom[4].content.title }}"
@@ -222,7 +222,7 @@
     </div>
   </div>
   <div class="row mb-3" [appScrollIntoViewWhenReach]>
-    <div class="col-3 d-none d-lg-block"></div>
+    <div class="col-3 hidden d-lg-block"></div>
     <div class="col-12 col-lg-4 flex">
       <div
         class="{{ galleryRoom[6].frameStyle }} hover original-slide-in mb-3 mini-frame-300 flex ms-auto me-auto me-lg-0 small"

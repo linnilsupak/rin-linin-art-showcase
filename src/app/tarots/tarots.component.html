@@ -21,7 +21,7 @@
     </div>
     <div class="row justify-center items-start">
       @for (card of tarots.major; track card.name) {
-      <a [routerLink]="[ '/tarot-meaning', card.category | lowercase, card.number]" class="my-3 col-4 col-lg-2 flex flex-column justify-center">
+      <a [routerLink]="[ '/tarot-meaning', card.category | lowercase, card.number]" class="my-3 col-4 col-lg-2 flex flex-col justify-center">
         <img src="{{ card?.imageUrl || '/assets/images/tarot/coming_soon_card.webp?v=1'}}" alt="{{card.name}}"
           class="card mb-3 mx-auto" />
         <h5 class="card-title">{{ card.name }}</h5>
@@ -39,7 +39,7 @@
     </div>
     <div class="row justify-center items-start">
       @for (card of tarots.wands; track card.name) {
-      <a [routerLink]="[ '/tarot-meaning', card.category | lowercase, card.number]" class="my-3 col-4 col-lg-2 flex flex-column justify-center">
+      <a [routerLink]="[ '/tarot-meaning', card.category | lowercase, card.number]" class="my-3 col-4 col-lg-2 flex flex-col justify-center">
         <img src="{{ card?.imageUrl || '/assets/images/tarot/coming_soon_card.webp'}}" alt="{{card.name}}"
           class="card mb-3 mx-auto" />
         <h5 class="card-title">{{ card.name }}</h5>
@@ -57,7 +57,7 @@
     </div>
     <div class="row justify-center items-start">
       @for (card of tarots.cups; track card.name) {
-      <a [routerLink]="[ '/tarot-meaning', card.category | lowercase, card.number]" class="my-3 col-4 col-lg-2 flex flex-column justify-center">
+      <a [routerLink]="[ '/tarot-meaning', card.category | lowercase, card.number]" class="my-3 col-4 col-lg-2 flex flex-col justify-center">
         <img src="{{ card?.imageUrl || '/assets/images/tarot/coming_soon_card.webp'}}" alt="{{card.name}}"
           class="card mb-3 mx-auto" />
         <h5 class="card-title">{{ card.name }}</h5>
@@ -75,7 +75,7 @@
     </div>
     <div class="row justify-center items-start">
       @for (card of tarots.swords; track card.name) {
-      <a [routerLink]="[ '/tarot-meaning', card.category | lowercase, card.number]" class="my-3 col-4 col-lg-2 flex flex-column justify-center">
+      <a [routerLink]="[ '/tarot-meaning', card.category | lowercase, card.number]" class="my-3 col-4 col-lg-2 flex flex-col justify-center">
         <img src="{{ card?.imageUrl || '/assets/images/tarot/coming_soon_card.webp'}}" alt="{{card.name}}"
           class="card mb-3 mx-auto" />
         <h5 class="card-title">{{ card.name }}</h5>
@@ -93,7 +93,7 @@
     </div>
     <div class="row justify-center items-start">
       @for (card of tarots.coins; track card.name) {
-      <a [routerLink]="[ '/tarot-meaning', card.category | lowercase, card.number]" class="my-3 col-4 col-lg-2 flex flex-column justify-center">
+      <a [routerLink]="[ '/tarot-meaning', card.category | lowercase, card.number]" class="my-3 col-4 col-lg-2 flex flex-col justify-center">
         <img src="{{ card?.imageUrl || '/assets/images/tarot/coming_soon_card.webp'}}" alt="{{card.name}}"
           class="card mb-3 mx-auto" />
         <h5 class="card-title">{{ card.name }}</h5>

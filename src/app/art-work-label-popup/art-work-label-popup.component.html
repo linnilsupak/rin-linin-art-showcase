@@ -9,11 +9,11 @@
         }
         <img src="{{ picUrl() }}" srcset="{{ noImageSrc ? '' : (picUrl() | imageSrcset)}}"
         [style.min-width]="minWidth()" [style.min-height]="minHeight()" #imageShow
-        class="show-real-width" (load)="imageFinishLoad()" [class.d-none]="imageLoading">
+        class="show-real-width" (load)="imageFinishLoad()" [class.hidden]="imageLoading">
       </div>
     </div>
     <div class="col-12 flex" [class.col-md]="!isRecTemplate()" [class.col-md-4]="isRecTemplate()">
-      <div class="art-tag flex flex-column my-auto p-2 items-center align-start:md mx-auto">
+      <div class="art-tag flex flex-col my-auto p-2 items-center align-start:md mx-auto">
         <b class="title" [innerHTML]="title()"></b>
         <i class="title-2" [innerHTML]="title2()"></i>
         <div class="mb-2 sub-title text-center text-md-start">{{ subTitle()}}</div>

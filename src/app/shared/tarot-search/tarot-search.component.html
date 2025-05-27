@@ -1,6 +1,6 @@
 <div class="flex mb-4">
-    <form [formGroup]="filterForm" class="mx-0 mx-sm-auto flex big-search flex-column flex-sm-row" [ngClass]="{'mini-form mat-form-field-no-validation': view === 'sticky'}">
-      <mat-form-field class="me-2 select d-none d-mblock" [appearance]="view === 'sticky' ? 'outline':'fill'">
+    <form [formGroup]="filterForm" class="mx-0 mx-sm-auto flex big-search flex-col flex-sm-row" [ngClass]="{'mini-form mat-form-field-no-validation': view === 'sticky'}">
+      <mat-form-field class="me-2 select hidden d-mblock" [appearance]="view === 'sticky' ? 'outline':'fill'">
         <mat-label>Category</mat-label>
         <mat-select formControlName="category">
           @for (item of category; track item) {
@@ -43,7 +43,7 @@
             }
         }
       </mat-autocomplete>
-      <a mat-flat-button type="button" class="ms-0 ms-md-5" [ngClass]="{'mini-button d-none d-mblock': view === 'sticky', 'big-button': view === 'tarot'}"
+      <a mat-flat-button type="button" class="ms-0 ms-md-5" [ngClass]="{'mini-button hidden d-mblock': view === 'sticky', 'big-button': view === 'tarot'}"
       routerLink="/contact-me" [queryParams]="{ prefill: preOrder, backUrl: '/tarots' }">
         <div class="flex text-nowrap justify-center h-100 items-center">
           <span class="material-symbols-rounded me-2">shopping_cart</span>
