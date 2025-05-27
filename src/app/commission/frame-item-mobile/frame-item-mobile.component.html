@@ -1,5 +1,5 @@
 
-<div class="d-block d-md-none">
+<div class="block md:hidden">
     <div class="tab-list white" [appScrollToCenter]="22">
       <div class="tab-item" [class.active]="activeTab === commissionTab.FACE || activeTab === undefined"
         (click)="this.changeActiveTab.emit(commissionTab.FACE)">
@@ -78,7 +78,7 @@
       </div>
       <div [class.d-none]="activeTab !== commissionTab.DETAIL">
         <div class="section-sub-topic mb-1">
-          {{ 'COMMISSION.DETAIL.TITLE' | translate}}<span class="d-inline d-md-none d-lg-inline">{{
+          {{ 'COMMISSION.DETAIL.TITLE' | translate}}<span class="d-inline md:hidden d-lg-inline">{{
             'COMMISSION.DETAIL.TITLE2' | translate}}</span>
         </div>
         <div class="price">{{ 'COMMISSION.DETAIL.PRICE' | translate}}</div>

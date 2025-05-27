@@ -1,5 +1,5 @@
-<div class="sub-title top-content-frame d-flex mx-auto mt-3">
-  <a routerLink="{{ backUrl}}" class="d-flex align-items-center ms-auto ms-md-4 me-auto">
+<div class="sub-title top-content-frame flex mx-auto mt-3">
+  <a routerLink="{{ backUrl}}" class="flex items-center ms-auto ms-md-4 me-auto">
     <span class="material-symbols-rounded">
       arrow_back_ios
     </span> Back
@@ -7,7 +7,7 @@
 </div>
 @if (activeTab) {
   @if (loading) {
-    <div class="d-flex justify-content-center align-items-center loading-div">
+    <div class="flex justify-center items-center loading-div">
       <app-mini-spinning class=""></app-mini-spinning>
     </div>
   }
@@ -18,7 +18,7 @@
     <app-reflection-font [text]="'COMMISSION.CHOOSE' | translate" [fontClass]="'sub-title mx-auto'"></app-reflection-font>
   </div>
   <app-frame-item-mobile [activeTab]="activeTab"></app-frame-item-mobile>
-  <div class="container-fluid container-lg mt-4 mt-md-0 d-none d-md-block">
+  <div class="container-fluid container-lg mt-4 mt-md-0 d-none d-mblock">
     <app-frame-item-animation>
     </app-frame-item-animation>
   </div>

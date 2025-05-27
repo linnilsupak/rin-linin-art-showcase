@@ -10,24 +10,18 @@
     {{'GLOBAL.DONT_LIST' | translate}}<br />
     {{'GLOBAL.DONT_LIST_SUB' | translate}}
   </div>
-  <div class="row justify-content-center align-items-start">
-    <div class="col-4">
+  <div class="flex gap-4 justify-center items-start">
       <app-image-card [imageUrl]="'/assets/images/home/home-playground-border.webp'" [minHeight]="'24em'"
       [link]="'/playground'" [title]="'Playground'" [miniTitle]="'Playground illustration'"/>
-    </div>
-    <div class="col-4">
       <app-image-card [imageUrl]="'/assets/images/home/home-tarot-border.webp'" [minHeight]="'24em'"
       [link]="'/tarots'" [title]="'Tarot'" [miniTitle]="'Tarot card'"/>
-    </div>
-    <div class="col-4">
       <app-image-card [imageUrl]="'/assets/images/home/home-original-border.webp'" [minHeight]="'24em'"
       [link]="'/original'" [title]="'Original'" [miniTitle]="'Original works'"/>
-    </div>
   </div>
   <div class="mt-4">
     <app-reflection-font [text]="'HOME.SHOW_CASE' | translate" [fontClass]="'sub-title mx-auto'"></app-reflection-font>
   </div>
-  <div class="d-flex align-items-center justify-content-center flex-column flex-md-row">
+  <div class="flex items-center justify-center flex-column flex-md-row">
     <app-character-icon link="/tarots" img="/assets/images/home/eight_of_cup_preview.webp"
       hoverDescription="Tarot" label="Eight of cups" [disableSvg]="true"></app-character-icon>
     <app-character-icon link="/tarots" img="/assets/images/home/ace_of_cup_preview.webp"
@@ -35,7 +29,7 @@
     <app-character-icon link="/character-info/elysia" img="/assets/images/home/elysia_ori_rin_linin.webp"
       hoverDescription="Original" label="Elysia" [disableSvg]="true"></app-character-icon>
   </div>
-  <div class="d-flex align-items-center justify-content-center flex-column flex-md-row">
+  <div class="flex items-center justify-center flex-column flex-md-row">
     <app-character-icon link="/playground-room/vocaloid-fan-art" img="/assets/images/home/bridal_miku_rin_linin_preview.webp"
       hoverDescription="Playground" label="Bridal Miku" [disableSvg]="true"></app-character-icon>
     <app-character-icon link="/playground-room/art-fight-2024" img="/assets/images/home/francois_ori_rin_linin.webp"
@@ -43,34 +37,33 @@
   </div>
 </div>
 <div class="dark-white-section px-1 px-md-4 py-4 mt-5">
-  <div class="container-fluid container-lg">
-    <div class="row">
-      <div class="col-12">
-        <app-reflection-font [text]="'HOME.COMMISSION' | translate" [fontClass]="'mx-auto sub-title'"></app-reflection-font>
-      </div>
+  <div>
+    <div class="flex justify-center items-center">
+      <app-reflection-font [text]="'HOME.COMMISSION' | translate" [fontClass]="'mx-auto sub-title'"></app-reflection-font>
     </div>
-    <div class="row after-reflect">
-      <div class="col-12 col-md-6">
-        <img src="/assets/images/home/commission_example.png" srcset="{{ '/assets/images/home/commission_example.png' | imageSrcset }}"
-        class="w-100"/>
-      </div>
-      <div class="col-12 col-md-6 text-center">
-        <div class="description-frame p-4 mt-3">
-          <div class="section-sub-topic mb-1">
-            Want an art to go with your project?
-          </div>
-          <div class="mt-2">
-            You want your character draw in a cool way<br/>
-            A gift to someone<br/>
-            A book cover for your novel
-          </div>
-          <div class="section-sub-topic my-3">
-            You come at a right place!
-          </div>
-          <div class="my-5 d-flex">
-            <a [routerLink]="'/commission'" class="mx-auto">
-              <app-playground-menu [label]="'See more detail'"></app-playground-menu>
-            </a>
+    <div class="after-reflect md:container md:mx-auto">
+      <div class="grid max-sm:grid-cols-1 md:grid-cols-2 gap-4 mx-auto">
+        <div class="flex justify-end">
+          <img src="/assets/images/home/commission_example.png" srcset="{{ '/assets/images/home/commission_example.png' | imageSrcset }}"/>
+        </div>
+        <div class="text-center me-auto">
+          <div class="description-frame p-4 mt-3">
+            <div class="section-sub-topic mb-1">
+              Want an art to go with your project?
+            </div>
+            <div class="mt-2">
+              You want your character draw in a cool way<br/>
+              A gift to someone<br/>
+              A book cover for your novel
+            </div>
+            <div class="section-sub-topic my-3">
+              You come at a right place!
+            </div>
+            <div class="my-5 flex">
+              <a [routerLink]="'/commission'" class="mx-auto">
+                <app-playground-menu [label]="'See more detail'"></app-playground-menu>
+              </a>
+            </div>
           </div>
         </div>
       </div>
@@ -79,7 +72,7 @@
 </div>
 <div class="p-4 dark-section">
   <app-about-me-pic-header [isHome]="true"></app-about-me-pic-header>
-  <div class="d-flex">
+  <div class="flex">
     <hr class="about-me-line mx-auto mt-0"/>
   </div>
   <app-social-media-section></app-social-media-section>

@@ -1,7 +1,7 @@
 @if(pattern === 'equal') {
   <div class="row" [appScrollIntoViewWhenReach]="enableAutoScrollFirstRow">
     @for(room of galleryRoom; track room;let first=$first, last=$last, index=$index) {
-      <div class="col-12 mb-3 d-flex col-md-{{ 12/ galleryRoom.length}} d-flex">
+      <div class="col-12 mb-3 flex col-md-{{ 12/ galleryRoom.length}} flex">
         <a class="{{room.frameStyle}} hover my-auto"  [ngClass]="{'m-auto': !last && !first, 'ms-auto me-auto': first || last, 'me-md-0': first && galleryRoom.length < 3,
         'ms-md-0': last  && galleryRoom.length < 3, 'original-slide-in': enableSlidIn}"
         (click)="openArtWorkLabel(room)" title="{{ room.content.title }}" [appAddClassOnScrollPosition]="enableSlidIn ? 'slide-in': ''" [addClassDelay]="index * 200">
@@ -15,8 +15,8 @@
 } @else {
   @if (galleryRoom?.length === 1) {
     <div class="row">
-      <div class="col-12 d-flex">
-        <a class="{{galleryRoom[0].frameStyle}} small hover d-block m-auto"
+      <div class="col-12 flex">
+        <a class="{{galleryRoom[0].frameStyle}} small hover block m-auto"
         (click)="openArtWorkLabel(galleryRoom[0])" title="{{ galleryRoom[0].content.title }}">
           <app-image-placement [srcLink]="galleryRoom[0].picUrl | imagePreview:galleryRoom[0]?.previewPic?.disabled"
           [width]="galleryRoom[0].previewPic.width" [height]="galleryRoom[0].previewPic.height"
@@ -27,7 +27,7 @@
   }
   @if (galleryRoom?.length === 2) {
     <div class="row">
-      <div class="col-12 mb-3 d-flex col-md-8">
+      <div class="col-12 mb-3 flex col-md-8">
         <a class="{{galleryRoom[0].frameStyle}} hover my-auto ms-auto me-auto me-md-0"
         (click)="openArtWorkLabel(galleryRoom[0])" title="{{ galleryRoom[0].content.title }}">
           <app-image-placement [srcLink]="galleryRoom[0].picUrl | imagePreview:galleryRoom[0]?.previewPic?.disabled"
@@ -35,7 +35,7 @@
           [alt]="galleryRoom[0].content.title"></app-image-placement>
         </a>
       </div>
-      <div class="col-12 mb-3 d-flex col-md-4">
+      <div class="col-12 mb-3 flex col-md-4">
         <a class="{{galleryRoom[1].frameStyle}} hover my-auto ms-auto me-auto ms-md-0"
         (click)="openArtWorkLabel(galleryRoom[1])" title="{{ galleryRoom[1].content.title }}">
           <app-image-placement [srcLink]="galleryRoom[1].picUrl | imagePreview:galleryRoom[1]?.previewPic?.disabled"
@@ -47,7 +47,7 @@
   }
   @if (galleryRoom?.length === 3) {
     <div class="row">
-      <div class="col-12  mb-3 d-flex flex-column" [class.col-md-4]="pattern !== 'center'"  [class.col-md-5]="pattern === 'center'">
+      <div class="col-12  mb-3 flex flex-column" [class.col-md-4]="pattern !== 'center'"  [class.col-md-5]="pattern === 'center'">
         <a class="{{galleryRoom[0].frameStyle}} small mini-frame-300 mt-auto ms-auto me-auto me-md-0 mb-3 hover"
         (click)="openArtWorkLabel(galleryRoom[0])" title="{{ galleryRoom[0].content.title }}">
           <app-image-placement [srcLink]="galleryRoom[0].picUrl | imagePreview:galleryRoom[0]?.previewPic?.disabled"
@@ -61,7 +61,7 @@
         [alt]="galleryRoom[1].content.title"></app-image-placement>
         </div>
       </div>
-      <div class="col-12 mb-3 d-flex" [class.col-md-8]="pattern !== 'center'"  [class.col-md-7]="pattern === 'center'">
+      <div class="col-12 mb-3 flex" [class.col-md-8]="pattern !== 'center'"  [class.col-md-7]="pattern === 'center'">
         <div class="{{galleryRoom[2].frameStyle}} me-auto ms-auto ms-md-0 hover"
         (click)="openArtWorkLabel(galleryRoom[2])" title="{{ galleryRoom[2].content.title }}">
         <app-image-placement [srcLink]="galleryRoom[2].picUrl | imagePreview:galleryRoom[2]?.previewPic?.disabled"
@@ -73,7 +73,7 @@
   }
   @if (galleryRoom?.length >= 4) {
   <div class="row mb-3" [appScrollIntoViewWhenReach]="enableAutoScrollFirstRow">
-    <div class="col-12 col-xl-3 d-flex flex-column"
+    <div class="col-12 col-xl-3 flex flex-column"
     [ngClass]="{'col-lg-3': pattern !== '3-rows', 'col-lg-2': pattern === '3-rows'}">
       <a class="{{ galleryRoom[0].frameStyle }} original-slide-in slide-in hover mt-0 mt-lg-auto ms-auto me-auto me-lg-0 mb-2 mb-lg-0"
         (click)="openArtWorkLabel(galleryRoom[0])" title="{{ galleryRoom[0].content.title }}">
@@ -88,7 +88,7 @@
         [alt]="galleryRoom[1].content.title"></app-image-placement>
       </div>
     </div>
-    <div class="col-12 col-lg-4 col-xl-5 d-flex align-items-end mt-3 mt-lg-0">
+    <div class="col-12 col-lg-4 col-xl-5 flex items-end mt-3 mt-lg-0">
       <div class="{{ galleryRoom[2].frameStyle }} hover mx-auto original-slide-in slide-in"
         (click)="openArtWorkLabel(galleryRoom[2])" title="{{ galleryRoom[2].content.title }}">
         <app-image-placement [srcLink]="galleryRoom[2].picUrl | imagePreview:galleryRoom[2]?.previewPic?.disabled"
@@ -96,7 +96,7 @@
         [alt]="galleryRoom[2].content.title"></app-image-placement>
       </div>
     </div>
-    <div class="col-12 col-lg-4 d-flex mt-3 mt-lg-0">
+    <div class="col-12 col-lg-4 flex mt-3 mt-lg-0">
       <div
         class="{{ galleryRoom[3].frameStyle }} original-slide-in slide-in hover mt-auto me-auto ms-auto ms-lg-0  mini-frame-400"
         (click)="openArtWorkLabel(galleryRoom[3])" title="{{ galleryRoom[3].content.title }}">
@@ -109,7 +109,7 @@
   }
   @if (galleryRoom?.length === 6) {
   <div class="row mb-3" [appScrollIntoViewWhenReach]="enableAutoScrollFirstRow">
-    <div class="col-12 col-lg-8 col-xl-7 d-flex">
+    <div class="col-12 col-lg-8 col-xl-7 flex">
       <div class="{{ galleryRoom[4].frameStyle }} hover ms-auto me-auto me-lg-0 mb-3 mb-lg-0" [class.original-slide-in]="enableSlidIn"
         (click)="openArtWorkLabel(galleryRoom[4])" title="{{ galleryRoom[4].content.title }} "
         [appAddClassOnScrollPosition]="enableSlidIn? 'slide-in': ''">
@@ -118,8 +118,8 @@
         [alt]="galleryRoom[4].content.title"></app-image-placement>
       </div>
     </div>
-    <div class="col-12 col-lg-4 col-xl-5 d-flex">
-      <div class="{{ galleryRoom[5].frameStyle }} hover original-slide-in mini-frame-300 me-auto ms-auto ms-lg-0 d-flex mb-auto"
+    <div class="col-12 col-lg-4 col-xl-5 flex">
+      <div class="{{ galleryRoom[5].frameStyle }} hover original-slide-in mini-frame-300 me-auto ms-auto ms-lg-0 flex mb-auto"
         (click)="openArtWorkLabel(galleryRoom[5])" title="{{ galleryRoom[5].content.title }}"
         [appAddClassOnScrollPosition]="'slide-in'" [addClassDelay]="200">
         <app-image-placement [srcLink]="galleryRoom[5].picUrl | imagePreview:galleryRoom[5]?.previewPic?.disabled"
@@ -131,7 +131,7 @@
   }
   @if (galleryRoom?.length === 7) {
     <div class="row mb-3">
-      <div class="col-12 col-lg-4 d-flex">
+      <div class="col-12 col-lg-4 flex">
         <div class="{{ galleryRoom[4].frameStyle }} hover original-slide-in mb-auto ms-auto me-auto me-lg-0 mb-auto"
           (click)="openArtWorkLabel(galleryRoom[4])" title="{{ galleryRoom[4].content.title }}"
           [appAddClassOnScrollPosition]="'slide-in'">
@@ -140,7 +140,7 @@
           [alt]="galleryRoom[4].content.title"></app-image-placement>
         </div>
       </div>
-      <div class="col-12 col-lg-4 d-flex">
+      <div class="col-12 col-lg-4 flex">
         <div class="{{ galleryRoom[5].frameStyle }} hover original-slide-in mx-auto width-fit-content mb-auto"
           (click)="openArtWorkLabel(galleryRoom[5])" title="{{ galleryRoom[5].content.title }}"
           [appAddClassOnScrollPosition]="'slide-in'"[addClassDelay]="200">
@@ -149,7 +149,7 @@
           [alt]="galleryRoom[5].content.title"></app-image-placement>
         </div>
       </div>
-      <div class="col-12 col-lg-4 d-flex">
+      <div class="col-12 col-lg-4 flex">
         <div class="{{ galleryRoom[6].frameStyle }} hover original-slide-in ms-auto me-auto ms-lg-0 mb-auto" (click)="openArtWorkLabel(galleryRoom[6])"
           title="{{ galleryRoom[6].content.title }}" [appAddClassOnScrollPosition]="'slide-in'" [addClassDelay]="400">
           <app-image-placement [srcLink]="galleryRoom[6].picUrl | imagePreview:galleryRoom[6]?.previewPic?.disabled"
@@ -162,7 +162,7 @@
   @if (galleryRoom?.length === 8 && (pattern === 'wide' || !pattern)) {
   <div class="row mb-3">
     <div class="col-12 col-lg-8">
-      <div class="row d-flex">
+      <div class="row flex">
         <div class="{{ galleryRoom[4].frameStyle }} hover original-slide-in col-12 col-lg mb-3 mx-auto width-fit-content"
           (click)="openArtWorkLabel(galleryRoom[4])" title="{{ galleryRoom[4].content.title }}"
           [appAddClassOnScrollPosition]="'slide-in'">
@@ -179,7 +179,7 @@
           [alt]="galleryRoom[5].content.title"></app-image-placement>
         </div>
       </div>
-      <div class="row d-flex">
+      <div class="row flex">
         <div class="{{ galleryRoom[6].frameStyle }} hover original-slide-in mx-auto mb-3 mb-lg-0  mini-frame-300"
           (click)="openArtWorkLabel(galleryRoom[6])" title="{{ galleryRoom[6].content.title }}"
           [appAddClassOnScrollPosition]="'slide-in'" [addClassDelay]="300">
@@ -189,7 +189,7 @@
         </div>
       </div>
     </div>
-    <div class="col-12 col-lg-4 d-flex">
+    <div class="col-12 col-lg-4 flex">
       <div class="{{ galleryRoom[7].frameStyle }} hover original-slide-in" (click)="openArtWorkLabel(galleryRoom[7])"
         title="{{ galleryRoom[7].content.title }}" [appAddClassOnScrollPosition]="'slide-in'">
         <app-image-placement [srcLink]="galleryRoom[7].picUrl | imagePreview:galleryRoom[7]?.previewPic?.disabled"
@@ -202,7 +202,7 @@
   @if (galleryRoom?.length === 8 && pattern === '3-rows') {
   <div class="row mb-3">
     <div class="col-1 d-none d-lg-block"></div>
-    <div class="col-12 col-lg-5 d-flex">
+    <div class="col-12 col-lg-5 flex">
       <div class="{{ galleryRoom[4].frameStyle }} hover original-slide-in me-auto ms-auto ms-lg-3 mb-3"
         (click)="openArtWorkLabel(galleryRoom[4])" title="{{ galleryRoom[4].content.title }}"
         [appAddClassOnScrollPosition]="'slide-in'">
@@ -211,8 +211,8 @@
         [alt]="galleryRoom[4].content.title"></app-image-placement>
       </div>
     </div>
-    <div class="col-12 col-lg-5 d-flex">
-      <div class="{{ galleryRoom[5].frameStyle }} hover original-slide-in mini-frame-300 me-auto ms-auto ms-lg-0 d-flex"
+    <div class="col-12 col-lg-5 flex">
+      <div class="{{ galleryRoom[5].frameStyle }} hover original-slide-in mini-frame-300 me-auto ms-auto ms-lg-0 flex"
         (click)="openArtWorkLabel(galleryRoom[5])" title="{{ galleryRoom[5].content.title }}"
         [appAddClassOnScrollPosition]="'slide-in'" [addClassDelay]="300">
         <app-image-placement [srcLink]="galleryRoom[5].picUrl | imagePreview:galleryRoom[5]?.previewPic?.disabled"
@@ -223,9 +223,9 @@
   </div>
   <div class="row mb-3" [appScrollIntoViewWhenReach]>
     <div class="col-3 d-none d-lg-block"></div>
-    <div class="col-12 col-lg-4 d-flex">
+    <div class="col-12 col-lg-4 flex">
       <div
-        class="{{ galleryRoom[6].frameStyle }} hover original-slide-in mb-3 mini-frame-300 d-flex ms-auto me-auto me-lg-0 small"
+        class="{{ galleryRoom[6].frameStyle }} hover original-slide-in mb-3 mini-frame-300 flex ms-auto me-auto me-lg-0 small"
         (click)="openArtWorkLabel(galleryRoom[6])" title="{{ galleryRoom[6].content.title }}"
         [appAddClassOnScrollPosition]="'slide-in'" [addClassDelay]="100">
         <app-image-placement [srcLink]="galleryRoom[6].picUrl | imagePreview:galleryRoom[6]?.previewPic?.disabled"
@@ -235,7 +235,7 @@
     </div>
     <div class="col-12 col-lg-5">
       <div
-        class="{{ galleryRoom[7].frameStyle }} hover original-slide-in mini-frame-300 me-auto ms-auto ms-lg-0 d-flex small"
+        class="{{ galleryRoom[7].frameStyle }} hover original-slide-in mini-frame-300 me-auto ms-auto ms-lg-0 flex small"
         (click)="openArtWorkLabel(galleryRoom[7])" title="{{ galleryRoom[7].content.title }}"
         [appAddClassOnScrollPosition]="'slide-in'" [addClassDelay]="300">
         <app-image-placement [srcLink]="galleryRoom[7].picUrl | imagePreview:galleryRoom[7]?.previewPic?.disabled"
@@ -248,7 +248,7 @@
   @if (galleryRoom?.length === 9) {
   <div class="row mb-3">
     <div class="col-12 col-lg-9">
-      <div class="row d-flex">
+      <div class="row flex">
         <div class="{{ galleryRoom[4].frameStyle }} hover original-slide-in col-12 col-lg mb-3 mx-auto width-fit-content"
           (click)="openArtWorkLabel(galleryRoom[4])" title="{{ galleryRoom[4].content.title }}"
           [appAddClassOnScrollPosition]="'slide-in'">
@@ -266,7 +266,7 @@
         </div>
       </div>
     </div>
-    <div class="col-12 col-lg-3 d-flex">
+    <div class="col-12 col-lg-3 flex">
       <div class="{{ galleryRoom[6].frameStyle }} hover original-slide-in my-auto" (click)="openArtWorkLabel(galleryRoom[6])"
         title="{{ galleryRoom[7].content.title }}" [appAddClassOnScrollPosition]="'slide-in'">
         <app-image-placement [srcLink]="galleryRoom[6].picUrl | imagePreview:galleryRoom[6]?.previewPic?.disabled"
@@ -274,9 +274,9 @@
         [alt]="galleryRoom[6].content.title"></app-image-placement>
       </div>
     </div>
-    <div class="col-12 col-lg-5 d-flex">
+    <div class="col-12 col-lg-5 flex">
       <div
-        class="{{ galleryRoom[7].frameStyle }} hover original-slide-in mb-3 d-flex ms-auto me-auto me-lg-0 small"
+        class="{{ galleryRoom[7].frameStyle }} hover original-slide-in mb-3 flex ms-auto me-auto me-lg-0 small"
         (click)="openArtWorkLabel(galleryRoom[7])" title="{{ galleryRoom[7].content.title }}"
         [appAddClassOnScrollPosition]="'slide-in'" [addClassDelay]="100">
         <app-image-placement [srcLink]="galleryRoom[7].picUrl | imagePreview:galleryRoom[7]?.previewPic?.disabled"
@@ -286,7 +286,7 @@
     </div>
     <div class="col-12 col-lg-5">
       <div
-        class="{{ galleryRoom[8].frameStyle }} hover original-slide-in me-auto ms-auto ms-lg-0 d-flex small"
+        class="{{ galleryRoom[8].frameStyle }} hover original-slide-in me-auto ms-auto ms-lg-0 flex small"
         (click)="openArtWorkLabel(galleryRoom[8])" title="{{ galleryRoom[8].content.title }}"
         [appAddClassOnScrollPosition]="'slide-in'" [addClassDelay]="300">
         <app-image-placement [srcLink]="galleryRoom[8].picUrl | imagePreview:galleryRoom[8]?.previewPic?.disabled"

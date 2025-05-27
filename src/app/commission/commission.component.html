@@ -10,7 +10,7 @@
 </div>
 <app-frame-item-mobile [activeTab]="activeTab" (changeActiveTab)="changeActiveTab($event)"></app-frame-item-mobile>
 <div class="container-fluid container-md mt-4 mt-md-0">
-  <app-frame-item-animation class="d-none d-md-block" [activeVal]="activeTab" (activeTab)="changeActiveTab($event)">
+  <app-frame-item-animation class="d-none d-mblock" [activeVal]="activeTab" (activeTab)="changeActiveTab($event)">
   </app-frame-item-animation>
   <div class="row mb-5">
     <div class="col-12 col-md-4 mb-3 mb-md-0">
@@ -59,7 +59,7 @@
   </div>
   <div class="row mb-5">
     <div class="col-12 col-md-6 mb-3 mb-md-0">
-      <div class="description-frame w-100 h-100 text-start p-4 mb-3  d-flex flex-column">
+      <div class="description-frame w-100 h-100 text-start p-4 mb-3  flex flex-column">
         <div class="section-sub-topic mb-1">
           {{ 'COMMISSION.METHOD.TITLE' | translate}}
         </div>
@@ -71,7 +71,7 @@
             <li>{{ 'COMMISSION.METHOD.ITEM_4' | translate}}</li>
           </ul>
         </div>
-        <div class="d-flex mt-auto">
+        <div class="flex mt-auto">
           <a routerLink="/commission-form" class="ms-auto">
             <app-more-button>
               {{ 'COMMISSION.CONTINUE' | translate}}
@@ -84,7 +84,7 @@
       </div>
     </div>
     <div class="col-12 col-md-6 mb-3 mb-md-0">
-      <div class="description-frame w-100 h-100 text-start p-4 d-flex flex-column">
+      <div class="description-frame w-100 h-100 text-start p-4 flex flex-column">
         <div class="section-sub-topic mb-1">
           {{ 'TOS.TITLE' | translate}}
         </div>
@@ -104,7 +104,7 @@
             <li>...</li>
           </ul>
         </div>
-        <div class="d-flex mt-auto">
+        <div class="flex mt-auto">
           <a routerLink="/tos" class="ms-auto">
             <app-more-button>
               {{ 'TOS.MORE' | translate}}

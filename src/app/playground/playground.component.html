@@ -7,13 +7,13 @@
   <div class="section-content section-color mx-auto description">
     {{'PLAYGROUND.DESCRIPTION' | translate}}
   </div>
-  <div class="row justify-content-center align-items-stretch after-reflection">
+  <div class="row justify-center items-stretch after-reflection">
     <div class="col-4">
       <app-image-card [imageUrl]="'/assets/images/playground/playground-artfight-card.webp?v=1'" [minHeight]="'36em'"
       [link]="'/playground-room/art-fight-2024'" [title]="'PLAYGROUND.ARTFIGHT_TOPIC' | translate" [miniTitle]="'PLAYGROUND.ARTFIGHT' | translate"/>
     </div>
     <div class="col-4 playground-menu d-none d-lg-flex">
-      <div class="m-auto d-flex flex-column">
+      <div class="m-auto flex flex-column">
         @for(room of playgroundMenuConfig; track room;let first=$first, last=$last) {
           @if (!first && !last) {
             <a [routerLink]="room.link">
@@ -27,8 +27,8 @@
       <app-image-card [imageUrl]="'/assets/images/playground/playground-etc-card.webp'" [minHeight]="'36em'"
       [link]="'/playground-room/etc'" [title]="'PLAYGROUND.ETC_TOPIC' | translate" [miniTitle]="'PLAYGROUND.ETC' | translate"/>
     </div>
-    <div class="col-12 d-flex playground-menu d-lg-none">
-      <div class="m-auto d-flex flex-column">
+    <div class="col-12 flex playground-menu d-lg-none">
+      <div class="m-auto flex flex-column">
         @for(room of playgroundMenuConfig; track room;let first=$first, last=$last) {
           @if (!first && !last) {
             <a [routerLink]="room.link">
@@ -44,7 +44,7 @@
   <div>
     <app-reflection-font [text]="'PLAYGROUND.SHOW_CASE' | translate" [fontClass]="'sub-title mx-auto'"></app-reflection-font>
   </div>
-  <div class="d-flex align-items-center justify-content-center flex-column flex-md-row">
+  <div class="flex items-center justify-center flex-column flex-md-row">
     <app-character-icon link="/playground-room/vocaloid" img="/assets/images/playground/snow_miku_rin_linin_preview.webp"
       hoverDescription="Vocaloid" label="Miku"></app-character-icon>
     <app-character-icon link="/playground-room/sweet-art" img="/assets/images/playground/strwberry_rin_linin_preview.webp"
@@ -52,7 +52,7 @@
     <app-character-icon link="/playground-room/genshin-fan-art" img="/assets/images/playground/lyney_lynette_genshin_rin_linin_preview.webp"
       hoverDescription="Genshin Fanart" label="Lyney Lynette"></app-character-icon>
   </div>
-  <div class="d-flex align-items-center justify-content-center flex-column flex-md-row">
+  <div class="flex items-center justify-center flex-column flex-md-row">
     <app-character-icon link="/playground-room/art-collab" img="/assets/images/playground/rin_linin_color_by_rin_linin_preview.webp"
       hoverDescription="Collab" label="Rin Linin"></app-character-icon>
     <app-character-icon link="/playground-room/vtuber-fan-art" img="/assets/images/playground/dacopo_vtuber_rin_linin_preview.webp"

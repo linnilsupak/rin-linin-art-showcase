@@ -1,10 +1,10 @@
 <div class="row">
-    <div class="col-12 d-flex mb-3 mb-lg-0" [class.col-lg-6]="arrangement === 'right'" [class.col-lg-7]="arrangement === 'left'"
+    <div class="col-12 flex mb-3 mb-lg-0" [class.col-lg-6]="arrangement === 'right'" [class.col-lg-7]="arrangement === 'left'"
     [class.order-lg-last]="arrangement === 'right'">
       <img src="{{imageUrl}}" class="w-100 character-frame my-auto" [class.ms-lg-auto]="arrangement === 'left'" [alt]="title">
     </div>
-    <div class="col-12 d-flex" [class.col-lg-6]="arrangement === 'right'" [class.col-lg-5]="arrangement === 'left'">
-      <div class="description-frame p-md-5 d-flex flex-column"
+    <div class="col-12 flex" [class.col-lg-6]="arrangement === 'right'" [class.col-lg-5]="arrangement === 'left'">
+      <div class="description-frame p-md-5 flex flex-column"
       [class.order-lg-first]="arrangement === 'right'" [class.ms-lg-auto]="arrangement === 'right'">
         <div class="section-sub-topic mb-2 mb-md-4">
           {{ title | translate}}
