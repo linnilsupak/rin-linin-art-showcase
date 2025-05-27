@@ -1,6 +1,4 @@
 @use "variables" as var;
-@import "bootstrap-mixin";
-
 
 .cover {
     // object-fit: none;
@@ -8,7 +6,7 @@
     background-size: cover;
     min-height: 230px;
 
-    @include media-breakpoint-up(lg) {
+    @media (width >= var.$lg) {
         min-height: 226px;
     }
 }
@@ -18,7 +16,7 @@
     font-weight: 700;
     font-size: 1rem;
 
-    @include media-breakpoint-up(md) {
+    @media (width >= var.$md) {
         font-size: 4rem;
         font-size: 1.25rem;
     }
@@ -33,7 +31,7 @@
     background: transparent;
     border-radius: 10px;
     border: 1px solid #{var.$black};
-    @include media-breakpoint-up(lg) {
+    @media (width >= var.$lg) {
       border-radius: 0.9rem;
     }
 }

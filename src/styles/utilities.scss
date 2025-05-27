@@ -9,7 +9,7 @@
   transition: all 1s ease;
   padding-left: 40px;
 
-  @include media-breakpoint-down(md) {
+  @media (width <= var.$md) {
     padding-left: 0px;
   }
 
@@ -46,7 +46,7 @@
   font-weight: 700;
   font-size: 2rem;
 
-  @include media-breakpoint-up(md) {
+  @media (width >= var.$md) {
     font-size: 3rem;
   }
 }
@@ -56,7 +56,7 @@
   font-weight: 700;
   font-size: 1.6rem;
 
-  @include media-breakpoint-up(md) {
+  @media (width >= var.$md) {
     font-size: 2rem;
   }
 }
@@ -99,7 +99,7 @@
   border-radius: 1.2rem;
   background: transparent;
   border: 1px solid #{var.$black};
-  @include media-breakpoint-up(lg) {
+  @media (width >= var.$lg) {
     border-radius: 1.3rem;
   }
 }

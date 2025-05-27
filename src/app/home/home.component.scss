@@ -1,5 +1,5 @@
 @use "character-frame" as char;
-@import "bootstrap-mixin";
+@use "variables" as var;
 
 
 .cover {
@@ -7,7 +7,7 @@
     background-size: cover;
     min-height: 230px;
 
-    @include media-breakpoint-up(lg) {
+    @media (width >= var.$lg) {
         min-height: 226px;
      }
 }

@@ -1,3 +1,4 @@
+@use "variables" as var;
 .circle {
   border-radius: 50%;
 
@@ -10,7 +11,7 @@
   width: fit-content;
   max-width: 100%;
 
-  @include media-breakpoint-up(lg) {
+  @media (width >= var.$lg) {
     width: 200px;
   }
 }
@@ -19,7 +20,7 @@
   width: fit-content;
   max-width: 100%;
 
-  @include media-breakpoint-up(lg) {
+  @media (width >= var.$lg) {
     width: 300px;
   }
 }
@@ -28,7 +29,7 @@
   width: fit-content;
   max-width: 100%;
 
-  @include media-breakpoint-up(lg) {
+  @media (width >= var.$lg) {
     width: 400px;
   }
 }
@@ -36,7 +37,7 @@
   width: fit-content;
   max-width: 100%;
 
-  @include media-breakpoint-up(lg) {
+  @media (width >= var.$lg) {
     width: 500px;
   }
 }
@@ -200,7 +201,7 @@
     object-fit: fill;
 
     &.show-real-width {
-      @include media-breakpoint-up(md) {
+      @media (width >= var.$md) {
         max-width: inherit;
       }
     }

@@ -1,10 +1,9 @@
-import { Component, Input } from '@angular/core';
-import { ReflectionFontComponent } from "../reflection-font/reflection-font.component";
 import { CommonModule } from '@angular/common';
+import { Component, Input } from '@angular/core';
 
 @Component({
     selector: 'app-image-card',
-    imports: [ReflectionFontComponent, CommonModule],
+    imports: [ CommonModule],
     templateUrl: './image-card.component.html',
     styleUrl: './image-card.component.scss'
 })

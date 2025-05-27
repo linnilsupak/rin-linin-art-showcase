@@ -1,6 +1,5 @@
 @use 'variables' as var;
 @use 'character-frame' as char;
-@import "bootstrap-mixin";
 
 .transparent-button {
     border-radius: 26px;
@@ -26,7 +25,7 @@
     &.long {
         background: linear-gradient(180deg, #bda7ff8a, #dcf7ff8f 50%, #ffffff70);
     }
-    
+
     &.dark {
         background: linear-gradient(180deg, #000000b8, #5084ffb3);
         color: var.$white;
@@ -61,7 +60,7 @@
     padding-left: 16px;
     padding-right: 16px;
 
-    @include media-breakpoint-up(lg) {
+   @media (width >= var.$lg) {
         padding-left: 24px;
         padding-right: 24px;
     }
@@ -71,7 +70,7 @@
     font-size: 1.1rem;
     line-height: 2.1rem;
 
-    @include media-breakpoint-up(lg) {
+    @media (width >= var.$lg) {
         font-size: 1.3rem;
         line-height: 2.4rem;
     }

@@ -11,7 +11,7 @@
     background-size: cover;
     min-height: 230px;
 
-    @include media-breakpoint-up(lg) {
+    @media (width >= var.$lg) {
         min-height: 226px;
      }
 }

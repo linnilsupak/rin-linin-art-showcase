@@ -1,5 +1,4 @@
 @use "variables" as var;
-@import "bootstrap-mixin";
 
 .fixed-button {
   position: fixed;
@@ -8,7 +7,7 @@
   cursor: pointer;
   transition: .5s all ease-out;
 
-  @include media-breakpoint-down(md) {
+  @media (width <= var.$md) {
     right: -10px;
   }
   &.hide {
@@ -19,7 +18,7 @@
 .pot {
   width: 100px;
 
-  @include media-breakpoint-down(md) {
+  @media (width <= var.$md) {
     width: 60px;
   }
 }
