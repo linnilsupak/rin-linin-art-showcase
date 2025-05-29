@@ -26,7 +26,7 @@ export class FaceCommissionExampleComponent {
   faceWidescreen5 = commissionExampleConfig.faceWidescreen5;
   customerFeedback = {
     picUrl: '/assets/images/commission/face/arkean_widescreen.webp',
-    picClass: 'w-100',
+    picClass: 'w-full',
     avatarColor: 'green',
     avatarAlphabet: 'A',
     customerName: 'Arkean',

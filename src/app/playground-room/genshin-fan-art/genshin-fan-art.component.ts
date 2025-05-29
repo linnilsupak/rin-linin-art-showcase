@@ -536,7 +536,7 @@ export class GenshinFanArtComponent {
       previewPic: {
         width: 'inherit',
         height: 'inherit',
-        disabled: true
+        disabled: false
       }
     },
     {

@@ -4,7 +4,7 @@
     <app-mini-spinning></app-mini-spinning>
   </div>
 }
-<div class="w-100 mb-5 flex" #parentItem>
+<div class="w-full mb-5 flex" #parentItem>
   @if (!loading) {
   @for (item of tabList; track item;let index=$index) {
   <div class="mb-3 mb-md-0 animate-frame" [style.width.px]="item.width" [style.margin-right.px]="padding">

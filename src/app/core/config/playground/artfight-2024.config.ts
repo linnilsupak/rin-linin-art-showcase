@@ -203,7 +203,7 @@ export const artFight2024GalleryConfig: GalleryRooms = {
     },
     {
       picUrl: '/assets/images/playground/artfight2024/jacaranda_rin_linin.png',
-      frameStyle: 'black-frame mb-auto mx-auto',
+      frameStyle: 'black-frame mb-auto',
       content: {
         title: 'Jacaranda วาดโดย Rin Linin',
         title2: 'ตัวละครของ <a class="underline" href="https://www.instagram.com/@kayleona/" target="_blank">Kayleona</a>',

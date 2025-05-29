@@ -2,7 +2,6 @@
 @use "commission-frame" as commission;
 @use "variables" as var;
 @use "tab-style" as tab;
-@import "bootstrap-mixin";
 
 .cover {
     background-image: url('/assets/images/commission/commission_cover.webp');

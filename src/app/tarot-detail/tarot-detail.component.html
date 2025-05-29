@@ -36,7 +36,7 @@
         [routerLink]="[ '/tarot-meaning', previousTarot.category | lowercase, previousTarot.number]">
         <app-image-placement class="'block'"
           [srcLink]="previousTarot.imageUrl || '/assets/images/tarot/coming_soon_card.webp'"
-          [itemClass]="'w-100 tarot-card'" [height]="'265px'" [alt]="previousTarot.name"></app-image-placement>
+          [itemClass]="'w-full tarot-card'" [height]="'265px'" [alt]="previousTarot.name"></app-image-placement>
         <div class="mt-2">
           {{'TAROT_MEANING.PREVIOUS_CARD' | translate}} <br />
           {{ previousTarot.name}}
@@ -46,7 +46,7 @@
     </div>
     <div class="col-12 col-md-4">
       <div class="target-tarot mx-auto">
-        <app-image-placement [srcLink]="targetTarot.imageUrl || '/assets/images/tarot/coming_soon_card.webp'" itemClass="w-100 tarot-card" [height]="'500px'"
+        <app-image-placement [srcLink]="targetTarot.imageUrl || '/assets/images/tarot/coming_soon_card.webp'" itemClass="w-full tarot-card" [height]="'500px'"
           [alt]="targetTarot.name"></app-image-placement>
       </div>
     </div>
@@ -56,7 +56,7 @@
         [routerLink]="[ '/tarot-meaning', nextTarot.category | lowercase, nextTarot.number]">
         <app-image-placement class="block"
           [srcLink]="nextTarot.imageUrl || '/assets/images/tarot/coming_soon_card.webp'"
-          [itemClass]="'w-100 tarot-card'" [height]="'265px'" [alt]="nextTarot.name"></app-image-placement>
+          [itemClass]="'w-full tarot-card'" [height]="'265px'" [alt]="nextTarot.name"></app-image-placement>
         <div class="mt-2">
           {{'TAROT_MEANING.NEXT_CARD' | translate}} <br />
           {{ nextTarot.name}}
@@ -98,8 +98,8 @@
       </div>
       <div class="container">
         <div class="row mb-3 mb-md-5">
-          <div class="col-12 flex mt-3 mb-3 mb-lg-0 col-lg-4 order-lg-last" >
-            <img src="{{targetTarot.imageUrl}}" class="w-100 character-frame my-auto ms-auto ms-md-0 me-auto sub-tarot" [alt]="targetTarot.name">
+          <div class="col-12 flex mt-3 mb-3 lg:mb-0 col-lg-4 order-lg-last" >
+            <img src="{{targetTarot.imageUrl}}" class="w-full character-frame my-auto ms-auto md:ms-0 me-auto sub-tarot" [alt]="targetTarot.name">
           </div>
           <div class="col-12 flex col-lg-8">
             <div class="description-frame px-md-3 flex flex-col ms-lg-auto order-lg-first">
@@ -113,9 +113,9 @@
           </div>
         </div>
         <div class="row mb-3 mb-md-5">
-          <div class="col-12 flex mt-3 mb-3 mb-lg-0 col-lg-4" >
+          <div class="col-12 flex mt-3 mb-3 lg:mb-0 col-lg-4" >
             <img src="/assets/images/tarot/meaning_icons/love_card.png" srcset="{{ '/assets/images/tarot/meaning_icons/love_card.png' | imageSrcset}}"
-            class="w-100 character-frame my-auto me-md-0 me-auto ms-auto sub-tarot ms-auto" [alt]="targetTarot.name">
+            class="w-full character-frame my-auto md:me-0 me-auto ms-auto sub-tarot ms-auto" [alt]="targetTarot.name">
           </div>
           <div class="col-12 flex col-lg-8">
             <div class="description-frame px-md-5 flex flex-col order-lg-first">
@@ -129,9 +129,9 @@
           </div>
         </div>
         <div class="row mb-3 mb-md-5">
-          <div class="col-12 flex mt-3 mb-3 mb-lg-0 col-lg-4 order-lg-last" >
+          <div class="col-12 flex mt-3 mb-3 lg:mb-0 col-lg-4 order-lg-last" >
             <img src="/assets/images/tarot/meaning_icons/finance_card.png" srcset="{{ '/assets/images/tarot/meaning_icons/finance_card.png' | imageSrcset}}"
-            class="w-100 character-frame my-auto ms-auto ms-md-0 me-auto sub-tarot" [alt]="targetTarot.name">
+            class="w-full character-frame my-auto ms-auto md:ms-0 me-auto sub-tarot" [alt]="targetTarot.name">
           </div>
           <div class="col-12 flex col-lg-8">
             <div class="description-frame px-md-5 flex flex-col ms-lg-auto order-lg-first">
@@ -145,9 +145,9 @@
           </div>
         </div>
         <div class="row mb-3 mb-md-5">
-          <div class="col-12 flex mt-3 mb-3 mb-lg-0 col-lg-4" >
+          <div class="col-12 flex mt-3 mb-3 lg:mb-0 col-lg-4" >
             <img src="/assets/images/tarot/meaning_icons/career_card.png" srcset="{{ '/assets/images/tarot/meaning_icons/career_card.png' | imageSrcset}}"
-            class="w-100 character-frame my-auto me-md-0 me-auto ms-auto sub-tarot ms-auto" [alt]="targetTarot.name">
+            class="w-full character-frame my-auto md:me-0 me-auto ms-auto sub-tarot ms-auto" [alt]="targetTarot.name">
           </div>
           <div class="col-12 flex col-lg-8">
             <div class="description-frame px-md-5 flex flex-col order-lg-first">
@@ -172,9 +172,9 @@
       </div>
       <div class="container">
         <div class="row mb-3 mb-md-5">
-          <div class="col-12 flex mt-3 mb-3 mb-lg-0 col-lg-4 order-lg-last" >
+          <div class="col-12 flex mt-3 mb-3 lg:mb-0 col-lg-4 order-lg-last" >
             <img src="{{targetTarot.imageUrl}}"
-            class="w-100 character-frame reverse my-auto ms-auto ms-md-0 me-auto sub-tarot" [alt]="targetTarot.name">
+            class="w-full character-frame reverse my-auto ms-auto md:ms-0 me-auto sub-tarot" [alt]="targetTarot.name">
           </div>
           <div class="col-12 flex col-lg-8">
             <div class="description-frame px-md-5 flex flex-col ms-lg-auto order-lg-first">
@@ -188,9 +188,9 @@
           </div>
         </div>
         <div class="row mb-3 mb-md-5">
-          <div class="col-12 flex mt-3 mb-3 mb-lg-0 col-lg-4" >
+          <div class="col-12 flex mt-3 mb-3 lg:mb-0 col-lg-4" >
             <img src="/assets/images/tarot/meaning_icons/love_card.png" srcset="{{ '/assets/images/tarot/meaning_icons/love_card.png' | imageSrcset}}"
-            class="w-100 character-frame my-auto me-md-0 me-auto ms-auto sub-tarot ms-auto" [alt]="targetTarot.name">
+            class="w-full character-frame my-auto md:me-0 me-auto ms-auto sub-tarot ms-auto" [alt]="targetTarot.name">
           </div>
           <div class="col-12 flex col-lg-8">
             <div class="description-frame px-md-5 flex flex-col order-lg-first">
@@ -204,9 +204,9 @@
           </div>
         </div>
         <div class="row mb-3 mb-md-5">
-          <div class="col-12 flex mt-3 mb-3 mb-lg-0 col-lg-4 order-lg-last" >
+          <div class="col-12 flex mt-3 mb-3 lg:mb-0 col-lg-4 order-lg-last" >
             <img src="/assets/images/tarot/meaning_icons/finance_card.png" srcset="{{ '/assets/images/tarot/meaning_icons/finance_card.png' | imageSrcset}}"
-            class="w-100 character-frame my-auto ms-auto ms-md-0 me-auto sub-tarot" [alt]="targetTarot.name">
+            class="w-full character-frame my-auto ms-auto md:ms-0 me-auto sub-tarot" [alt]="targetTarot.name">
           </div>
           <div class="col-12 flex col-lg-8">
             <div class="description-frame px-md-5 flex flex-col ms-lg-auto order-lg-first">
@@ -220,9 +220,9 @@
           </div>
         </div>
         <div class="row mb-3 mb-md-5">
-          <div class="col-12 flex mt-3 mb-3 mb-lg-0 col-lg-4" >
+          <div class="col-12 flex mt-3 mb-3 lg:mb-0 col-lg-4" >
             <img src="/assets/images/tarot/meaning_icons/career_card.png" srcset="{{ '/assets/images/tarot/meaning_icons/career_card.png' | imageSrcset}}"
-            class="w-100 character-frame my-auto me-md-0 me-auto ms-auto sub-tarot ms-auto" [alt]="targetTarot.name">
+            class="w-full character-frame my-auto md:me-0 me-auto ms-auto sub-tarot ms-auto" [alt]="targetTarot.name">
           </div>
           <div class="col-12 flex col-lg-8">
             <div class="description-frame px-md-5 flex flex-col order-lg-first">
