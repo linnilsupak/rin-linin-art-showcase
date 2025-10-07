@@ -204,9 +204,9 @@
 </div>
 }
 @if (galleryRoom?.length === 8 && pattern === '3-rows') {
-<div class="row mb-4">
-  <div class="col-1 hidden d-lg-block"></div>
-  <div class="col-12 col-lg-5 flex">
+<div class="grid lg:grid-cols-12 gap-4 mb-4">
+  <div class="col-span-1 hidden d-lg-block"></div>
+  <div class="lg:col-span-5 flex">
     <div class="{{ galleryRoom[4].frameStyle }} hover original-slide-in me-auto ms-auto lg:ms-3 mb-4"
       (click)="openArtWorkLabel(galleryRoom[4])" title="{{ galleryRoom[4].content.title }}"
       [appAddClassOnScrollPosition]="'slide-in'">
@@ -215,7 +215,7 @@
         [alt]="galleryRoom[4].content.title"></app-image-placement>
     </div>
   </div>
-  <div class="col-12 col-lg-5 flex">
+  <div class="lg:col-span-5 flex">
     <div class="{{ galleryRoom[5].frameStyle }} hover original-slide-in mini-frame-300 me-auto ms-auto lg:ms-0 flex"
       (click)="openArtWorkLabel(galleryRoom[5])" title="{{ galleryRoom[5].content.title }}"
       [appAddClassOnScrollPosition]="'slide-in'" [addClassDelay]="300">
@@ -225,9 +225,9 @@
     </div>
   </div>
 </div>
-<div class="row mb-4" [appScrollIntoViewWhenReach]>
-  <div class="col-3 hidden d-lg-block"></div>
-  <div class="col-12 col-lg-4 flex">
+<div class="grid lg:grid-cols-12 gap-4 mb-4" [appScrollIntoViewWhenReach]>
+  <div class="col-span-3 hidden d-lg-block"></div>
+  <div class="col-span-12 lg:col-span-4 flex">
     <div
       class="{{ galleryRoom[6].frameStyle }} hover original-slide-in mb-4 mini-frame-300 flex ms-auto me-auto lg:me-0 small"
       (click)="openArtWorkLabel(galleryRoom[6])" title="{{ galleryRoom[6].content.title }}"
@@ -237,7 +237,7 @@
         [alt]="galleryRoom[6].content.title"></app-image-placement>
     </div>
   </div>
-  <div class="col-12 col-lg-5">
+  <div class="lg:col-span-5">
     <div
       class="{{ galleryRoom[7].frameStyle }} hover original-slide-in mini-frame-300 me-auto ms-auto lg:ms-0 flex small"
       (click)="openArtWorkLabel(galleryRoom[7])" title="{{ galleryRoom[7].content.title }}"
@@ -250,10 +250,10 @@
 </div>
 }
 @if (galleryRoom?.length === 9) {
-<div class="row mb-4">
-  <div class="col-12 col-lg-9">
-    <div class="row flex">
-      <div class="{{ galleryRoom[4].frameStyle }} hover original-slide-in col-12 col-lg mb-4 mx-auto width-fit-content"
+<div class="grid gap-4 mb-4">
+  <div class="lg:col-span-9">
+    <div class="grid lg:grid-cols-12 flex">
+      <div class="{{ galleryRoom[4].frameStyle }} hover original-slide-in mb-4 mx-auto width-fit-content"
         (click)="openArtWorkLabel(galleryRoom[4])" title="{{ galleryRoom[4].content.title }}"
         [appAddClassOnScrollPosition]="'slide-in'">
         <app-image-placement [srcLink]="galleryRoom[4].picUrl | imagePreview:galleryRoom[4]?.previewPic?.disabled"
@@ -261,7 +261,7 @@
           [alt]="galleryRoom[4].content.title"></app-image-placement>
       </div>
       <div
-        class="{{ galleryRoom[5].frameStyle }} hover original-slide-in col-12 col-lg ms-auto lg:ms-3 mb-4 me-auto width-fit-content"
+        class="{{ galleryRoom[5].frameStyle }} hover original-slide-in ms-auto lg:ms-3 mb-4 me-auto width-fit-content"
         (click)="openArtWorkLabel(galleryRoom[5])" title="{{ galleryRoom[5].content.title }}"
         [appAddClassOnScrollPosition]="'slide-in'" [addClassDelay]="200">
         <app-image-placement [srcLink]="galleryRoom[5].picUrl | imagePreview:galleryRoom[5]?.previewPic?.disabled"
@@ -270,7 +270,7 @@
       </div>
     </div>
   </div>
-  <div class="col-12 col-lg-3 flex">
+  <div class="lg:col-span-3 flex">
     <div class="{{ galleryRoom[6].frameStyle }} hover original-slide-in my-auto"
       (click)="openArtWorkLabel(galleryRoom[6])" title="{{ galleryRoom[7].content.title }}"
       [appAddClassOnScrollPosition]="'slide-in'">
@@ -279,7 +279,7 @@
         [alt]="galleryRoom[6].content.title"></app-image-placement>
     </div>
   </div>
-  <div class="col-12 col-lg-5 flex">
+  <div class="lg:col-span-5 flex">
     <div class="{{ galleryRoom[7].frameStyle }} hover original-slide-in mb-4 flex ms-auto me-auto lg:me-0 small"
       (click)="openArtWorkLabel(galleryRoom[7])" title="{{ galleryRoom[7].content.title }}"
       [appAddClassOnScrollPosition]="'slide-in'" [addClassDelay]="100">
@@ -288,7 +288,7 @@
         [alt]="galleryRoom[7].content.title"></app-image-placement>
     </div>
   </div>
-  <div class="col-12 col-lg-5">
+  <div class="lg:col-span-5">
     <div class="{{ galleryRoom[8].frameStyle }} hover original-slide-in me-auto ms-auto lg:ms-0 flex small"
       (click)="openArtWorkLabel(galleryRoom[8])" title="{{ galleryRoom[8].content.title }}"
       [appAddClassOnScrollPosition]="'slide-in'" [addClassDelay]="300">
