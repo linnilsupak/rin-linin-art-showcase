@@ -10,13 +10,13 @@
     <app-reflection-font [text]="characterData?.title | translate"
       [fontClass]="'mx-auto sub-title'"></app-reflection-font>
   </div>
-  <div class="row mb-5">
-    <div class="col-12 col-md-2 flex flex-col mb-3 mb-md-0">
+  <div class="grid md:grid-cols-12 gap-4 mb-5">
+    <div class="md:col-span-2 flex flex-col mb-3 mb-md-0">
       <div class="black-frame small ms-auto me-suto me-md-2">
         <img [src]="characterData?.imageUrl">
       </div>
     </div>
-    <div class="col-12 col-md-10 text-center text-md-start">
+    <div class="md:col-span-10 text-center text-md-start">
       <div class="description-frame px-5">
         <div class="section-sub-topic mb-2 mb-md-4">
           {{ characterData?.title | translate}}
