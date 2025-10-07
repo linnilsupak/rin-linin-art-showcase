@@ -1,24 +1,25 @@
-<div class="row">
-    <div class="col-12 flex mb-3 lg:mb-0" [class.col-lg-6]="arrangement === 'right'" [class.col-lg-7]="arrangement === 'left'"
-    [class.order-lg-last]="arrangement === 'right'">
-      <img src="{{imageUrl}}" class="w-full character-frame my-auto" [class.ms-lg-auto]="arrangement === 'left'" [alt]="title">
-    </div>
-    <div class="col-12 flex" [class.col-lg-6]="arrangement === 'right'" [class.col-lg-5]="arrangement === 'left'">
-      <div class="description-frame p-md-5 flex flex-col"
-      [class.order-lg-first]="arrangement === 'right'" [class.ms-lg-auto]="arrangement === 'right'">
-        <div class="section-sub-topic mb-2 mb-md-4">
-          {{ title | translate}}
-        </div>
-        <div class="section-content mb-4">
-          {{description | translate}}
-        </div>
-        <div class="mt-auto text-end">
-          <a routerLink="/character-info/{{ characterName }}">
-            <app-more-button>
-              {{ 'GLOBAL.MORE' | translate}}
-            </app-more-button>
-          </a>
-        </div>
+<div class="container-fluid container-lg grid lg:grid-cols-12 gap-4">
+  <div class="flex mb-3 lg:mb-0" [class.lg:col-span-6]="arrangement === 'right'" [class.lg:col-span-7]="arrangement === 'left'"
+  [class.lg:order-2]="arrangement === 'right'">
+    <img src="{{imageUrl}}" class="w-full character-frame my-auto" [class.lg:ms-auto]="arrangement === 'left'" [alt]="title">
+  </div>
+  <div class="flex" [class.lg:col-span-6]="arrangement === 'right'" [class.lg:col-span-5]="arrangement === 'left'"
+  [class.lg:order-1]="arrangement === 'right'">
+    <div class="description-frame p-md-5 flex flex-col"
+    [class.lg:order-1]="arrangement === 'right'" [class.lg:ms-auto]="arrangement === 'right'">
+      <div class="section-sub-topic mb-2 mb-md-4">
+        {{ title | translate}}
+      </div>
+      <div class="section-content mb-4">
+        {{description | translate}}
+      </div>
+      <div class="mt-auto text-end">
+        <a routerLink="/character-info/{{ characterName }}">
+          <app-more-button>
+            {{ 'GLOBAL.MORE' | translate}}
+          </app-more-button>
+        </a>
       </div>
     </div>
   </div>
+</div>
