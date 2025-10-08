@@ -1,5 +1,5 @@
 <div class="flex mb-4">
-    <form [formGroup]="filterForm" class="mx-0 mx-sm-auto flex big-search flex-col flex-sm-row" [ngClass]="{'mini-form mat-form-field-no-validation': view === 'sticky'}">
+    <form [formGroup]="filterForm" class="mx-0 sm:mx-auto flex big-search flex-col sm:flex-row" [ngClass]="{'mini-form mat-form-field-no-validation': view === 'sticky'}">
       <mat-form-field class="me-2 select hidden d-mblock" [appearance]="view === 'sticky' ? 'outline':'fill'">
         <mat-label>Category</mat-label>
         <mat-select formControlName="category">
