@@ -250,9 +250,9 @@
 </div>
 }
 @if (galleryRoom?.length === 9) {
-<div class="grid gap-4 mb-4">
+<div class="grid lg:grid-cols-12 gap-4 mb-4">
   <div class="lg:col-span-9">
-    <div class="grid lg:grid-cols-12 flex">
+    <div class="flex">
       <div class="{{ galleryRoom[4].frameStyle }} hover original-slide-in mb-4 mx-auto width-fit-content"
         (click)="openArtWorkLabel(galleryRoom[4])" title="{{ galleryRoom[4].content.title }}"
         [appAddClassOnScrollPosition]="'slide-in'">
