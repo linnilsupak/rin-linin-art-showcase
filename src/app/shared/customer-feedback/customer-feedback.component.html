@@ -1,13 +1,13 @@
 
-<div class="description-frame row mx-1 mx-md-auto">
+<div class="description-frame grid md:grid-cols-12 mx-1 mx-md-auto">
   <div class="col-12 flex"
-  [class.col-md-6]="!customerFeedback.isPortrait"
-  [class.col-md-4]="customerFeedback.isPortrait">
+  [class.md:col-span-6]="!customerFeedback.isPortrait"
+  [class.md:col-span-4]="customerFeedback.isPortrait">
     <img [src]="customerFeedback.picUrl" [class]="customerFeedback.picClass"/>
   </div>
   <div class="col-12 mt-3 mt-md-0"
-  [class.col-md-6]="!customerFeedback.isPortrait"
-  [class.col-md-8]="customerFeedback.isPortrait">
+  [class.md:col-span-6]="!customerFeedback.isPortrait"
+  [class.md:col-span-8]="customerFeedback.isPortrait">
     <div class="flex">
       <app-avatar [defaultColor]="customerFeedback.avatarColor" [defaultAlphabet]="customerFeedback.avatarAlphabet" [width]="40" class="me-3 mb-auto mt-2"></app-avatar>
       <div>
@@ -31,7 +31,6 @@
         </div>
       </div>
       <div class="mt-auto rin-bubble mb-4">
-        <hr class="mx-4" />
         <span [innerHTML]="customerFeedback.description"></span>
       </div>
     </div>
