@@ -132,8 +132,8 @@
 </div>
 }
 @if (galleryRoom?.length === 7) {
-<div class="grid md:grid-cols-5 gap-4 mb-4">
-  <div class="flex md:col-span-2">
+<div class="grid md:grid-cols-3 gap-4 mb-4">
+  <div class="flex">
     <div class="{{ galleryRoom[4].frameStyle }} hover original-slide-in mb-auto ms-auto me-auto lg:me-0 mb-auto"
       (click)="openArtWorkLabel(galleryRoom[4])" title="{{ galleryRoom[4].content.title }}"
       [appAddClassOnScrollPosition]="'slide-in'">
@@ -151,7 +151,7 @@
         [alt]="galleryRoom[5].content.title"></app-image-placement>
     </div>
   </div>
-  <div class="flex md:col-span-2">
+  <div class="flex">
     <div class="{{ galleryRoom[6].frameStyle }} hover original-slide-in ms-auto me-auto lg:ms-0 mb-auto"
       (click)="openArtWorkLabel(galleryRoom[6])" title="{{ galleryRoom[6].content.title }}"
       [appAddClassOnScrollPosition]="'slide-in'" [addClassDelay]="400">
