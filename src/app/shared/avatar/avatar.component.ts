@@ -3,11 +3,10 @@ import { Component, Input } from '@angular/core';
 import {MatTooltipModule} from '@angular/material/tooltip';
 
 @Component({
-  selector: 'app-avatar',
-  standalone: true,
-  imports: [CommonModule, MatTooltipModule],
-  templateUrl: './avatar.component.html',
-  styleUrl: './avatar.component.scss'
+    selector: 'app-avatar',
+    imports: [CommonModule, MatTooltipModule],
+    templateUrl: './avatar.component.html',
+    styleUrl: './avatar.component.scss'
 })
 export class AvatarComponent {
   @Input()

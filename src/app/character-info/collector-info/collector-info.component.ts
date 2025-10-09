@@ -3,11 +3,10 @@ import { TranslateModule } from '@ngx-translate/core';
 import { GalleryRoomComponent } from "../../shared/gallery-room/gallery-room.component";
 
 @Component({
-  selector: 'app-collector-info',
-  standalone: true,
-  imports: [TranslateModule, GalleryRoomComponent],
-  templateUrl: './collector-info.component.html',
-  styleUrl: './collector-info.component.scss'
+    selector: 'app-collector-info',
+    imports: [TranslateModule, GalleryRoomComponent],
+    templateUrl: './collector-info.component.html',
+    styleUrl: './collector-info.component.scss'
 })
 export class CollectorInfoComponent {
   collectorMyart = [

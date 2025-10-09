@@ -1,16 +1,14 @@
 import { Component, inject } from '@angular/core';
-import { TranslateModule } from '@ngx-translate/core';
 import { MatDialog } from '@angular/material/dialog';
+import { TranslateModule } from '@ngx-translate/core';
 import { openArtWorkLabel } from '../../core/utilities/open-art-work-label.util';
-import { ImageSrcsetPipe } from "../../core/pipe/image-srcset.pipe";
 import { GalleryRoomComponent } from "../../shared/gallery-room/gallery-room.component";
 
 @Component({
-  selector: 'app-linin-info',
-  standalone: true,
-  imports: [TranslateModule, ImageSrcsetPipe, GalleryRoomComponent],
-  templateUrl: './linin-info.component.html',
-  styleUrl: './linin-info.component.scss'
+    selector: 'app-linin-info',
+    imports: [TranslateModule, GalleryRoomComponent],
+    templateUrl: './linin-info.component.html',
+    styleUrl: './linin-info.component.scss'
 })
 export class LininInfoComponent {
   private matDialog = inject(MatDialog);

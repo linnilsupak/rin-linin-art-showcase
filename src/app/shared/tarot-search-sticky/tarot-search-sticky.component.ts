@@ -8,11 +8,10 @@ import { Subscription } from 'rxjs';
 import { TarotFormData } from '../../core/models/tarot-form-data.model';
 
 @Component({
-  selector: 'app-tarot-search-sticky',
-  standalone: true,
-  imports: [TarotSearchComponent],
-  templateUrl: './tarot-search-sticky.component.html',
-  styleUrl: './tarot-search-sticky.component.scss'
+    selector: 'app-tarot-search-sticky',
+    imports: [TarotSearchComponent],
+    templateUrl: './tarot-search-sticky.component.html',
+    styleUrl: './tarot-search-sticky.component.scss'
 })
 export class TarotSearchStickyComponent implements OnInit, OnDestroy {
   @Input() hide = false;

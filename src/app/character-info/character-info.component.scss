@@ -1,6 +1,5 @@
 @use 'variables' as var;
 @use 'character-frame' as char;
-@import "bootstrap-mixin";
 
 .description-frame {
   height: 100%;
@@ -54,7 +53,7 @@
     object-fit: fill;
 
     &.show-real-width {
-      @include media-breakpoint-up(md) {
+      @media (width >= var.$md) {
         max-width: inherit;
       }
     }

@@ -3,11 +3,10 @@ import { LoadingService } from '../../loading.service';
 import { MiniSpinningComponent } from "../mini-spinning/mini-spinning.component";
 
 @Component({
-  selector: 'app-loading',
-  standalone: true,
-  imports: [MiniSpinningComponent],
-  templateUrl: './loading.component.html',
-  styleUrl: './loading.component.scss'
+    selector: 'app-loading',
+    imports: [MiniSpinningComponent],
+    templateUrl: './loading.component.html',
+    styleUrl: './loading.component.scss'
 })
 export class LoadingComponent implements OnInit  {
   private loadingService = inject(LoadingService);

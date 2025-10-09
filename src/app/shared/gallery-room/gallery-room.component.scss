@@ -1,1 +1,12 @@
 @use "slide-animation";
+@use "variables" as var;
+
+
+.mini-frame-300 {
+  width: fit-content;
+  max-width: 100%;
+
+  @media (width >= var.$lg) {
+    max-width: 300px;
+  }
+}

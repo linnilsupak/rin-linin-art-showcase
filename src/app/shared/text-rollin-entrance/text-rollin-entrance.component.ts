@@ -8,11 +8,10 @@ interface rotateText {
 }
 
 @Component({
-  selector: 'app-text-rollin-entrance',
-  standalone: true,
-  imports: [CommonModule],
-  templateUrl: './text-rollin-entrance.component.html',
-  styleUrl: './text-rollin-entrance.component.scss'
+    selector: 'app-text-rollin-entrance',
+    imports: [CommonModule],
+    templateUrl: './text-rollin-entrance.component.html',
+    styleUrl: './text-rollin-entrance.component.scss'
 })
 export class TextRollinEntranceComponent implements AfterViewInit {
   @ViewChild('lastItem') lastItem: ElementRef

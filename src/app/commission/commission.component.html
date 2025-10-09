@@ -1,6 +1,6 @@
 <div class="cover">
 </div>
-<div class="container-fluid container-md mt-4">
+<div class="container-fluid md:container mx-auto mt-4">
   <div>
     <app-reflection-font [text]="'COMMISSION.TITLE' | translate" [fontClass]="'mx-auto'"></app-reflection-font>
   </div>
@@ -9,12 +9,12 @@
   </div>
 </div>
 <app-frame-item-mobile [activeTab]="activeTab" (changeActiveTab)="changeActiveTab($event)"></app-frame-item-mobile>
-<div class="container-fluid container-md mt-4 mt-md-0">
-  <app-frame-item-animation class="d-none d-md-block" [activeVal]="activeTab" (activeTab)="changeActiveTab($event)">
+<div class="container-fluid md:container mx-auto mt-4 mt-md-0">
+  <app-frame-item-animation class="hidden d-mblock" [activeVal]="activeTab" (activeTab)="changeActiveTab($event)">
   </app-frame-item-animation>
-  <div class="row mb-5">
-    <div class="col-12 col-md-4 mb-3 mb-md-0">
-      <div class="description-frame w-100 h-100 text-start p-4 mb-3">
+  <div class="grid grid-cols-1 md:grid-cols-3 gap-4 mb-5">
+    <div class="mb-3 mb-md-0">
+      <div class="description-frame w-full h-full text-start p-4 mb-3">
         <div class="section-sub-topic mb-1">
           {{ 'COMMISSION.CAN_DO.TITLE' | translate}}
         </div>
@@ -29,8 +29,8 @@
         </div>
       </div>
     </div>
-    <div class="col-12 col-md-4 mb-3 mb-md-0">
-      <div class="description-frame w-100 h-100 text-start p-4">
+    <div class="mb-3 mb-md-0">
+      <div class="description-frame w-full h-full text-start p-4">
         <div class="section-sub-topic mb-1">
           {{ 'COMMISSION.DONT_DO.TITLE' | translate}}
         </div>
@@ -42,8 +42,8 @@
         </div>
       </div>
     </div>
-    <div class="col-12 col-md-4 mb-3 mb-md-0">
-      <div class="description-frame w-100 h-100 text-start p-4">
+    <div class="mb-3 mb-md-0">
+      <div class="description-frame w-full h-full text-start p-4">
         <div class="section-sub-topic mb-1">
           {{ 'COMMISSION.PAYMENT.TITLE' | translate}}
         </div>
@@ -57,9 +57,9 @@
       </div>
     </div>
   </div>
-  <div class="row mb-5">
-    <div class="col-12 col-md-6 mb-3 mb-md-0">
-      <div class="description-frame w-100 h-100 text-start p-4 mb-3  d-flex flex-column">
+  <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mb-5">
+    <div class="mb-3 mb-md-0">
+      <div class="description-frame w-full h-full text-start p-4 mb-3  flex flex-col">
         <div class="section-sub-topic mb-1">
           {{ 'COMMISSION.METHOD.TITLE' | translate}}
         </div>
@@ -71,7 +71,7 @@
             <li>{{ 'COMMISSION.METHOD.ITEM_4' | translate}}</li>
           </ul>
         </div>
-        <div class="d-flex mt-auto">
+        <div class="flex mt-auto">
           <a routerLink="/commission-form" class="ms-auto">
             <app-more-button>
               {{ 'COMMISSION.CONTINUE' | translate}}
@@ -83,8 +83,8 @@
         </div>
       </div>
     </div>
-    <div class="col-12 col-md-6 mb-3 mb-md-0">
-      <div class="description-frame w-100 h-100 text-start p-4 d-flex flex-column">
+    <div class="mb-3 mb-md-0">
+      <div class="description-frame w-full h-full text-start p-4 flex flex-col">
         <div class="section-sub-topic mb-1">
           {{ 'TOS.TITLE' | translate}}
         </div>
@@ -104,7 +104,7 @@
             <li>...</li>
           </ul>
         </div>
-        <div class="d-flex mt-auto">
+        <div class="flex mt-auto">
           <a routerLink="/tos" class="ms-auto">
             <app-more-button>
               {{ 'TOS.MORE' | translate}}
@@ -135,16 +135,16 @@
   </div>
 </div>
 <div>
-  <div [class.d-none]="activeTab !== commissionTab.FACE && activeTab !== undefined">
+  <div [class.hidden]="activeTab !== commissionTab.FACE && activeTab !== undefined">
     <app-face-commission-example></app-face-commission-example>
   </div>
-  <div [class.d-none]="activeTab !== commissionTab.HALF">
+  <div [class.hidden]="activeTab !== commissionTab.HALF">
     <app-half-commission-example></app-half-commission-example>
   </div>
-  <div [class.d-none]="activeTab !== commissionTab.FULL">
+  <div [class.hidden]="activeTab !== commissionTab.FULL">
     <app-full-commission-example></app-full-commission-example>
   </div>
-  <div [class.d-none]="activeTab !== commissionTab.DETAIL">
+  <div [class.hidden]="activeTab !== commissionTab.DETAIL">
     <app-detail-commission-example></app-detail-commission-example>
   </div>
 </div>

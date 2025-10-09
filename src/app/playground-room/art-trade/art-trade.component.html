@@ -1,6 +1,6 @@
-<div class="container-fluid container-lg mt-5">
-  <div class="sub-title top-content-frame d-flex">
-      <a [routerLink]="'/playground'" class="d-flex align-items-center ms-auto ms-md-4 me-auto">
+<div class="container-fluid lg:container mx-auto mt-5">
+  <div class="sub-title top-content-frame flex">
+      <a [routerLink]="'/playground'" class="flex items-center ms-auto ms-md-4 me-auto">
         <span class="material-symbols-rounded">
           arrow_back_ios
         </span> Back
@@ -13,24 +13,24 @@
       {{'ART_TRAD.DESCRIPTION' | translate}}<br/>
       {{'ART_TRAD.DESCRIPTION2' | translate}}
   </div>
-  <div class="d-flex">
-    <div class="section-sub-topic section-color mb-2 row mx-md-auto w-100 w-md-auto">
-      <div class="col-12 col-md-6 text-center">
+  <div class="flex">
+    <div class="section-sub-topic section-color mb-2 md:mx-auto w-full md:w-auto grid grid-cols-2 max-md:grid-cols-1 gap-2">
+      <div class="text-center">
         <span>{{'ART_TRAD.SKETCH_COOKIE' | translate}}</span>
       </div>
-      <div class="col-12 col-md-6 text-center d-none d-md-block">
+      <div class="text-center hidden md:block">
         <span>{{'ART_TRAD.COLOR' | translate}}</span>
       </div>
     </div>
   </div>
   <app-gallery-room [galleryRoom]="artTrade1" [pattern]="'equal'"></app-gallery-room>
   <div class="mb-3">&nbsp;</div>
-  <div class="d-flex">
-    <div class="section-sub-topic section-color mb-2 row mx-md-auto w-100 w-md-auto">
-      <div class="col-12 col-md-6 text-center">
+  <div class="flex">
+    <div class="section-sub-topic section-color mb-2 md:mx-auto w-full md:w-auto grid grid-cols-2 max-md:grid-cols-1 gap-2">
+      <div class="text-center">
         <span>{{'ART_TRAD.SKETCH_ME' | translate}}</span>
       </div>
-      <div class="col-12 col-md-6 text-center d-none d-md-block">
+      <div class="text-center hidden md:block">
         <span>{{'ART_TRAD.COLOR_NEKO' | translate}}</span>
       </div>
     </div>

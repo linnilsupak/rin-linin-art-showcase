@@ -1,13 +1,13 @@
 @use "variables" as var;
-@import "bootstrap-mixin";
+
 :host {
   display: block;
   font-size: 6px;
 
-  @include media-breakpoint-up(sm) {
+  @media (width >= var.$sm) {
     font-size: 12px;
   }
-  @include media-breakpoint-up(lg) {
+  @media (width >= var.$lg) {
     font-size: 16px;
   }
 }
@@ -20,7 +20,7 @@
       cursor: pointer;
       filter: brightness(0.4) drop-shadow(5px 5px 5px #{var.$image-card-shadow});
 
-      @include media-breakpoint-down(md) {
+      @media (width <= var.$md) {
         filter: brightness(0.4);
       }
     }
@@ -80,7 +80,7 @@
   transition: all .1s ease-in;
   filter: brightness(1) drop-shadow(5px 5px 5px #{var.$image-card-shadow});
 
-  @include media-breakpoint-down(md) {
+  @media (width <= var.$md) {
     filter: brightness(1);
   }
 }

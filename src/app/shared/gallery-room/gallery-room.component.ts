@@ -1,24 +1,20 @@
+import { CommonModule } from '@angular/common';
 import { Component, inject, Input, OnDestroy } from '@angular/core';
 import { MatDialog } from '@angular/material/dialog';
+import { Subscription } from 'rxjs';
 import { ArtWorkLabelPopupComponent } from '../../art-work-label-popup/art-work-label-popup.component';
-import { AddClassInViewportDirective } from '../../core/add-class-in-viewport.directive';
 import { AddClassOnScrollPositionDirective } from '../../core/add-class-on-scroll-position.directive';
 import { ArtworkLabel } from '../../core/models/artwork-label.model';
 import { ImagePreviewPipe } from "../../core/pipe/image-preview.pipe";
-import { ImageSrcsetPipe } from '../../core/pipe/image-srcset.pipe';
 import { ScrollIntoViewWhenReachDirective } from '../../core/scroll-into-view-when-reach.directive';
 import { LoadingService } from '../../loading.service';
-import { Subscription } from 'rxjs';
-import { CommonModule } from '@angular/common';
-import { MiniSpinningComponent } from "../mini-spinning/mini-spinning.component";
 import { ImagePlacementComponent } from "../image-placement/image-placement.component";
 
 @Component({
-  selector: 'app-gallery-room',
-  standalone: true,
-  imports: [ImagePreviewPipe, ImageSrcsetPipe, ImagePreviewPipe, AddClassInViewportDirective, AddClassOnScrollPositionDirective, ScrollIntoViewWhenReachDirective, CommonModule, MiniSpinningComponent, ImagePlacementComponent],
-  templateUrl: './gallery-room.component.html',
-  styleUrl: './gallery-room.component.scss'
+    selector: 'app-gallery-room',
+    imports: [ImagePreviewPipe, ImagePreviewPipe, AddClassOnScrollPositionDirective, ScrollIntoViewWhenReachDirective, CommonModule, ImagePlacementComponent],
+    templateUrl: './gallery-room.component.html',
+    styleUrl: './gallery-room.component.scss'
 })
 export class GalleryRoomComponent implements OnDestroy {
   @Input()

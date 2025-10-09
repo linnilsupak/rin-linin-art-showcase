@@ -1,19 +1,19 @@
-<div class="container-fluid mt-3 d-flex container-dimension">
-  <div class="row m-auto my-md-0 row-content">
-    <div class="col-12 mb-2 mb-md-0 d-flex" [class.col-md]="!isRecTemplate()" [class.col-md-8]="isRecTemplate()">
+<div class="container-fluid mt-3 flex md:container mx-auto">
+  <div class="grid md:grid-cols-12 gap-4 m-auto my-md-0 row-content">
+    <div class="col-span-12 mb-2 mb-md-0 flex" [class.md:col-span-12]="!isRecTemplate()" [class.md:col-span-8]="isRecTemplate()">
       <div class="{{ frameStyle() }} m-auto">
         @if (imageLoading) {
-          <div class="d-flex justify-content-center align-items-center" [style.min-width]="minWidth()" [style.min-height]="minHeight()">
+          <div class="flex justify-center items-center" [style.min-width]="minWidth()" [style.min-height]="minHeight()">
             <app-mini-spinning [color]="'dark'"></app-mini-spinning>
           </div>
         }
         <img src="{{ picUrl() }}" srcset="{{ noImageSrc ? '' : (picUrl() | imageSrcset)}}"
         [style.min-width]="minWidth()" [style.min-height]="minHeight()" #imageShow
-        class="show-real-width" (load)="imageFinishLoad()" [class.d-none]="imageLoading">
+        class="show-real-width" (load)="imageFinishLoad()" [class.hidden]="imageLoading">
       </div>
     </div>
-    <div class="col-12 d-flex" [class.col-md]="!isRecTemplate()" [class.col-md-4]="isRecTemplate()">
-      <div class="art-tag d-flex flex-column my-auto p-2 align-items-center align-items-md-start mx-auto">
+    <div class="col-span-12 flex" [class.md:col-span-12]="!isRecTemplate()" [class.md:col-span-4]="isRecTemplate()">
+      <div class="art-tag flex flex-col my-auto p-2 items-center align-start:md mx-auto">
         <b class="title" [innerHTML]="title()"></b>
         <i class="title-2" [innerHTML]="title2()"></i>
         <div class="mb-2 sub-title text-center text-md-start">{{ subTitle()}}</div>

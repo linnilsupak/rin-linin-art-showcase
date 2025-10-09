@@ -3,7 +3,12 @@
 // For more information: https://material.angular.io/guide/theming
 @use 'variables' as var;
 @use '@angular/material' as mat;
+@use 'utilities' as util;
+@use 'material.custom' as mat-custom;
+@use "styles/fonts" as font;
+@use "picture-frame" as frame;
 // Plus imports for other components in your app.
+@use "tailwindcss" as tailwind;
 
 // Include the common styles for Angular Material. We include this here so that you only
 // have to load a single css file for Angular Material in your app.
@@ -22,10 +27,6 @@ $rin-linin-art-showcase-theme: mat.define-theme((
   )
 ));
 
-/* Importing Bootstrap SCSS file. */
-@import 'bootstrap/scss/bootstrap';
-@import 'utilities';
-@import 'material.custom';
 
 // Include theme styles for core and each component used in your app.
 // Alternatively, you can import and @include the theme mixins for each component
@@ -59,9 +60,6 @@ $rin-linin-art-showcase-theme: mat.define-theme((
 // @include mat.color-variants-backwards-compatibility($rin-linin-art-showcase-theme);
 /* You can add global styles to this file, and also import other style files */
 
-@import "bootstrap-mixin";
-@import "styles/fonts";
-@import "picture-frame";
 
 body {
     background: linear-gradient(180deg in oklab, #{var.$blue-bg}, #{var.$pink-bg});

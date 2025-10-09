@@ -1,14 +1,13 @@
 @use "variables" as var;
 @use "character-frame" as char;
-@import "bootstrap-mixin";
 
 :host {
   display: flex;
   justify-content: center;
   align-items: center;
   width: 100%;
-  
-  @include media-breakpoint-up(lg) {
+
+  @media (width >= var.$lg) {
     height: calc(100vh - #{var.$header-height} - 26px);
   }
 }
@@ -39,7 +38,7 @@ app-reflection-font {
 
 .description-frame {
 
-  @include media-breakpoint-up(md) {
+  @media (width >= var.$md) {
     height: 90%;
   }
 }

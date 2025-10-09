@@ -6,11 +6,10 @@ import { ReflectionFontComponent } from '../../shared/reflection-font/reflection
 import { PlaygroundBottomMenuComponent } from '../playground-bottom-menu/playground-bottom-menu.component';
 
 @Component({
-  selector: 'app-genshin-fan-art',
-  standalone: true,
-  imports: [ReflectionFontComponent, TranslateModule, GalleryRoomComponent, RouterLink, PlaygroundBottomMenuComponent],
-  templateUrl: './genshin-fan-art.component.html',
-  styleUrl: './genshin-fan-art.component.scss'
+    selector: 'app-genshin-fan-art',
+    imports: [ReflectionFontComponent, TranslateModule, GalleryRoomComponent, RouterLink, PlaygroundBottomMenuComponent],
+    templateUrl: './genshin-fan-art.component.html',
+    styleUrl: './genshin-fan-art.component.scss'
 })
 export class GenshinFanArtComponent {
   genshin1 = [
@@ -537,7 +536,7 @@ export class GenshinFanArtComponent {
       previewPic: {
         width: 'inherit',
         height: 'inherit',
-        disabled: true
+        disabled: false
       }
     },
     {

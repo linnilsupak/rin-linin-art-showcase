@@ -3,11 +3,10 @@ import { TranslateModule } from '@ngx-translate/core';
 import { GalleryRoomComponent } from "../../shared/gallery-room/gallery-room.component";
 
 @Component({
-  selector: 'app-francois-info',
-  standalone: true,
-  imports: [TranslateModule, GalleryRoomComponent],
-  templateUrl: './francois-info.component.html',
-  styleUrl: './francois-info.component.scss'
+    selector: 'app-francois-info',
+    imports: [TranslateModule, GalleryRoomComponent],
+    templateUrl: './francois-info.component.html',
+    styleUrl: './francois-info.component.scss'
 })
 export class FrancoisInfoComponent {
   francoisMyArt = [

@@ -14,12 +14,11 @@ import { StarrySkyComponent } from "./starry-sky/starry-sky.component";
 import { TarotSearchStickyComponent } from "./shared/tarot-search-sticky/tarot-search-sticky.component";
 
 @Component({
-  selector: 'app-root',
-  standalone: true,
-  imports: [RouterOutlet, HeaderComponent, ScrollUpButtonComponent, TranslateModule, StarrySkyComponent, SetMainScrollPositionDirective, LoadingComponent, TarotSearchStickyComponent],
-  providers: [WINDOW_PROVIDERS],
-  templateUrl: './app.component.html',
-  styleUrl: './app.component.scss'
+    selector: 'app-root',
+    imports: [RouterOutlet, HeaderComponent, ScrollUpButtonComponent, TranslateModule, StarrySkyComponent, SetMainScrollPositionDirective, LoadingComponent, TarotSearchStickyComponent],
+    providers: [WINDOW_PROVIDERS],
+    templateUrl: './app.component.html',
+    styleUrl: './app.component.scss'
 })
 export class AppComponent implements AfterViewInit {
   @ViewChild('content') scrollableDiv: ElementRef;

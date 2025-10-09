@@ -1,5 +1,5 @@
-<div class="link-card d-flex" [style.min-height]="minHeight">
-  <a class="position-relative mx-auto" [href]="link">
+<div class="link-card flex px-3 pb-2" [style.min-height]="minHeight">
+  <a class="relative mx-auto block" [href]="link">
     <div class="title">
       {{ title}}
     </div>
@@ -12,7 +12,7 @@
   </a>
 </div>
 <div class="link-reflection">
-  <ng-container *ngTemplateOutlet="imageCard;context: {class: 'reflection'}">
+  <ng-container *ngTemplateOutlet="imageCard;context: {class: 'reflection mx-auto pt-2'}">
   </ng-container>
 </div>
 <ng-template #imageCard let-class="class">

@@ -18,12 +18,11 @@ import { TarotFormData } from '../../core/models/tarot-form-data.model';
 import { CommonModule } from '@angular/common';
 
 @Component({
-  selector: 'app-tarot-search',
-  standalone: true,
-  imports: [TranslateModule, MatButtonModule, RouterLink, CommonModule,
-    MatFormFieldModule, MatSelectModule, MatInputModule,ReactiveFormsModule, MatAutocompleteModule],
-  templateUrl: './tarot-search.component.html',
-  styleUrl: './tarot-search.component.scss'
+    selector: 'app-tarot-search',
+    imports: [TranslateModule, MatButtonModule, RouterLink, CommonModule,
+        MatFormFieldModule, MatSelectModule, MatInputModule, ReactiveFormsModule, MatAutocompleteModule],
+    templateUrl: './tarot-search.component.html',
+    styleUrl: './tarot-search.component.scss'
 })
 export class TarotSearchComponent implements OnInit, OnDestroy {
   @ViewChild('searchInput') searchInput: ElementRef;

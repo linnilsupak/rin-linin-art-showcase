@@ -6,11 +6,10 @@ import { ReflectionFontComponent } from '../../shared/reflection-font/reflection
 import { PlaygroundBottomMenuComponent } from '../playground-bottom-menu/playground-bottom-menu.component';
 
 @Component({
-  selector: 'app-vtuber-fan-art',
-  standalone: true,
-  imports: [ReflectionFontComponent, TranslateModule, GalleryRoomComponent, RouterLink, PlaygroundBottomMenuComponent],
-  templateUrl: './vtuber-fan-art.component.html',
-  styleUrl: './vtuber-fan-art.component.scss'
+    selector: 'app-vtuber-fan-art',
+    imports: [ReflectionFontComponent, TranslateModule, GalleryRoomComponent, RouterLink, PlaygroundBottomMenuComponent],
+    templateUrl: './vtuber-fan-art.component.html',
+    styleUrl: './vtuber-fan-art.component.scss'
 })
 export class VtuberFanArtComponent {
   vtuber1 = [

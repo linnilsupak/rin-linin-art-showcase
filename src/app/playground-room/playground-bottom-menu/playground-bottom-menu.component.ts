@@ -6,11 +6,10 @@ import { RouterLink } from '@angular/router';
 import { CommonModule } from '@angular/common';
 
 @Component({
-  selector: 'app-playground-bottom-menu',
-  standalone: true,
-  imports: [PlaygroundMenuComponent, RouterLink, CommonModule],
-  templateUrl: './playground-bottom-menu.component.html',
-  styleUrl: './playground-bottom-menu.component.scss'
+    selector: 'app-playground-bottom-menu',
+    imports: [PlaygroundMenuComponent, RouterLink, CommonModule],
+    templateUrl: './playground-bottom-menu.component.html',
+    styleUrl: './playground-bottom-menu.component.scss'
 })
 export class PlaygroundBottomMenuComponent {
   @Input()

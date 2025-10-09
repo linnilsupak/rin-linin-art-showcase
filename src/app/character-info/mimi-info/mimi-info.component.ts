@@ -5,11 +5,10 @@ import { openArtWorkLabel } from '../../core/utilities/open-art-work-label.util'
 import { GalleryRoomComponent } from "../../shared/gallery-room/gallery-room.component";
 
 @Component({
-  selector: 'app-mimi-info',
-  standalone: true,
-  imports: [TranslateModule, GalleryRoomComponent],
-  templateUrl: './mimi-info.component.html',
-  styleUrl: './mimi-info.component.scss'
+    selector: 'app-mimi-info',
+    imports: [TranslateModule, GalleryRoomComponent],
+    templateUrl: './mimi-info.component.html',
+    styleUrl: './mimi-info.component.scss'
 })
 export class MimiInfoComponent {
   private matDialog = inject(MatDialog);

@@ -11,11 +11,10 @@ import { ReflectionFontComponent } from '../shared/reflection-font/reflection-fo
 import { personaInfo } from '../core/config/persona-info.config';
 
 @Component({
-  selector: 'app-original',
-  standalone: true,
-  imports: [TranslateModule, ReflectionFontComponent, CharacterIconComponent, CharacterFrameComponent],
-  templateUrl: './original.component.html',
-  styleUrl: './original.component.scss',
+    selector: 'app-original',
+    imports: [TranslateModule, ReflectionFontComponent, CharacterIconComponent, CharacterFrameComponent],
+    templateUrl: './original.component.html',
+    styleUrl: './original.component.scss'
 })
 export class OriginalComponent implements AfterViewInit {
   private route = inject(ActivatedRoute);

@@ -1,5 +1,4 @@
 @use "variables" as var;
-@import "bootstrap-mixin";
 
 .units {
   width: max-content;
@@ -23,12 +22,12 @@
   overflow: hidden;
   background-color: var.$white;
 
-  @include media-breakpoint-up(md) {
+  @media (width >= var.$md) {
     font-size: 4rem;
     line-height: 5rem;
   }
 
-  @include media-breakpoint-up(lg) {
+  @media (width >= var.$lg) {
     font-size: 5rem;
     line-height: 6rem;
   }
@@ -38,7 +37,7 @@
   font-size: 2rem;
   line-height: 3rem;
 
-  @include media-breakpoint-up(md) {
+  @media (width >= var.$md) {
     font-size: 3rem;
     line-height: 4rem;
   }

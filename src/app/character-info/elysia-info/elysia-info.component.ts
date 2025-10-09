@@ -3,11 +3,10 @@ import { TranslateModule } from '@ngx-translate/core';
 import { GalleryRoomComponent } from "../../shared/gallery-room/gallery-room.component";
 
 @Component({
-  selector: 'app-elysia-info',
-  standalone: true,
-  imports: [TranslateModule, GalleryRoomComponent],
-  templateUrl: './elysia-info.component.html',
-  styleUrl: './elysia-info.component.scss'
+    selector: 'app-elysia-info',
+    imports: [TranslateModule, GalleryRoomComponent],
+    templateUrl: './elysia-info.component.html',
+    styleUrl: './elysia-info.component.scss'
 })
 export class ElysiaInfoComponent {
   elysiaMyArt = [

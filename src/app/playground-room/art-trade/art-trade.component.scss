@@ -1,6 +1,6 @@
-@import "bootstrap-mixin";
+@use "variables" as var;
 .section-sub-topic {
-  @include media-breakpoint-up(md) {
+  @media (width >= var.$md) {
     min-width: 1000px;
     width: 1000px;
     max-width: 1000px;

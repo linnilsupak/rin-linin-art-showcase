@@ -5,11 +5,10 @@ import { ArtworkLabel } from '../../core/models/artwork-label.model';
 import { ImageSrcsetPipe } from "../../core/pipe/image-srcset.pipe";
 
 @Component({
-  selector: 'app-rin-linin-info',
-  standalone: true,
-  imports: [TranslateModule, GalleryRoomComponent, ImageSrcsetPipe],
-  templateUrl: './rin-linin-info.component.html',
-  styleUrl: './rin-linin-info.component.scss'
+    selector: 'app-rin-linin-info',
+    imports: [TranslateModule, GalleryRoomComponent, ImageSrcsetPipe],
+    templateUrl: './rin-linin-info.component.html',
+    styleUrl: './rin-linin-info.component.scss'
 })
 export class RinLininInfoComponent {
   rinLininRoom: ArtworkLabel[] = [

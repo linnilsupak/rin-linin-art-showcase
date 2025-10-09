@@ -3,12 +3,11 @@ import { AfterViewInit, Component, Input } from '@angular/core';
 import { WINDOW_PROVIDERS } from '../core/service/window.service';
 
 @Component({
-  selector: 'app-scroll-up-button',
-  standalone: true,
-  imports: [CommonModule],
-  providers: [WINDOW_PROVIDERS],
-  templateUrl: './scroll-up-button.component.html',
-  styleUrl: './scroll-up-button.component.scss'
+    selector: 'app-scroll-up-button',
+    imports: [CommonModule],
+    providers: [WINDOW_PROVIDERS],
+    templateUrl: './scroll-up-button.component.html',
+    styleUrl: './scroll-up-button.component.scss'
 })
 export class ScrollUpButtonComponent implements AfterViewInit {
   @Input({ required: true }) scrollableDiv: HTMLDivElement;

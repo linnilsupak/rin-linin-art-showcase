@@ -1,22 +1,22 @@
 <div>
   <app-reflection-font [text]="'About me'" [fontClass]="'sub-title mx-auto'"></app-reflection-font>
 </div>
-<div class="d-flex mb-4 after-reflection-font">
+<div class="flex mb-4 after-reflection-font">
   <div class="black-frame circle small mini-frame-200 mx-auto me-pic" [class.black-frame]="!isHome" [class.white-frame]="isHome">
     <img src="/assets/images/original/rin_linin_persona.jpg">
   </div>
 </div>
-<div class="section-color sub-topic mb-3 d-block d-md-none">
+<div class="section-color sub-topic mb-3 block md:hidden">
   <ng-container *ngTemplateOutlet="centerSection;"></ng-container>
 </div>
-<div class="d-flex mb-3">
-  <div class="d-flex justify-content-between align-items-center topic-div mx-auto">
+<div class="flex mb-3">
+  <div class="flex justify-between items-center topic-div mx-auto">
     <a routerLink="/character-info/rin-linin" [queryParams]="{ backUrl: isHome? '/': '/about-me'}">
       <app-more-button class="bth-width">
         {{ 'ABOUT_ME.PERSONA_ART' | translate}}
       </app-more-button>
     </a>
-    <ng-container *ngTemplateOutlet="centerSection;context: {class: 'd-none d-md-block'}">
+    <ng-container *ngTemplateOutlet="centerSection;context: {class: 'hidden d-mblock'}">
     </ng-container>
     <a routerLink="/contact-me">
       <app-more-button class="bth-width">

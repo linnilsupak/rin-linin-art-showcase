@@ -1,299 +1,302 @@
 @if(pattern === 'equal') {
-  <div class="row" [appScrollIntoViewWhenReach]="enableAutoScrollFirstRow">
-    @for(room of galleryRoom; track room;let first=$first, last=$last, index=$index) {
-      <div class="col-12 mb-3 d-flex col-md-{{ 12/ galleryRoom.length}} d-flex">
-        <a class="{{room.frameStyle}} hover my-auto"  [ngClass]="{'m-auto': !last && !first, 'ms-auto me-auto': first || last, 'me-md-0': first && galleryRoom.length < 3,
-        'ms-md-0': last  && galleryRoom.length < 3, 'original-slide-in': enableSlidIn}"
-        (click)="openArtWorkLabel(room)" title="{{ room.content.title }}" [appAddClassOnScrollPosition]="enableSlidIn ? 'slide-in': ''" [addClassDelay]="index * 200">
-          <app-image-placement [srcLink]="room.picUrl | imagePreview:room?.previewPic?.disabled"
-          [width]="room.previewPic.width" [height]="room.previewPic.height"
-          [alt]="room.content.title"></app-image-placement>
-        </a>
-      </div>
-    }
+@if (galleryRoom.length > 0) {
+<div class="md:flex gap-4 mb-4 justify-center items-center" [appScrollIntoViewWhenReach]="enableAutoScrollFirstRow">
+  @for(room of galleryRoom; track room;let first=$first, last=$last, index=$index) {
+  <div class="flex">
+    <a class="{{room.frameStyle}} hover my-auto max-md:mb-4 max-md:mx-4" [ngClass]="{'m-auto': !last && !first, 'ms-auto me-auto': first || last, 'md:me-0': first && galleryRoom.length < 3,
+        'md:ms-0': last  && galleryRoom.length < 3, 'original-slide-in': enableSlidIn}"
+      (click)="openArtWorkLabel(room)" title="{{ room.content.title }}"
+      [appAddClassOnScrollPosition]="enableSlidIn ? 'slide-in': ''" [addClassDelay]="index * 200">
+      <app-image-placement [srcLink]="room.picUrl | imagePreview:room?.previewPic?.disabled"
+        [width]="room.previewPic.width" [height]="room.previewPic.height"
+        [alt]="room.content.title"></app-image-placement>
+    </a>
   </div>
+  }
+</div>
+}
 } @else {
-  @if (galleryRoom?.length === 1) {
-    <div class="row">
-      <div class="col-12 d-flex">
-        <a class="{{galleryRoom[0].frameStyle}} small hover d-block m-auto"
-        (click)="openArtWorkLabel(galleryRoom[0])" title="{{ galleryRoom[0].content.title }}">
-          <app-image-placement [srcLink]="galleryRoom[0].picUrl | imagePreview:galleryRoom[0]?.previewPic?.disabled"
-          [width]="galleryRoom[0].previewPic.width" [height]="galleryRoom[0].previewPic.height"
-          [alt]="galleryRoom[0].content.title"></app-image-placement>
-        </a>
-      </div>
-    </div>
-  }
-  @if (galleryRoom?.length === 2) {
-    <div class="row">
-      <div class="col-12 mb-3 d-flex col-md-8">
-        <a class="{{galleryRoom[0].frameStyle}} hover my-auto ms-auto me-auto me-md-0"
-        (click)="openArtWorkLabel(galleryRoom[0])" title="{{ galleryRoom[0].content.title }}">
-          <app-image-placement [srcLink]="galleryRoom[0].picUrl | imagePreview:galleryRoom[0]?.previewPic?.disabled"
-          [width]="galleryRoom[0].previewPic.width" [height]="galleryRoom[0].previewPic.height"
-          [alt]="galleryRoom[0].content.title"></app-image-placement>
-        </a>
-      </div>
-      <div class="col-12 mb-3 d-flex col-md-4">
-        <a class="{{galleryRoom[1].frameStyle}} hover my-auto ms-auto me-auto ms-md-0"
-        (click)="openArtWorkLabel(galleryRoom[1])" title="{{ galleryRoom[1].content.title }}">
-          <app-image-placement [srcLink]="galleryRoom[1].picUrl | imagePreview:galleryRoom[1]?.previewPic?.disabled"
-          [width]="galleryRoom[1].previewPic.width" [height]="galleryRoom[1].previewPic.height"
-          [alt]="galleryRoom[1].content.title"></app-image-placement>
-        </a>
-      </div>
-    </div>
-  }
-  @if (galleryRoom?.length === 3) {
-    <div class="row">
-      <div class="col-12  mb-3 d-flex flex-column" [class.col-md-4]="pattern !== 'center'"  [class.col-md-5]="pattern === 'center'">
-        <a class="{{galleryRoom[0].frameStyle}} small mini-frame-300 mt-auto ms-auto me-auto me-md-0 mb-3 hover"
-        (click)="openArtWorkLabel(galleryRoom[0])" title="{{ galleryRoom[0].content.title }}">
-          <app-image-placement [srcLink]="galleryRoom[0].picUrl | imagePreview:galleryRoom[0]?.previewPic?.disabled"
-          [width]="galleryRoom[0].previewPic.width" [height]="galleryRoom[0].previewPic.height"
-          [alt]="galleryRoom[0].content.title"></app-image-placement>
-        </a>
-        <div class="{{galleryRoom[1].frameStyle}} small mini-frame-300 mb-auto ms-auto me-auto me-md-0 hover"
-        (click)="openArtWorkLabel(galleryRoom[1])" title="{{ galleryRoom[1].content.title }}">
-        <app-image-placement [srcLink]="galleryRoom[1].picUrl | imagePreview:galleryRoom[1]?.previewPic?.disabled"
+@if (galleryRoom?.length === 1) {
+  <div class="flex">
+    <a class="{{galleryRoom[0].frameStyle}} small hover block m-auto" (click)="openArtWorkLabel(galleryRoom[0])"
+      title="{{ galleryRoom[0].content.title }}">
+      <app-image-placement [srcLink]="galleryRoom[0].picUrl | imagePreview:galleryRoom[0]?.previewPic?.disabled"
+        [width]="galleryRoom[0].previewPic.width" [height]="galleryRoom[0].previewPic.height"
+        [alt]="galleryRoom[0].content.title"></app-image-placement>
+    </a>
+  </div>
+}
+@if (galleryRoom?.length === 2) {
+<div class="grid grid-cols-2 md:grid-cols-3 gap-4">
+  <div class="flex md:col-span-2">
+    <a class="{{galleryRoom[0].frameStyle}} hover my-auto ms-auto me-auto md:me-0"
+      (click)="openArtWorkLabel(galleryRoom[0])" title="{{ galleryRoom[0].content.title }}">
+      <app-image-placement [srcLink]="galleryRoom[0].picUrl | imagePreview:galleryRoom[0]?.previewPic?.disabled"
+        [width]="galleryRoom[0].previewPic.width" [height]="galleryRoom[0].previewPic.height"
+        [alt]="galleryRoom[0].content.title"></app-image-placement>
+    </a>
+  </div>
+  <div class="flex">
+    <a class="{{galleryRoom[1].frameStyle}} hover my-auto ms-auto me-auto md:ms-0"
+      (click)="openArtWorkLabel(galleryRoom[1])" title="{{ galleryRoom[1].content.title }}">
+      <app-image-placement [srcLink]="galleryRoom[1].picUrl | imagePreview:galleryRoom[1]?.previewPic?.disabled"
         [width]="galleryRoom[1].previewPic.width" [height]="galleryRoom[1].previewPic.height"
         [alt]="galleryRoom[1].content.title"></app-image-placement>
-        </div>
-      </div>
-      <div class="col-12 mb-3 d-flex" [class.col-md-8]="pattern !== 'center'"  [class.col-md-7]="pattern === 'center'">
-        <div class="{{galleryRoom[2].frameStyle}} me-auto ms-auto ms-md-0 hover"
-        (click)="openArtWorkLabel(galleryRoom[2])" title="{{ galleryRoom[2].content.title }}">
-        <app-image-placement [srcLink]="galleryRoom[2].picUrl | imagePreview:galleryRoom[2]?.previewPic?.disabled"
-        [width]="galleryRoom[2].previewPic.width" [height]="galleryRoom[2].previewPic.height"
-        [alt]="galleryRoom[2].content.title"></app-image-placement>
-        </div>
-      </div>
-    </div>
-  }
-  @if (galleryRoom?.length >= 4) {
-  <div class="row mb-3" [appScrollIntoViewWhenReach]="enableAutoScrollFirstRow">
-    <div class="col-12 col-xl-3 d-flex flex-column"
-    [ngClass]="{'col-lg-3': pattern !== '3-rows', 'col-lg-2': pattern === '3-rows'}">
-      <a class="{{ galleryRoom[0].frameStyle }} original-slide-in slide-in hover mt-0 mt-lg-auto ms-auto me-auto me-lg-0 mb-2 mb-lg-0"
-        (click)="openArtWorkLabel(galleryRoom[0])" title="{{ galleryRoom[0].content.title }}">
-        <app-image-placement [srcLink]="galleryRoom[0].picUrl | imagePreview:galleryRoom[0]?.previewPic?.disabled"
-          [width]="galleryRoom[0].previewPic.width" [height]="galleryRoom[0].previewPic.height"
-          [alt]="galleryRoom[0].content.title"></app-image-placement>
-      </a>
-      <div class="{{ galleryRoom[1].frameStyle }}  hover mt-2 ms-auto me-auto me-lg-0"
-        (click)="openArtWorkLabel(galleryRoom[1])" title="{{ galleryRoom[1].content.title }}">
-        <app-image-placement [srcLink]="galleryRoom[1].picUrl | imagePreview:galleryRoom[1]?.previewPic?.disabled"
+    </a>
+  </div>
+</div>
+}
+@if (galleryRoom?.length === 3) {
+<div class="md:grid gap-4" [class.md:grid-cols-5]="pattern === 'center'" [class.md:grid-cols-6]="pattern !== 'center'">
+  <div class=" mb-4 flex flex-col md:col-span-2">
+    <a class="{{galleryRoom[0].frameStyle}} small mini-frame-300 mt-auto ms-auto me-auto md:me-0 mb-4 hover"
+      (click)="openArtWorkLabel(galleryRoom[0])" title="{{ galleryRoom[0].content.title }}">
+      <app-image-placement [srcLink]="galleryRoom[0].picUrl | imagePreview:galleryRoom[0]?.previewPic?.disabled"
+        [width]="galleryRoom[0].previewPic.width" [height]="galleryRoom[0].previewPic.height"
+        [alt]="galleryRoom[0].content.title"></app-image-placement>
+    </a>
+    <div class="{{galleryRoom[1].frameStyle}} small mini-frame-300 mb-auto ms-auto me-auto md:me-0 hover"
+      (click)="openArtWorkLabel(galleryRoom[1])" title="{{ galleryRoom[1].content.title }}">
+      <app-image-placement [srcLink]="galleryRoom[1].picUrl | imagePreview:galleryRoom[1]?.previewPic?.disabled"
         [width]="galleryRoom[1].previewPic.width" [height]="galleryRoom[1].previewPic.height"
         [alt]="galleryRoom[1].content.title"></app-image-placement>
-      </div>
     </div>
-    <div class="col-12 col-lg-4 col-xl-5 d-flex align-items-end mt-3 mt-lg-0">
-      <div class="{{ galleryRoom[2].frameStyle }} hover mx-auto original-slide-in slide-in"
-        (click)="openArtWorkLabel(galleryRoom[2])" title="{{ galleryRoom[2].content.title }}">
-        <app-image-placement [srcLink]="galleryRoom[2].picUrl | imagePreview:galleryRoom[2]?.previewPic?.disabled"
+  </div>
+  <div class="col-12 mb-4 flex" [class.md:col-span-3]="pattern === 'center'" [class.md:col-span-4]="pattern !== 'center'">
+    <div class="{{galleryRoom[2].frameStyle}} me-auto ms-auto md:ms-0 hover" (click)="openArtWorkLabel(galleryRoom[2])"
+      title="{{ galleryRoom[2].content.title }}">
+      <app-image-placement [srcLink]="galleryRoom[2].picUrl | imagePreview:galleryRoom[2]?.previewPic?.disabled"
         [width]="galleryRoom[2].previewPic.width" [height]="galleryRoom[2].previewPic.height"
         [alt]="galleryRoom[2].content.title"></app-image-placement>
-      </div>
     </div>
-    <div class="col-12 col-lg-4 d-flex mt-3 mt-lg-0">
-      <div
-        class="{{ galleryRoom[3].frameStyle }} original-slide-in slide-in hover mt-auto me-auto ms-auto ms-lg-0  mini-frame-400"
-        (click)="openArtWorkLabel(galleryRoom[3])" title="{{ galleryRoom[3].content.title }}">
-        <app-image-placement [srcLink]="galleryRoom[3].picUrl | imagePreview:galleryRoom[3]?.previewPic?.disabled"
+  </div>
+</div>
+}
+@if (galleryRoom?.length >= 4) {
+  <!-- [ngClass]="{'col-lg-3': pattern !== '3-rows', 'col-lg-2': pattern === '3-rows'}" -->
+<div class="grid md:grid-cols-3 grid-cols-1 gap-4 mb-4" [appScrollIntoViewWhenReach]="enableAutoScrollFirstRow">
+  <div class="flex flex-col">
+    <a class="{{ galleryRoom[0].frameStyle }} mini-frame-300 max-md:mx-auto original-slide-in slide-in hover mt-0 lg:mt-auto ms-auto me-auto lg:me-0 mb-2 lg:mb-0"
+      (click)="openArtWorkLabel(galleryRoom[0])" title="{{ galleryRoom[0].content.title }}">
+      <app-image-placement [srcLink]="galleryRoom[0].picUrl | imagePreview:galleryRoom[0]?.previewPic?.disabled"
+        [width]="galleryRoom[0].previewPic.width" [height]="galleryRoom[0].previewPic.height"
+        [alt]="galleryRoom[0].content.title"></app-image-placement>
+    </a>
+    <div class="{{ galleryRoom[1].frameStyle }} mini-frame-300 max-md:mx-auto hover mt-2 ms-auto me-auto lg:me-0"
+      (click)="openArtWorkLabel(galleryRoom[1])" title="{{ galleryRoom[1].content.title }}">
+      <app-image-placement [srcLink]="galleryRoom[1].picUrl | imagePreview:galleryRoom[1]?.previewPic?.disabled"
+        [width]="galleryRoom[1].previewPic.width" [height]="galleryRoom[1].previewPic.height"
+        [alt]="galleryRoom[1].content.title"></app-image-placement>
+    </div>
+  </div>
+  <div class="flex items-end mt-3 lg:mt-0">
+    <div class="{{ galleryRoom[2].frameStyle }} hover max-md:mx-4 mx-auto original-slide-in slide-in"
+      (click)="openArtWorkLabel(galleryRoom[2])" title="{{ galleryRoom[2].content.title }}">
+      <app-image-placement [srcLink]="galleryRoom[2].picUrl | imagePreview:galleryRoom[2]?.previewPic?.disabled"
+        [width]="galleryRoom[2].previewPic.width" [height]="galleryRoom[2].previewPic.height"
+        [alt]="galleryRoom[2].content.title"></app-image-placement>
+    </div>
+  </div>
+  <div class="flex mt-3 lg:mt-0">
+    <div
+      class="{{ galleryRoom[3].frameStyle }} original-slide-in max-md:mx-4 slide-in hover mt-auto me-auto ms-auto lg:ms-0  mini-frame-400"
+      (click)="openArtWorkLabel(galleryRoom[3])" title="{{ galleryRoom[3].content.title }}">
+      <app-image-placement [srcLink]="galleryRoom[3].picUrl | imagePreview:galleryRoom[3]?.previewPic?.disabled"
         [width]="galleryRoom[3].previewPic.width" [height]="galleryRoom[3].previewPic.height"
         [alt]="galleryRoom[3].content.title"></app-image-placement>
-      </div>
     </div>
   </div>
-  }
-  @if (galleryRoom?.length === 6) {
-  <div class="row mb-3" [appScrollIntoViewWhenReach]="enableAutoScrollFirstRow">
-    <div class="col-12 col-lg-8 col-xl-7 d-flex">
-      <div class="{{ galleryRoom[4].frameStyle }} hover ms-auto me-auto me-lg-0 mb-3 mb-lg-0" [class.original-slide-in]="enableSlidIn"
-        (click)="openArtWorkLabel(galleryRoom[4])" title="{{ galleryRoom[4].content.title }} "
-        [appAddClassOnScrollPosition]="enableSlidIn? 'slide-in': ''">
-        <app-image-placement [srcLink]="galleryRoom[4].picUrl | imagePreview:galleryRoom[4]?.previewPic?.disabled"
+</div>
+}
+@if (galleryRoom?.length === 6) {
+<div class="grid md:grid-cols-5 gap-4 mb-4" [appScrollIntoViewWhenReach]="enableAutoScrollFirstRow">
+  <div class="md:col-span-3 flex">
+    <div class="{{ galleryRoom[4].frameStyle }} hover max-md:mx-4 ms-auto me-auto lg:me-0 mb-4 lg:mb-0"
+      [class.original-slide-in]="enableSlidIn" (click)="openArtWorkLabel(galleryRoom[4])"
+      title="{{ galleryRoom[4].content.title }} " [appAddClassOnScrollPosition]="enableSlidIn? 'slide-in': ''">
+      <app-image-placement [srcLink]="galleryRoom[4].picUrl | imagePreview:galleryRoom[4]?.previewPic?.disabled"
         [width]="galleryRoom[4].previewPic.width" [height]="galleryRoom[4].previewPic.height"
         [alt]="galleryRoom[4].content.title"></app-image-placement>
-      </div>
     </div>
-    <div class="col-12 col-lg-4 col-xl-5 d-flex">
-      <div class="{{ galleryRoom[5].frameStyle }} hover original-slide-in mini-frame-300 me-auto ms-auto ms-lg-0 d-flex mb-auto"
-        (click)="openArtWorkLabel(galleryRoom[5])" title="{{ galleryRoom[5].content.title }}"
-        [appAddClassOnScrollPosition]="'slide-in'" [addClassDelay]="200">
-        <app-image-placement [srcLink]="galleryRoom[5].picUrl | imagePreview:galleryRoom[5]?.previewPic?.disabled"
-        [width]="galleryRoom[5].previewPic.width" [height]="galleryRoom[5].previewPic.height" [class]="'w-100 my-auto'"
+  </div>
+  <div class="flex md:col-span-2">
+    <div
+      class="{{ galleryRoom[5].frameStyle }} hover max-md:mx-4 original-slide-in mini-frame-300 me-auto ms-auto lg:ms-0 flex mb-auto"
+      (click)="openArtWorkLabel(galleryRoom[5])" title="{{ galleryRoom[5].content.title }}"
+      [appAddClassOnScrollPosition]="'slide-in'" [addClassDelay]="200">
+      <app-image-placement [srcLink]="galleryRoom[5].picUrl | imagePreview:galleryRoom[5]?.previewPic?.disabled"
+        [width]="galleryRoom[5].previewPic.width" [height]="galleryRoom[5].previewPic.height" [class]="'w-full my-auto'"
         [alt]="galleryRoom[5].content.title"></app-image-placement>
-      </div>
     </div>
   </div>
-  }
-  @if (galleryRoom?.length === 7) {
-    <div class="row mb-3">
-      <div class="col-12 col-lg-4 d-flex">
-        <div class="{{ galleryRoom[4].frameStyle }} hover original-slide-in mb-auto ms-auto me-auto me-lg-0 mb-auto"
-          (click)="openArtWorkLabel(galleryRoom[4])" title="{{ galleryRoom[4].content.title }}"
-          [appAddClassOnScrollPosition]="'slide-in'">
-          <app-image-placement [srcLink]="galleryRoom[4].picUrl | imagePreview:galleryRoom[4]?.previewPic?.disabled"
-          [width]="galleryRoom[4].previewPic.width" [height]="galleryRoom[4].previewPic.height"
-          [alt]="galleryRoom[4].content.title"></app-image-placement>
-        </div>
-      </div>
-      <div class="col-12 col-lg-4 d-flex">
-        <div class="{{ galleryRoom[5].frameStyle }} hover original-slide-in mx-auto width-fit-content mb-auto"
-          (click)="openArtWorkLabel(galleryRoom[5])" title="{{ galleryRoom[5].content.title }}"
-          [appAddClassOnScrollPosition]="'slide-in'"[addClassDelay]="200">
-          <app-image-placement [srcLink]="galleryRoom[5].picUrl | imagePreview:galleryRoom[5]?.previewPic?.disabled"
-          [width]="galleryRoom[5].previewPic.width" [height]="galleryRoom[5].previewPic.height"
-          [alt]="galleryRoom[5].content.title"></app-image-placement>
-        </div>
-      </div>
-      <div class="col-12 col-lg-4 d-flex">
-        <div class="{{ galleryRoom[6].frameStyle }} hover original-slide-in ms-auto me-auto ms-lg-0 mb-auto" (click)="openArtWorkLabel(galleryRoom[6])"
-          title="{{ galleryRoom[6].content.title }}" [appAddClassOnScrollPosition]="'slide-in'" [addClassDelay]="400">
-          <app-image-placement [srcLink]="galleryRoom[6].picUrl | imagePreview:galleryRoom[6]?.previewPic?.disabled"
-          [width]="galleryRoom[6].previewPic.width" [height]="galleryRoom[6].previewPic.height"
-          [alt]="galleryRoom[6].content.title"></app-image-placement>
-        </div>
-      </div>
-    </div>
-    }
-  @if (galleryRoom?.length === 8 && (pattern === 'wide' || !pattern)) {
-  <div class="row mb-3">
-    <div class="col-12 col-lg-8">
-      <div class="row d-flex">
-        <div class="{{ galleryRoom[4].frameStyle }} hover original-slide-in col-12 col-lg mb-3 mx-auto width-fit-content"
-          (click)="openArtWorkLabel(galleryRoom[4])" title="{{ galleryRoom[4].content.title }}"
-          [appAddClassOnScrollPosition]="'slide-in'">
-          <app-image-placement [srcLink]="galleryRoom[4].picUrl | imagePreview:galleryRoom[4]?.previewPic?.disabled"
-          [width]="galleryRoom[4].previewPic.width" [height]="galleryRoom[4].previewPic.height"
-          [alt]="galleryRoom[4].content.title"></app-image-placement>
-        </div>
-        <div
-          class="{{ galleryRoom[5].frameStyle }} hover original-slide-in col-12 col-lg ms-auto ms-lg-3 mb-3 me-auto width-fit-content"
-          (click)="openArtWorkLabel(galleryRoom[5])" title="{{ galleryRoom[5].content.title }}"
-          [appAddClassOnScrollPosition]="'slide-in'" [addClassDelay]="200">
-          <app-image-placement [srcLink]="galleryRoom[5].picUrl | imagePreview:galleryRoom[5]?.previewPic?.disabled"
-          [width]="galleryRoom[5].previewPic.width" [height]="galleryRoom[5].previewPic.height"
-          [alt]="galleryRoom[5].content.title"></app-image-placement>
-        </div>
-      </div>
-      <div class="row d-flex">
-        <div class="{{ galleryRoom[6].frameStyle }} hover original-slide-in mx-auto mb-3 mb-lg-0  mini-frame-300"
-          (click)="openArtWorkLabel(galleryRoom[6])" title="{{ galleryRoom[6].content.title }}"
-          [appAddClassOnScrollPosition]="'slide-in'" [addClassDelay]="300">
-            <app-image-placement [srcLink]="galleryRoom[6].picUrl | imagePreview:galleryRoom[6]?.previewPic?.disabled"
-            [width]="galleryRoom[6].previewPic.width" [height]="galleryRoom[6].previewPic.height"
-            [alt]="galleryRoom[6].content.title"></app-image-placement>
-        </div>
-      </div>
-    </div>
-    <div class="col-12 col-lg-4 d-flex">
-      <div class="{{ galleryRoom[7].frameStyle }} hover original-slide-in" (click)="openArtWorkLabel(galleryRoom[7])"
-        title="{{ galleryRoom[7].content.title }}" [appAddClassOnScrollPosition]="'slide-in'">
-        <app-image-placement [srcLink]="galleryRoom[7].picUrl | imagePreview:galleryRoom[7]?.previewPic?.disabled"
-          [width]="galleryRoom[7].previewPic.width" [height]="galleryRoom[7].previewPic.height"
-          [alt]="galleryRoom[7].content.title"></app-image-placement>
-      </div>
+</div>
+}
+@if (galleryRoom?.length === 7) {
+<div class="grid md:grid-cols-3 gap-4 mb-4">
+  <div class="flex">
+    <div class="{{ galleryRoom[4].frameStyle }} hover original-slide-in mb-auto ms-auto me-auto lg:me-0 mb-auto"
+      (click)="openArtWorkLabel(galleryRoom[4])" title="{{ galleryRoom[4].content.title }}"
+      [appAddClassOnScrollPosition]="'slide-in'">
+      <app-image-placement [srcLink]="galleryRoom[4].picUrl | imagePreview:galleryRoom[4]?.previewPic?.disabled"
+        [width]="galleryRoom[4].previewPic.width" [height]="galleryRoom[4].previewPic.height"
+        [alt]="galleryRoom[4].content.title"></app-image-placement>
     </div>
   </div>
-  }
-  @if (galleryRoom?.length === 8 && pattern === '3-rows') {
-  <div class="row mb-3">
-    <div class="col-1 d-none d-lg-block"></div>
-    <div class="col-12 col-lg-5 d-flex">
-      <div class="{{ galleryRoom[4].frameStyle }} hover original-slide-in me-auto ms-auto ms-lg-3 mb-3"
+  <div class="flex">
+    <div class="{{ galleryRoom[5].frameStyle }} hover original-slide-in mx-auto width-fit-content mb-auto"
+      (click)="openArtWorkLabel(galleryRoom[5])" title="{{ galleryRoom[5].content.title }}"
+      [appAddClassOnScrollPosition]="'slide-in'" [addClassDelay]="200">
+      <app-image-placement [srcLink]="galleryRoom[5].picUrl | imagePreview:galleryRoom[5]?.previewPic?.disabled"
+        [width]="galleryRoom[5].previewPic.width" [height]="galleryRoom[5].previewPic.height"
+        [alt]="galleryRoom[5].content.title"></app-image-placement>
+    </div>
+  </div>
+  <div class="flex">
+    <div class="{{ galleryRoom[6].frameStyle }} hover original-slide-in ms-auto me-auto lg:ms-0 mb-auto"
+      (click)="openArtWorkLabel(galleryRoom[6])" title="{{ galleryRoom[6].content.title }}"
+      [appAddClassOnScrollPosition]="'slide-in'" [addClassDelay]="400">
+      <app-image-placement [srcLink]="galleryRoom[6].picUrl | imagePreview:galleryRoom[6]?.previewPic?.disabled"
+        [width]="galleryRoom[6].previewPic.width" [height]="galleryRoom[6].previewPic.height"
+        [alt]="galleryRoom[6].content.title"></app-image-placement>
+    </div>
+  </div>
+</div>
+}
+@if (galleryRoom?.length === 8 && (pattern === 'wide' || !pattern)) {
+<div class="grid md:grid-cols-6 gap-4 mb-4">
+  <div>&nbsp;</div>
+  <div class="md:col-span-3">
+    <div class="flex grid md:grid-cols-2 gap-4">
+      <div class="{{ galleryRoom[4].frameStyle }} hover original-slide-in mb-4 md:ms-auto width-fit-content"
         (click)="openArtWorkLabel(galleryRoom[4])" title="{{ galleryRoom[4].content.title }}"
         [appAddClassOnScrollPosition]="'slide-in'">
         <app-image-placement [srcLink]="galleryRoom[4].picUrl | imagePreview:galleryRoom[4]?.previewPic?.disabled"
-        [width]="galleryRoom[4].previewPic.width" [height]="galleryRoom[4].previewPic.height"
-        [alt]="galleryRoom[4].content.title"></app-image-placement>
-      </div>
-    </div>
-    <div class="col-12 col-lg-5 d-flex">
-      <div class="{{ galleryRoom[5].frameStyle }} hover original-slide-in mini-frame-300 me-auto ms-auto ms-lg-0 d-flex"
-        (click)="openArtWorkLabel(galleryRoom[5])" title="{{ galleryRoom[5].content.title }}"
-        [appAddClassOnScrollPosition]="'slide-in'" [addClassDelay]="300">
-        <app-image-placement [srcLink]="galleryRoom[5].picUrl | imagePreview:galleryRoom[5]?.previewPic?.disabled"
-        [width]="galleryRoom[5].previewPic.width" [height]="galleryRoom[5].previewPic.height" [class]="'my-auto'"
-        [alt]="galleryRoom[5].content.title"></app-image-placement>
-      </div>
-    </div>
-  </div>
-  <div class="row mb-3" [appScrollIntoViewWhenReach]>
-    <div class="col-3 d-none d-lg-block"></div>
-    <div class="col-12 col-lg-4 d-flex">
-      <div
-        class="{{ galleryRoom[6].frameStyle }} hover original-slide-in mb-3 mini-frame-300 d-flex ms-auto me-auto me-lg-0 small"
-        (click)="openArtWorkLabel(galleryRoom[6])" title="{{ galleryRoom[6].content.title }}"
-        [appAddClassOnScrollPosition]="'slide-in'" [addClassDelay]="100">
-        <app-image-placement [srcLink]="galleryRoom[6].picUrl | imagePreview:galleryRoom[6]?.previewPic?.disabled"
-        [width]="galleryRoom[6].previewPic.width" [height]="galleryRoom[6].previewPic.height" class="my-auto"
-        [alt]="galleryRoom[6].content.title"></app-image-placement>
-      </div>
-    </div>
-    <div class="col-12 col-lg-5">
-      <div
-        class="{{ galleryRoom[7].frameStyle }} hover original-slide-in mini-frame-300 me-auto ms-auto ms-lg-0 d-flex small"
-        (click)="openArtWorkLabel(galleryRoom[7])" title="{{ galleryRoom[7].content.title }}"
-        [appAddClassOnScrollPosition]="'slide-in'" [addClassDelay]="300">
-        <app-image-placement [srcLink]="galleryRoom[7].picUrl | imagePreview:galleryRoom[7]?.previewPic?.disabled"
-          [width]="galleryRoom[7].previewPic.width" [height]="galleryRoom[7].previewPic.height" class="my-auto"
-          [alt]="galleryRoom[7].content.title"></app-image-placement>
-      </div>
-    </div>
-  </div>
-  }
-  @if (galleryRoom?.length === 9) {
-  <div class="row mb-3">
-    <div class="col-12 col-lg-9">
-      <div class="row d-flex">
-        <div class="{{ galleryRoom[4].frameStyle }} hover original-slide-in col-12 col-lg mb-3 mx-auto width-fit-content"
-          (click)="openArtWorkLabel(galleryRoom[4])" title="{{ galleryRoom[4].content.title }}"
-          [appAddClassOnScrollPosition]="'slide-in'">
-          <app-image-placement [srcLink]="galleryRoom[4].picUrl | imagePreview:galleryRoom[4]?.previewPic?.disabled"
           [width]="galleryRoom[4].previewPic.width" [height]="galleryRoom[4].previewPic.height"
           [alt]="galleryRoom[4].content.title"></app-image-placement>
-        </div>
-        <div
-          class="{{ galleryRoom[5].frameStyle }} hover original-slide-in col-12 col-lg ms-auto ms-lg-3 mb-3 me-auto width-fit-content"
-          (click)="openArtWorkLabel(galleryRoom[5])" title="{{ galleryRoom[5].content.title }}"
-          [appAddClassOnScrollPosition]="'slide-in'" [addClassDelay]="200">
-          <app-image-placement [srcLink]="galleryRoom[5].picUrl | imagePreview:galleryRoom[5]?.previewPic?.disabled"
+      </div>
+      <div
+        class="{{ galleryRoom[5].frameStyle }} hover original-slide-in md:ms-auto lg:ms-3 mb-4 me-auto width-fit-content"
+        (click)="openArtWorkLabel(galleryRoom[5])" title="{{ galleryRoom[5].content.title }}"
+        [appAddClassOnScrollPosition]="'slide-in'" [addClassDelay]="200">
+        <app-image-placement [srcLink]="galleryRoom[5].picUrl | imagePreview:galleryRoom[5]?.previewPic?.disabled"
           [width]="galleryRoom[5].previewPic.width" [height]="galleryRoom[5].previewPic.height"
           [alt]="galleryRoom[5].content.title"></app-image-placement>
-        </div>
       </div>
     </div>
-    <div class="col-12 col-lg-3 d-flex">
-      <div class="{{ galleryRoom[6].frameStyle }} hover original-slide-in my-auto" (click)="openArtWorkLabel(galleryRoom[6])"
-        title="{{ galleryRoom[7].content.title }}" [appAddClassOnScrollPosition]="'slide-in'">
-        <app-image-placement [srcLink]="galleryRoom[6].picUrl | imagePreview:galleryRoom[6]?.previewPic?.disabled"
-        [width]="galleryRoom[6].previewPic.width" [height]="galleryRoom[6].previewPic.height"
-        [alt]="galleryRoom[6].content.title"></app-image-placement>
-      </div>
-    </div>
-    <div class="col-12 col-lg-5 d-flex">
-      <div
-        class="{{ galleryRoom[7].frameStyle }} hover original-slide-in mb-3 d-flex ms-auto me-auto me-lg-0 small"
-        (click)="openArtWorkLabel(galleryRoom[7])" title="{{ galleryRoom[7].content.title }}"
-        [appAddClassOnScrollPosition]="'slide-in'" [addClassDelay]="100">
-        <app-image-placement [srcLink]="galleryRoom[7].picUrl | imagePreview:galleryRoom[7]?.previewPic?.disabled"
-          [width]="galleryRoom[7].previewPic.width" [height]="galleryRoom[7].previewPic.height" class="my-auto"
-          [alt]="galleryRoom[7].content.title"></app-image-placement>
-      </div>
-    </div>
-    <div class="col-12 col-lg-5">
-      <div
-        class="{{ galleryRoom[8].frameStyle }} hover original-slide-in me-auto ms-auto ms-lg-0 d-flex small"
-        (click)="openArtWorkLabel(galleryRoom[8])" title="{{ galleryRoom[8].content.title }}"
+    <div class="flex">
+      <div class="{{ galleryRoom[6].frameStyle }} hover original-slide-in mx-auto mb-4 lg:mb-0  mini-frame-300"
+        (click)="openArtWorkLabel(galleryRoom[6])" title="{{ galleryRoom[6].content.title }}"
         [appAddClassOnScrollPosition]="'slide-in'" [addClassDelay]="300">
-        <app-image-placement [srcLink]="galleryRoom[8].picUrl | imagePreview:galleryRoom[8]?.previewPic?.disabled"
-          [width]="galleryRoom[8].previewPic.width" [height]="galleryRoom[8].previewPic.height" class="my-auto"
-          [alt]="galleryRoom[8].content.title"></app-image-placement>
+        <app-image-placement [srcLink]="galleryRoom[6].picUrl | imagePreview:galleryRoom[6]?.previewPic?.disabled"
+          [width]="galleryRoom[6].previewPic.width" [height]="galleryRoom[6].previewPic.height"
+          [alt]="galleryRoom[6].content.title"></app-image-placement>
       </div>
     </div>
   </div>
-  }
+  <div class="md:col-span-2 flex">
+    <div class="{{ galleryRoom[7].frameStyle }} hover original-slide-in md:me-auto max-md:mx-auto" (click)="openArtWorkLabel(galleryRoom[7])"
+      title="{{ galleryRoom[7].content.title }}" [appAddClassOnScrollPosition]="'slide-in'">
+      <app-image-placement [srcLink]="galleryRoom[7].picUrl | imagePreview:galleryRoom[7]?.previewPic?.disabled"
+        [width]="galleryRoom[7].previewPic.width" [height]="galleryRoom[7].previewPic.height"
+        [alt]="galleryRoom[7].content.title"></app-image-placement>
+    </div>
+  </div>
+</div>
+}
+@if (galleryRoom?.length === 8 && pattern === '3-rows') {
+<div class="grid lg:grid-cols-12 gap-4 mb-4">
+  <div class="col-span-1 hidden d-lg-block"></div>
+  <div class="lg:col-span-5 flex">
+    <div class="{{ galleryRoom[4].frameStyle }} hover original-slide-in me-auto ms-auto lg:ms-3 mb-4"
+      (click)="openArtWorkLabel(galleryRoom[4])" title="{{ galleryRoom[4].content.title }}"
+      [appAddClassOnScrollPosition]="'slide-in'">
+      <app-image-placement [srcLink]="galleryRoom[4].picUrl | imagePreview:galleryRoom[4]?.previewPic?.disabled"
+        [width]="galleryRoom[4].previewPic.width" [height]="galleryRoom[4].previewPic.height"
+        [alt]="galleryRoom[4].content.title"></app-image-placement>
+    </div>
+  </div>
+  <div class="lg:col-span-5 flex">
+    <div class="{{ galleryRoom[5].frameStyle }} hover original-slide-in mini-frame-300 me-auto ms-auto lg:ms-0 flex"
+      (click)="openArtWorkLabel(galleryRoom[5])" title="{{ galleryRoom[5].content.title }}"
+      [appAddClassOnScrollPosition]="'slide-in'" [addClassDelay]="300">
+      <app-image-placement [srcLink]="galleryRoom[5].picUrl | imagePreview:galleryRoom[5]?.previewPic?.disabled"
+        [width]="galleryRoom[5].previewPic.width" [height]="galleryRoom[5].previewPic.height" [class]="'my-auto'"
+        [alt]="galleryRoom[5].content.title"></app-image-placement>
+    </div>
+  </div>
+</div>
+<div class="grid lg:grid-cols-12 gap-4 mb-4" [appScrollIntoViewWhenReach]>
+  <div class="col-span-3 hidden d-lg-block"></div>
+  <div class="col-span-12 lg:col-span-4 flex">
+    <div
+      class="{{ galleryRoom[6].frameStyle }} hover original-slide-in mb-4 mini-frame-300 flex ms-auto me-auto lg:me-0 small"
+      (click)="openArtWorkLabel(galleryRoom[6])" title="{{ galleryRoom[6].content.title }}"
+      [appAddClassOnScrollPosition]="'slide-in'" [addClassDelay]="100">
+      <app-image-placement [srcLink]="galleryRoom[6].picUrl | imagePreview:galleryRoom[6]?.previewPic?.disabled"
+        [width]="galleryRoom[6].previewPic.width" [height]="galleryRoom[6].previewPic.height" class="my-auto"
+        [alt]="galleryRoom[6].content.title"></app-image-placement>
+    </div>
+  </div>
+  <div class="lg:col-span-5">
+    <div
+      class="{{ galleryRoom[7].frameStyle }} hover original-slide-in mini-frame-300 me-auto ms-auto lg:ms-0 flex small"
+      (click)="openArtWorkLabel(galleryRoom[7])" title="{{ galleryRoom[7].content.title }}"
+      [appAddClassOnScrollPosition]="'slide-in'" [addClassDelay]="300">
+      <app-image-placement [srcLink]="galleryRoom[7].picUrl | imagePreview:galleryRoom[7]?.previewPic?.disabled"
+        [width]="galleryRoom[7].previewPic.width" [height]="galleryRoom[7].previewPic.height" class="my-auto"
+        [alt]="galleryRoom[7].content.title"></app-image-placement>
+    </div>
+  </div>
+</div>
+}
+@if (galleryRoom?.length === 9) {
+<div class="grid lg:grid-cols-12 gap-4 mb-4">
+  <div class="lg:col-span-9">
+    <div class="flex">
+      <div class="{{ galleryRoom[4].frameStyle }} hover original-slide-in mb-4 mx-auto width-fit-content"
+        (click)="openArtWorkLabel(galleryRoom[4])" title="{{ galleryRoom[4].content.title }}"
+        [appAddClassOnScrollPosition]="'slide-in'">
+        <app-image-placement [srcLink]="galleryRoom[4].picUrl | imagePreview:galleryRoom[4]?.previewPic?.disabled"
+          [width]="galleryRoom[4].previewPic.width" [height]="galleryRoom[4].previewPic.height"
+          [alt]="galleryRoom[4].content.title"></app-image-placement>
+      </div>
+      <div
+        class="{{ galleryRoom[5].frameStyle }} hover original-slide-in ms-auto lg:ms-3 mb-4 me-auto width-fit-content"
+        (click)="openArtWorkLabel(galleryRoom[5])" title="{{ galleryRoom[5].content.title }}"
+        [appAddClassOnScrollPosition]="'slide-in'" [addClassDelay]="200">
+        <app-image-placement [srcLink]="galleryRoom[5].picUrl | imagePreview:galleryRoom[5]?.previewPic?.disabled"
+          [width]="galleryRoom[5].previewPic.width" [height]="galleryRoom[5].previewPic.height"
+          [alt]="galleryRoom[5].content.title"></app-image-placement>
+      </div>
+    </div>
+  </div>
+  <div class="lg:col-span-3 flex">
+    <div class="{{ galleryRoom[6].frameStyle }} hover original-slide-in my-auto"
+      (click)="openArtWorkLabel(galleryRoom[6])" title="{{ galleryRoom[7].content.title }}"
+      [appAddClassOnScrollPosition]="'slide-in'">
+      <app-image-placement [srcLink]="galleryRoom[6].picUrl | imagePreview:galleryRoom[6]?.previewPic?.disabled"
+        [width]="galleryRoom[6].previewPic.width" [height]="galleryRoom[6].previewPic.height"
+        [alt]="galleryRoom[6].content.title"></app-image-placement>
+    </div>
+  </div>
+  <div class="lg:col-span-5 flex">
+    <div class="{{ galleryRoom[7].frameStyle }} hover original-slide-in mb-4 flex ms-auto me-auto lg:me-0 small"
+      (click)="openArtWorkLabel(galleryRoom[7])" title="{{ galleryRoom[7].content.title }}"
+      [appAddClassOnScrollPosition]="'slide-in'" [addClassDelay]="100">
+      <app-image-placement [srcLink]="galleryRoom[7].picUrl | imagePreview:galleryRoom[7]?.previewPic?.disabled"
+        [width]="galleryRoom[7].previewPic.width" [height]="galleryRoom[7].previewPic.height" class="my-auto"
+        [alt]="galleryRoom[7].content.title"></app-image-placement>
+    </div>
+  </div>
+  <div class="lg:col-span-5">
+    <div class="{{ galleryRoom[8].frameStyle }} hover original-slide-in me-auto ms-auto lg:ms-0 flex small"
+      (click)="openArtWorkLabel(galleryRoom[8])" title="{{ galleryRoom[8].content.title }}"
+      [appAddClassOnScrollPosition]="'slide-in'" [addClassDelay]="300">
+      <app-image-placement [srcLink]="galleryRoom[8].picUrl | imagePreview:galleryRoom[8]?.previewPic?.disabled"
+        [width]="galleryRoom[8].previewPic.width" [height]="galleryRoom[8].previewPic.height" class="my-auto"
+        [alt]="galleryRoom[8].content.title"></app-image-placement>
+    </div>
+  </div>
+</div>
+}
 }

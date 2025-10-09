@@ -1,5 +1,4 @@
 @use "variables" as var;
-@import "bootstrap-mixin";
 
 
 .header {
@@ -20,7 +19,7 @@
   z-index: 1;
 
 
-  @include media-breakpoint-down(md) {
+  @media (width <= var.$md) {
     overflow-x: hidden;
   }
 }

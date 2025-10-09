@@ -6,11 +6,10 @@ import { ScrollPositionService } from '../core/service/scroll-position.service';
 import { ReflectionFontComponent } from "../shared/reflection-font/reflection-font.component";
 
 @Component({
-  selector: 'app-term-of-service',
-  standalone: true,
-  imports: [ReflectionFontComponent, TranslateModule, RouterLink, CommonModule],
-  templateUrl: './term-of-service.component.html',
-  styleUrl: './term-of-service.component.scss'
+    selector: 'app-term-of-service',
+    imports: [ReflectionFontComponent, TranslateModule, RouterLink, CommonModule],
+    templateUrl: './term-of-service.component.html',
+    styleUrl: './term-of-service.component.scss'
 })
 export class TermOfServiceComponent {
   backUrl: any;

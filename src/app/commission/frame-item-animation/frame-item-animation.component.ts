@@ -7,11 +7,10 @@ import { CommonModule } from '@angular/common';
 import { MiniSpinningComponent } from "../../shared/mini-spinning/mini-spinning.component";
 
 @Component({
-  selector: 'app-frame-item-animation',
-  standalone: true,
-  imports: [TranslateModule, RouterLink, CommonModule, MiniSpinningComponent],
-  templateUrl: './frame-item-animation.component.html',
-  styleUrl: './frame-item-animation.component.scss'
+    selector: 'app-frame-item-animation',
+    imports: [TranslateModule, RouterLink, CommonModule, MiniSpinningComponent],
+    templateUrl: './frame-item-animation.component.html',
+    styleUrl: './frame-item-animation.component.scss'
 })
 export class FrameItemAnimationComponent implements AfterViewInit {
   @Output() activeTab = new EventEmitter<commissionTab>();

@@ -1,11 +1,11 @@
-@import "bootstrap-mixin";
+@use "variables" as var;
 .art-work-label {
 
   &.cdk-overlay-pane.mat-mdc-dialog-panel, .mat-mdc-dialog-container {
     max-width: 100%;
     min-height: 98%;
     height: 100%!important;
-    @include media-breakpoint-up(md) {
+    @media (width >= var.$md) {
       min-height: 50vh!important;
       min-width: 80%!important;
       max-width: 80vw;
@@ -15,7 +15,7 @@
   .mat-mdc-dialog-surface {
     padding: 20px 10px;
 
-  @include media-breakpoint-up(md) {
+  @media (width >= var.$md) {
     padding: 30px;
   }
   }

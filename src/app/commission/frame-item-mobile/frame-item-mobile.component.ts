@@ -6,11 +6,10 @@ import { ScrollToCenterDirective } from '../../shared/scroll-to-center.directive
 import { ImagePlacementComponent } from "../../shared/image-placement/image-placement.component";
 
 @Component({
-  selector: 'app-frame-item-mobile',
-  standalone: true,
-  imports: [TranslateModule, RouterLink, ScrollToCenterDirective, ImagePlacementComponent],
-  templateUrl: './frame-item-mobile.component.html',
-  styleUrl: './frame-item-mobile.component.scss'
+    selector: 'app-frame-item-mobile',
+    imports: [TranslateModule, RouterLink, ScrollToCenterDirective, ImagePlacementComponent],
+    templateUrl: './frame-item-mobile.component.html',
+    styleUrl: './frame-item-mobile.component.scss'
 })
 export class FrameItemMobileComponent {
   @Input() activeTab: commissionTab;

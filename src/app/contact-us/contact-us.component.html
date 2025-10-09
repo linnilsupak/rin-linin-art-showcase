@@ -1,12 +1,12 @@
-<div class="sub-title top-content-frame d-flex mx-auto mt-3">
-  <a routerLink="{{ backUrl}}" class="d-flex align-items-center ms-auto ms-md-4 me-auto">
+<div class="sub-title top-content-frame flex mx-auto mt-3">
+  <a routerLink="{{ backUrl}}" class="flex items-center ms-auto ms-md-4 me-auto">
     <span class="material-symbols-rounded">
       arrow_back_ios
     </span> Back
   </a>
 </div>
 @if (loading) {
-  <div class="d-flex justify-content-center align-items-center loading-div">
+  <div class="flex justify-center items-center loading-div">
     <app-mini-spinning class=""></app-mini-spinning>
   </div>
 }

@@ -9,11 +9,10 @@ import { MiniSpinningComponent } from "../shared/mini-spinning/mini-spinning.com
 import { mainConfig } from '../core/config/main.config';
 
 @Component({
-  selector: 'app-art-work-label-popup',
-  standalone: true,
-  imports: [MatIconModule, ImageSrcsetPipe, MiniSpinningComponent],
-  templateUrl: './art-work-label-popup.component.html',
-  styleUrl: './art-work-label-popup.component.scss'
+    selector: 'app-art-work-label-popup',
+    imports: [MatIconModule, ImageSrcsetPipe, MiniSpinningComponent],
+    templateUrl: './art-work-label-popup.component.html',
+    styleUrl: './art-work-label-popup.component.scss'
 })
 export class ArtWorkLabelPopupComponent implements OnInit, AfterViewInit {
   readonly dialogRef = inject(MatDialogRef<ArtWorkLabelPopupComponent>);

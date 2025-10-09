@@ -10,12 +10,11 @@ import { PlaygroundMenuComponent } from "../playground/playground-menu/playgroun
 import { RouterLink } from '@angular/router';
 
 @Component({
-  selector: 'app-home',
-  standalone: true,
-  imports: [TranslateModule, ReflectionFontComponent, ImageCardComponent, RouterLink,
-     CharacterIconComponent, AboutMePicHeaderComponent, SocialMediaSectionComponent, ImageSrcsetPipe, PlaygroundMenuComponent],
-  templateUrl: './home.component.html',
-  styleUrl: './home.component.scss'
+    selector: 'app-home',
+    imports: [TranslateModule, ReflectionFontComponent, ImageCardComponent, RouterLink,
+        CharacterIconComponent, AboutMePicHeaderComponent, SocialMediaSectionComponent, ImageSrcsetPipe, PlaygroundMenuComponent],
+    templateUrl: './home.component.html',
+    styleUrl: './home.component.scss'
 })
 export class HomeComponent {
 

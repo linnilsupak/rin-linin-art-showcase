@@ -1,27 +1,27 @@
 <div class="tab-body long pb-5">
-  <div class="container-fluid container-lg">
+  <div class="container-fluid lg:container mx-auto">
     <div class="section-sub-topic section-color pt-5 mb-5">
       {{ 'COMMISSION.PORTRAIT' | translate}}
     </div>
-    <div class="limit-width mx-auto d-none d-md-block">
+    <div class="limit-width mx-auto hidden d-mblock">
       <app-gallery-room [galleryRoom]="halfPortrait1" [pattern]="'equal'"></app-gallery-room>
     </div>
-    <!-- <app-gallery-room [galleryRoom]="halfPortrait2" [pattern]="'equal'" class="w-100"></app-gallery-room> -->
-    <!-- <div class="limit-width mx-auto d-none d-md-block">
+    <!-- <app-gallery-room [galleryRoom]="halfPortrait2" [pattern]="'equal'" class="w-full"></app-gallery-room> -->
+    <!-- <div class="limit-width mx-auto hidden d-mblock">
     </div> -->
     <app-gallery-room [galleryRoom]="halfPortrait3" [pattern]="'equal'"></app-gallery-room>
   </div>
 </div>
 
 <div class="hightlight-action  px-1 px-md-4 py-4">
-  <div class="container-fluid container-lg">
-    <div class="row after-reflect">
-      <div class="col-12 col-md-6">
+  <div class="container-fluid lg:container mx-auto">
+    <div class="grid md:grid-cols-2 gap-4 after-reflect">
+      <div>
         <img src="/assets/images/commission/half/portrait_half_commission_example.png" srcset="{{ '/assets/images/commission/half/portrait_half_commission_example.png' | imageSrcset }}"
-        class="w-100 mt-3"/>
+        class="w-full mt-3"/>
       </div>
-      <div class="col-12 col-md-6 text-center d-flex">
-        <div class="description-frame p-4 mt-3 my-md-auto w-100">
+      <div class="text-center flex">
+        <div class="description-frame p-4 mt-3 my-md-auto w-full">
           <div class="section-sub-topic mb-1">
             Want an art to introduce your character?
           </div>
@@ -33,7 +33,7 @@
           <div class="section-sub-topic my-3">
             You come at a right place!
           </div>
-          <div class="my-5 d-flex">
+          <div class="my-5 flex">
             <a [routerLink]="'/commission-form/half'" [queryParams]="{ prefill: '?usp=pp_url&entry.16310926=Portrait'}" class="mx-auto">
               <app-playground-menu [label]="'Continue'"></app-playground-menu>
             </a>
@@ -44,7 +44,7 @@
   </div>
 </div>
 <div class="tab-body long pb-5">
-  <div class="container-fluid container-lg">
+  <div class="container-fluid lg:container mx-auto">
     <div class="section-sub-topic section-color pt-5 mb-5">
       {{ 'COMMISSION.WIDESCREEN' | translate}}
     </div>
@@ -54,14 +54,14 @@
   </div>
 </div>
 <div class="hightlight-action  px-1 px-md-4 py-4">
-  <div class="container-fluid container-lg">
-    <div class="row after-reflect">
-      <div class="col-12 col-md-7">
+  <div class="container-fluid lg:container mx-auto">
+    <div class="grid md:grid-cols-12 gap-4 after-reflect">
+      <div class="md:col-span-7">
         <img src="/assets/images/commission/half/widescreen_half_commission_exp.png" srcset="{{ '/assets/images/commission/half/widescreen_half_commission_exp.png' | imageSrcset }}"
-        class="w-100 mt-3"/>
+        class="w-full mt-3"/>
       </div>
-      <div class="col-12 col-md-5 text-center d-flex">
-        <div class="description-frame p-4 mt-3 my-md-auto w-100">
+      <div class="md:col-span-5 text-center flex">
+        <div class="description-frame p-4 mt-3 my-md-auto w-full">
           <div class="section-sub-topic mb-1">
             Want an illustration for your novel?
           </div>
@@ -73,7 +73,7 @@
           <div class="section-sub-topic my-3">
             You come at a right place!
           </div>
-          <div class="my-5 d-flex">
+          <div class="my-5 flex">
             <a [routerLink]="'/commission-form/half'" [queryParams]="{ prefill: '?usp=pp_url&entry.16310926=Widescreen'}" class="mx-auto">
               <app-playground-menu [label]="'Continue'"></app-playground-menu>
             </a>

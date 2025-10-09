@@ -1,5 +1,5 @@
 
-<div class="d-block d-md-none">
+<div class="block md:hidden">
     <div class="tab-list white" [appScrollToCenter]="22">
       <div class="tab-item" [class.active]="activeTab === commissionTab.FACE || activeTab === undefined"
         (click)="this.changeActiveTab.emit(commissionTab.FACE)">
@@ -18,17 +18,17 @@
       </div>
     </div>
     <div class="tab-body white pt-3 pb-3 px-4">
-      <div class="previous-arrow" (click)="clickPrevious()" [class.d-none]="activeTab === commissionTab.FACE || activeTab === undefined">
+      <div class="previous-arrow" (click)="clickPrevious()" [class.hidden]="activeTab === commissionTab.FACE || activeTab === undefined">
         <span class="material-symbols-rounded mt-5">
           arrow_back_ios
           </span>
       </div>
-      <div class="next-arrow" (click)="clickNext()" [class.d-none]="activeTab === commissionTab.DETAIL">
+      <div class="next-arrow" (click)="clickNext()" [class.hidden]="activeTab === commissionTab.DETAIL">
         <span class="material-symbols-rounded mt-5">
           arrow_forward_ios
           </span>
       </div>
-      <div [class.d-none]="activeTab !== commissionTab.FACE && activeTab !== undefined">
+      <div [class.hidden]="activeTab !== commissionTab.FACE && activeTab !== undefined">
         <div class="section-sub-topic mb-1">
           {{ 'COMMISSION.FACE.TITLE' | translate}}
         </div>
@@ -39,12 +39,12 @@
         </div>
         <app-image-placement [height]="'516px'"
         [srcLink]="'/assets/images/commission/face_commission_example.webp'"
-        [itemClass]="'w-100 preview-img'"></app-image-placement>
+        [itemClass]="'w-full preview-img'"></app-image-placement>
         <a class="select-btn my-3" [routerLink]="['/commission-form', 'face']" >
           {{ 'COMMISSION.SELECT' | translate}}
         </a>
       </div>
-      <div [class.d-none]="activeTab !== commissionTab.HALF">
+      <div [class.hidden]="activeTab !== commissionTab.HALF">
         <div class="section-sub-topic mb-1">
           {{ 'COMMISSION.HALF.TITLE' | translate}}
         </div>
@@ -55,12 +55,12 @@
         </div>
         <app-image-placement [height]="'516px'"
         [srcLink]="'/assets/images/commission/half_commission_example.webp'"
-        [itemClass]="'w-100 preview-img'"></app-image-placement>
+        [itemClass]="'w-full preview-img'"></app-image-placement>
         <a class="select-btn my-3" [routerLink]="['/commission-form', 'half']">
           {{ 'COMMISSION.SELECT' | translate}}
         </a>
       </div>
-      <div [class.d-none]="activeTab !== commissionTab.FULL">
+      <div [class.hidden]="activeTab !== commissionTab.FULL">
         <div class="section-sub-topic mb-1">
           {{ 'COMMISSION.FULL.TITLE' | translate}}
         </div>
@@ -71,14 +71,14 @@
         </div>
         <app-image-placement [height]="'516px'"
         [srcLink]="'/assets/images/commission/full_commission_example.webp'"
-        [itemClass]="'w-100 preview-img'"></app-image-placement>
+        [itemClass]="'w-full preview-img'"></app-image-placement>
         <a class="select-btn my-3" [routerLink]="['/commission-form/full']">
           {{ 'COMMISSION.SELECT' | translate}}
         </a>
       </div>
-      <div [class.d-none]="activeTab !== commissionTab.DETAIL">
+      <div [class.hidden]="activeTab !== commissionTab.DETAIL">
         <div class="section-sub-topic mb-1">
-          {{ 'COMMISSION.DETAIL.TITLE' | translate}}<span class="d-inline d-md-none d-lg-inline">{{
+          {{ 'COMMISSION.DETAIL.TITLE' | translate}}<span class="d-inline md:hidden d-lg-inline">{{
             'COMMISSION.DETAIL.TITLE2' | translate}}</span>
         </div>
         <div class="price">{{ 'COMMISSION.DETAIL.PRICE' | translate}}</div>
@@ -88,7 +88,7 @@
         </div>
         <app-image-placement [height]="'516px'"
         [srcLink]="'/assets/images/commission/detail_bg_commission_example.webp'"
-        [itemClass]="'w-100 preview-img'"></app-image-placement>
+        [itemClass]="'w-full preview-img'"></app-image-placement>
         <a class="select-btn my-3" [routerLink]="['/commission-form/detail']" >
           {{ 'COMMISSION.SELECT' | translate}}
         </a>

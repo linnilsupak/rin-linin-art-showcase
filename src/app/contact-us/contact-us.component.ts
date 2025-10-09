@@ -6,11 +6,10 @@ import { MiniSpinningComponent } from "../shared/mini-spinning/mini-spinning.com
 import { mainConfig } from '../core/config/main.config';
 
 @Component({
-  selector: 'app-contact-us',
-  standalone: true,
-  imports: [RouterLink, SafePipe, MiniSpinningComponent],
-  templateUrl: './contact-us.component.html',
-  styleUrl: './contact-us.component.scss'
+    selector: 'app-contact-us',
+    imports: [RouterLink, SafePipe, MiniSpinningComponent],
+    templateUrl: './contact-us.component.html',
+    styleUrl: './contact-us.component.scss'
 })
 export class ContactUsComponent implements OnInit {
   private route = inject(ActivatedRoute);

@@ -4,11 +4,10 @@ import { mainConfig } from '../../core/config/main.config';
 import { MiniSpinningComponent } from "../mini-spinning/mini-spinning.component";
 
 @Component({
-  selector: 'app-character-icon',
-  standalone: true,
-  imports: [RouterLink, MiniSpinningComponent],
-  templateUrl: './character-icon.component.html',
-  styleUrl: './character-icon.component.scss'
+    selector: 'app-character-icon',
+    imports: [RouterLink, MiniSpinningComponent],
+    templateUrl: './character-icon.component.html',
+    styleUrl: './character-icon.component.scss'
 })
 export class CharacterIconComponent implements AfterViewInit {
   @Input() link: string;
