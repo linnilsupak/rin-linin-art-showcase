@@ -1,9 +1,13 @@
 <div class="flex justify-between items-center flex-col md:flex-row">
-  <a *ngIf="previousItem" [routerLink]="previousItem.link" class="mb-3 mb-md-0">
-    <app-playground-menu [label]="previousItem.label"></app-playground-menu>
-  </a>
+  @if (previousItem) {
+    <a [routerLink]="previousItem.link" class="mb-3 mb-md-0">
+      <app-playground-menu [label]="previousItem.label"></app-playground-menu>
+    </a>
+  }
 
-  <a *ngIf="nextItem" [routerLink]="nextItem.link">
-    <app-playground-menu [label]="nextItem.label"></app-playground-menu>
-  </a>
+  @if (nextItem) {
+    <a [routerLink]="nextItem.link">
+      <app-playground-menu [label]="nextItem.label"></app-playground-menu>
+    </a>
+  }
 </div>

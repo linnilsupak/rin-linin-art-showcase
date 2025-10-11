@@ -3,11 +3,11 @@ import { PlaygroundMenuComponent } from "../../playground/playground-menu/playgr
 import { ItemLink } from '../../core/models/item-link.model';
 import { playgroundMenuConfig } from '../../core/config/playground/playground-menu.config';
 import { RouterLink } from '@angular/router';
-import { CommonModule } from '@angular/common';
+
 
 @Component({
     selector: 'app-playground-bottom-menu',
-    imports: [PlaygroundMenuComponent, RouterLink, CommonModule],
+    imports: [PlaygroundMenuComponent, RouterLink],
     templateUrl: './playground-bottom-menu.component.html',
     styleUrl: './playground-bottom-menu.component.scss'
 })

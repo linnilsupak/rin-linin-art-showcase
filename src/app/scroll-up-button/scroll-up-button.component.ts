@@ -1,10 +1,10 @@
-import { CommonModule } from '@angular/common';
+
 import { AfterViewInit, Component, Input } from '@angular/core';
 import { WINDOW_PROVIDERS } from '../core/service/window.service';
 
 @Component({
     selector: 'app-scroll-up-button',
-    imports: [CommonModule],
+    imports: [],
     providers: [WINDOW_PROVIDERS],
     templateUrl: './scroll-up-button.component.html',
     styleUrl: './scroll-up-button.component.scss'

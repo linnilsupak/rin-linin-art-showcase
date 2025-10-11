@@ -1,5 +1,5 @@
-import { DOCUMENT, isPlatformBrowser } from '@angular/common';
-import { AfterViewInit, Component, ElementRef, HostListener, Inject, PLATFORM_ID, ViewChild } from '@angular/core';
+import { isPlatformBrowser } from '@angular/common';
+import { AfterViewInit, Component, ElementRef, HostListener, Inject, PLATFORM_ID, ViewChild, DOCUMENT } from '@angular/core';
 import { BehaviorSubject, debounceTime, Subscription } from 'rxjs';
 import { mainConfig } from '../core/config/main.config';
 import { Star } from '../core/models/star.model';
