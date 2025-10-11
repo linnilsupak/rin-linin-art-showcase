@@ -15,11 +15,6 @@
     color: var.$white;
     font-weight: 700;
     font-size: 1rem;
-
-    @media (width >= var.$md) {
-        font-size: 4rem;
-        font-size: 1.25rem;
-    }
 }
 
 .card {
