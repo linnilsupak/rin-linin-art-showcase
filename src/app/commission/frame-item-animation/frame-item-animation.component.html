@@ -7,7 +7,7 @@
 <div class="w-full mb-5 flex" #parentItem>
   @if (!loading) {
   @for (item of tabList; track item;let index=$index) {
-  <div class="mb-3 mb-md-0 animate-frame" [style.width.px]="item.width" [style.margin-right.px]="padding">
+  <div class="mb-3 md:mb-0 animate-frame" [style.width.px]="item.width" [style.margin-right.px]="padding">
     <div class="animate-frame description-frame flex flex-col" [class.not-active]="activeItem !== item.name"
     [style.height.px]="fullHeight" [class.overflow-hidden]="activeItem !== item.name && activeItem !== undefined"
       (mouseenter)="itemActive(index, item.name)" (mouseleave)="itemInactive(item.name)" (click)="itemActive(index, item.name, true)">

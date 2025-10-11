@@ -9,11 +9,11 @@
   </div>
 </div>
 <app-frame-item-mobile [activeTab]="activeTab" (changeActiveTab)="changeActiveTab($event)"></app-frame-item-mobile>
-<div class="container-fluid md:container mx-auto mt-4 mt-md-0">
+<div class="container-fluid md:container mx-auto mt-4 md:mt-0">
   <app-frame-item-animation class="hidden d-mblock" [activeVal]="activeTab" (activeTab)="changeActiveTab($event)">
   </app-frame-item-animation>
   <div class="grid grid-cols-1 md:grid-cols-3 gap-4 mb-5">
-    <div class="mb-3 mb-md-0">
+    <div class="mb-3 md:mb-0">
       <div class="description-frame w-full h-full text-start p-4 mb-3">
         <div class="section-sub-topic mb-1">
           {{ 'COMMISSION.CAN_DO.TITLE' | translate}}
@@ -29,7 +29,7 @@
         </div>
       </div>
     </div>
-    <div class="mb-3 mb-md-0">
+    <div class="mb-3 md:mb-0">
       <div class="description-frame w-full h-full text-start p-4">
         <div class="section-sub-topic mb-1">
           {{ 'COMMISSION.DONT_DO.TITLE' | translate}}
@@ -42,7 +42,7 @@
         </div>
       </div>
     </div>
-    <div class="mb-3 mb-md-0">
+    <div class="mb-3 md:mb-0">
       <div class="description-frame w-full h-full text-start p-4">
         <div class="section-sub-topic mb-1">
           {{ 'COMMISSION.PAYMENT.TITLE' | translate}}
@@ -58,7 +58,7 @@
     </div>
   </div>
   <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mb-5">
-    <div class="mb-3 mb-md-0">
+    <div class="mb-3 md:mb-0">
       <div class="description-frame w-full h-full text-start p-4 mb-3  flex flex-col">
         <div class="section-sub-topic mb-1">
           {{ 'COMMISSION.METHOD.TITLE' | translate}}
@@ -83,7 +83,7 @@
         </div>
       </div>
     </div>
-    <div class="mb-3 mb-md-0">
+    <div class="mb-3 md:mb-0">
       <div class="description-frame w-full h-full text-start p-4 flex flex-col">
         <div class="section-sub-topic mb-1">
           {{ 'TOS.TITLE' | translate}}

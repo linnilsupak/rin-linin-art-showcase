@@ -1,6 +1,6 @@
 <div class="flex justify-between items-center flex-col md:flex-row">
   @if (previousItem) {
-    <a [routerLink]="previousItem.link" class="mb-3 mb-md-0">
+    <a [routerLink]="previousItem.link" class="mb-3 md:mb-0">
       <app-playground-menu [label]="previousItem.label"></app-playground-menu>
     </a>
   }

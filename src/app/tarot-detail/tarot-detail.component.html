@@ -1,6 +1,6 @@
 <div class="container-fluid lg:container mx-auto my-5">
   <div class="sub-title top-content-frame flex">
-    <a [routerLink]="'/tarots'" class="flex items-center ms-auto ms-md-4 me-auto">
+    <a [routerLink]="'/tarots'" class="flex items-center ms-auto md:ms-4 me-auto">
       <span class="material-symbols-rounded">
         arrow_back_ios
       </span> Back
@@ -67,7 +67,7 @@
   </div>
   <div class="flex">
     <div class="description-frame mx-auto p-4 card-description">
-      <div class="section-sub-topic mb-2 mb-md-4">
+      <div class="section-sub-topic mb-2 md:mb-4">
         {{ "TAROT_MEANING.CARD_DESC" | translate:{ name: targetTarot.name} }}
       </div>
       <div class="section-content mb-3 mx-auto">
@@ -93,17 +93,17 @@
       <div class="section-sub-topic mt-4 mb-1 section-color">
         {{ 'TAROT_MEANING.UPRIGHT_KEYWORD' | translate:{ name: targetTarot.name} }}
       </div>
-      <div class="section-color tarot-keyword mb-3 mb-md-5">
+      <div class="section-color tarot-keyword mb-3 md:mb-5">
         {{ targetTarot.upright?.keyword }}
       </div>
       <div class="container">
-        <div class="grid lg:grid-cols-12 gap-4 mb-3 mb-md-5">
+        <div class="grid lg:grid-cols-12 gap-4 mb-3 md:mb-5">
           <div class="flex mt-3 mb-3 lg:mb-0 lg:col-span-4 order-lg-last" >
             <img src="{{targetTarot.imageUrl}}" class="w-full character-frame my-auto ms-auto md:ms-0 me-auto sub-tarot" [alt]="targetTarot.name">
           </div>
           <div class="flex lg:col-span-8">
-            <div class="description-frame px-md-3 flex flex-col ms-lg-auto order-lg-first">
-              <div class="section-sub-topic mb-2 mb-md-4">
+            <div class="description-frame px-md-3 flex flex-col lg:ms-auto order-lg-first">
+              <div class="section-sub-topic mb-2 md:mb-4">
                 {{ 'TAROT_MEANING.UPRIGHT_MEANING' | translate}}
               </div>
               <div class="section-content sub-bubble">
@@ -112,14 +112,14 @@
             </div>
           </div>
         </div>
-        <div class="grid lg:grid-cols-12 gap-4 mb-3 mb-md-5">
+        <div class="grid lg:grid-cols-12 gap-4 mb-3 md:mb-5">
           <div class="flex mt-3 mb-3 lg:mb-0 lg:col-span-4" >
             <img src="/assets/images/tarot/meaning_icons/love_card.png" srcset="{{ '/assets/images/tarot/meaning_icons/love_card.png' | imageSrcset}}"
             class="w-full character-frame my-auto md:me-0 me-auto ms-auto sub-tarot ms-auto" [alt]="targetTarot.name">
           </div>
           <div class="flex lg:col-span-8">
             <div class="description-frame px-md-5 flex flex-col order-lg-first">
-              <div class="section-sub-topic mb-2 mb-md-4">
+              <div class="section-sub-topic mb-2 md:mb-4">
                 {{ 'TAROT_MEANING.LOVE' | translate}}
               </div>
               <div class="section-content sub-bubble">
@@ -128,14 +128,14 @@
             </div>
           </div>
         </div>
-        <div class="grid lg:grid-cols-12 gap-4 mb-3 mb-md-5">
+        <div class="grid lg:grid-cols-12 gap-4 mb-3 md:mb-5">
           <div class="col-12 flex mt-3 mb-3 lg:mb-0 lg:col-span-4 order-lg-last" >
             <img src="/assets/images/tarot/meaning_icons/finance_card.png" srcset="{{ '/assets/images/tarot/meaning_icons/finance_card.png' | imageSrcset}}"
             class="w-full character-frame my-auto ms-auto md:ms-0 me-auto sub-tarot" [alt]="targetTarot.name">
           </div>
           <div class="col-12 flex lg:col-span-8">
-            <div class="description-frame px-md-5 flex flex-col ms-lg-auto order-lg-first">
-              <div class="section-sub-topic mb-2 mb-md-4">
+            <div class="description-frame px-md-5 flex flex-col lg:ms-auto order-lg-first">
+              <div class="section-sub-topic mb-2 md:mb-4">
                 {{ 'TAROT_MEANING.FINANCE' | translate}}
               </div>
               <div class="section-content sub-bubble">
@@ -144,14 +144,14 @@
             </div>
           </div>
         </div>
-        <div class="grid lg:grid-cols-12 gap-4 mb-3 mb-md-5">
+        <div class="grid lg:grid-cols-12 gap-4 mb-3 md:mb-5">
           <div class="col-12 flex mt-3 mb-3 lg:mb-0 lg:col-span-4" >
             <img src="/assets/images/tarot/meaning_icons/career_card.png" srcset="{{ '/assets/images/tarot/meaning_icons/career_card.png' | imageSrcset}}"
             class="w-full character-frame my-auto md:me-0 me-auto ms-auto sub-tarot ms-auto" [alt]="targetTarot.name">
           </div>
           <div class="col-12 flex lg:col-span-8">
             <div class="description-frame px-md-5 flex flex-col order-lg-first">
-              <div class="section-sub-topic mb-2 mb-md-4">
+              <div class="section-sub-topic mb-2 md:mb-4">
                 {{ 'TAROT_MEANING.CAREER' | translate}}
               </div>
               <div class="section-content sub-bubble">
@@ -167,18 +167,18 @@
       <div class="section-sub-topic mt-4 mb-1 section-color">
         {{ 'TAROT_MEANING.REVERSE_KEYWORD' | translate:{ name: targetTarot.name} }}
       </div>
-      <div class="section-color tarot-keyword mb-3 mb-md-5">
+      <div class="section-color tarot-keyword mb-3 md:mb-5">
         {{ targetTarot.reverse?.keyword }}
       </div>
       <div class="container">
-        <div class="grid lg:grid-cols-12 gap-4 mb-3 mb-md-5">
+        <div class="grid lg:grid-cols-12 gap-4 mb-3 md:mb-5">
           <div class="col-12 flex mt-3 mb-3 lg:mb-0 lg:col-span-4 order-lg-last" >
             <img src="{{targetTarot.imageUrl}}"
             class="w-full character-frame reverse my-auto ms-auto md:ms-0 me-auto sub-tarot" [alt]="targetTarot.name">
           </div>
           <div class="col-12 flex lg:col-span-8">
-            <div class="description-frame px-md-5 flex flex-col ms-lg-auto order-lg-first">
-              <div class="section-sub-topic mb-2 mb-md-4">
+            <div class="description-frame px-md-5 flex flex-col lg:ms-auto order-lg-first">
+              <div class="section-sub-topic mb-2 md:mb-4">
                 {{ 'TAROT_MEANING.REVERSE_MEANING' | translate}}
               </div>
               <div class="section-content sub-bubble">
@@ -187,14 +187,14 @@
             </div>
           </div>
         </div>
-        <div class="grid lg:grid-cols-12 gap-4 mb-3 mb-md-5">
+        <div class="grid lg:grid-cols-12 gap-4 mb-3 md:mb-5">
           <div class="col-12 flex mt-3 mb-3 lg:mb-0 lg:col-span-4" >
             <img src="/assets/images/tarot/meaning_icons/love_card.png" srcset="{{ '/assets/images/tarot/meaning_icons/love_card.png' | imageSrcset}}"
             class="w-full character-frame my-auto md:me-0 me-auto ms-auto sub-tarot ms-auto" [alt]="targetTarot.name">
           </div>
           <div class="col-12 flex lg:col-span-8">
             <div class="description-frame px-md-5 flex flex-col order-lg-first">
-              <div class="section-sub-topic mb-2 mb-md-4">
+              <div class="section-sub-topic mb-2 md:mb-4">
                 {{ 'TAROT_MEANING.LOVE' | translate}}
               </div>
               <div class="section-content sub-bubble">
@@ -203,14 +203,14 @@
             </div>
           </div>
         </div>
-        <div class="grid lg:grid-cols-12 gap-4 mb-3 mb-md-5">
+        <div class="grid lg:grid-cols-12 gap-4 mb-3 md:mb-5">
           <div class="col-12 flex mt-3 mb-3 lg:mb-0 lg:col-span-4 order-lg-last" >
             <img src="/assets/images/tarot/meaning_icons/finance_card.png" srcset="{{ '/assets/images/tarot/meaning_icons/finance_card.png' | imageSrcset}}"
             class="w-full character-frame my-auto ms-auto md:ms-0 me-auto sub-tarot" [alt]="targetTarot.name">
           </div>
           <div class="col-12 flex lg:col-span-8">
-            <div class="description-frame px-md-5 flex flex-col ms-lg-auto order-lg-first">
-              <div class="section-sub-topic mb-2 mb-md-4">
+            <div class="description-frame px-md-5 flex flex-col lg:ms-auto order-lg-first">
+              <div class="section-sub-topic mb-2 md:mb-4">
                 {{ 'TAROT_MEANING.FINANCE' | translate}}
               </div>
               <div class="section-content sub-bubble">
@@ -219,14 +219,14 @@
             </div>
           </div>
         </div>
-        <div class="grid lg:grid-cols-12 gap-4 mb-3 mb-md-5">
+        <div class="grid lg:grid-cols-12 gap-4 mb-3 md:mb-5">
           <div class="flex mt-3 mb-3 lg:mb-0 lg:col-span-4" >
             <img src="/assets/images/tarot/meaning_icons/career_card.png" srcset="{{ '/assets/images/tarot/meaning_icons/career_card.png' | imageSrcset}}"
             class="w-full character-frame my-auto md:me-0 me-auto ms-auto sub-tarot ms-auto" [alt]="targetTarot.name">
           </div>
           <div class="flex lg:col-span-8">
             <div class="description-frame px-md-5 flex flex-col order-lg-first">
-              <div class="section-sub-topic mb-2 mb-md-4">
+              <div class="section-sub-topic mb-2 md:mb-4">
                 {{ 'TAROT_MEANING.CAREER' | translate}}
               </div>
               <div class="section-content sub-bubble">
