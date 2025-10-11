@@ -19,7 +19,7 @@
     <div class="section-color mb-4">
       {{'TAROT.MAJOR_DESC' | translate}}
     </div>
-    <div class="grid grid-cols-3 lg:grid-cols-6 gap-4 justify-center items-start">
+    <div class="grid grid-cols-3 md:grid-cols-6 lg:grid-cols-8 xl:grid-cols-10 gap-4 justify-center items-start">
       @for (card of tarots.major; track card.name) {
       <a [routerLink]="[ '/tarot-meaning', card.category | lowercase, card.number]" class="my-3 flex flex-col justify-center">
         <img src="{{ card?.imageUrl || '/assets/images/tarot/coming_soon_card.webp?v=1'}}" alt="{{card.name}}"
@@ -37,7 +37,7 @@
     <div class="section-color mb-4">
       {{'TAROT.WANDS_DESC' | translate}}
     </div>
-    <div class="grid grid-cols-3 lg:grid-cols-6 gap-4 justify-center items-start">
+    <div class="grid grid-cols-3 md:grid-cols-6 lg:grid-cols-8 xl:grid-cols-10 gap-4 justify-center items-start">
       @for (card of tarots.wands; track card.name) {
       <a [routerLink]="[ '/tarot-meaning', card.category | lowercase, card.number]" class="my-3 flex flex-col justify-center">
         <img src="{{ card?.imageUrl || '/assets/images/tarot/coming_soon_card.webp'}}" alt="{{card.name}}"
@@ -55,7 +55,7 @@
     <div class="section-color mb-4">
       {{'TAROT.CUPS_DESC' | translate}}
     </div>
-    <div class="grid grid-cols-3 lg:grid-cols-6 gap-4 justify-center items-start">
+    <div class="grid grid-cols-3 md:grid-cols-6 lg:grid-cols-8 xl:grid-cols-10 gap-4 justify-center items-start">
       @for (card of tarots.cups; track card.name) {
       <a [routerLink]="[ '/tarot-meaning', card.category | lowercase, card.number]" class="my-3 flex flex-col justify-center">
         <img src="{{ card?.imageUrl || '/assets/images/tarot/coming_soon_card.webp'}}" alt="{{card.name}}"
@@ -73,7 +73,7 @@
     <div class="section-color mb-4">
       {{'TAROT.SWORDS_DESC' | translate}}
     </div>
-    <div class="grid grid-cols-3 lg:grid-cols-6 gap-4 justify-center items-start">
+    <div class="grid grid-cols-3 md:grid-cols-6 lg:grid-cols-8 xl:grid-cols-10 gap-4 justify-center items-start">
       @for (card of tarots.swords; track card.name) {
       <a [routerLink]="[ '/tarot-meaning', card.category | lowercase, card.number]" class="my-3 flex flex-col justify-center">
         <img src="{{ card?.imageUrl || '/assets/images/tarot/coming_soon_card.webp'}}" alt="{{card.name}}"
@@ -91,7 +91,7 @@
     <div class="section-color mb-4">
       {{'TAROT.COINS_DESC' | translate}}
     </div>
-    <div class="grid grid-cols-3 lg:grid-cols-6 gap-4 justify-center items-start">
+    <div class="grid grid-cols-3 md:grid-cols-6 lg:grid-cols-8 xl:grid-cols-10 gap-4 justify-center items-start">
       @for (card of tarots.coins; track card.name) {
       <a [routerLink]="[ '/tarot-meaning', card.category | lowercase, card.number]" class="my-3 flex flex-col justify-center">
         <img src="{{ card?.imageUrl || '/assets/images/tarot/coming_soon_card.webp'}}" alt="{{card.name}}"
