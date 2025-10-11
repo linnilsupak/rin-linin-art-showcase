@@ -38,13 +38,13 @@ $rin-linin-art-showcase-theme: mat.define-theme((
 :root {
   --color-border-wallpaper: #{var.$goldStrap};
   --color-wallpaper-light: #{var.$yellowStrap};
-  --mdc-outlined-text-field-container-shape: #{var.$input-border-radius};
-  --mdc-filled-text-field-container-color: #{var.$white};
+  --mat-form-field-outlined-container-shape: #{var.$input-border-radius};
+  --mat-form-field-filled-container-color: #{var.$white};
   --mat-select-panel-background-color: #{var.$white};
-  --mdc-filled-text-field-active-indicator-color: #{var.$white};
-  --mdc-filled-text-field-hover-active-indicator-color: #{var.$pink-bg};
-  --mdc-filled-text-field-focus-active-indicator-color: #{var.$pink-bg};
-  --mdc-filled-button-container-shape: #{var.$input-border-radius};
+  --mat-form-field-filled-active-indicator-color: #{var.$white};
+  --mat-form-field-filled-hover-active-indicator-color: #{var.$pink-bg};
+  --mat-form-field-filled-focus-active-indicator-color: #{var.$pink-bg};
+  --mat-button-filled-container-shape: #{var.$input-border-radius};
 }
 
 .mat-mdc-select-panel-above div.mat-mdc-select-panel,
