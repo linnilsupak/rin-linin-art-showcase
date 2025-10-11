@@ -1,4 +1,4 @@
-import { CommonModule } from '@angular/common';
+
 import { Component, inject } from '@angular/core';
 import { RouterLink } from '@angular/router';
 import { TranslateModule } from '@ngx-translate/core';
@@ -7,7 +7,7 @@ import { ReflectionFontComponent } from "../shared/reflection-font/reflection-fo
 
 @Component({
     selector: 'app-term-of-service',
-    imports: [ReflectionFontComponent, TranslateModule, RouterLink, CommonModule],
+    imports: [ReflectionFontComponent, TranslateModule, RouterLink],
     templateUrl: './term-of-service.component.html',
     styleUrl: './term-of-service.component.scss'
 })

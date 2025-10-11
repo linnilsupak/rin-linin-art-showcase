@@ -1,6 +1,6 @@
 <div class="container-fluid lg:container mx-auto mt-4">
   <div class="sub-title top-content-frame flex">
-    <a [routerLink]="backUrl" fragment="lininStory" class="flex items-center ms-auto ms-md-4 me-auto">
+    <a [routerLink]="backUrl" fragment="lininStory" class="flex items-center ms-auto md:ms-4 me-auto">
       <span class="material-symbols-rounded">
         arrow_back_ios
       </span> Back
@@ -11,14 +11,14 @@
       [fontClass]="'mx-auto sub-title'"></app-reflection-font>
   </div>
   <div class="grid md:grid-cols-12 gap-4 mb-5">
-    <div class="md:col-span-2 flex flex-col mb-3 mb-md-0">
-      <div class="black-frame small ms-auto me-suto me-md-2">
+    <div class="md:col-span-2 flex flex-col mb-3 md:mb-0">
+      <div class="black-frame small ms-auto me-suto md:me-2">
         <img [src]="characterData?.imageUrl">
       </div>
     </div>
     <div class="md:col-span-10 text-center text-md-start">
       <div class="description-frame px-5">
-        <div class="section-sub-topic mb-2 mb-md-4">
+        <div class="section-sub-topic mb-2 md:mb-4">
           {{ characterData?.title | translate}}
         </div>
         <div class="section-content mb-4">

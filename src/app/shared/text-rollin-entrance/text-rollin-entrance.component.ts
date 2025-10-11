@@ -1,6 +1,6 @@
 import { AfterViewInit, Component, ContentChild, ElementRef, inject, Input, Renderer2, TemplateRef, ViewChild } from '@angular/core';
 import { mainConfig } from '../../core/config/main.config';
-import { CommonModule } from '@angular/common';
+
 
 interface rotateText {
   alphabet: string;
@@ -9,7 +9,7 @@ interface rotateText {
 
 @Component({
     selector: 'app-text-rollin-entrance',
-    imports: [CommonModule],
+    imports: [],
     templateUrl: './text-rollin-entrance.component.html',
     styleUrl: './text-rollin-entrance.component.scss'
 })

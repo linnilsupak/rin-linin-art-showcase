@@ -1,6 +1,6 @@
 <div class="container-fluid mt-3 flex md:container mx-auto">
   <div class="grid md:grid-cols-12 gap-4 m-auto my-md-0 row-content">
-    <div class="col-span-12 mb-2 mb-md-0 flex" [class.md:col-span-12]="!isRecTemplate()" [class.md:col-span-8]="isRecTemplate()">
+    <div class="col-span-12 mb-2 md:mb-0 flex" [class.md:col-span-12]="!isRecTemplate()" [class.md:col-span-8]="isRecTemplate()">
       <div class="{{ frameStyle() }} m-auto">
         @if (imageLoading) {
           <div class="flex justify-center items-center" [style.min-width]="minWidth()" [style.min-height]="minHeight()">

@@ -1,4 +1,5 @@
 @use "variables" as var;
+@use '@angular/material' as mat;
 
 .float-search {
     background-color: var.$white;
@@ -11,9 +12,14 @@
     z-index: var.$sticky-level;
     height: 64px;
     box-shadow: 0 2px 5px rgba(0, 0, 0, .6), 0 5px 2px rgba(0, 0, 0, .1), 0 10px 20px rgba(0, 0, 0, .8);
-    --mdc-filled-button-container-shape: 36px;
-    --mdc-outlined-text-field-container-shape: 36px;
+    // --mat-button-filled-container-shape: 36px;
+    // --mat-form-field-outlined-container-shape: 36px;
     transition: .5s all ease-out;
+    @include mat.form-field-overrides((
+      filled-container-shape: 36px,
+      outlined-container-shape: 36px,
+      outlined-disabled-outline-color: transparent,
+    ));
 }
 
 .hide {

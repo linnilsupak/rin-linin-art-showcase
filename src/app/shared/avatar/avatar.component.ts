@@ -1,10 +1,10 @@
-import { CommonModule } from '@angular/common';
+
 import { Component, Input } from '@angular/core';
 import {MatTooltipModule} from '@angular/material/tooltip';
 
 @Component({
     selector: 'app-avatar',
-    imports: [CommonModule, MatTooltipModule],
+    imports: [MatTooltipModule],
     templateUrl: './avatar.component.html',
     styleUrl: './avatar.component.scss'
 })

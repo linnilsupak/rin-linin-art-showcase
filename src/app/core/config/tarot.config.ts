@@ -19,7 +19,7 @@ export const tarotConfig: TarotConfig = {
         },
         {
             "name": "The High Priestess",
-            "imageUrl": "",
+            "imageUrl": "/assets/images/tarot/major/the-high-priestess.webp",
             "description": "ความฉลาด มีความรู้ความสามารถ เป็นตัวแทนของคนเก่งมากความสามารถ แต่มักซ่อนสิ่งนั้นเอาไว้ภายในรูปลักษณ์นิ่งเงียบที่แสดงให้ภายนอกได้เห็น",
             number: 2,
             category: tarotCategory.MAJOR_ARCANA
@@ -161,7 +161,7 @@ export const tarotConfig: TarotConfig = {
     cups: [
         {
           "name": "Ace of Cups",
-          "imageUrl": "/assets/images/tarot/cups/ace_of_cups.webp",
+          "imageUrl": "/assets/images/tarot/cups/ace-of-cups.webp",
           "description": "ความรัก การเริ่มต้น การมอบสิ่งดี ๆ ให้กับอีกฝ่ายหรืออาจจะเป็นฝ่ายได้รับสิ่งดี ๆ จากผู้อื่น",
           number: 1,
           category: tarotCategory.CUPS,
@@ -196,7 +196,7 @@ export const tarotConfig: TarotConfig = {
         },
         {
           "name": "Four of Cups",
-          "imageUrl": "",
+          "imageUrl": "/assets/images/tarot/cups/4-of-cups.webp",
           "description": "การหยุดนิ่ง ความเบื่อหน่าย แม้จะมีความสุข มีสิ่งดี ๆ รายล้อม แต่กลับเบื่อหน่ายเพราะอยู่แต่ในกรอบเดิม ๆ",
           number: 4,
           category: tarotCategory.CUPS
@@ -273,7 +273,7 @@ export const tarotConfig: TarotConfig = {
         },
         {
           "name": "Page of Cups",
-          "imageUrl": "/assets/images/tarot/cups/page_of_cups.webp",
+          "imageUrl": "/assets/images/tarot/cups/page-of-cups.webp",
           "description": "ความสนุก ชอบเข้าสังคม ได้พบเจอกับคนมากหน้าหลายตา หรืออาจได้รับข่าวสารบางอย่าง",
           number: 11,
           category: tarotCategory.CUPS,
@@ -308,7 +308,7 @@ export const tarotConfig: TarotConfig = {
         },
         {
           "name": "King of Cups",
-          "imageUrl": "/assets/images/tarot/cups/king_of_cups.webp",
+          "imageUrl": "/assets/images/tarot/cups/king-of-cups.webp",
           "description": "ฉลาด สุขุม อดทน แม้ว่าจะต้องเจอกับเหตุการณ์ไม่มั่นคงใด ๆ ก็ต้องวางตัวหนักแน่  ใช้เหตุผลมากกว่าอารมณ์",
           number: 14,
           category: tarotCategory.CUPS,
@@ -436,7 +436,7 @@ export const tarotConfig: TarotConfig = {
         },
         {
           "name": "King of Coins",
-          "imageUrl": "/assets/images/tarot/coins/king_of_coins.webp",
+          "imageUrl": "/assets/images/tarot/coins/king-of-coins.webp",
           "description": "ประสบความสำเร็จ ร่ำรวย มีเงินทองมากมาย หวังสิ่งใดก็จะได้สิ่งนั้น ไม่ขัดสน ไม่ลำบาก",
           number: 14,
           category: tarotCategory.COINS,
@@ -713,7 +713,7 @@ export const tarotConfig: TarotConfig = {
         },
         {
           "name": "Queen of Wands",
-          "imageUrl": "/assets/images/tarot/wands/queen_of_wands.webp",
+          "imageUrl": "/assets/images/tarot/wands/queen-of-wands.webp",
           "description": "การมีความคิดสร้างสรรค์ การเป็นตัวของตัวเอง",
           number: 13,
           category: tarotCategory.WANDS,
