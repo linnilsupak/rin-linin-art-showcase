@@ -1,13 +1,15 @@
 <div class="flex mb-4">
     <form [formGroup]="filterForm" class="mx-0 sm:mx-auto flex big-search flex-col sm:flex-row" [ngClass]="{'mini-form mat-form-field-no-validation': view === 'sticky'}">
-      <mat-form-field class="me-2 select hidden d-mblock" [appearance]="view === 'sticky' ? 'outline':'fill'">
-        <mat-label>Category</mat-label>
-        <mat-select formControlName="category">
+      <div class="hidden md:block">
+        <mat-form-field class="me-2 select" [appearance]="view === 'sticky' ? 'outline':'fill'">
+          <mat-label>Category</mat-label>
+          <mat-select formControlName="category">
           @for (item of category; track item) {
           <mat-option [value]="item.value">{{item.label}}</mat-option>
           }
         </mat-select>
-      </mat-form-field>
+        </mat-form-field>
+      </div>
       <mat-form-field class="big-search"  [appearance]="view === 'sticky' ? 'outline':'fill'" #searchInput>
         <mat-label>Search tarot card name</mat-label>
         <input type="text" placeholder="Pick one" aria-label="Number" matInput formControlName="search"
@@ -43,12 +45,14 @@
             }
         }
       </mat-autocomplete>
-      <a mat-flat-button type="button" class="ms-0 md:ms-5" [ngClass]="{'mini-button hidden md:block': view === 'sticky', 'big-button': view === 'tarot'}"
-      routerLink="/contact-me" [queryParams]="{ prefill: preOrder, backUrl: '/tarots' }">
-        <div class="flex text-nowrap justify-center h-full items-center">
-          <span class="material-symbols-rounded me-2">shopping_cart</span>
-          Pre-Order This Tarot Deck
-        </div>
-      </a>
+      <div [ngClass]="{'hidden md:block': view === 'sticky'}">
+        <a mat-flat-button type="button" class="ms-0 md:ms-5" [ngClass]="{'mini-button': view === 'sticky', 'big-button': view === 'tarot'}"
+        routerLink="/contact-me" [queryParams]="{ prefill: preOrder, backUrl: '/tarots' }">
+          <div class="flex text-nowrap justify-center h-full items-center">
+            <span class="material-symbols-rounded me-2">shopping_cart</span>
+            Pre-Order This Tarot Deck
+          </div>
+        </a>
+      </div>
     </form>
   </div>
