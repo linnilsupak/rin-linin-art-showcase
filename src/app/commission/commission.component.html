@@ -10,7 +10,7 @@
 </div>
 <app-frame-item-mobile [activeTab]="activeTab" (changeActiveTab)="changeActiveTab($event)"></app-frame-item-mobile>
 <div class="container-fluid md:container mx-auto mt-4 md:mt-0">
-  <app-frame-item-animation class="hidden d-mblock" [activeVal]="activeTab" (activeTab)="changeActiveTab($event)">
+  <app-frame-item-animation class="hidden md:block" [activeVal]="activeTab" (activeTab)="changeActiveTab($event)">
   </app-frame-item-animation>
   <div class="grid grid-cols-1 md:grid-cols-3 gap-4 mb-5">
     <div class="mb-3 md:mb-0">
