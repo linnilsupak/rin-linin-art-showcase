@@ -5,7 +5,7 @@ export const tarotConfig: TarotConfig = {
     major: [
         {
             "name": "The Fool",
-            "imageUrl": "",
+            "imageUrl": "/assets/images/tarot/major/the-fool.webp",
             "description": "การเริ่มต้นอะไรใหม่ ๆ การเสี่ยงอันตราย หากว่าเปิดได้ไพ่ใบนี้แล้วล่ะก็ เส้นทางใหม่ที่เพื่อน ๆ จะเดินไปอาจมีความเสี่ยง แต่เป็นความเสี่ยงที่เพื่อน ๆ ต้องการ รู้ว่าเสี่ยงแต่คงต้องขอลอง",
             number: 0,
             category: tarotCategory.MAJOR_ARCANA
